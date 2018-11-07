@@ -1,0 +1,38 @@
+// Dependencies
+import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { strings } from '../helpers/strings'
+import { checkIfFromReplier } from '../middlewares/checkIfFromReplier'
+
+const options = ['60', '120', '240']
+
+export function setupTimeLimit(bot: Telegraf<ContextMessageUpdate>) {
+  bot.command('timeLimit', ctx => {
+    ctx.replyWithMarkdown(
+      strings(ctx.dbchat, 'time_limit'),
+      Extra.inReplyTo(ctx.message.message_id).markup(m =>
+        m.inlineKeyboard(
+          options.map(o =>
+            m.callbackButton(`${o} ${strings(ctx.dbchat, 'seconds')}`, o)
+          )
+        )
+      )
+    )
+  })
+
+  bot.action(options, checkIfFromReplier, async ctx => {
+    let chat = ctx.dbchat
+    chat.timeGiven = Number(ctx.callbackQuery.data)
+    chat = await (chat as any).save()
+    const message = ctx.callbackQuery.message
+
+    ctx.telegram.editMessageText(
+      message.chat.id,
+      message.message_id,
+      undefined,
+      `${strings(chat, 'time_limit_selected')} (${chat.timeGiven} ${strings(
+        chat,
+        'seconds'
+      )})`
+    )
+  })
+}
