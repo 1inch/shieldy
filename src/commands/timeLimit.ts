@@ -2,11 +2,12 @@
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '../helpers/strings'
 import { checkIfFromReplier } from '../middlewares/checkIfFromReplier'
+import { checkLock } from '../middlewares/checkLock'
 
 const options = ['60', '120', '240']
 
 export function setupTimeLimit(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('timeLimit', ctx => {
+  bot.command('timeLimit', checkLock, ctx => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'time_limit'),
       Extra.inReplyTo(ctx.message.message_id).markup(m =>

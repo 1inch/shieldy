@@ -3,9 +3,10 @@ import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '../helpers/strings'
 import { Language } from '../models'
 import { checkIfFromReplier } from '../middlewares/checkIfFromReplier'
+import { checkLock } from '../middlewares/checkLock'
 
 export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('language', ctx => {
+  bot.command('language', checkLock, ctx => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'language'),
       Extra.webPreview(false)

@@ -18,6 +18,7 @@ const localizations = {
 /language — switches language
 /captcha — changes type of captcha used
 /timeLimit — changes amount of time given to newcomers
+/lock — makes commands accessible only by admins
 
 Still got questions? Contact my creator — @borodutch. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -26,6 +27,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
 /language — меняет язык
 /captcha — меняет тип капчи
 /timeLimit — меняет количество времени, данное новичками
+/lock — делает команды доступными только админами
 
 Остались вопросы? Напишите моему создателю — @borodutch. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
   },
@@ -82,5 +84,13 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
   seconds: {
     en: 'sec',
     ru: 'сек',
+  },
+  lock_true: {
+    en: 'Great! Now I will only react to commands sent by admins.',
+    ru: 'Отлично! Теперь я буду принимать команды только от админов.',
+  },
+  lock_false: {
+    en: 'Great! Now I will react to commands sent by anybody.',
+    ru: 'Отлично! Теперь я буду принимать команды ото всех.',
   },
 }

@@ -3,9 +3,10 @@ import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '../helpers/strings'
 import { checkIfFromReplier } from '../middlewares/checkIfFromReplier'
 import { CaptchaType } from '../models'
+import { checkLock } from '../middlewares/checkLock'
 
 export function setupCaptcha(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('captcha', ctx => {
+  bot.command('captcha', checkLock, ctx => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'captcha'),
       Extra.inReplyTo(ctx.message.message_id).markup(m =>

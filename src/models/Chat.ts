@@ -22,6 +22,8 @@ export class Chat extends Typegoose {
   captchaType: CaptchaType
   @prop({ required: true, default: 60 })
   timeGiven: number
+  @prop({ required: true, default: false })
+  adminLocked: boolean
 }
 
 // Get Chat model

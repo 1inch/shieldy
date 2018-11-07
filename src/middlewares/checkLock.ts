@@ -1,0 +1,18 @@
+import { ContextMessageUpdate } from 'Telegraf'
+
+export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
+  if (!ctx.dbchat.adminLocked) {
+    next()
+    return
+  }
+  const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
+  if (admins.map(m => m.user.id).indexOf(ctx.from.id) > -1) {
+    next()
+  } else {
+    try {
+      await ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id)
+    } catch (err) {
+      // Do nothing
+    }
+  }
+}
