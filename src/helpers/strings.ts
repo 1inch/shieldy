@@ -47,7 +47,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
-• button — bot will ask to press a button`,
+• Button — bot will ask to press a button`,
     ru: `Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
