@@ -47,7 +47,11 @@ const ChatModel = new Chat().getModelForClass(Chat, {
 export async function findChat(id: number) {
   let chat = await ChatModel.findOne({ id })
   if (!chat) {
-    chat = await new ChatModel({ id }).save()
+    try {
+      chat = await new ChatModel({ id }).save()
+    } catch (err) {
+      chat = await ChatModel.findOne({ id })
+    }
   }
   return chat
 }
