@@ -11,7 +11,7 @@ declare module 'Telegraf' {
   }
   export interface Composer<TContext extends ContextMessageUpdate> {
     action(
-      action: string | string[],
+      action: string | string[] | RegExp,
       middleware: Middleware<TContext>,
       ...middlewares: Array<Middleware<TContext>>
     ): Composer<TContext>

@@ -1,5 +1,5 @@
 // Dependencies
-import { prop, Typegoose } from 'typegoose'
+import { prop, Typegoose, arrayProp } from 'typegoose'
 
 export enum Language {
   ENGLISH = 'en',
@@ -12,7 +12,17 @@ export enum CaptchaType {
   BUTTON = 'button',
 }
 
-// Winner class definition
+export class Candidate {
+  @prop({ required: true })
+  id: number
+  @prop({ required: true })
+  timestamp: number
+  @prop({ required: true, enum: CaptchaType })
+  captchaType: CaptchaType
+  @prop({ required: true })
+  messageId: number
+}
+
 export class Chat extends Typegoose {
   @prop({ required: true, index: true, unique: true })
   id: number
@@ -24,6 +34,8 @@ export class Chat extends Typegoose {
   timeGiven: number
   @prop({ required: true, default: false })
   adminLocked: boolean
+  @arrayProp({ items: Candidate, default: [] })
+  candidates: Candidate[]
 }
 
 // Get Chat model
@@ -38,4 +50,8 @@ export async function findChat(id: number) {
     chat = await new ChatModel({ id }).save()
   }
   return chat
+}
+
+export function findChatsWithCandidates() {
+  return ChatModel.find({ 'candidates.0': { $exists: true } })
 }

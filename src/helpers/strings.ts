@@ -93,4 +93,31 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
     en: 'Great! Now I will react to commands sent by anybody.',
     ru: 'Отлично! Теперь я буду принимать команды ото всех.',
   },
+  simple_warning: {
+    en:
+      ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+  },
+  digits_warning: {
+    en:
+      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+  },
+  button_warning: {
+    en:
+      ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+  },
+  captcha_button: {
+    en: 'I am not a bot',
+    ru: 'Я не бот',
+  },
+  only_candidate_can_reply: {
+    en: 'Only the candidate for not being a bot can press this button.',
+    ru:
+      'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
+  },
 }
