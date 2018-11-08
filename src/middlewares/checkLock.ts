@@ -1,7 +1,11 @@
 import { ContextMessageUpdate } from 'Telegraf'
 
 export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
-  if (!ctx.dbchat.adminLocked) {
+  if (
+    !ctx.dbchat.adminLocked ||
+    ctx.chat.type === 'private' ||
+    ctx.chat.type === 'channel'
+  ) {
     next()
     return
   }

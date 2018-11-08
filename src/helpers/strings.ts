@@ -47,12 +47,10 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
-• Digits — bot will ask to solve a simple equation like \`2 + 2 = ?\`
 • button — bot will ask to press a button`,
     ru: `Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
-• Цифровая — бот попросит решить простое случайное математическое уравнение типа \`2 + 2 = ?\`
 • Кнопкой — бот попросит нажать на кнопку.`,
   },
   simple: {
