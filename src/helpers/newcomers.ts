@@ -140,7 +140,11 @@ setInterval(async () => {
     }
     const idsToDelete = candidatesToDelete.map(c => c.id)
     chat.candidates = chat.candidates.filter(c => idsToDelete.indexOf(c.id) < 0)
-    await chat.save()
+    try {
+      await chat.save()
+    } catch {
+      // Do nothing
+    }
   }
 }, 15 * 1000)
 
