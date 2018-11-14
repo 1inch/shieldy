@@ -114,6 +114,14 @@ function notifyCandidate(ctx: ContextMessageUpdate, candidate: User) {
 
 // Check if needs to ban
 setInterval(async () => {
+  if (!checking) {
+    check()
+  }
+}, 5 * 1000)
+
+let checking = false
+async function check() {
+  checking = true
   const chats = await findChatsWithCandidates()
   for (const chat of chats) {
     const candidatesToDelete = []
@@ -146,7 +154,9 @@ setInterval(async () => {
       // Do nothing
     }
   }
-}, 15 * 1000)
+  checking = false
+}
+  
 
 function getUsername(user: User) {
   return `${
