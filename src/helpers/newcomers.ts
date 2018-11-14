@@ -37,7 +37,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
     }
     chat.candidates = candidates.concat(candidatesToAdd)
-    await (chat as any).save()
+    try {
+      await (chat as any).save()
+    } catch {
+      // Do nothing
+    }
   })
   // Check newcomers
   bot.use(async (ctx, next) => {
