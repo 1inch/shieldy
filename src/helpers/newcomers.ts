@@ -121,7 +121,7 @@ setInterval(async () => {
   if (!checking) {
     check()
   }
-}, 5 * 1000)
+}, 15 * 1000)
 
 let checking = false
 async function check() {
