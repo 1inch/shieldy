@@ -31,9 +31,21 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         })
       }
     }
-    console.log(`Adding candidates to ${ctx.chat.id}: ${candidatesToAdd}`)
+    console.log(
+      `➕ Adding candidates to ${ctx.chat.id}: ${JSON.stringify(
+        candidatesToAdd,
+        undefined,
+        2
+      )}`
+    )
     chat.candidates = candidates.concat(candidatesToAdd)
-    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
+    console.log(
+      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
+        chat.candidates,
+        undefined,
+        2
+      )}`
+    )
     await (chat as any).save()
   })
   // Check newcomers
@@ -49,11 +61,17 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return next()
     }
-    console.log(`Removing ${userId} from candidates of ${ctx.chat.id}`)
+    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     ctx.dbchat = await (chat as any).save()
-    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
+    console.log(
+      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
+        chat.candidates,
+        undefined,
+        2
+      )}`
+    )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch {
@@ -64,7 +82,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Check button
   bot.action(/\d+~\d+/, async ctx => {
     console.log(
-      `Received callback query: ${ctx.chat.id}, ${ctx.callbackQuery.data}`
+      `👻 Received callback query: ${ctx.chat.id}, ${ctx.callbackQuery.data}`
     )
     const params = ctx.callbackQuery.data.split('~')
     const userId = parseInt(params[1])
@@ -75,11 +93,17 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return
     }
-    console.log(`Removing ${userId} from candidates of ${ctx.chat.id}`)
+    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     await (chat as any).save()
-    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
+    console.log(
+      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
+        chat.candidates,
+        undefined,
+        2
+      )}`
+    )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch {
@@ -119,29 +143,33 @@ setInterval(async () => {
 
 let checking = false
 async function check() {
-  console.log('Checking candidates...')
+  console.log('🤔 Checking candidates...')
   checking = true
   const chats = await findChatsWithCandidates()
-  console.log(`Got ${chats.length} chats with candidates`)
+  console.log(`🙌 Got ${chats.length} chats with candidates`)
   for (const chat of chats) {
-    console.log(`Working on ${chat.id}`)
+    console.log(`👷‍♂️ Working on ${chat.id}`)
     const candidatesToDelete = []
     for (const candidate of chat.candidates) {
       const now = new Date().getTime()
       if (now - candidate.timestamp < chat.timeGiven * 1000) {
         console.log(
-          `Not kicking ${candidate.id} (${now -
+          `❌ Not kicking ${candidate.id} (${now -
             candidate.timestamp}/${chat.timeGiven * 1000})`
         )
         continue
       }
       try {
-        console.log(`Kicking ${candidate.id}`)
-        await (bot.telegram as any).kickChatMember(
-          chat.id,
-          candidate.id,
-          parseInt(`${new Date().getTime() / 1000 + 45}`)
-        )
+        console.log(`💀 Kicking ${candidate.id}`)
+        try {
+          await (bot.telegram as any).kickChatMember(
+            chat.id,
+            candidate.id,
+            parseInt(`${new Date().getTime() / 1000 + 45}`)
+          )
+        } catch {
+          // do nothing
+        }
         candidatesToDelete.push(candidate)
       } catch {
         // Do nothing, bot is not an admin
@@ -153,10 +181,16 @@ async function check() {
       }
     }
     const idsToDelete = candidatesToDelete.map(c => c.id)
-    console.log(`Removing ${idsToDelete}`)
-    chat.candidates = chat.candidates.filter(c => idsToDelete.indexOf(c.id) < 0)
-    console.log(`Resulting ids: ${chat.candidates}`)
-    await chat.save()
+    if (idsToDelete.length) {
+      console.log(`🔥 Removing ${idsToDelete}`)
+      chat.candidates = chat.candidates.filter(
+        c => idsToDelete.indexOf(c.id) < 0
+      )
+      console.log(
+        `✅ Resulting ids: ${JSON.stringify(chat.candidates, undefined, 2)}`
+      )
+      await chat.save()
+    }
   }
   checking = false
 }
