@@ -1,12 +1,7 @@
 // Dependencies
 import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from './strings'
-import {
-  Candidate,
-  findChatsWithCandidates,
-  CaptchaType,
-  findChat,
-} from '../models'
+import { Candidate, findChatsWithCandidates, CaptchaType } from '../models'
 import { bot } from './bot'
 import { User } from 'telegram-typings'
 
@@ -36,12 +31,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         })
       }
     }
+    console.log(`Adding candidates to ${ctx.chat.id}: ${candidatesToAdd}`)
     chat.candidates = candidates.concat(candidatesToAdd)
-    try {
-      await (chat as any).save()
-    } catch {
-      // Do nothing
-    }
+    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
+    await (chat as any).save()
   })
   // Check newcomers
   bot.use(async (ctx, next) => {
@@ -56,9 +49,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return next()
     }
+    console.log(`Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     ctx.dbchat = await (chat as any).save()
+    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch {
@@ -68,6 +63,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
   // Check button
   bot.action(/\d+~\d+/, async ctx => {
+    console.log(
+      `Received callback query: ${ctx.chat.id}, ${ctx.callbackQuery.data}`
+    )
     const params = ctx.callbackQuery.data.split('~')
     const userId = parseInt(params[1])
     const chat = ctx.dbchat
@@ -77,9 +75,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return
     }
+    console.log(`Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     await (chat as any).save()
+    console.log(`Resulting candidates of ${ctx.chat.id}: ${chat.candidates}`)
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch {
@@ -87,12 +87,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
   })
 }
-
-// ;(bot.telegram as any).kickChatMember(
-//   -1001268249052,
-//   76104711,
-//   parseInt(`${new Date().getTime() / 1000 + 45}`)
-// )
 
 function notifyCandidate(ctx: ContextMessageUpdate, candidate: User) {
   const chat = ctx.dbchat
@@ -125,16 +119,24 @@ setInterval(async () => {
 
 let checking = false
 async function check() {
+  console.log('Checking candidates...')
   checking = true
   const chats = await findChatsWithCandidates()
+  console.log(`Got ${chats.length} chats with candidates`)
   for (const chat of chats) {
+    console.log(`Working on ${chat.id}`)
     const candidatesToDelete = []
     for (const candidate of chat.candidates) {
       const now = new Date().getTime()
       if (now - candidate.timestamp < chat.timeGiven * 1000) {
+        console.log(
+          `Not kicking ${candidate.id} (${now -
+            candidate.timestamp}/${chat.timeGiven * 1000})`
+        )
         continue
       }
       try {
+        console.log(`Kicking ${candidate.id}`)
         await (bot.telegram as any).kickChatMember(
           chat.id,
           candidate.id,
@@ -151,16 +153,13 @@ async function check() {
       }
     }
     const idsToDelete = candidatesToDelete.map(c => c.id)
+    console.log(`Removing ${idsToDelete}`)
     chat.candidates = chat.candidates.filter(c => idsToDelete.indexOf(c.id) < 0)
-    try {
-      await chat.save()
-    } catch {
-      // Do nothing
-    }
+    console.log(`Resulting ids: ${chat.candidates}`)
+    await chat.save()
   }
   checking = false
 }
-  
 
 function getUsername(user: User) {
   return `${
