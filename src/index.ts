@@ -10,7 +10,10 @@ import { setupCaptcha } from './commands/captcha'
 import { setupNewcomers } from './helpers/newcomers'
 import { setupTimeLimit } from './commands/timeLimit'
 import { setupLock } from './commands/lock'
+import { checkTime } from './middlewares/checkTime'
 
+// Check time
+bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
 // Commands
