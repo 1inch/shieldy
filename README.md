@@ -23,7 +23,7 @@ Also, please, consider looking at `.env.sample`.
 
 # Continuous integration
 
-Any commit pushed to master gets deployed to @randymbot via [CI Ninja](https://github.com/backmeupplz/ci-ninja).
+Any commit pushed to master gets deployed to @shieldy_bot via [CI Ninja](https://github.com/backmeupplz/ci-ninja).
 
 # License
 
