@@ -4,6 +4,8 @@ import { strings } from './strings'
 import { Candidate, findChatsWithCandidates, CaptchaType } from '../models'
 import { bot } from './bot'
 import { User } from 'telegram-typings'
+import { report } from './report'
+import { checkIfErrorDismissable } from './error'
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
@@ -74,8 +76,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
-    } catch {
-      // Do nothing
+    } catch (err) {
+      if (!checkIfErrorDismissable(err)) {
+        report(bot, err)
+      }
     }
     next()
   })
@@ -106,8 +110,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
-    } catch {
-      // Do nothing
+    } catch (err) {
+      if (!checkIfErrorDismissable(err)) {
+        report(bot, err)
+      }
     }
   })
 }
@@ -161,23 +167,25 @@ async function check() {
       }
       try {
         console.log(`💀 Kicking ${candidate.id}`)
-        try {
-          await (bot.telegram as any).kickChatMember(
-            chat.id,
-            candidate.id,
-            parseInt(`${new Date().getTime() / 1000 + 45}`)
-          )
-        } catch {
-          // do nothing
-        }
+        await (bot.telegram as any).kickChatMember(
+          chat.id,
+          candidate.id,
+          parseInt(`${new Date().getTime() / 1000 + 45}`)
+        )
         candidatesToDelete.push(candidate)
-      } catch {
-        // Do nothing, bot is not an admin
+      } catch (err) {
+        if (checkIfErrorDismissable(err)) {
+          candidatesToDelete.push(candidate)
+        } else {
+          report(bot, err)
+        }
       }
       try {
         await bot.telegram.deleteMessage(chat.id, candidate.messageId)
-      } catch {
-        // Do nothing, bot is not an admin
+      } catch (err) {
+        if (!checkIfErrorDismissable(err)) {
+          report(bot, err)
+        }
       }
     }
     const idsToDelete = candidatesToDelete.map(c => c.id)
