@@ -34,18 +34,14 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
     }
     console.log(
-      `➕ Adding candidates to ${ctx.chat.id}: ${JSON.stringify(
-        candidatesToAdd,
-        undefined,
-        2
+      `➕ Adding candidates to ${ctx.chat.id}: ${candidatesToAdd.map(c =>
+        c.id ? c.id : c
       )}`
     )
     chat.candidates = candidates.concat(candidatesToAdd)
     console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates.map(v => (v.id ? v.id : v)),
-        undefined,
-        2
+      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
+        v.id ? v.id : v
       )}`
     )
     await (chat as any).save()
@@ -68,10 +64,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     ctx.dbchat = await (chat as any).save()
     console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates.map(v => (v.id ? v.id : v)),
-        undefined,
-        2
+      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
+        v.id ? v.id : v
       )}`
     )
     try {
@@ -102,10 +96,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     await (chat as any).save()
     console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates.map(v => (v.id ? v.id : v)),
-        undefined,
-        2
+      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
+        v.id ? v.id : v
       )}`
     )
     try {
@@ -195,9 +187,7 @@ async function check() {
         chat.candidates = chat.candidates.filter(
           c => idsToDelete.indexOf(c.id) < 0
         )
-        console.log(
-          `✅ Resulting ids: ${JSON.stringify(chat.candidates, undefined, 2)}`
-        )
+        console.log(`✅ Resulting ids: ${chat.candidates}`)
         await chat.save()
       }
     }
