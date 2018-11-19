@@ -147,7 +147,7 @@ async function check() {
     const chats = await findChatsWithCandidates()
     console.log(`🙌 Got ${chats.length} chats with candidates`)
     for (const chat of chats) {
-      console.log(`👷‍♂️ Working on ${chat.id}`)
+      console.log(`🤖 Working on ${chat.id}`)
       const candidatesToDelete = []
       for (const candidate of chat.candidates) {
         const now = new Date().getTime()
