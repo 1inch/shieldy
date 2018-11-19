@@ -151,56 +151,61 @@ let checking = false
 async function check() {
   console.log('🤔 Checking candidates...')
   checking = true
-  const chats = await findChatsWithCandidates()
-  console.log(`🙌 Got ${chats.length} chats with candidates`)
-  for (const chat of chats) {
-    console.log(`👷‍♂️ Working on ${chat.id}`)
-    const candidatesToDelete = []
-    for (const candidate of chat.candidates) {
-      const now = new Date().getTime()
-      if (now - candidate.timestamp < chat.timeGiven * 1000) {
-        console.log(
-          `❌ Not kicking ${candidate.id} (${now -
-            candidate.timestamp}/${chat.timeGiven * 1000})`
-        )
-        continue
-      }
-      try {
-        console.log(`💀 Kicking ${candidate.id}`)
-        await (bot.telegram as any).kickChatMember(
-          chat.id,
-          candidate.id,
-          parseInt(`${new Date().getTime() / 1000 + 45}`)
-        )
-        candidatesToDelete.push(candidate)
-      } catch (err) {
-        if (checkIfErrorDismissable(err)) {
+  try {
+    const chats = await findChatsWithCandidates()
+    console.log(`🙌 Got ${chats.length} chats with candidates`)
+    for (const chat of chats) {
+      console.log(`👷‍♂️ Working on ${chat.id}`)
+      const candidatesToDelete = []
+      for (const candidate of chat.candidates) {
+        const now = new Date().getTime()
+        if (now - candidate.timestamp < chat.timeGiven * 1000) {
+          console.log(
+            `❌ Not kicking ${candidate.id} (${now -
+              candidate.timestamp}/${chat.timeGiven * 1000})`
+          )
+          continue
+        }
+        try {
+          console.log(`💀 Kicking ${candidate.id}`)
+          await (bot.telegram as any).kickChatMember(
+            chat.id,
+            candidate.id,
+            parseInt(`${new Date().getTime() / 1000 + 45}`)
+          )
           candidatesToDelete.push(candidate)
-        } else {
-          report(bot, err)
+        } catch (err) {
+          if (checkIfErrorDismissable(err)) {
+            candidatesToDelete.push(candidate)
+          } else {
+            report(bot, err)
+          }
+        }
+        try {
+          await bot.telegram.deleteMessage(chat.id, candidate.messageId)
+        } catch (err) {
+          if (!checkIfErrorDismissable(err)) {
+            report(bot, err)
+          }
         }
       }
-      try {
-        await bot.telegram.deleteMessage(chat.id, candidate.messageId)
-      } catch (err) {
-        if (!checkIfErrorDismissable(err)) {
-          report(bot, err)
-        }
+      const idsToDelete = candidatesToDelete.map(c => c.id)
+      if (idsToDelete.length) {
+        console.log(`🔥 Removing ${idsToDelete}`)
+        chat.candidates = chat.candidates.filter(
+          c => idsToDelete.indexOf(c.id) < 0
+        )
+        console.log(
+          `✅ Resulting ids: ${JSON.stringify(chat.candidates, undefined, 2)}`
+        )
+        await chat.save()
       }
     }
-    const idsToDelete = candidatesToDelete.map(c => c.id)
-    if (idsToDelete.length) {
-      console.log(`🔥 Removing ${idsToDelete}`)
-      chat.candidates = chat.candidates.filter(
-        c => idsToDelete.indexOf(c.id) < 0
-      )
-      console.log(
-        `✅ Resulting ids: ${JSON.stringify(chat.candidates, undefined, 2)}`
-      )
-      await chat.save()
-    }
+  } catch (err) {
+    report(bot, err)
+  } finally {
+    checking = false
   }
-  checking = false
 }
 
 function getUsername(user: User) {
