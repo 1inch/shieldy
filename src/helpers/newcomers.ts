@@ -43,7 +43,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     chat.candidates = candidates.concat(candidatesToAdd)
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates,
+        chat.candidates.map(v => (v.id ? v.id : v)),
         undefined,
         2
       )}`
@@ -69,7 +69,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     ctx.dbchat = await (chat as any).save()
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates,
+        chat.candidates.map(v => (v.id ? v.id : v)),
         undefined,
         2
       )}`
@@ -103,7 +103,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     await (chat as any).save()
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${JSON.stringify(
-        chat.candidates,
+        chat.candidates.map(v => (v.id ? v.id : v)),
         undefined,
         2
       )}`
