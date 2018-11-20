@@ -4,6 +4,7 @@ export function checkIfErrorDismissable(error: Error) {
     'message to delete not found',
     'bot was kicked',
     'not in the chat',
+    'need to be inviter of a user',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
