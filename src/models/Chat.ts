@@ -4,6 +4,7 @@ import { prop, Typegoose, arrayProp } from 'typegoose'
 export enum Language {
   ENGLISH = 'en',
   RUSSIAN = 'ru',
+  ITALIAN = 'it',
 }
 
 export enum CaptchaType {
