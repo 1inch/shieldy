@@ -6,7 +6,7 @@ export function checkIfErrorDismissable(error: Error) {
     'not in the chat',
     'need to be inviter of a user',
     'matching document found for id',
-    'Many Requests',
+    'Too Many Requests: retry after',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {

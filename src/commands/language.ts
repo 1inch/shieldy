@@ -15,12 +15,13 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
           m.inlineKeyboard([
             m.callbackButton('English', 'en'),
             m.callbackButton('Русский', 'ru'),
+            m.callbackButton('Italiano', 'it'),
           ])
         )
     )
   })
 
-  bot.action(['en', 'ru'], checkIfFromReplier, async ctx => {
+  bot.action(['en', 'ru', 'it'], checkIfFromReplier, async ctx => {
     let chat = ctx.dbchat
     chat.language = ctx.callbackQuery.data as Language
     chat = await (chat as any).save()
