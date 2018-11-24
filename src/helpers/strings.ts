@@ -20,7 +20,7 @@ const localizations = {
 /timeLimit — changes amount of time given to newcomers
 /lock — makes commands accessible only by admins
 
-Still got questions? Contact my creator — @borodutch. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Still got questions? Check out the support channel — @borodutch_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
 
 /help — показывает это сообщение
@@ -29,7 +29,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
 /timeLimit — меняет количество времени, данное новичками
 /lock — делает команды доступными только админами
 
-Остались вопросы? Напишите моему создателю — @borodutch. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
+Остались вопросы? Почитайте канал поддержки — @borodutch_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
 
 /help — Mostra questo messaggio
@@ -38,8 +38,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
 /timeLimit — Modifica il tempo per i nuovi membri
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
 
-Still got questions? Contact my creator — @borodutch. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
-
+Still got questions? Check out the support channel — @borodutch_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
   },
   language: {
     en: 'Please, select the language.',
@@ -88,7 +87,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
     ru: 'Отлично, теперь я буду использовать этот тип теста.',
-    it: 'Fantastico, Userò questo tipo di test.'
+    it: 'Fantastico, Userò questo tipo di test.',
   },
   time_limit: {
     en:
@@ -132,7 +131,7 @@ Still got questions? Contact my creator — @borodutch. Shieldy code is open sou
     ru:
       ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
-      ', prego, invia la soluzione dell\'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!',
+      ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
   },
   button_warning: {
     en:
