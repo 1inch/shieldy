@@ -29,7 +29,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /timeLimit — меняет количество времени, данное новичками
 /lock — делает команды доступными только админами
 
-Остались вопросы? Почитайте канал поддержки — @borodutch_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
+Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
 
 /help — Mostra questo messaggio
