@@ -8,6 +8,8 @@ export function checkIfErrorDismissable(error: Error) {
     'matching document found for id',
     'Too Many Requests: retry after',
     'bot is not a member',
+    'user is an administrator of the chat',
+    'USER_NOT_PARTICIPANT',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
