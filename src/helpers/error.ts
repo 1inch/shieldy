@@ -7,6 +7,7 @@ export function checkIfErrorDismissable(error: Error) {
     'need to be inviter of a user',
     'matching document found for id',
     'Too Many Requests: retry after',
+    'bot is not a member',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
