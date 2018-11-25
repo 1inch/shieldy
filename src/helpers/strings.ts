@@ -39,7 +39,7 @@ Still got questions? Check out the support channel — @borodutch_support. Shiel
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
 
 Still got questions? Check out the support channel — @borodutch_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
-      et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
+    et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
 
 /help — näitab seda sõnumi
 /language — muutub keelt
@@ -47,7 +47,7 @@ Still got questions? Check out the support channel — @borodutch_support. Shiel
 /timeLimit — muutub uustilnukitele antud aega
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
 
-Veel küsimusi? Kirjutage minu loojale — @borodutch. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
+Veel küsimusi? Kirjutage minu loojale — @borodutch_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
   },
   language: {
     en: 'Please, select the language.',
@@ -80,7 +80,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch. Shieldy lähtekood on ava
 
 • Semplice — Il bot chiederà di inviare qualcunque messaggio in chat
 • Bottone — Il bot chiederà di premere un pulsante`,
-      et: `Palun valige uustulnukute kontrolli tüüp:
+    et: `Palun valige uustulnukute kontrolli tüüp:
 
 • Lihtne — bot küsib vestlusele midagi saata
 • Nuppuga — bot küsib nuppu klõpsata.`,
@@ -107,7 +107,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch. Shieldy lähtekood on ava
     en: 'Great, I will use this type of test then.',
     ru: 'Отлично, теперь я буду использовать этот тип теста.',
     it: 'Fantastico, Userò questo tipo di test.',
-    et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.'
+    et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.',
   },
   time_limit: {
     en:
@@ -117,7 +117,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch. Shieldy lähtekood on ava
     it:
       'Prego, seleziona quanti secondi avrà il nuovo membro per completare il test prima di essere kickato',
     et:
-       'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
+      'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -159,7 +159,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch. Shieldy lähtekood on ava
     ru:
       ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
-      ', prego, invia la soluzione dell\'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!',
+      ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
   },
