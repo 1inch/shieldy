@@ -20,7 +20,7 @@ const localizations = {
 /timeLimit — changes amount of time given to newcomers
 /lock — makes commands accessible only by admins
 
-Still got questions? Check out the support channel — @borodutch_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
 
 /help — показывает это сообщение
@@ -38,7 +38,7 @@ Still got questions? Check out the support channel — @borodutch_support. Shiel
 /timeLimit — Modifica il tempo per i nuovi membri
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
 
-Still got questions? Check out the support channel — @borodutch_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
 
 /help — näitab seda sõnumi
@@ -47,7 +47,7 @@ Still got questions? Check out the support channel — @borodutch_support. Shiel
 /timeLimit — muutub uustilnukitele antud aega
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
 
-Veel küsimusi? Kirjutage minu loojale — @borodutch_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
+Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
   },
   language: {
     en: 'Please, select the language.',
