@@ -13,10 +13,14 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
         .inReplyTo(ctx.message.message_id)
         .markup(m =>
           m.inlineKeyboard([
-            m.callbackButton('English', 'en'),
-            m.callbackButton('Русский', 'ru'),
-            m.callbackButton('Italiano', 'it'),
-            m.callbackButton('Eesti', 'et'),
+            [
+              m.callbackButton('English', 'en'),
+              m.callbackButton('Русский', 'ru'),
+            ],
+            [
+              m.callbackButton('Italiano', 'it'),
+              m.callbackButton('Eesti', 'et'),
+            ],
           ])
         )
     )
