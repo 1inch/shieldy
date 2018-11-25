@@ -96,7 +96,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 
 • Lihtne — bot küsib vestlusele midagi saata
 • Nuppuga — bot küsib nuppu klõpsata.`,
-  ua: `Будь ласка, виберіть тип перевірки новачків у чаті:
+    ua: `Будь ласка, виберіть тип перевірки новачків у чаті:
 
 • Проста — бот просить надіслати що завгодно в чат
 • Кнопкою — бот просить натиснути на кнопку.`
