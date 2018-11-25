@@ -48,24 +48,36 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
+    uk: `Shieldy — це найкраще рішення для боротьби з спамерами у Телеграмі. Він просить усіх новачнік виконати певну дію впродовж деякого часу та банить їх у випадку незгоди. Так, це настільки легко. Переконайтесь, що @shieldy\\_bot — адміністратор у вашій групі, і все вже готове! Ви можете продовжити налаштовування бота, користуючись наступними командами:
+
+/help — показує це повідомлення
+/language — змінює мову
+/captcha — змінює тип капчі
+/timeLimit — змінює обсяг часу для новачків
+/lock — робить команди доступними лише для адміністраторів
+
+Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у вільному доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякую!`,
   },
   language: {
     en: 'Please, select the language.',
     ru: 'Пожалуйста, выберите язык.',
     it: 'Prego, seleziona la lingua.',
     et: 'Palun valige keel.',
+    uk: 'Будь ласка, оберіть мову.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
     ru: 'Отлично, я теперь говорю по-русски.',
     it: 'Perfetto, Ora parlo Italiano.',
     et: 'Väga hea, nüüd ma räägin eesti keeles.',
+    uk: 'Чудово, тепер я розмовляю українською.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
     ru: 'Только человек, вызвавший меню, может выбирать опции.',
     it: 'Solamente chi ha invocato il comando può selezionarlo.',
     et: 'Ainult see, kes avas menüüd, saab valida valikud.',
+    uk: 'Лише користувач, що викликав меню, може обирати опції.',
   },
   captcha: {
     en: `Please, select the test type for the newcomers:
@@ -84,30 +96,37 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 
 • Lihtne — bot küsib vestlusele midagi saata
 • Nuppuga — bot küsib nuppu klõpsata.`,
+    uk: `Будь ласка, оберіть тип перевірки новачків у чаті:
+• Проста — бот попросить написати щось у чат
+• Кнопкою — бот попросить натиснути на кнопку.`,
   },
   simple: {
     en: 'Simple',
     ru: 'Простая',
     it: 'Semplice',
     et: 'Lihtne',
+    uk: 'Проста',
   },
   digits: {
     en: 'Digits',
     ru: 'Цифровая',
     it: 'Digita',
     et: 'Digitaalne',
+    uk: 'Цифрова',
   },
   button: {
     en: 'Button',
     ru: 'Кнопкой',
     it: 'Bottone',
     et: 'Nuppuga',
+    uk: 'Кнопкою',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
     ru: 'Отлично, теперь я буду использовать этот тип теста.',
     it: 'Fantastico, Userò questo tipo di test.',
     et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.',
+    uk: 'Чудово, тепер я буду використовувати цей тип теста.',
   },
   time_limit: {
     en:
@@ -118,30 +137,36 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
       'Prego, seleziona quanti secondi avrà il nuovo membro per completare il test prima di essere kickato',
     et:
       'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
+    uk:
+      'Будь ласка, оберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
     ru: 'Отлично, теперь я буду использовать этот временной лимит.',
     it: 'Magnifico, Ora userò questo tempo',
     et: 'Väga hea, nüüd ma kasutan seda aja limiiti.',
+    uk: 'Чудово, тепер я буду використовувати цей часовий ліміт.'
   },
   seconds: {
     en: 'sec',
     ru: 'сек',
     it: 'sec',
     et: 'sek',
+    uk: 'сек',
   },
   lock_true: {
     en: 'Great! Now I will only react to commands sent by admins.',
     ru: 'Отлично! Теперь я буду принимать команды только от админов.',
     it: 'Perfetto, Ora eseguirò solamente i comandi inviati da amministratori.',
     et: 'Väga hea, nüüd ma aktsepteerin ainult administraatorite käske.',
+    uk: 'Чудово! Тепер я буду сприймати команди лише від адмінів.',
   },
   lock_false: {
     en: 'Great! Now I will react to commands sent by anybody.',
     ru: 'Отлично! Теперь я буду принимать команды ото всех.',
     it: 'Perfetto, Ora eseguirò i comandi inviati da tutti.',
     et: 'Väga hea, nüüd ma aktsepteerin kõik käsud.',
+    uk: 'Чудово! Тепер я буду сприймати команди від усіх.',
   },
   simple_warning: {
     en:
@@ -152,6 +177,8 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
       ', prego, invia un messaggio in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!',
     et:
       ', palun saatke mis tahes sõnum sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, надішліть будь-яке повідомлення у цей чат протягом вказаного часу, інакше вас будете виключено. Дякую!',
   },
   digits_warning: {
     en:
@@ -162,6 +189,8 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
       ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, надішліть розв\'язок вказаного математичного рівняння у цей чат протегом вкачаного часу, інакше вас буде виключено. Дякую!',
   },
   button_warning: {
     en:
@@ -172,12 +201,15 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
       ', prego, clicca il bottone qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     et:
       ', palun klõpsake alam nuppu määratud aja jooksul, muide me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, натисніть на кнопку нижче протягом вказаного часу, інакше вас буде виключено. Дякую!',
   },
   captcha_button: {
     en: 'I am not a bot',
     ru: 'Я не бот',
     it: 'Non sono un bot',
     et: 'Ma ei ole bot',
+    uk: 'Я не бот',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -185,5 +217,6 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
       'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
+    uk: 'Лише претиндент на те, щоб бути людиною, може тиснути на цю кнопку.',
   },
 }
