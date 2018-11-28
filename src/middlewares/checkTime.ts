@@ -1,4 +1,4 @@
-import { ContextMessageUpdate } from 'Telegraf'
+import { ContextMessageUpdate } from 'telegraf'
 
 export async function checkTime(ctx: ContextMessageUpdate, next: () => any) {
   switch (ctx.updateType) {

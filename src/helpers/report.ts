@@ -1,5 +1,5 @@
 // Dependencies
-import Telegraf, { ContextMessageUpdate } from 'Telegraf'
+import Telegraf, { ContextMessageUpdate } from 'telegraf'
 
 export function report(bot: Telegraf<ContextMessageUpdate>, error: Error) {
   const adminChatId = process.env.ADMIN

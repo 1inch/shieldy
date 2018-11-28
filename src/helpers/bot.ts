@@ -1,4 +1,4 @@
-import { ContextMessageUpdate, Telegraf } from 'Telegraf'
+import { ContextMessageUpdate, Telegraf } from 'telegraf'
 
 // Dependencies
 const TelegrafBot = require('telegraf')
