@@ -1,4 +1,4 @@
-import { ContextMessageUpdate } from 'Telegraf'
+import { ContextMessageUpdate } from 'telegraf'
 
 export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
   if (

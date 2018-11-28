@@ -1,7 +1,7 @@
 import { Chat } from '../models'
 import * as tt from '../../node_modules/telegraf/typings/telegram-types.d'
 
-declare module 'Telegraf' {
+declare module 'telegraf' {
   export class ContextMessageUpdate {
     public dbchat: Chat
     replyWithMarkdown(
