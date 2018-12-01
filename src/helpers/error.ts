@@ -10,6 +10,7 @@ export function checkIfErrorDismissable(error: Error) {
     'bot is not a member',
     'user is an administrator of the chat',
     'USER_NOT_PARTICIPANT',
+    'CHAT_ADMIN_REQUIRED',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
