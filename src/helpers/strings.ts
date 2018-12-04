@@ -57,7 +57,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /lock — робить команди доступними тільки адміністраторам
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
-    br: `Shieldy — é a melhor solução em combater spammers. isso pede para um novato no grupo realizar uma ação em determinado tempo, se não feita a ação o usuário é kickado. Facil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estara tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
+    br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estara tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
 /help — mostra essa mensagem
 /language — muda a língua
@@ -65,7 +65,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /timeLimit — muda o tempo dado para o novato realizar a ação
 /lock — faz dos comandos acessíveis apenas pelos ADMs
 
-Ainda tem perguntas? De uma olhado no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`
+Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`
   },
   language: {
     en: 'Please, select the language.',
@@ -81,7 +81,7 @@ Ainda tem perguntas? De uma olhado no canal de suporte — @borodutch\\_support.
     it: 'Perfetto, Ora parlo Italiano.',
     et: 'Väga hea, nüüd ma räägin eesti keeles.',
     uk: 'Чудово, тепер я розмовляю українською.',
-    br: 'Boa, Eu falo português agora.'
+    br: 'Boa, Agora eu falo português.'
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -207,7 +207,7 @@ Ainda tem perguntas? De uma olhado no canal de suporte — @borodutch\\_support.
     uk:
       ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
-      ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kickar você. Obrigado!'
+      ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!'
   },
   digits_warning: {
     en:
@@ -221,7 +221,7 @@ Ainda tem perguntas? De uma olhado no canal de suporte — @borodutch\\_support.
     uk:
       ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
-      ', Por favor, mande a solução da equação matemática no tempo limite especificado para esse grupo, caso contrário irei kickar você. Obrigado!'
+      ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!'
   },
   button_warning: {
     en:
@@ -235,7 +235,7 @@ Ainda tem perguntas? De uma olhado no canal de suporte — @borodutch\\_support.
     uk:
       ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
-      ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kickar você, Obrigado!',
+      ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
   },
   captcha_button: {
     en: 'I am not a bot',
