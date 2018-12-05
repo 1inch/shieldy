@@ -6,7 +6,8 @@ export enum Language {
   RUSSIAN = 'ru',
   ITALIAN = 'it',
   ESTONIAN = 'et',
-  UKRAINIAN = 'uk'
+  UKRAINIAN = 'uk',
+  PORTUGUESE = 'br'
 }
 
 export enum CaptchaType {
