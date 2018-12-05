@@ -34,6 +34,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Restrict if requested
       if (chat.restrict) {
+        console.log('🤜 Restricting as well')
         try {
           const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
           await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
@@ -54,6 +55,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       )}`
     )
     chat.candidates = candidates.concat(candidatesToAdd)
+    // Restrict if requested
+    if (chat.restrict) {
+      chat.restrictedUsers = chat.restrictedUsers.concat(candidatesToAdd)
+    }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
         v.id ? v.id : v
@@ -203,6 +208,22 @@ async function check() {
           c => idsToDelete.indexOf(c.id) < 0
         )
         console.log(`✅ Resulting ids: ${chat.candidates}`)
+        await chat.save()
+      }
+      // Check restrictions
+      const restrictedToDelete = []
+      for (const candidate of chat.restrictedUsers) {
+        if (new Date().getTime() - candidate.timestamp > 24 * 60 * 60 * 1000) {
+          restrictedToDelete.push(candidate)
+        }
+      }
+      const restrictedIdsToDelete = restrictedToDelete.map(c => c.id)
+      if (restrictedIdsToDelete.length) {
+        console.log(`🔥 Removing from restrictions ${restrictedIdsToDelete}`)
+        chat.restrictedUsers = chat.restrictedUsers.filter(
+          c => restrictedIdsToDelete.indexOf(c.id) < 0
+        )
+        console.log(`✅ Resulting restricted ids: ${chat.restrictedUsers}`)
         await chat.save()
       }
     }

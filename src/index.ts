@@ -12,11 +12,14 @@ import { setupTimeLimit } from './commands/timeLimit'
 import { setupLock } from './commands/lock'
 import { checkTime } from './middlewares/checkTime'
 import { setupRestrict } from './commands/restrict'
+import { checkRestrict } from './middlewares/checkRestrict'
 
 // Check time
 bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
+// Check if restricted
+bot.use(checkRestrict)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)

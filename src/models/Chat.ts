@@ -42,6 +42,8 @@ export class Chat extends Typegoose {
   restrict: boolean
   @arrayProp({ items: Candidate, default: [] })
   candidates: Candidate[]
+  @arrayProp({ items: Candidate, default: [] })
+  restrictedUsers: Candidate[]
 }
 
 // Get Chat model
@@ -63,5 +65,10 @@ export async function findChat(id: number) {
 }
 
 export function findChatsWithCandidates() {
-  return ChatModel.find({ 'candidates.0': { $exists: true } })
+  return ChatModel.find({
+    $or: [
+      { 'candidates.0': { $exists: true } },
+      { 'restrictedUsers.0': { $exists: true } },
+    ],
+  })
 }
