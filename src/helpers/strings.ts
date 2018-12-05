@@ -19,6 +19,7 @@ const localizations = {
 /captcha — changes type of captcha used
 /timeLimit — changes amount of time given to newcomers
 /lock — makes commands accessible only by admins
+/restrict — restricts newcomers to send only text messages in the first 24 hours
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -28,6 +29,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /captcha — меняет тип капчи
 /timeLimit — меняет количество времени, данное новичками
 /lock — делает команды доступными только админами
+/restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -37,6 +39,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /captcha — Modifica il tipo di Captche
 /timeLimit — Modifica il tempo per i nuovi membri
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
+/restrict — restricts newcomers to send only text messages in the first 24 hours
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -46,6 +49,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /captcha — muutub captcha tüüpi
 /timeLimit — muutub uustilnukitele antud aega
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
+/restrict — restricts newcomers to send only text messages in the first 24 hours
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -55,6 +59,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /captcha — змінює тип капчі
 /timeLimit — змінює кількість часу, що дається новачкам
 /lock — робить команди доступними тільки адміністраторам
+/restrict — restricts newcomers to send only text messages in the first 24 hours
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estara tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -64,8 +69,9 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /captcha — muda o tipo de captcha usado
 /timeLimit — muda o tempo dado para o novato realizar a ação
 /lock — faz dos comandos acessíveis apenas pelos ADMs
+/restrict — restricts newcomers to send only text messages in the first 24 hours
 
-Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`
+Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
   },
   language: {
     en: 'Please, select the language.',
@@ -73,7 +79,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Prego, seleziona la lingua.',
     et: 'Palun valige keel.',
     uk: 'Будь ласка, виберіть мову.',
-    br: 'Por favor, selecione uma língua.'
+    br: 'Por favor, selecione uma língua.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -81,7 +87,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Perfetto, Ora parlo Italiano.',
     et: 'Väga hea, nüüd ma räägin eesti keeles.',
     uk: 'Чудово, тепер я розмовляю українською.',
-    br: 'Boa, Agora eu falo português.'
+    br: 'Boa, Agora eu falo português.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -89,7 +95,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Solamente chi ha invocato il comando può selezionarlo.',
     et: 'Ainult see, kes avas menüüd, saab valida valikud.',
     uk: 'Тільки людина, яка викликала меню, може вибирати опції.',
-    br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.'
+    br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.',
   },
   captcha: {
     en: `Please, select the test type for the newcomers:
@@ -115,7 +121,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     br: `Por favor, selecione o tipo de teste para os novatos:
     
 • Simples - o bot vai pedir para mandar alguma coisa no chat
-• Botão - o bot vai pedir para apertar um botão`
+• Botão - o bot vai pedir para apertar um botão`,
   },
   simple: {
     en: 'Simple',
@@ -123,7 +129,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Semplice',
     et: 'Lihtne',
     uk: 'Проста',
-    br: 'Simples'
+    br: 'Simples',
   },
   digits: {
     en: 'Digits',
@@ -131,7 +137,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Digita',
     et: 'Digitaalne',
     uk: 'Цифрова',
-    br: 'Digitos'
+    br: 'Digitos',
   },
   button: {
     en: 'Button',
@@ -139,7 +145,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Bottone',
     et: 'Nuppuga',
     uk: 'Кнопкою',
-    br: 'Botão'
+    br: 'Botão',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -147,7 +153,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Fantastico, Userò questo tipo di test.',
     et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.',
     uk: 'Чудово, тепер я буду використовувати цей тип тесту.',
-    br: 'Boa, Eu irei usar esse tipo de teste agora.'
+    br: 'Boa, Eu irei usar esse tipo de teste agora.',
   },
   time_limit: {
     en:
@@ -161,7 +167,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk:
       'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
     br:
-      'Por favor, selecione quantos segundos o novato tem para completar o teste.'
+      'Por favor, selecione quantos segundos o novato tem para completar o teste.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -169,7 +175,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Magnifico, Ora userò questo tempo',
     et: 'Väga hea, nüüd ma kasutan seda aja limiiti.',
     uk: 'Чудово, тепер я буду використовувати це обмеження часу.',
-    br: 'Boa, Eu irei usar esse tempo limite agora.'
+    br: 'Boa, Eu irei usar esse tempo limite agora.',
   },
   seconds: {
     en: 'sec',
@@ -207,7 +213,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk:
       ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
-      ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!'
+      ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
   },
   digits_warning: {
     en:
@@ -221,7 +227,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk:
       ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
-      ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!'
+      ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
   },
   button_warning: {
     en:
@@ -243,7 +249,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Non sono un bot',
     et: 'Ma ei ole bot',
     uk: 'Я не бот',
-    br: 'Não sou um robô'
+    br: 'Não sou um robô',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -252,6 +258,34 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
-    br: 'Apenas aquele que não é um robô pode apetar esse botão.'
+    br: 'Apenas aquele que não é um robô pode apetar esse botão.',
+  },
+  restrict_true: {
+    en:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    ru:
+      'Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
+    it:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    et:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    uk:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    br:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+  },
+  restrict_false: {
+    en:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    ru:
+      'Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
+    it:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    et:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    uk:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    br:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
   },
 }

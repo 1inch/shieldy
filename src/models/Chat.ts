@@ -7,7 +7,7 @@ export enum Language {
   ITALIAN = 'it',
   ESTONIAN = 'et',
   UKRAINIAN = 'uk',
-  PORTUGUESE = 'br'
+  PORTUGUESE = 'br',
 }
 
 export enum CaptchaType {
@@ -38,6 +38,8 @@ export class Chat extends Typegoose {
   timeGiven: number
   @prop({ required: true, default: false })
   adminLocked: boolean
+  @prop({ required: true, default: false })
+  restrict: boolean
   @arrayProp({ items: Candidate, default: [] })
   candidates: Candidate[]
 }

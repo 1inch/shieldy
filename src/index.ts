@@ -11,6 +11,7 @@ import { setupNewcomers } from './helpers/newcomers'
 import { setupTimeLimit } from './commands/timeLimit'
 import { setupLock } from './commands/lock'
 import { checkTime } from './middlewares/checkTime'
+import { setupRestrict } from './commands/restrict'
 
 // Check time
 bot.use(checkTime)
@@ -22,6 +23,7 @@ setupLanguage(bot)
 setupCaptcha(bot)
 setupTimeLimit(bot)
 setupLock(bot)
+setupRestrict(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
