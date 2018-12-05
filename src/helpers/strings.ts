@@ -20,6 +20,7 @@ const localizations = {
 /timeLimit — changes amount of time given to newcomers
 /lock — makes commands accessible only by admins
 /restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -30,6 +31,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /timeLimit — меняет количество времени, данное новичками
 /lock — делает команды доступными только админами
 /restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
+/deleteEntryMessages — удалять сообщения о входе пользователей в чат
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -40,6 +42,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /timeLimit — Modifica il tempo per i nuovi membri
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
 /restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -50,6 +53,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /timeLimit — muutub uustilnukitele antud aega
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
 /restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -60,6 +64,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /timeLimit — змінює кількість часу, що дається новачкам
 /lock — робить команди доступними тільки адміністраторам
 /restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estara tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -70,6 +75,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /timeLimit — muda o tempo dado para o novato realizar a ação
 /lock — faz dos comandos acessíveis apenas pelos ADMs
 /restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
   },
@@ -287,5 +293,21 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Great! Now all newcomers will be able to send any type of content to this chat.',
     br:
       'Great! Now all newcomers will be able to send any type of content to this chat.',
+  },
+  deleteEntryMessages_true: {
+    en: 'Great! Now entry messages will be deleted.',
+    ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
+    it: 'Great! Now entry messages will be deleted.',
+    et: 'Great! Now entry messages will be deleted.',
+    uk: 'Great! Now entry messages will be deleted.',
+    br: 'Great! Now entry messages will be deleted.',
+  },
+  deleteEntryMessages_false: {
+    en: 'Great! Now entry messages will not be deleted.',
+    ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
+    it: 'Great! Now entry messages will not be deleted.',
+    et: 'Great! Now entry messages will not be deleted.',
+    uk: 'Great! Now entry messages will not be deleted.',
+    br: 'Great! Now entry messages will not be deleted.',
   },
 }

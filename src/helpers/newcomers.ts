@@ -65,6 +65,14 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       )}`
     )
     await (chat as any).save()
+    // Delete entry message if required
+    if (chat.deleteEntryMessages) {
+      try {
+        await ctx.telegram.deleteMessage(ctx.chat!.id, ctx.message!.message_id)
+      } catch (err) {
+        report(bot, err)
+      }
+    }
   })
   // Check newcomers
   bot.use(async (ctx, next) => {
@@ -91,9 +99,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
-      if (!checkIfErrorDismissable(err)) {
-        report(bot, err)
-      }
+      report(bot, err)
     }
     next()
   })
@@ -123,9 +129,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
-      if (!checkIfErrorDismissable(err)) {
-        report(bot, err)
-      }
+      report(bot, err)
     }
   })
 }
@@ -196,9 +200,7 @@ async function check() {
         try {
           await bot.telegram.deleteMessage(chat.id, candidate.messageId)
         } catch (err) {
-          if (!checkIfErrorDismissable(err)) {
-            report(bot, err)
-          }
+          report(bot, err)
         }
       }
       const idsToDelete = candidatesToDelete.map(c => c.id)

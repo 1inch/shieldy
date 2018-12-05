@@ -40,6 +40,8 @@ export class Chat extends Typegoose {
   adminLocked: boolean
   @prop({ required: true, default: false })
   restrict: boolean
+  @prop({ required: true, default: false })
+  deleteEntryMessages: boolean
   @arrayProp({ items: Candidate, default: [] })
   candidates: Candidate[]
   @arrayProp({ items: Candidate, default: [] })

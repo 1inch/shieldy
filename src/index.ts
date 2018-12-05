@@ -13,6 +13,7 @@ import { setupLock } from './commands/lock'
 import { checkTime } from './middlewares/checkTime'
 import { setupRestrict } from './commands/restrict'
 import { checkRestrict } from './middlewares/checkRestrict'
+import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
 
 // Check time
 bot.use(checkTime)
@@ -27,6 +28,7 @@ setupCaptcha(bot)
 setupTimeLimit(bot)
 setupLock(bot)
 setupRestrict(bot)
+setupDeleteEntryMessages(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
