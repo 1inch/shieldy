@@ -32,6 +32,21 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           messageId: message.message_id,
         })
       }
+      // Restrict if requested
+      if (chat.restrict) {
+        try {
+          const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
+          await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
+            until_date: tomorrow,
+            can_send_messages: true,
+            can_send_media_messages: false,
+            can_send_other_messages: false,
+            can_add_web_page_previews: false,
+          })
+        } catch (err) {
+          report(bot, err)
+        }
+      }
     }
     console.log(
       `➕ Adding candidates to ${ctx.chat.id}: ${candidatesToAdd.map(c =>
