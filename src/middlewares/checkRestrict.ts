@@ -16,7 +16,9 @@ export async function checkRestrict(
     ((ctx.message.entities &&
       ctx.message.entities.length &&
       ctx.message.entities.map(e => e.type).indexOf('url') > -1) ||
-      ctx.message.forward_from)
+      (ctx.message.forward_from ||
+        ctx.message.forward_date ||
+        ctx.message.forward_from_chat))
   ) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id)
