@@ -63,19 +63,19 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /captcha — змінює тип капчі
 /timeLimit — змінює кількість часу, що дається новачкам
 /lock — робить команди доступними тільки адміністраторам
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
+/restrict — забороняє новачкам надсилати будь-що, крім текстових повідомлень в перші 24 години
+/deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
-    br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estara tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
+    br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
 /help — mostra essa mensagem
 /language — muda a língua
 /captcha — muda o tipo de captcha usado
 /timeLimit — muda o tempo dado para o novato realizar a ação
 /lock — faz dos comandos acessíveis apenas pelos ADMs
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
+/restrict - restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas
+/deleteEntryMessages — deleta a mensagem de entrada do usuário
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
   },
@@ -276,9 +276,9 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et:
       'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     uk:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+      'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
     br:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+      'Boa, Agora todos os novatos só poderam mandar mensagens de texto para esse chat.',
   },
   restrict_false: {
     en:
@@ -290,24 +290,24 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et:
       'Great! Now all newcomers will be able to send any type of content to this chat.',
     uk:
-      'Great! Now all newcomers will be able to send any type of content to this chat.',
+      'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
     br:
-      'Great! Now all newcomers will be able to send any type of content to this chat.',
+      'Boa, Agora todos os novatos poderam mandar qualquer tipo de conteúdo para esse chat.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     it: 'Great! Now entry messages will be deleted.',
     et: 'Great! Now entry messages will be deleted.',
-    uk: 'Great! Now entry messages will be deleted.',
-    br: 'Great! Now entry messages will be deleted.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
+    br: 'Boa, Agora a mensagem de entrada será apagada.',
   },
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     it: 'Great! Now entry messages will not be deleted.',
     et: 'Great! Now entry messages will not be deleted.',
-    uk: 'Great! Now entry messages will not be deleted.',
-    br: 'Great! Now entry messages will not be deleted.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
+    br: 'Boa, Agora a mensagem de entrada não será apagada.',
   },
 }
