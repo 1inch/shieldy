@@ -270,7 +270,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
-    br: 'Apenas o usuário citado pode apetar esse botão.',
+    br: 'Apenas o usuário citado pode apertar esse botão.',
   },
   restrict_true: {
     en:
