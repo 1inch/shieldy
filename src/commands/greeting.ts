@@ -28,7 +28,7 @@ export function checkGreeting(ctx: ContextMessageUpdate, next) {
     !ctx.message.reply_to_message.from ||
     !ctx.message.reply_to_message.from.username ||
     ctx.message.reply_to_message.from.username !==
-      (ctx as any).telegraf.options.username
+      (ctx as any).Telegraf.options.username
   ) {
     return next()
   }
