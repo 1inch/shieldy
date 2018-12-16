@@ -10,7 +10,7 @@ export function strings(chat: Chat, key: string) {
   )
 }
 
-const localizations = {
+export const localizations = {
   help: {
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
 
@@ -21,6 +21,7 @@ const localizations = {
 /lock — makes commands accessible only by admins
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
+/greeting — greets users who pass the test
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -32,6 +33,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /lock — делает команды доступными только админами
 /restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
+/greeting — встречать прошедших проверку пользователей сообщением
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -43,6 +45,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /lock — Rendi accessibili alcuni comandi solo agli amministratori
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
+/greeting — greets users who pass the test
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -54,6 +57,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /lock — muudab käsud kättesaadavaks ainult administraatoritele
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
+/greeting — greets users who pass the test
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -65,6 +69,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /lock — робить команди доступними тільки адміністраторам
 /restrict — забороняє новачкам надсилати будь-що, крім текстових повідомлень в перші 24 години
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
+/greeting — greets users who pass the test
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -76,6 +81,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /lock — faz dos comandos acessíveis apenas pelos ADMs
 /restrict - restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
+/greeting — greets users who pass the test
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
   },
@@ -299,7 +305,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     it: 'Great! Now entry messages will be deleted.',
     et: 'Great! Now entry messages will be deleted.',
-    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
+    uk:
+      'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
   },
   deleteEntryMessages_false: {
@@ -307,7 +314,45 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     it: 'Great! Now entry messages will not be deleted.',
     et: 'Great! Now entry messages will not be deleted.',
-    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
+    uk:
+      'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
+  },
+  greetsUsers_true: {
+    en:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    ru:
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей.',
+    it:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    et:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    uk:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    br:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+  },
+  greetsUsers_true_message: {
+    en:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    ru:
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей. Текущее сообщение с приветствием ниже.',
+    it:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    et:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    uk:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    br:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+  },
+  greetsUsers_false: {
+    en: 'Great! Now newcomers who passed the test will not be greeted.',
+    ru:
+      'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
+    it: 'Great! Now newcomers who passed the test will not be greeted',
+    et: 'Great! Now newcomers who passed the test will not be greeted',
+    uk: 'Great! Now newcomers who passed the test will not be greeted',
+    br: 'Great! Now newcomers who passed the test will not be greeted',
   },
 }

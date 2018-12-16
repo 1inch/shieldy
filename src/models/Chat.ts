@@ -27,6 +27,8 @@ export class Candidate {
   messageId: number
 }
 
+export class Message {}
+
 export class Chat extends Typegoose {
   @prop({ required: true, index: true, unique: true })
   id: number
@@ -46,6 +48,10 @@ export class Chat extends Typegoose {
   candidates: Candidate[]
   @arrayProp({ items: Candidate, default: [] })
   restrictedUsers: Candidate[]
+  @prop({ required: true, default: false })
+  greetsUsers: boolean
+  @prop()
+  greetingMessage: Message
 }
 
 // Get Chat model
