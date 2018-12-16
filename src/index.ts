@@ -14,7 +14,7 @@ import { checkTime } from './middlewares/checkTime'
 import { setupRestrict } from './commands/restrict'
 import { checkRestrict } from './middlewares/checkRestrict'
 import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
-import { setupGreeting, checkGreeting } from './commands/greeting'
+import { setupGreeting } from './commands/greeting'
 
 // Check time
 bot.use(checkTime)
@@ -22,8 +22,6 @@ bot.use(checkTime)
 bot.use(attachUser)
 // Check if restricted
 bot.use(checkRestrict)
-// Check if updates greeting message
-bot.use(checkGreeting)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)
