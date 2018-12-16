@@ -81,7 +81,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /lock — faz dos comandos acessíveis apenas pelos ADMs
 /restrict - restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
-/greeting — greets users who pass the test
+/greeting — congratula o usuário que passou no teste
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
   },
@@ -270,7 +270,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
-    br: 'Apenas aquele que não é um robô pode apetar esse botão.',
+    br: 'Apenas o usuário citado pode apetar esse botão.',
   },
   restrict_true: {
     en:
@@ -330,7 +330,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk:
       'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
     br:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
   },
   greetsUsers_true_message: {
     en:
@@ -344,7 +344,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     br:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -353,7 +353,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Great! Now newcomers who passed the test will not be greeted',
     et: 'Great! Now newcomers who passed the test will not be greeted',
     uk: 'Great! Now newcomers who passed the test will not be greeted',
-    br: 'Great! Now newcomers who passed the test will not be greeted',
+    br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -361,6 +361,6 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     it: 'Accepted!',
     et: 'Accepted!',
     uk: 'Accepted!',
-    br: 'Accepted!',
+    br: 'Aceito!',
   },
 }
