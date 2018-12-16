@@ -18,7 +18,7 @@ export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
   })
 }
 
-export function checkGreeting(ctx, next) {
+export function checkGreeting(ctx: ContextMessageUpdate, next) {
   // Check if reply
   if (!ctx.message || !ctx.message.reply_to_message) {
     return next()
@@ -28,7 +28,7 @@ export function checkGreeting(ctx, next) {
     !ctx.message.reply_to_message.from ||
     !ctx.message.reply_to_message.from.username ||
     ctx.message.reply_to_message.from.username !==
-      (ctx.telegraf as any).options.username
+      (ctx as any).telegraf.options.username
   ) {
     return next()
   }
