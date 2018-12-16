@@ -97,6 +97,13 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       )}`
     )
     try {
+      if (chat.greetsUsers && chat.greetingMessage) {
+        await ctx.telegram.sendCopy(
+          chat.id,
+          chat.greetingMessage.message,
+          Extra.inReplyTo(ctx.message.message_id)
+        )
+      }
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
       report(bot, err)
@@ -127,6 +134,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       )}`
     )
     try {
+      if (chat.greetsUsers && chat.greetingMessage) {
+        const message = chat.greetingMessage.message
+        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+        await ctx.telegram.sendCopy(chat.id, message)
+      }
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
       report(bot, err)

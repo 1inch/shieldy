@@ -355,4 +355,12 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     uk: 'Great! Now newcomers who passed the test will not be greeted',
     br: 'Great! Now newcomers who passed the test will not be greeted',
   },
+  greetsUsers_message_accepted: {
+    en: 'Accepted!',
+    ru: 'Принято!',
+    it: 'Accepted!',
+    et: 'Accepted!',
+    uk: 'Accepted!',
+    br: 'Accepted!',
+  },
 }

@@ -1,5 +1,6 @@
 // Dependencies
 import { prop, Typegoose, arrayProp } from 'typegoose'
+import { Message } from 'telegram-typings'
 
 export enum Language {
   ENGLISH = 'en',
@@ -27,7 +28,10 @@ export class Candidate {
   messageId: number
 }
 
-export class Message {}
+export class MessageWrapper {
+  @prop({ required: true })
+  message: Message
+}
 
 export class Chat extends Typegoose {
   @prop({ required: true, index: true, unique: true })
@@ -51,7 +55,7 @@ export class Chat extends Typegoose {
   @prop({ required: true, default: false })
   greetsUsers: boolean
   @prop()
-  greetingMessage: Message
+  greetingMessage: MessageWrapper
 }
 
 // Get Chat model
