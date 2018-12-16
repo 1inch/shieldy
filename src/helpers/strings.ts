@@ -334,17 +334,17 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
   },
   greetsUsers_true_message: {
     en:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей. Текущее сообщение с приветствием ниже.',
     it:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     et:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     uk:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     br:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
