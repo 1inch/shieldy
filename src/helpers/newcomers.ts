@@ -6,6 +6,7 @@ import { bot } from './bot'
 import { User } from 'telegram-typings'
 import { report } from './report'
 import { checkIfErrorDismissable } from './error'
+import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
@@ -98,11 +99,22 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
-        await ctx.telegram.sendCopy(
-          chat.id,
-          chat.greetingMessage.message,
-          Extra.inReplyTo(ctx.message.message_id)
-        )
+        const text = chat.greetingMessage.message.text
+        if (text.includes('$username') || text.includes('$title')) {
+          await ctx.telegram.sendMessage(
+            chat.id,
+            text
+              .replace(/\$username/g, getUsername(ctx.from))
+              .replace(/\$title/g, (await ctx.getChat()).title),
+            Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
+          )
+        } else {
+          await ctx.telegram.sendCopy(
+            chat.id,
+            chat.greetingMessage.message,
+            Extra.inReplyTo(ctx.message.message_id)
+          )
+        }
       }
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
@@ -135,9 +147,19 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
-        const message = chat.greetingMessage.message
-        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
-        await ctx.telegram.sendCopy(chat.id, message)
+        const text = chat.greetingMessage.message.text
+        if (text.includes('$username') || text.includes('$title')) {
+          await ctx.telegram.sendMessage(
+            chat.id,
+            text
+              .replace(/\$username/g, getUsername(ctx.from))
+              .replace(/\$title/g, (await ctx.getChat()).title)
+          )
+        } else {
+          const message = chat.greetingMessage.message
+          message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+          await ctx.telegram.sendCopy(chat.id, message)
+        }
       }
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
