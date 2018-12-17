@@ -320,9 +320,9 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
   },
   greetsUsers_true: {
     en:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $name).',
     ru:
-      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей.',
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $name).',
     it:
       'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
     et:
@@ -334,9 +334,9 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
   },
   greetsUsers_true_message: {
     en:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $name). The current greeting message follows.',
     ru:
-      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей. Текущее сообщение с приветствием ниже.',
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $name). Текущее сообщение с приветствием ниже.',
     it:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     et:
