@@ -37,7 +37,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       if (chat.restrict) {
         console.log('🤜 Restricting as well')
         try {
-          const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
+          const tomorrow = (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
           await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
             until_date: tomorrow,
             can_send_messages: true,
