@@ -215,7 +215,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
   },
   simple_warning: {
     en:
-      ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
+      ', please, send any message to this group within the time amount specified, otherwise you will be kicked out. Thank you!',
     ru:
       ', пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
