@@ -84,6 +84,18 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /greeting — congratula o usuário que passou no teste
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
+    tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
+
+/help — bu mesajı gösterir
+/language — dili değiştirir
+/captcha — kullanılan captcha türünü değiştirir
+/timeLimit — yeni gelenlere verilen zaman miktarını değiştirir
+/lock — komutları yalnızca yöneticiler tarafından erişilebilir hale getirir
+/restrict — yeni gelenleri ilk 24 saatte yalnızca metin mesajı göndermeleri için kısıtlar
+/deleteEntryMessages — kullanıcı girişi ile ilgili mesajları sil
+/greeting — testi geçiren kullanıcıları selamlar
+
+Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
   },
   language: {
     en: 'Please, select the language.',
@@ -92,6 +104,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Palun valige keel.',
     uk: 'Будь ласка, виберіть мову.',
     br: 'Por favor, selecione uma língua.',
+    tr: 'Lütfen dili seçin.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -100,6 +113,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Väga hea, nüüd ma räägin eesti keeles.',
     uk: 'Чудово, тепер я розмовляю українською.',
     br: 'Boa, Agora eu falo português.',
+    tr: 'Harika, artık Türkçe konuşuyorum.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -108,6 +122,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Ainult see, kes avas menüüd, saab valida valikud.',
     uk: 'Тільки людина, яка викликала меню, може вибирати опції.',
     br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.',
+    tr: 'Sadece menüyü başlatan kişi seçenekleri seçebilir.',
   },
   captcha: {
     en: `Please, select the test type for the newcomers:
@@ -134,6 +149,10 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     
 • Simples - o bot vai pedir para mandar alguma coisa no chat
 • Botão - o bot vai pedir para apertar um botão`,
+    tr: `Lütfen, yeni gelenler için test türünü seçin:
+
+• Basit — bot sohbet için bir şey göndermek isteyecektir
+• Düğme — bot bir düğmeye basılmasını isteyecektir`,
   },
   simple: {
     en: 'Simple',
@@ -142,6 +161,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Lihtne',
     uk: 'Проста',
     br: 'Simples',
+    tr: 'Basit',
   },
   digits: {
     en: 'Digits',
@@ -150,6 +170,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Digitaalne',
     uk: 'Цифрова',
     br: 'Digitos',
+    tr: 'Rakamlar',
   },
   button: {
     en: 'Button',
@@ -158,6 +179,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Nuppuga',
     uk: 'Кнопкою',
     br: 'Botão',
+    tr: 'Düğme',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -166,6 +188,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.',
     uk: 'Чудово, тепер я буду використовувати цей тип тесту.',
     br: 'Boa, Eu irei usar esse tipo de teste agora.',
+    tr: 'Harika, o zaman bu tür bir testi kullanacağım.',
   },
   time_limit: {
     en:
@@ -180,6 +203,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
     br:
       'Por favor, selecione quantos segundos o novato tem para completar o teste.',
+    tr:
+      'Lütfen, yeni gelenlerin kovulmadan önce testi tamamlaması gereken saniyeyi seçin.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -188,6 +213,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Väga hea, nüüd ma kasutan seda aja limiiti.',
     uk: 'Чудово, тепер я буду використовувати це обмеження часу.',
     br: 'Boa, Eu irei usar esse tempo limite agora.',
+    tr: 'Harika, o zaman bu süreyi kullanacağım.',
   },
   seconds: {
     en: 'sec',
@@ -196,6 +222,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'sek',
     uk: 'сек',
     br: 'sec',
+    tr: 'san',
   },
   lock_true: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -204,6 +231,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Väga hea, nüüd ma aktsepteerin ainult administraatorite käske.',
     uk: 'Чудово! Тепер я буду приймати команди тільки від адміністраторів.',
     br: 'Boa! Agora só obedecerei os ADMs.',
+    tr: 'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
   },
   lock_false: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -212,6 +240,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Väga hea, nüüd ma aktsepteerin kõik käsud.',
     uk: 'Чудово! Тепер я буду приймати команди від усіх.',
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
+    tr: 'Harika! Artık herkes tarafından gönderilen komutlara tepki vereceğim.',
   },
   simple_warning: {
     en:
@@ -226,6 +255,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
       ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
+    tr:
+      ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
   },
   digits_warning: {
     en:
@@ -240,6 +271,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
       ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
+    tr:
+      ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
   },
   button_warning: {
     en:
@@ -254,6 +287,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
     br:
       ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
+    tr:
+      ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde atılacasınız. Teşekkürler!',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -262,15 +297,16 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Ma ei ole bot',
     uk: 'Я не бот',
     br: 'Não sou um robô',
+    tr: 'Ben bir bot değilim',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
-    ru:
-      'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
+    ru: 'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
     br: 'Apenas o usuário citado pode apertar esse botão.',
+    tr: 'Sadece bot olmayan bir aday bu düğmeye basabilir.',
   },
   restrict_true: {
     en:
@@ -285,6 +321,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
     br:
       'Boa, Agora todos os novatos só poderam mandar mensagens de texto para esse chat.',
+    tr:
+      'Harika! Artık tüm yeni gelenler, bu sohbete yalnızca normal metin mesajları gönderebilecek.',
   },
   restrict_false: {
     en:
@@ -299,24 +337,26 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
     br:
       'Boa, Agora todos os novatos poderam mandar qualquer tipo de conteúdo para esse chat.',
+    tr:
+      'Harika! Artık tüm yeni kullanıcılar, bu sohbete her türlü içeriği gönderebilecek.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     it: 'Great! Now entry messages will be deleted.',
     et: 'Great! Now entry messages will be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
+    tr: 'Harika! Artık giriş mesajları silinecektir.',
   },
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     it: 'Great! Now entry messages will not be deleted.',
     et: 'Great! Now entry messages will not be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
+    tr: 'Harika! Artık giriş mesajları silinmeyecek.',
   },
   greetsUsers_true: {
     en:
@@ -331,6 +371,8 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
     br:
       'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
+    tr:
+      'Harika! Artık testi geçen yeni üyeler karşılanmayacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz).',
   },
   greetsUsers_true_message: {
     en:
@@ -345,15 +387,17 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     br:
       'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
+    tr:
+      'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı aşağıdaki gibidir.',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
-    ru:
-      'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
+    ru: 'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     it: 'Great! Now newcomers who passed the test will not be greeted',
     et: 'Great! Now newcomers who passed the test will not be greeted',
     uk: 'Great! Now newcomers who passed the test will not be greeted',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
+    tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -362,5 +406,6 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
     et: 'Accepted!',
     uk: 'Accepted!',
     br: 'Aceito!',
+    tr: 'Kabul edildi!',
   },
 }
