@@ -24,6 +24,9 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
             [
               m.callbackButton('Українська', 'uk'),
               m.callbackButton('Português Brasil', 'br')
+            ],
+            [
+              m.callbackButton('Türkçe', 'tr'),
             ]
           ])
         )
