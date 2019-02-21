@@ -104,8 +104,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Palun valige keel.',
     uk: 'Будь ласка, виберіть мову.',
     br: 'Por favor, selecione uma língua.',
-	tr: 'Lütfen dili seçin.',
-
+    tr: 'Lütfen dili seçin.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -114,8 +113,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Väga hea, nüüd ma räägin eesti keeles.',
     uk: 'Чудово, тепер я розмовляю українською.',
     br: 'Boa, Agora eu falo português.',
-	tr: 'Harika, artık Türkçe konuşuyorum.',
-
+    tr: 'Harika, artık Türkçe konuşuyorum.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -163,8 +161,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Lihtne',
     uk: 'Проста',
     br: 'Simples',
-	tr: 'Basit',
-
+    tr: 'Basit',
   },
   digits: {
     en: 'Digits',
@@ -309,7 +306,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
     br: 'Apenas o usuário citado pode apertar esse botão.',
-	tr: 'Sadece bot olmayan bir aday bu düğmeye basabilir.',
+    tr: 'Sadece bot olmayan bir aday bu düğmeye basabilir.',
   },
   restrict_true: {
     en:
