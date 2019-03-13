@@ -195,10 +195,7 @@ function notifyCandidate(
   equation: Equation
 ) {
   const chat = ctx.dbchat
-  let warningMessage = strings(chat, `${chat.captchaType}_warning`)
-  if (chat.captchaType === CaptchaType.DIGITS) {
-    warningMessage = `${warningMessage} (${equation.question})`
-  }
+  const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
       ? undefined
@@ -211,7 +208,9 @@ function notifyCandidate(
           ])
         )
   return ctx.replyWithMarkdown(
-    `[${getUsername(candidate)}](tg://user?id=${
+    `${
+      chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
+    }[${getUsername(candidate)}](tg://user?id=${
       candidate.id
     })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
     extra
