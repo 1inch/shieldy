@@ -106,7 +106,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       candidate.captchaType === CaptchaType.DIGITS &&
       (!ctx.message ||
         !ctx.message.text ||
-        ctx.message.text.indexOf(candidate.equation.answer as string) < 0)
+        ctx.message.text.indexOf(candidate.equation.answer as string) < 0 ||
+        (ctx.message.text.match(/\d/g) || []).length > 2)
     ) {
       return next()
     }
