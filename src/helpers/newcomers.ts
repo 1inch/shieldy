@@ -110,6 +110,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         (ctx.message.text.match(/\d/g) || []).length > 2)
     ) {
       return next()
+    } else {
+      try {
+        await ctx.deleteMessage()
+      } catch (err) {
+        // Do nothing
+      }
     }
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
