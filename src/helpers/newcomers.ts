@@ -110,7 +110,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         (ctx.message.text.match(/\d/g) || []).length > 2)
     ) {
       return next()
-    } else {
+    } else if (candidate.captchaType === CaptchaType.DIGITS) {
       try {
         await ctx.deleteMessage()
       } catch (err) {
@@ -134,13 +134,13 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             text
               .replace(/\$username/g, getUsername(ctx.from))
               .replace(/\$title/g, (await ctx.getChat()).title),
-            Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
+              candidate.captchaType === CaptchaType.DIGITS ? undefined : Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
           )
         } else {
           await ctx.telegram.sendCopy(
             chat.id,
             chat.greetingMessage.message,
-            Extra.inReplyTo(ctx.message.message_id)
+            candidate.captchaType === CaptchaType.DIGITS ? undefined : Extra.inReplyTo(ctx.message.message_id)
           )
         }
       }
