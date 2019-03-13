@@ -12,7 +12,7 @@ export function setupCaptcha(bot: Telegraf<ContextMessageUpdate>) {
       Extra.inReplyTo(ctx.message.message_id).markup(m =>
         m.inlineKeyboard([
           m.callbackButton(strings(ctx.dbchat, 'simple'), 'simple'),
-          // m.callbackButton(strings(ctx.dbchat, 'digits'), 'digits'),
+          m.callbackButton(strings(ctx.dbchat, 'digits'), 'digits'),
           m.callbackButton(strings(ctx.dbchat, 'button'), 'button'),
         ])
       )

@@ -1,12 +1,18 @@
 // Dependencies
 import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from './strings'
-import { Candidate, findChatsWithCandidates, CaptchaType } from '../models'
+import {
+  Candidate,
+  findChatsWithCandidates,
+  CaptchaType,
+  Equation,
+} from '../models'
 import { bot } from './bot'
 import { User } from 'telegram-typings'
 import { report } from './report'
 import { checkIfErrorDismissable } from './error'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
+import { generateEquation } from './equation'
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
@@ -25,12 +31,17 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         continue
       }
       if (candidates.map(c => c.id).indexOf(member.id) < 0) {
-        const message = await notifyCandidate(ctx, member)
+        const equation =
+          chat.captchaType === CaptchaType.DIGITS
+            ? generateEquation()
+            : undefined
+        const message = await notifyCandidate(ctx, member, equation)
         candidatesToAdd.push({
           id: member.id,
           timestamp: new Date().getTime(),
           captchaType: chat.captchaType,
           messageId: message.message_id,
+          equation,
         })
       }
       // Restrict if requested
@@ -81,15 +92,25 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (!chat.candidates.length) {
       return next()
     }
-    if (chat.captchaType !== CaptchaType.SIMPLE) {
+    if (
+      [CaptchaType.SIMPLE, CaptchaType.DIGITS].indexOf(chat.captchaType) < 0
+    ) {
       return next()
     }
     const userId = ctx.from.id
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return next()
     }
-    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
+    if (
+      candidate.captchaType === CaptchaType.DIGITS &&
+      (!ctx.message ||
+        !ctx.message.text ||
+        ctx.message.text.indexOf(candidate.equation.answer as string) < 0)
+    ) {
+      return next()
+    }
+    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     ctx.dbchat = await (chat as any).save()
     console.log(
@@ -168,9 +189,16 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
 }
 
-function notifyCandidate(ctx: ContextMessageUpdate, candidate: User) {
+function notifyCandidate(
+  ctx: ContextMessageUpdate,
+  candidate: User,
+  equation: Equation
+) {
   const chat = ctx.dbchat
-  const warningMessage = strings(chat, `${chat.captchaType}_warning`)
+  let warningMessage = strings(chat, `${chat.captchaType}_warning`)
+  if (chat.captchaType === CaptchaType.DIGITS) {
+    warningMessage = `${warningMessage} (${equation.question})`
+  }
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
       ? undefined

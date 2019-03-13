@@ -18,6 +18,11 @@ export enum CaptchaType {
   BUTTON = 'button',
 }
 
+export class Equation {
+  question: String
+  answer: String
+}
+
 export class Candidate {
   @prop({ required: true })
   id: number
@@ -27,6 +32,9 @@ export class Candidate {
   captchaType: CaptchaType
   @prop({ required: true })
   messageId: number
+
+  @prop()
+  equation?: Equation
 }
 
 export class MessageWrapper {
