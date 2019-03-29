@@ -17,6 +17,9 @@ import { generateEquation } from './equation'
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
   bot.on('new_chat_members', async ctx => {
+    if (ctx.chat.type === 'channel') {
+      return
+    }
     const chat = ctx.dbchat
     const candidates = chat.candidates
     const candidatesToAdd = [] as Candidate[]
@@ -134,13 +137,17 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             text
               .replace(/\$username/g, getUsername(ctx.from))
               .replace(/\$title/g, (await ctx.getChat()).title),
-              candidate.captchaType === CaptchaType.DIGITS ? undefined : Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
+            candidate.captchaType === CaptchaType.DIGITS
+              ? undefined
+              : (Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage)
           )
         } else {
           await ctx.telegram.sendCopy(
             chat.id,
             chat.greetingMessage.message,
-            candidate.captchaType === CaptchaType.DIGITS ? undefined : Extra.inReplyTo(ctx.message.message_id)
+            candidate.captchaType === CaptchaType.DIGITS
+              ? undefined
+              : Extra.inReplyTo(ctx.message.message_id)
           )
         }
       }

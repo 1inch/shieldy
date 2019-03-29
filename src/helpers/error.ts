@@ -13,6 +13,7 @@ export function checkIfErrorDismissable(error: Error) {
     'CHAT_ADMIN_REQUIRED',
     "message can't be deleted",
     'group chat was upgraded to a supergroup',
+    'CHANNEL_PRIVATE',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
