@@ -142,17 +142,13 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             text
               .replace(/\$username/g, getUsername(ctx.from))
               .replace(/\$title/g, (await ctx.getChat()).title),
-            candidate.captchaType === CaptchaType.DIGITS
-              ? undefined
-              : (Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage)
+            Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
           await ctx.telegram.sendCopy(
             chat.id,
             chat.greetingMessage.message,
-            candidate.captchaType === CaptchaType.DIGITS
-              ? undefined
-              : Extra.inReplyTo(ctx.message.message_id)
+            Extra.webPreview(false) as ExtraReplyMessage
           )
         }
       }
@@ -197,12 +193,15 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             chat.id,
             text
               .replace(/\$username/g, getUsername(ctx.from))
-              .replace(/\$title/g, (await ctx.getChat()).title)
+              .replace(/\$title/g, (await ctx.getChat()).title),
+            Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
           const message = chat.greetingMessage.message
           message.text = `${message.text}\n\n${getUsername(ctx.from)}`
-          await ctx.telegram.sendCopy(chat.id, message)
+          await ctx.telegram.sendCopy(chat.id, message, Extra.webPreview(
+            false
+          ) as ExtraReplyMessage)
         }
       }
     } catch (err) {
