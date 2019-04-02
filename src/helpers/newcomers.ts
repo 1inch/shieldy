@@ -122,13 +122,18 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
-    ctx.dbchat = await (chat as any).save()
+    try {
+      ctx.dbchat = await (chat as any).save()
+    } catch (err) {
+      report(bot, err)
+    }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
         v.id ? v.id : v
       )}`
     )
     try {
+      await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
         if (text.includes('$username') || text.includes('$title')) {
@@ -151,7 +156,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           )
         }
       }
-      await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
       report(bot, err)
     }
@@ -174,13 +178,18 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
-    await (chat as any).save()
+    try {
+      await (chat as any).save()
+    } catch (err) {
+      report(bot, err)
+    }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
         v.id ? v.id : v
       )}`
     )
     try {
+      await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
         if (text.includes('$username') || text.includes('$title')) {
@@ -196,7 +205,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           await ctx.telegram.sendCopy(chat.id, message)
         }
       }
-      await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
       report(bot, err)
     }
