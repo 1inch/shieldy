@@ -15,6 +15,7 @@ export function checkIfErrorDismissable(error: Error) {
     'group chat was upgraded to a supergroup',
     'CHANNEL_PRIVATE',
     'method is available only for supergroups',
+    'have no rights to send a message',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
