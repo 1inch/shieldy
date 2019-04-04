@@ -16,6 +16,7 @@ export function checkIfErrorDismissable(error: Error) {
     'CHANNEL_PRIVATE',
     'method is available only for supergroups',
     'have no rights to send a message',
+    'CHAT_WRITE_FORBIDDEN',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
