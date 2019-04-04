@@ -25,25 +25,35 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     const candidatesToAdd = [] as Candidate[]
     for (const member of ctx.message.new_chat_members) {
       if (member.username === (bot as any).options.username) {
-        ctx.replyWithMarkdown(strings(chat, 'help'), {
-          disable_web_page_preview: true,
-        })
+        try {
+          await ctx.replyWithMarkdown(strings(chat, 'help'), {
+            disable_web_page_preview: true,
+          })
+        } catch (err) {
+          await report(bot, err)
+        }
         continue
       }
       if (member.is_bot) {
         continue
       }
+      // Send notifications about captcha and add to candidates
       if (candidates.map(c => c.id).indexOf(member.id) < 0) {
         const equation =
           chat.captchaType === CaptchaType.DIGITS
             ? generateEquation()
             : undefined
-        const message = await notifyCandidate(ctx, member, equation)
+        let message
+        try {
+          message = await notifyCandidate(ctx, member, equation)
+        } catch (err) {
+          await report(bot, err)
+        }
         candidatesToAdd.push({
           id: member.id,
           timestamp: new Date().getTime(),
           captchaType: chat.captchaType,
-          messageId: message.message_id,
+          messageId: message ? message.message_id : undefined,
           equation,
         })
       }
@@ -60,7 +70,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             can_add_web_page_previews: false,
           })
         } catch (err) {
-          report(bot, err)
+          await report(bot, err)
         }
       }
     }
@@ -85,7 +95,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.telegram.deleteMessage(ctx.chat!.id, ctx.message!.message_id)
       } catch (err) {
-        report(bot, err)
+        await report(bot, err)
       }
     }
   })
@@ -117,7 +127,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.deleteMessage()
       } catch (err) {
-        // Do nothing
+        await report(bot, err)
       }
     }
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
@@ -125,7 +135,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       ctx.dbchat = await (chat as any).save()
     } catch (err) {
-      report(bot, err)
+      await report(bot, err)
     }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
@@ -134,6 +144,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
+    } catch (err) {
+      await report(bot, err)
+    }
+    try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
         if (text.includes('$username') || text.includes('$title')) {
@@ -153,7 +167,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
       }
     } catch (err) {
-      report(bot, err)
+      await report(bot, err)
     }
     next()
   })
@@ -166,7 +180,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     const userId = parseInt(params[1])
     const chat = ctx.dbchat
     if (userId !== ctx.from.id) {
-      return ctx.answerCbQuery(strings(chat, 'only_candidate_can_reply'))
+      try {
+        await ctx.answerCbQuery(strings(chat, 'only_candidate_can_reply'))
+      } catch (err) {
+        await report(bot, err)
+      }
+      return
     }
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return
@@ -177,7 +196,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await (chat as any).save()
     } catch (err) {
-      report(bot, err)
+      await report(bot, err)
     }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
@@ -186,6 +205,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
+    } catch (err) {
+      await report(bot, err)
+    }
+    try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
         if (text.includes('$username') || text.includes('$title')) {
@@ -205,7 +228,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
       }
     } catch (err) {
-      report(bot, err)
+      await report(bot, err)
     }
   })
 }
@@ -276,13 +299,13 @@ async function check() {
           if (checkIfErrorDismissable(err)) {
             candidatesToDelete.push(candidate)
           } else {
-            report(bot, err)
+            await report(bot, err)
           }
         }
         try {
           await bot.telegram.deleteMessage(chat.id, candidate.messageId)
         } catch (err) {
-          report(bot, err)
+          await report(bot, err)
         }
       }
       const idsToDelete = candidatesToDelete.map(c => c.id)

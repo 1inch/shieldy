@@ -30,8 +30,8 @@ export class Candidate {
   timestamp: number
   @prop({ required: true, enum: CaptchaType })
   captchaType: CaptchaType
-  @prop({ required: true })
-  messageId: number
+  @prop()
+  messageId?: number
 
   @prop()
   equation?: Equation
