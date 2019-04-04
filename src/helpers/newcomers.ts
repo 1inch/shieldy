@@ -89,7 +89,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         v.id ? v.id : v
       )}`
     )
-    await (chat as any).update()
+    await (chat as any).save()
     // Delete entry message if required
     if (chat.deleteEntryMessages) {
       try {
@@ -133,7 +133,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
-      ctx.dbchat = await (chat as any).update()
+      ctx.dbchat = await (chat as any).save()
     } catch (err) {
       await report(bot, err)
     }
@@ -194,7 +194,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
-      await (chat as any).update()
+      await (chat as any).save()
     } catch (err) {
       await report(bot, err)
     }
@@ -315,7 +315,7 @@ async function check() {
           c => idsToDelete.indexOf(c.id) < 0
         )
         console.log(`✅ Resulting ids: ${chat.candidates}`)
-        await chat.update()
+        await chat.save()
       }
       // Check restrictions
       const restrictedToDelete = []
@@ -331,7 +331,7 @@ async function check() {
           c => restrictedIdsToDelete.indexOf(c.id) < 0
         )
         console.log(`✅ Resulting restricted ids: ${chat.restrictedUsers}`)
-        await chat.update()
+        await chat.save()
       }
     }
   } catch (err) {
