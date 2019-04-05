@@ -301,8 +301,9 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     tr: 'Harika! Artık herkes tarafından gönderilen komutlara tepki vereceğim.',
   },
   simple_warning: {
-    ruen:
-      ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you! Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
+      
+  Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
     ru:
@@ -319,8 +320,9 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
   },
   digits_warning: {
-    ruen:
-      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you! Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+      
+Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
@@ -337,8 +339,9 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
   },
   button_warning: {
-    ruen:
-      ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you! Пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
+            
+Пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
     ru:
