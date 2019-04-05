@@ -9,7 +9,7 @@ export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
     next()
     return
   }
-  if (ctx.from.id === parseInt(process.env.ADMIN_ID)) {
+  if (ctx.from.id === parseInt(process.env.ADMIN)) {
     next()
     return
   }
