@@ -61,14 +61,22 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       if (chat.restrict) {
         console.log('🤜 Restricting as well')
         try {
-          const tomorrow = (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
-          await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
-            until_date: tomorrow,
-            can_send_messages: true,
-            can_send_media_messages: false,
-            can_send_other_messages: false,
-            can_add_web_page_previews: false,
-          })
+          const gotUser = await ctx.telegram.getChatMember(chat.id, member.id)
+          if (
+            gotUser.can_send_messages &&
+            gotUser.can_send_media_messages &&
+            gotUser.can_send_other_messages &&
+            gotUser.can_add_web_page_previews
+          ) {
+            const tomorrow = (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
+            await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
+              until_date: tomorrow,
+              can_send_messages: true,
+              can_send_media_messages: false,
+              can_send_other_messages: false,
+              can_add_web_page_previews: false,
+            })
+          }
         } catch (err) {
           await report(bot, err)
         }
