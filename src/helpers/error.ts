@@ -18,6 +18,7 @@ export function checkIfErrorDismissable(error: Error) {
     'have no rights to send a message',
     'CHAT_WRITE_FORBIDDEN',
     'message identifier is not specified',
+    'demote chat creator',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
