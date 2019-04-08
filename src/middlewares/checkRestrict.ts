@@ -13,9 +13,8 @@ export async function checkRestrict(
   if (
     restricted &&
     ctx.message &&
-    ((ctx.message.entities &&
-      ctx.message.entities.length &&
-      ctx.message.entities.map(e => e.type).indexOf('url') > -1) ||
+    ((ctx.message.entities && ctx.message.entities.length) ||
+      (ctx.message.caption_entities && ctx.message.caption_entities.length) ||
       (ctx.message.forward_from ||
         ctx.message.forward_date ||
         ctx.message.forward_from_chat) ||
