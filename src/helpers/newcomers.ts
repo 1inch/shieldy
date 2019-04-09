@@ -14,97 +14,114 @@ import { checkIfErrorDismissable } from './error'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { generateEquation } from './equation'
 
+export let globalyRestricted = []
+
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
   bot.on('new_chat_members', async ctx => {
-    if (ctx.chat.type === 'channel') {
-      return
-    }
-    const chat = ctx.dbchat
-    const candidates = chat.candidates
     const candidatesToAdd = [] as Candidate[]
-    for (const member of ctx.message.new_chat_members) {
-      if (member.username === (bot as any).options.username) {
-        try {
-          await ctx.replyWithMarkdown(strings(chat, 'help'), {
-            disable_web_page_preview: true,
+    try {
+      if (ctx.chat.type === 'channel') {
+        return
+      }
+      const chat = ctx.dbchat
+      const candidates = chat.candidates
+      for (const member of ctx.message.new_chat_members) {
+        if (member.username === (bot as any).options.username) {
+          try {
+            await ctx.replyWithMarkdown(strings(chat, 'help'), {
+              disable_web_page_preview: true,
+            })
+          } catch (err) {
+            await report(bot, err)
+          }
+          continue
+        }
+        if (member.is_bot) {
+          continue
+        }
+        globalyRestricted.push(member.id)
+        // Send notifications about captcha and add to candidates
+        if (candidates.map(c => c.id).indexOf(member.id) < 0) {
+          const equation =
+            chat.captchaType === CaptchaType.DIGITS
+              ? generateEquation()
+              : undefined
+          let message
+          try {
+            message = await notifyCandidate(ctx, member, equation)
+          } catch (err) {
+            await report(bot, err)
+          }
+          candidatesToAdd.push({
+            id: member.id,
+            timestamp: new Date().getTime(),
+            captchaType: chat.captchaType,
+            messageId: message ? message.message_id : undefined,
+            equation,
           })
-        } catch (err) {
-          await report(bot, err)
         }
-        continue
-      }
-      if (member.is_bot) {
-        continue
-      }
-      // Send notifications about captcha and add to candidates
-      if (candidates.map(c => c.id).indexOf(member.id) < 0) {
-        const equation =
-          chat.captchaType === CaptchaType.DIGITS
-            ? generateEquation()
-            : undefined
-        let message
-        try {
-          message = await notifyCandidate(ctx, member, equation)
-        } catch (err) {
-          await report(bot, err)
+        // Restrict if requested
+        if (chat.restrict) {
+          console.log('🤜 Restricting as well')
+          try {
+            const gotUser = await ctx.telegram.getChatMember(chat.id, member.id)
+            if (
+              gotUser.can_send_messages &&
+              gotUser.can_send_media_messages &&
+              gotUser.can_send_other_messages &&
+              gotUser.can_add_web_page_previews
+            ) {
+              const tomorrow =
+                (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
+              await (ctx.telegram as any).restrictChatMember(
+                chat.id,
+                member.id,
+                {
+                  until_date: tomorrow,
+                  can_send_messages: true,
+                  can_send_media_messages: false,
+                  can_send_other_messages: false,
+                  can_add_web_page_previews: false,
+                }
+              )
+            }
+          } catch (err) {
+            await report(bot, err)
+          }
         }
-        candidatesToAdd.push({
-          id: member.id,
-          timestamp: new Date().getTime(),
-          captchaType: chat.captchaType,
-          messageId: message ? message.message_id : undefined,
-          equation,
-        })
       }
+      console.log(
+        `➕ Adding candidates to ${ctx.chat.id}: ${candidatesToAdd.map(c =>
+          c.id ? c.id : c
+        )}`
+      )
+      chat.candidates = candidates.concat(candidatesToAdd)
       // Restrict if requested
       if (chat.restrict) {
-        console.log('🤜 Restricting as well')
+        chat.restrictedUsers = chat.restrictedUsers.concat(candidatesToAdd)
+      }
+      console.log(
+        `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
+          v.id ? v.id : v
+        )}`
+      )
+      await (chat as any).save()
+      // Delete entry message if required
+      if (chat.deleteEntryMessages) {
         try {
-          const gotUser = await ctx.telegram.getChatMember(chat.id, member.id)
-          if (
-            gotUser.can_send_messages &&
-            gotUser.can_send_media_messages &&
-            gotUser.can_send_other_messages &&
-            gotUser.can_add_web_page_previews
-          ) {
-            const tomorrow = (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
-            await (ctx.telegram as any).restrictChatMember(chat.id, member.id, {
-              until_date: tomorrow,
-              can_send_messages: true,
-              can_send_media_messages: false,
-              can_send_other_messages: false,
-              can_add_web_page_previews: false,
-            })
-          }
+          await ctx.telegram.deleteMessage(
+            ctx.chat!.id,
+            ctx.message!.message_id
+          )
         } catch (err) {
           await report(bot, err)
         }
       }
-    }
-    console.log(
-      `➕ Adding candidates to ${ctx.chat.id}: ${candidatesToAdd.map(c =>
-        c.id ? c.id : c
-      )}`
-    )
-    chat.candidates = candidates.concat(candidatesToAdd)
-    // Restrict if requested
-    if (chat.restrict) {
-      chat.restrictedUsers = chat.restrictedUsers.concat(candidatesToAdd)
-    }
-    console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
-        v.id ? v.id : v
-      )}`
-    )
-    await (chat as any).save()
-    // Delete entry message if required
-    if (chat.deleteEntryMessages) {
-      try {
-        await ctx.telegram.deleteMessage(ctx.chat!.id, ctx.message!.message_id)
-      } catch (err) {
-        await report(bot, err)
-      }
+    } finally {
+      // Remove from globally restricted
+      const ids = candidatesToAdd.map(c => c.id)
+      globalyRestricted = globalyRestricted.filter(id => ids.indexOf(id) < 0)
     }
   })
   // Check newcomers

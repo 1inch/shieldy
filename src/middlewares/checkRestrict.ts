@@ -1,4 +1,5 @@
 import { ContextMessageUpdate } from 'telegraf'
+import { globalyRestricted } from '../helpers/newcomers'
 
 export async function checkRestrict(
   ctx: ContextMessageUpdate,
@@ -9,7 +10,9 @@ export async function checkRestrict(
     return
   }
   const restrictedUsers = ctx.dbchat.restrictedUsers
-  const restricted = restrictedUsers.map(u => u.id).indexOf(ctx.from.id) > -1
+  const restricted =
+    restrictedUsers.map(u => u.id).indexOf(ctx.from.id) > -1 ||
+    globalyRestricted.indexOf(ctx.from.id) > -1
   if (
     restricted &&
     ctx.message &&
