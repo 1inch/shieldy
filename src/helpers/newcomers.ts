@@ -124,6 +124,20 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       globalyRestricted = globalyRestricted.filter(id => ids.indexOf(id) < 0)
     }
   })
+  // Check left messages
+  bot.on('left_chat_member', async ctx => {
+    // Delete left message if required
+    if (ctx.dbchat.deleteEntryMessages) {
+      try {
+        await ctx.telegram.deleteMessage(
+          ctx.chat!.id,
+          ctx.message!.message_id
+        )
+      } catch (err) {
+        await report(bot, err)
+      }
+    }
+  }
   // Check newcomers
   bot.use(async (ctx, next) => {
     const chat = ctx.dbchat
