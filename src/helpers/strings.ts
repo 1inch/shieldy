@@ -121,6 +121,18 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
 /greeting — testi geçiren kullanıcıları selamlar
 
 Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
+    es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
+
+/help — muestra este mensaje
+/language — cambia el idioma
+/captcha — cambia el tipo de captcha usado
+/timeLimit — cambia la cantidad de tiempo otorgada a los recién llegados
+/lock — hace que estos comandos solo sean accesibles a los administradores
+/restrict — restringe a los recién llegados a enviar solo mensajes de texto en las primeras 24 horas
+/deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
+/greeting — saluda a los mensajes que pasan el test
+
+¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -131,6 +143,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Будь ласка, виберіть мову.',
     br: 'Por favor, selecione uma língua.',
     tr: 'Lütfen dili seçin.',
+    es: 'Por favor, selecciona el idioma.',
   },
   language_selected: {
     ruen:
@@ -142,6 +155,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Чудово, тепер я розмовляю українською.',
     br: 'Boa, Agora eu falo português.',
     tr: 'Harika, artık Türkçe konuşuyorum.',
+    es: 'Genial, ahora hablo español.',
   },
   only_author_can_reply: {
     ruen:
@@ -153,6 +167,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Тільки людина, яка викликала меню, може вибирати опції.',
     br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.',
     tr: 'Sadece menüyü başlatan kişi seçenekleri seçebilir.',
+    es: 'Solo la persona que inició el menú puede seleccionar las opciones.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -196,6 +211,11 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
 • Düğme — bot bir düğmeye basılmasını isteyecektir`,
+    es: `Por favor, selecciona el tipo de test para los recién llegados:
+
+• Simple — el bot pedirá enviar lo que sea por el chat
+• Botón — el bot pedirá presionar un botón
+• Digitos — el bot pedirá resolver una ecuación simple`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -206,6 +226,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Проста',
     br: 'Simples',
     tr: 'Basit',
+    es: 'Simple',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -216,6 +237,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Цифрова',
     br: 'Digitos',
     tr: 'Rakamlar',
+    es: 'Digitos',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -226,6 +248,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Кнопкою',
     br: 'Botão',
     tr: 'Düğme',
+    es: 'Botón',
   },
   captcha_selected: {
     ruen:
@@ -237,6 +260,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Чудово, тепер я буду використовувати цей тип тесту.',
     br: 'Boa, Eu irei usar esse tipo de teste agora.',
     tr: 'Harika, o zaman bu tür bir testi kullanacağım.',
+    es: 'Genial, usaré este tipo de test.',
   },
   time_limit: {
     ruen:
@@ -255,6 +279,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Por favor, selecione quantos segundos o novato tem para completar o teste.',
     tr:
       'Lütfen, yeni gelenlerin kovulmadan önce testi tamamlaması gereken saniyeyi seçin.',
+    es:
+      'Por favor, seleccione cuántos segundos tendrán los recién llegados para completar el test antes de la expulsión.',
   },
   time_limit_selected: {
     ruen:
@@ -266,6 +292,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Чудово, тепер я буду використовувати це обмеження часу.',
     br: 'Boa, Eu irei usar esse tempo limite agora.',
     tr: 'Harika, o zaman bu süreyi kullanacağım.',
+    es: 'Genial, usaré este límite de tiempo.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -276,6 +303,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'сек',
     br: 'sec',
     tr: 'san',
+    es: 'seg',
   },
   lock_true: {
     ruen:
@@ -286,6 +314,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Väga hea, nüüd ma aktsepteerin ainult administraatorite käske.',
     uk: 'Чудово! Тепер я буду приймати команди тільки від адміністраторів.',
     br: 'Boa! Agora só obedecerei os ADMs.',
+    es: '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
     tr:
       'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
   },
@@ -299,6 +328,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Чудово! Тепер я буду приймати команди від усіх.',
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
     tr: 'Harika! Artık herkes tarafından gönderilen komutlara tepki vereceğim.',
+    es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -318,6 +348,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
       ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
+    es:
+      ', por favor, envía cualquier mensaje por este grupo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -337,6 +369,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
       ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
+    es:
+      ', por favor, envíe por este grupo la solución a la ecuación matemática proporcionada dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -356,6 +390,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
     tr:
       ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde atılacasınız. Teşekkürler!',
+    es:
+      ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -366,6 +402,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Я не бот',
     br: 'Não sou um robô',
     tr: 'Ben bir bot değilim',
+    es: 'No soy un robot',
   },
   only_candidate_can_reply: {
     ruen:
@@ -378,6 +415,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
     br: 'Apenas o usuário citado pode apertar esse botão.',
     tr: 'Sadece bot olmayan bir aday bu düğmeye basabilir.',
+    es: 'Solo el candidato para no ser un roobot puede presionar este botón.',
   },
   restrict_true: {
     ruen:
@@ -396,6 +434,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Boa, Agora todos os novatos só poderam mandar mensagens de texto para esse chat.',
     tr:
       'Harika! Artık tüm yeni gelenler, bu sohbete yalnızca normal metin mesajları gönderebilecek.',
+    es:
+      '¡Genial! Ahora todos los recién llegados solo podrán enviar mensajes ordinarios a este chat.',
   },
   restrict_false: {
     ruen:
@@ -414,6 +454,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Boa, Agora todos os novatos poderam mandar qualquer tipo de conteúdo para esse chat.',
     tr:
       'Harika! Artık tüm yeni kullanıcılar, bu sohbete her türlü içeriği gönderebilecek.',
+    es:
+      '¡Genial! Ahora todos los recién llegados pueden enviar cualquier tipo de contenido a este chat.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -426,6 +468,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecektir.',
+    es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -438,6 +481,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
+    es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
   },
   greetsUsers_true: {
     ruen:
@@ -456,6 +500,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanmayacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz).',
+    es:
+      '¡Genial! Ahora los recién llegados que hayan pasado el test no serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -474,6 +520,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
       'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı aşağıdaki gibidir.',
+    es:
+      '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username). El mensaje actual de saludo es:',
   },
   greetsUsers_false: {
     ruen:
@@ -486,6 +534,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Great! Now newcomers who passed the test will not be greeted',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
+    es: '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -496,5 +545,6 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Accepted!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
+    es: '¡Aceptado!',
   },
 }
