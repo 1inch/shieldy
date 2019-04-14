@@ -211,7 +211,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
 • Düğme — bot bir düğmeye basılmasını isteyecektir`,
-    en: `Por favor, selecciona el tipo de test para los recién llegados:
+    es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
