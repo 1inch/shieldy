@@ -28,7 +28,7 @@ export function setupTimeLimit(bot: Telegraf<ContextMessageUpdate>) {
     async ctx => {
       let chat = ctx.dbchat
       chat.timeGiven = Number(ctx.callbackQuery.data)
-      chat = await (chat as any).save()
+      chat = await chat.save()
       const message = ctx.callbackQuery.message
 
       ctx.telegram.editMessageText(

@@ -29,9 +29,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Türkçe', 'tr'),
               m.callbackButton('Ruslish', 'ruen'),
             ],
-            [
-              m.callbackButton('Español', 'es'),
-            ],
+            [m.callbackButton('Español', 'es')],
           ])
         )
     )
@@ -43,7 +41,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
     async ctx => {
       let chat = ctx.dbchat
       chat.language = ctx.callbackQuery.data as Language
-      chat = await (chat as any).save()
+      chat = await chat.save()
       const message = ctx.callbackQuery.message
 
       ctx.telegram.editMessageText(

@@ -22,7 +22,7 @@ export function setupCaptcha(bot: Telegraf<ContextMessageUpdate>) {
   bot.action(['simple', 'digits', 'button'], checkIfFromReplier, async ctx => {
     let chat = ctx.dbchat
     chat.captchaType = ctx.callbackQuery.data as CaptchaType
-    chat = await (chat as any).save()
+    chat = await chat.save()
     const message = ctx.callbackQuery.message
 
     ctx.telegram.editMessageText(

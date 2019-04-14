@@ -10,7 +10,7 @@ export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('greeting', checkLock, async ctx => {
     let chat = ctx.dbchat
     chat.greetsUsers = !chat.greetsUsers
-    chat = await (chat as any).save()
+    chat = await chat.save()
     await ctx.replyWithMarkdown(
       strings(
         ctx.dbchat,
@@ -68,7 +68,7 @@ export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
       ctx.dbchat.greetingMessage = {
         message: ctx.message,
       }
-      await (ctx.dbchat as any).save()
+      await ctx.dbchat.save()
       ctx.reply(
         strings(ctx.dbchat, 'greetsUsers_message_accepted'),
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage

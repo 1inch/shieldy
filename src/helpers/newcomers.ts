@@ -106,7 +106,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           v.id ? v.id : v
         )}`
       )
-      await (chat as any).save()
+      await chat.save()
       // Delete entry message if required
       if (chat.deleteEntryMessages) {
         try {
@@ -129,15 +129,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     // Delete left message if required
     if (ctx.dbchat.deleteEntryMessages) {
       try {
-        await ctx.telegram.deleteMessage(
-          ctx.chat!.id,
-          ctx.message!.message_id
-        )
+        await ctx.telegram.deleteMessage(ctx.chat!.id, ctx.message!.message_id)
       } catch (err) {
         await report(bot, err)
       }
     }
-  }
+  })
   // Check newcomers
   bot.use(async (ctx, next) => {
     const chat = ctx.dbchat
@@ -172,7 +169,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
-      ctx.dbchat = await (chat as any).save()
+      ctx.dbchat = await chat.save()
     } catch (err) {
       await report(bot, err)
     }
@@ -233,7 +230,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
-      await (chat as any).save()
+      await chat.save()
     } catch (err) {
       await report(bot, err)
     }

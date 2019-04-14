@@ -1,9 +1,10 @@
 import { Chat } from '../models'
 import * as tt from '../../node_modules/telegraf/typings/telegram-types.d'
+import { InstanceType } from 'typegoose'
 
 declare module 'telegraf' {
   export class ContextMessageUpdate {
-    public dbchat: Chat
+    public dbchat: InstanceType<Chat>
     replyWithMarkdown(
       markdown: string,
       extra?: tt.ExtraEditMessage | Extra

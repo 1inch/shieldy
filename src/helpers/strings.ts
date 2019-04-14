@@ -22,6 +22,7 @@ export const localizations = {
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -35,6 +36,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
+/trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -47,6 +49,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -59,6 +62,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
+/trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -71,6 +75,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -83,6 +88,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -95,6 +101,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /restrict — забороняє новачкам надсилати будь-що, крім текстових повідомлень в перші 24 години
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
 /greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -107,6 +114,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /restrict - restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
 /greeting — congratula o usuário que passou no teste
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
     tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
@@ -119,6 +127,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
 /restrict — yeni gelenleri ilk 24 saatte yalnızca metin mesajı göndermeleri için kısıtlar
 /deleteEntryMessages — kullanıcı girişi ile ilgili mesajları sil
 /greeting — testi geçiren kullanıcıları selamlar
+/trust — reply with this command to a message sent by user that you don't want to check
 
 Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
     es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
@@ -131,6 +140,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /restrict — restringe a los recién llegados a enviar solo mensajes de texto en las primeras 24 horas
 /deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
 /greeting — saluda a los mensajes que pasan el test
+/trust — reply with this command to a message sent by user that you don't want to check
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!`,
   },
@@ -314,7 +324,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     et: 'Väga hea, nüüd ma aktsepteerin ainult administraatorite käske.',
     uk: 'Чудово! Тепер я буду приймати команди тільки від адміністраторів.',
     br: 'Boa! Agora só obedecerei os ADMs.',
-    es: '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
+    es:
+      '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
     tr:
       'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
   },
@@ -534,9 +545,21 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: 'Great! Now newcomers who passed the test will not be greeted',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
-    es: '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
+    es:
+      '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
   },
   greetsUsers_message_accepted: {
+    ruen: 'Accepted! Принято!',
+    en: 'Accepted!',
+    ru: 'Принято!',
+    it: 'Accepted!',
+    et: 'Accepted!',
+    uk: 'Accepted!',
+    br: 'Aceito!',
+    tr: 'Kabul edildi!',
+    es: '¡Aceptado!',
+  },
+  trust_success: {
     ruen: 'Accepted! Принято!',
     en: 'Accepted!',
     ru: 'Принято!',

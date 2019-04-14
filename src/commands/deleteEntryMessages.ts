@@ -7,7 +7,7 @@ export function setupDeleteEntryMessages(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('deleteEntryMessages', checkLock, async ctx => {
     let chat = ctx.dbchat
     chat.deleteEntryMessages = !chat.deleteEntryMessages
-    chat = await (chat as any).save()
+    chat = await chat.save()
     ctx.replyWithMarkdown(
       strings(
         ctx.dbchat,
