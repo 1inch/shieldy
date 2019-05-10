@@ -20,6 +20,6 @@ export async function report(
       } as any
     )
   } catch (err) {
-    // do nothing
+    console.error(err)
   }
 }

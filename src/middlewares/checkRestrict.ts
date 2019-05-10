@@ -1,5 +1,7 @@
 import { ContextMessageUpdate } from 'telegraf'
 import { globalyRestricted } from '../helpers/newcomers'
+import { report } from '../helpers/report'
+import { bot } from '../helpers/bot'
 
 export async function checkRestrict(
   ctx: ContextMessageUpdate,
@@ -13,20 +15,21 @@ export async function checkRestrict(
   const restricted =
     restrictedUsers.map(u => u.id).indexOf(ctx.from.id) > -1 ||
     globalyRestricted.indexOf(ctx.from.id) > -1
+  const message = ctx.editedMessage || ctx.message
   if (
     restricted &&
-    ctx.message &&
-    ((ctx.message.entities && ctx.message.entities.length) ||
-      (ctx.message.caption_entities && ctx.message.caption_entities.length) ||
-      (ctx.message.forward_from ||
-        ctx.message.forward_date ||
-        ctx.message.forward_from_chat) ||
-      ctx.message.document)
+    message &&
+    ((message.entities && message.entities.length) ||
+      (message.caption_entities && message.caption_entities.length) ||
+      (message.forward_from ||
+        message.forward_date ||
+        message.forward_from_chat) ||
+      message.document)
   ) {
     try {
-      await ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id)
+      await ctx.telegram.deleteMessage(ctx.chat.id, message.message_id)
     } catch (err) {
-      // Do nothing
+      await report(bot, err)
     }
   } else {
     next()
