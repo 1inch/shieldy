@@ -31,6 +31,7 @@ export async function checkTime(ctx: ContextMessageUpdate, next: () => any) {
       next()
       break
     default:
+      next()
       break
   }
 }

@@ -7,6 +7,10 @@ export async function checkRestrict(
   ctx: ContextMessageUpdate,
   next: () => any
 ) {
+  const message = ctx.editedMessage || ctx.message
+  if (!message) {
+    return next()
+  }
   if (!ctx.dbchat.restrict) {
     next()
     return
@@ -15,7 +19,6 @@ export async function checkRestrict(
   const restricted =
     restrictedUsers.map(u => u.id).indexOf(ctx.from.id) > -1 ||
     globalyRestricted.indexOf(ctx.from.id) > -1
-  const message = ctx.editedMessage || ctx.message
   if (
     restricted &&
     message &&
