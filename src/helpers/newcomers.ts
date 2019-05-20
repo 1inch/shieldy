@@ -158,6 +158,14 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         ctx.message.text.indexOf(candidate.equation.answer as string) < 0 ||
         (ctx.message.text.match(/\d/g) || []).length > 2)
     ) {
+      if (chat.strict) {
+        try {
+          await ctx.deleteMessage()
+        } catch (err) {
+          await report(bot, err)
+        }
+        return
+      }
       return next()
     } else if (candidate.captchaType === CaptchaType.DIGITS) {
       try {

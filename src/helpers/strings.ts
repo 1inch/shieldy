@@ -23,6 +23,7 @@ export const localizations = {
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -37,6 +38,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -50,6 +52,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -63,6 +66,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -76,6 +80,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -89,6 +94,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -102,6 +108,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
     
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -115,6 +122,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
 /greeting — congratula o usuário que passou no teste
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
     tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
@@ -128,6 +136,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
 /deleteEntryMessages — kullanıcı girişi ile ilgili mesajları sil
 /greeting — testi geçiren kullanıcıları selamlar
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
     es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
@@ -141,6 +150,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
 /greeting — saluda a los mensajes que pasan el test
 /trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!`,
   },
@@ -204,7 +214,8 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     it: `Prego, seleziona uno dei seguenti test per i nuovi arrivati:
 
 • Semplice — Il bot chiederà di inviare qualcunque messaggio in chat
-• Bottone — Il bot chiederà di premere un pulsante`,
+• Bottone — Il bot chiederà di premere un pulsante
+• Digits — bot will ask to solve a simple equation`,
     et: `Palun valige uustulnukute kontrolli tüüp:
 
 • Lihtne — bot küsib vestlusele midagi saata
@@ -212,20 +223,24 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     uk: `Будь ласка, виберіть тип перевірки новачків у чаті:
 
 • Проста — бот просить надіслати що завгодно в чат
-• Кнопкою — бот просить натиснути на кнопку.`,
+• Кнопкою — бот просить натиснути на кнопку.
+• Digits — bot will ask to solve a simple equation`,
     br: `Por favor, selecione o tipo de teste para os novatos:
     
 • Simples - o bot vai pedir para mandar alguma coisa no chat
-• Botão - o bot vai pedir para apertar um botão`,
+• Botão - o bot vai pedir para apertar um botão
+• Digits — bot will ask to solve a simple equation`,
     tr: `Lütfen, yeni gelenler için test türünü seçin:
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
-• Düğme — bot bir düğmeye basılmasını isteyecektir`,
+• Düğme — bot bir düğmeye basılmasını isteyecektir
+• Digits — bot will ask to solve a simple equation`,
     es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
-• Digitos — el bot pedirá resolver una ecuación simple`,
+• Digitos — el bot pedirá resolver una ecuación simple
+• Digits — bot will ask to solve a simple equation`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -340,6 +355,45 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
     tr: 'Harika! Artık herkes tarafından gönderilen komutlara tepki vereceğim.',
     es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
+  },
+  strict_true: {
+    ruen:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.",
+    en:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    ru:
+      'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
+    it:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    et:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    uk:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    br:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    es:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    tr:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+  },
+  strict_false: {
+    ruen:
+      'Great! Now newcomers will be able to send text before they pass captcha. Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
+    en:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
+    it:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    et:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    uk:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    br:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    tr:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    es:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
