@@ -15,6 +15,10 @@ export async function checkRestrict(
     next()
     return
   }
+  if (ctx.from.id === parseInt(process.env.ADMIN)) {
+    next()
+    return
+  }
   const restrictedUsers = ctx.dbchat.restrictedUsers
   const restricted =
     restrictedUsers.map(u => u.id).indexOf(ctx.from.id) > -1 ||
