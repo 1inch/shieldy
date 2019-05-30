@@ -28,7 +28,10 @@ export async function checkRestrict(
         message.forward_date ||
         message.forward_from_chat) ||
       message.document ||
-      message.sticker)
+      message.sticker ||
+      message.photo ||
+      message.video_note ||
+      message.video)
   ) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat.id, message.message_id)
