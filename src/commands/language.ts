@@ -29,9 +29,10 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Türkçe', 'tr'),
               m.callbackButton('Ruslish', 'ruen'),
             ],
-            [m.callbackButton('Español', 'es')],
+              m.callbackButton('Español', 'es'),
+              m.callbackButton('CHINESE', 'zh'),
             [
-             m.callbackButton('CHINESE', 'zh')
+              m.callbackButton('Norwegian', 'no'),
             ],
           ])
         )
@@ -39,7 +40,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
   })
 
   bot.action(
-    ['en', 'ru', 'it', 'et', 'uk', 'br', 'tr', 'ruen', 'es', 'zh'],
+    ['en', 'ru', 'it', 'et', 'uk', 'br', 'tr', 'ruen', 'es', 'zh', 'no'],
     checkIfFromReplier,
     async ctx => {
       let chat = ctx.dbchat
