@@ -109,7 +109,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-    
+
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
@@ -181,6 +181,21 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /strict — bruk når du ikke vil motta nykommernes meldinger untatt captcha løsninger før de har bestått testen
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!`,
+    de: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
+
+/help — zeigt diese Nachricht an
+/language — ändert Sprachen
+/captcha — ändert die Art des Captchas, welches genutzt wird
+/timeLimit — ändert die menge Zeit welche neue User bekommen
+/lock — lässt Kommandos nur von Admins zu
+/restrict — schränkt neue User ein, für die ersten 24 Stunden nur Text Nachrichten zu senden
+/deleteEntryMessages — löscht Nachrichten über den User Eintrag
+/greeting — begrüßt die User, welche den Test bestehen
+/trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -194,6 +209,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Por favor, selecciona el idioma.',
     zh: '请选择一种语言。',
     no: 'Vennligst velg et språk.',
+    de: 'Bitte wähle eine Sprache.',
   },
   language_selected: {
     ruen:
@@ -208,6 +224,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Genial, ahora hablo español.',
     zh: '很棒，现在我讲中文了。',
     no: 'Supert, nå snakker jeg norsk.',
+    de: 'Großartig, ich spreche nun deutsch.',
   },
   only_author_can_reply: {
     ruen:
@@ -222,6 +239,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Solo la persona que inició el menú puede seleccionar las opciones.',
     zh: '只有启动菜单的人才能选择。',
     no: 'Bare personen som åpnet menyen kan svare på den.',
+    de: 'Nur die Person, welche das Menü initialisiert hat, kann Einstellungen vornehmen.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -260,7 +278,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 • Кнопкою — бот просить натиснути на кнопку.
 • Digits — bot will ask to solve a simple equation`,
     br: `Por favor, selecione o tipo de teste para os novatos:
-    
+
 • Simples - o bot vai pedir para mandar alguma coisa no chat
 • Botão - o bot vai pedir para apertar um botão
 • Digits — bot will ask to solve a simple equation`,
@@ -285,6 +303,11 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 • Enkel — botten vil spørre om å sende hva som helst i chatten
 • Knapp — botten vil spørre om å trykke en knapp
 • Tall — botten vil spørre om å løse et enkelt matteproblem`,
+    de: `Bitte wähle aus, wie der Bot neue User testen wird:
+
+• Simpel — Der Bot wird fragen, irgendwas in den Chat zu senden
+• Knopf — Der Bot wird fragen, einen Knopf zu drücken
+• Nummern — Der Bot wird eine simple Mathe-Aufgabe stellen`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -298,6 +321,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Simple',
     zh: '简单',
     no: 'Enkel',
+    de: 'Simpel',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -311,6 +335,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Digitos',
     zh: '数字',
     no: 'Tall',
+    de: 'Zahlen',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -324,6 +349,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Botón',
     zh: '按钮',
     no: 'Knapp',
+    de: 'Knopf',
   },
   captcha_selected: {
     ruen:
@@ -338,6 +364,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Genial, usaré este tipo de test.',
     zh: '很棒，我之后会使用这个类型的测试',
     no: 'Supert, da vil jeg bruke denne type testen.',
+    de: 'Großartig, ich werde diese Art des Tests nutzen.',
   },
   time_limit: {
     ruen:
@@ -362,6 +389,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '请选择新人在被踢除前完成测试的秒数。',
     no:
       'Vennligst velg hvor mange sekunder nykommere vil ha på å fullføre testen før brukeren blir sparket.',
+    de:
+      'Please, select how many seconds will newcomers get to complete the test before the kick.',
   },
   time_limit_selected: {
     ruen:
@@ -376,6 +405,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Genial, usaré este límite de tiempo.',
     zh: '很棒，我之后会使用这个时间限制。',
     no: 'Supert, da skal jeg bruke denne tidsbegrensningen.',
+    de: 'Great, I will use this time limit then.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -389,6 +419,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'seg',
     zh: '秒',
     no: 'sek',
+    de: 'sek',
   },
   lock_true: {
     ruen:
@@ -407,6 +438,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '很棒！现在我只对管理员发送的命令作出反应。',
     no:
       'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
+    de: 'Great! Now I will only react to commands sent by admins.',
   },
   lock_false: {
     ruen:
@@ -421,6 +453,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
+    de: 'Great! Now I will react to commands sent by anybody.',
   },
   strict_true: {
     ruen:
@@ -445,6 +478,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       "很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。",
     no:
       "Supert! Nå kan ikke nykommere sende noe før de har bestått testen.",
+    de:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
   },
   strict_false: {
     ruen:
@@ -468,10 +503,12 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no:
       'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
+    de:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
-      
+
   Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
@@ -493,10 +530,12 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '，请在指定的时间内向该群组发送任何消息，否则您将被踢。谢谢！',
     no:
       ', vennligst send hvilken som helst melding til denne gruppen innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
-      
+
 Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
@@ -518,10 +557,12 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '，请在指定的时间内将数学计算答案发送到本群组，否则您将被踢。 谢谢！',
     no:
       ', vennligst send svaret på matteproblemet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte sende die Lösung zu der Mathe-Aufgabe innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
-            
+
 Пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
@@ -543,6 +584,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
     no:
       'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -556,6 +599,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'No soy un robot',
     zh: '我不是一个机器人',
     no: 'Jeg er ikke en bot',
+    de: 'Ich bin kein Bot',
   },
   only_candidate_can_reply: {
     ruen:
@@ -571,6 +615,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: 'Solo el candidato para no ser un roobot puede presionar este botón.',
     zh: '只有不是机器人的候选人才能按此按钮。',
     no: 'Bare kandidaten som blir testet kan trykke denne knappen.',
+    de: 'Nur der Kandiat für kein Bot zu sein, kann diesen Knopf drücken.',
   },
   restrict_true: {
     ruen:
@@ -595,6 +640,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '很棒！现在所有新手都只能发送文本消息到这个群组。',
     no:
       'Supert! Nå kan nykommere bare sende tekstmeldinger i chatten.',
+    de:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
   },
   restrict_false: {
     ruen:
@@ -618,7 +665,9 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     zh:
       '很棒！现在所有新手都可以发送任何类型消息到这个群组。',
     no:
-      'Supert! Nå kan nykommere sende meldinger med all slags innhold i chatten'
+      'Supert! Nå kan nykommere sende meldinger med all slags innhold i chatten',
+    de:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -634,6 +683,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
+    de: 'Great! Now entry messages will be deleted.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -649,6 +699,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
     zh: '很棒！现在，加入消息将不被删除。',
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
+    de: 'Great! Now entry messages will not be deleted.',
   },
   greetsUsers_true: {
     ruen:
@@ -673,6 +724,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
       '很棒！现在通过测试的新人不会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。',
     no:
       'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
+    de:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -696,7 +749,9 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     zh:
       '很棒！现在通过测试的新人会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。接下来是当前的问候消息。',
     no:
-      'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).'
+      'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
+    de:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
   },
   greetsUsers_false: {
     ruen:
@@ -714,7 +769,8 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     zh:
       '很棒！现在通过测试的新人不会受到欢迎消息。',
     no:
-      'Supert! Nykommere som har bestått testen vil ikke få en velkomst.'
+      'Supert! Nykommere som har bestått testen vil ikke få en velkomst.',
+    de: 'Great! Now newcomers who passed the test will not be greeted.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -728,6 +784,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: '¡Aceptado!',
     zh: '已接受！',
     no: 'Akseptert!',
+    de: 'Akzeptiert!',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -741,5 +798,6 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     es: '¡Aceptado!',
     zh: '已接受！',
     no: 'Akseptert!',
+    de: 'Akzeptiert!',
   },
 }
