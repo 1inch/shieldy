@@ -41,9 +41,12 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Taiwan', 'tw'),
               m.callbackButton('French', 'fr'),
             ],
-            [m.callbackButton('Indonesian', 'id')],
-          ]),
-        ),
+            [
+              m.callbackButton('Indonesian', 'id'),
+              m.callbackButton('Korean', 'ko'),
+            ],
+          ])
+        )
     )
   })
 
@@ -64,6 +67,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
       'tw',
       'fr',
       'id',
+      'ko',
     ],
     checkIfFromReplier,
     async ctx => {
@@ -76,8 +80,8 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
         message.chat.id,
         message.message_id,
         undefined,
-        strings(chat, 'language_selected'),
+        strings(chat, 'language_selected')
       )
-    },
+    }
   )
 }

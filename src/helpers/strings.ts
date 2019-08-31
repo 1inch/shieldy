@@ -238,6 +238,17 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
+    ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
+
+/help – 이 메시지를 보여줍니다
+/language – 언어 변경
+/captcha – 사용된 captcha의 설정 변경
+/timeLimit – 신규 입장자들에게 정해진 시간 변경
+/lock – 관리자만 접근할 수 있는 명령 만들기
+/restrict – 신규 입장자들은 24시간 동안 메시지만 보내도록 제한
+/Delete EntryMessages - 사용자 항목에 대한 메시지 삭제
+/greeting – 테스트에 통과한 사람에게 환영 인사/trust - 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
+/strict - 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오. `,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -255,6 +266,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '請選擇一種語言。',
     fr: 'Sélectionnez la langue',
     id: 'Silakan pilih bahasa.',
+    ko: '언어를 선택하십시오.',
   },
   language_selected: {
     ruen:
@@ -273,6 +285,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒，現在我講中文了。',
     fr: 'Parfait, je parle français',
     id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
+    ko: '좋아요, 나는 이제 한국어로 말합니다.',
   },
   only_author_can_reply: {
     ruen:
@@ -293,6 +306,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr:
       'Seule la personne qui a déclanché ce menu peut sélectionner les options',
     id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
+    ko: '메뉴를 시작한 사람만이 선택을 할 수 있습니다.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -376,6 +390,11 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 • Salam  — bot akan meminta salam perkenalan
 • Tombol — bot akan meminta menekan tombol
 • Angka  — bot akan meminta jawaban hitungan`,
+    ko: `신규 입장자에 대한 테스트 유형을 선택하십시오:
+    
+• 단순함 — 봇이 채팅에 어떤 것이든 보내달라고 할 수 있음
+• 버튼 — 봇이 버튼을 누르라고 요청함
+• 숫자 — 봇이 간단한 방정식을 풀라고 할 것이다.`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -393,6 +412,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '簡單',
     fr: 'Simple',
     id: 'Salam',
+    ko: '단순함',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -410,6 +430,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '數字',
     fr: 'Chiffres',
     id: 'Angka',
+    ko: '방정식',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -427,6 +448,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '按鈕',
     fr: 'Bouton',
     id: 'Tombol',
+    ko: '버튼',
   },
   captcha_selected: {
     ruen:
@@ -445,6 +467,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒，我之後會使用這個類型的驗證',
     fr: 'Parfait, je vais utiliser ce type de test',
     id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
+    ko: '좋아요. 그러면 이런 종류의 테스트를 사용하겠습니다.',
   },
   time_limit: {
     ruen:
@@ -475,6 +498,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
     id:
       'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
+    ko: '신규 입장자가 추방 전에 테스트를 완료 할 시간을 선택하십시오.',
   },
   time_limit_selected: {
     ruen:
@@ -493,6 +517,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒，我之後會使用這個時間限制。',
     fr: `Parfait, j'utiliserai cette limite de temps`,
     id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
+    ko: '좋아요, 이 시간 제한을 사용하겠습니다.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -510,6 +535,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '秒',
     fr: 'sec',
     id: 'det',
+    ko: '초',
   },
   lock_true: {
     ruen:
@@ -530,6 +556,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒！現在我只對管理員發送的指令作出回應。',
     fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
     id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
+    ko: '좋아요! 이제 나는 관리자들이 보내는 명령에만 반응할 것입니다.',
   },
   lock_false: {
     ruen:
@@ -548,6 +575,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒！現在我會對所有人發出的指令做出回應。',
     fr: `Parfait, maintenant n'importe qui pourra utiliser les commandes`,
     id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
+    ko: '좋아요! 이제 나는 누구든지 보낸 명령에 반응할 것입니다.',
   },
   strict_true: {
     ruen:
@@ -580,6 +608,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
       "Parfait, maintenant les nouveaux membres devront d'abord répondre au captcha avant de pouvoir discuter",
     id:
       'Baiklah, sekarang anggota baru tidak bisa mengirim apa pun hingga menanggapi ujian dengan benar.',
+    ko:
+      '좋아! 이제 새로 온 사람들은 captcha를 통과 할 때까지 captcha 솔루션 외에는 아무것도 보내지 않을 것입니다.',
   },
   strict_false: {
     ruen:
@@ -607,6 +637,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
     id:
       'Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
+    ko:
+      '좋아요! 이제 새로 온 사람들은 캡챠를 통과하기 전에 메시지를 보낼 수 있을 거예요.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -637,6 +669,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr: `Veuillez répondre dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
     id:
       ', silakan sampaikan salam perkenalan dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    ko:
+      ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 이 그룹에 메시지를 보내 주십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -668,6 +702,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr: `Veuillez envoyer votre réponse à l'équation dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
     id:
       ', silakan jawab soal hitungan tersebut dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    ko:
+      ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -698,6 +734,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     fr: `, Veuillez appuyer sur le bouton ci-dessous dans le délai spécifié, sinon vous ne serez pas le bienvenue ici. Merci d'avance!`,
     id:
       ', silakan tekan tombol dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    ko:
+      ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 아래 버튼을 누르십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -714,8 +752,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     de: 'Ich bin kein Bot',
     tw: '我不是機器人',
     fr: 'Je ne suis pas un robot',
-
     id: 'Saya bukan bot',
+    ko: '저는 봇이 아닙니다',
   },
   only_candidate_can_reply: {
     ruen:
@@ -735,6 +773,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '只有需要被驗證的人才能按此按鈕。',
     fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
     id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
+    ko: '봇이 아닌 사람만 이 버튼을 누를 수 있습니다.',
   },
   restrict_true: {
     ruen:
@@ -765,6 +804,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
       'Parfait, maintenant tous les nouveaux membres pourront envoyer uniquement des messages texte à cette discussion',
     id:
       'Baiklah, sekarang semua anggota baru hanya bisa mengirim pesan teks biasa di grup ini.',
+    ko:
+      '좋아요! 이제 모든 신규 입장자들은 이 채팅에 일반적인 문자 메시지만 보낼 수 있게 될 것입니다.',
   },
   restrict_false: {
     ruen:
@@ -795,6 +836,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
       'Parfait, maintenant tous les nouveaux membres pourront envoyer tout type de contenu à cette discussion',
     id:
       'Baiklah, sekarang semua anggota baru boleh mengirim pesan jenis apa pun di grup ini.',
+    ko:
+      '좋아요! 이제 모든 신규 입장자들은 이 채팅에 모든 유형의 콘텐츠도 보낼 수 있게 될 것입니다.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -814,6 +857,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒！現在，新成員加入的系統消息將被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée seront supprimés`,
     id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
+    ko: '좋아요! 이제 입력 메시지가 삭제됩니다.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -833,20 +877,21 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '很棒！現在，新成員加入的系統消息將不會被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée ne seront pas supprimés`,
     id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
+    ko: '좋아요! 이제 입력 메시지는 삭제되지 않습니다.',
   },
   greetsUsers_true: {
     ruen:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
     en:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
     it:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
     et:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
     uk:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
     br:
       'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     tr:
@@ -858,12 +903,14 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     no:
       'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
     de:
-      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
     tw:
       '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
     fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
     id:
       'Baiklah, sekarang anggota baru yg lolos ujian tidak akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username).',
+    ko:
+      '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -893,9 +940,10 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw:
       '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
     fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
-
     id:
       'Baiklah, sekarang anggota baru yg lolos ujian akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username). Pesan sambutan yg digunakan saat ini adalah...',
+    ko:
+      '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능). 현재 인사 메시지가 이어집니다.',
   },
   greetsUsers_false: {
     ruen:
@@ -918,6 +966,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
       'Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués',
     id:
       'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
+    ko: '좋아요! 이제 테스트에 합격한 신입들에게 환영 인사를 하지않을 거예요.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -935,6 +984,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '已接受！',
     fr: 'Accepté',
     id: 'Diterima!',
+    ko: '수락되었습니다',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -952,5 +1002,6 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '已接受！',
     fr: 'Accepté',
     id: 'Diterima!',
+    ko: '수락되었습니다',
   },
 }
