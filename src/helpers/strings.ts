@@ -238,7 +238,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
-    ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
+    ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy\\_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
 
 /help – 이 메시지를 보여줍니다
 /language – 언어 변경
@@ -250,7 +250,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /greeting – 테스트에 통과한 사람에게 환영 인사/trust - 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
 /strict - 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
 
-여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!`,
+여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -775,7 +775,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     tw: '只有需要被驗證的人才能按此按鈕。',
     fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
     id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
-    ko: '봇이 아닌 사람만 이 버튼을 누를 수 있습니다.',
+    ko: '신규 입장자만 이 버튼을 누를 수 있습니다.',
   },
   restrict_true: {
     ruen:
