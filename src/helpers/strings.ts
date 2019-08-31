@@ -195,6 +195,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+
     tw: `Shieldy  - 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：
 
 /help  - 顯示此內容
@@ -223,6 +224,20 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci !`,
+id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu dengan menguji anggota baru dengan melakukan sesuatu dalam batas waktu tertentu, jika gagal maka anggota baru akan ditolak bergabung. Pastikan @shieldy\\_bot menjadi admin di grup anda. Tersedia pengaturan tambahan dengan perintah berikut:
+
+/help — menampilkan pesan bantuan ini
+/language — mengganti pilihan bahasa
+/captcha — mengubah jenis ujian yg dipakai
+/timeLimit — mengubah batasan waktu ujian
+/lock — batasi perintah hanya bisa dijalankan oleh admin saja
+/restrict — batasi anggota baru hanya boleh mengirim pesan teks dalam 24 jam pertama
+/deleteEntryMessages — hapus pesan sambutan pada anggota baru
+/greeting — pesan sambutan pada anggota baru yg lolos ujian
+/trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian
+/strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
+
+Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -239,6 +254,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Bitte wähle eine Sprache.',
     tw: '請選擇一種語言。',
     fr: 'Sélectionnez la langue',
+id: 'Silakan pilih bahasa.',
   },
   language_selected: {
     ruen:
@@ -256,6 +272,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Großartig, ich spreche nun deutsch.',
     tw: '很棒，現在我講中文了。',
     fr: 'Parfait, je parle français',
+ id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
   },
   only_author_can_reply: {
     ruen:
@@ -275,6 +292,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw: '只有啓動菜單的人才能選擇。',
     fr:
       'Seule la personne qui a déclanché ce menu peut sélectionner les options',
+id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -353,6 +371,11 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
 • Simple — Le bot demande d'envoyer une réponse à la conversation
 • Bouton — Le bot demande d'appuyer sur un bouton 
 • Chiffres — Le bot pose une simple équation`,
+id: `Silakan pilih jenis ujian untuk anggota baru:
+
+• Salam  — bot akan meminta salam perkenalan
+• Tombol — bot akan meminta menekan tombol
+• Angka  — bot akan meminta jawaban hitungan`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -369,6 +392,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Simpel',
     tw: '簡單',
     fr: 'Simple',
+id: 'Salam',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -385,6 +409,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Zahlen',
     tw: '數字',
     fr: 'Chiffres',
+id: 'Angka',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -401,6 +426,8 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Knopf',
     tw: '按鈕',
     fr: 'Bouton',
+    id: 'Tombol',
+
   },
   captcha_selected: {
     ruen:
@@ -418,10 +445,12 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Großartig, ich werde diese Art des Tests nutzen.',
     tw: '很棒，我之後會使用這個類型的驗證',
     fr: 'Parfait, je vais utiliser ce type de test',
+id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
   },
   time_limit: {
     ruen:
       'Please, select how many seconds will newcomers get to complete the test before the kick. Пожалуйста, выберите, сколько секунд будет у новичков, чтобы завершить тест перед киком.',
+
     en:
       'Please, select how many seconds will newcomers get to complete the test before the kick.',
     ru:
@@ -445,6 +474,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       'Please, select how many seconds will newcomers get to complete the test before the kick.',
     tw: '請選擇新進成員在被踢除前有多少秒數可以完成驗證。',
     fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
+id: 'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
   },
   time_limit_selected: {
     ruen:
@@ -462,6 +492,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Great, I will use this time limit then.',
     tw: '很棒，我之後會使用這個時間限制。',
     fr: `Parfait, j'utiliserai cette limite de temps`,
+ id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -478,6 +509,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'sek',
     tw: '秒',
     fr: 'sec',
+id: 'det',
   },
   lock_true: {
     ruen:
@@ -497,6 +529,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Great! Now I will only react to commands sent by admins.',
     tw: '很棒！現在我只對管理員發送的指令作出回應。',
     fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
+id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
   },
   lock_false: {
     ruen:
@@ -514,10 +547,13 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Great! Now I will react to commands sent by anybody.',
     tw: '很棒！現在我會對所有人發出的指令做出回應。',
     fr: `Parfait, maintenant n'importe qui pourra utiliser les commandes`,
+    id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
+
   },
   strict_true: {
     ruen:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.",
+
     en:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     ru:
@@ -543,12 +579,12 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
     fr:
       "Parfait, maintenant les nouveaux membres devront d'abord répondre au captcha avant de pouvoir discuter",
+id: "Baiklah, sekarang anggota baru tidak bisa mengirim apa pun hingga menanggapi ujian dengan benar.",
   },
   strict_false: {
     ruen:
       'Great! Now newcomers will be able to send text before they pass captcha. Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
-    en:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
+    en: 'Great! Now newcomers will be able to send text before they pass captcha.',
     ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
     it:
       'Great! Now newcomers will be able to send text before they pass captcha.',
@@ -568,6 +604,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       'Great! Now newcomers will be able to send text before they pass captcha.',
     tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
     fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
+id: 'Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -596,11 +633,13 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內在本群組發送任何消息，否則您將被踢。謝謝！',
     fr: `Veuillez répondre dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
+id: ', silakan sampaikan salam perkenalan dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
 
 Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
+
     en:
       ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
@@ -624,6 +663,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       ', bitte sende die Lösung zu der Mathe-Aufgabe innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內將數學計算答案發送到本群組，否則您將被踢。 謝謝！',
     fr: `Veuillez envoyer votre réponse à l'équation dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
+id: ', silakan jawab soal hitungan tersebut dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -652,6 +692,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
       ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內按下面的按鈕，否則您將被踢。謝謝！',
     fr: `, Veuillez appuyer sur le bouton ci-dessous dans le délai spécifié, sinon vous ne serez pas le bienvenue ici. Merci d'avance!`,
+id: ', silakan tekan tombol dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -668,13 +709,14 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Ich bin kein Bot',
     tw: '我不是機器人',
     fr: 'Je ne suis pas un robot',
+
+    id: 'Saya bukan bot',
   },
   only_candidate_can_reply: {
     ruen:
       'Only the candidate for not being a bot can press this button. Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
     en: 'Only the candidate for not being a bot can press this button.',
-    ru:
-      'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
+    ru: 'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
     it: 'Solamente il candidato che non è un bot può premere questo bottone.',
     et: 'Selle nuppu saab klõpsata ainult kandidaat, kes soovib olla inimene.',
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
@@ -686,10 +728,12 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Nur der Kandiat für kein Bot zu sein, kann diesen Knopf drücken.',
     tw: '只有需要被驗證的人才能按此按鈕。',
     fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
+id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
   },
   restrict_true: {
     ruen:
       'Great! Now all newcomers will only be able to send usual text messages to this chat. Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
+
     en:
       'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     ru:
@@ -713,6 +757,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw: '很棒！現在所有新進成員僅能發送文字消息到這個群組。',
     fr:
       'Parfait, maintenant tous les nouveaux membres pourront envoyer uniquement des messages texte à cette discussion',
+id: 'Baiklah, sekarang semua anggota baru hanya bisa mengirim pesan teks biasa di grup ini.',
   },
   restrict_false: {
     ruen:
@@ -741,6 +786,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw: '很棒！現在所有新進成員可以發送任何類型消息到這個群組。',
     fr:
       'Parfait, maintenant tous les nouveaux membres pourront envoyer tout type de contenu à cette discussion',
+id: 'Baiklah, sekarang semua anggota baru boleh mengirim pesan jenis apa pun di grup ini.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -749,8 +795,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     it: 'Great! Now entry messages will be deleted.',
     et: 'Great! Now entry messages will be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecektir.',
     es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
@@ -759,6 +804,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Great! Now entry messages will be deleted.',
     tw: '很棒！現在，新成員加入的系統消息將被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée seront supprimés`,
+id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -767,8 +813,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     it: 'Great! Now entry messages will not be deleted.',
     et: 'Great! Now entry messages will not be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
     es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
@@ -777,6 +822,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Great! Now entry messages will not be deleted.',
     tw: '很棒！現在，新成員加入的系統消息將不會被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée ne seront pas supprimés`,
+    id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
   },
   greetsUsers_true: {
     ruen:
@@ -806,6 +852,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw:
       '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
     fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
+id: 'Baiklah, sekarang anggota baru yg lolos ujian tidak akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -835,13 +882,15 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw:
       '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
     fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
+
+    id: 'Baiklah, sekarang anggota baru yg lolos ujian akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username). Pesan sambutan yg digunakan saat ini adalah...',
+
   },
   greetsUsers_false: {
     ruen:
       'Great! Now newcomers who passed the test will not be greeted. Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     en: 'Great! Now newcomers who passed the test will not be greeted.',
-    ru:
-      'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
+    ru: 'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     it: 'Great! Now newcomers who passed the test will not be greeted.',
     et: 'Great! Now newcomers who passed the test will not be greeted.',
     uk: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -855,6 +904,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     tw: '很棒！現在通過驗證的新進成員不會收到歡迎消息。',
     fr:
       'Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués',
+    id: 'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -871,6 +921,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Akzeptiert!',
     tw: '已接受！',
     fr: 'Accepté',
+    id: 'Diterima!',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -887,5 +938,6 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
     de: 'Akzeptiert!',
     tw: '已接受！',
     fr: 'Accepté',
+    id: 'Diterima!',
   },
 }
