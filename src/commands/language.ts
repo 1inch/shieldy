@@ -44,7 +44,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
   })
 
   bot.action(
-    ['en', 'ru', 'it', 'et', 'uk', 'br', 'tr', 'ruen', 'es', 'zh', 'no', 'de'],
+    ['en', 'ru', 'it', 'et', 'uk', 'br', 'tr', 'ruen', 'es', 'zh', 'no', 'de', 'tw'],
     checkIfFromReplier,
     async ctx => {
       let chat = ctx.dbchat
