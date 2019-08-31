@@ -558,7 +558,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no:
       ', vennligst send hvilken som helst melding til denne gruppen innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
     de:
-      ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
+      ', bitte sende eine Nachricht innerhalb der genannten Zeit, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內在本群組發送任何消息，否則您將被踢。謝謝！',
   },
   digits_warning: {
