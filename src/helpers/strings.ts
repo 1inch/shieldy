@@ -248,7 +248,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /restrict – 신규 입장자들은 24시간 동안 메시지만 보내도록 제한
 /Delete EntryMessages - 사용자 항목에 대한 메시지 삭제
 /greeting – 테스트에 통과한 사람에게 환영 인사/trust - 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
-/strict - 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오. `,
+/strict - 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
+
+여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
