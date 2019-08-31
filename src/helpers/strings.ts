@@ -209,6 +209,20 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict  - 限制新進成員在通過驗證前不能發任何消息
 
 還有問題嗎？查看支援管道 -  @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！`,
+    fr: `Shieldy — est la meilleure solution sur Telegram pour combattre les spammeurs. Il demande aux nouveaux membres d'exécuter une action définie dans un certain délais, sinon on lui donne un coup de pied au c... . C'est aussi simple. Assurez-vous que le bot @shieldy\\_bot est bien admin de votre groupe et c'est terminé ! Vous pouvez également configurer les différentes options via les commandes suivantes :
+
+/help — Afficher le message
+/language — Changer de langues
+/captcha — Modifier le type de captcha à utiliser
+/timeLimit — Modifier le temps lorsqu'un nouveau membre arrive
+/lock — Faire en sorte que seuls les admins puissent accèder aux commandes
+/restrict — Interdit pendant 24h aux nouveaux membres la possibilité d'envoyer un message 
+/deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres
+/greeting — Accueillir les utilisateurs qui passent le test 
+/trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
+/strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
+
+Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci !`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -224,6 +238,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Vennligst velg et språk.',
     de: 'Bitte wähle eine Sprache.',
     tw: '請選擇一種語言。',
+    fr: 'Sélectionnez la langue',
   },
   language_selected: {
     ruen:
@@ -240,6 +255,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert, nå snakker jeg norsk.',
     de: 'Großartig, ich spreche nun deutsch.',
     tw: '很棒，現在我講中文了。',
+    fr: 'Parfait, je parle français',
   },
   only_author_can_reply: {
     ruen:
@@ -257,6 +273,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       'Nur die Person, welche das Menü initialisiert hat, kann Einstellungen vornehmen.',
     tw: '只有啓動菜單的人才能選擇。',
+    fr:
+      'Seule la personne qui a déclanché ce menu peut sélectionner les options',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -330,6 +348,11 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 •簡單 - 機器人會要求在聊天室發送任何內容
 •按鈕 - 機器人將要求按下一個按鈕
 •數字 - 機器人將要求解答一個簡單的數學問題`,
+    fr: `Veuillez sélectionner le type de test pour les nouveaux membres
+
+• Simple — Le bot demande d'envoyer une réponse à la conversation
+• Bouton — Le bot demande d'appuyer sur un bouton 
+• Chiffres — Le bot pose une simple équation`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -345,6 +368,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Enkel',
     de: 'Simpel',
     tw: '簡單',
+    fr: 'Simple',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -360,6 +384,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Tall',
     de: 'Zahlen',
     tw: '數字',
+    fr: 'Chiffres',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -375,6 +400,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Knapp',
     de: 'Knopf',
     tw: '按鈕',
+    fr: 'Bouton',
   },
   captcha_selected: {
     ruen:
@@ -391,6 +417,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert, da vil jeg bruke denne type testen.',
     de: 'Großartig, ich werde diese Art des Tests nutzen.',
     tw: '很棒，我之後會使用這個類型的驗證',
+    fr: 'Parfait, je vais utiliser ce type de test',
   },
   time_limit: {
     ruen:
@@ -417,6 +444,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       'Please, select how many seconds will newcomers get to complete the test before the kick.',
     tw: '請選擇新進成員在被踢除前有多少秒數可以完成驗證。',
+    fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
   },
   time_limit_selected: {
     ruen:
@@ -433,6 +461,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert, da skal jeg bruke denne tidsbegrensningen.',
     de: 'Great, I will use this time limit then.',
     tw: '很棒，我之後會使用這個時間限制。',
+    fr: `Parfait, j'utiliserai cette limite de temps`,
   },
   seconds: {
     ruen: 'sec/сек',
@@ -448,6 +477,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'sek',
     de: 'sek',
     tw: '秒',
+    fr: 'sec',
   },
   lock_true: {
     ruen:
@@ -466,6 +496,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
     de: 'Great! Now I will only react to commands sent by admins.',
     tw: '很棒！現在我只對管理員發送的指令作出回應。',
+    fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
   },
   lock_false: {
     ruen:
@@ -482,6 +513,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
     de: 'Great! Now I will react to commands sent by anybody.',
     tw: '很棒！現在我會對所有人發出的指令做出回應。',
+    fr: `Parfait, maintenant n'importe qui pourra utiliser les commandes`,
   },
   strict_true: {
     ruen:
@@ -509,6 +541,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     tw:
       '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
+    fr:
+      "Parfait, maintenant les nouveaux membres devront d'abord répondre au captcha avant de pouvoir discuter",
   },
   strict_false: {
     ruen:
@@ -533,6 +567,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
+    fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -560,6 +595,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內在本群組發送任何消息，否則您將被踢。謝謝！',
+    fr: `Veuillez répondre dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -587,6 +623,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       ', bitte sende die Lösung zu der Mathe-Aufgabe innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內將數學計算答案發送到本群組，否則您將被踢。 謝謝！',
+    fr: `Veuillez envoyer votre réponse à l'équation dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -614,6 +651,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
     tw: '，請在指定的時間內按下面的按鈕，否則您將被踢。謝謝！',
+    fr: `, Veuillez appuyer sur le bouton ci-dessous dans le délai spécifié, sinon vous ne serez pas le bienvenue ici. Merci d'avance!`,
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -629,6 +667,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Jeg er ikke en bot',
     de: 'Ich bin kein Bot',
     tw: '我不是機器人',
+    fr: 'Je ne suis pas un robot',
   },
   only_candidate_can_reply: {
     ruen:
@@ -646,6 +685,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Bare kandidaten som blir testet kan trykke denne knappen.',
     de: 'Nur der Kandiat für kein Bot zu sein, kann diesen Knopf drücken.',
     tw: '只有需要被驗證的人才能按此按鈕。',
+    fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
   },
   restrict_true: {
     ruen:
@@ -671,6 +711,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     tw: '很棒！現在所有新進成員僅能發送文字消息到這個群組。',
+    fr:
+      'Parfait, maintenant tous les nouveaux membres pourront envoyer uniquement des messages texte à cette discussion',
   },
   restrict_false: {
     ruen:
@@ -697,6 +739,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     de:
       'Great! Now all newcomers will be able to send any type of content to this chat.',
     tw: '很棒！現在所有新進成員可以發送任何類型消息到這個群組。',
+    fr:
+      'Parfait, maintenant tous les nouveaux membres pourront envoyer tout type de contenu à cette discussion',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -714,6 +758,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
     de: 'Great! Now entry messages will be deleted.',
     tw: '很棒！現在，新成員加入的系統消息將被刪除。',
+    fr: `Parfait, maintenant les messages d'arrivée seront supprimés`,
   },
   deleteEntryMessages_false: {
     ruen:
@@ -731,6 +776,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
     de: 'Great! Now entry messages will not be deleted.',
     tw: '很棒！現在，新成員加入的系統消息將不會被刪除。',
+    fr: `Parfait, maintenant les messages d'arrivée ne seront pas supprimés`,
   },
   greetsUsers_true: {
     ruen:
@@ -759,6 +805,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
     tw:
       '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
+    fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
   },
   greetsUsers_true_message: {
     ruen:
@@ -787,6 +834,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
     tw:
       '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
+    fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
   },
   greetsUsers_false: {
     ruen:
@@ -805,6 +853,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Supert! Nykommere som har bestått testen vil ikke få en velkomst.',
     de: 'Great! Now newcomers who passed the test will not be greeted.',
     tw: '很棒！現在通過驗證的新進成員不會收到歡迎消息。',
+    fr:
+      'Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -820,6 +870,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Akseptert!',
     de: 'Akzeptiert!',
     tw: '已接受！',
+    fr: 'Accepté',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -835,5 +886,6 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     no: 'Akseptert!',
     de: 'Akzeptiert!',
     tw: '已接受！',
+    fr: 'Accepté',
   },
 }

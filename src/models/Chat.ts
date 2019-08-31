@@ -16,6 +16,7 @@ export enum Language {
   NORWEGIAN = 'no',
   GERMAN = 'de',
   TAIWAN = 'tw',
+  FRENCH = 'fr',
 }
 
 export enum CaptchaType {
