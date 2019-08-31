@@ -195,6 +195,35 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+
+    tw: `Shieldy  - 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：
+
+/help  - 顯示此內容
+/language  - 切換語言
+/captcha  - 更改使用的驗證類型
+/timeLimit  - 更改給新進成員驗證的時間
+/lock  - 使指令只能由管理員使用
+/restrict  - 限制新進成員在前 24 小時內僅能發送純文字消息
+/deleteEntryMessages  - 刪除有關新進成員加入的系統消息
+/greeting  - 給通過驗證的用戶發歡迎詞
+/trust  - 使用此指令回復任何您信任不想驗證的成員
+/strict  - 限制新進成員在通過驗證前不能發任何消息
+
+還有問題嗎？查看支援管道 -  @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！`,
+    fr: `Shieldy — est la meilleure solution sur Telegram pour combattre les spammeurs. Il demande aux nouveaux membres d'exécuter une action définie dans un certain délais, sinon on lui donne un coup de pied au c... . C'est aussi simple. Assurez-vous que le bot @shieldy\\_bot est bien admin de votre groupe et c'est terminé ! Vous pouvez également configurer les différentes options via les commandes suivantes :
+
+/help — Afficher le message
+/language — Changer de langues
+/captcha — Modifier le type de captcha à utiliser
+/timeLimit — Modifier le temps lorsqu'un nouveau membre arrive
+/lock — Faire en sorte que seuls les admins puissent accèder aux commandes
+/restrict — Interdit pendant 24h aux nouveaux membres la possibilité d'envoyer un message 
+/deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres
+/greeting — Accueillir les utilisateurs qui passent le test 
+/trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
+/strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
+
+Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci !`,
 id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu dengan menguji anggota baru dengan melakukan sesuatu dalam batas waktu tertentu, jika gagal maka anggota baru akan ditolak bergabung. Pastikan @shieldy\\_bot menjadi admin di grup anda. Tersedia pengaturan tambahan dengan perintah berikut:
 
 /help — menampilkan pesan bantuan ini
@@ -209,7 +238,6 @@ id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu deng
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
-
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -224,7 +252,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '请选择一种语言。',
     no: 'Vennligst velg et språk.',
     de: 'Bitte wähle eine Sprache.',
-    id: 'Silakan pilih bahasa.',
+    tw: '請選擇一種語言。',
+    fr: 'Sélectionnez la langue',
+id: 'Silakan pilih bahasa.',
   },
   language_selected: {
     ruen:
@@ -240,7 +270,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒，现在我讲中文了。',
     no: 'Supert, nå snakker jeg norsk.',
     de: 'Großartig, ich spreche nun deutsch.',
-    id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
+    tw: '很棒，現在我講中文了。',
+    fr: 'Parfait, je parle français',
+ id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
   },
   only_author_can_reply: {
     ruen:
@@ -255,8 +287,12 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     es: 'Solo la persona que inició el menú puede seleccionar las opciones.',
     zh: '只有启动菜单的人才能选择。',
     no: 'Bare personen som åpnet menyen kan svare på den.',
-    de: 'Nur die Person, welche das Menü initialisiert hat, kann Einstellungen vornehmen.',
-    id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
+    de:
+      'Nur die Person, welche das Menü initialisiert hat, kann Einstellungen vornehmen.',
+    tw: '只有啓動菜單的人才能選擇。',
+    fr:
+      'Seule la personne qui a déclanché ce menu peut sélectionner les options',
+id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -325,7 +361,17 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 • Simpel — Der Bot wird fragen, irgendwas in den Chat zu senden
 • Knopf — Der Bot wird fragen, einen Knopf zu drücken
 • Nummern — Der Bot wird eine simple Mathe-Aufgabe stellen`,
-    id: `Silakan pilih jenis ujian untuk anggota baru:
+    tw: `請為新進成員選擇驗證類型：
+
+•簡單 - 機器人會要求在聊天室發送任何內容
+•按鈕 - 機器人將要求按下一個按鈕
+•數字 - 機器人將要求解答一個簡單的數學問題`,
+    fr: `Veuillez sélectionner le type de test pour les nouveaux membres
+
+• Simple — Le bot demande d'envoyer une réponse à la conversation
+• Bouton — Le bot demande d'appuyer sur un bouton 
+• Chiffres — Le bot pose une simple équation`,
+id: `Silakan pilih jenis ujian untuk anggota baru:
 
 • Salam  — bot akan meminta salam perkenalan
 • Tombol — bot akan meminta menekan tombol
@@ -344,7 +390,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '简单',
     no: 'Enkel',
     de: 'Simpel',
-    id: 'Salam',
+    tw: '簡單',
+    fr: 'Simple',
+id: 'Salam',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -359,7 +407,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '数字',
     no: 'Tall',
     de: 'Zahlen',
-    id: 'Angka',
+    tw: '數字',
+    fr: 'Chiffres',
+id: 'Angka',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -374,7 +424,10 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '按钮',
     no: 'Knapp',
     de: 'Knopf',
+    tw: '按鈕',
+    fr: 'Bouton',
     id: 'Tombol',
+
   },
   captcha_selected: {
     ruen:
@@ -390,23 +443,38 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒，我之后会使用这个类型的测试',
     no: 'Supert, da vil jeg bruke denne type testen.',
     de: 'Großartig, ich werde diese Art des Tests nutzen.',
-    id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
+    tw: '很棒，我之後會使用這個類型的驗證',
+    fr: 'Parfait, je vais utiliser ce type de test',
+id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
   },
   time_limit: {
     ruen:
       'Please, select how many seconds will newcomers get to complete the test before the kick. Пожалуйста, выберите, сколько секунд будет у новичков, чтобы завершить тест перед киком.',
-    en: 'Please, select how many seconds will newcomers get to complete the test before the kick.',
-    ru: 'Пожалуйста, выберите, сколько секунд будет у новичков, чтобы завершить тест перед киком.',
-    it: 'Prego, seleziona quanti secondi avrà il nuovo membro per completare il test prima di essere kickato',
-    et: 'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
-    uk: 'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
-    br: 'Por favor, selecione quantos segundos o novato tem para completar o teste.',
-    tr: 'Lütfen, yeni gelenlerin kovulmadan önce testi tamamlaması gereken saniyeyi seçin.',
-    es: 'Por favor, seleccione cuántos segundos tendrán los recién llegados para completar el test antes de la expulsión.',
+
+    en:
+      'Please, select how many seconds will newcomers get to complete the test before the kick.',
+    ru:
+      'Пожалуйста, выберите, сколько секунд будет у новичков, чтобы завершить тест перед киком.',
+    it:
+      'Prego, seleziona quanti secondi avrà il nuovo membro per completare il test prima di essere kickato',
+    et:
+      'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
+    uk:
+      'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
+    br:
+      'Por favor, selecione quantos segundos o novato tem para completar o teste.',
+    tr:
+      'Lütfen, yeni gelenlerin kovulmadan önce testi tamamlaması gereken saniyeyi seçin.',
+    es:
+      'Por favor, seleccione cuántos segundos tendrán los recién llegados para completar el test antes de la expulsión.',
     zh: '请选择新人在被踢除前完成测试的秒数。',
-    no: 'Vennligst velg hvor mange sekunder nykommere vil ha på å fullføre testen før brukeren blir sparket.',
-    de: 'Please, select how many seconds will newcomers get to complete the test before the kick.',
-    id: 'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
+    no:
+      'Vennligst velg hvor mange sekunder nykommere vil ha på å fullføre testen før brukeren blir sparket.',
+    de:
+      'Please, select how many seconds will newcomers get to complete the test before the kick.',
+    tw: '請選擇新進成員在被踢除前有多少秒數可以完成驗證。',
+    fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
+id: 'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
   },
   time_limit_selected: {
     ruen:
@@ -422,7 +490,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒，我之后会使用这个时间限制。',
     no: 'Supert, da skal jeg bruke denne tidsbegrensningen.',
     de: 'Great, I will use this time limit then.',
-    id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
+    tw: '很棒，我之後會使用這個時間限制。',
+    fr: `Parfait, j'utiliserai cette limite de temps`,
+ id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -437,7 +507,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '秒',
     no: 'sek',
     de: 'sek',
-    id: 'det',
+    tw: '秒',
+    fr: 'sec',
+id: 'det',
   },
   lock_true: {
     ruen:
@@ -448,12 +520,16 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     et: 'Väga hea, nüüd ma aktsepteerin ainult administraatorite käske.',
     uk: 'Чудово! Тепер я буду приймати команди тільки від адміністраторів.',
     br: 'Boa! Agora só obedecerei os ADMs.',
-    es: '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
-    tr: 'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
+    es:
+      '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
+    tr:
+      'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
     zh: '很棒！现在我只对管理员发送的命令作出反应。',
     no: 'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
     de: 'Great! Now I will only react to commands sent by admins.',
-    id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
+    tw: '很棒！現在我只對管理員發送的指令作出回應。',
+    fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
+id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
   },
   lock_false: {
     ruen:
@@ -469,90 +545,154 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
     de: 'Great! Now I will react to commands sent by anybody.',
+    tw: '很棒！現在我會對所有人發出的指令做出回應。',
+    fr: `Parfait, maintenant n'importe qui pourra utiliser les commandes`,
     id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
+
   },
   strict_true: {
     ruen:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.",
-    en: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    ru: 'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
-    it: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    et: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    uk: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    br: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    es: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    tr: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    zh: "很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。",
-    no: "Supert! Nå kan ikke nykommere sende noe før de har bestått testen.",
-    de: "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    id: "Baiklah, sekarang anggota baru tidak bisa mengirim apa pun hingga menanggapi ujian dengan benar.",
+
+    en:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    ru:
+      'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
+    it:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    et:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    uk:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    br:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    es:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    tr:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    zh:
+      '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
+    no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
+    de:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+    tw:
+      '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
+    fr:
+      "Parfait, maintenant les nouveaux membres devront d'abord répondre au captcha avant de pouvoir discuter",
+id: "Baiklah, sekarang anggota baru tidak bisa mengirim apa pun hingga menanggapi ujian dengan benar.",
   },
   strict_false: {
     ruen:
       'Great! Now newcomers will be able to send text before they pass captcha. Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
     en: 'Great! Now newcomers will be able to send text before they pass captcha.',
     ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
-    it: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    et: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    uk: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    br: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    tr: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    es: 'Great! Now newcomers will be able to send text before they pass captcha.',
+    it:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    et:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    uk:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    br:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    tr:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    es:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
-    de: 'Great! Now newcomers will be able to send text before they pass captcha.',
-    id: 'Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
+    de:
+      'Great! Now newcomers will be able to send text before they pass captcha.',
+    tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
+    fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
+id: 'Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
 
   Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
-    en: ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
-    ru: ', пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
-    it: ', prego, invia un messaggio in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!',
-    et: ', palun saatke mis tahes sõnum sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
-    uk: ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
-    br: ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
-    tr: ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
-    es: ', por favor, envía cualquier mensaje por este grupo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    en:
+      ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    it:
+      ', prego, invia un messaggio in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!',
+    et:
+      ', palun saatke mis tahes sõnum sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+    br:
+      ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
+    tr:
+      ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
+    es:
+      ', por favor, envía cualquier mensaje por este grupo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内向该群组发送任何消息，否则您将被踢。谢谢！',
-    no: ', vennligst send hvilken som helst melding til denne gruppen innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    de: ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
-    id: ', silakan sampaikan salam perkenalan dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    no:
+      ', vennligst send hvilken som helst melding til denne gruppen innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte sende jede Nachricht innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
+    tw: '，請在指定的時間內在本群組發送任何消息，否則您將被踢。謝謝！',
+    fr: `Veuillez répondre dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
+id: ', silakan sampaikan salam perkenalan dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
 
 Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
-    en: ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    ru: ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
-    it: ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
-    et: ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
-    uk: ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
-    br: ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
-    tr: ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
-    es: ', por favor, envíe por este grupo la solución a la ecuación matemática proporcionada dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+
+    en:
+      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    it:
+      ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
+    et:
+      ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+    br:
+      ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
+    tr:
+      ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
+    es:
+      ', por favor, envíe por este grupo la solución a la ecuación matemática proporcionada dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内将数学计算答案发送到本群组，否则您将被踢。 谢谢！',
-    no: ', vennligst send svaret på matteproblemet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    de: ', bitte sende die Lösung zu der Mathe-Aufgabe innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
-    id: ', silakan jawab soal hitungan tersebut dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    no:
+      ', vennligst send svaret på matteproblemet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte sende die Lösung zu der Mathe-Aufgabe innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
+    tw: '，請在指定的時間內將數學計算答案發送到本群組，否則您將被踢。 謝謝！',
+    fr: `Veuillez envoyer votre réponse à l'équation dans le délai, sinon vous ne serez pas le bienvenue ici. Merci d'avance !`,
+id: ', silakan jawab soal hitungan tersebut dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
 
 Пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
-    en: ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
-    ru: ', пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
-    it: ', prego, clicca il bottone qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
-    et: ', palun klõpsake alam nuppu määratud aja jooksul, muide me kickime teid. Aitäh!',
-    uk: ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
-    br: ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
-    tr: ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde atılacasınız. Teşekkürler!',
-    es: ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    en:
+      ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    it:
+      ', prego, clicca il bottone qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
+    et:
+      ', palun klõpsake alam nuppu määratud aja jooksul, muide me kickime teid. Aitäh!',
+    uk:
+      ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+    br:
+      ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
+    tr:
+      ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde atılacasınız. Teşekkürler!',
+    es:
+      ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
-    no: 'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    de: ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
-    id: ', silakan tekan tombol dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
+    no:
+      'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
+    de:
+      ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
+    tw: '，請在指定的時間內按下面的按鈕，否則您將被踢。謝謝！',
+    fr: `, Veuillez appuyer sur le bouton ci-dessous dans le délai spécifié, sinon vous ne serez pas le bienvenue ici. Merci d'avance!`,
+id: ', silakan tekan tombol dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -567,6 +707,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '我不是一个机器人',
     no: 'Jeg er ikke en bot',
     de: 'Ich bin kein Bot',
+    tw: '我不是機器人',
+    fr: 'Je ne suis pas un robot',
+
     id: 'Saya bukan bot',
   },
   only_candidate_can_reply: {
@@ -583,39 +726,67 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '只有不是机器人的候选人才能按此按钮。',
     no: 'Bare kandidaten som blir testet kan trykke denne knappen.',
     de: 'Nur der Kandiat für kein Bot zu sein, kann diesen Knopf drücken.',
-    id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
+    tw: '只有需要被驗證的人才能按此按鈕。',
+    fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
+id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
   },
   restrict_true: {
     ruen:
       'Great! Now all newcomers will only be able to send usual text messages to this chat. Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
-    en: 'Great! Now all newcomers will only be able to send usual text messages to this chat.',
-    ru: 'Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
-    it: 'Great! Now all newcomers will only be able to send usual text messages to this chat.',
-    et: 'Great! Now all newcomers will only be able to send usual text messages to this chat.',
-    uk: 'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
-    br: 'Boa, Agora todos os novatos só poderam mandar mensagens de texto para esse chat.',
-    tr: 'Harika! Artık tüm yeni gelenler, bu sohbete yalnızca normal metin mesajları gönderebilecek.',
-    es: '¡Genial! Ahora todos los recién llegados solo podrán enviar mensajes ordinarios a este chat.',
+
+    en:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    ru:
+      'Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
+    it:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    et:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    uk:
+      'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
+    br:
+      'Boa, Agora todos os novatos só poderam mandar mensagens de texto para esse chat.',
+    tr:
+      'Harika! Artık tüm yeni gelenler, bu sohbete yalnızca normal metin mesajları gönderebilecek.',
+    es:
+      '¡Genial! Ahora todos los recién llegados solo podrán enviar mensajes ordinarios a este chat.',
     zh: '很棒！现在所有新手都只能发送文本消息到这个群组。',
     no: 'Supert! Nå kan nykommere bare sende tekstmeldinger i chatten.',
-    de: 'Great! Now all newcomers will only be able to send usual text messages to this chat.',
-    id: 'Baiklah, sekarang semua anggota baru hanya bisa mengirim pesan teks biasa di grup ini.',
+    de:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+    tw: '很棒！現在所有新進成員僅能發送文字消息到這個群組。',
+    fr:
+      'Parfait, maintenant tous les nouveaux membres pourront envoyer uniquement des messages texte à cette discussion',
+id: 'Baiklah, sekarang semua anggota baru hanya bisa mengirim pesan teks biasa di grup ini.',
   },
   restrict_false: {
     ruen:
       'Great! Now all newcomers will be able to send any type of content to this chat. Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
-    en: 'Great! Now all newcomers will be able to send any type of content to this chat.',
-    ru: 'Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
-    it: 'Great! Now all newcomers will be able to send any type of content to this chat.',
-    et: 'Great! Now all newcomers will be able to send any type of content to this chat.',
-    uk: 'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
-    br: 'Boa, Agora todos os novatos poderam mandar qualquer tipo de conteúdo para esse chat.',
-    tr: 'Harika! Artık tüm yeni kullanıcılar, bu sohbete her türlü içeriği gönderebilecek.',
-    es: '¡Genial! Ahora todos los recién llegados pueden enviar cualquier tipo de contenido a este chat.',
+    en:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    ru:
+      'Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
+    it:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    et:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    uk:
+      'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
+    br:
+      'Boa, Agora todos os novatos poderam mandar qualquer tipo de conteúdo para esse chat.',
+    tr:
+      'Harika! Artık tüm yeni kullanıcılar, bu sohbete her türlü içeriği gönderebilecek.',
+    es:
+      '¡Genial! Ahora todos los recién llegados pueden enviar cualquier tipo de contenido a este chat.',
     zh: '很棒！现在所有新手都可以发送任何类型消息到这个群组。',
-    no: 'Supert! Nå kan nykommere sende meldinger med all slags innhold i chatten',
-    de: 'Great! Now all newcomers will be able to send any type of content to this chat.',
-    id: 'Baiklah, sekarang semua anggota baru boleh mengirim pesan jenis apa pun di grup ini.',
+    no:
+      'Supert! Nå kan nykommere sende meldinger med all slags innhold i chatten',
+    de:
+      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    tw: '很棒！現在所有新進成員可以發送任何類型消息到這個群組。',
+    fr:
+      'Parfait, maintenant tous les nouveaux membres pourront envoyer tout type de contenu à cette discussion',
+id: 'Baiklah, sekarang semua anggota baru boleh mengirim pesan jenis apa pun di grup ini.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -631,7 +802,9 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
     de: 'Great! Now entry messages will be deleted.',
-    id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
+    tw: '很棒！現在，新成員加入的系統消息將被刪除。',
+    fr: `Parfait, maintenant les messages d'arrivée seront supprimés`,
+id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -647,39 +820,71 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '很棒！现在，加入消息将不被删除。',
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
     de: 'Great! Now entry messages will not be deleted.',
+    tw: '很棒！現在，新成員加入的系統消息將不會被刪除。',
+    fr: `Parfait, maintenant les messages d'arrivée ne seront pas supprimés`,
     id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
   },
   greetsUsers_true: {
     ruen:
       'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
-    en: 'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
-    ru: 'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
-    it: 'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
-    et: 'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
-    uk: 'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
-    br: 'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
-    tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz).',
-    es: '¡Genial! Ahora los recién llegados que hayan pasado el test no serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username).',
-    zh: '很棒！现在通过测试的新人不会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。',
-    no: 'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
-    de: 'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
-    id: 'Baiklah, sekarang anggota baru yg lolos ujian tidak akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username).',
+    en:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+    ru:
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username).',
+    it:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    et:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    uk:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use.',
+    br:
+      'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
+    tr:
+      'Harika! Artık testi geçen yeni üyeler karşılanmayacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz).',
+    es:
+      '¡Genial! Ahora los recién llegados que hayan pasado el test no serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username).',
+    zh:
+      '很棒！现在通过测试的新人不会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。',
+    no:
+      'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
+    de:
+      'Great! Now newcomers who passed the test will not be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+    tw:
+      '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
+    fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
+id: 'Baiklah, sekarang anggota baru yg lolos ujian tidak akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username).',
   },
   greetsUsers_true_message: {
     ruen:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows. Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username). Текущее сообщение с приветствием ниже.',
-    en: 'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
-    ru: 'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username). Текущее сообщение с приветствием ниже.',
-    it: 'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
-    et: 'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
-    uk: 'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
-    br: 'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
-    tr: 'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı aşağıdaki gibidir.',
-    es: '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username). El mensaje actual de saludo es:',
-    zh: '很棒！现在通过测试的新人会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。接下来是当前的问候消息。',
-    no: 'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
-    de: 'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
+    en:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
+    ru:
+      'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title и $username). Текущее сообщение с приветствием ниже.',
+    it:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    et:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    uk:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+    br:
+      'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
+    tr:
+      'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı aşağıdaki gibidir.',
+    es:
+      '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username). El mensaje actual de saludo es:',
+    zh:
+      '很棒！现在通过测试的新人会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。接下来是当前的问候消息。',
+    no:
+      'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
+    de:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
+    tw:
+      '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
+    fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
+
     id: 'Baiklah, sekarang anggota baru yg lolos ujian akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username). Pesan sambutan yg digunakan saat ini adalah...',
+
   },
   greetsUsers_false: {
     ruen:
@@ -691,10 +896,14 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     uk: 'Great! Now newcomers who passed the test will not be greeted.',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
-    es: '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
+    es:
+      '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
     zh: '很棒！现在通过测试的新人不会受到欢迎消息。',
     no: 'Supert! Nykommere som har bestått testen vil ikke få en velkomst.',
     de: 'Great! Now newcomers who passed the test will not be greeted.',
+    tw: '很棒！現在通過驗證的新進成員不會收到歡迎消息。',
+    fr:
+      'Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués',
     id: 'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
   },
   greetsUsers_message_accepted: {
@@ -710,6 +919,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '已接受！',
     no: 'Akseptert!',
     de: 'Akzeptiert!',
+    tw: '已接受！',
+    fr: 'Accepté',
     id: 'Diterima!',
   },
   trust_success: {
@@ -725,6 +936,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
     zh: '已接受！',
     no: 'Akseptert!',
     de: 'Akzeptiert!',
+    tw: '已接受！',
+    fr: 'Accepté',
     id: 'Diterima!',
   },
 }

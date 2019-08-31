@@ -37,13 +37,32 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Norwegian', 'no'),
               m.callbackButton('Deutsch', 'de'),
             ],
-          ])
-        )
+            [
+              m.callbackButton('Taiwan', 'tw'),
+              m.callbackButton('French', 'fr'),
+            ],
+          ]),
+        ),
     )
   })
 
   bot.action(
-    ['en', 'ru', 'it', 'et', 'uk', 'br', 'tr', 'ruen', 'es', 'zh', 'no', 'de'],
+    [
+      'en',
+      'ru',
+      'it',
+      'et',
+      'uk',
+      'br',
+      'tr',
+      'ruen',
+      'es',
+      'zh',
+      'no',
+      'de',
+      'tw',
+      'fr',
+    ],
     checkIfFromReplier,
     async ctx => {
       let chat = ctx.dbchat
@@ -55,8 +74,8 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
         message.chat.id,
         message.message_id,
         undefined,
-        strings(chat, 'language_selected')
+        strings(chat, 'language_selected'),
       )
-    }
+    },
   )
 }
