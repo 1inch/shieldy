@@ -266,6 +266,49 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር 
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+    czen: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
+
+/help — shows this message
+/language — switches language
+/captcha — changes type of captcha used
+/timeLimit — changes amount of time given to newcomers
+/lock — makes commands accessible only by admins
+/restrict — restricts newcomers to send only text messages in the first 24 hours
+/deleteEntryMessages — delete messages about user entry
+/greeting — greets users who pass the test
+/trust — reply with this command to a message sent by user that you don't want to check
+/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
+
+Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
+
+/help — ukáže tuto zprávu
+/language — výběr jazyka
+/captcha — změní typ testu
+/timeLimit — změní čas pro splnění testu pro nováčky
+/lock — zpřístupní příkazy pouze správcům
+/restrict — omezí nováčky pouze na posílání textových zpráv prvních 24 hodin
+/deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
+/greeting — pozdraví nováčky, kteří projdou testem
+/trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
+
+Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
+    cz: `Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Ujistěte se, že @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
+
+/help — ukáže tuto zprávu
+/language — výběr jazyka
+/captcha — změní typ testu
+/timeLimit — změní čas pro splnění testu pro nováčky
+/lock — zpřístupní příkazy pouze správcům
+/restrict — omezí nováčky pouze na posílání textových zpráv prvních 24 hodin
+/deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
+/greeting — pozdraví nováčky, kteří projdou testem
+/trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
+
+Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -285,6 +328,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Silakan pilih bahasa.',
     ko: '언어를 선택하십시오.',
     am: 'ቋንቋ ምረጡ።',
+    czen: 'Please, select the language. Prosím, vyber jazyk.',
+    cz: 'Prosím, vyber jazyk.',
   },
   language_selected: {
     ruen:
@@ -305,6 +350,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
     ko: '좋아요, 나는 이제 한국어로 말합니다.',
     am: 'አሪፍ አሁን አማርኛ አወራለሁ።',
+    czen: 'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
+    cz: 'Skvělé, nyní mluvím česky.',
   },
   only_author_can_reply: {
     ruen:
@@ -327,6 +374,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
     ko: '메뉴를 시작한 사람만이 선택을 할 수 있습니다.',
     am: 'ሜኑውን ያስጀመረው ሰዉ ብቻ ነው መክፈት የሚችለው ።',
+    czen:
+      'Only the person who initiated the menu can select the choices. Možnost může vybrat jen osoba, která nabídku vyvolala.',
+    cz: 'Možnost může vybrat jen osoba, která nabídku vyvolala.',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -420,6 +470,22 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 • ሲምፕል — ቦቱ ማንኛውንም ጸሁፍ እንዲልኩ ይጠይቃል። 
 • በተን — ቦቱ በተን አንዲነካ ይጠይቃል።
 • ዲጂት — በቱ መልሰ ይጠየቃል።`,
+    czen: `Please, select the test type for the newcomers:
+
+• Simple — bot will ask to send anything to the chat
+• Button — bot will ask to press a button
+• Digits — bot will ask to solve a simple equation
+
+Vyberte prosím typ testu pro nováčky:
+
+• Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
+• Tlačítko — bot požádá o stisk tlačítka
+• Číselný — bot požádá o vyřešení jednoduchého příkladu`,
+    cz: `Vyberte prosím typ testu pro nováčky:
+
+• Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
+• Tlačítko — bot požádá o stisk tlačítka
+• Číselný — bot požádá o vyřešení jednoduchého příkladu`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -439,6 +505,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Salam',
     ko: '단순함',
     am: 'ሲምፕል',
+    czen: 'Simple/Jednoduchý',
+    cz: 'Jednoduchý',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -458,6 +526,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Angka',
     ko: '방정식',
     am: 'ዲጂት',
+    czen: 'Digits/Číselný',
+    cz: 'Číselný',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -477,6 +547,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Tombol',
     ko: '버튼',
     am: 'በተን',
+    czen: 'Button/Tlačítko',
+    cz: 'Tlačítko',
   },
   captcha_selected: {
     ruen:
@@ -497,6 +569,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
     ko: '좋아요. 그러면 이런 종류의 테스트를 사용하겠습니다.',
     am: 'አሪፍ እንደዚህ አይነት ቴሰት እጠቀማለሁ ።',
+    czen:
+      'Great, I will use this type of test then. Skvělé, budu používat tento typ testu.',
+    cz: 'Skvělé, budu používat tento typ testu.',
   },
   time_limit: {
     ruen:
@@ -528,6 +603,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
     ko: '신규 입장자가 추방 전에 테스트를 완료 할 시간을 선택하십시오.',
     am: 'ለስንት ሰከንድ ልጠብቅ ከማባረሬ በፊት',
+    czen:
+      'Please, select how many seconds will newcomers get to complete the test before the kick. Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
+    cz:
+      'Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
   },
   time_limit_selected: {
     ruen:
@@ -548,6 +627,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
     ko: '좋아요, 이 시간 제한을 사용하겠습니다.',
     am: 'እሺ ይሄን ያህል ሰከንድ እጠብቃለሁ ።',
+    czen:
+      'Great, I will use this time limit then. Skvělé, budu používat tento časový limit.',
+    cz: 'Skvělé, budu používat tento časový limit.',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -567,6 +649,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'det',
     ko: '초',
     am: 'ሰከንድ',
+    czen: 'sec/s',
+    cz: 's',
   },
   lock_true: {
     ruen:
@@ -589,6 +673,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
     ko: '좋아요! 이제 나는 관리자들이 보내는 명령에만 반응할 것입니다.',
     am: 'አሁን አድሚን ብቻ ይጠቀማል።',
+    czen:
+      'Great! Now I will only react to commands sent by admins. Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
+    cz: 'Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
   },
   lock_false: {
     ruen:
@@ -609,6 +696,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
     ko: '좋아요! 이제 나는 누구든지 보낸 명령에 반응할 것입니다.',
     am: 'አሁን ሁሉም ሰው ይጠቀማል።',
+    czen:
+      'Great! Now I will react to commands sent by anybody. Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
+    cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
   },
   strict_true: {
     ruen:
@@ -643,6 +733,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     ko:
       '좋아! 이제 새로 온 사람들은 captcha를 통과 할 때까지 captcha 솔루션 외에는 아무것도 보내지 않을 것입니다.',
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ምንም መላክ አይችልም ።',
+    czen:
+      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
+    cz:
+      "Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
   },
   strict_false: {
     ruen:
@@ -673,6 +767,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     ko:
       '좋아요! 이제 새로 온 사람들은 캡챠를 통과하기 전에 메시지를 보낼 수 있을 거예요.',
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ሜሴጅ መላክ ይችላል ።',
+    czen:
+      'Great! Now newcomers will be able to send text before they pass captcha. Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
+    cz:
+      'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -707,6 +805,11 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 이 그룹에 메시지를 보내 주십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am:
       ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
+    czen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
+
+  Prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+    cz:
+      ', prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -741,6 +844,11 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am:
       ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    czen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+
+Prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+    cz:
+      ', prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -774,6 +882,11 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 아래 버튼을 누르십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am: ', በተኑን ይንኩት ካለበለዛ ይባረራሉ',
+    czen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
+
+Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+    cz:
+      ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -793,6 +906,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Saya bukan bot',
     ko: '저는 봇이 아닙니다',
     am: 'ቦት አይደለውም',
+    czen: 'Not a bot. Nejsem bot.',
+    cz: 'Nejsem bot.',
   },
   only_candidate_can_reply: {
     ruen:
@@ -814,6 +929,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
     ko: '신규 입장자만 이 버튼을 누를 수 있습니다.',
     am: 'ቦት ያልሆኑ ብቻ ነዉ መንካት የሚችሉት።',
+    czen:
+      'Only the candidate for not being a bot can press this button. Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
+    cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
   },
   restrict_true: {
     ruen:
@@ -846,6 +964,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     ko:
       '좋아요! 이제 모든 신규 입장자들은 이 채팅에 일반적인 문자 메시지만 보낼 수 있게 될 것입니다.',
     am: 'አዲስ ገቢዎች ቴክስት ብቻ ነዉ የሚልኩት።',
+    czen:
+      'Great! Now all newcomers will only be able to send usual text messages to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
+    cz:
+      'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
   },
   restrict_false: {
     ruen:
@@ -879,6 +1001,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     ko:
       '좋아요! 이제 모든 신규 입장자들은 이 채팅에 모든 유형의 콘텐츠도 보낼 수 있게 될 것입니다.',
     am: 'አዲስ ገቢዎች የፈለጉትን ነዉ የሚልኩት።',
+    czen:
+      'Great! Now all newcomers will be able to send any type of content to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
+    cz:
+      'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -900,6 +1026,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
     ko: '좋아요! 이제 입력 메시지가 삭제됩니다.',
     am: 'ኢንትሪ ሜሴጅ ተደልቷል።',
+    czen:
+      'Great! Now entry messages will be deleted. Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
+    cz: 'Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -921,6 +1050,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
     ko: '좋아요! 이제 입력 메시지는 삭제되지 않습니다.',
     am: 'ኢንትሪ ሜሴጅ አልተደለተም።',
+    czen:
+      'Great! Now entry messages will not be deleted. Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
+    cz: 'Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
   },
   greetsUsers_true: {
     ruen:
@@ -956,6 +1088,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능).',
     am:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+    czen:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
+    cz:
+      'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -991,6 +1127,10 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능). 현재 인사 메시지가 이어집니다.',
     am:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
+    czen:
+      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows. Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
+    cz:
+      'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
   },
   greetsUsers_false: {
     ruen:
@@ -1015,6 +1155,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
       'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
     ko: '좋아요! 이제 테스트에 합격한 신입들에게 환영 인사를 하지않을 거예요.',
     am: 'Great! Now newcomers who passed the test will not be greeted.',
+     czen:
+      'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
+    cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -1034,6 +1177,8 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Diterima!',
     ko: '수락되었습니다',
     am: 'ተቀብለናል',
+    czen: 'Accepted! Přijato!',
+    cz: 'Přijato!',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -1053,5 +1198,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     id: 'Diterima!',
     ko: '수락되었습니다',
     am: 'ተቀብለናል',
+    czen: 'Accepted! Přijato!',
+    cz: 'Přijato!',
   },
 }
