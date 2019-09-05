@@ -49,7 +49,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Amharic', 'am'),
               m.callbackButton('Czech', 'cz'),
             ],
-            [m.callbackButton('Czechlish', 'cz')],
+            [m.callbackButton('Czechlish', 'czen')],
           ])
         )
     )
