@@ -31,7 +31,7 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
             ],
             [
               m.callbackButton('Español', 'es'),
-              m.callbackButton('CHINESE', 'zh'),
+              m.callbackButton('Chinese', 'zh'),
             ],
             [
               m.callbackButton('Norwegian', 'no'),
