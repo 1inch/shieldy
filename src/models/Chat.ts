@@ -20,6 +20,8 @@ export enum Language {
   INDONESIAN = 'id',
   KOREAN = 'ko',
   AMHARIC = 'am',
+  CZECH = 'cz',
+  CZECHLISH = 'czen',
 }
 
 export enum CaptchaType {
