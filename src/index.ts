@@ -38,6 +38,9 @@ setupStrict(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
+// Catch
+bot.catch(console.log)
+
 // Start bot
 bot.startPolling()
 
