@@ -17,6 +17,7 @@ import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
 import { setupGreeting } from './commands/greeting'
 import { setupTrust } from './commands/trust'
 import { setupStrict } from './commands/strict'
+import { setupCaptchaMessage } from './commands/captchaMessage'
 
 // Check time
 bot.use(checkTime)
@@ -35,6 +36,7 @@ setupDeleteEntryMessages(bot)
 setupGreeting(bot)
 setupTrust(bot)
 setupStrict(bot)
+setupCaptchaMessage(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
