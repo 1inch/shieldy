@@ -20,6 +20,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
   bot.on('new_chat_members', async ctx => {
     const candidatesToAdd = [] as Candidate[]
+    const admins = (await ctx.getChatAdministrators()).map(u => u.user.id)
     try {
       if (ctx.chat.type === 'channel') {
         return
@@ -38,6 +39,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           continue
         }
         if (member.is_bot) {
+          continue
+        }
+        // Don't ask people added by admins
+        if (admins.includes(ctx.message.from.id)) {
           continue
         }
         globalyRestricted.push(member.id)
