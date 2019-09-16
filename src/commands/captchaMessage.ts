@@ -64,10 +64,6 @@ export function setupCaptchaMessage(bot: Telegraf<ContextMessageUpdate>) {
       ) {
         return
       }
-      // Check if contains $equation
-      if (!ctx.message.text.includes('$equation')) {
-        return ctx.reply(strings(ctx.dbchat, 'captcha_fail'))
-      }
       // Save text
       ctx.dbchat.captchaMessage = {
         message: ctx.message,

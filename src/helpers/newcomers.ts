@@ -300,7 +300,12 @@ async function notifyCandidate(
             ),
           ])
         )
-  if (chat.customCaptchaMessage && chat.captchaMessage) {
+  if (
+    chat.customCaptchaMessage &&
+    chat.captchaMessage &&
+    (chat.captchaType !== CaptchaType.DIGITS ||
+      chat.captchaMessage.message.text.includes('$equation'))
+  ) {
     const text = chat.captchaMessage.message.text
     if (
       text.includes('$username') ||
