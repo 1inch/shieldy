@@ -301,7 +301,7 @@ async function notifyCandidate(
           ])
         )
   if (chat.customCaptchaMessage && chat.captchaMessage) {
-    const text = chat.greetingMessage.message.text
+    const text = chat.captchaMessage.message.text
     if (
       text.includes('$username') ||
       text.includes('$title') ||
@@ -318,7 +318,7 @@ async function notifyCandidate(
         extra as ExtraReplyMessage
       )
     } else {
-      const message = chat.greetingMessage.message
+      const message = chat.captchaMessage.message
       message.text = `${message.text}\n\n${getUsername(ctx.from)}`
       return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
     }
