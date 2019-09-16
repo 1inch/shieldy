@@ -282,7 +282,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
 }
 
-function notifyCandidate(
+async function notifyCandidate(
   ctx: ContextMessageUpdate,
   candidate: User,
   equation: Equation
@@ -291,8 +291,8 @@ function notifyCandidate(
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
-      ? undefined
-      : Extra.markup(m =>
+      ? Extra.webPreview(false)
+      : Extra.webPreview(false).markup(m =>
           m.inlineKeyboard([
             m.callbackButton(
               strings(chat, 'captcha_button'),
@@ -300,14 +300,38 @@ function notifyCandidate(
             ),
           ])
         )
-  return ctx.replyWithMarkdown(
-    `${
-      chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
-    }[${getUsername(candidate)}](tg://user?id=${
-      candidate.id
-    })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
-    extra
-  )
+  if (chat.customCaptchaMessage && chat.captchaMessage) {
+    const text = chat.greetingMessage.message.text
+    if (
+      text.includes('$username') ||
+      text.includes('$title') ||
+      text.includes('$equation') ||
+      text.includes('$seconds')
+    ) {
+      return ctx.telegram.sendMessage(
+        chat.id,
+        text
+          .replace(/\$username/g, getUsername(ctx.from))
+          .replace(/\$title/g, (await ctx.getChat()).title)
+          .replace(/\$equation/g, equation.question as string)
+          .replace(/\$seconds/g, `${chat.timeGiven}`),
+        extra as ExtraReplyMessage
+      )
+    } else {
+      const message = chat.greetingMessage.message
+      message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+      return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
+    }
+  } else {
+    return ctx.replyWithMarkdown(
+      `${
+        chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
+      }[${getUsername(candidate)}](tg://user?id=${
+        candidate.id
+      })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+      extra
+    )
+  }
 }
 
 // Check if needs to ban

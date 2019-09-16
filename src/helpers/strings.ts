@@ -21,9 +21,10 @@ export const localizations = {
 /lock — makes commands accessible only by admins
 /restrict — restricts newcomers to send only text messages in the first 24 hours
 /deleteEntryMessages — delete messages about user entry
-/greeting — greets users who pass the test
+/greeting — greet users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -39,6 +40,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
+/customCaptchaMessage — установить свое сообщение с капчей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -53,6 +55,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -67,6 +70,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
+/customCaptchaMessage — установить свое сообщение с капчей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -81,6 +85,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -95,6 +100,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -109,6 +115,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -123,6 +130,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /greeting — congratula o usuário que passou no teste
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
     tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
@@ -137,6 +145,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
 /greeting — testi geçiren kullanıcıları selamlar
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
     es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
@@ -151,6 +160,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /greeting — saluda a los mensajes que pasan el test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!`,
     zh: `Shieldy — 是电报中打击恼人的垃圾信息发送者的最佳解决方案，它要求新手在一段时间内执行一个集合动作，否则就会踢它们，就这么简单。确保 @shieldy\\_bot是您的管理员，并且这就可以了！您还可以使用以下命令进一步设置课程：
@@ -165,6 +175,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /greeting — 迎接通过测试的用户
 /trust — 使用此命令回复用户发送的您不想检查的消息
 /strict — 当你不希望收到任何新手的消息但使用验证码解决方案直到他们通过验证码时使用
+/customCaptchaMessage — setup custom captcha message
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！`,
     no: `Shieldy — er den beste løsningen i Telegram for å holde irriterende falske kontoer tilbake. Den spørr nykommere om å utføre et sett med handlinger innenfor er viss tidsperiode, hvis ikke blir brukeren kastet ut. Det er så enkelt. Gjør @shieldy\\_bot til admin i chatten din og alt er klart! Du kan videre endre oppførselen med de følgende kommandoene:
@@ -179,6 +190,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /greeting — sender en velkomst når en bruker består testen
 /trust — svar med denne kommandoen til en melding sendt av en bruker du ikke vil skal sjekkes
 /strict — bruk når du ikke vil motta nykommernes meldinger untatt captcha løsninger før de har bestått testen
+/customCaptchaMessage — setup custom captcha message
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!`,
     de: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -193,6 +205,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 /greeting — begrüßt die User, welche den Test bestehen
 /trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
 
@@ -208,6 +221,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — 給通過驗證的用戶發歡迎詞
 /trust — 使用此指令回復任何您信任不想驗證的成員
 /strict — 限制新進成員在通過驗證前不能發任何消息
+/customCaptchaMessage — setup custom captcha message
 
 還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！`,
     fr: `Shieldy — est la meilleure solution sur Telegram pour combattre les spammeurs. Il demande aux nouveaux membres d'exécuter une action définie dans un certain délais, sinon on lui donne un coup de pied au c... . C'est aussi simple. Assurez-vous que le bot @shieldy\\_bot est bien admin de votre groupe et c'est terminé ! Vous pouvez également configurer les différentes options via les commandes suivantes :
@@ -222,6 +236,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — Accueillir les utilisateurs qui passent le test 
 /trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
+/customCaptchaMessage — setup custom captcha message
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci !`,
     id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu dengan menguji anggota baru dengan melakukan sesuatu dalam batas waktu tertentu, jika gagal maka anggota baru akan ditolak bergabung. Pastikan @shieldy\\_bot menjadi admin di grup anda. Tersedia pengaturan tambahan dengan perintah berikut:
@@ -236,6 +251,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
 /greeting — pesan sambutan pada anggota baru yg lolos ujian
 /trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
+/customCaptchaMessage — setup custom captcha message
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
     ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy\\_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
@@ -250,6 +266,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /greeting – 테스트에 통과한 사람에게 환영 인사
 /trust — 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
 /strict — 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
+/customCaptchaMessage — setup custom captcha message
 
 여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!`,
     am: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -263,7 +280,8 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /deleteEntryMessages — ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /greeting — ተጠቃሚው ካፕቻ ካለፈ የሚኖር ሜሴጅ
 /trust — reply with this command to a message sent by user that you don't want to check
-/strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር 
+/strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     czen: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -278,6 +296,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
+/customCaptchaMessage — setup custom captcha message
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -293,6 +312,7 @@ Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spamm
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
+/customCaptchaMessage — setup custom captcha message
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
     cz: `Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Ujistěte se, že @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
@@ -307,6 +327,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
+/customCaptchaMessage — setup custom captcha message
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
   },
@@ -350,7 +371,8 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
     id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
     ko: '좋아요, 나는 이제 한국어로 말합니다.',
     am: 'አሪፍ አሁን አማርኛ አወራለሁ።',
-    czen: 'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
+    czen:
+      'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
     cz: 'Skvělé, nyní mluvím česky.',
   },
   only_author_can_reply: {
@@ -735,8 +757,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ምንም መላክ አይችልም ።',
     czen:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
-    cz:
-      "Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
+    cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
   },
   strict_false: {
     ruen:
@@ -769,8 +790,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ሜሴጅ መላክ ይችላል ።',
     czen:
       'Great! Now newcomers will be able to send text before they pass captcha. Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
-    cz:
-      'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
+    cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -1003,8 +1023,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     am: 'አዲስ ገቢዎች የፈለጉትን ነዉ የሚልኩት።',
     czen:
       'Great! Now all newcomers will be able to send any type of content to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
-    cz:
-      'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
+    cz: 'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -1155,7 +1174,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
       'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
     ko: '좋아요! 이제 테스트에 합격한 신입들에게 환영 인사를 하지않을 거예요.',
     am: 'Great! Now newcomers who passed the test will not be greeted.',
-     czen:
+    czen:
       'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
   },
@@ -1179,6 +1198,129 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     am: 'ተቀብለናል',
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
+  },
+  captchaMessage_true: {
+    ruen:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation и $seconds).',
+    en:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    ru:
+      'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation и $seconds).',
+    it:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    et:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    uk:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    br:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    tr:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    es:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    zh:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    no:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    de:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    tw:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    id:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    ko:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    am:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    czen:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    cz:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+  },
+  captchaMessage_true_message: {
+    ruen:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows. Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation и $seconds). Текущее сообщение с приветствием ниже.',
+    en:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    ru:
+      'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation и $seconds). Текущее сообщение с приветствием ниже.',
+    it:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    et:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    uk:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    br:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    tr:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    es:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    zh:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    no:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    de:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    tw:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    fr:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    id:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    ko:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    am:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    czen:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    cz:
+      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+  },
+  captchaMessage_false: {
+    ruen:
+      'Great! Now newcomers will see the default captcha message. Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
+    en: 'Great! Now newcomers will see the default captcha message',
+    ru:
+      'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
+    it: 'Great! Now newcomers will see the default captcha message',
+    et: 'Great! Now newcomers will see the default captcha message',
+    uk: 'Great! Now newcomers will see the default captcha message',
+    br: 'Great! Now newcomers will see the default captcha message',
+    tr: 'Great! Now newcomers will see the default captcha message',
+    es: 'Great! Now newcomers will see the default captcha message',
+    zh: 'Great! Now newcomers will see the default captcha message',
+    no: 'Great! Now newcomers will see the default captcha message',
+    de: 'Great! Now newcomers will see the default captcha message',
+    tw: 'Great! Now newcomers will see the default captcha message',
+    fr: 'Great! Now newcomers will see the default captcha message',
+    id: 'Great! Now newcomers will see the default captcha message',
+    ko: 'Great! Now newcomers will see the default captcha message',
+    am: 'Great! Now newcomers will see the default captcha message',
+    czen: 'Great! Now newcomers will see the default captcha message',
+    cz: 'Great! Now newcomers will see the default captcha message',
+  },
+  captcha_fail: {
+    ruen:
+      'Message should contain $equation. Сообщение должно сожержать в себе $equation.',
+    en: 'Message should contain $equation.',
+    ru: 'Сообщение должно сожержать в себе $equation.',
+    it: 'Message should contain $equation.',
+    et: 'Message should contain $equation.',
+    uk: 'Message should contain $equation.',
+    br: 'Message should contain $equation.',
+    tr: 'Message should contain $equation.',
+    es: 'Message should contain $equation.',
+    zh: 'Message should contain $equation.',
+    no: 'Message should contain $equation.',
+    de: 'Message should contain $equation.',
+    tw: 'Message should contain $equation.',
+    fr: 'Message should contain $equation.',
+    id: 'Message should contain $equation.',
+    ko: 'Message should contain $equation.',
+    am: 'Message should contain $equation.',
+    czen: 'Message should contain $equation.',
+    cz: 'Message should contain $equation.',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',

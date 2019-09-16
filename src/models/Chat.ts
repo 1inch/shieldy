@@ -76,7 +76,11 @@ export class Chat extends Typegoose {
   @prop({ required: true, default: false })
   greetsUsers: boolean
   @prop()
-  greetingMessage: MessageWrapper
+  greetingMessage?: MessageWrapper
+  @prop({ required: true, default: false })
+  customCaptchaMessage: boolean
+  @prop()
+  captchaMessage?: MessageWrapper
   @prop({ required: true, default: false })
   strict: boolean
 }
