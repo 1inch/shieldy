@@ -18,6 +18,7 @@ import { setupGreeting } from './commands/greeting'
 import { setupTrust } from './commands/trust'
 import { setupStrict } from './commands/strict'
 import { setupCaptchaMessage } from './commands/captchaMessage'
+import { setupTestLocales } from './commands/testLocales'
 
 // Check time
 bot.use(checkTime)
@@ -37,6 +38,7 @@ setupGreeting(bot)
 setupTrust(bot)
 setupStrict(bot)
 setupCaptchaMessage(bot)
+setupTestLocales(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
