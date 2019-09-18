@@ -42,7 +42,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, отключите эту фцнкцию, установив значение 0
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -74,7 +74,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, отключите эту фцнкцию, установив значение 0
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
