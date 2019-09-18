@@ -84,6 +84,8 @@ export class Chat extends Typegoose {
   captchaMessage?: MessageWrapper
   @prop({ required: true, default: false })
   strict: boolean
+  @prop()
+  deleteGreetingTime?: number
 }
 
 // Get Chat model

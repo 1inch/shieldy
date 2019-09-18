@@ -39,6 +39,7 @@ setupTrust(bot)
 setupStrict(bot)
 setupCaptchaMessage(bot)
 setupTestLocales(bot)
+setupDeleteEntryMessages(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

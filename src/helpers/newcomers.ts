@@ -199,8 +199,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
+        let message
         if (text.includes('$username') || text.includes('$title')) {
-          await ctx.telegram.sendMessage(
+          message = await ctx.telegram.sendMessage(
             chat.id,
             text
               .replace(/\$username/g, getUsername(ctx.from))
@@ -208,11 +209,23 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
-          await ctx.telegram.sendCopy(
+          message = await ctx.telegram.sendCopy(
             chat.id,
             chat.greetingMessage.message,
             Extra.webPreview(false) as ExtraReplyMessage
           )
+        }
+        if (chat.deleteGreetingTime && message) {
+          setTimeout(async () => {
+            try {
+              await ctx.telegram.deleteMessage(
+                message.chat.id,
+                message.message_id
+              )
+            } catch (err) {
+              // Do nothing
+            }
+          }, chat.deleteGreetingTime * 1000)
         }
       }
     } catch (err) {
@@ -260,8 +273,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
+        let message
         if (text.includes('$username') || text.includes('$title')) {
-          await ctx.telegram.sendMessage(
+          message = await ctx.telegram.sendMessage(
             chat.id,
             text
               .replace(/\$username/g, getUsername(ctx.from))
@@ -269,11 +283,23 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
-          const message = chat.greetingMessage.message
-          message.text = `${message.text}\n\n${getUsername(ctx.from)}`
-          await ctx.telegram.sendCopy(chat.id, message, Extra.webPreview(
+          const msg = chat.greetingMessage.message
+          msg.text = `${msg.text}\n\n${getUsername(ctx.from)}`
+          message = await ctx.telegram.sendCopy(chat.id, msg, Extra.webPreview(
             false
           ) as ExtraReplyMessage)
+        }
+        if (chat.deleteGreetingTime && message) {
+          setTimeout(async () => {
+            try {
+              await ctx.telegram.deleteMessage(
+                message.chat.id,
+                message.message_id
+              )
+            } catch (err) {
+              // Do nothing
+            }
+          }, chat.deleteGreetingTime * 1000)
         }
       }
     } catch (err) {
