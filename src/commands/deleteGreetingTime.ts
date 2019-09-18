@@ -1,6 +1,8 @@
 // Dependencies
-import { Telegraf, ContextMessageUpdate } from 'telegraf'
+import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { checkLock } from '../middlewares/checkLock'
+import { strings } from '../helpers/strings'
+import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupDeleteGreetingTime(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('deleteGreetingTime', checkLock, async ctx => {
@@ -12,6 +14,10 @@ export function setupDeleteGreetingTime(bot: Telegraf<ContextMessageUpdate>) {
       let chat = ctx.dbchat
       chat.deleteGreetingTime = limitNumber
       chat = await chat.save()
+      ctx.reply(
+        strings(ctx.dbchat, 'greetsUsers_message_accepted'),
+        Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
+      )
     }
   })
 }
