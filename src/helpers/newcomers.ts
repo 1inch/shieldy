@@ -403,7 +403,7 @@ async function check() {
           await (bot.telegram as any).kickChatMember(
             chat.id,
             candidate.id,
-            parseInt(`${new Date().getTime() / 1000 + 45}`)
+            chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
           )
           candidatesToDelete.push(candidate)
         } catch (err) {

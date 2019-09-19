@@ -86,6 +86,8 @@ export class Chat extends Typegoose {
   strict: boolean
   @prop()
   deleteGreetingTime?: number
+  @prop({ required: true, default: false })
+  banUsers: boolean
 }
 
 // Get Chat model

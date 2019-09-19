@@ -20,6 +20,7 @@ import { setupStrict } from './commands/strict'
 import { setupCaptchaMessage } from './commands/captchaMessage'
 import { setupTestLocales } from './commands/testLocales'
 import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
+import { setupBanUsers } from './commands/banUsers'
 
 // Check time
 bot.use(checkTime)
@@ -41,6 +42,7 @@ setupStrict(bot)
 setupCaptchaMessage(bot)
 setupTestLocales(bot)
 setupDeleteGreetingTime(bot)
+setupBanUsers(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

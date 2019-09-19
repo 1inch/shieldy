@@ -1431,7 +1431,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz: 'Přijato!',
     ar: 'قبلت!',
   },
-  banUser_true: {
+  banUsers_true: {
     ruen:
       'Nice! Users will be banned if they do not pass captcha. Отлично! Пользователи будут баниться, если не пройдут капчу.',
     en: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
@@ -1454,7 +1454,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz: 'Nice! Users will be banned if they do not pass captcha.',
     ar: 'Nice! Users will be banned if they do not pass captcha.',
   },
-  banUser_false: {
+  banUsers_false: {
     ruen:
       'Nice! Users will be kicked if they do not pass captcha. Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     en: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
