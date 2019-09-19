@@ -77,12 +77,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             if (
               gotUser.can_send_messages &&
               gotUser.can_send_media_messages &&
-              gotUser.can_send_polls &&
               gotUser.can_send_other_messages &&
-              gotUser.can_add_web_page_previews &&
-              gotUser.can_change_info &&
-              gotUser.can_invite_users &&
-              gotUser.can_pin_messages
+              gotUser.can_add_web_page_previews
             ) {
               const tomorrow =
                 (new Date().getTime() + 24 * 60 * 60 * 1000) / 1000
