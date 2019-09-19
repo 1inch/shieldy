@@ -26,6 +26,7 @@ export const localizations = {
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -42,7 +43,9 @@ Shieldy — это лучшее решение в Телеграме по бор
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, отключите эту фцнкцию, установив значение 0
+/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
+отключите эту фцнкцию, установив значение 0
+/banUsers — банить или кикать пользователей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -59,6 +62,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     ru: `Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
@@ -74,7 +78,9 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, отключите эту фцнкцию, установив значение 0
+/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
+отключите эту фцнкцию, установив значение 0
+/banUsers — банить или кикать пользователей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
     it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
@@ -91,6 +97,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -107,6 +114,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!`,
     uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
@@ -123,6 +131,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
@@ -139,6 +148,7 @@ Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtek
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.`,
     tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
@@ -155,6 +165,7 @@ Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support.
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!`,
     es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
@@ -171,6 +182,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!`,
     zh: `Shieldy — 是电报中打击恼人的垃圾信息发送者的最佳解决方案，它要求新手在一段时间内执行一个集合动作，否则就会踢它们，就这么简单。确保 @shieldy\\_bot是您的管理员，并且这就可以了！您还可以使用以下命令进一步设置课程：
@@ -187,6 +199,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /strict — 当你不希望收到任何新手的消息但使用验证码解决方案直到他们通过验证码时使用
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！`,
     no: `Shieldy — er den beste løsningen i Telegram for å holde irriterende falske kontoer tilbake. Den spørr nykommere om å utføre et sett med handlinger innenfor er viss tidsperiode, hvis ikke blir brukeren kastet ut. Det er så enkelt. Gjør @shieldy\\_bot til admin i chatten din og alt er klart! Du kan videre endre oppførselen med de følgende kommandoene:
@@ -203,6 +216,7 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /strict — bruk når du ikke vil motta nykommernes meldinger untatt captcha løsninger før de har bestått testen
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!`,
     de: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -219,6 +233,7 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     tw: `Shieldy — 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：
@@ -235,6 +250,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — 限制新進成員在通過驗證前不能發任何消息
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！`,
     fr: `Shieldy — est la meilleure solution sur Telegram pour combattre les spammeurs. Il demande aux nouveaux membres d'exécuter une action définie dans un certain délais, sinon on lui donne un coup de pied au c... . C'est aussi simple. Assurez-vous que le bot @shieldy\\_bot est bien admin de votre groupe et c'est terminé ! Vous pouvez également configurer les différentes options via les commandes suivantes :
@@ -251,6 +267,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci !`,
     id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu dengan menguji anggota baru dengan melakukan sesuatu dalam batas waktu tertentu, jika gagal maka anggota baru akan ditolak bergabung. Pastikan @shieldy\\_bot menjadi admin di grup anda. Tersedia pengaturan tambahan dengan perintah berikut:
@@ -267,6 +284,7 @@ Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
     ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy\\_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
@@ -283,6 +301,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /strict — 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!`,
     am: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -299,6 +318,7 @@ Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy ber
 /strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
     czen: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
@@ -315,6 +335,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -332,6 +353,7 @@ Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spamm
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
     cz: `Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Ujistěte se, že @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
@@ -348,6 +370,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
     ar: `Shieldy — هو أفضل حل في تيليغرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الوافدين الجدد تنفيذ إجراء مجموعة في غضون فترة محددة، وإلا فإنه يركلهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot هو المشرف في المجموعة الخاصة بك وكل شيء! يمكنك أيضًا زيادة إعداد السلوك باستخدام الأوامر التالية:
@@ -362,6 +385,9 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /greeting — يقوم بتحية المستخدمين الذين يجتازون الاختبار
 /trust — الرد مع هذا الأمر إلى رسالة تم إرسالها من قبل المستخدم التي لا تريد التحقق
 /strict — استخدام عندما كنت لا تريد أن تتلقى أي رسائل الوافدين الجدد ولكن حلول كابتشا حتى تمر كابتشا
+/customCaptchaMessage — setup custom captcha message
+/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
+/banUsers — whether to ban or to kick users
 
 أمازلت تملك أسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! `,
   },
@@ -1404,5 +1430,51 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
     ar: 'قبلت!',
+  },
+  banUser_true: {
+    ruen:
+      'Nice! Users will be banned if they do not pass captcha. Отлично! Пользователи будут баниться, если не пройдут капчу.',
+    en: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
+    ru: 'Nice! Users will be banned if they do not pass captcha.',
+    it: 'Nice! Users will be banned if they do not pass captcha.',
+    et: 'Nice! Users will be banned if they do not pass captcha.',
+    uk: 'Nice! Users will be banned if they do not pass captcha.',
+    br: 'Nice! Users will be banned if they do not pass captcha.',
+    tr: 'Nice! Users will be banned if they do not pass captcha.',
+    es: 'Nice! Users will be banned if they do not pass captcha.',
+    zh: 'Nice! Users will be banned if they do not pass captcha.',
+    no: 'Nice! Users will be banned if they do not pass captcha.',
+    de: 'Nice! Users will be banned if they do not pass captcha.',
+    tw: 'Nice! Users will be banned if they do not pass captcha.',
+    fr: 'Nice! Users will be banned if they do not pass captcha.',
+    id: 'Nice! Users will be banned if they do not pass captcha.',
+    ko: 'Nice! Users will be banned if they do not pass captcha.',
+    am: 'Nice! Users will be banned if they do not pass captcha.',
+    czen: 'Nice! Users will be banned if they do not pass captcha.',
+    cz: 'Nice! Users will be banned if they do not pass captcha.',
+    ar: 'Nice! Users will be banned if they do not pass captcha.',
+  },
+  banUser_false: {
+    ruen:
+      'Nice! Users will be kicked if they do not pass captcha. Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
+    en: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
+    ru: 'Nice! Users will be kicked if they do not pass captcha.',
+    it: 'Nice! Users will be kicked if they do not pass captcha.',
+    et: 'Nice! Users will be kicked if they do not pass captcha.',
+    uk: 'Nice! Users will be kicked if they do not pass captcha.',
+    br: 'Nice! Users will be kicked if they do not pass captcha.',
+    tr: 'Nice! Users will be kicked if they do not pass captcha.',
+    es: 'Nice! Users will be kicked if they do not pass captcha.',
+    zh: 'Nice! Users will be kicked if they do not pass captcha.',
+    no: 'Nice! Users will be kicked if they do not pass captcha.',
+    de: 'Nice! Users will be kicked if they do not pass captcha.',
+    tw: 'Nice! Users will be kicked if they do not pass captcha.',
+    fr: 'Nice! Users will be kicked if they do not pass captcha.',
+    id: 'Nice! Users will be kicked if they do not pass captcha.',
+    ko: 'Nice! Users will be kicked if they do not pass captcha.',
+    am: 'Nice! Users will be kicked if they do not pass captcha.',
+    czen: 'Nice! Users will be kicked if they do not pass captcha.',
+    cz: 'Nice! Users will be kicked if they do not pass captcha.',
+    ar: 'Nice! Users will be kicked if they do not pass captcha.',
   },
 }
