@@ -20,6 +20,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Add newcomers
   bot.on('new_chat_members', async ctx => {
     const candidatesToAdd = [] as Candidate[]
+    const admins = (await ctx.getChatAdministrators()).map(u => u.user.id)
     try {
       if (ctx.chat.type === 'channel') {
         return
@@ -38,6 +39,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           continue
         }
         if (member.is_bot) {
+          continue
+        }
+        // Don't ask people added by admins
+        if (admins.includes(ctx.message.from.id)) {
           continue
         }
         globalyRestricted.push(member.id)
@@ -65,7 +70,10 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         if (chat.restrict) {
           console.log('🤜 Restricting as well')
           try {
-            const gotUser = await ctx.telegram.getChatMember(chat.id, member.id)
+            const gotUser = (await ctx.telegram.getChatMember(
+              chat.id,
+              member.id
+            )) as any
             if (
               gotUser.can_send_messages &&
               gotUser.can_send_media_messages &&
@@ -81,8 +89,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
                   until_date: tomorrow,
                   can_send_messages: true,
                   can_send_media_messages: false,
+                  can_send_polls: false,
                   can_send_other_messages: false,
                   can_add_web_page_previews: false,
+                  can_change_info: false,
+                  can_invite_users: false,
+                  can_pin_messages: false,
                 }
               )
             }
@@ -194,8 +206,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
+        let message
         if (text.includes('$username') || text.includes('$title')) {
-          await ctx.telegram.sendMessage(
+          message = await ctx.telegram.sendMessage(
             chat.id,
             text
               .replace(/\$username/g, getUsername(ctx.from))
@@ -203,11 +216,23 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
-          await ctx.telegram.sendCopy(
+          message = await ctx.telegram.sendCopy(
             chat.id,
             chat.greetingMessage.message,
             Extra.webPreview(false) as ExtraReplyMessage
           )
+        }
+        if (chat.deleteGreetingTime && message) {
+          setTimeout(async () => {
+            try {
+              await ctx.telegram.deleteMessage(
+                message.chat.id,
+                message.message_id
+              )
+            } catch (err) {
+              // Do nothing
+            }
+          }, chat.deleteGreetingTime * 1000)
         }
       }
     } catch (err) {
@@ -255,8 +280,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
         const text = chat.greetingMessage.message.text
+        let message
         if (text.includes('$username') || text.includes('$title')) {
-          await ctx.telegram.sendMessage(
+          message = await ctx.telegram.sendMessage(
             chat.id,
             text
               .replace(/\$username/g, getUsername(ctx.from))
@@ -264,11 +290,23 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             Extra.webPreview(false) as ExtraReplyMessage
           )
         } else {
-          const message = chat.greetingMessage.message
-          message.text = `${message.text}\n\n${getUsername(ctx.from)}`
-          await ctx.telegram.sendCopy(chat.id, message, Extra.webPreview(
+          const msg = chat.greetingMessage.message
+          msg.text = `${msg.text}\n\n${getUsername(ctx.from)}`
+          message = await ctx.telegram.sendCopy(chat.id, msg, Extra.webPreview(
             false
           ) as ExtraReplyMessage)
+        }
+        if (chat.deleteGreetingTime && message) {
+          setTimeout(async () => {
+            try {
+              await ctx.telegram.deleteMessage(
+                message.chat.id,
+                message.message_id
+              )
+            } catch (err) {
+              // Do nothing
+            }
+          }, chat.deleteGreetingTime * 1000)
         }
       }
     } catch (err) {
@@ -277,7 +315,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
 }
 
-function notifyCandidate(
+async function notifyCandidate(
   ctx: ContextMessageUpdate,
   candidate: User,
   equation: Equation
@@ -286,8 +324,8 @@ function notifyCandidate(
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
-      ? undefined
-      : Extra.markup(m =>
+      ? Extra.webPreview(false)
+      : Extra.webPreview(false).markup(m =>
           m.inlineKeyboard([
             m.callbackButton(
               strings(chat, 'captcha_button'),
@@ -295,14 +333,43 @@ function notifyCandidate(
             ),
           ])
         )
-  return ctx.replyWithMarkdown(
-    `${
-      chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
-    }[${getUsername(candidate)}](tg://user?id=${
-      candidate.id
-    })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
-    extra
-  )
+  if (
+    chat.customCaptchaMessage &&
+    chat.captchaMessage &&
+    (chat.captchaType !== CaptchaType.DIGITS ||
+      chat.captchaMessage.message.text.includes('$equation'))
+  ) {
+    const text = chat.captchaMessage.message.text
+    if (
+      text.includes('$username') ||
+      text.includes('$title') ||
+      text.includes('$equation') ||
+      text.includes('$seconds')
+    ) {
+      return ctx.telegram.sendMessage(
+        chat.id,
+        text
+          .replace(/\$username/g, getUsername(ctx.from))
+          .replace(/\$title/g, (await ctx.getChat()).title)
+          .replace(/\$equation/g, equation.question as string)
+          .replace(/\$seconds/g, `${chat.timeGiven}`),
+        extra as ExtraReplyMessage
+      )
+    } else {
+      const message = chat.captchaMessage.message
+      message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+      return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
+    }
+  } else {
+    return ctx.replyWithMarkdown(
+      `${
+        chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
+      }[${getUsername(candidate)}](tg://user?id=${
+        candidate.id
+      })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+      extra
+    )
+  }
 }
 
 // Check if needs to ban
@@ -336,7 +403,7 @@ async function check() {
           await (bot.telegram as any).kickChatMember(
             chat.id,
             candidate.id,
-            parseInt(`${new Date().getTime() / 1000 + 45}`)
+            chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
           )
           candidatesToDelete.push(candidate)
         } catch (err) {

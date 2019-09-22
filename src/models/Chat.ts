@@ -22,6 +22,7 @@ export enum Language {
   AMHARIC = 'am',
   CZECH = 'cz',
   CZECHLISH = 'czen',
+  ARABIC = 'ar',
 }
 
 export enum CaptchaType {
@@ -76,9 +77,17 @@ export class Chat extends Typegoose {
   @prop({ required: true, default: false })
   greetsUsers: boolean
   @prop()
-  greetingMessage: MessageWrapper
+  greetingMessage?: MessageWrapper
+  @prop({ required: true, default: false })
+  customCaptchaMessage: boolean
+  @prop()
+  captchaMessage?: MessageWrapper
   @prop({ required: true, default: false })
   strict: boolean
+  @prop()
+  deleteGreetingTime?: number
+  @prop({ required: true, default: false })
+  banUsers: boolean
 }
 
 // Get Chat model

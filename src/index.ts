@@ -17,6 +17,10 @@ import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
 import { setupGreeting } from './commands/greeting'
 import { setupTrust } from './commands/trust'
 import { setupStrict } from './commands/strict'
+import { setupCaptchaMessage } from './commands/captchaMessage'
+import { setupTestLocales } from './commands/testLocales'
+import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
+import { setupBanUsers } from './commands/banUsers'
 
 // Check time
 bot.use(checkTime)
@@ -35,8 +39,15 @@ setupDeleteEntryMessages(bot)
 setupGreeting(bot)
 setupTrust(bot)
 setupStrict(bot)
+setupCaptchaMessage(bot)
+setupTestLocales(bot)
+setupDeleteGreetingTime(bot)
+setupBanUsers(bot)
 // Newcomers logic
 setupNewcomers(bot)
+
+// Catch
+bot.catch(console.log)
 
 // Start bot
 bot.startPolling()
