@@ -83,23 +83,23 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /banUsers — банить или кикать пользователей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
-    it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
+    it: `Shieldy — è la soluzione migliore per combattere gli spammer su Telegram. Chiede ai nuovi utenti di compiere un'azione entro un lasso di tempo prestabilito, altrimenti verranno kickati. E' semplice. Assicurati che @shieldy\\_bot sia un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni con i seguenti comandi:
 
 /help — Mostra questo messaggio
 /language — Modifica la lingua
-/captcha — Modifica il tipo di Captche
-/timeLimit — Modifica il tempo per i nuovi membri
-/lock — Rendi accessibili alcuni comandi solo agli amministratori
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
-/greeting — greets users who pass the test
-/trust — reply with this command to a message sent by user that you don't want to check
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
+/captcha — Modifica il tipo di captcha
+/timeLimit — Modifica il tempo a disposizione per i nuovi membri
+/lock — Rendi accessibili i comandi solo agli amministratori
+/restrict — limita i nuovi membri ad inviare solo messaggi per le prime 24 ore
+/deleteEntryMessages — cancella i messaggi d'ingresso dei nuovi membri
+/greeting — dai il benvenuto ad un utente se passa il captcha
+/trust — rispondi con questo messaggio ad un utente che non vuoi che controlli
+/strict — usa questo comando quando non vuoi che i nuovi utenti inviino messaggi prima che passino il captcha
+/customCaptchaMessage — imposta un messaggio del captcha personalizzato
+/deleteGreetingTime — impostalo quando vuoi cancellare il messaggio di benvenuto di Shieldy in secondi, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
+/banUsers — scegli se bannare o kickare
 
-Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Il codice sorgente di Shieldy è open source e può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
 
 /help — näitab seda sõnumi
