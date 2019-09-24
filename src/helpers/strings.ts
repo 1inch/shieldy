@@ -339,7 +339,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
-Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
+Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
 
 /help — ukáže tuto zprávu
 /language — výběr jazyka
@@ -746,7 +746,7 @@ Vyberte prosím typ testu pro nováčky:
     id: 'det',
     ko: '초',
     am: 'ሰከንድ',
-    czen: 'sec/s',
+    czen: 'sec',
     cz: 's',
     ar: 'ثانية',
   },
@@ -949,11 +949,11 @@ Vyberte prosím typ testu pro nováčky:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am:
       ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    czen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+    czen: `, prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!
 
-Prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
     cz:
-      ', prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
+      ', prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!',
 
     ar:
       ', من فضلك، إرسال الحل إلى معادلة الرياضيات المقدمة ضمن المبلغ الزمني المحدد لهذه المجموعة، وإلا سيتم ركلك. شكرا!',
@@ -992,7 +992,7 @@ Prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak bud
     am: ', በተኑን ይንኩት ካለበለዛ ይባረራሉ',
     czen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
 
-Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!`,
     cz:
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     ar:
@@ -1450,8 +1450,8 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     id: 'Nice! Users will be banned if they do not pass captcha.',
     ko: 'Nice! Users will be banned if they do not pass captcha.',
     am: 'Nice! Users will be banned if they do not pass captcha.',
-    czen: 'Nice! Users will be banned if they do not pass captcha.',
-    cz: 'Nice! Users will be banned if they do not pass captcha.',
+    czen: 'Nice! Users will be banned if they do not pass captcha. Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
+    cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     ar: 'Nice! Users will be banned if they do not pass captcha.',
   },
   banUsers_false: {
@@ -1473,8 +1473,8 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     id: 'Nice! Users will be kicked if they do not pass captcha.',
     ko: 'Nice! Users will be kicked if they do not pass captcha.',
     am: 'Nice! Users will be kicked if they do not pass captcha.',
-    czen: 'Nice! Users will be kicked if they do not pass captcha.',
-    cz: 'Nice! Users will be kicked if they do not pass captcha.',
+    czen: 'Nice! Users will be kicked if they do not pass captcha. Skvělé! Nováčci, kteří neprojdou testem budou vyhozeni.',
+    cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
     ar: 'Nice! Users will be kicked if they do not pass captcha.',
   },
 }
