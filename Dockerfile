@@ -11,6 +11,6 @@ RUN dpkg -i mongodb-org-shell_4.2.0_amd64.deb
 
 COPY . .
 
-RUN mongo mongodb://mongoadmin:example@localhost:27017/ init-mongo.js --quiet
+ENTRYPOINT [ "mongo", "mongodb://mongoadmin:example@localhost:27017/", "init-mongo.js", "--quiet"]
 
 CMD ["yarn", "distribute"]
