@@ -468,28 +468,28 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation
+• Digits — bot will ask to solve a simple arithmetic operation
 
 Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простое уравнение`,
+• Цифровая — бот попросит решить простую арифметическую задачу`,
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     ru: `Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простое уравнение`,
+• Цифровая — бот попросит решить простую арифметическую задачу`,
     it: `Prego, seleziona uno dei seguenti test per i nuovi arrivati:
 
 • Semplice — Il bot chiederà di inviare qualcunque messaggio in chat
 • Bottone — Il bot chiederà di premere un pulsante
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     et: `Palun valige uustulnukute kontrolli tüüp:
 
 • Lihtne — bot küsib vestlusele midagi saata
@@ -498,23 +498,23 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Проста — бот просить надіслати що завгодно в чат
 • Кнопкою — бот просить натиснути на кнопку.
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     br: `Por favor, selecione o tipo de teste para os novatos:
 
 • Simples — o bot vai pedir para mandar alguma coisa no chat
 • Botão — o bot vai pedir para apertar um botão
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     tr: `Lütfen, yeni gelenler için test türünü seçin:
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
 • Düğme — bot bir düğmeye basılmasını isteyecektir
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
 • Digitos — el bot pedirá resolver una ecuación simple
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     zh: `请为新人选择测试类型：
 
 •简单 — 机器人会要求向聊天发送任何内容
@@ -559,7 +559,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation
+• Digits — bot will ask to solve a simple arithmetic operation
 
 Vyberte prosím typ testu pro nováčky:
 
@@ -917,13 +917,13 @@ Vyberte prosím typ testu pro nováčky:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
   },
   digits_warning: {
-    ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+    ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
 
-Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
+Пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
-      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+      ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
-      ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+      ', пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
       ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     et:
@@ -948,10 +948,10 @@ Vyberte prosím typ testu pro nováčky:
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am:
-      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+      ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     czen: `, prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!
 
-please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
+please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
     cz:
       ', prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!',
 
