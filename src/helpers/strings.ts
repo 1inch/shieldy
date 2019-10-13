@@ -83,23 +83,23 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /banUsers — банить или кикать пользователей
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!`,
-    it: `Shieldy — è la soluzione migliore in Telegram per combattere gli spammers. Chiede ai nuovi utenti di fare un azione entro un periodo prestabilito, sennò verranno kickati. E' semplice. Assicurati che @shieldy\\_bot è un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni dei seguenti comandi:
+    it: `Shieldy — è la soluzione migliore per combattere gli spammer su Telegram. Chiede ai nuovi utenti di compiere un'azione entro un lasso di tempo prestabilito, altrimenti verranno kickati. E' semplice. Assicurati che @shieldy\\_bot sia un amministratore del gruppo ed è tutto pronto! Puoi anche impostare le azioni con i seguenti comandi:
 
 /help — Mostra questo messaggio
 /language — Modifica la lingua
-/captcha — Modifica il tipo di Captche
-/timeLimit — Modifica il tempo per i nuovi membri
-/lock — Rendi accessibili alcuni comandi solo agli amministratori
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
-/greeting — greets users who pass the test
-/trust — reply with this command to a message sent by user that you don't want to check
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
+/captcha — Modifica il tipo di captcha
+/timeLimit — Modifica il tempo a disposizione per i nuovi membri
+/lock — Rendi accessibili i comandi solo agli amministratori
+/restrict — limita i nuovi membri ad inviare solo messaggi per le prime 24 ore
+/deleteEntryMessages — cancella i messaggi d'ingresso dei nuovi membri
+/greeting — dai il benvenuto ad un utente se passa il captcha
+/trust — rispondi con questo messaggio ad un utente che non vuoi che controlli
+/strict — usa questo comando quando non vuoi che i nuovi utenti inviino messaggi prima che passino il captcha
+/customCaptchaMessage — imposta un messaggio del captcha personalizzato
+/deleteGreetingTime — impostalo quando vuoi cancellare il messaggio di benvenuto di Shieldy in secondi, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
+/banUsers — scegli se bannare o kickare
 
-Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Il codice sorgente di Shieldy è open source e può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
 
 /help — näitab seda sõnumi
@@ -339,7 +339,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
-Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
+Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
 
 /help — ukáže tuto zprávu
 /language — výběr jazyka
@@ -373,23 +373,23 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /banUsers — whether to ban or to kick users
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
-    ar: `Shieldy — هو أفضل حل في تيليغرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الوافدين الجدد تنفيذ إجراء مجموعة في غضون فترة محددة، وإلا فإنه يركلهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot هو المشرف في المجموعة الخاصة بك وكل شيء! يمكنك أيضًا زيادة إعداد السلوك باستخدام الأوامر التالية:
+    ar: `Shieldy — هو أفضل حل في التيليجرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الأعضاء الجدد الخضوع لإختبارات معينة في غضون فترة محددة، وعندما لا يجتازون الإختبار فإنه يقوم بطردهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot  منح البوت صلاحية الآدمن! يمكنك أيضًا زيادة سلوكيات البوت بإستخدام الأوامر التالية:
 
 /help — يظهر هذه الرسالة
-/language — تبديل اللغة
-/captcha — تغيير نوع الكابتشا المستخدمة
-/timeLimit — تغييرات مقدار الوقت المعطى للقادمين الجدد
-/lock — يجعل الأوامر قابلة للوصول فقط من قبل المسؤولين
-/restrict — يقيد الوافدين الجدد لإرسال رسائل نصية فقط في أول 24 ساعة
+/language — تغيير اللغة
+/captcha — تغيير نوع الإختبار المستخدم
+/timeLimit — تغيير مدة الإختبار للأعضاء الجدد
+/lock — يجعل الأوامر قابلة للوصول فقط من قبل المسؤولين فقط
+/restrict — يمنع الأعضاء الجدد من إرسال رسائل نصية فقط في أول 24 ساعة
 /deleteEntryMessages — حذف رسائل دخول الأعضاء
 /greeting — يقوم بتحية المستخدمين الذين يجتازون الاختبار
-/trust — الرد مع هذا الأمر إلى رسالة تم إرسالها من قبل المستخدم التي لا تريد التحقق
-/strict — استخدام عندما كنت لا تريد أن تتلقى أي رسائل الوافدين الجدد ولكن حلول كابتشا حتى تمر كابتشا
+/trust — اختر هذا الخيار لإضافة اعضاء لا ترغب في ان يخوضوا الإختبار
+/strict — اختر هذا اذا كنت تريد تفعيل البوت لإجراء اختبار للأعضاء الجدد 
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
 /banUsers — whether to ban or to kick users
 
-أمازلت تملك أسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! `,
+لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! `,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -411,7 +411,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
     am: 'ቋንቋ ምረጡ።',
     czen: 'Please, select the language. Prosím, vyber jazyk.',
     cz: 'Prosím, vyber jazyk.',
-    ar: 'الرجاء تحديد اللغة.',
+    ar: 'الرجاء إختيار اللغة.',
   },
   language_selected: {
     ruen:
@@ -468,28 +468,28 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation
+• Digits — bot will ask to solve a simple arithmetic operation
 
 Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простое уравнение`,
+• Цифровая — бот попросит решить простую арифметическую задачу`,
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     ru: `Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простое уравнение`,
+• Цифровая — бот попросит решить простую арифметическую задачу`,
     it: `Prego, seleziona uno dei seguenti test per i nuovi arrivati:
 
 • Semplice — Il bot chiederà di inviare qualcunque messaggio in chat
 • Bottone — Il bot chiederà di premere un pulsante
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     et: `Palun valige uustulnukute kontrolli tüüp:
 
 • Lihtne — bot küsib vestlusele midagi saata
@@ -498,23 +498,23 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Проста — бот просить надіслати що завгодно в чат
 • Кнопкою — бот просить натиснути на кнопку.
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     br: `Por favor, selecione o tipo de teste para os novatos:
 
 • Simples — o bot vai pedir para mandar alguma coisa no chat
 • Botão — o bot vai pedir para apertar um botão
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     tr: `Lütfen, yeni gelenler için test türünü seçin:
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
 • Düğme — bot bir düğmeye basılmasını isteyecektir
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
 • Digitos — el bot pedirá resolver una ecuación simple
-• Digits — bot will ask to solve a simple equation`,
+• Digits — bot will ask to solve a simple arithmetic operation`,
     zh: `请为新人选择测试类型：
 
 •简单 — 机器人会要求向聊天发送任何内容
@@ -559,7 +559,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple equation
+• Digits — bot will ask to solve a simple arithmetic operation
 
 Vyberte prosím typ testu pro nováčky:
 
@@ -571,11 +571,11 @@ Vyberte prosím typ testu pro nováčky:
 • Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
 • Tlačítko — bot požádá o stisk tlačítka
 • Číselný — bot požádá o vyřešení jednoduchého příkladu`,
-    ar: `الرجاء تحديد نوع الاختبار للقادمين الجدد:
+    ar: `الرجاء تحديد نوع الاختبار للأعضاء الجدد:
 
-• بسيطة — سوف يطلب بوت لإرسال أي شيء إلى الدردشة
-• زر — سوف يطلب بوت للضغط على زر
-• أرقام — سوف يطلب بوت لحل معادلة بسيطة`,
+• بسيطة — سوف يطلب البوت لإرسال أي شيء إلى الدردشة
+• زر سوف يطلب البوت الضغط على زرالشرطة
+• أرقام — سوف يطلب البوت حل معادلة بسيطة`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -665,7 +665,7 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great, I will use this type of test then. Skvělé, budu používat tento typ testu.',
     cz: 'Skvělé, budu používat tento typ testu.',
-    ar: 'عظيم، سوف استخدم هذا النوع من الاختبار .',
+    ar: 'تم سوف استخدم هذا النوع من الاختبار .',
   },
   time_limit: {
     ruen:
@@ -702,7 +702,7 @@ Vyberte prosím typ testu pro nováčky:
     cz:
       'Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
     ar:
-      'من فضلك، حدد عدد الثواني التي سيحصل عليها الوافدون الجدد لإكمال الاختبار قبل الركلة.',
+      'من فضلك، حدد عدد الثواني التي يمكن للأعضاء الجدد إكمال الاختبار خلالها قبل طردهم.',
   },
   time_limit_selected: {
     ruen:
@@ -746,7 +746,7 @@ Vyberte prosím typ testu pro nováčky:
     id: 'det',
     ko: '초',
     am: 'ሰከንድ',
-    czen: 'sec/s',
+    czen: 'sec',
     cz: 's',
     ar: 'ثانية',
   },
@@ -837,7 +837,7 @@ Vyberte prosím typ testu pro nováčky:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
     ar:
-      'رائع ! الآن الوافدين الجدد لن ترسل أي شيء سوى حلول كابتشا حتى يمر كابتشا .',
+      'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
   },
   strict_false: {
     ruen:
@@ -872,7 +872,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great! Now newcomers will be able to send text before they pass captcha. Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     ar:
-      'رائع ! الآن الوافدين الجدد سوف يكونون قادرين على إرسال النص قبل أن يمروا بـكابتشا .',
+      'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -914,16 +914,16 @@ Vyberte prosím typ testu pro nováčky:
       ', prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
 
     ar:
-      ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المبلغ الزمني المحدد، وإلا سيتم ركلك. شكرا!',
+      ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
   },
   digits_warning: {
-    ruen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+    ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
 
-Пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
+Пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
-      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+      ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
-      ', пожалуйста, отправьте решение указанного математического уравнения в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+      ', пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
       ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     et:
@@ -948,15 +948,15 @@ Vyberte prosím typ testu pro nováčky:
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am:
-      ', please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    czen: `, please, send the solution to the math equation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
+      ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    czen: `, prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!
 
-Prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
     cz:
-      ', prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
+      ', prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!',
 
     ar:
-      ', من فضلك، إرسال الحل إلى معادلة الرياضيات المقدمة ضمن المبلغ الزمني المحدد لهذه المجموعة، وإلا سيتم ركلك. شكرا!',
+      ', من فضلك، حل المعادلة الرياضية وإرسالها للدردشة قبل إنتهاء الوقت المحدد، وإلا سيتم طردك. شكرا!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -992,11 +992,11 @@ Prosím, pošlete řešení matematické rovnice ve stanoveném čase, jinak bud
     am: ', በተኑን ይንኩት ካለበለዛ ይባረራሉ',
     czen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
 
-Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
+Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!`,
     cz:
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     ar:
-      ', من فضلك، اضغط على الزر أدناه ضمن المبلغ الزمني المحدد، وإلا سيتم ركلك. شكرا!',
+      ', من فضلك، اضغط على الزر أدناه ضمن المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -1081,7 +1081,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz:
       'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
     ar:
-      'رائع ! الآن جميع الوافدين الجدد سوف يكونون قادرين فقط على إرسال الرسائل النصية المعتادة إلى هذه الدردشة.',
+      'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين فقط على إرسال الرسائل النصية المعتادة إلى هذه الدردشة.',
   },
   restrict_false: {
     ruen:
@@ -1119,7 +1119,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
       'Great! Now all newcomers will be able to send any type of content to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     cz: 'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     ar:
-      'رائع ! الآن جميع الوافدين الجدد سوف يكونون قادرين على إرسال أي نوع من المحتوى إلى هذه الدردشة.',
+      'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين على إرسال أي نوع من المحتوى إلى هذه الدردشة.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -1210,7 +1210,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
     ar:
-      'رائع ! الآن سيتم استقبال القادمين الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username).',
+      'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -1251,7 +1251,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
     ar:
-      'رائع ! الآن سيتم استقبال القادمين الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username). فيما يلي رسالة الترحيب الحالية.',
+      'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username). فيما يلي رسالة الترحيب الحالية.',
   },
   greetsUsers_false: {
     ruen:
@@ -1279,7 +1279,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     czen:
       'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
-    ar: 'رائع ! الآن لن يتم استقبال القادمين الجدد الذين اجتازوا الاختبار.',
+    ar: 'تم ! الآن لن يتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -1341,7 +1341,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     ar:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+      'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام  $title, $username, $equation and $seconds).',
   },
   captchaMessage_true_message: {
     ruen:
@@ -1383,7 +1383,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     cz:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     ar:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+      'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام $title, $username, $equation and $seconds). The current greeting message follows.',
   },
   captchaMessage_false: {
     ruen:
@@ -1407,7 +1407,7 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     am: 'Great! Now newcomers will see the default captcha message',
     czen: 'Great! Now newcomers will see the default captcha message',
     cz: 'Great! Now newcomers will see the default captcha message',
-    ar: 'Great! Now newcomers will see the default captcha message',
+    ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -1450,9 +1450,9 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     id: 'Nice! Users will be banned if they do not pass captcha.',
     ko: 'Nice! Users will be banned if they do not pass captcha.',
     am: 'Nice! Users will be banned if they do not pass captcha.',
-    czen: 'Nice! Users will be banned if they do not pass captcha.',
-    cz: 'Nice! Users will be banned if they do not pass captcha.',
-    ar: 'Nice! Users will be banned if they do not pass captcha.',
+    czen: 'Nice! Users will be banned if they do not pass captcha. Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
+    cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
+    ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
   },
   banUsers_false: {
     ruen:
@@ -1473,8 +1473,8 @@ Prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děk
     id: 'Nice! Users will be kicked if they do not pass captcha.',
     ko: 'Nice! Users will be kicked if they do not pass captcha.',
     am: 'Nice! Users will be kicked if they do not pass captcha.',
-    czen: 'Nice! Users will be kicked if they do not pass captcha.',
-    cz: 'Nice! Users will be kicked if they do not pass captcha.',
-    ar: 'Nice! Users will be kicked if they do not pass captcha.',
+    czen: 'Nice! Users will be kicked if they do not pass captcha. Skvělé! Nováčci, kteří neprojdou testem budou vyhozeni.',
+    cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
+    ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
   },
 }
