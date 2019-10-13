@@ -6,6 +6,7 @@ import {
   findChatsWithCandidates,
   CaptchaType,
   Equation,
+  removeMessages,
 } from '../models'
 import { bot } from './bot'
 import { User } from 'telegram-typings'
@@ -46,6 +47,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           continue
         }
         globalyRestricted.push(member.id)
+        removeMessages(ctx.chat.id, ctx.message.from.id) // don't await here
         // Send notifications about captcha and add to candidates
         if (candidates.map(c => c.id).indexOf(member.id) < 0) {
           const equation =
