@@ -22,6 +22,7 @@ import { setupTestLocales } from './commands/testLocales'
 import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
 import { setupBanUsers } from './commands/banUsers'
 import { messageSaver } from './middlewares/messageSaver'
+import { setupDeleteEntryOnBan } from './commands/deleteEntryOnBan'
 
 // Check time
 bot.use(checkTime)
@@ -46,6 +47,7 @@ setupCaptchaMessage(bot)
 setupTestLocales(bot)
 setupDeleteGreetingTime(bot)
 setupBanUsers(bot)
+setupDeleteEntryOnBan(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

@@ -48,6 +48,11 @@ export class Candidate {
 
   @prop()
   equation?: Equation
+
+  @prop()
+  entryMessageId?: number
+  @prop()
+  entryChatId?: number
 }
 
 export class MessageWrapper {
@@ -88,6 +93,8 @@ export class Chat extends Typegoose {
   deleteGreetingTime?: number
   @prop({ required: true, default: false })
   banUsers: boolean
+  @prop({ required: true, default: false })
+  deleteEntryOnBan: boolean
 }
 
 // Get Chat model

@@ -66,6 +66,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             captchaType: chat.captchaType,
             messageId: message ? message.message_id : undefined,
             equation,
+            entryChatId: ctx.chat.id,
+            entryMessageId: ctx.message.message_id,
           })
         }
         // Restrict if requested
@@ -410,6 +412,16 @@ async function check() {
             chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
           )
           candidatesToDelete.push(candidate)
+          if (chat.deleteEntryOnBan) {
+            try {
+              await bot.telegram.deleteMessage(
+                candidate.entryChatId,
+                candidate.entryMessageId
+              )
+            } catch (err) {
+              await report(bot, err)
+            }
+          }
         } catch (err) {
           if (checkIfErrorDismissable(err)) {
             candidatesToDelete.push(candidate)
