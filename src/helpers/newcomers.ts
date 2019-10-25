@@ -355,7 +355,7 @@ async function notifyCandidate(
         text
           .replace(/\$username/g, getUsername(ctx.from))
           .replace(/\$title/g, (await ctx.getChat()).title)
-          .replace(/\$equation/g, equation.question as string)
+          .replace(/\$equation/g, equation ? (equation.question as string) : '')
           .replace(/\$seconds/g, `${chat.timeGiven}`),
         extra as ExtraReplyMessage
       )
