@@ -151,6 +151,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
   // Check newcomers
   bot.use(async (ctx, next) => {
+    if (ctx.callbackQuery) {
+      return next()
+    }
     const chat = ctx.dbchat
     if (!chat.candidates.length) {
       return next()
