@@ -412,7 +412,7 @@ async function check() {
             chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
           )
           candidatesToDelete.push(candidate)
-          if (chat.deleteEntryOnBan) {
+          if (chat.deleteEntryOnKick) {
             try {
               await bot.telegram.deleteMessage(
                 candidate.entryChatId,
