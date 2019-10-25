@@ -322,6 +322,7 @@ async function notifyCandidate(
 ) {
   const chat = ctx.dbchat
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
+  console.log(`notifying in ${chat.id}`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
