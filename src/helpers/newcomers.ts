@@ -48,26 +48,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
         globalyRestricted.push(member.id)
         removeMessages(ctx.chat.id, ctx.message.from.id) // don't await here
-        // Send notifications about captcha and add to candidates
-        if (candidates.map(c => c.id).indexOf(member.id) < 0) {
-          const equation =
-            chat.captchaType === CaptchaType.DIGITS
-              ? generateEquation()
-              : undefined
-          let message
-          try {
-            message = await notifyCandidate(ctx, member, equation)
-          } catch (err) {
-            await report(bot, err)
-          }
-          candidatesToAdd.push({
-            id: member.id,
-            timestamp: new Date().getTime(),
-            captchaType: chat.captchaType,
-            messageId: message ? message.message_id : undefined,
-            equation,
-          })
-        }
         // Restrict if requested
         if (chat.restrict) {
           console.log('🤜 Restricting as well')
@@ -103,6 +83,26 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           } catch (err) {
             await report(bot, err)
           }
+        }
+        // Send notifications about captcha and add to candidates
+        if (candidates.map(c => c.id).indexOf(member.id) < 0) {
+          const equation =
+            chat.captchaType === CaptchaType.DIGITS
+              ? generateEquation()
+              : undefined
+          let message
+          try {
+            message = await notifyCandidate(ctx, member, equation)
+          } catch (err) {
+            await report(bot, err)
+          }
+          candidatesToAdd.push({
+            id: member.id,
+            timestamp: new Date().getTime(),
+            captchaType: chat.captchaType,
+            messageId: message ? message.message_id : undefined,
+            equation,
+          })
         }
       }
       console.log(
@@ -155,14 +155,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (!chat.candidates.length) {
       return next()
     }
-    if (
-      [CaptchaType.SIMPLE, CaptchaType.DIGITS].indexOf(chat.captchaType) < 0
-    ) {
-      return next()
-    }
     const userId = ctx.from.id
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return next()
+    }
+    if (chat.captchaType === CaptchaType.BUTTON && chat.strict) {
+      return ctx.deleteMessage()
     }
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     if (
