@@ -207,10 +207,10 @@ Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_suppor
 /greeting — 迎接通过测试的用户
 /trust — 使用此命令回复用户发送的您不想检查的消息
 /strict — 当你不希望收到任何新手的消息但使用验证码解决方案直到他们通过验证码时使用
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
+/customCaptchaMessage — 设置自定义验证码消息
+/deleteGreetingTime — 设置多少秒删除Shieldy的欢迎消息，像\`/deleteGreetingTime 100\`, 设置为0重置
+/banUsers — 禁止还是踢出用户
+/deleteEntryOnKick — 删除还是保留回答验证码失败的用户加入消息
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！`,
     no: `Shieldy — er den beste løsningen i Telegram for å holde irriterende falske kontoer tilbake. Den spørr nykommere om å utføre et sett med handlinger innenfor er viss tidsperiode, hvis ikke blir brukeren kastet ut. Det er så enkelt. Gjør @shieldy\\_bot til admin i chatten din og alt er klart! Du kan videre endre oppførselen med de følgende kommandoene:
@@ -1345,7 +1345,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     zh:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+      '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation 和 $seconds)。',
     no:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     de:
@@ -1385,7 +1385,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     zh:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+      '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation 和 $seconds)。 当前的问候消息如下。',
     no:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     de:
@@ -1419,7 +1419,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br: 'Great! Now newcomers will see the default captcha message',
     tr: 'Great! Now newcomers will see the default captcha message',
     es: 'Great! Now newcomers will see the default captcha message',
-    zh: 'Great! Now newcomers will see the default captcha message',
+    zh: '很棒！现在新人将会看到默认的验证码消息',
     no: 'Great! Now newcomers will see the default captcha message',
     de: 'Great! Now newcomers will see the default captcha message',
     tw: 'Great! Now newcomers will see the default captcha message',
@@ -1464,7 +1464,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br: 'Nice! Users will be banned if they do not pass captcha.',
     tr: 'Nice! Users will be banned if they do not pass captcha.',
     es: 'Nice! Users will be banned if they do not pass captcha.',
-    zh: 'Nice! Users will be banned if they do not pass captcha.',
+    zh: '很好！如果用户未通过验证码，将被禁止。',
     no: 'Nice! Users will be banned if they do not pass captcha.',
     de: 'Nice! Users will be banned if they do not pass captcha.',
     tw: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1488,7 +1488,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br: 'Nice! Users will be kicked if they do not pass captcha.',
     tr: 'Nice! Users will be kicked if they do not pass captcha.',
     es: 'Nice! Users will be kicked if they do not pass captcha.',
-    zh: 'Nice! Users will be kicked if they do not pass captcha.',
+    zh: '很好！如果用户未通过验证码，将被踢出。',
     no: 'Nice! Users will be kicked if they do not pass captcha.',
     de: 'Nice! Users will be kicked if they do not pass captcha.',
     tw: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1521,7 +1521,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     zh:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
+      '很棒！Shieldy将删除验证码失败用户的加入消息。',
     no:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     de:
@@ -1563,7 +1563,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     zh:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+      '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
     no:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     de:
