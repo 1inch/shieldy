@@ -20,7 +20,7 @@
     "@types/node": "^12.7.3",
     "dotenv": "^8.1.0",
     "mongoose": "^5.6.11",
-    "telegraf": "^3.32.0",
+    "telegraf": "^3.33.3",
     "typegoose": "^5.9.0",
     "typescript": "^3.6.2"
   },
