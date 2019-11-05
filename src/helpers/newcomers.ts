@@ -462,7 +462,7 @@ async function check() {
       }
     }
   } catch (err) {
-    report(bot, err, 'checking candidates')
+    report(bot, err, undefined, 'checking candidates')
   } finally {
     checking = false
   }
