@@ -14,9 +14,9 @@ export async function report(
   try {
     await bot.telegram.sendMessage(
       adminChatId,
-      `\`\`\`${error.message}\`\`\``,
+      `<code>${error.message}</code>\n\n<code>${error.stack}</code>`,
       {
-        parse_mode: 'Markdown',
+        parse_mode: 'HTML',
       } as any
     )
   } catch (err) {
