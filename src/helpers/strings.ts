@@ -453,7 +453,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     czen: 'Please, select the language. Prosím, vyber jazyk.',
     cz: 'Prosím, vyber jazyk.',
     ar: 'الرجاء إختيار اللغة.',
-    ro: 'Te rog să salectezi limba',
+    ro: 'Te rog, salectează limba.',
   },
   language_selected: {
     ruen:
@@ -856,7 +856,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great! Now I will react to commands sent by anybody. Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
-    ro: 'Super! Acum o să reacționez la comenzile trimise de oricine. ',
+    ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
   },
   strict_true: {
     ruen:
@@ -896,7 +896,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
     ar:
       'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
-    ro: 'Perfect! Acum noi veniții vor putea trimite doar soluții captcha până când trec de captcha.',
+    ro: 'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
   },
   strict_false: {
     ruen:
@@ -932,7 +932,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     ar:
       'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
-    ro: 'Super! Acum noi veniții vor putea trimite text înainte de a trece de captcha.',
+    ro: 'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -975,7 +975,7 @@ Vyberte prosím typ testu pro nováčky:
 
     ar:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
-    ro: ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară din grup automat. Mulțumesc!',
+    ro: ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -1018,7 +1018,7 @@ please, send the solution to the arithmetic operation provided within the time a
 
     ar:
       ', من فضلك، حل المعادلة الرياضية وإرسالها للدردشة قبل إنتهاء الوقت المحدد، وإلا سيتم طردك. شكرا!',
-    ro: ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup automat. Mulțumesc!',
+    ro: ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -1059,7 +1059,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     ar:
       ', من فضلك، اضغط على الزر أدناه ضمن المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
-    ro: ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup. Mulțumesc!',
+    ro: ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -1418,7 +1418,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام  $title, $username, $equation and $seconds).',
     ro:
-      'Super! Acum nou veniții vor primi un mesaj custom ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds).',
+      'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds).',
   },
   captchaMessage_true_message: {
     ruen:
@@ -1462,7 +1462,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام $title, $username, $equation and $seconds). The current greeting message follows.',
     ro:
-      'Super! Acum nou veniții vor primi un mesaj custom ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds). Mesajul curent de salut este următorul.',
+      'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds). Mesajul curent de salut este următorul.',
   },
   captchaMessage_false: {
     ruen:
