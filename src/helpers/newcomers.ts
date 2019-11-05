@@ -419,20 +419,20 @@ async function check() {
                 candidate.entryMessageId
               )
             } catch (err) {
-              await report(bot, err)
+              await report(bot, err, undefined, 'deleteMessage')
             }
           }
         } catch (err) {
           if (checkIfErrorDismissable(err)) {
             candidatesToDelete.push(candidate)
           } else {
-            await report(bot, err)
+            await report(bot, err, undefined, 'kickChatMember')
           }
         }
         try {
           await bot.telegram.deleteMessage(chat.id, candidate.messageId)
         } catch (err) {
-          await report(bot, err)
+          await report(bot, err, undefined, 'deleteMessage')
         }
       }
       const idsToDelete = candidatesToDelete.map(c => c.id)
@@ -462,7 +462,7 @@ async function check() {
       }
     }
   } catch (err) {
-    report(bot, err)
+    report(bot, err, 'checking candidates')
   } finally {
     checking = false
   }
