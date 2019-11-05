@@ -406,11 +406,6 @@ async function check() {
         }
         try {
           console.log(`💀 Kicking ${candidate.id}`)
-          await (bot.telegram as any).kickChatMember(
-            chat.id,
-            candidate.id,
-            chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
-          )
           candidatesToDelete.push(candidate)
           if (chat.deleteEntryOnKick) {
             try {
@@ -419,9 +414,15 @@ async function check() {
                 candidate.entryMessageId
               )
             } catch (err) {
-              await report(bot, err, undefined, 'deleteMessage')
+              // do nothing
             }
           }
+          // Can fail, it's ok
+          await (bot.telegram as any).kickChatMember(
+            chat.id,
+            candidate.id,
+            chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
+          )
         } catch (err) {
           if (checkIfErrorDismissable(err)) {
             candidatesToDelete.push(candidate)
