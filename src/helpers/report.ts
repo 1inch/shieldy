@@ -16,7 +16,11 @@ export async function report(
       adminChatId,
       `<code>${error.message}</code>\n\n<code>${error.stack}</code>\n\n<code>${
         (error as any).response
-      }</code>\n\n<code>${(error as any).parameters}</code>`,
+      }</code>\n\n<code>${JSON.stringify(
+        (error as any).parameters,
+        undefined,
+        2
+      )}</code>`,
       {
         parse_mode: 'HTML',
       } as any
