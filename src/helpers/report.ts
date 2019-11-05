@@ -4,7 +4,8 @@ import { checkIfErrorDismissable } from './error'
 
 export async function report(
   bot: Telegraf<ContextMessageUpdate>,
-  error: Error
+  error: Error,
+  ctx?: ContextMessageUpdate
 ) {
   if (checkIfErrorDismissable(error)) {
     return
@@ -14,17 +15,18 @@ export async function report(
   try {
     await bot.telegram.sendMessage(
       adminChatId,
-      `<code>${error.message}</code>\n\n<code>${
-        error.stack
-      }</code>\n\n<code>${JSON.stringify(
-        (error as any).response,
-        undefined,
-        2
-      )}</code>\n\n<code>${JSON.stringify(
-        (error as any).parameters,
-        undefined,
-        2
-      )}</code>`,
+      `<code>${error.message}</code>\n\n<code>${error.stack}</code>${
+        ctx
+          ? `${JSON.stringify(
+              ctx.message ||
+                ctx.channelPost ||
+                ctx.inlineQuery ||
+                ctx.callbackQuery,
+              undefined,
+              2
+            )}`
+          : ''
+      }`,
       {
         parse_mode: 'HTML',
       } as any

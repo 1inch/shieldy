@@ -35,7 +35,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
               disable_web_page_preview: true,
             })
           } catch (err) {
-            await report(bot, err)
+            await report(bot, err, ctx)
           }
           continue
         }
@@ -58,7 +58,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           try {
             message = await notifyCandidate(ctx, member, equation)
           } catch (err) {
-            await report(bot, err)
+            await report(bot, err, ctx)
           }
           candidatesToAdd.push({
             id: member.id,
@@ -103,7 +103,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
               )
             }
           } catch (err) {
-            await report(bot, err)
+            await report(bot, err, ctx)
           }
         }
       }
@@ -131,7 +131,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             ctx.message!.message_id
           )
         } catch (err) {
-          await report(bot, err)
+          await report(bot, err, ctx)
         }
       }
     } finally {
@@ -147,7 +147,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.telegram.deleteMessage(ctx.chat!.id, ctx.message!.message_id)
       } catch (err) {
-        await report(bot, err)
+        await report(bot, err, ctx)
       }
     }
   })
@@ -179,7 +179,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         try {
           await ctx.deleteMessage()
         } catch (err) {
-          await report(bot, err)
+          await report(bot, err, ctx)
         }
         return
       }
@@ -188,7 +188,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.deleteMessage()
       } catch (err) {
-        await report(bot, err)
+        await report(bot, err, ctx)
       }
     }
     console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
@@ -196,7 +196,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       ctx.dbchat = await chat.save()
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
@@ -206,7 +206,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
@@ -241,7 +241,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
       }
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
     next()
   })
@@ -257,7 +257,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.answerCbQuery(strings(chat, 'only_candidate_can_reply'))
       } catch (err) {
-        await report(bot, err)
+        await report(bot, err, ctx)
       }
       return
     }
@@ -270,7 +270,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await chat.save()
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
     console.log(
       `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
@@ -280,7 +280,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
     try {
       if (chat.greetsUsers && chat.greetingMessage) {
@@ -315,7 +315,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
       }
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
   })
 }

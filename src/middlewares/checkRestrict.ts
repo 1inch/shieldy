@@ -40,7 +40,7 @@ export async function checkRestrict(
     try {
       await ctx.telegram.deleteMessage(ctx.chat.id, message.message_id)
     } catch (err) {
-      await report(bot, err)
+      await report(bot, err, ctx)
     }
   } else {
     next()
