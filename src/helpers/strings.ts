@@ -432,6 +432,25 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 まだご不明な点がありますか？サポートチャネルをチェックしてください！ — @borodutch\\_support. Shieldyコードはオープンソースとなり、こちらで見ることができます https://github.com/backmeupplz/shieldy. ありがとう！`,
   },
+  ro: `Shieldy — este cea mai bună soluție de a lupta cu spamerii enervanți de pe Telegram. Le cere nou veniților să execute un set de acțiuni într-o perioadă setată de timp, altfel le dă kick. Atât de simplu este. Asigură-te ca @shieldy\\_bot este admin pe grupul tau și asta e tot! Pentru setări avansate, folosește comenzile de mai jos:
+
+/help — arată acest mesaj
+/language — schimbă limba
+/captcha — schimbă tipul de captcha folosit
+/timeLimit — schimbă limita de timp acordată nou veniților
+/lock — face comenzile accesibile doar adminilor
+/restrict — restricționează nou veniții să trimită doar mesaje text în primele 24 de ore
+/deleteEntryMessages — șterge mesajele despre userii ce intră în grup
+/greeting — salută utilizatorii ce au trecut testul
+/trust — raspunde cu această comanda unui mesaj trimis de un user pe care doresti să nu îl verifice bot-ul
+/strict — utilizează atunci când dorești sa nu primești nici un mesaj din partea userilor noi, ci doar soluții captcha până când aceștia trec de captcha
+/customCaptchaMessage — setează mesaj captcha custom
+/deleteGreetingTime — setează când se ștearge salutul lui Shieldy în secunde, precum \`/deleteGreetingTime 100\`. resetează setând valoarea 0
+/banUsers — alege între a bana sau la le da kick userilor
+/deleteEntryOnKick — șterge mesajul de întâmpinare pentru userii ce nu au trecut de captcha
+
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
     en: 'Please, select the language.',
@@ -454,6 +473,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     cz: 'Prosím, vyber jazyk.',
     ar: 'الرجاء إختيار اللغة.',
     ja: '言語を選択してください。',
+    ro: 'Te rog, salectează limba.',
   },
   language_selected: {
     ruen:
@@ -479,6 +499,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     cz: 'Skvělé, nyní mluvím česky.',
     ar: 'عظيم، أنا أتكلم العربية الآن.',
     ja: 'はい、私は日本語が喋れます。',
+    ro: 'Perfect, acum vorbesc Română.',
   },
   only_author_can_reply: {
     ruen:
@@ -506,6 +527,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     cz: 'Možnost může vybrat jen osoba, která nabídku vyvolala.',
     ar: 'فقط الشخص الذي بدأ القائمة يمكنه تحديد الخيارات.',
     ja: '最初にメニューを開いた人だけが、選択することができます。',
+    ro: 'Doar persoana ce a inițiat meniul poate selecta',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -625,6 +647,11 @@ Vyberte prosím typ testu pro nováčky:
 • シンプル — botが何か発言してくださいと尋ねます
 • ボタン — botがボタンを押してくださいとお願いします
 • 数字 — botが簡単な算数の問題を解いてくださいと尋ねます`,
+    ro: `Selectează tipul de test pentru nou veniți:
+
+• Simplu — bot-ul va cere userului să trimită orice în chat
+• Buton — bot-ul va cere userului să apese un buton
+• Cifre — bot-ul va cere userului să rezolve o simplă operație aritmetică`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -648,6 +675,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Jednoduchý',
     ar: 'بسيطه',
     ja: '簡単',
+    ro: 'Simplu',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -671,6 +699,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Číselný',
     ar: 'ارقام',
     ja: '数字',
+    ro: 'Cifre',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -694,6 +723,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Tlačítko',
     رمي: 'زر',
     ja: 'ボタン',
+    ro: 'Buton',
   },
   captcha_selected: {
     ruen:
@@ -719,6 +749,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé, budu používat tento typ testu.',
     ar: 'تم سوف استخدم هذا النوع من الاختبار .',
     ja: 'はい、このタイプのテストを使います。',
+    ro: 'Perfect, o să utilizez acest tip de test.',
   },
   time_limit: {
     ruen:
@@ -758,6 +789,8 @@ Vyberte prosím typ testu pro nováčky:
       'من فضلك، حدد عدد الثواني التي يمكن للأعضاء الجدد إكمال الاختبار خلالها قبل طردهم.',
     ja:
       '新しく参加した人が退出させられるまでにテストを完了する時間を何秒間にするかを選択してください。',
+    ro:
+      'Te rog selectează câte secunde au la dispoziție userii noi să completeze testul, înainte sa fi dați afară.',
   },
   time_limit_selected: {
     ruen:
@@ -783,6 +816,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé, budu používat tento časový limit.',
     ar: 'عظيم، سأستخدم هذا الحد الزمني .',
     ja: 'はい、この時間制限を使います。',
+    ro: 'Super, o să folosesc această limită de timp',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -806,6 +840,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 's',
     ar: 'ثانية',
     ja: '秒',
+    ro: 'sec',
   },
   lock_true: {
     ruen:
@@ -833,6 +868,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
     ja: '素晴らしいです！これで管理者によるコマンドしか受け付けません。',
+    ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
   },
   lock_false: {
     ruen:
@@ -858,6 +894,7 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
     ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
+    ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
   },
   strict_true: {
     ruen:
@@ -899,6 +936,8 @@ Vyberte prosím typ testu pro nováčky:
       'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
     ja:
       '素晴らしいです！これで、新しく参加した人は、キャプチャをパスするまで、キャプチャの回答しかできません。',
+    ro:
+      'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
   },
   strict_false: {
     ruen:
@@ -936,6 +975,8 @@ Vyberte prosím typ testu pro nováčky:
       'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
     ja:
       '素晴らしいです！、これで、新しく参加した人は、キャプチャをパスする前に、テキストを送信することができます。',
+    ro:
+      'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -980,6 +1021,8 @@ Vyberte prosím typ testu pro nováčky:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
     ja:
       '指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
+    ro:
+      ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
   },
   digits_warning: {
     ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -1024,6 +1067,8 @@ please, send the solution to the arithmetic operation provided within the time a
       ', من فضلك، حل المعادلة الرياضية وإرسالها للدردشة قبل إنتهاء الوقت المحدد، وإلا سيتم طردك. شكرا!',
     ja:
       '指定された時間内に算数の正解を送信してください。そうしないと、退出させられます。ありがとうございます！',
+    ro:
+      ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -1066,6 +1111,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       ', من فضلك، اضغط على الزر أدناه ضمن المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
     ja:
       '指定された時間内に、下に表示されたボタンを押してください。そうしないと、退出させられます。ありがとうございます！',
+    ro:
+      ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -1089,6 +1136,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Nejsem bot.',
     ar: 'أنا لست بوت',
     ja: '私はbotではありません。',
+    ro: 'Nu sunt un bot',
   },
   only_candidate_can_reply: {
     ruen:
@@ -1115,6 +1163,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
     ja: 'botではない候補の人だけがボタンを押すことができます。',
+    ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
   },
   restrict_true: {
     ruen:
@@ -1155,6 +1204,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين فقط على إرسال الرسائل النصية المعتادة إلى هذه الدردشة.',
     ja:
       '素晴らしいです！これで、全ての新しく参加した人は、このチャットで普通のテキストメッセージを送ることができます。',
+    ro:
+      'Perfect! Acum toți nou veniții vor putea trimite orice fel de mesaje text către acest chat. ',
   },
   restrict_false: {
     ruen:
@@ -1195,6 +1246,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين على إرسال أي نوع من المحتوى إلى هذه الدردشة.',
     ja:
       '素晴らしいです！これで、全ての新しく参加した人は、このチャットでどんな種類のコンテンツを送ることができます。',
+    ro:
+      'Perfect! Acum toți nou veniții vor putea trimite orice fel conținut către acest chat.',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -1221,6 +1274,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されます。',
+    ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -1247,6 +1301,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されません。',
+    ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
   },
   greetsUsers_true: {
     ruen:
@@ -1290,6 +1345,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username).',
     ja:
       '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title and $usernameを使えます。)',
+    ro:
+      'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username).',
   },
   greetsUsers_true_message: {
     ruen:
@@ -1333,6 +1390,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username). فيما يلي رسالة الترحيب الحالية.',
     ja:
       '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title and $usernameを使えます。) 今の挨拶メッセージは以下です。',
+    ro:
+      'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username). Mesajul curent de salut este următorul.',
   },
   greetsUsers_false: {
     ruen:
@@ -1363,6 +1422,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ar: 'تم ! الآن لن يتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار.',
     ja:
       '素晴らしいです！これで、このテストをパスして新しく参加された人は挨拶をされません。',
+    ro: 'Super! Acum nou veniții ce au trecut testul vor fi salutați.',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -1386,6 +1446,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Přijato!',
     ar: 'قبلت!',
     ja: '承認されました！',
+    ro: 'Acceptat!',
   },
   captchaMessage_true: {
     ruen:
@@ -1428,6 +1489,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام  $title, $username, $equation and $seconds).',
     ja:
       '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation and $secondsを使えます)。',
+    ro:
+      'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds).',
   },
   captchaMessage_true_message: {
     ruen:
@@ -1472,6 +1535,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام $title, $username, $equation and $seconds). The current greeting message follows.',
     ja:
       '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation and $secondsを使えます)。 今の挨拶メッセージは以下です。',
+    ro:
+      'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation și $seconds). Mesajul curent de salut este următorul.',
   },
   captchaMessage_false: {
     ruen:
@@ -1498,6 +1563,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
     ja:
       '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
+    ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -1521,6 +1587,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Přijato!',
     ar: 'قبلت!',
     ja: '承認されました！',
+    ro: 'Acceptat!',
   },
   banUsers_true: {
     ruen:
@@ -1546,6 +1613,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
+    ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
   },
   banUsers_false: {
     ruen:
@@ -1571,6 +1639,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
+    ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
   },
   deleteEntryOnKick_true: {
     ruen:
@@ -1614,6 +1683,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ja:
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除します。',
+    ro:
+      'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
   },
   deleteEntryOnKick_false: {
     ruen:
@@ -1657,5 +1728,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ja:
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除しません。',
+    ro:
+      'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
   },
 }
