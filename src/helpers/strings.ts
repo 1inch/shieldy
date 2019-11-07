@@ -412,6 +412,25 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 
 لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! `,
+    ja: `Shieldy — は迷惑なスパマーに対してのTelegraの1番のソリューションになります。新しく参加した人に、一定の時間内に、特定のアクションを実行するように要求します。とてもシンプルです。 利用するにあたり、@shieldy \\ _ botをチャットの管理者に追加してください。以下のコマンドでbotのアクションを設定することもできます:
+
+/help — このメッセージを表示する
+/language — 言語を変更する
+/captcha — キャプチャの種類を変更する
+/timeLimit — 新しく参加した人に与えられる時間を変更する
+/lock — 管理者だけがコマンドにアクセスできるようにする
+/restrict — 新しく参加した人が最初の24時間はテキストメッセージしか投稿できないように制限をかける
+/deleteEntryMessages — ユーザーが参加した情報を削除する
+/greeting — テストを通過した人に挨拶をする
+/trust —チェックしたくないユーザーからのメッセージに対してこのコマンドで返事をする
+/strict — 新しく参加した人がキャプチャをパスするまで、メッセージではなくキャプチャソリューションを受け取りたい時に使う
+/customCaptchaMessage — キャプチャのメッセージをカスタマイズする
+/deleteGreetingTime —  \`/deleteGreetingTime 100\のように何秒間でShieldyのメッセージが消えるかを設定する。0に設定することでリセットされる
+/banUsers — バンまたはユーザーを退出させる
+/deleteEntryOnKick —キャプチャを失敗したユーザーの入室メッセージを削除するかどうか
+
+Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
+まだご不明な点がありますか？サポートチャネルをチェックしてください！ — @borodutch\\_support. Shieldyコードはオープンソースとなり、こちらで見ることができます https://github.com/backmeupplz/shieldy. ありがとう！`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -434,6 +453,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
     czen: 'Please, select the language. Prosím, vyber jazyk.',
     cz: 'Prosím, vyber jazyk.',
     ar: 'الرجاء إختيار اللغة.',
+    ja: '言語を選択してください。',
   },
   language_selected: {
     ruen:
@@ -458,6 +478,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
       'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
     cz: 'Skvělé, nyní mluvím česky.',
     ar: 'عظيم، أنا أتكلم العربية الآن.',
+    ja: 'はい、私は日本語が喋れます。',
   },
   only_author_can_reply: {
     ruen:
@@ -484,6 +505,7 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
       'Only the person who initiated the menu can select the choices. Možnost může vybrat jen osoba, která nabídku vyvolala.',
     cz: 'Možnost může vybrat jen osoba, která nabídku vyvolala.',
     ar: 'فقط الشخص الذي بدأ القائمة يمكنه تحديد الخيارات.',
+    ja: '最初にメニューを開いた人だけが、選択することができます。',
   },
   captcha: {
     ruen: `Please, select the test type for the newcomers:
@@ -598,6 +620,11 @@ Vyberte prosím typ testu pro nováčky:
 • بسيطة — سوف يطلب البوت لإرسال أي شيء إلى الدردشة
 • زر سوف يطلب البوت الضغط على زرالشرطة
 • أرقام — سوف يطلب البوت حل معادلة بسيطة`,
+    ja: `新しく参加した人へのテストの種類を選択してください’
+
+• シンプル — botが何か発言してくださいと尋ねます
+• ボタン — botがボタンを押してくださいとお願いします
+• 数字 — botが簡単な算数の問題を解いてくださいと尋ねます`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -620,6 +647,7 @@ Vyberte prosím typ testu pro nováčky:
     czen: 'Simple/Jednoduchý',
     cz: 'Jednoduchý',
     ar: 'بسيطه',
+    ja: '簡単',
   },
   digits: {
     ruen: 'Digits/Цифровая',
@@ -642,6 +670,7 @@ Vyberte prosím typ testu pro nováčky:
     czen: 'Digits/Číselný',
     cz: 'Číselný',
     ar: 'ارقام',
+    ja: '数字',
   },
   button: {
     ruen: 'Button/Кнопкой',
@@ -664,6 +693,7 @@ Vyberte prosím typ testu pro nováčky:
     czen: 'Button/Tlačítko',
     cz: 'Tlačítko',
     رمي: 'زر',
+    ja: 'ボタン',
   },
   captcha_selected: {
     ruen:
@@ -688,6 +718,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great, I will use this type of test then. Skvělé, budu používat tento typ testu.',
     cz: 'Skvělé, budu používat tento typ testu.',
     ar: 'تم سوف استخدم هذا النوع من الاختبار .',
+    ja: 'はい、このタイプのテストを使います。',
   },
   time_limit: {
     ruen:
@@ -725,6 +756,8 @@ Vyberte prosím typ testu pro nováčky:
       'Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
     ar:
       'من فضلك، حدد عدد الثواني التي يمكن للأعضاء الجدد إكمال الاختبار خلالها قبل طردهم.',
+    ja:
+      '新しく参加した人が退出させられるまでにテストを完了する時間を何秒間にするかを選択してください。',
   },
   time_limit_selected: {
     ruen:
@@ -749,6 +782,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great, I will use this time limit then. Skvělé, budu používat tento časový limit.',
     cz: 'Skvělé, budu používat tento časový limit.',
     ar: 'عظيم، سأستخدم هذا الحد الزمني .',
+    ja: 'はい、この時間制限を使います。',
   },
   seconds: {
     ruen: 'sec/сек',
@@ -771,6 +805,7 @@ Vyberte prosím typ testu pro nováčky:
     czen: 'sec',
     cz: 's',
     ar: 'ثانية',
+    ja: '秒',
   },
   lock_true: {
     ruen:
@@ -797,6 +832,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great! Now I will only react to commands sent by admins. Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     cz: 'Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
+    ja: '素晴らしいです！これで管理者によるコマンドしか受け付けません。',
   },
   lock_false: {
     ruen:
@@ -821,6 +857,7 @@ Vyberte prosím typ testu pro nováčky:
       'Great! Now I will react to commands sent by anybody. Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
+    ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
   },
   strict_true: {
     ruen:
@@ -860,6 +897,8 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
     ar:
       'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
+    ja:
+      '素晴らしいです！これで、新しく参加した人は、キャプチャをパスするまで、キャプチャの回答しかできません。',
   },
   strict_false: {
     ruen:
@@ -895,6 +934,8 @@ Vyberte prosím typ testu pro nováčky:
     cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     ar:
       'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
+    ja:
+      '素晴らしいです！、これで、新しく参加した人は、キャプチャをパスする前に、テキストを送信することができます。',
   },
   simple_warning: {
     ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
@@ -937,6 +978,8 @@ Vyberte prosím typ testu pro nováčky:
 
     ar:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
+    ja:
+      '指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
   },
   digits_warning: {
     ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
@@ -979,6 +1022,8 @@ please, send the solution to the arithmetic operation provided within the time a
 
     ar:
       ', من فضلك، حل المعادلة الرياضية وإرسالها للدردشة قبل إنتهاء الوقت المحدد، وإلا سيتم طردك. شكرا!',
+    ja:
+      '指定された時間内に算数の正解を送信してください。そうしないと、退出させられます。ありがとうございます！',
   },
   button_warning: {
     ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
@@ -1019,6 +1064,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     ar:
       ', من فضلك، اضغط على الزر أدناه ضمن المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
+    ja:
+      '指定された時間内に、下に表示されたボタンを押してください。そうしないと、退出させられます。ありがとうございます！',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',
@@ -1041,6 +1088,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen: 'Not a bot. Nejsem bot.',
     cz: 'Nejsem bot.',
     ar: 'أنا لست بوت',
+    ja: '私はbotではありません。',
   },
   only_candidate_can_reply: {
     ruen:
@@ -1066,6 +1114,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Only the candidate for not being a bot can press this button. Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
+    ja: 'botではない候補の人だけがボタンを押すことができます。',
   },
   restrict_true: {
     ruen:
@@ -1104,6 +1153,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
     ar:
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين فقط على إرسال الرسائل النصية المعتادة إلى هذه الدردشة.',
+    ja:
+      '素晴らしいです！これで、全ての新しく参加した人は、このチャットで普通のテキストメッセージを送ることができます。',
   },
   restrict_false: {
     ruen:
@@ -1142,6 +1193,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     cz: 'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     ar:
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين على إرسال أي نوع من المحتوى إلى هذه الدردشة.',
+    ja:
+      '素晴らしいです！これで、全ての新しく参加した人は、このチャットでどんな種類のコンテンツを送ることができます。',
   },
   deleteEntryMessages_true: {
     ruen:
@@ -1167,6 +1220,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now entry messages will be deleted. Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
+    ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されます。',
   },
   deleteEntryMessages_false: {
     ruen:
@@ -1192,6 +1246,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now entry messages will not be deleted. Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
+    ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されません。',
   },
   greetsUsers_true: {
     ruen:
@@ -1233,6 +1288,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
     ar:
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username).',
+    ja:
+      '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title and $usernameを使えます。)',
   },
   greetsUsers_true_message: {
     ruen:
@@ -1274,6 +1331,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
     ar:
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username). فيما يلي رسالة الترحيب الحالية.',
+    ja:
+      '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title and $usernameを使えます。) 今の挨拶メッセージは以下です。',
   },
   greetsUsers_false: {
     ruen:
@@ -1302,6 +1361,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     ar: 'تم ! الآن لن يتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار.',
+    ja:
+      '素晴らしいです！これで、このテストをパスして新しく参加された人は挨拶をされません。',
   },
   greetsUsers_message_accepted: {
     ruen: 'Accepted! Принято!',
@@ -1324,6 +1385,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
     ar: 'قبلت!',
+    ja: '承認されました！',
   },
   captchaMessage_true: {
     ruen:
@@ -1364,6 +1426,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام  $title, $username, $equation and $seconds).',
+    ja:
+      '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation and $secondsを使えます)。',
   },
   captchaMessage_true_message: {
     ruen:
@@ -1406,6 +1470,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام $title, $username, $equation and $seconds). The current greeting message follows.',
+    ja:
+      '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation and $secondsを使えます)。 今の挨拶メッセージは以下です。',
   },
   captchaMessage_false: {
     ruen:
@@ -1430,6 +1496,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen: 'Great! Now newcomers will see the default captcha message',
     cz: 'Great! Now newcomers will see the default captcha message',
     ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
+    ja:
+      '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
   },
   trust_success: {
     ruen: 'Accepted! Принято!',
@@ -1452,6 +1520,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
     ar: 'قبلت!',
+    ja: '承認されました！',
   },
   banUsers_true: {
     ruen:
@@ -1476,6 +1545,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Nice! Users will be banned if they do not pass captcha. Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
+    ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
   },
   banUsers_false: {
     ruen:
@@ -1500,6 +1570,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Nice! Users will be kicked if they do not pass captcha. Skvělé! Nováčci, kteří neprojdou testem budou vyhozeni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
+    ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
   },
   deleteEntryOnKick_true: {
     ruen:
@@ -1520,8 +1591,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     es:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    zh:
-      '很棒！Shieldy将删除验证码失败用户的加入消息。',
+    zh: '很棒！Shieldy将删除验证码失败用户的加入消息。',
     no:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     de:
@@ -1542,6 +1612,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ar:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
+    ja:
+      '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除します。',
   },
   deleteEntryOnKick_false: {
     ruen:
@@ -1562,8 +1634,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     es:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    zh:
-      '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
+    zh: '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
     no:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     de:
@@ -1584,5 +1655,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ar:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+    ja:
+      '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除しません。',
   },
 }
