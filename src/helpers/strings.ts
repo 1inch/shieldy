@@ -234,21 +234,21 @@ Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support
     de: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
 
 /help — zeigt diese Nachricht an
-/language — ändert Sprachen
+/language — ändert die Sprache
 /captcha — ändert die Art des Captchas, welches genutzt wird
-/timeLimit — ändert die menge Zeit welche neue User bekommen
-/lock — lässt Kommandos nur von Admins zu
-/restrict — schränkt neue User ein, für die ersten 24 Stunden nur Text Nachrichten zu senden
-/deleteEntryMessages — löscht Nachrichten über den User Eintrag
+/timeLimit — ändert das Zeitlimit für neue User
+/lock — lässt nur Admin Kommandos zu
+/restrict — schränkt neue User ein, in den ersten 24 Stunden nur Text Nachrichten zu senden (keine Links, Bilder etc.)
+/deleteEntryMessages — löscht die Beitrittsnachricht über neue User im Kanal z.B. "User xxx ist beigetreten"
 /greeting — begrüßt die User, welche den Test bestehen
 /trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
+/strict — benutze dieses Kommando, wenn du keine Beitrittsnachricht für neue User bekommen möchtest, bis sie den Captcha Test bestanden haben
+/customCaptchaMessage — eigene Captcha Nachricht anlegen 
+/deleteGreetingTime — hier kannst du einstellen, wann die Willkommens Nachricht von Shieldy gelöscht werden soll. \`/deleteGreetingTime 100\`, zurück setzen kannst du dies mit dem Wert "0"
+/banUsers — hier kannst du User bannen oder kicken
+/deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht 
 
-Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!`,
+Noch Fragen? Schau in unseren Support Kanal — @borodutch\\_support. Der Shieldy code ist open source und kann hier gefunden werden: https://github.com/backmeupplz/shieldy. Vielen Dank!`,
     tw: `Shieldy — 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：
 
 /help — 顯示此內容
@@ -774,7 +774,7 @@ Vyberte prosím typ testu pro nováčky:
     no:
       'Vennligst velg hvor mange sekunder nykommere vil ha på å fullføre testen før brukeren blir sparket.',
     de:
-      'Please, select how many seconds will newcomers get to complete the test before the kick.',
+      'Bitte wähle, wieviele Sekunden ein neuer User hat, um den Test fertig zu stellen, bevor er gekicked wird.',
     tw: '請選擇新進成員在被踢除前有多少秒數可以完成驗證。',
     fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
     id:
@@ -805,7 +805,7 @@ Vyberte prosím typ testu pro nováčky:
     es: 'Genial, usaré este límite de tiempo.',
     zh: '很棒，我之后会使用这个时间限制。',
     no: 'Supert, da skal jeg bruke denne tidsbegrensningen.',
-    de: 'Great, I will use this time limit then.',
+    de: 'Toll, ich benutzte dann dieses Zeit Limit.',
     tw: '很棒，我之後會使用這個時間限制。',
     fr: `Parfait, j'utiliserai cette limite de temps`,
     id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
@@ -857,7 +857,7 @@ Vyberte prosím typ testu pro nováčky:
       'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
     zh: '很棒！现在我只对管理员发送的命令作出反应。',
     no: 'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
-    de: 'Great! Now I will only react to commands sent by admins.',
+    de: 'Super! Ich werde nun nur noch auf Admin Kommandos reagieren .',
     tw: '很棒！現在我只對管理員發送的指令作出回應。',
     fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
     id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
@@ -883,7 +883,8 @@ Vyberte prosím typ testu pro nováčky:
     es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
-    de: 'Great! Now I will react to commands sent by anybody.',
+    de:
+      'Großartig! Ich werde nun wieder auf die Kommandos aller User reagieren.',
     tw: '很棒！現在我會對所有人發出的指令做出回應。',
     fr: `Parfait, maintenant n'importe qui pourra utiliser les commandes`,
     id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
@@ -919,7 +920,7 @@ Vyberte prosím typ testu pro nováčky:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
     de:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+      'Spitze! Neue User können nun nichts senden, außer der Captcha Lösung bis sie den Test bestanden haben.',
     tw:
       '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
     fr:
@@ -960,7 +961,7 @@ Vyberte prosím typ testu pro nováčky:
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
+      'Wahnsinn! Neue User können nun Nc hrichten senden, bevor sie den Captcha Test bestanden haben.',
     tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
     fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
     id:
@@ -1152,7 +1153,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Solo el candidato para no ser un roobot puede presionar este botón.',
     zh: '只有不是机器人的候选人才能按此按钮。',
     no: 'Bare kandidaten som blir testet kan trykke denne knappen.',
-    de: 'Nur der Kandiat für kein Bot zu sein, kann diesen Knopf drücken.',
+    de: 'Nur der User der kein Bot ist, kann diesen Knopf drücken.',
     tw: '只有需要被驗證的人才能按此按鈕。',
     fr: 'Seul le membre concerné peut appuyer sur ce bouton.',
     id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
@@ -1187,7 +1188,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     zh: '很棒！现在所有新手都只能发送文本消息到这个群组。',
     no: 'Supert! Nå kan nykommere bare sende tekstmeldinger i chatten.',
     de:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
+      'Genial! Neue User können nun nur Textnachrichten senden, keine Bilder, Links o.ä.',
     tw: '很棒！現在所有新進成員僅能發送文字消息到這個群組。',
     fr:
       'Parfait, maintenant tous les nouveaux membres pourront envoyer uniquement des messages texte à cette discussion',
@@ -1229,8 +1230,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     zh: '很棒！现在所有新手都可以发送任何类型消息到这个群组。',
     no:
       'Supert! Nå kan nykommere sende meldinger med all slags innhold i chatten',
-    de:
-      'Great! Now all newcomers will be able to send any type of content to this chat.',
+    de: 'Hammer! Neue User können nun jede Art von Nachricht senden.',
     tw: '很棒！現在所有新進成員可以發送任何類型消息到這個群組。',
     fr:
       'Parfait, maintenant tous les nouveaux membres pourront envoyer tout type de contenu à cette discussion',
@@ -1263,7 +1263,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
-    de: 'Great! Now entry messages will be deleted.',
+    de: 'Mega! Beitrittsnachrichten werden nun gelöscht.',
     tw: '很棒！現在，新成員加入的系統消息將被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée seront supprimés`,
     id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
@@ -1290,7 +1290,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
     zh: '很棒！现在，加入消息将不被删除。',
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
-    de: 'Great! Now entry messages will not be deleted.',
+    de: 'Spitze! Beitrittsnachrichten werden nicht gelöscht.',
     tw: '很棒！現在，新成員加入的系統消息將不會被刪除。',
     fr: `Parfait, maintenant les messages d'arrivée ne seront pas supprimés`,
     id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
@@ -1327,7 +1327,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
     de:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username).',
+      'Turbo! Neue user, die den Test bestanden haben, werden nun begrüßt. Bitte beantworte diese Naxhricht mit einem Begrüßungstext. (Du kannst $title und $username als Platzhalter benutzen).',
     tw:
       '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
     fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
@@ -1372,7 +1372,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
     de:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows.',
+      'Turbo! Neue user, die den Test bestanden haben, werden nun begrüßt. Die aktuelle Begrüßungsnachricht folgt jetzt.',
     tw:
       '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
     fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
@@ -1408,7 +1408,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
     zh: '很棒！现在通过测试的新人不会受到欢迎消息。',
     no: 'Supert! Nykommere som har bestått testen vil ikke få en velkomst.',
-    de: 'Great! Now newcomers who passed the test will not be greeted.',
+    de:
+      'Cool! Neue User, die den Text bestanden haben, werden nun nicht begrüßt.',
     tw: '很棒！現在通過驗證的新進成員不會收到歡迎消息。',
     fr:
       'Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués',
@@ -1472,7 +1473,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     de:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+      'WOW! Neue User erhalten nun eine individuelle Nachricht, die Ihnen das Captcha erklärt. Bitte antworte auf diese Nachricht mit dem Captcha Text, den du verwenden möchtest. (Du kannst die Platzhalter $title, $username, $equation und $seconds verwenden).',
     tw:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     id:
@@ -1516,7 +1517,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     de:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+      'WOW! Neue User erhalten nun eine individuelle Nachricht, die Ihnen das Captcha erklärt. Bitte antworte auf diese Nachricht mit dem Captcha Text, den du verwenden möchtest. (Du kannst die Platzhalter $title, $username, $equation und $seconds verwenden). Die aktuelle Begrüßungsnachricht folgt.',
     tw:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     fr:
@@ -1552,7 +1553,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Great! Now newcomers will see the default captcha message',
     zh: '很棒！现在新人将会看到默认的验证码消息',
     no: 'Great! Now newcomers will see the default captcha message',
-    de: 'Great! Now newcomers will see the default captcha message',
+    de: 'Abartig! Jetzt erhalten neue User die standard Captcha Nachricht',
     tw: 'Great! Now newcomers will see the default captcha message',
     fr: 'Great! Now newcomers will see the default captcha message',
     id: 'Great! Now newcomers will see the default captcha message',
@@ -1602,7 +1603,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Nice! Users will be banned if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     no: 'Nice! Users will be banned if they do not pass captcha.',
-    de: 'Nice! Users will be banned if they do not pass captcha.',
+    de: 'Nice! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
     tw: 'Nice! Users will be banned if they do not pass captcha.',
     fr: 'Nice! Users will be banned if they do not pass captcha.',
     id: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1628,7 +1629,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Nice! Users will be kicked if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
     no: 'Nice! Users will be kicked if they do not pass captcha.',
-    de: 'Nice! Users will be kicked if they do not pass captcha.',
+    de:
+      'Spitze! User werden gekicked, wenn sie den Captcha Test nicht schaffen.',
     tw: 'Nice! Users will be kicked if they do not pass captcha.',
     fr: 'Nice! Users will be kicked if they do not pass captcha.',
     id: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1664,7 +1666,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     de:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
+      'Top! Shieldy wird nun die Beitrittsnachrichten entfernen, wenn ein User den Captcha Test nciht besteht.',
     tw:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     fr:
@@ -1709,7 +1711,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     de:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+      'Hammer! Shieldy wird nun die Beitrittsnachrichten nicht entfernen, wenn ein User den Captcha Test nicht besteht.',
     tw:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     fr:
