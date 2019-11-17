@@ -23,6 +23,7 @@ import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
 import { setupBanUsers } from './commands/banUsers'
 import { messageSaver } from './middlewares/messageSaver'
 import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
+import { setupCAS } from './commands/cas'
 
 // Check time
 bot.use(checkTime)
@@ -48,6 +49,7 @@ setupTestLocales(bot)
 setupDeleteGreetingTime(bot)
 setupBanUsers(bot)
 setupDeleteEntryOnKick(bot)
+setupCAS(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

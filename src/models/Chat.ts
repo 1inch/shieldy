@@ -97,6 +97,8 @@ export class Chat extends Typegoose {
   banUsers: boolean
   @prop({ required: true, default: false })
   deleteEntryOnKick: boolean
+  @prop({ required: true, default: true })
+  cas: boolean
 }
 
 // Get Chat model

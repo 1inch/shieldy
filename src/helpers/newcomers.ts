@@ -14,6 +14,7 @@ import { report } from './report'
 import { checkIfErrorDismissable } from './error'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { generateEquation } from './equation'
+import { checkCAS } from './cas'
 
 export let globalyRestricted = []
 
@@ -48,6 +49,22 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
         globalyRestricted.push(member.id)
         removeMessages(ctx.chat.id, ctx.message.from.id) // don't await here
+        // Check if CAS banned
+        if (!(await checkCAS(member.id))) {
+          globalyRestricted = globalyRestricted.filter(id => id !== member.id)
+          try {
+            await (bot.telegram as any).kickChatMember(
+              chat.id,
+              member.id,
+              chat.banUsers
+                ? 0
+                : parseInt(`${new Date().getTime() / 1000 + 45}`)
+            )
+          } catch {
+            // Do nothing
+          }
+          continue
+        }
         // Send notifications about captcha and add to candidates
         if (candidates.map(c => c.id).indexOf(member.id) < 0) {
           const equation =
@@ -297,9 +314,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         } else {
           const msg = chat.greetingMessage.message
           msg.text = `${msg.text}\n\n${getUsername(ctx.from)}`
-          message = await ctx.telegram.sendCopy(chat.id, msg, Extra.webPreview(
-            false
-          ) as ExtraReplyMessage)
+          message = await ctx.telegram.sendCopy(
+            chat.id,
+            msg,
+            Extra.webPreview(false) as ExtraReplyMessage
+          )
         }
         if (chat.deleteGreetingTime && message) {
           setTimeout(async () => {
