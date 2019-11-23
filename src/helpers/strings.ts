@@ -104,12 +104,12 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
 /trust — rispondi con questo messaggio ad un utente che non vuoi che controlli
 /strict — usa questo comando quando non vuoi che i nuovi utenti inviino messaggi prima che passino il captcha
 /customCaptchaMessage — imposta un messaggio del captcha personalizzato
-/deleteGreetingTime — impostalo quando vuoi cancellare il messaggio di benvenuto di Shieldy in secondi, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
+/deleteGreetingTime — imposta in quanto tempo in secondi il messaggio di benvenuto debba essere eliminato, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
 /banUsers — scegli se bannare o kickare
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
+/deleteEntryOnKick — scegli se eliminare i messaggi d\'ingresso per coloro che hanno fallito il captcha
+/cas — scegli se usare Combot Anti-Spam
 
-Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Il codice sorgente di Shieldy è open source e può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!`,
+Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Shieldy è open source e il suo codice sorgente può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
 
 /help — näitab seda sõnumi
