@@ -995,7 +995,7 @@ Vyberte prosím typ testu pro nováčky:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
     sk:
-      "Výborne! Odteraz nováčikovia nebudú môcť poslať nič okrem riešenia testu captcha, až kým neprejdú týmto testom.",
+      'Výborne! Odteraz nováčikovia nebudú môcť poslať nič okrem riešenia testu captcha, až kým neprejdú týmto testom.',
     ar:
       'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
     ja:
@@ -1045,7 +1045,7 @@ Vyberte prosím typ testu pro nováčky:
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
   },
   simple_warning: {
-    ruen:`, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
+    ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
 
   Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
@@ -1232,7 +1232,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Only the candidate for not being a bot can press this button. Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
-    sk: 'Toto tlačidlo môže stlačiť iba nováčik, ktorému bola správa adresovaná.',
+    sk:
+      'Toto tlačidlo môže stlačiť iba nováčik, ktorému bola správa adresovaná.',
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
     ja: 'botではない候補の人だけがボタンを押すことができます。',
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
@@ -1648,7 +1649,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'Great! Now newcomers will see the default captcha message',
     czen: 'Great! Now newcomers will see the default captcha message',
     cz: 'Great! Now newcomers will see the default captcha message',
-    sk: 'Skvelé! Odteraz nováčikovia budú vidieť predvolenú správu testu captcha',
+    sk:
+      'Skvelé! Odteraz nováčikovia budú vidieť predvolenú správu testu captcha',
     ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
     ja:
       '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
