@@ -415,6 +415,25 @@ Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_supp
 /cas — whether to use Combot Anti-Spam or not
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!`,
+    sk: `Shieldy — najlepšie riešenie v boji proti otravným spamerom na Telegrame. Žiada od nováčikov, aby vykonali určitý krok v stanovenom čase, inak ich vyhodí. Je to také jednoduché. Nastavte @shieldy\\_bot ako správcu vo vašom čete a to je všetko! Pre podrobnejšie nastavenie správania môžete využiť tieto príkazy:
+
+/help — zobrazí túto správu
+/language — výber jazyka
+/captcha — typ testu captcha
+/timeLimit — čas na splnenie testu nováčikom
+/lock — sprístupní príkazy iba správcom
+/restrict — obmedzí nováčikov počas prvých 24 hodín na posielanie výlučne textových správ
+/deleteEntryMessages — odstráni správu o vstupe nováčika do skupiny
+/greeting — pozdrav pre používateľov, ktorí prejdú testom
+/trust — odpovedzte týmto príkazom na správu používateľa, ktorého nechcete kontrolovať
+/strict — použite, ak nechcete prijímať žiadne správy pre nováčikov okrem riešení testu captcha, pokým ním neprejdú
+/customCaptchaMessage — nastavenie vlastnej správy testu captcha
+/deleteGreetingTime — nastavenie, kedy sa má odstrániť pozdrav Shieldyho v sekundách, napr. \`/deleteGreetingTime 100\`; resetuje sa tak, že ho nastavíte na 0
+/banUsers — voľba banu alebo vyhodenia nováčika zo skupiny
+/deleteEntryOnKick — voľba odstránenia vstupných správ pre používateľov, ktorí neprejdú testom captcha
+/cas — voľba použitia služby Combot Anti-Spam
+
+Máte ďalšie otázky? Navštívte náš kanál podpory — @borodutch\\_support. Zdrojový kód Shieldyho je otvorený a nájdete ho [tu](https://github.com/backmeupplz/shieldy). Ďakujem!`,
     ar: `Shieldy — هو أفضل حل في التيليجرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الأعضاء الجدد الخضوع لإختبارات معينة في غضون فترة محددة، وعندما لا يجتازون الإختبار فإنه يقوم بطردهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot  منح البوت صلاحية الآدمن! يمكنك أيضًا زيادة سلوكيات البوت بإستخدام الأوامر التالية:
 
 /help — يظهر هذه الرسالة
@@ -495,6 +514,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     am: 'ቋንቋ ምረጡ።',
     czen: 'Please, select the language. Prosím, vyber jazyk.',
     cz: 'Prosím, vyber jazyk.',
+    sk: 'Vyberte jazyk.',
     ar: 'الرجاء إختيار اللغة.',
     ja: '言語を選択してください。',
     ro: 'Te rog, salectează limba.',
@@ -521,6 +541,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     czen:
       'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
     cz: 'Skvělé, nyní mluvím česky.',
+    sk: 'Skvelé, teraz hovorím po slovensky.',
     ar: 'عظيم، أنا أتكلم العربية الآن.',
     ja: 'はい、私は日本語が喋れます。',
     ro: 'Perfect, acum vorbesc Română.',
@@ -549,6 +570,7 @@ Still got questions? Check out the support channel — @borodutch\\_support. Shi
     czen:
       'Only the person who initiated the menu can select the choices. Možnost může vybrat jen osoba, která nabídku vyvolala.',
     cz: 'Možnost může vybrat jen osoba, která nabídku vyvolala.',
+    sk: 'Možnosti môže vybrať iba osoba, ktorá spustila ponuku.',
     ar: 'فقط الشخص الذي بدأ القائمة يمكنه تحديد الخيارات.',
     ja: '最初にメニューを開いた人だけが、選択することができます。',
     ro: 'Doar persoana ce a inițiat meniul poate selecta',
@@ -661,6 +683,11 @@ Vyberte prosím typ testu pro nováčky:
 • Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
 • Tlačítko — bot požádá o stisk tlačítka
 • Číselný — bot požádá o vyřešení jednoduchého příkladu`,
+    sk: `Vyberte typ testu pre nováčikov:
+
+• Jednoduchý — bot požiada o zaslanie akejkoľvek správy do četu
+• Tlačidlo — bot požiada o stlačenie tlačidla
+• Číselný — bot požiada o výsledok jednoduchého matematického príkladu`,
     ar: `الرجاء تحديد نوع الاختبار للأعضاء الجدد:
 
 • بسيطة — سوف يطلب البوت لإرسال أي شيء إلى الدردشة
@@ -697,6 +724,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'ሲምፕል',
     czen: 'Simple/Jednoduchý',
     cz: 'Jednoduchý',
+    sk: 'Jednoduchý',
     ar: 'بسيطه',
     ja: '簡単',
     ro: 'Simplu',
@@ -721,6 +749,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'ዲጂት',
     czen: 'Digits/Číselný',
     cz: 'Číselný',
+    sk: 'Číselný',
     ar: 'ارقام',
     ja: '数字',
     ro: 'Cifre',
@@ -745,6 +774,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'በተን',
     czen: 'Button/Tlačítko',
     cz: 'Tlačítko',
+    sk: 'Tlačidlo',
     رمي: 'زر',
     ja: 'ボタン',
     ro: 'Buton',
@@ -771,6 +801,7 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great, I will use this type of test then. Skvělé, budu používat tento typ testu.',
     cz: 'Skvělé, budu používat tento typ testu.',
+    sk: 'Skvelé, budem teda používať tento typ testu.',
     ar: 'تم سوف استخدم هذا النوع من الاختبار .',
     ja: 'はい、このタイプのテストを使います。',
     ro: 'Perfect, o să utilizez acest tip de test.',
@@ -809,6 +840,8 @@ Vyberte prosím typ testu pro nováčky:
       'Please, select how many seconds will newcomers get to complete the test before the kick. Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
     cz:
       'Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
+    sk:
+      'Vyberte, koľko sekúnd bude mať nováčik na splnenie testu predtým, ako bude vyhodený.',
     ar:
       'من فضلك، حدد عدد الثواني التي يمكن للأعضاء الجدد إكمال الاختبار خلالها قبل طردهم.',
     ja:
@@ -838,6 +871,7 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great, I will use this time limit then. Skvělé, budu používat tento časový limit.',
     cz: 'Skvělé, budu používat tento časový limit.',
+    sk: 'Skvelé, budem teda používať tento časový limit.',
     ar: 'عظيم، سأستخدم هذا الحد الزمني .',
     ja: 'はい、この時間制限を使います。',
     ro: 'Super, o să folosesc această limită de timp',
@@ -862,6 +896,7 @@ Vyberte prosím typ testu pro nováčky:
     am: 'ሰከንድ',
     czen: 'sec',
     cz: 's',
+    sk: 's',
     ar: 'ثانية',
     ja: '秒',
     ro: 'sec',
@@ -890,6 +925,7 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great! Now I will only react to commands sent by admins. Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     cz: 'Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
+    sk: 'Super! Odteraz budem reagovať iba na príkazy zadané správcami.',
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
     ja: '素晴らしいです！これで管理者によるコマンドしか受け付けません。',
     ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
@@ -917,6 +953,7 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great! Now I will react to commands sent by anybody. Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
+    sk: 'Super! Odteraz budem reagovať na príkazy zadané kýmkoľvek.',
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
     ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
@@ -957,6 +994,8 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
+    sk:
+      "Výborne! Odteraz nováčikovia nebudú môcť poslať nič okrem riešenia testu captcha, až kým neprejdú týmto testom.",
     ar:
       'رائع ! الآن الأعضاء الجدد لن يرسلوا أي شيء سوى حلول الإختبار حتى يجتازونه .',
     ja:
@@ -996,6 +1035,8 @@ Vyberte prosím typ testu pro nováčky:
     czen:
       'Great! Now newcomers will be able to send text before they pass captcha. Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
+    sk:
+      'Výborne! Odteraz nováčikovia budú môcť posielať textové správy predtým, ako prejdú testom captcha.',
     ar:
       'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
     ja:
@@ -1004,7 +1045,7 @@ Vyberte prosím typ testu pro nováčky:
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
   },
   simple_warning: {
-    ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
+    ruen:`, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
 
   Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
@@ -1041,7 +1082,8 @@ Vyberte prosím typ testu pro nováčky:
   Prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
     cz:
       ', prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
-
+    sk:
+      ', prosím, pošlite do tejto skupiny v stanovenom čase akúkoľvek správu, inak budete vyhodený/á. Ďakujem!',
     ar:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
     ja:
@@ -1087,7 +1129,8 @@ Vyberte prosím typ testu pro nováčky:
 please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
     cz:
       ', prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!',
-
+    sk:
+      ', prosím, pošlite do tejto skupiny v stanovenom čase výsledok matematického príkladu, inak budete vyhodený/á. Ďakujem!',
     ar:
       ', من فضلك، حل المعادلة الرياضية وإرسالها للدردشة قبل إنتهاء الوقت المحدد، وإلا سيتم طردك. شكرا!',
     ja:
@@ -1132,6 +1175,8 @@ please, send the solution to the arithmetic operation provided within the time a
 Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!`,
     cz:
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
+    sk:
+      ', prosím, stlačte tlačidlo nižšie v stanovenom čase, inak budete vyhodený/á. Ďakujem!',
     ar:
       ', من فضلك، اضغط على الزر أدناه ضمن المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
     ja:
@@ -1159,6 +1204,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'ቦት አይደለውም',
     czen: 'Not a bot. Nejsem bot.',
     cz: 'Nejsem bot.',
+    sk: 'Nie som bot',
     ar: 'أنا لست بوت',
     ja: '私はbotではありません。',
     ro: 'Nu sunt un bot',
@@ -1186,6 +1232,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Only the candidate for not being a bot can press this button. Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
+    sk: 'Toto tlačidlo môže stlačiť iba nováčik, ktorému bola správa adresovaná.',
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
     ja: 'botではない候補の人だけがボタンを押すことができます。',
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
@@ -1225,6 +1272,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now all newcomers will only be able to send usual text messages to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
     cz:
       'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
+    sk:
+      'Skvelé! Odteraz všetci nováčikovia budú môcť do tohto četu posielať iba obvyklé textové správy.',
     ar:
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين فقط على إرسال الرسائل النصية المعتادة إلى هذه الدردشة.',
     ja:
@@ -1266,6 +1315,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Great! Now all newcomers will be able to send any type of content to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     cz: 'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
+    sk:
+      'Skvelé! Odteraz všetci nováčikovia budú môcť do tohto četu posielať akýkoľvek obsah.',
     ar:
       'رائع ! الآن جميع الأعضاء الجدد سوف يكونون قادرين على إرسال أي نوع من المحتوى إلى هذه الدردشة.',
     ja:
@@ -1296,6 +1347,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Great! Now entry messages will be deleted. Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
+    sk: 'Výborne! Odteraz budú správy o vstupe nováčika do četu odstránené.',
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されます。',
     ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
@@ -1323,6 +1375,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Great! Now entry messages will not be deleted. Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
+    sk: 'Výborne! Odteraz nebudú správy o vstupe nováčika do četu odstránené.',
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されません。',
     ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
@@ -1365,6 +1418,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
+    sk:
+      'Super! Odteraz budú všetci nováčikovia, ktorí prešli testom, uvítaní. Odpovedzte na túto správu uvítacím textom, ktorý chcete použiť (môžete použiť $title a $username).',
     ar:
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username).',
     ja:
@@ -1410,6 +1465,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title and $username). The current greeting message follows. Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
+    sk:
+      'Super! Odteraz budú všetci nováčikovia, ktorí prešli testom, uvítaní. Odpovedzte na túto správu uvítacím textom, ktorý chcete použiť (môžete použiť $title a $username). Nasleduje aktuálna uvítacia správa.',
     ar:
       'رائع ! الآن سيتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار. الرجاء الرد على هذه الرسالة مع نص الترحيب الذي ترغب في استخدامه (يمكنك استخدام $title $username). فيما يلي رسالة الترحيب الحالية.',
     ja:
@@ -1444,6 +1501,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
+    sk: 'Super! Odteraz nováčikovia, ktorí prešli testom, nebudú uvítaní.',
     ar: 'تم ! الآن لن يتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار.',
     ja:
       '素晴らしいです！これで、このテストをパスして新しく参加された人は挨拶をされません。',
@@ -1469,6 +1527,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'ተቀብለናል',
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
+    sk: 'Prijaté!',
     ar: 'قبلت!',
     ja: '承認されました！',
     ro: 'Acceptat!',
@@ -1510,6 +1569,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     cz:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+    sk:
+      'Skvelé! Odteraz nováčikovia obdržia vlastnú správu vysvetľujúcu test captcha. Odpovedzte na túto správu textom testu captcha, ktorý chcete použiť (môžete použiť $title, $username, $equation a $seconds).',
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام  $title, $username, $equation and $seconds).',
     ja:
@@ -1556,6 +1617,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     cz:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+    sk:
+      'Skvelé! Odteraz nováčikovia obdržia vlastnú správu vysvetľujúcu test captcha. Odpovedzte na túto správu textom testu captcha, ktorý chcete použiť (môžete použiť $title, $username, $equation a $seconds). Nasleduje aktuálna uvítacia správa.',
     ar:
       'رائع الآن الأعضاء الجدد سيتلقون رسالة تشرح لهم طريقة اجراء الإختبار, قم بالرد مع رسالة الاختبار التي تريدها. يمكنك إستخدام $title, $username, $equation and $seconds). The current greeting message follows.',
     ja:
@@ -1585,6 +1648,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'Great! Now newcomers will see the default captcha message',
     czen: 'Great! Now newcomers will see the default captcha message',
     cz: 'Great! Now newcomers will see the default captcha message',
+    sk: 'Skvelé! Odteraz nováčikovia budú vidieť predvolenú správu testu captcha',
     ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
     ja:
       '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
@@ -1610,6 +1674,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'ተቀብለናል',
     czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
+    sk: 'Prijaté!',
     ar: 'قبلت!',
     ja: '承認されました！',
     ro: 'Acceptat!',
@@ -1636,6 +1701,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Nice! Users will be banned if they do not pass captcha. Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
+    sk: 'Fajn! Používatelia, ktorí neprejdú testom, budú zabanovaní.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
@@ -1663,6 +1729,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     czen:
       'Nice! Users will be kicked if they do not pass captcha. Skvělé! Nováčci, kteří neprojdou testem budou vyhozeni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
+    sk: 'Fajn! Používatelia, ktorí neprejdú testom, budú vyhodení.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
@@ -1705,6 +1772,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     cz:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
+    sk:
+      'Super! Shieldy odstráni správy o vstupe nováčikov do četu, ak neprejdú testom captcha.',
     ar:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ja:
@@ -1750,6 +1819,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     cz:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+    sk:
+      'Super! Shieldy neodstráni správy o vstupe nováčikov do četu, ak neprejdú testom captcha.',
     ar:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ja:
@@ -1778,6 +1849,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'Great! Shieldy will now use Combot Anti-Spam.',
     czen: 'Great! Shieldy will now use Combot Anti-Spam.',
     cz: 'Great! Shieldy will now use Combot Anti-Spam.',
+    sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
     ar: 'Great! Shieldy will now use Combot Anti-Spam.',
     ja: 'Great! Shieldy will now use Combot Anti-Spam.',
     ro: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -1803,6 +1875,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     am: 'Great! Shieldy will not use Combot Anti-Spam now.',
     czen: 'Great! Shieldy will not use Combot Anti-Spam now.',
     cz: 'Great! Shieldy will not use Combot Anti-Spam now.',
+    sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
     ar: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ja: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ro: 'Great! Shieldy will not use Combot Anti-Spam now.',
