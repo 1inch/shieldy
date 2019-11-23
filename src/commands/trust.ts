@@ -21,7 +21,7 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
         can_add_web_page_previews: true,
       })
     } catch (err) {
-      await report(bot, err, ctx)
+      await report(err)
     }
     // Unrestrict in shieldy
     ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
@@ -36,7 +36,7 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
       try {
         await ctx.telegram.deleteMessage(ctx.dbchat.id, candidate.messageId)
       } catch (err) {
-        await report(bot, err, ctx)
+        await report(err)
       }
       // Remove from candidates
       ctx.dbchat.candidates = ctx.dbchat.candidates.filter(

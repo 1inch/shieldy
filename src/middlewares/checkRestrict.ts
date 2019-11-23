@@ -28,9 +28,9 @@ export async function checkRestrict(
     message &&
     ((message.entities && message.entities.length) ||
       (message.caption_entities && message.caption_entities.length) ||
-      (message.forward_from ||
+      message.forward_from ||
         message.forward_date ||
-        message.forward_from_chat) ||
+        message.forward_from_chat ||
       message.document ||
       message.sticker ||
       message.photo ||
@@ -40,7 +40,7 @@ export async function checkRestrict(
     try {
       await ctx.telegram.deleteMessage(ctx.chat.id, message.message_id)
     } catch (err) {
-      await report(bot, err, ctx)
+      await report(err)
     }
   } else {
     next()

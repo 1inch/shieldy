@@ -1,40 +1,37 @@
 // Dependencies
-import Telegraf, { ContextMessageUpdate } from 'telegraf'
 import { checkIfErrorDismissable } from './error'
+import { bot } from './bot'
 
-export async function report(
-  bot: Telegraf<ContextMessageUpdate>,
-  error: Error,
-  ctx?: ContextMessageUpdate,
-  reason?: string
-) {
+let errorsToReport = []
+
+async function bulkReport() {
+  const tempErrorsToReport = errorsToReport
+  errorsToReport = []
+  const adminChatId = process.env.ADMIN
+  if (!adminChatId) {
+    return
+  }
+  if (tempErrorsToReport.length > 15) {
+    const reportText = tempErrorsToReport.reduce(
+      (prev, cur) => `${prev}${cur}\n`,
+      ''
+    )
+    const chunks = reportText.match(/[\s\S]{1,4000}/g)
+    for (const chunk of chunks) {
+      try {
+        await bot.telegram.sendMessage(adminChatId, chunk)
+      } catch (err) {
+        console.error(err)
+      }
+    }
+  }
+}
+
+setInterval(bulkReport, 60 * 1000)
+
+export async function report(error: Error, reason?: string) {
   if (checkIfErrorDismissable(error)) {
     return
   }
-  const adminChatId = process.env.ADMIN
-  if (!adminChatId) return
-  try {
-    await bot.telegram.sendMessage(
-      adminChatId,
-      `${reason ? `${reason}\n` : ''}<code>${error.message}</code>\n\n<code>${
-        error.stack
-      }</code>${
-        ctx
-          ? `${JSON.stringify(
-              ctx.message ||
-                ctx.channelPost ||
-                ctx.inlineQuery ||
-                ctx.callbackQuery,
-              undefined,
-              2
-            )}`
-          : ''
-      }`,
-      {
-        parse_mode: 'HTML',
-      } as any
-    )
-  } catch (err) {
-    console.error(err)
-  }
+  errorsToReport.push(`${reason ? `${reason}\n` : ''}${error.message}`)
 }

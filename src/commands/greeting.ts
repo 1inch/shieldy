@@ -74,7 +74,7 @@ export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
       )
     } catch (err) {
-      report(bot, err, ctx)
+      report(err)
     } finally {
       next()
     }
