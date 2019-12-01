@@ -89,7 +89,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         }
         // Restrict if requested
         if (chat.restrict) {
-          console.log('🤜 Restricting as well')
           try {
             const gotUser = (await ctx.telegram.getChatMember(
               chat.id,
@@ -124,21 +123,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           }
         }
       }
-      console.log(
-        `➕ Adding candidates to ${ctx.chat.id}: ${candidatesToAdd.map(c =>
-          c.id ? c.id : c
-        )}`
-      )
       chat.candidates = candidates.concat(candidatesToAdd)
       // Restrict if requested
       if (chat.restrict) {
         chat.restrictedUsers = chat.restrictedUsers.concat(candidatesToAdd)
       }
-      console.log(
-        `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
-          v.id ? v.id : v
-        )}`
-      )
       await chat.save()
       // Delete entry message if required
       if (chat.deleteEntryMessages) {
@@ -208,18 +197,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         await report(err)
       }
     }
-    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
       ctx.dbchat = await chat.save()
     } catch (err) {
       await report(err)
     }
-    console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
-        v.id ? v.id : v
-      )}`
-    )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
@@ -264,9 +247,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   })
   // Check button
   bot.action(/\d+~\d+/, async ctx => {
-    console.log(
-      `👻 Received callback query: ${ctx.chat.id}, ${ctx.callbackQuery.data}`
-    )
     const params = ctx.callbackQuery.data.split('~')
     const userId = parseInt(params[1])
     const chat = ctx.dbchat
@@ -281,7 +261,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     if (chat.candidates.map(c => c.id).indexOf(userId) < 0) {
       return
     }
-    console.log(`🔥 Removing ${userId} from candidates of ${ctx.chat.id}`)
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
@@ -289,11 +268,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     } catch (err) {
       await report(err)
     }
-    console.log(
-      `✅ Resulting candidates of ${ctx.chat.id}: ${chat.candidates.map(v =>
-        v.id ? v.id : v
-      )}`
-    )
     try {
       await ctx.telegram.deleteMessage(ctx.chat!.id, candidate.messageId)
     } catch (err) {
@@ -346,7 +320,6 @@ async function notifyCandidate(
 ) {
   const chat = ctx.dbchat
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
-  console.log(`notifying in ${chat.id}`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
@@ -374,7 +347,7 @@ async function notifyCandidate(
       return ctx.telegram.sendMessage(
         chat.id,
         text
-          .replace(/\$username/g, getUsername(ctx.from))
+          .replace(/\$username/g, getUsername(candidate))
           .replace(/\$title/g, (await ctx.getChat()).title)
           .replace(/\$equation/g, equation ? (equation.question as string) : '')
           .replace(/\$seconds/g, `${chat.timeGiven}`),
@@ -382,7 +355,7 @@ async function notifyCandidate(
       )
     } else {
       const message = chat.captchaMessage.message
-      message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+      message.text = `${getUsername(candidate)}\n\n${message.text}`
       return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
     }
   } else {
@@ -406,25 +379,17 @@ setInterval(async () => {
 
 let checking = false
 async function check() {
-  console.log('🤔 Checking candidates...')
   checking = true
   try {
     const chats = await findChatsWithCandidates()
-    console.log(`🙌 Got ${chats.length} chats with candidates`)
     for (const chat of chats) {
-      console.log(`🤖 Working on ${chat.id}`)
       const candidatesToDelete = []
       for (const candidate of chat.candidates) {
         const now = new Date().getTime()
         if (now - candidate.timestamp < chat.timeGiven * 1000) {
-          console.log(
-            `❌ Not kicking ${candidate.id} (${now -
-              candidate.timestamp}/${chat.timeGiven * 1000})`
-          )
           continue
         }
         try {
-          console.log(`💀 Kicking ${candidate.id}`)
           candidatesToDelete.push(candidate)
           if (chat.deleteEntryOnKick) {
             try {
@@ -457,11 +422,9 @@ async function check() {
       }
       const idsToDelete = candidatesToDelete.map(c => c.id)
       if (idsToDelete.length) {
-        console.log(`🔥 Removing ${idsToDelete}`)
         chat.candidates = chat.candidates.filter(
           c => idsToDelete.indexOf(c.id) < 0
         )
-        console.log(`✅ Resulting ids: ${chat.candidates}`)
         await chat.save()
       }
       // Check restrictions
@@ -473,11 +436,9 @@ async function check() {
       }
       const restrictedIdsToDelete = restrictedToDelete.map(c => c.id)
       if (restrictedIdsToDelete.length) {
-        console.log(`🔥 Removing from restrictions ${restrictedIdsToDelete}`)
         chat.restrictedUsers = chat.restrictedUsers.filter(
           c => restrictedIdsToDelete.indexOf(c.id) < 0
         )
-        console.log(`✅ Resulting restricted ids: ${chat.restrictedUsers}`)
         await chat.save()
       }
     }
