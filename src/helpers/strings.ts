@@ -628,128 +628,153 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
 • Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image
 
 Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простую арифметическую задачу`,
+• Цифровая — бот попросит решить простую арифметическую задачу
+• Картинкой — бот попросит распознать символы на картинке`,
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     ru: `Пожалуйста, выберите тип проверки новичков в чате:
 
 • Простая — бот попросит прислать что угодно в чат
 • Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простую арифметическую задачу`,
+• Цифровая — бот попросит решить простую арифметическую задачу
+• Картинкой — бот попросит распознать символы на картинке`,
     it: `Prego, seleziona uno dei seguenti test per i nuovi arrivati:
 
 • Semplice — Il bot chiederà di inviare qualcunque messaggio in chat
 • Bottone — Il bot chiederà di premere un pulsante
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     et: `Palun valige uustulnukute kontrolli tüüp:
 
 • Lihtne — bot küsib vestlusele midagi saata
-• Nuppuga — bot küsib nuppu klõpsata.`,
+• Nuppuga — bot küsib nuppu klõpsata.
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     uk: `Будь ласка, виберіть тип перевірки новачків у чаті:
 
 • Проста — бот просить надіслати що завгодно в чат
 • Кнопкою — бот просить натиснути на кнопку.
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     br: `Por favor, selecione o tipo de teste para os novatos:
 
 • Simples — o bot vai pedir para mandar alguma coisa no chat
 • Botão — o bot vai pedir para apertar um botão
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     tr: `Lütfen, yeni gelenler için test türünü seçin:
 
 • Basit — bot sohbet için bir şey göndermek isteyecektir
 • Düğme — bot bir düğmeye basılmasını isteyecektir
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image`,
     es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
 • Digitos — el bot pedirá resolver una ecuación simple
-• Digits — bot will ask to solve a simple arithmetic operation`,
+• Image — bot will ask to recognize characters on an image`,
     zh: `请为新人选择测试类型：
 
 •简单 — 机器人会要求向聊天发送任何内容
 •按钮 — 机器人将要求按下一个按钮
-•数字 — 机器人将要求解决一个简单的等式`,
+•数字 — 机器人将要求解决一个简单的等式
+• Image — bot will ask to recognize characters on an image`,
     no: `Vennligst velg testtypen for nykommere:
 
 • Enkel — botten vil spørre om å sende hva som helst i chatten
 • Knapp — botten vil spørre om å trykke en knapp
-• Tall — botten vil spørre om å løse et enkelt matteproblem`,
+• Tall — botten vil spørre om å løse et enkelt matteproblem
+• Image — bot will ask to recognize characters on an image`,
     de: `Bitte wähle aus, wie der Bot neue User testen wird:
 
 • Simpel — Der Bot wird fragen, irgendwas in den Chat zu senden
 • Knopf — Der Bot wird fragen, einen Knopf zu drücken
-• Nummern — Der Bot wird eine simple Mathe-Aufgabe stellen`,
+• Nummern — Der Bot wird eine simple Mathe-Aufgabe stellen
+• Image — bot will ask to recognize characters on an image`,
     tw: `請為新進成員選擇驗證類型：
 
 •簡單 — 機器人會要求在聊天室發送任何內容
 •按鈕 — 機器人將要求按下一個按鈕
-•數字 — 機器人將要求解答一個簡單的數學問題`,
+•數字 — 機器人將要求解答一個簡單的數學問題
+• Image — bot will ask to recognize characters on an image`,
     fr: `Veuillez sélectionner le type de test pour les nouveaux membres
 
 • Simple — Le bot demande d'envoyer une réponse à la conversation
 • Bouton — Le bot demande d'appuyer sur un bouton 
-• Chiffres — Le bot pose une simple équation`,
+• Chiffres — Le bot pose une simple équation
+• Image — bot will ask to recognize characters on an image`,
     id: `Silakan pilih jenis ujian untuk anggota baru:
 
 • Salam — bot akan meminta salam perkenalan
 • Tombol — bot akan meminta menekan tombol
-• Angka — bot akan meminta jawaban hitungan`,
+• Angka — bot akan meminta jawaban hitungan
+• Image — bot will ask to recognize characters on an image`,
     ko: `신규 입장자에 대한 테스트 유형을 선택하십시오:
 
 • 단순함 — 봇이 채팅에 어떤 것이든 보내달라고 할 수 있음
 • 버튼 — 봇이 버튼을 누르라고 요청함
-• 숫자 — 봇이 간단한 방정식을 풀라고 할 것이다.`,
+• 숫자 — 봇이 간단한 방정식을 풀라고 할 것이다.
+• Image — bot will ask to recognize characters on an image`,
     am: `Please, select the test type for the newcomers:
 
 • ሲምፕል — ቦቱ ማንኛውንም ጸሁፍ እንዲልኩ ይጠይቃል። 
 • በተን — ቦቱ በተን አንዲነካ ይጠይቃል።
-• ዲጂት — በቱ መልሰ ይጠየቃል።`,
+• ዲጂት — በቱ መልሰ ይጠየቃል።
+• Image — bot will ask to recognize characters on an image`,
     czen: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
 • Button — bot will ask to press a button
 • Digits — bot will ask to solve a simple arithmetic operation
+• Image — bot will ask to recognize characters on an image
 
 Vyberte prosím typ testu pro nováčky:
 
 • Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
 • Tlačítko — bot požádá o stisk tlačítka
-• Číselný — bot požádá o vyřešení jednoduchého příkladu`,
+• Číselný — bot požádá o vyřešení jednoduchého příkladu
+• Image — bot will ask to recognize characters on an image`,
     cz: `Vyberte prosím typ testu pro nováčky:
 
 • Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
 • Tlačítko — bot požádá o stisk tlačítka
-• Číselný — bot požádá o vyřešení jednoduchého příkladu`,
+• Číselný — bot požádá o vyřešení jednoduchého příkladu
+• Image — bot will ask to recognize characters on an image`,
     sk: `Vyberte typ testu pre nováčikov:
 
 • Jednoduchý — bot požiada o zaslanie akejkoľvek správy do četu
 • Tlačidlo — bot požiada o stlačenie tlačidla
-• Číselný — bot požiada o výsledok jednoduchého matematického príkladu`,
+• Číselný — bot požiada o výsledok jednoduchého matematického príkladu
+• Image — bot will ask to recognize characters on an image`,
     ar: `الرجاء تحديد نوع الاختبار للأعضاء الجدد:
 
 • بسيطة — سوف يطلب البوت لإرسال أي شيء إلى الدردشة
 • زر سوف يطلب البوت الضغط على زرالشرطة
-• أرقام — سوف يطلب البوت حل معادلة بسيطة`,
+• أرقام — سوف يطلب البوت حل معادلة بسيطة
+• Image — bot will ask to recognize characters on an image`,
     ja: `新しく参加した人へのテストの種類を選択してください’
 
 • シンプル — botが何か発言してくださいと尋ねます
 • ボタン — botがボタンを押してくださいとお願いします
-• 数字 — botが簡単な算数の問題を解いてくださいと尋ねます`,
+• 数字 — botが簡単な算数の問題を解いてくださいと尋ねます
+• Image — bot will ask to recognize characters on an image`,
     ro: `Selectează tipul de test pentru nou veniți:
 
 • Simplu — bot-ul va cere userului să trimită orice în chat
 • Buton — bot-ul va cere userului să apese un buton
-• Cifre — bot-ul va cere userului să rezolve o simplă operație aritmetică`,
+• Cifre — bot-ul va cere userului să rezolve o simplă operație aritmetică
+• Image — bot will ask to recognize characters on an image`,
   },
   simple: {
     ruen: 'Simple/Простая',
@@ -825,6 +850,31 @@ Vyberte prosím typ testu pro nováčky:
     رمي: 'زر',
     ja: 'ボタン',
     ro: 'Buton',
+  },
+  image: {
+    ruen: 'Image/Картинкой',
+    en: 'Image',
+    ru: 'Картинкой',
+    it: 'Image',
+    et: 'Image',
+    uk: 'Image',
+    br: 'Image',
+    tr: 'Image',
+    es: 'Image',
+    zh: 'Image',
+    no: 'Image',
+    de: 'Image',
+    tw: 'Image',
+    fr: 'Image',
+    id: 'Image',
+    ko: 'Image',
+    am: 'Image',
+    czen: 'Image',
+    cz: 'Image',
+    sk: 'Image',
+    رمي: 'Image',
+    ja: 'Image',
+    ro: 'Image',
   },
   captcha_selected: {
     ruen:
@@ -1230,6 +1280,53 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       '指定された時間内に、下に表示されたボタンを押してください。そうしないと、退出させられます。ありがとうございます！',
     ro:
       ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
+  },
+  image_warning: {
+    ruen: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!
+
+Пожалуйста, отправьте цифры с картинки в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
+    en:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ru:
+      ', пожалуйста, отправьте цифры с картинки в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    it:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    et:
+      ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
+    uk:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    br:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    tr:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    es:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    zh:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    no:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    de:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    tw:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    fr: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
+    id:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ko:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    am:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    czen: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
+    cz:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    sk:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ar:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ja:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+    ro:
+      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
   },
   captcha_button: {
     ruen: 'Not a bot. Не бот.',

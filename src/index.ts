@@ -24,6 +24,7 @@ import { setupBanUsers } from './commands/banUsers'
 import { messageSaver } from './middlewares/messageSaver'
 import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
 import { setupCAS } from './commands/cas'
+import { getImageCaptcha } from './helpers/captcha'
 
 // Check time
 bot.use(checkTime)

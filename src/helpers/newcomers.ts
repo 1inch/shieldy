@@ -15,6 +15,7 @@ import { checkIfErrorDismissable } from './error'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { generateEquation } from './equation'
 import { checkCAS } from './cas'
+import { getImageCaptcha } from './captcha'
 
 export let globalyRestricted = []
 
@@ -71,9 +72,13 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             chat.captchaType === CaptchaType.DIGITS
               ? generateEquation()
               : undefined
+          const image =
+            chat.captchaType === CaptchaType.IMAGE
+              ? await getImageCaptcha()
+              : undefined
           let message
           try {
-            message = await notifyCandidate(ctx, member, equation)
+            message = await notifyCandidate(ctx, member, equation, image)
           } catch (err) {
             await report(err)
           }
@@ -85,6 +90,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
             equation,
             entryChatId: ctx.chat.id,
             entryMessageId: ctx.message.message_id,
+            imageText: image ? image.text : undefined,
           })
         }
         // Restrict if requested
@@ -172,6 +178,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     if (chat.captchaType === CaptchaType.BUTTON && chat.strict) {
       return ctx.deleteMessage()
+    } else if (chat.captchaType === CaptchaType.BUTTON) {
+      return
     }
     const candidate = chat.candidates.filter(c => c.id === userId).pop()
     if (
@@ -197,6 +205,27 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         await report(err)
       }
     }
+    if (candidate.captchaType === CaptchaType.IMAGE) {
+      if (
+        !ctx.message ||
+        !ctx.message.text ||
+        !ctx.message.text.includes(candidate.imageText)
+      ) {
+        try {
+          await ctx.deleteMessage()
+        } catch (err) {
+          await report(err)
+        }
+        return next()
+      } else {
+        try {
+          await ctx.deleteMessage()
+        } catch (err) {
+          await report(err)
+        }
+      }
+    }
+    // Passed the captcha
     chat.candidates = chat.candidates.filter(c => c.id !== userId)
     try {
       ctx.dbchat = await chat.save()
@@ -316,7 +345,8 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
 async function notifyCandidate(
   ctx: ContextMessageUpdate,
   candidate: User,
-  equation: Equation
+  equation?: Equation,
+  image?: { png: Buffer; text: string }
 ) {
   const chat = ctx.dbchat
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
@@ -344,29 +374,48 @@ async function notifyCandidate(
       text.includes('$equation') ||
       text.includes('$seconds')
     ) {
-      return ctx.telegram.sendMessage(
-        chat.id,
-        text
-          .replace(/\$username/g, getUsername(candidate))
-          .replace(/\$title/g, (await ctx.getChat()).title)
-          .replace(/\$equation/g, equation ? (equation.question as string) : '')
-          .replace(/\$seconds/g, `${chat.timeGiven}`),
-        extra as ExtraReplyMessage
-      )
+      const textToSend = text
+        .replace(/\$username/g, getUsername(candidate))
+        .replace(/\$title/g, (await ctx.getChat()).title)
+        .replace(/\$equation/g, equation ? (equation.question as string) : '')
+        .replace(/\$seconds/g, `${chat.timeGiven}`)
+      if (image) {
+        return ctx.replyWithPhoto(image.png as any, {
+          caption: textToSend,
+          parse_mode: 'Markdown',
+        })
+      } else {
+        return ctx.telegram.sendMessage(
+          chat.id,
+          textToSend,
+          extra as ExtraReplyMessage
+        )
+      }
     } else {
       const message = chat.captchaMessage.message
       message.text = `${getUsername(candidate)}\n\n${message.text}`
       return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
     }
   } else {
-    return ctx.replyWithMarkdown(
-      `${
-        chat.captchaType === CaptchaType.DIGITS ? `(${equation.question}) ` : ''
-      }[${getUsername(candidate)}](tg://user?id=${
-        candidate.id
-      })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
-      extra
-    )
+    if (image) {
+      return ctx.replyWithPhoto(image.png as any, {
+        caption: `[${getUsername(candidate)}](tg://user?id=${
+          candidate.id
+        })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+        parse_mode: 'Markdown',
+      })
+    } else {
+      return ctx.replyWithMarkdown(
+        `${
+          chat.captchaType === CaptchaType.DIGITS
+            ? `(${equation.question}) `
+            : ''
+        }[${getUsername(candidate)}](tg://user?id=${
+          candidate.id
+        })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+        extra
+      )
+    }
   }
 }
 
@@ -454,5 +503,5 @@ function getUsername(user: User) {
     user.username
       ? `@${user.username}`
       : `${user.first_name}${user.last_name ? ` ${user.last_name}` : ''}`
-  }`
+  }`.replace('_', '')
 }

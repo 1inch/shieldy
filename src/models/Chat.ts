@@ -32,6 +32,7 @@ export enum CaptchaType {
   SIMPLE = 'simple',
   DIGITS = 'digits',
   BUTTON = 'button',
+  IMAGE = 'image',
 }
 
 export class Equation {
@@ -51,6 +52,8 @@ export class Candidate {
 
   @prop()
   equation?: Equation
+  @prop()
+  imageText?: string
 
   @prop()
   entryMessageId?: number
