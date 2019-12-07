@@ -9,7 +9,9 @@ export async function getImageCaptcha() {
     noise: 2,
   })
   return {
-    png: await convert(catpcha.data),
+    png: await convert(catpcha.data, {
+      puppeteer: { args: ['--no-sandbox', '--disable-setuid-sandbox'] },
+    }),
     text: catpcha.text,
   }
 }
