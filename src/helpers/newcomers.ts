@@ -80,6 +80,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           try {
             message = await notifyCandidate(ctx, member, equation, image)
           } catch (err) {
+            console.error(err)
             await report(err)
           }
           candidatesToAdd.push({
