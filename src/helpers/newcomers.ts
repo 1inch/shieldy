@@ -80,7 +80,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           try {
             message = await notifyCandidate(ctx, member, equation, image)
           } catch (err) {
-            console.error(err)
             await report(err)
           }
           candidatesToAdd.push({
@@ -381,8 +380,7 @@ async function notifyCandidate(
         .replace(/\$equation/g, equation ? (equation.question as string) : '')
         .replace(/\$seconds/g, `${chat.timeGiven}`)
       if (image) {
-        console.log('replying with image', textToSend)
-        return ctx.replyWithPhoto(image.png as any, {
+        return ctx.replyWithPhoto({ source: image.png } as any, {
           caption: textToSend,
           parse_mode: 'Markdown',
         })
@@ -400,13 +398,7 @@ async function notifyCandidate(
     }
   } else {
     if (image) {
-      console.log(
-        'replying with image 2',
-        `[${getUsername(candidate)}](tg://user?id=${
-          candidate.id
-        })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`
-      )
-      return ctx.replyWithPhoto(image.png as any, {
+      return ctx.replyWithPhoto({ source: image.png } as any, {
         caption: `[${getUsername(candidate)}](tg://user?id=${
           candidate.id
         })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,

@@ -24,7 +24,6 @@ import { setupBanUsers } from './commands/banUsers'
 import { messageSaver } from './middlewares/messageSaver'
 import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
 import { setupCAS } from './commands/cas'
-import { getImageCaptcha } from './helpers/captcha'
 
 // Check time
 bot.use(checkTime)
@@ -53,16 +52,6 @@ setupDeleteEntryOnKick(bot)
 setupCAS(bot)
 // Newcomers logic
 setupNewcomers(bot)
-
-bot.command('test', async ctx => {
-  const image = await getImageCaptcha()
-  await ctx.replyWithPhoto(
-    { source: image.png },
-    {
-      caption: image.text,
-    }
-  )
-})
 
 // Catch
 bot.catch(console.log)
