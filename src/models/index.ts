@@ -9,3 +9,4 @@ mongoose.connect(process.env.MONGO, {
 
 // Export models
 export * from './Chat'
+export * from './CappedMessage'

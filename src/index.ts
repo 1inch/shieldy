@@ -21,6 +21,9 @@ import { setupCaptchaMessage } from './commands/captchaMessage'
 import { setupTestLocales } from './commands/testLocales'
 import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
 import { setupBanUsers } from './commands/banUsers'
+import { messageSaver } from './middlewares/messageSaver'
+import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
+import { setupCAS } from './commands/cas'
 
 // Check time
 bot.use(checkTime)
@@ -28,6 +31,8 @@ bot.use(checkTime)
 bot.use(attachUser)
 // Check if restricted
 bot.use(checkRestrict)
+// Setup message saver
+bot.use(messageSaver)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)
@@ -43,6 +48,8 @@ setupCaptchaMessage(bot)
 setupTestLocales(bot)
 setupDeleteGreetingTime(bot)
 setupBanUsers(bot)
+setupDeleteEntryOnKick(bot)
+setupCAS(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

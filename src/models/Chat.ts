@@ -23,12 +23,16 @@ export enum Language {
   CZECH = 'cz',
   CZECHLISH = 'czen',
   ARABIC = 'ar',
+  JAPANESE = 'ja',
+  ROMANIAN = 'ro',
+  SLOVAK = 'sk',
 }
 
 export enum CaptchaType {
   SIMPLE = 'simple',
   DIGITS = 'digits',
   BUTTON = 'button',
+  IMAGE = 'image',
 }
 
 export class Equation {
@@ -48,6 +52,13 @@ export class Candidate {
 
   @prop()
   equation?: Equation
+  @prop()
+  imageText?: string
+
+  @prop()
+  entryMessageId?: number
+  @prop()
+  entryChatId?: number
 }
 
 export class MessageWrapper {
@@ -60,13 +71,13 @@ export class Chat extends Typegoose {
   id: number
   @prop({ required: true, enum: Language, default: Language.ENGLISH })
   language: Language
-  @prop({ required: true, enum: CaptchaType, default: CaptchaType.SIMPLE })
+  @prop({ required: true, enum: CaptchaType, default: CaptchaType.DIGITS })
   captchaType: CaptchaType
   @prop({ required: true, default: 60 })
   timeGiven: number
   @prop({ required: true, default: false })
   adminLocked: boolean
-  @prop({ required: true, default: false })
+  @prop({ required: true, default: true })
   restrict: boolean
   @prop({ required: true, default: false })
   deleteEntryMessages: boolean
@@ -82,12 +93,16 @@ export class Chat extends Typegoose {
   customCaptchaMessage: boolean
   @prop()
   captchaMessage?: MessageWrapper
-  @prop({ required: true, default: false })
+  @prop({ required: true, default: true })
   strict: boolean
   @prop()
   deleteGreetingTime?: number
   @prop({ required: true, default: false })
   banUsers: boolean
+  @prop({ required: true, default: false })
+  deleteEntryOnKick: boolean
+  @prop({ required: true, default: true })
+  cas: boolean
 }
 
 // Get Chat model
