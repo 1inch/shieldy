@@ -237,7 +237,7 @@ id: `Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu deng
 /trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 
-Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
+Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!`,
   },
   language: {
     ruen: 'Please, select the language. Пожалуйста, выберите язык.',
@@ -509,7 +509,7 @@ id: 'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi s
     de: 'sek',
     tw: '秒',
     fr: 'sec',
-id: 'det',
+id: 'detik',
   },
   lock_true: {
     ruen:
