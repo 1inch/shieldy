@@ -18,7 +18,7 @@ export class CappedMessage extends Typegoose {
 export const CappedMessageModel = new CappedMessage().getModelForClass(
   CappedMessage,
   {
-    schemaOptions: { timestamps: true, capped: 100 * 1024 * 1024 },
+    schemaOptions: { timestamps: true, capped: 1000 * 1024 },
   }
 )
 
