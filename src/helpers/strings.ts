@@ -23,6 +23,7 @@ export const localizations = {
 /deleteEntryMessages — delete messages about user entry
 /greeting — greet users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -45,6 +46,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/ban — то же, что и trust, но наоборот
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
 /deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
@@ -67,6 +69,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -88,6 +91,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/ban — то же, что и trust, но наоборот
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
 /deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
@@ -110,6 +114,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryMessages — cancella i messaggi d'ingresso dei nuovi membri
 /greeting — dai il benvenuto ad un utente se passa il captcha
 /trust — rispondi con questo messaggio ad un utente che non vuoi che controlli
+/ban — same as trust, but the opposite
 /strict — usa questo comando quando non vuoi che i nuovi utenti inviino messaggi prima che passino il captcha
 /customCaptchaMessage — imposta un messaggio del captcha personalizzato
 /deleteGreetingTime — imposta in quanto tempo in secondi il messaggio di benvenuto debba essere eliminato, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
@@ -131,6 +136,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -152,6 +158,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -173,6 +180,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
 /greeting — congratula o usuário que passou no teste
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -183,7 +191,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-      tr: `Shieldy - Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:
+    tr: `Shieldy - Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:
 /help — Bu iletiyi görüntüler
 /language — Dili değiştirir
 /captcha — Kullanılan CAPTCHA biçimini değiştirir
@@ -193,6 +201,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — Kullanıcı girişi ile ilgili mesajları siler
 /greeting — Testi geçen kullanıcıları selamlar
 /trust — Bu komutla kullanıcı tarafından gönderilen kontrol etmek istemediğiniz bir mesajı yanıtlayın
+/ban — same as trust, but the opposite
 /strict — Yeni gelenlerin mesajlarını almak istemediğiniz zaman kullanın. Ancak CAPTCHA, testi geçene kadar çözüm sunar.
 /customCaptchaMessage — Özel CAPTCHA mesajınızı ayarlayın
 /deleteGreetingTime — Shieldy'nin selamlamasını \`/deleteGreetingTime 100\` gibi kaç saniye içinde sileceğini ayarlayın, 0 yaparak sıfırlayabilirsin.
@@ -212,6 +221,7 @@ Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına bu
 /deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
 /greeting — saluda a los mensajes que pasan el test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -233,6 +243,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 删除有关用户加入的消息
 /greeting — 迎接通过测试的用户
 /trust — 使用此命令回复用户发送的您不想检查的消息
+/ban — same as trust, but the opposite
 /strict — 当你不希望收到任何新手的消息但使用验证码解决方案直到他们通过验证码时使用
 /customCaptchaMessage — 设置自定义验证码消息
 /deleteGreetingTime — 设置多少秒删除Shieldy的欢迎消息，像\`/deleteGreetingTime 100\`, 设置为0重置
@@ -254,6 +265,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — sletter meldinger om brukerens adkomst
 /greeting — sender en velkomst når en bruker består testen
 /trust — svar med denne kommandoen til en melding sendt av en bruker du ikke vil skal sjekkes
+/ban — same as trust, but the opposite
 /strict — bruk når du ikke vil motta nykommernes meldinger untatt captcha løsninger før de har bestått testen
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -275,6 +287,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — löscht die Beitrittsnachricht über neue User im Kanal z.B. "User xxx ist beigetreten"
 /greeting — begrüßt die User, welche den Test bestehen
 /trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
+/ban — same as trust, but the opposite
 /strict — benutze dieses Kommando, wenn du keine Beitrittsnachricht für neue User bekommen möchtest, bis sie den Captcha Test bestanden haben
 /customCaptchaMessage — eigene Captcha Nachricht anlegen 
 /deleteGreetingTime — hier kannst du einstellen, wann die Willkommens Nachricht von Shieldy gelöscht werden soll. \`/deleteGreetingTime 100\`, zurück setzen kannst du dies mit dem Wert "0"
@@ -296,6 +309,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 刪除有關新進成員加入的系統消息
 /greeting — 給通過驗證的用戶發歡迎詞
 /trust — 使用此指令回復任何您信任不想驗證的成員
+/ban — same as trust, but the opposite
 /strict — 限制新進成員在通過驗證前不能發任何消息
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -317,6 +331,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres
 /greeting — Accueillir les utilisateurs qui passent le test 
 /trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
+/ban — same as trust, but the opposite
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -338,6 +353,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — hapus pesan sambutan pada anggota baru
 /greeting — pesan sambutan pada anggota baru yg lolos ujian
 /trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian
+/ban — same as trust, but the opposite
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -359,6 +375,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 사용자 항목에 대한 메시지 삭제
 /greeting – 테스트에 통과한 사람에게 환영 인사
 /trust — 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
+/ban — same as trust, but the opposite
 /strict — 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -380,6 +397,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /greeting — ተጠቃሚው ካፕቻ ካለፈ የሚኖር ሜሴጅ
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -401,6 +419,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -421,6 +440,7 @@ Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spamm
 /deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/ban — same as trust, but the opposite
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -442,6 +462,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/ban — same as trust, but the opposite
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -463,6 +484,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — odstráni správu o vstupe nováčika do skupiny
 /greeting — pozdrav pre používateľov, ktorí prejdú testom
 /trust — odpovedzte týmto príkazom na správu používateľa, ktorého nechcete kontrolovať
+/ban — same as trust, but the opposite
 /strict — použite, ak nechcete prijímať žiadne správy pre nováčikov okrem riešení testu captcha, pokým ním neprejdú
 /customCaptchaMessage — nastavenie vlastnej správy testu captcha
 /deleteGreetingTime — nastavenie, kedy sa má odstrániť pozdrav Shieldyho v sekundách, napr. \`/deleteGreetingTime 100\`; resetuje sa tak, že ho nastavíte na 0
@@ -484,6 +506,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — حذف رسائل دخول الأعضاء
 /greeting — يقوم بتحية المستخدمين الذين يجتازون الاختبار
 /trust — اختر هذا الخيار لإضافة اعضاء لا ترغب في ان يخوضوا الإختبار
+/ban — same as trust, but the opposite
 /strict — اختر هذا اذا كنت تريد تفعيل البوت لإجراء اختبار للأعضاء الجدد 
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -505,6 +528,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — ユーザーが参加した情報を削除する
 /greeting — テストを通過した人に挨拶をする
 /trust —チェックしたくないユーザーからのメッセージに対してこのコマンドで返事をする
+/ban — same as trust, but the opposite
 /strict — 新しく参加した人がキャプチャをパスするまで、メッセージではなくキャプチャソリューションを受け取りたい時に使う
 /customCaptchaMessage — キャプチャのメッセージをカスタマイズする
 /deleteGreetingTime —  \`/deleteGreetingTime 100\のように何秒間でShieldyのメッセージが消えるかを設定する。0に設定することでリセットされる
@@ -528,6 +552,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — șterge mesajele despre userii ce intră în grup
 /greeting — salută utilizatorii ce au trecut testul
 /trust — raspunde cu această comanda unui mesaj trimis de un user pe care doresti să nu îl verifice bot-ul
+/ban — same as trust, but the opposite
 /strict — utilizează atunci când dorești sa nu primești nici un mesaj din partea userilor noi, ci doar soluții captcha până când aceștia trec de captcha
 /customCaptchaMessage — setează mesaj captcha custom
 /deleteGreetingTime — setează când se ștearge salutul lui Shieldy în secunde, precum \`/deleteGreetingTime 100\`. resetează setând valoarea 0
