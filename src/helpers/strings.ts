@@ -361,7 +361,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 
-Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
+Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
     ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy\\_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
@@ -1010,7 +1010,7 @@ Vyberte prosím typ testu pro nováčky:
     de: 'sek',
     tw: '秒',
     fr: 'sec',
-    id: 'det',
+    id: 'detik',
     ko: '초',
     am: 'ሰከንድ',
     czen: 'sec',
