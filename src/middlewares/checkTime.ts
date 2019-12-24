@@ -16,10 +16,8 @@ export async function checkTime(ctx: ContextMessageUpdate, next: () => any) {
       }
       break
     case 'inline_query':
-      next()
-      break
+      return next()
     default:
-      next()
-      break
+      return next()
   }
 }
