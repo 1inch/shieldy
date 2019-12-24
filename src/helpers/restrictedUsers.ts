@@ -12,14 +12,10 @@ export async function modifyRestrictedUsers(
   await lock.acquire()
   try {
     if (add) {
-      // Only add candidates
-      const candidates = candidatesAndUsers.filter(
-        v => v instanceof Candidate
-      ) as Candidate[]
       const candidatesIds = chat.restrictedUsers.map(c => c.id)
-      for (const candidate of candidates) {
+      for (const candidate of candidatesAndUsers) {
         if (!candidatesIds.includes(candidate.id)) {
-          chat.restrictedUsers.push(candidate)
+          chat.restrictedUsers.push(candidate as Candidate)
         }
       }
     } else {
