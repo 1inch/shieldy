@@ -17,6 +17,11 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     if (!admins.map(a => a.user.id).includes(ctx.from.id)) {
       return
     }
+    // Check permissions
+    const admin = admins.find(v => v.user.id === ctx.from.id)
+    if (!admin.can_restrict_members) {
+      return
+    }
     // Ban in Telegram
     await ctx.telegram.kickChatMember(ctx.dbchat.id, repliedId)
     // Unrestrict in shieldy
