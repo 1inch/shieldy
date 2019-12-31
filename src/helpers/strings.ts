@@ -23,6 +23,7 @@ export const localizations = {
 /deleteEntryMessages — delete messages about user entry
 /greeting — greet users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -45,6 +46,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/ban — то же, что и trust, но наоборот
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
 /deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
@@ -67,6 +69,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -88,6 +91,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — удалять сообщения о входе пользователей в чат
 /greeting — встречать прошедших проверку пользователей сообщением
 /trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
+/ban — то же, что и trust, но наоборот
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
 /deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
@@ -110,6 +114,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryMessages — cancella i messaggi d'ingresso dei nuovi membri
 /greeting — dai il benvenuto ad un utente se passa il captcha
 /trust — rispondi con questo messaggio ad un utente che non vuoi che controlli
+/ban — same as trust, but the opposite
 /strict — usa questo comando quando non vuoi che i nuovi utenti inviino messaggi prima che passino il captcha
 /customCaptchaMessage — imposta un messaggio del captcha personalizzato
 /deleteGreetingTime — imposta in quanto tempo in secondi il messaggio di benvenuto debba essere eliminato, ad esempio \`/deleteGreetingTime 100\`, resettalo impostandolo a 0
@@ -131,6 +136,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -152,6 +158,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -173,6 +180,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — deleta a mensagem de entrada do usuário
 /greeting — congratula o usuário que passou no teste
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -183,27 +191,25 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-    tr: `Shieldy — Can sıkıcı spam göndericilerle savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister. Aksi takdirde onları kovar. Bu çok kolay. @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. Hepsi bu kadar! Davranışı ayrıca aşağıdaki komutlarla da ayarlayabilirsiniz:
-
-/help — bu mesajı gösterir
-/language — dili değiştirir
-/captcha — kullanılan captcha türünü değiştirir
-/timeLimit — yeni gelenlere verilen zaman miktarını değiştirir
-/lock — komutları yalnızca yöneticiler tarafından erişilebilir hale getirir
-/restrict — yeni gelenleri ilk 24 saatte yalnızca metin mesajı göndermeleri için kısıtlar
-/deleteEntryMessages — kullanıcı girişi ile ilgili mesajları sil
-/greeting — testi geçiren kullanıcıları selamlar
-/trust — reply with this command to a message sent by user that you don't want to check
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
-
-Hala sorularınız mı var? Destek kanalına göz atın: — @borodutch\\_support. Shieldy açık kaynaklıdır ve kod [burada](https://github.com/backmeupplz/shieldy) bulunabilir. Teşekkürler!
-
-P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
+    tr: `Shieldy - Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:
+/help — Bu iletiyi görüntüler
+/language — Dili değiştirir
+/captcha — Kullanılan CAPTCHA biçimini değiştirir
+/timeLimit — Yeni gelenlere verilen zaman süresini değiştirir
+/lock — Komutları yalnızca yöneticiler tarafından erişilebilir hale getirir
+/restrict — Yeni gelenleri ilk 24 saat yalnızca metin mesajı göndermeleri için kısıtlar
+/deleteEntryMessages — Kullanıcı girişi ile ilgili mesajları siler
+/greeting — Testi geçen kullanıcıları selamlar
+/trust — Bu komutla kullanıcı tarafından gönderilen kontrol etmek istemediğiniz bir mesajı yanıtlayın
+/ban — same as trust, but the opposite
+/strict — Yeni gelenlerin mesajlarını almak istemediğiniz zaman kullanın. Ancak CAPTCHA, testi geçene kadar çözüm sunar.
+/customCaptchaMessage — Özel CAPTCHA mesajınızı ayarlayın
+/deleteGreetingTime — Shieldy'nin selamlamasını \`/deleteGreetingTime 100\` gibi kaç saniye içinde sileceğini ayarlayın, 0 yaparak sıfırlayabilirsin.
+/banUsers — Kullanıcıların yasaklanacağını mı yoksa kovulacağını mı ayarlayın
+/deleteEntryOnKick — CAPTCHA'dan başarısız olan kullanıcıların girdiği mesajların silinip silinmeyeceğini ayarlayın
+/cas — Combot Anti-Spam'ın kullanılıp kullanılmayacağını ayarlayın
+Hala sorularınız mı var? Destek kanalını kontrol edin: @borodutch\\_support. Shieldy'in kodu açık kaynaklıdır ve [buradan](https://github.com/backmeupplz/shieldy) erişilebilir. Teşekkür ederiz!
+Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına buradan](https://github.com/sponsors/backmeupplz) bağış yapın.`,
     es: `Shieldy — es la mejor solución en Telegram para luchar los molestos spammers. Pide a los recién llegados hacer una serie de acciones en un tiempo determinado, si no lo hacen los expulsa. Así de fácil. Asegúrate de que @shieldy\\_bot es administrador en el chat y listo! También puedes personalizar más su comportamiento con los siguientes comandos:
 
 /help — muestra este mensaje
@@ -215,6 +221,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
 /greeting — saluda a los mensajes que pasan el test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -236,6 +243,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 删除有关用户加入的消息
 /greeting — 迎接通过测试的用户
 /trust — 使用此命令回复用户发送的您不想检查的消息
+/ban — same as trust, but the opposite
 /strict — 当你不希望收到任何新手的消息但使用验证码解决方案直到他们通过验证码时使用
 /customCaptchaMessage — 设置自定义验证码消息
 /deleteGreetingTime — 设置多少秒删除Shieldy的欢迎消息，像\`/deleteGreetingTime 100\`, 设置为0重置
@@ -257,6 +265,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — sletter meldinger om brukerens adkomst
 /greeting — sender en velkomst når en bruker består testen
 /trust — svar med denne kommandoen til en melding sendt av en bruker du ikke vil skal sjekkes
+/ban — same as trust, but the opposite
 /strict — bruk når du ikke vil motta nykommernes meldinger untatt captcha løsninger før de har bestått testen
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -278,6 +287,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — löscht die Beitrittsnachricht über neue User im Kanal z.B. "User xxx ist beigetreten"
 /greeting — begrüßt die User, welche den Test bestehen
 /trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
+/ban — same as trust, but the opposite
 /strict — benutze dieses Kommando, wenn du keine Beitrittsnachricht für neue User bekommen möchtest, bis sie den Captcha Test bestanden haben
 /customCaptchaMessage — eigene Captcha Nachricht anlegen 
 /deleteGreetingTime — hier kannst du einstellen, wann die Willkommens Nachricht von Shieldy gelöscht werden soll. \`/deleteGreetingTime 100\`, zurück setzen kannst du dies mit dem Wert "0"
@@ -299,6 +309,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 刪除有關新進成員加入的系統消息
 /greeting — 給通過驗證的用戶發歡迎詞
 /trust — 使用此指令回復任何您信任不想驗證的成員
+/ban — same as trust, but the opposite
 /strict — 限制新進成員在通過驗證前不能發任何消息
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -320,6 +331,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres
 /greeting — Accueillir les utilisateurs qui passent le test 
 /trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
+/ban — same as trust, but the opposite
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -341,6 +353,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — hapus pesan sambutan pada anggota baru
 /greeting — pesan sambutan pada anggota baru yg lolos ujian
 /trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian
+/ban — same as trust, but the opposite
 /strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -348,7 +361,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 
-Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbukan dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
+Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
     ko: `Shieldy 는 짜증나는 스패머들에 대응하기 위한 최고의 해결책입니다. 이 봇은 신규 입장자들에게 정해진 시간내에 정해진 행동을 실행하도록 요청하고, 정해진 행동을 하지 않으면 그들을 자동 추방시킵니다. 사용법은 정말 간단합니다.@shieldy\\_bot 가 채팅 그룹에서 관리자인지 확인을 하십시오. 모든 준비는 끝났습니다.!아래와 같은 명령을 사용하여 추가로 설정할 수도 있습니다:
@@ -362,6 +375,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — 사용자 항목에 대한 메시지 삭제
 /greeting – 테스트에 통과한 사람에게 환영 인사
 /trust — 사용자가 확인하지 않으려는 메시지에 이 명령으로 회신
+/ban — same as trust, but the opposite
 /strict — 새로 온 사람의 메시지를 받지 않고 captcha 솔루션이 captcha를 통과할 때까지 수신하고 싶을 때 사용하십시오.
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -383,6 +397,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /greeting — ተጠቃሚው ካፕቻ ካለፈ የሚኖር ሜሴጅ
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — አዲስ ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -404,6 +419,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — delete messages about user entry
 /greeting — greets users who pass the test
 /trust — reply with this command to a message sent by user that you don't want to check
+/ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -424,6 +440,7 @@ Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spamm
 /deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/ban — same as trust, but the opposite
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -445,6 +462,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
 /greeting — pozdraví nováčky, kteří projdou testem
 /trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
+/ban — same as trust, but the opposite
 /strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -466,6 +484,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — odstráni správu o vstupe nováčika do skupiny
 /greeting — pozdrav pre používateľov, ktorí prejdú testom
 /trust — odpovedzte týmto príkazom na správu používateľa, ktorého nechcete kontrolovať
+/ban — same as trust, but the opposite
 /strict — použite, ak nechcete prijímať žiadne správy pre nováčikov okrem riešení testu captcha, pokým ním neprejdú
 /customCaptchaMessage — nastavenie vlastnej správy testu captcha
 /deleteGreetingTime — nastavenie, kedy sa má odstrániť pozdrav Shieldyho v sekundách, napr. \`/deleteGreetingTime 100\`; resetuje sa tak, že ho nastavíte na 0
@@ -487,6 +506,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — حذف رسائل دخول الأعضاء
 /greeting — يقوم بتحية المستخدمين الذين يجتازون الاختبار
 /trust — اختر هذا الخيار لإضافة اعضاء لا ترغب في ان يخوضوا الإختبار
+/ban — same as trust, but the opposite
 /strict — اختر هذا اذا كنت تريد تفعيل البوت لإجراء اختبار للأعضاء الجدد 
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
@@ -508,6 +528,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — ユーザーが参加した情報を削除する
 /greeting — テストを通過した人に挨拶をする
 /trust —チェックしたくないユーザーからのメッセージに対してこのコマンドで返事をする
+/ban — same as trust, but the opposite
 /strict — 新しく参加した人がキャプチャをパスするまで、メッセージではなくキャプチャソリューションを受け取りたい時に使う
 /customCaptchaMessage — キャプチャのメッセージをカスタマイズする
 /deleteGreetingTime —  \`/deleteGreetingTime 100\のように何秒間でShieldyのメッセージが消えるかを設定する。0に設定することでリセットされる
@@ -531,6 +552,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryMessages — șterge mesajele despre userii ce intră în grup
 /greeting — salută utilizatorii ce au trecut testul
 /trust — raspunde cu această comanda unui mesaj trimis de un user pe care doresti să nu îl verifice bot-ul
+/ban — same as trust, but the opposite
 /strict — utilizează atunci când dorești sa nu primești nici un mesaj din partea userilor noi, ci doar soluții captcha până când aceștia trec de captcha
 /customCaptchaMessage — setează mesaj captcha custom
 /deleteGreetingTime — setează când se ștearge salutul lui Shieldy în secunde, precum \`/deleteGreetingTime 100\`. resetează setând valoarea 0
@@ -549,7 +571,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     et: 'Palun valige keel.',
     uk: 'Будь ласка, виберіть мову.',
     br: 'Por favor, selecione uma língua.',
-    tr: 'Lütfen dili seçin.',
+    tr: 'Lütfen dil seçimi yapın.',
     es: 'Por favor, selecciona el idioma.',
     zh: '请选择一种语言。',
     no: 'Vennligst velg et språk.',
@@ -602,7 +624,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     et: 'Ainult see, kes avas menüüd, saab valida valikud.',
     uk: 'Тільки людина, яка викликала меню, може вибирати опції.',
     br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.',
-    tr: 'Sadece menüyü başlatan kişi seçenekleri seçebilir.',
+    tr: 'Yalnızca menüyü başlatan kişi seçenekleri seçebilir.',
     es: 'Solo la persona que inició el menú puede seleccionar las opciones.',
     zh: '只有启动菜单的人才能选择。',
     no: 'Bare personen som åpnet menyen kan svare på den.',
@@ -674,10 +696,10 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 • Image — bot will ask to recognize characters on an image`,
     tr: `Lütfen, yeni gelenler için test türünü seçin:
 
-• Basit — bot sohbet için bir şey göndermek isteyecektir
-• Düğme — bot bir düğmeye basılmasını isteyecektir
-• Digits — bot will ask to solve a simple arithmetic operation
-• Image — bot will ask to recognize characters on an image`,
+• Basit — Bot, sohbete bir şey göndermenizi isteyecektir
+• Düğme — Bot, bir düğmeye basmanızı isteyecektir
+• Rakamlar — Bot, basit bir aritmetik işlemi çözmenizi isteyecektir
+• Resim — Bot, bir resimdeki karakterleri tanımanızı isteyecektir.`,
     es: `Por favor, selecciona el tipo de test para los recién llegados:
 
 • Simple — el bot pedirá enviar lo que sea por el chat
@@ -855,11 +877,11 @@ Vyberte prosím typ testu pro nováčky:
     ruen: 'Image/Картинкой',
     en: 'Image',
     ru: 'Картинкой',
-    it: 'Image',
+    it: 'Immagine',
     et: 'Image',
     uk: 'Image',
     br: 'Image',
-    tr: 'Image',
+    tr: 'Resim',
     es: 'Image',
     zh: 'Image',
     no: 'Image',
@@ -885,7 +907,7 @@ Vyberte prosím typ testu pro nováčky:
     et: 'Väga hea, nüüd ma kasutan seda testi tüüpi.',
     uk: 'Чудово, тепер я буду використовувати цей тип тесту.',
     br: 'Boa, Eu irei usar esse tipo de teste agora.',
-    tr: 'Harika, o zaman bu tür bir testi kullanacağım.',
+    tr: 'Harika, o zaman bu tür bir test uygulayacağım.',
     es: 'Genial, usaré este tipo de test.',
     zh: '很棒，我之后会使用这个类型的测试',
     no: 'Supert, da vil jeg bruke denne type testen.',
@@ -988,7 +1010,7 @@ Vyberte prosím typ testu pro nováčky:
     de: 'sek',
     tw: '秒',
     fr: 'sec',
-    id: 'det',
+    id: 'detik',
     ko: '초',
     am: 'ሰከንድ',
     czen: 'sec',
@@ -1010,7 +1032,7 @@ Vyberte prosím typ testu pro nováčky:
     es:
       '¡Genial! Ahora solo reaccionaré a los comandos enviados por administradores.',
     tr:
-      'Harika! Artık sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
+      'Harika! Şimdi sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
     zh: '很棒！现在我只对管理员发送的命令作出反应。',
     no: 'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
     de: 'Super! Ich werde nun nur noch auf Admin Kommandos reagieren .',
@@ -1036,7 +1058,7 @@ Vyberte prosím typ testu pro nováčky:
     et: 'Väga hea, nüüd ma aktsepteerin kõik käsud.',
     uk: 'Чудово! Тепер я буду приймати команди від усіх.',
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
-    tr: 'Harika! Artık herkes tarafından gönderilen komutlara tepki vereceğim.',
+    tr: 'Harika! Şimdi herkes tarafından gönderilen komutlara tepki vereceğim.',
     es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
@@ -1073,7 +1095,7 @@ Vyberte prosím typ testu pro nováčky:
     es:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     tr:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+      "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
     zh:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
@@ -1115,7 +1137,7 @@ Vyberte prosím typ testu pro nováčky:
     br:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     tr:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
+      'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
     es:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
@@ -1158,7 +1180,7 @@ Vyberte prosím typ testu pro nováčky:
     br:
       ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
-      ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde atılırsınız. Teşekkürler!',
+      ', Lütfen, belirtilen süre içerisinde bu gruba herhangi bir mesaj gönderin, aksi takdirde kovulursunuz. Teşekkür ederiz!',
     es:
       ', por favor, envía cualquier mensaje por este grupo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内向该群组发送任何消息，否则您将被踢。谢谢！',
@@ -1205,7 +1227,7 @@ Vyberte prosím typ testu pro nováčky:
     br:
       ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
-      ', Lütfen, çözümü bu gruba belirtilen süre içinde sağlanan matematik denklemine gönderin, aksi takdirde atılacaksınız. Teşekkürler!',
+      ', Lütfen, sağlanan aritmetik işlem çözümünü belirtilen süre içerisinde bu gruba gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
       ', por favor, envíe por este grupo la solución a la ecuación matemática proporcionada dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内将数学计算答案发送到本群组，否则您将被踢。 谢谢！',
@@ -1252,7 +1274,7 @@ please, send the solution to the arithmetic operation provided within the time a
     br:
       ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
     tr:
-      ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde atılacasınız. Teşekkürler!',
+      ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
       ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
@@ -1298,7 +1320,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     tr:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+      ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
       ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     zh:
@@ -1479,7 +1501,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     uk:
       'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
-    tr: 'Harika! Artık giriş mesajları silinecektir.',
+    tr: 'Harika! Artık giriş mesajları silinecek.',
     es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
@@ -1541,7 +1563,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     tr:
-      'Harika! Artık testi geçen yeni üyeler karşılanmayacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz).',
+      'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen, bu iletiyi kullanmak istediğiniz tebrik metniyle yanıtlayın ($title ve $username kullanabilirsiniz).',
     es:
       '¡Genial! Ahora los recién llegados que hayan pasado el test no serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username).',
     zh:
@@ -1588,7 +1610,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
     tr:
-      'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı aşağıdaki gibidir.',
+      'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı izlenir.',
     es:
       '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username). El mensaje actual de saludo es:',
     zh:
@@ -1693,7 +1715,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     tr:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
+      'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation ve $seconds kullanabilirsiniz).',
     es:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds).',
     zh:
@@ -1739,7 +1761,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     tr:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
+      'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation ve $seconds kullanabilirsiniz). Geçerli karşılama mesajı izlenir.',
     es:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation and $seconds). The current greeting message follows.',
     zh:
@@ -1781,7 +1803,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et: 'Great! Now newcomers will see the default captcha message',
     uk: 'Great! Now newcomers will see the default captcha message',
     br: 'Great! Now newcomers will see the default captcha message',
-    tr: 'Great! Now newcomers will see the default captcha message',
+    tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
     es: 'Great! Now newcomers will see the default captcha message',
     zh: '很棒！现在新人将会看到默认的验证码消息',
     no: 'Great! Now newcomers will see the default captcha message',
@@ -1834,7 +1856,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et: 'Nice! Users will be banned if they do not pass captcha.',
     uk: 'Nice! Users will be banned if they do not pass captcha.',
     br: 'Nice! Users will be banned if they do not pass captcha.',
-    tr: 'Nice! Users will be banned if they do not pass captcha.',
+    tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
     es: 'Nice! Users will be banned if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     no: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1861,7 +1883,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et: 'Nice! Users will be kicked if they do not pass captcha.',
     uk: 'Nice! Users will be kicked if they do not pass captcha.',
     br: 'Nice! Users will be kicked if they do not pass captcha.',
-    tr: 'Nice! Users will be kicked if they do not pass captcha.',
+    tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
     es: 'Nice! Users will be kicked if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
     no: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1896,7 +1918,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     tr:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
+      'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldıracak.',
     es:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     zh: '很棒！Shieldy将删除验证码失败用户的加入消息。',
@@ -1943,7 +1965,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     br:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     tr:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+      'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldırmayacak.',
     es:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     zh: '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
@@ -1983,7 +2005,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et: 'Great! Shieldy will now use Combot Anti-Spam.',
     uk: 'Great! Shieldy will now use Combot Anti-Spam.',
     br: 'Great! Shieldy will now use Combot Anti-Spam.',
-    tr: 'Great! Shieldy will now use Combot Anti-Spam.',
+    tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
     es: 'Great! Shieldy will now use Combot Anti-Spam.',
     zh: 'Great! Shieldy will now use Combot Anti-Spam.',
     no: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -2009,7 +2031,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et: 'Great! Shieldy will not use Combot Anti-Spam now.',
     uk: 'Great! Shieldy will not use Combot Anti-Spam now.',
     br: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    tr: 'Great! Shieldy will not use Combot Anti-Spam now.',
+    tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
     es: 'Great! Shieldy will not use Combot Anti-Spam now.',
     zh: 'Great! Shieldy will not use Combot Anti-Spam now.',
     no: 'Great! Shieldy will not use Combot Anti-Spam now.',

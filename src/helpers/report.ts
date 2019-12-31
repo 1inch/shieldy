@@ -29,7 +29,7 @@ async function bulkReport() {
 
 setInterval(bulkReport, 60 * 1000)
 
-export async function report(error: Error, reason?: string) {
+export function report(error: Error, reason?: string) {
   if (checkIfErrorDismissable(error)) {
     return
   }
