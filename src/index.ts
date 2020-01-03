@@ -17,6 +17,14 @@ import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
 import { setupGreeting } from './commands/greeting'
 import { setupTrust } from './commands/trust'
 import { setupStrict } from './commands/strict'
+import { setupCaptchaMessage } from './commands/captchaMessage'
+import { setupTestLocales } from './commands/testLocales'
+import { setupDeleteGreetingTime } from './commands/deleteGreetingTime'
+import { setupBanUsers } from './commands/banUsers'
+import { messageSaver } from './middlewares/messageSaver'
+import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
+import { setupCAS } from './commands/cas'
+import { setupBan } from './commands/ban'
 
 // Check time
 bot.use(checkTime)
@@ -24,6 +32,8 @@ bot.use(checkTime)
 bot.use(attachUser)
 // Check if restricted
 bot.use(checkRestrict)
+// Setup message saver
+bot.use(messageSaver)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)
@@ -35,8 +45,18 @@ setupDeleteEntryMessages(bot)
 setupGreeting(bot)
 setupTrust(bot)
 setupStrict(bot)
+setupCaptchaMessage(bot)
+setupTestLocales(bot)
+setupDeleteGreetingTime(bot)
+setupBanUsers(bot)
+setupDeleteEntryOnKick(bot)
+setupCAS(bot)
+setupBan(bot)
 // Newcomers logic
 setupNewcomers(bot)
+
+// Catch
+bot.catch(console.log)
 
 // Start bot
 bot.startPolling()

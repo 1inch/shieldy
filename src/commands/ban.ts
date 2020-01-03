@@ -4,25 +4,26 @@ import { strings } from '../helpers/strings'
 import { checkLock } from '../middlewares/checkLock'
 import { report } from '../helpers/report'
 
-export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('trust', checkLock, async ctx => {
+export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
+  bot.command('ban', checkLock, async ctx => {
     // Check if reply
     if (!ctx.message || !ctx.message.reply_to_message) {
       return
     }
     // Get replied
     const repliedId = ctx.message.reply_to_message.from.id
-    // Unrestrict in Telegram
-    try {
-      await (ctx.telegram as any).restrictChatMember(ctx.dbchat.id, repliedId, {
-        can_send_messages: true,
-        can_send_media_messages: true,
-        can_send_other_messages: true,
-        can_add_web_page_previews: true,
-      })
-    } catch (err) {
-      await report(err)
+    // Check if sent by admin
+    const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
+    if (!admins.map(a => a.user.id).includes(ctx.from.id)) {
+      return
     }
+    // Check permissions
+    const admin = admins.find(v => v.user.id === ctx.from.id)
+    if (!admin.can_restrict_members) {
+      return
+    }
+    // Ban in Telegram
+    await ctx.telegram.kickChatMember(ctx.dbchat.id, repliedId)
     // Unrestrict in shieldy
     ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
       c => c.id !== repliedId

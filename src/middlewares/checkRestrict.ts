@@ -1,7 +1,6 @@
 import { ContextMessageUpdate } from 'telegraf'
-import { globalyRestricted } from '../helpers/newcomers'
+import { globalyRestricted } from '../helpers/globallyRestricted'
 import { report } from '../helpers/report'
-import { bot } from '../helpers/bot'
 
 export async function checkRestrict(
   ctx: ContextMessageUpdate,
@@ -12,12 +11,10 @@ export async function checkRestrict(
     return next()
   }
   if (!ctx.dbchat.restrict) {
-    next()
-    return
+    return next()
   }
   if (ctx.from.id === parseInt(process.env.ADMIN)) {
-    next()
-    return
+    return next()
   }
   const restrictedUsers = ctx.dbchat.restrictedUsers
   const restricted =
@@ -28,9 +25,9 @@ export async function checkRestrict(
     message &&
     ((message.entities && message.entities.length) ||
       (message.caption_entities && message.caption_entities.length) ||
-      (message.forward_from ||
-        message.forward_date ||
-        message.forward_from_chat) ||
+      message.forward_from ||
+      message.forward_date ||
+      message.forward_from_chat ||
       message.document ||
       message.sticker ||
       message.photo ||
@@ -38,11 +35,11 @@ export async function checkRestrict(
       message.video)
   ) {
     try {
-      await ctx.telegram.deleteMessage(ctx.chat.id, message.message_id)
+      await ctx.deleteMessage()
     } catch (err) {
-      await report(bot, err)
+      await report(err)
     }
   } else {
-    next()
+    return next()
   }
 }

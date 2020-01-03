@@ -5,32 +5,32 @@ import { checkLock } from '../middlewares/checkLock'
 import { report } from '../helpers/report'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
-export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
+export function setupCaptchaMessage(bot: Telegraf<ContextMessageUpdate>) {
   // Setup command
-  bot.command('greeting', checkLock, async ctx => {
+  bot.command('customCaptchaMessage', checkLock, async ctx => {
     let chat = ctx.dbchat
-    chat.greetsUsers = !chat.greetsUsers
+    chat.customCaptchaMessage = !chat.customCaptchaMessage
     chat = await chat.save()
     await ctx.replyWithMarkdown(
       strings(
         ctx.dbchat,
-        chat.greetsUsers
-          ? chat.greetingMessage
-            ? 'greetsUsers_true_message'
-            : 'greetsUsers_true'
-          : 'greetsUsers_false'
+        chat.customCaptchaMessage
+          ? chat.captchaMessage
+            ? 'captchaMessage_true_message'
+            : 'captchaMessage_true'
+          : 'captchaMessage_false'
       ),
       Extra.inReplyTo(ctx.message.message_id)
     )
-    if (chat.greetingMessage && chat.greetsUsers) {
-      ctx.telegram.sendCopy(chat.id, chat.greetingMessage.message)
+    if (chat.customCaptchaMessage && chat.captchaMessage) {
+      ctx.telegram.sendCopy(chat.id, chat.captchaMessage.message)
     }
   })
   // Setup checker
   bot.use(async (ctx, next) => {
     try {
       // Check if needs to check
-      if (!ctx.dbchat.greetsUsers) {
+      if (!ctx.dbchat.customCaptchaMessage) {
         return
       }
       // Check if reply
@@ -51,21 +51,21 @@ export function setupGreeting(bot: Telegraf<ContextMessageUpdate>) {
         return
       }
       // Check if reply to the correct message
-      const greetingMessages = Object.keys(localizations.greetsUsers_true)
-        .map(k => localizations.greetsUsers_true[k])
+      const captchaMessages = Object.keys(localizations.captchaMessage_true)
+        .map(k => localizations.captchaMessage_true[k])
         .concat(
-          Object.keys(localizations.greetsUsers_true_message).map(
-            k => localizations.greetsUsers_true_message[k]
+          Object.keys(localizations.captchaMessage_true_message).map(
+            k => localizations.captchaMessage_true_message[k]
           )
         )
       if (
         !ctx.message.reply_to_message.text ||
-        greetingMessages.indexOf(ctx.message.reply_to_message.text) < 0
+        captchaMessages.indexOf(ctx.message.reply_to_message.text) < 0
       ) {
         return
       }
       // Save text
-      ctx.dbchat.greetingMessage = {
+      ctx.dbchat.captchaMessage = {
         message: ctx.message,
       }
       await ctx.dbchat.save()

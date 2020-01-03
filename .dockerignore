@@ -1,4 +1,5 @@
-.get
+.git
+.gitignore
 README.md
 LICENSE
 docker-compose.yml

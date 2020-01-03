@@ -9,7 +9,7 @@ export async function attachUser(ctx: ContextMessageUpdate, next) {
     const chat = await findChat(ctx.chat.id)
     ctx.dbchat = chat
   } catch (err) {
-    await report(bot, err)
+    await report(err)
   }
   next()
 }
