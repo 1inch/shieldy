@@ -1,11 +1,10 @@
-version: '3'
+version: "3"
 
 services:
   shieldy:
     build: .
     restart: always
-    networks:
-      - app-network
+    command: yarn distribute
     depends_on:
       - mongo
   mongo:
@@ -16,8 +15,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - dbdata:/data/db
-    networks:
-      - app-network
+  # If database debugging is needed
   # mongo-express:
   #   image: mongo-express
   #   restart: always
@@ -26,14 +24,7 @@ services:
   #   environment:
   #     ME_CONFIG_MONGODB_ADMINUSERNAME: mongoadmin
   #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
-  #   networks:
-  #     - app-network
   #   depends_on:
   #     - mongo
-
-networks:
-  app-network:
-    driver: bridge
-
 volumes:
   dbdata:
