@@ -4,7 +4,15 @@ services:
   shieldy:
     build: .
     restart: always
-    command: yarn distribute
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_SHIELDY_DB: shieldyDB
+      MONGO_SHIELDY_USERNAME: shieldyDBuser
+      MONGO_SHIELDY_PASSWORD: shieldyDBpassword
+      TOKEN: 111111111:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      MONGO: mongodb://shieldyDBuser:shieldyDBpassword@mongo:27017/shieldyDB
+      ADMIN: 111111111
     depends_on:
       - mongo
   mongo:
