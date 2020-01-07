@@ -1,0 +1,9 @@
+.git
+.gitignore
+README.md
+LICENSE
+docker-compose.yml
+.env.sample
+node_modules
+dist
+design
