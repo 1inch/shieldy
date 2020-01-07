@@ -29,7 +29,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Check left messages
   bot.on('left_chat_member', async ctx => {
     // Delete left message if required
-    if (ctx.dbchat.deleteEntryMessages) {
+    if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
       try {
         await ctx.deleteMessage()
       } catch (err) {
@@ -189,6 +189,16 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     for (const member of membersToCheck) {
       // Delete all messages that they've sent yet
       removeMessages(ctx.chat.id, member.id) // don't await here
+      // Check if under attack
+      if (ctx.dbchat.underAttack) {
+        await kickChatMember(ctx.dbchat, member)
+        try {
+          await ctx.deleteMessage()
+        } catch (err) {
+          await report(err)
+        }
+        continue
+      }
       // Check if CAS banned
       if (!(await checkCAS(member.id))) {
         await kickChatMember(ctx.dbchat, member)

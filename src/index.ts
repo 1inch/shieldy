@@ -25,6 +25,7 @@ import { messageSaver } from './middlewares/messageSaver'
 import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
 import { setupCAS } from './commands/cas'
 import { setupBan } from './commands/ban'
+import { setupUnderAttack } from './commands/underAttack'
 
 // Check time
 bot.use(checkTime)
@@ -52,6 +53,7 @@ setupBanUsers(bot)
 setupDeleteEntryOnKick(bot)
 setupCAS(bot)
 setupBan(bot)
+setupUnderAttack(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
