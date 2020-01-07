@@ -14,6 +14,12 @@ This is the code for the anti-spam Telegram bot I've built. Enjoy and feel free 
 
 And you should be good to go! Feel free to fork and submit pull requests. Thanks!
 
+# Installation through Docker
+
+1. Clone this repo: `git clone https://github.com/backmeupplz/shieldy`
+2. Replace the dummy environment variables in `docker-compose.yml` with the ones listed below
+3. Run `docker-compose up -d`
+
 # Environment variables
 
 - `TOKEN` — Telegram bot token
