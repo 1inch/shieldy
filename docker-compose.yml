@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  shieldy:
+    build: .
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_SHIELDY_DB: shieldyDB
+      MONGO_SHIELDY_USERNAME: shieldyDBuser
+      MONGO_SHIELDY_PASSWORD: shieldyDBpassword
+      TOKEN: 111111111:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      MONGO: mongodb://shieldyDBuser:shieldyDBpassword@mongo:27017/shieldyDB
+      ADMIN: 111111111
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - dbdata:/data/db
+  # If database debugging is needed
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: mongoadmin
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
+  #   depends_on:
+  #     - mongo
+volumes:
+  dbdata:
