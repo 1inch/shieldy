@@ -32,7 +32,8 @@ export async function checkRestrict(
       message.sticker ||
       message.photo ||
       message.video_note ||
-      message.video)
+      message.video ||
+      message.game)
   ) {
     try {
       await ctx.deleteMessage()
