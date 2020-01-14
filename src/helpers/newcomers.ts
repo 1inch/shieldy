@@ -22,7 +22,7 @@ import { sendHelp } from '../commands/help'
 import { modifyCandidates } from './candidates'
 import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
-import { getUsername } from './getUsername'
+import { getUsername, getName } from './getUsername'
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
@@ -389,10 +389,12 @@ async function notifyCandidate(
       text.includes('$username') ||
       text.includes('$title') ||
       text.includes('$equation') ||
-      text.includes('$seconds')
+      text.includes('$seconds') ||
+      text.includes('$fullname')
     ) {
       const textToSend = text
         .replace(/\$username/g, getUsername(candidate))
+        .replace(/\$fullname/g, getName(candidate))
         .replace(/\$title/g, (await ctx.getChat()).title)
         .replace(/\$equation/g, equation ? (equation.question as string) : '')
         .replace(/\$seconds/g, `${chat.timeGiven}`)
@@ -441,12 +443,17 @@ async function greetUser(ctx: ContextMessageUpdate) {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
       const text = ctx.dbchat.greetingMessage.message.text
       let message
-      if (text.includes('$username') || text.includes('$title')) {
+      if (
+        text.includes('$username') ||
+        text.includes('$title') ||
+        text.includes('$fullname')
+      ) {
         message = await ctx.telegram.sendMessage(
           ctx.dbchat.id,
           text
             .replace(/\$username/g, getUsername(ctx.from))
-            .replace(/\$title/g, (await ctx.getChat()).title),
+            .replace(/\$title/g, (await ctx.getChat()).title)
+            .replace(/\$fullname/g, getName(ctx.from)),
           Extra.webPreview(false) as ExtraReplyMessage
         )
       } else {
