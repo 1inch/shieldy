@@ -153,7 +153,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-    uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом заданого часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
+    uk: `Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом вказаного часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:
 
 /help — показує це повідомлення
 /language — змінює мову
@@ -162,20 +162,20 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /lock — робить команди доступними тільки адміністраторам
 /restrict — забороняє новачкам надсилати будь-що, крім текстових повідомлень в перші 24 години
 /deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат
-/greeting — greets users who pass the test
-/trust — reply with this command to a message sent by user that you don't want to check
-/ban — same as trust, but the opposite
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
-/underAttack — toggle the mode to automatically kick all newcomers
+/greeting — вітає користувачів, які пройшли тест
+/trust — надішліть у відповідь на повідомлення користувача, якого не треба перевіряти
+/ban — те саме що й trust, але навпаки
+/strict — використовуйте, якщо не хочете отримувати жодних повідомлень від новачків, поки вони не вирішать капчу
+/customCaptchaMessage — встановити власне повідомлення капчі
+/deleteGreetingTime — встановлює час, коли потрібно видаляти вітання від бота, наприклад \`/deleteGreetingTime 100\`, встановіть у 0 щоб скинути
+/banUsers — банити користувачів чи одразу вилучати
+/deleteEntryOnKick — чи видаляти повідомлення про вхід користувачів, що не вирішили капчу
+/cas — використовувати Combot Anti-Spam чи ні
+/underAttack — спеціальний режим коли всі новачки одразу вилучаються з чату
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
-P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
+P.S., Якщо ви хочете допомогти ви можете пожертвувати через [програму GitHub Sponsors тут](https://github.com/sponsors/backmeupplz).`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
 /help — mostra essa mensagem
@@ -712,8 +712,8 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 
 • Проста — бот просить надіслати що завгодно в чат
 • Кнопкою — бот просить натиснути на кнопку.
-• Digits — bot will ask to solve a simple arithmetic operation
-• Image — bot will ask to recognize characters on an image`,
+• Цифрова — бот просить вирішити просте арифметичне рівняння
+• Зображення — бот просить розпізнати символи на зображенні`,
     br: `Por favor, selecione o tipo de teste para os novatos:
 
 • Simples — o bot vai pedir para mandar alguma coisa no chat
@@ -905,7 +905,7 @@ Vyberte prosím typ testu pro nováčky:
     ru: 'Картинкой',
     it: 'Immagine',
     et: 'Image',
-    uk: 'Image',
+    uk: 'Зображення',
     br: 'Image',
     tr: 'Resim',
     es: 'Image',
@@ -963,7 +963,7 @@ Vyberte prosím typ testu pro nováčky:
     et:
       'Palun valige kui palju aega antud uustulnukatele, et testi sooritada enne kicki.',
     uk:
-      'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед кіком.',
+      'Будь ласка, виберіть, скільки секунд буде у новачків, щоб завершити тест перед вилученням з чату.',
     br:
       'Por favor, selecione quantos segundos o novato tem para completar o teste.',
     tr:
@@ -1115,7 +1115,7 @@ Vyberte prosím typ testu pro nováčky:
     et:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     uk:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+      "Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.",
     br:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     es:
@@ -1159,7 +1159,7 @@ Vyberte prosím typ testu pro nováčky:
     et:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     uk:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
+      'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
     br:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     tr:
@@ -1202,7 +1202,7 @@ Vyberte prosím typ testu pro nováčky:
     et:
       ', palun saatke mis tahes sõnum sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
-      ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+      ', будь ласка, надішліть будь-яке повідомлення в цей чат протягом зазначеного часу, інакше Ви будете вилучені. Дякуємо!',
     br:
       ', Por favor, mande qualquer mensagem para esse grupo com o tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
@@ -1249,7 +1249,7 @@ Vyberte prosím typ testu pro nováčky:
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
-      ', будь ласка, надішліть рішення зазначеного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+      ', будь ласка, надішліть рішення вказаного математичного рівняння в цей чат протягом зазначеного часу, інакше Ви будете вилучені. Дякуємо!',
     br:
       ', Por favor, mande a solução da equação matemática para esse grupo no tempo limite especificado, caso contrário irei kicka-lo. Obrigado!',
     tr:
@@ -1296,7 +1296,7 @@ please, send the solution to the arithmetic operation provided within the time a
     et:
       ', palun klõpsake alam nuppu määratud aja jooksul, muide me kickime teid. Aitäh!',
     uk:
-      ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете кікнуті. Дякуємо!',
+      ', будь ласка, натисніть на кнопку нижче протягом зазначеного часу, інакше Ви будете вилучені. Дякуємо!',
     br:
       ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
     tr:
@@ -1342,7 +1342,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
+      ', будь ласка, надішліть зазначені символи у цей чат, поки не спливе вказаний час, або ви будете вилучені з чату. Дякуємо!',
     br:
       ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     tr:
@@ -1524,8 +1524,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     it: 'Great! Now entry messages will be deleted.',
     et: 'Great! Now entry messages will be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів буде видалено.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecek.',
     es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
@@ -1552,8 +1551,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     it: 'Great! Now entry messages will not be deleted.',
     et: 'Great! Now entry messages will not be deleted.',
-    uk:
-      'Чудово! Тепер повідомлення про вхід користувачів в чат не будуть видалятися.',
+    uk: 'Чудово! Тепер повідомлення про вхід користувачів не буде видалено.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
     es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
@@ -1585,7 +1583,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
     uk:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Чудово! Тепер щойно новачки розвʼяжуть капчу вони отримають вітання. У відповідь на це повідомлення надішліть текст вітання, яким бажаєте зустрічати майбутніх користувачів (можете використовувати $title, $fullname та $username).',
     br:
       'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     tr:
@@ -1632,7 +1630,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     uk:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Чудово! Тепер щойно новачки розвʼяжуть капчу вони отримають вітання. У відповідь на це повідомлення надішліть текст вітання, яким бажаєте зустрічати майбутніх користувачів (можете використовувати $title, $fullname та $username). Поточне вітання наведено нижче.',
     br:
       'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
     tr:
@@ -1675,7 +1673,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     it: 'Great! Now newcomers who passed the test will not be greeted.',
     et: 'Great! Now newcomers who passed the test will not be greeted.',
-    uk: 'Great! Now newcomers who passed the test will not be greeted.',
+    uk: 'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
     es:
@@ -1706,7 +1704,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Принято!',
     it: 'Accepted!',
     et: 'Accepted!',
-    uk: 'Accepted!',
+    uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
     es: '¡Aceptado!',
@@ -1737,7 +1735,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     uk:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
+      'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds).',
     br:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     tr:
@@ -1783,7 +1781,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     uk:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
+      'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds). Поточне пояснення наведено нижче.',
     br:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     tr:
@@ -1827,7 +1825,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
     it: 'Great! Now newcomers will see the default captcha message',
     et: 'Great! Now newcomers will see the default captcha message',
-    uk: 'Great! Now newcomers will see the default captcha message',
+    uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
     br: 'Great! Now newcomers will see the default captcha message',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
     es: 'Great! Now newcomers will see the default captcha message',
@@ -1854,7 +1852,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Принято!',
     it: 'Accepted!',
     et: 'Accepted!',
-    uk: 'Accepted!',
+    uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
     es: '¡Aceptado!',
@@ -1880,7 +1878,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
     it: 'Nice! Users will be banned if they do not pass captcha.',
     et: 'Nice! Users will be banned if they do not pass captcha.',
-    uk: 'Nice! Users will be banned if they do not pass captcha.',
+    uk: 'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
     br: 'Nice! Users will be banned if they do not pass captcha.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
     es: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1907,7 +1905,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     it: 'Nice! Users will be kicked if they do not pass captcha.',
     et: 'Nice! Users will be kicked if they do not pass captcha.',
-    uk: 'Nice! Users will be kicked if they do not pass captcha.',
+    uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
     br: 'Nice! Users will be kicked if they do not pass captcha.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
     es: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1940,7 +1938,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     uk:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
+      'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
     br:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     tr:
@@ -1987,7 +1985,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     uk:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
+      'Чудово. Шилді не буде видаляти вхідні повідомлення від користувачів, які провалили капчу.',
     br:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     tr:
@@ -2029,7 +2027,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
     it: 'Great! Shieldy will now use Combot Anti-Spam.',
     et: 'Great! Shieldy will now use Combot Anti-Spam.',
-    uk: 'Great! Shieldy will now use Combot Anti-Spam.',
+    uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
     br: 'Great! Shieldy will now use Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
     es: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -2055,7 +2053,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
     it: 'Great! Shieldy will not use Combot Anti-Spam now.',
     et: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    uk: 'Great! Shieldy will not use Combot Anti-Spam now.',
+    uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
     br: 'Great! Shieldy will not use Combot Anti-Spam now.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
     es: 'Great! Shieldy will not use Combot Anti-Spam now.',
@@ -2086,7 +2084,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     et:
       "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
     uk:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
+      "Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.",
     br:
       "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
     tr:
@@ -2129,7 +2127,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
     it: 'Great! Shieldy will not kick everybody who enters this chat.',
     et: 'Great! Shieldy will not kick everybody who enters this chat.',
-    uk: 'Great! Shieldy will not kick everybody who enters this chat.',
+    uk: 'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
     br: 'Great! Shieldy will not kick everybody who enters this chat.',
     tr: 'Great! Shieldy will not kick everybody who enters this chat.',
     es: 'Great! Shieldy will not kick everybody who enters this chat.',
