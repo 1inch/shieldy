@@ -26,7 +26,10 @@ import { setupDeleteEntryOnKick } from './commands/deleteEntryOnKick'
 import { setupCAS } from './commands/cas'
 import { setupBan } from './commands/ban'
 import { setupUnderAttack } from './commands/underAttack'
+import { noWait } from './middlewares/noWait'
 
+// Make Telegraph async
+bot.use(noWait)
 // Check time
 bot.use(checkTime)
 // Add chat to context
