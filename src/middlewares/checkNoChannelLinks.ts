@@ -15,7 +15,7 @@ export async function checkNoChannelLinks(
     if (!ctx.dbchat.noChannelLinks) {
         return next()
     }
-    if (ctx.from.id === parseInt(process.env.ADMIN)) {
+    if (ctx.from.id === parseInt(process.env.ADMIN) || (await ctx.getChatAdministrators()).filter(admin => admin.user.id === ctx.from.id).length > 0) {
         return next()
     }
     // For each of the links contained in the message
