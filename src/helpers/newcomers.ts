@@ -371,13 +371,13 @@ async function notifyCandidate(
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
       : Extra.webPreview(false).markup(m =>
-          m.inlineKeyboard([
-            m.callbackButton(
-              strings(chat, 'captcha_button'),
-              `${chat.id}~${candidate.id}`
-            ),
-          ])
-        )
+        m.inlineKeyboard([
+          m.callbackButton(
+            strings(chat, 'captcha_button'),
+            `${chat.id}~${candidate.id}`
+          ),
+        ])
+      )
   if (
     chat.customCaptchaMessage &&
     chat.captchaMessage &&
@@ -420,17 +420,17 @@ async function notifyCandidate(
       return ctx.replyWithPhoto({ source: image.png } as any, {
         caption: `[${getUsername(candidate)}](tg://user?id=${
           candidate.id
-        })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+          })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
         parse_mode: 'Markdown',
       })
     } else {
       return ctx.replyWithMarkdown(
         `${
-          chat.captchaType === CaptchaType.DIGITS
-            ? `(${equation.question}) `
-            : ''
+        chat.captchaType === CaptchaType.DIGITS
+          ? `(${equation.question}) `
+          : ''
         }[${getUsername(candidate)}](tg://user?id=${
-          candidate.id
+        candidate.id
         })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
         extra
       )
@@ -441,37 +441,51 @@ async function notifyCandidate(
 async function greetUser(ctx: ContextMessageUpdate) {
   try {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
-      const text = ctx.dbchat.greetingMessage.message.text
-      let message
-      if (
-        text.includes('$username') ||
-        text.includes('$title') ||
-        text.includes('$fullname')
-      ) {
-        message = await ctx.telegram.sendMessage(
-          ctx.dbchat.id,
-          text
-            .replace(/\$username/g, getUsername(ctx.from))
-            .replace(/\$title/g, (await ctx.getChat()).title)
-            .replace(/\$fullname/g, getName(ctx.from)),
-          Extra.webPreview(false) as ExtraReplyMessage
-        )
-      } else {
-        const msg = ctx.dbchat.greetingMessage.message
-        msg.text = `${msg.text}\n\n${getUsername(ctx.from)}`
-        message = await ctx.telegram.sendCopy(
-          ctx.dbchat.id,
-          msg,
-          Extra.webPreview(false) as ExtraReplyMessage
-        )
+      const message = ctx.dbchat.greetingMessage.message
+      const originalText = message.text
+      const tags = {
+        '$title': (await ctx.getChat()).title,
+        '$username': getUsername(ctx.from),
+        '$fullname': getName(ctx.from)
       }
+
+      // For every tag present in the dictionnary, and in the greeting message
+      for (let tag in tags) {
+        if (originalText.includes(tag)) {
+          const tag_value = tags[tag]
+          const tag_offset = message.text.indexOf(tag)
+
+          // Replace the tag withe the value in the message
+          message.text = message.text.replace(tag, tag_value)
+
+          // Update the offset of links if it is after the replaced tag
+          message.entities.forEach(msgEntity => {
+            if (msgEntity.offset > tag_offset) {
+              msgEntity.offset = msgEntity.offset - (tag).length + tag_value.length
+            }
+          })
+        }
+      }
+      // Add the @username of the greeted user at the end of the message if no $username was provided
+      if (!originalText.includes('$username')) {
+        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+      }
+
+      // Send the message
+      let messageSent = await ctx.telegram.sendCopy(
+        ctx.dbchat.id,
+        message,
+        Extra.webPreview(false) as ExtraReplyMessage
+      )
+
+
       // Delete greeting message if requested
-      if (ctx.dbchat.deleteGreetingTime && message) {
+      if (ctx.dbchat.deleteGreetingTime && messageSent) {
         setTimeout(async () => {
           try {
             await ctx.telegram.deleteMessage(
-              message.chat.id,
-              message.message_id
+              messageSent.chat.id,
+              messageSent.message_id
             )
           } catch (err) {
             // Do nothing
