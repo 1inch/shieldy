@@ -25,6 +25,7 @@
     "mongoose": "^5.6.11",
     "semaphore-async-await": "^1.5.1",
     "svg-captcha": "^1.4.0",
+    "tall": "^3.0.0",
     "telegraf": "^3.34.1",
     "typegoose": "^5.9.0",
     "typescript": "^3.6.2"

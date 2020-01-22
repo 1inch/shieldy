@@ -13,6 +13,8 @@ import { setupLock } from './commands/lock'
 import { checkTime } from './middlewares/checkTime'
 import { setupRestrict } from './commands/restrict'
 import { checkRestrict } from './middlewares/checkRestrict'
+import { setupNoChannelLinks } from './commands/noChannelLinks'
+import { checkNoChannelLinks } from './middlewares/checkNoChannelLinks'
 import { setupDeleteEntryMessages } from './commands/deleteEntryMessages'
 import { setupGreeting } from './commands/greeting'
 import { setupTrust } from './commands/trust'
@@ -36,6 +38,8 @@ bot.use(checkTime)
 bot.use(attachUser)
 // Check if restricted
 bot.use(checkRestrict)
+// Check if channel links are present
+bot.use(checkNoChannelLinks)
 // Setup message saver
 bot.use(messageSaver)
 // Commands
@@ -45,6 +49,7 @@ setupCaptcha(bot)
 setupTimeLimit(bot)
 setupLock(bot)
 setupRestrict(bot)
+setupNoChannelLinks(bot)
 setupDeleteEntryMessages(bot)
 setupGreeting(bot)
 setupTrust(bot)

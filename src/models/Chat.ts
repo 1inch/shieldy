@@ -80,6 +80,8 @@ export class Chat extends Typegoose {
   @prop({ required: true, default: true })
   restrict: boolean
   @prop({ required: true, default: false })
+  noChannelLinks: boolean
+  @prop({ required: true, default: false })
   deleteEntryMessages: boolean
   @arrayProp({ items: Candidate, default: [] })
   candidates: Candidate[]
