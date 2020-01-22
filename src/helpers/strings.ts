@@ -31,6 +31,7 @@ export const localizations = {
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -56,6 +57,7 @@ Shieldy — это лучшее решение в Телеграме по бор
 /deleteEntryOnKick — удалять ли сообщения о входе для пользователей, которые провалили капчу
 /cas — использовать Combot Anti-Spam или нет
 /underAttack — включить или выключить режим автоматического кика всех новичков
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!
 
@@ -79,6 +81,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -103,6 +106,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — удалять ли сообщения о входе для пользователей, которые провалили капчу
 /cas — использовать Combot Anti-Spam или нет
 /underAttack — включить или выключить режим автоматического кика всех новичков
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!
 
@@ -126,6 +130,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryOnKick — scegli se eliminare i messaggi d\'ingresso per coloro che hanno fallito il captcha
 /cas — scegli se usare Combot Anti-Spam
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Shieldy è open source e il suo codice sorgente può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!
 
@@ -149,6 +154,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!
 
@@ -172,6 +178,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — чи видаляти повідомлення про вхід користувачів, що не вирішили капчу
 /cas — використовувати Combot Anti-Spam чи ні
 /underAttack — спеціальний режим коли всі новачки одразу вилучаються з чату
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
@@ -195,6 +202,7 @@ P.S., Якщо ви хочете допомогти ви можете пожер
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.
 
@@ -218,6 +226,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — CAPTCHA'dan başarısız olan kullanıcıların girdiği mesajların silinip silinmeyeceğini ayarlayın
 /cas — Combot Anti-Spam'ın kullanılıp kullanılmayacağını ayarlayın
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Hala sorularınız mı var? Destek kanalını kontrol edin: @borodutch\\_support. Shieldy'in kodu açık kaynaklıdır ve [buradan](https://github.com/backmeupplz/shieldy) erişilebilir. Teşekkür ederiz!
 Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına buradan](https://github.com/sponsors/backmeupplz) bağış yapın.`,
@@ -240,6 +249,7 @@ Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına bu
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!
 
@@ -263,6 +273,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — 删除还是保留回答验证码失败的用户加入消息
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！
 
@@ -286,6 +297,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!
 
@@ -309,6 +321,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht 
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Noch Fragen? Schau in unseren Support Kanal — @borodutch\\_support. Der Shieldy code ist open source und kann hier gefunden werden: https://github.com/backmeupplz/shieldy. Vielen Dank!
 
@@ -332,6 +345,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！
 
@@ -355,6 +369,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci!
 
@@ -378,6 +393,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
 
@@ -400,6 +416,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /banUsers — whether to ban or to kick users
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!
 
@@ -423,6 +440,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -446,6 +464,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -468,6 +487,7 @@ Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spamm
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!
 
@@ -491,6 +511,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!
 
@@ -514,6 +535,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — voľba odstránenia vstupných správ pre používateľov, ktorí neprejdú testom captcha
 /cas — voľba použitia služby Combot Anti-Spam
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Máte ďalšie otázky? Navštívte náš kanál podpory — @borodutch\\_support. Zdrojový kód Shieldyho je otvorený a nájdete ho [tu](https://github.com/backmeupplz/shieldy). Ďakujem!
 
@@ -537,6 +559,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! 
 
@@ -560,6 +583,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick —キャプチャを失敗したユーザーの入室メッセージを削除するかどうか
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 まだご不明な点がありますか？サポートチャネルをチェックしてください！ — @borodutch\\_support. Shieldyコードはオープンソースとなり、こちらで見ることができます https://github.com/backmeupplz/shieldy. ありがとう！
@@ -585,6 +609,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — șterge mesajul de întâmpinare pentru userii ce nu au trecut de captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -2146,4 +2171,54 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ja: 'Great! Shieldy will not kick everybody who enters this chat.',
     ro: 'Great! Shieldy will not kick everybody who enters this chat.',
   },
+  noChannelLinks_true: {
+    ruen: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    en: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    ru: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    it: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    et: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    uk: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    br: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    tr: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    es: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    zh: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    no: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    de: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    tw: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    fr: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    id: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    ko: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    am: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    czen: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    cz: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    sk: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    ar: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    ja: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    ro: 'Great! Shieldy will now delete messages that link to telegram channels.',
+  },
+  noChannelLinks_false: {
+    ruen: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    en: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    ru: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    it: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    et: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    uk: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    br: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    tr: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    es: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    zh: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    no: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    de: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    tw: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    fr: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    id: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    ko: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    am: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    czen: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    cz: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    sk: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    ar: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    ja: 'Great! Shieldy will not delete messages that link to telegram channels.',
+    ro: 'Great! Shieldy will not delete messages that link to telegram channels.',
+  }
 }
