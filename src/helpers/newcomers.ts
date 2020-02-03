@@ -378,6 +378,7 @@ async function notifyCandidate(
             ),
           ])
         )
+  ;(extra as any).parse_mode = 'HTML'
   if (
     chat.customCaptchaMessage &&
     chat.captchaMessage &&
