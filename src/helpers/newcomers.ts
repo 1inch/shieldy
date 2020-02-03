@@ -371,13 +371,13 @@ async function notifyCandidate(
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
       : Extra.webPreview(false).markup(m =>
-        m.inlineKeyboard([
-          m.callbackButton(
-            strings(chat, 'captcha_button'),
-            `${chat.id}~${candidate.id}`
-          ),
-        ])
-      )
+          m.inlineKeyboard([
+            m.callbackButton(
+              strings(chat, 'captcha_button'),
+              `${chat.id}~${candidate.id}`
+            ),
+          ])
+        )
   if (
     chat.customCaptchaMessage &&
     chat.captchaMessage &&
@@ -401,7 +401,7 @@ async function notifyCandidate(
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
           caption: textToSend,
-          parse_mode: 'Markdown',
+          parse_mode: 'HTML',
         })
       } else {
         return ctx.telegram.sendMessage(
@@ -418,20 +418,26 @@ async function notifyCandidate(
   } else {
     if (image) {
       return ctx.replyWithPhoto({ source: image.png } as any, {
-        caption: `[${getUsername(candidate)}](tg://user?id=${
-          candidate.id
-          })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
-        parse_mode: 'Markdown',
+        caption: `<a href="tg://user?id=${candidate.id}">${getUsername(
+          candidate
+        )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+          chat,
+          'seconds'
+        )})`,
+        parse_mode: 'HTML',
       })
     } else {
       return ctx.replyWithMarkdown(
         `${
-        chat.captchaType === CaptchaType.DIGITS
-          ? `(${equation.question}) `
-          : ''
-        }[${getUsername(candidate)}](tg://user?id=${
-        candidate.id
-        })${warningMessage} (${chat.timeGiven} ${strings(chat, 'seconds')})`,
+          chat.captchaType === CaptchaType.DIGITS
+            ? `(${equation.question}) `
+            : ''
+        }<a href="tg://user?id=${candidate.id}">${getUsername(
+          candidate
+        )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+          chat,
+          'seconds'
+        )})`,
         extra
       )
     }
@@ -444,9 +450,9 @@ async function greetUser(ctx: ContextMessageUpdate) {
       const message = ctx.dbchat.greetingMessage.message
       const originalText = message.text
       const tags = {
-        '$title': (await ctx.getChat()).title,
-        '$username': getUsername(ctx.from),
-        '$fullname': getName(ctx.from)
+        $title: (await ctx.getChat()).title,
+        $username: getUsername(ctx.from),
+        $fullname: getName(ctx.from),
       }
 
       // For every tag present in the dictionnary, and in the greeting message
@@ -461,7 +467,8 @@ async function greetUser(ctx: ContextMessageUpdate) {
           // Update the offset of links if it is after the replaced tag
           message.entities.forEach(msgEntity => {
             if (msgEntity.offset > tag_offset) {
-              msgEntity.offset = msgEntity.offset - (tag).length + tag_value.length
+              msgEntity.offset =
+                msgEntity.offset - tag.length + tag_value.length
             }
           })
         }
@@ -477,7 +484,6 @@ async function greetUser(ctx: ContextMessageUpdate) {
         message,
         Extra.webPreview(false) as ExtraReplyMessage
       )
-
 
       // Delete greeting message if requested
       if (ctx.dbchat.deleteGreetingTime && messageSent) {
