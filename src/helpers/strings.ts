@@ -936,7 +936,7 @@ Vyberte prosím typ testu pro nováčky:
     es: 'Image',
     zh: 'Image',
     no: 'Image',
-    de: 'Image',
+    de: 'Bild',
     tw: 'Image',
     fr: 'Image',
     id: 'Image',
@@ -999,7 +999,7 @@ Vyberte prosím typ testu pro nováčky:
     no:
       'Vennligst velg hvor mange sekunder nykommere vil ha på å fullføre testen før brukeren blir sparket.',
     de:
-      'Bitte wähle, wieviele Sekunden ein neuer User hat, um den Test fertig zu stellen, bevor er gekicked wird.',
+      'Bitte wähle, wieviele Sekunden ein neuer User zeit hat, um den Test fertig zu stellen, bevor er gekicked wird.',
     tw: '請選擇新進成員在被踢除前有多少秒數可以完成驗證。',
     fr: `Veuillez sélectionner le temps (en secondes) qu'un utilisateur aura pour terminer le test avant d'être inquieté`,
     id:
@@ -1086,7 +1086,7 @@ Vyberte prosím typ testu pro nováčky:
       'Harika! Şimdi sadece yöneticiler tarafından gönderilen komutlara tepki vereceğim.',
     zh: '很棒！现在我只对管理员发送的命令作出反应。',
     no: 'Supert! Nå vil jeg bare svare på kommandoer gitt av administratorer.',
-    de: 'Super! Ich werde nun nur noch auf Admin Kommandos reagieren .',
+    de: 'Super! Ich werde nun nur noch auf Admin Kommandos reagieren.',
     tw: '很棒！現在我只對管理員發送的指令作出回應。',
     fr: 'Parfait, maintenant seuls les admins pourront utiliser les commandes',
     id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
@@ -1151,7 +1151,7 @@ Vyberte prosím typ testu pro nováčky:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
     de:
-      'Spitze! Neue User können nun nichts senden, außer der Captcha Lösung bis sie den Test bestanden haben.',
+      'Spitze! Neue User können nun nichts senden,außer der Captcha Lösung, bis sie den Test bestanden haben.',
     tw:
       '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
     fr:
@@ -1194,7 +1194,7 @@ Vyberte prosím typ testu pro nováčky:
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
-      'Wahnsinn! Neue User können nun Nc hrichten senden, bevor sie den Captcha Test bestanden haben.',
+      'Wahnsinn! Neue User können nun Nachrichten senden, bevor sie den Captcha Test bestanden haben.',
     tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
     fr: `Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.`,
     id:
@@ -1620,7 +1620,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Supert! Nykommere som har bestått testen vil ikke få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
     de:
-      'Turbo! Neue user, die den Test bestanden haben, werden nun begrüßt. Bitte beantworte diese Naxhricht mit einem Begrüßungstext. (Du kannst $title und $username als Platzhalter benutzen).',
+      'Turbo! Neue User, die den Test bestanden haben, werden nun begrüßt. Bitte beantworte diese Naxhricht mit einem Begrüßungstext. (Du kannst $title und $username als Platzhalter benutzen).',
     tw:
       '很棒！現在通過驗證的新進成員不會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。',
     fr: `Parfait, maintenant les nouveaux membres ayant réussi le test ne seront plus salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
@@ -1667,7 +1667,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username).',
     de:
-      'Turbo! Neue user, die den Test bestanden haben, werden nun begrüßt. Die aktuelle Begrüßungsnachricht folgt jetzt.',
+      'Turbo! Neue User, die den Test bestanden haben, werden nun begrüßt. Die aktuelle Begrüßungsnachricht folgt jetzt.',
     tw:
       '很棒！現在通過驗證的新進成員會收到歡迎消息。 請回復此消息，並附上您要使用的歡迎詞（您可以使用$title和$username）。接下來是目前的歡迎詞。',
     fr: `Parfait, maintenant les nouveaux membres qui ont réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).`,
@@ -1856,7 +1856,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Great! Now newcomers will see the default captcha message',
     zh: '很棒！现在新人将会看到默认的验证码消息',
     no: 'Great! Now newcomers will see the default captcha message',
-    de: 'Abartig! Jetzt erhalten neue User die standard Captcha Nachricht',
+    de: 'Großartig! Jetzt erhalten neue User die standard Captcha Nachricht',
     tw: 'Great! Now newcomers will see the default captcha message',
     fr: 'Great! Now newcomers will see the default captcha message',
     id: 'Great! Now newcomers will see the default captcha message',
@@ -1909,7 +1909,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     es: 'Nice! Users will be banned if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     no: 'Nice! Users will be banned if they do not pass captcha.',
-    de: 'Nice! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
+    de: 'Toll! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
     tw: 'Nice! Users will be banned if they do not pass captcha.',
     fr: 'Nice! Users will be banned if they do not pass captcha.',
     id: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1937,7 +1937,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     zh: '很好！如果用户未通过验证码，将被踢出。',
     no: 'Nice! Users will be kicked if they do not pass captcha.',
     de:
-      'Spitze! User werden gekicked, wenn sie den Captcha Test nicht schaffen.',
+      'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
     tw: 'Nice! Users will be kicked if they do not pass captcha.',
     fr: 'Nice! Users will be kicked if they do not pass captcha.',
     id: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1974,7 +1974,7 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     no:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     de:
-      'Top! Shieldy wird nun die Beitrittsnachrichten entfernen, wenn ein User den Captcha Test nciht besteht.',
+      'Top! Shieldy wird nun die Beitrittsnachrichten entfernen, wenn ein User den Captcha Test nicht besteht.',
     tw:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     fr:
