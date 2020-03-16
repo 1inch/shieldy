@@ -1151,7 +1151,7 @@ Vyberte prosím typ testu pro nováčky:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
     de:
-      'Spitze! Neue User können nun nichts senden,außer der Captcha Lösung, bis sie den Test bestanden haben.',
+      'Spitze! Neue User können nun nichts senden, außer der Captcha Lösung, bis sie den Test bestanden haben.',
     tw:
       '很棒！現在新進成員在通過驗證之前不能發送除驗證解決方案之外的任何內容。',
     fr:
