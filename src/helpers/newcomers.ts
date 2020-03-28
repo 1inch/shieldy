@@ -494,7 +494,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
       }
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (!originalText.includes('$username')) {
-        message.text = `${getUsername(ctx.from)}\n\n${message.text}`
+        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
       }
 
       // Send the message
