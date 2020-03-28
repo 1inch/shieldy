@@ -24,12 +24,19 @@ import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
 import { getUsername, getName } from './getUsername'
 
+const kickedIds = {} as { [index: number]: number[] }
+
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
   bot.on('left_chat_member', async ctx => {
     // Delete left message if required
-    if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
+    if (
+      ctx.dbchat.deleteEntryMessages ||
+      ctx.dbchat.underAttack ||
+      (ctx.dbchat.deleteEntryOnKick &&
+        kickedIds[ctx.dbchat.id].includes(ctx.from.id))
+    ) {
       try {
         await ctx.deleteMessage()
       } catch (err) {
@@ -249,6 +256,7 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
 async function kickChatMember(chat: InstanceType<Chat>, user: User) {
   // Try kicking the member
   try {
+    addKickedUser(chat.id, user.id)
     await bot.telegram.kickChatMember(
       chat.id,
       user.id,
@@ -271,6 +279,7 @@ async function kickCandidates(
   for (const candidate of candidates) {
     // Try kicking the candidate
     try {
+      addKickedUser(chat.id, candidate.id)
       await bot.telegram.kickChatMember(
         chat.id,
         candidate.id,
@@ -556,5 +565,17 @@ async function check() {
     report(err, 'checking candidates')
   } finally {
     checking = false
+  }
+}
+
+function addKickedUser(chatId: number, urerId: number) {
+  try {
+    if (kickedIds[chatId]) {
+      kickedIds[chatId].push(urerId)
+    } else {
+      kickedIds[chatId] = [urerId]
+    }
+  } catch (err) {
+    // Do nothing
   }
 }
