@@ -27,10 +27,6 @@ import { getUsername, getName } from './getUsername'
 const kickedIds = {} as { [index: number]: number[] }
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('noice', ctx => {
-    greetUser(ctx)
-  })
-
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
   bot.on('left_chat_member', async ctx => {
