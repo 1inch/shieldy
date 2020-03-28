@@ -167,6 +167,14 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
   const memberIds = ctx.message.new_chat_members.map(m => m.id)
   // Add to globaly restricted list
   await modifyGloballyRestricted(true, memberIds)
+  // Check if needs to delete message right away
+  if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
+    try {
+      await ctx.deleteMessage()
+    } catch {
+      // Do nothing
+    }
+  }
   // Start the newcomers logic
   try {
     // Check if no attack mode
@@ -203,15 +211,17 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       // Check if under attack
       if (ctx.dbchat.underAttack) {
         await kickChatMember(ctx.dbchat, member)
-        try {
-          await ctx.deleteMessage()
-        } catch (err) {
-          await report(err)
-        }
         continue
       }
       // Check if CAS banned
       if (!(await checkCAS(member.id))) {
+        if (ctx.dbchat.deleteEntryOnKick) {
+          try {
+            await ctx.deleteMessage()
+          } catch {
+            // Do nothing
+          }
+        }
         await kickChatMember(ctx.dbchat, member)
         continue
       }
@@ -237,14 +247,6 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     await modifyCandidates(ctx.dbchat, true, candidatesToAdd)
     // Restrict candidates if required
     await modifyRestrictedUsers(ctx.dbchat, true, candidatesToAdd)
-    // Delete entry message if required
-    if (ctx.dbchat.deleteEntryMessages) {
-      try {
-        await ctx.deleteMessage()
-      } catch (err) {
-        await report(err)
-      }
-    }
   } catch (err) {
     console.error('onNewChatMembers', err)
   } finally {
@@ -256,7 +258,7 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
 async function kickChatMember(chat: InstanceType<Chat>, user: User) {
   // Try kicking the member
   try {
-    addKickedUser(chat.id, user.id)
+    addKickedUser(chat, user.id)
     await bot.telegram.kickChatMember(
       chat.id,
       user.id,
@@ -279,7 +281,7 @@ async function kickCandidates(
   for (const candidate of candidates) {
     // Try kicking the candidate
     try {
-      addKickedUser(chat.id, candidate.id)
+      addKickedUser(chat, candidate.id)
       await bot.telegram.kickChatMember(
         chat.id,
         candidate.id,
@@ -568,12 +570,15 @@ async function check() {
   }
 }
 
-function addKickedUser(chatId: number, urerId: number) {
+function addKickedUser(chat: Chat, urerId: number) {
+  if (!chat.deleteEntryOnKick) {
+    return
+  }
   try {
-    if (kickedIds[chatId]) {
-      kickedIds[chatId].push(urerId)
+    if (kickedIds[chat.id]) {
+      kickedIds[chat.id].push(urerId)
     } else {
-      kickedIds[chatId] = [urerId]
+      kickedIds[chat.id] = [urerId]
     }
   } catch (err) {
     // Do nothing
