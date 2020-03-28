@@ -35,6 +35,7 @@ export const localizations = {
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -62,6 +63,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — отключить Щилди
 /noChannelLinks — автоматически удалять сообщения со ссылками на Телеграм-каналы
 /viewConfig — посмотреть текущие настройки Щилди
+/buttonText — изменить текст кнопки капчи в формате \`/buttonText Я не бот!\`
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!
 
@@ -88,6 +90,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Hai ancora domande? Dai un'occhiata al canale — @borodutch\\_support. Shieldy è open source e il suo codice sorgente può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!
 
@@ -114,6 +117,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!
 
@@ -140,6 +144,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
@@ -166,6 +171,7 @@ P.S., Якщо ви хочете допомогти ви можете пожер
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.
 
@@ -192,6 +198,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Hala sorularınız mı var? Destek kanalını kontrol edin: @borodutch\\_support. Shieldy'in kodu açık kaynaklıdır ve [buradan](https://github.com/backmeupplz/shieldy) erişilebilir. Teşekkür ederiz!
 Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına buradan](https://github.com/sponsors/backmeupplz) bağış yapın.`,
@@ -217,6 +224,7 @@ Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına bu
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!
 
@@ -243,6 +251,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！
 
@@ -269,6 +278,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!
 
@@ -295,6 +305,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Noch Fragen? Schau in unseren Support Kanal — @borodutch\\_support. Der Shieldy code ist open source und kann hier gefunden werden: https://github.com/backmeupplz/shieldy. Vielen Dank!
 
@@ -321,6 +332,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！
 
@@ -347,6 +359,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci!
 
@@ -373,6 +386,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
 
@@ -399,6 +413,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!
 
@@ -425,6 +440,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
@@ -452,6 +468,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!
 
@@ -478,6 +495,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Máte ďalšie otázky? Navštívte náš kanál podpory — @borodutch\\_support. Zdrojový kód Shieldyho je otvorený a nájdete ho [tu](https://github.com/backmeupplz/shieldy). Ďakujem!
 
@@ -504,6 +522,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! 
 
@@ -530,6 +549,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 まだご不明な点がありますか？サポートチャネルをチェックしてください！ — @borodutch\\_support. Shieldyコードはオープンソースとなり、こちらで見ることができます https://github.com/backmeupplz/shieldy. ありがとう！
@@ -557,6 +577,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 /viewConfig — view the current Shieldy configuration
+/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 

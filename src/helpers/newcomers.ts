@@ -378,7 +378,7 @@ async function notifyCandidate(
       : Extra.webPreview(false).markup(m =>
           m.inlineKeyboard([
             m.callbackButton(
-              strings(chat, 'captcha_button'),
+              chat.buttonText || strings(chat, 'captcha_button'),
               `${chat.id}~${candidate.id}`
             ),
           ])
