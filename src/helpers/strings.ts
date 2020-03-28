@@ -4,6 +4,7 @@ import { Chat } from '../models'
 export function strings(chat: Chat, key: string) {
   return (
     localizations[key][chat.language] ||
+    localizations[key]['en'] ||
     `🤔 Localization not found, please, contact @borodutch.
 
 Локализация не найдена, пожалуйста, напишите @borodutch.`
@@ -12,56 +13,6 @@ export function strings(chat: Chat, key: string) {
 
 export const localizations = {
   help: {
-    ruen: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
-
-/help — shows this message
-/language — switches language
-/captcha — changes type of captcha used
-/timeLimit — changes amount of time given to newcomers
-/lock — makes commands accessible only by admins
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
-/greeting — greet users who pass the test
-/trust — reply with this command to a message sent by user that you don't want to check
-/ban — same as trust, but the opposite
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
-/underAttack — toggle the mode to automatically kick all newcomers
-/noChannelLinks — automatically delete messages that link to other telegram channels
-
-Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
-
-P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).
-
-Shieldy — это лучшее решение в Телеграме по борьбе с надоедливыми спамерами. Он просит всех новичков сделать определенное действие в течение заданного времени и банит их, в случае несогласия. Да, это настолько просто. Убедитесь, что @shieldy\\_bot — админ в вашей группе, и все уже готово! Вы можете продолжить настройку бота, воспользовавшись следующими командами:
-
-/help — показывает это сообщение
-/language — меняет язык
-/captcha — меняет тип капчи
-/timeLimit — меняет количество времени, данное новичками
-/lock — делает команды доступными только админами
-/restrict — запрещает новичкам посылать что-либо, кроме текстовых сообщений в первые 24 часа
-/deleteEntryMessages — удалять сообщения о входе пользователей в чат
-/greeting — встречать прошедших проверку пользователей сообщением
-/trust — ответьте этой командой на сообщение пользователя, которого не нужно проверять
-/ban — то же, что и trust, но наоборот
-/strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
-/customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
-отключите эту фцнкцию, установив значение 0
-/banUsers — банить или кикать пользователей
-/deleteEntryOnKick — удалять ли сообщения о входе для пользователей, которые провалили капчу
-/cas — использовать Combot Anti-Spam или нет
-/underAttack — включить или выключить режим автоматического кика всех новичков
-/noChannelLinks — automatically delete messages that link to other telegram channels
-
-Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!
-
-P.S., если хотите помочь этому боту, пожалуйста, донатьте через [программу GitHub Sponsors тут](https://github.com/sponsors/backmeupplz).`,
     en: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
 
 /help — shows this message
@@ -81,6 +32,7 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
@@ -106,6 +58,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — удалять ли сообщения о входе для пользователей, которые провалили капчу
 /cas — использовать Combot Anti-Spam или нет
 /underAttack — включить или выключить режим автоматического кика всех новичков
+/noAttack — отключить Щилди
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Остались вопросы? Почитайте канал поддержки — @borodutch\\_support. Код Shieldy в открытом доступе [вот тут](https://github.com/backmeupplz/shieldy). Спасибо!
@@ -130,9 +83,10 @@ P.S., если хотите помочь этому боту, пожалуйст
 /deleteEntryOnKick — scegli se eliminare i messaggi d\'ingresso per coloro che hanno fallito il captcha
 /cas — scegli se usare Combot Anti-Spam
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
-Hai ancora domande? Dai un'occhiata al canale  — @borodutch\\_support. Shieldy è open source e il suo codice sorgente può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!
+Hai ancora domande? Dai un'occhiata al canale — @borodutch\\_support. Shieldy è open source e il suo codice sorgente può essere trovato [qui](https://github.com/backmeupplz/shieldy). Grazie!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
     et: `Shieldy — Telegrami parim lahendus ängistatavate rämpspostitajate vastu. Ta palub kõigil uustulnukitel teha mingi tegevus, teatud aja jooksul, kui nad ei ole seda teinud, siis see blokeerib neid. Jah, see on nii lihtne. Veenduge, et @shieldy\\_bot — administraator teie gruppis, ja kõik on valmis! Konfigureerige Shieldy kasutades järgmised käsud:
@@ -154,6 +108,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Veel küsimusi? Kirjutage minu loojale — @borodutch\\_support. Shieldy lähtekood on avatud [siin](https://github.com/backmeupplz/shieldy). Aitäh!
@@ -178,6 +133,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — чи видаляти повідомлення про вхід користувачів, що не вирішили капчу
 /cas — використовувати Combot Anti-Spam чи ні
 /underAttack — спеціальний режим коли всі новачки одразу вилучаються з чату
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
@@ -202,12 +158,13 @@ P.S., Якщо ви хочете допомогти ви можете пожер
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Ainda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-    tr: `Shieldy - Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:
+    tr: `Shieldy — Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:
 
 /help — Bu iletiyi görüntüler
 /language — Dili değiştirir
@@ -226,6 +183,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — CAPTCHA'dan başarısız olan kullanıcıların girdiği mesajların silinip silinmeyeceğini ayarlayın
 /cas — Combot Anti-Spam'ın kullanılıp kullanılmayacağını ayarlayın
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Hala sorularınız mı var? Destek kanalını kontrol edin: @borodutch\\_support. Shieldy'in kodu açık kaynaklıdır ve [buradan](https://github.com/backmeupplz/shieldy) erişilebilir. Teşekkür ederiz!
@@ -249,6 +207,7 @@ Not: Bu bota yardım etmek istiyorsanız, lüten [GitHub Sponsors programına bu
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 ¿Sigues con preguntas? Comprueba el canal de soporte — @borodutch\\_support. El código de Shieldy es código libre y puede ser encontrado [aquí](https://github.com/backmeupplz/shieldy). ¡Gracias!
@@ -273,6 +232,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — 删除还是保留回答验证码失败的用户加入消息
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 还有问题吗？查看支持渠道 — @borodutch\\_support。 Shieldy代码是开源的，可以在[这里](https://github.com/backmeupplz/shieldy)找到。谢谢！
@@ -297,6 +257,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Har du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldy's kode er åpen og kan bli funnet [her](https://github.com/backmeupplz/shieldy). Takk!
@@ -321,6 +282,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht 
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Noch Fragen? Schau in unseren Support Kanal — @borodutch\\_support. Der Shieldy code ist open source und kann hier gefunden werden: https://github.com/backmeupplz/shieldy. Vielen Dank!
@@ -345,6 +307,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！
@@ -369,6 +332,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Vous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci!
@@ -393,6 +357,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Masih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!
@@ -416,6 +381,8 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /banUsers — whether to ban or to kick users
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
+/underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 여전히 궁금한 사항이 있나요? 지원 채널 — @borodutch\\_support 을 확인해주세요. Shieldy 의 코드는 오픈소스 이며 (https://github.com/backmeupplz/shieldy) 에서 확인이 가능합니다. 감사합니다!
@@ -440,58 +407,13 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-    czen: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
 
-/help — shows this message
-/language — switches language
-/captcha — changes type of captcha used
-/timeLimit — changes amount of time given to newcomers
-/lock — makes commands accessible only by admins
-/restrict — restricts newcomers to send only text messages in the first 24 hours
-/deleteEntryMessages — delete messages about user entry
-/greeting — greets users who pass the test
-/trust — reply with this command to a message sent by user that you don't want to check
-/ban — same as trust, but the opposite
-/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
-/underAttack — toggle the mode to automatically kick all newcomers
-/noChannelLinks — automatically delete messages that link to other telegram channels
-
-Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
-
-Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Vyzkoušejte to @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
-
-/help — ukáže tuto zprávu
-/language — výběr jazyka
-/captcha — změní typ testu
-/timeLimit — změní čas pro splnění testu pro nováčky
-/lock — zpřístupní příkazy pouze správcům
-/restrict — omezí nováčky pouze na posílání textových zpráv prvních 24 hodin
-/deleteEntryMessages — smaže zprávu o vstupu nováčka do skupiny
-/greeting — pozdraví nováčky, kteří projdou testem
-/trust — odpovězte tímto příkazem na zprávu uživatele, kterého nechcete kontrolovat
-/ban — same as trust, but the opposite
-/strict — použijte, pokud nechcete dostávat žádné zprávy od nováčků, dokud neprojdou testem
-/customCaptchaMessage — setup custom captcha message
-/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
-/banUsers — whether to ban or to kick users
-/deleteEntryOnKick — whether to delete entry messages for users who failed captcha
-/cas — whether to use Combot Anti-Spam or not
-/underAttack — toggle the mode to automatically kick all newcomers
-/noChannelLinks — automatically delete messages that link to other telegram channels
-
-Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!
-
-P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
     cz: `Shieldy — je to nejlepší řešení na Telegramu v boji proti otravným spammerům. Požádá nováčky, aby provedli nastavenou akci ve stanovené lhůtě, jinak je vyhodí. Je to tak snadné. Ujistěte se, že @shieldy\\_bot je administrátor skupiny a to je vše! Nastavení můžete provést dle následujících příkazů:
 
 /help — ukáže tuto zprávu
@@ -511,6 +433,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Ještě máte nějaké otázky? Navštivte support channel — @borodutch\\_support. Shieldy kód je open source najdete ho [zde](https://github.com/backmeupplz/shieldy). Děkuji!
@@ -535,12 +458,13 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — voľba odstránenia vstupných správ pre používateľov, ktorí neprejdú testom captcha
 /cas — voľba použitia služby Combot Anti-Spam
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Máte ďalšie otázky? Navštívte náš kanál podpory — @borodutch\\_support. Zdrojový kód Shieldyho je otvorený a nájdete ho [tu](https://github.com/backmeupplz/shieldy). Ďakujem!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-    ar: `Shieldy — هو أفضل حل في التيليجرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الأعضاء الجدد الخضوع لإختبارات معينة في غضون فترة محددة، وعندما لا يجتازون الإختبار فإنه يقوم بطردهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot  منح البوت صلاحية الآدمن! يمكنك أيضًا زيادة سلوكيات البوت بإستخدام الأوامر التالية:
+    ar: `Shieldy — هو أفضل حل في التيليجرام لمكافحة مرسلي الرسائل غير المرغوب فيها . يطلب من الأعضاء الجدد الخضوع لإختبارات معينة في غضون فترة محددة، وعندما لا يجتازون الإختبار فإنه يقوم بطردهم. الأمر بهذه السهولة تأكد من @shieldy\\_bot منح البوت صلاحية الآدمن! يمكنك أيضًا زيادة سلوكيات البوت بإستخدام الأوامر التالية:
 
 /help — يظهر هذه الرسالة
 /language — تغيير اللغة
@@ -559,6 +483,7 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — whether to delete entry messages for users who failed captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! 
@@ -578,19 +503,19 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /ban — same as trust, but the opposite
 /strict — 新しく参加した人がキャプチャをパスするまで、メッセージではなくキャプチャソリューションを受け取りたい時に使う
 /customCaptchaMessage — キャプチャのメッセージをカスタマイズする
-/deleteGreetingTime —  \`/deleteGreetingTime 100\のように何秒間でShieldyのメッセージが消えるかを設定する。0に設定することでリセットされる
+/deleteGreetingTime — \`/deleteGreetingTime 100\のように何秒間でShieldyのメッセージが消えるかを設定する。0に設定することでリセットされる
 /banUsers — バンまたはユーザーを退出させる
 /deleteEntryOnKick —キャプチャを失敗したユーザーの入室メッセージを削除するかどうか
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 まだご不明な点がありますか？サポートチャネルをチェックしてください！ — @borodutch\\_support. Shieldyコードはオープンソースとなり、こちらで見ることができます https://github.com/backmeupplz/shieldy. ありがとう！
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
-  },
-  ro: `Shieldy — este cea mai bună soluție de a lupta cu spamerii enervanți de pe Telegram. Le cere nou veniților să execute un set de acțiuni într-o perioadă setată de timp, altfel le dă kick. Atât de simplu este. Asigură-te ca @shieldy\\_bot este admin pe grupul tau și asta e tot! Pentru setări avansate, folosește comenzile de mai jos:
+    ro: `Shieldy — este cea mai bună soluție de a lupta cu spamerii enervanți de pe Telegram. Le cere nou veniților să execute un set de acțiuni într-o perioadă setată de timp, altfel le dă kick. Atât de simplu este. Asigură-te ca @shieldy\\_bot este admin pe grupul tau și asta e tot! Pentru setări avansate, folosește comenzile de mai jos:
 
 /help — arată acest mesaj
 /language — schimbă limba
@@ -609,13 +534,14 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — șterge mesajul de întâmpinare pentru userii ce nu au trecut de captcha
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
+/noAttack — disables Shieldy
 /noChannelLinks — automatically delete messages that link to other telegram channels
 
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
 P.S., if you want to help this bot, please, donate through the [GitHub Sponsors program here](https://github.com/sponsors/backmeupplz).`,
+  },
   language: {
-    ruen: 'Please, select the language. Пожалуйста, выберите язык.',
     en: 'Please, select the language.',
     ru: 'Пожалуйста, выберите язык.',
     it: 'Prego, seleziona la lingua.',
@@ -632,7 +558,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     id: 'Silakan pilih bahasa.',
     ko: '언어를 선택하십시오.',
     am: 'ቋንቋ ምረጡ።',
-    czen: 'Please, select the language. Prosím, vyber jazyk.',
     cz: 'Prosím, vyber jazyk.',
     sk: 'Vyberte jazyk.',
     ar: 'الرجاء إختيار اللغة.',
@@ -640,8 +565,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     ro: 'Te rog, salectează limba.',
   },
   language_selected: {
-    ruen:
-      'Great, I speak Ruslish now. Отлично, я теперь говорю по-руслишски. О, да вы из Англии.',
     en: 'Great, I speak English now.',
     ru: 'Отлично, я теперь говорю по-русски.',
     it: 'Perfetto, Ora parlo Italiano.',
@@ -658,8 +581,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     id: 'Baiklah. Saya berbahasa Indonesia sekarang.',
     ko: '좋아요, 나는 이제 한국어로 말합니다.',
     am: 'አሪፍ አሁን አማርኛ አወራለሁ።',
-    czen:
-      'Great, I speak Czech/English now. Skvělé, nyní mluvím česko-anglicky.',
     cz: 'Skvělé, nyní mluvím česky.',
     sk: 'Skvelé, teraz hovorím po slovensky.',
     ar: 'عظيم، أنا أتكلم العربية الآن.',
@@ -667,8 +588,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     ro: 'Perfect, acum vorbesc Română.',
   },
   only_author_can_reply: {
-    ruen:
-      'Only the person who initiated the menu can select the choices. Только человек, вызвавший меню, может выбирать опции.',
     en: 'Only the person who initiated the menu can select the choices.',
     ru: 'Только человек, вызвавший меню, может выбирать опции.',
     it: 'Solamente chi ha invocato il comando può selezionarlo.',
@@ -687,8 +606,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     id: 'Hanya orang yg meminta menu yg bisa menentukan pilihan.',
     ko: '메뉴를 시작한 사람만이 선택을 할 수 있습니다.',
     am: 'ሜኑውን ያስጀመረው ሰዉ ብቻ ነው መክፈት የሚችለው ።',
-    czen:
-      'Only the person who initiated the menu can select the choices. Možnost může vybrat jen osoba, která nabídku vyvolala.',
     cz: 'Možnost může vybrat jen osoba, která nabídku vyvolala.',
     sk: 'Možnosti môže vybrať iba osoba, ktorá spustila ponuku.',
     ar: 'فقط الشخص الذي بدأ القائمة يمكنه تحديد الخيارات.',
@@ -696,19 +613,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     ro: 'Doar persoana ce a inițiat meniul poate selecta',
   },
   captcha: {
-    ruen: `Please, select the test type for the newcomers:
-
-• Simple — bot will ask to send anything to the chat
-• Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple arithmetic operation
-• Image — bot will ask to recognize characters on an image
-
-Пожалуйста, выберите тип проверки новичков в чате:
-
-• Простая — бот попросит прислать что угодно в чат
-• Кнопкой — бот попросит нажать на кнопку
-• Цифровая — бот попросит решить простую арифметическую задачу
-• Картинкой — бот попросит распознать символы на картинке`,
     en: `Please, select the test type for the newcomers:
 
 • Simple — bot will ask to send anything to the chat
@@ -777,9 +681,9 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 • Image — bot will ask to recognize characters on an image`,
     tw: `請為新進成員選擇驗證類型：
 
-•簡單 — 機器人會要求在聊天室發送任何內容
-•按鈕 — 機器人將要求按下一個按鈕
-•數字 — 機器人將要求解答一個簡單的數學問題
+• 簡單 — 機器人會要求在聊天室發送任何內容
+• 按鈕 — 機器人將要求按下一個按鈕
+• 數字 — 機器人將要求解答一個簡單的數學問題
 • Image — bot will ask to recognize characters on an image`,
     fr: `Veuillez sélectionner le type de test pour les nouveaux membres
 
@@ -804,19 +708,6 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 • ሲምፕል — ቦቱ ማንኛውንም ጸሁፍ እንዲልኩ ይጠይቃል። 
 • በተን — ቦቱ በተን አንዲነካ ይጠይቃል።
 • ዲጂት — በቱ መልሰ ይጠየቃል።
-• Image — bot will ask to recognize characters on an image`,
-    czen: `Please, select the test type for the newcomers:
-
-• Simple — bot will ask to send anything to the chat
-• Button — bot will ask to press a button
-• Digits — bot will ask to solve a simple arithmetic operation
-• Image — bot will ask to recognize characters on an image
-
-Vyberte prosím typ testu pro nováčky:
-
-• Jednoduchý — bot požádá o zaslání jakékoliv zprávy do chatu
-• Tlačítko — bot požádá o stisk tlačítka
-• Číselný — bot požádá o vyřešení jednoduchého příkladu
 • Image — bot will ask to recognize characters on an image`,
     cz: `Vyberte prosím typ testu pro nováčky:
 
@@ -850,7 +741,6 @@ Vyberte prosím typ testu pro nováčky:
 • Image — bot will ask to recognize characters on an image`,
   },
   simple: {
-    ruen: 'Simple/Простая',
     en: 'Simple',
     ru: 'Простая',
     it: 'Semplice',
@@ -867,7 +757,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Salam',
     ko: '단순함',
     am: 'ሲምፕል',
-    czen: 'Simple/Jednoduchý',
     cz: 'Jednoduchý',
     sk: 'Jednoduchý',
     ar: 'بسيطه',
@@ -875,7 +764,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Simplu',
   },
   digits: {
-    ruen: 'Digits/Цифровая',
     en: 'Digits',
     ru: 'Цифровая',
     it: 'Digita',
@@ -892,7 +780,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Angka',
     ko: '방정식',
     am: 'ዲጂት',
-    czen: 'Digits/Číselný',
     cz: 'Číselný',
     sk: 'Číselný',
     ar: 'ارقام',
@@ -900,7 +787,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Cifre',
   },
   button: {
-    ruen: 'Button/Кнопкой',
     en: 'Button',
     ru: 'Кнопкой',
     it: 'Bottone',
@@ -917,7 +803,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Tombol',
     ko: '버튼',
     am: 'በተን',
-    czen: 'Button/Tlačítko',
     cz: 'Tlačítko',
     sk: 'Tlačidlo',
     رمي: 'زر',
@@ -925,33 +810,14 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Buton',
   },
   image: {
-    ruen: 'Image/Картинкой',
     en: 'Image',
     ru: 'Картинкой',
     it: 'Immagine',
-    et: 'Image',
     uk: 'Зображення',
-    br: 'Image',
     tr: 'Resim',
-    es: 'Image',
-    zh: 'Image',
-    no: 'Image',
     de: 'Bild',
-    tw: 'Image',
-    fr: 'Image',
-    id: 'Image',
-    ko: 'Image',
-    am: 'Image',
-    czen: 'Image',
-    cz: 'Image',
-    sk: 'Image',
-    رمي: 'Image',
-    ja: 'Image',
-    ro: 'Image',
   },
   captcha_selected: {
-    ruen:
-      'Great, I will use this type of test then. Отлично, теперь я буду использовать этот тип теста.',
     en: 'Great, I will use this type of test then.',
     ru: 'Отлично, теперь я буду использовать этот тип теста.',
     it: 'Fantastico, Userò questo tipo di test.',
@@ -968,8 +834,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Baiklah, jenis ujian tersebut yg akan dipakai.',
     ko: '좋아요. 그러면 이런 종류의 테스트를 사용하겠습니다.',
     am: 'አሪፍ እንደዚህ አይነት ቴሰት እጠቀማለሁ ።',
-    czen:
-      'Great, I will use this type of test then. Skvělé, budu používat tento typ testu.',
     cz: 'Skvělé, budu používat tento typ testu.',
     sk: 'Skvelé, budem teda používať tento typ testu.',
     ar: 'تم سوف استخدم هذا النوع من الاختبار .',
@@ -977,8 +841,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Perfect, o să utilizez acest tip de test.',
   },
   time_limit: {
-    ruen:
-      'Please, select how many seconds will newcomers get to complete the test before the kick. Пожалуйста, выберите, сколько секунд будет у новичков, чтобы завершить тест перед киком.',
     en:
       'Please, select how many seconds will newcomers get to complete the test before the kick.',
     ru:
@@ -1006,8 +868,6 @@ Vyberte prosím typ testu pro nováčky:
       'Silakan tentukan berapa detik yg dibutuhkan anggota baru untuk menanggapi sebelum ditolak bergabung.',
     ko: '신규 입장자가 추방 전에 테스트를 완료 할 시간을 선택하십시오.',
     am: 'ለስንት ሰከንድ ልጠብቅ ከማባረሬ በፊት',
-    czen:
-      'Please, select how many seconds will newcomers get to complete the test before the kick. Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
     cz:
       'Prosím, zvolte kolik sekund bude mít nováček na splnění testu, než bude vyhozen.',
     sk:
@@ -1020,8 +880,6 @@ Vyberte prosím typ testu pro nováčky:
       'Te rog selectează câte secunde au la dispoziție userii noi să completeze testul, înainte sa fi dați afară.',
   },
   time_limit_selected: {
-    ruen:
-      'Great, I will use this time limit then. Отлично, теперь я буду использовать этот временной лимит.',
     en: 'Great, I will use this time limit then.',
     ru: 'Отлично, теперь я буду использовать этот временной лимит.',
     it: 'Magnifico, Ora userò questo tempo',
@@ -1038,8 +896,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Baiklah, batas waktu tersebut yg akan dipakai.',
     ko: '좋아요, 이 시간 제한을 사용하겠습니다.',
     am: 'እሺ ይሄን ያህል ሰከንድ እጠብቃለሁ ።',
-    czen:
-      'Great, I will use this time limit then. Skvělé, budu používat tento časový limit.',
     cz: 'Skvělé, budu používat tento časový limit.',
     sk: 'Skvelé, budem teda používať tento časový limit.',
     ar: 'عظيم، سأستخدم هذا الحد الزمني .',
@@ -1047,7 +903,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Super, o să folosesc această limită de timp',
   },
   seconds: {
-    ruen: 'sec/сек',
     en: 'sec',
     ru: 'сек',
     it: 'sec',
@@ -1064,7 +919,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'detik',
     ko: '초',
     am: 'ሰከንድ',
-    czen: 'sec',
     cz: 's',
     sk: 's',
     ar: 'ثانية',
@@ -1072,8 +926,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'sec',
   },
   lock_true: {
-    ruen:
-      'Great! Now I will only react to commands sent by admins. Отлично! Теперь я буду принимать команды только от админов.',
     en: 'Great! Now I will only react to commands sent by admins.',
     ru: 'Отлично! Теперь я буду принимать команды только от админов.',
     it: 'Perfetto, Ora eseguirò solamente i comandi inviati da amministratori.',
@@ -1092,8 +944,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Baiklah, sekarang saya hanya menanggapi perintah dari admin saja.',
     ko: '좋아요! 이제 나는 관리자들이 보내는 명령에만 반응할 것입니다.',
     am: 'አሁን አድሚን ብቻ ይጠቀማል።',
-    czen:
-      'Great! Now I will only react to commands sent by admins. Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     cz: 'Skvělé! Nyní budu reagovat pouze na příkazy poslané správci.',
     sk: 'Super! Odteraz budem reagovať iba na príkazy zadané správcami.',
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
@@ -1101,8 +951,6 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
   },
   lock_false: {
-    ruen:
-      'Great! Now I will react to commands sent by anybody. Отлично! Теперь я буду принимать команды ото всех.',
     en: 'Great! Now I will react to commands sent by anybody.',
     ru: 'Отлично! Теперь я буду принимать команды ото всех.',
     it: 'Perfetto, Ora eseguirò i comandi inviati da tutti.',
@@ -1120,8 +968,6 @@ Vyberte prosím typ testu pro nováčky:
     id: 'Baiklah, sekarang saya akan menanggapi perintah dari siapa pun.',
     ko: '좋아요! 이제 나는 누구든지 보낸 명령에 반응할 것입니다.',
     am: 'አሁን ሁሉም ሰው ይጠቀማል።',
-    czen:
-      'Great! Now I will react to commands sent by anybody. Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     cz: 'Skvělé! Nyní budu reagovat na příkazy poslané kýmkoli.',
     sk: 'Super! Odteraz budem reagovať na príkazy zadané kýmkoľvek.',
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
@@ -1129,22 +975,12 @@ Vyberte prosím typ testu pro nováčky:
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
   },
   strict_true: {
-    ruen:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.",
     en:
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     ru:
       'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
-    it:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    et:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     uk:
-      "Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.",
-    br:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
-    es:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
+      'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
     zh:
@@ -1161,8 +997,6 @@ Vyberte prosím typ testu pro nováčky:
     ko:
       '좋아! 이제 새로 온 사람들은 captcha를 통과 할 때까지 captcha 솔루션 외에는 아무것도 보내지 않을 것입니다.',
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ምንም መላክ አይችልም ።',
-    czen:
-      "Great! Now newcomers won't send anything but captcha solutions until they pass captcha. Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.",
     cz: 'Skvělé! Nyní nováčci nemohou nic poslat, dokud neprojdou testem.',
     sk:
       'Výborne! Odteraz nováčikovia nebudú môcť poslať nič okrem riešenia testu captcha, až kým neprejdú týmto testom.',
@@ -1174,23 +1008,13 @@ Vyberte prosím typ testu pro nováčky:
       'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
   },
   strict_false: {
-    ruen:
-      'Great! Now newcomers will be able to send text before they pass captcha. Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
     en:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
-    it:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
-    et:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
     uk:
       'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
-    br:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
-    es:
-      'Great! Now newcomers will be able to send text before they pass captcha.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
@@ -1202,8 +1026,6 @@ Vyberte prosím typ testu pro nováčky:
     ko:
       '좋아요! 이제 새로 온 사람들은 캡챠를 통과하기 전에 메시지를 보낼 수 있을 거예요.',
     am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ሜሴጅ መላክ ይችላል ።',
-    czen:
-      'Great! Now newcomers will be able to send text before they pass captcha. Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     sk:
       'Výborne! Odteraz nováčikovia budú môcť posielať textové správy predtým, ako prejdú testom captcha.',
@@ -1215,9 +1037,6 @@ Vyberte prosím typ testu pro nováčky:
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
   },
   simple_warning: {
-    ruen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
-
-  Пожалуйста, отправьте любое сообщение в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
     ru:
@@ -1245,11 +1064,6 @@ Vyberte prosím typ testu pro nováčky:
       ', silakan sampaikan salam perkenalan dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 이 그룹에 메시지를 보내 주십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
-    am:
-      ', please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!',
-    czen: `, please, send any message to this group within the time amount specified, otherwise you will be kicked. Thank you!
-
-  Prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!`,
     cz:
       ', prosím, pošlete do této skupiny jakoukoliv zprávu ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     sk:
@@ -1262,9 +1076,6 @@ Vyberte prosím typ testu pro nováčky:
       ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
   },
   digits_warning: {
-    ruen: `, please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!
-
-Пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
@@ -1292,11 +1103,6 @@ Vyberte prosím typ testu pro nováčky:
       ', silakan jawab soal hitungan tersebut dalam waktu yg ditentukan atau anda akan ditolak bergabung dengan grup ini. Terima kasih!',
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 제공된 수학 방정식의 답을 채팅으로 보내십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
-    am:
-      ', please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    czen: `, prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!
-
-please, send the solution to the arithmetic operation provided within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
     cz:
       ', prosím, pošli řešení matematické rovnice ve stanoveném čase, jinak budeš vyhozen. Děkuji!',
     sk:
@@ -1309,9 +1115,6 @@ please, send the solution to the arithmetic operation provided within the time a
       ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
   },
   button_warning: {
-    ruen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
-
-Пожалуйста, нажмите на кнопку ниже в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!',
     ru:
@@ -1340,9 +1143,6 @@ please, send the solution to the arithmetic operation provided within the time a
     ko:
       ', 스팸 봇인지 확인하기 위한 작업입니다. 지정된 시간 내에 아래 버튼을 누르십시오. 그렇지 않으면 자동 추방 될 예정입니다. 감사합니다!',
     am: ', በተኑን ይንኩት ካለበለዛ ይባረራሉ',
-    czen: `, please, press the button below within the time amount specified, otherwise you will be kicked. Thank you!
-
-Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!`,
     cz:
       ', prosím, stiskněte tlačítko ve stanoveném čase, jinak budete vyhozeni. Děkuji!',
     sk:
@@ -1355,54 +1155,18 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
   },
   image_warning: {
-    ruen: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!
-
-Пожалуйста, отправьте цифры с картинки в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!`,
     en:
       ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
       ', пожалуйста, отправьте цифры с картинки в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
-    it:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
       ', будь ласка, надішліть зазначені символи у цей чат, поки не спливе вказаний час, або ви будете вилучені з чату. Дякуємо!',
-    br:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     tr:
       ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
-    es:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    zh:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    no:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    de:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    tw:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    fr: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
-    id:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    ko:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    am:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    czen: `, please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!`,
-    cz:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    sk:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    ar:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    ja:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
-    ro:
-      ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
   },
   captcha_button: {
-    ruen: 'Not a bot. Не бот.',
     en: 'I am not a bot',
     ru: 'Я не бот',
     it: 'Non sono un bot',
@@ -1419,7 +1183,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Saya bukan bot',
     ko: '저는 봇이 아닙니다',
     am: 'ቦት አይደለውም',
-    czen: 'Not a bot. Nejsem bot.',
     cz: 'Nejsem bot.',
     sk: 'Nie som bot',
     ar: 'أنا لست بوت',
@@ -1427,8 +1190,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Nu sunt un bot',
   },
   only_candidate_can_reply: {
-    ruen:
-      'Only the candidate for not being a bot can press this button. Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
     en: 'Only the candidate for not being a bot can press this button.',
     ru:
       'Только кандидат на то, чтобы быть человеком, может нажимать на эту кнопку.',
@@ -1446,8 +1207,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Hanya orang alias bukan bot yg bisa menekan tombol ini.',
     ko: '신규 입장자만 이 버튼을 누를 수 있습니다.',
     am: 'ቦት ያልሆኑ ብቻ ነዉ መንካት የሚችሉት።',
-    czen:
-      'Only the candidate for not being a bot can press this button. Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     cz: 'Toto tlačítko může stisknout jen nováček, který se zrovna připojil.',
     sk:
       'Toto tlačidlo môže stlačiť iba nováčik, ktorému bola správa adresovaná.',
@@ -1456,16 +1215,10 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
   },
   restrict_true: {
-    ruen:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat. Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
     en:
       'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     ru:
       'Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
-    it:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
-    et:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     uk:
       'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
     br:
@@ -1486,8 +1239,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ko:
       '좋아요! 이제 모든 신규 입장자들은 이 채팅에 일반적인 문자 메시지만 보낼 수 있게 될 것입니다.',
     am: 'አዲስ ገቢዎች ቴክስት ብቻ ነዉ የሚልኩት።',
-    czen:
-      'Great! Now all newcomers will only be able to send usual text messages to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
     cz:
       'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat jen textové zprávy.',
     sk:
@@ -1500,16 +1251,10 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Perfect! Acum toți nou veniții vor putea trimite orice fel de mesaje text către acest chat. ',
   },
   restrict_false: {
-    ruen:
-      'Great! Now all newcomers will be able to send any type of content to this chat. Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
     en:
       'Great! Now all newcomers will be able to send any type of content to this chat.',
     ru:
       'Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
-    it:
-      'Great! Now all newcomers will be able to send any type of content to this chat.',
-    et:
-      'Great! Now all newcomers will be able to send any type of content to this chat.',
     uk:
       'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
     br:
@@ -1530,8 +1275,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ko:
       '좋아요! 이제 모든 신규 입장자들은 이 채팅에 모든 유형의 콘텐츠도 보낼 수 있게 될 것입니다.',
     am: 'አዲስ ገቢዎች የፈለጉትን ነዉ የሚልኩት።',
-    czen:
-      'Great! Now all newcomers will be able to send any type of content to this chat. Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     cz: 'Skvělé! Nyní mohou do tohoto chatu všichni nováčci posílat cokoli.',
     sk:
       'Skvelé! Odteraz všetci nováčikovia budú môcť do tohto četu posielať akýkoľvek obsah.',
@@ -1543,12 +1286,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Perfect! Acum toți nou veniții vor putea trimite orice fel conținut către acest chat.',
   },
   deleteEntryMessages_true: {
-    ruen:
-      'Great! Now entry messages will be deleted. Отлично! Теперь сообщения о входе пользователей будут удаляться.',
     en: 'Great! Now entry messages will be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
-    it: 'Great! Now entry messages will be deleted.',
-    et: 'Great! Now entry messages will be deleted.',
     uk: 'Чудово! Тепер повідомлення про вхід користувачів буде видалено.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecek.',
@@ -1561,8 +1300,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Baiklah, sekarang pesan sambutan akan dihapus.',
     ko: '좋아요! 이제 입력 메시지가 삭제됩니다.',
     am: 'ኢንትሪ ሜሴጅ ተደልቷል።',
-    czen:
-      'Great! Now entry messages will be deleted. Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní budou mazány zprávy o příchodu nováčka.',
     sk: 'Výborne! Odteraz budú správy o vstupe nováčika do četu odstránené.',
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
@@ -1570,12 +1307,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
   },
   deleteEntryMessages_false: {
-    ruen:
-      'Great! Now entry messages will not be deleted. Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
     en: 'Great! Now entry messages will not be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
-    it: 'Great! Now entry messages will not be deleted.',
-    et: 'Great! Now entry messages will not be deleted.',
     uk: 'Чудово! Тепер повідомлення про вхід користувачів не буде видалено.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
@@ -1588,8 +1321,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Baiklah, sekarang pesan sambutan tidak akan dihapus.',
     ko: '좋아요! 이제 입력 메시지는 삭제되지 않습니다.',
     am: 'ኢንትሪ ሜሴጅ አልተደለተም።',
-    czen:
-      'Great! Now entry messages will not be deleted. Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     cz: 'Skvělé! Nyní nebudou mazány zprávy o příchodu nováčka.',
     sk: 'Výborne! Odteraz nebudú správy o vstupe nováčika do četu odstránené.',
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
@@ -1597,8 +1328,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
   },
   greetsUsers_true: {
-    ruen:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title, $fullname и $username).',
     en:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username).',
     ru:
@@ -1628,10 +1357,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Baiklah, sekarang anggota baru yg lolos ujian tidak akan menerima pesan sambutan. Silakan balas pesan ini dengan pesan sambutan yg ingin anda gunakan (tersedia $title dan $username).',
     ko:
       '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능).',
-    am:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username).',
-    czen:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username).',
     sk:
@@ -1644,8 +1369,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username).',
   },
   greetsUsers_true_message: {
-    ruen:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). The current greeting message follows. Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title, $fullname и $username). Текущее сообщение с приветствием ниже.',
     en:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). The current greeting message follows.',
     ru:
@@ -1677,8 +1400,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       '좋아요! 이제 테스트에 통과한 신규 입장자들에게 인사 할 예정입니다. 사용하고 싶은 인사말을 사용하여 이 메시지에 회신하십시오 ($title 및 $username 사용 가능). 현재 인사 메시지가 이어집니다.',
     am:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). The current greeting message follows.',
-    czen:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use (you can use $title, $fullname and $username). The current greeting message follows. Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
     cz:
       'Skvělé! Nyní budou uvítáni nováčci, kteří prošli testem. Odpovězte prosím na tuto zprávu uvítacím textem, který chcete použít (můžete použít $title a $username). Následuje pozdrav.',
     sk:
@@ -1691,14 +1412,11 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username). Mesajul curent de salut este următorul.',
   },
   greetsUsers_false: {
-    ruen:
-      'Great! Now newcomers who passed the test will not be greeted. Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     en: 'Great! Now newcomers who passed the test will not be greeted.',
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
-    it: 'Great! Now newcomers who passed the test will not be greeted.',
-    et: 'Great! Now newcomers who passed the test will not be greeted.',
-    uk: 'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
+    uk:
+      'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
     es:
@@ -1713,9 +1431,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id:
       'Baiklah, sekarang anggota baru yg lolos ujian tidak menerima sambutan.',
     ko: '좋아요! 이제 테스트에 합격한 신입들에게 환영 인사를 하지않을 거예요.',
-    am: 'Great! Now newcomers who passed the test will not be greeted.',
-    czen:
-      'Great! Now newcomers who passed the test will not be greeted. Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     cz: 'Skvělé! Nyní nováčci, kteří projdou testem nebudou uvítáni.',
     sk: 'Super! Odteraz nováčikovia, ktorí prešli testom, nebudú uvítaní.',
     ar: 'تم ! الآن لن يتم استقبال الأعضاء الجدد الذين اجتازوا الاختبار.',
@@ -1724,11 +1439,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Super! Acum nou veniții ce au trecut testul vor fi salutați.',
   },
   greetsUsers_message_accepted: {
-    ruen: 'Accepted! Принято!',
     en: 'Accepted!',
     ru: 'Принято!',
-    it: 'Accepted!',
-    et: 'Accepted!',
     uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
@@ -1741,7 +1453,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Diterima!',
     ko: '수락되었습니다',
     am: 'ተቀብለናል',
-    czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
     sk: 'Prijaté!',
     ar: 'قبلت!',
@@ -1749,42 +1460,18 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Acceptat!',
   },
   captchaMessage_true: {
-    ruen:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds).',
     en:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     ru:
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds).',
-    it:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    et:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds).',
-    br:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz).',
-    es:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     zh:
       '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation, $fullname 和 $seconds)。',
-    no:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     de:
       'WOW! Neue User erhalten nun eine individuelle Nachricht, die Ihnen das Captcha erklärt. Bitte antworte auf diese Nachricht mit dem Captcha Text, den du verwenden möchtest. (Du kannst die Platzhalter $title, $username, $equation, $fullname und $seconds verwenden).',
-    tw:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    id:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    ko:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    am:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    czen:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
-    cz:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     sk:
       'Skvelé! Odteraz nováčikovia obdržia vlastnú správu vysvetľujúcu test captcha. Odpovedzte na túto správu textom testu captcha, ktorý chcete použiť (môžete použiť $title, $username, $equation, $fullname a $seconds).',
     ar:
@@ -1795,44 +1482,18 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds).',
   },
   captchaMessage_true_message: {
-    ruen:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows. Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds). Текущее сообщение с приветствием ниже.',
     en:
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     ru:
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds). Текущее сообщение с приветствием ниже.',
-    it:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    et:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds). Поточне пояснення наведено нижче.',
-    br:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz). Geçerli karşılama mesajı izlenir.',
-    es:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     zh:
       '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation, $fullname 和 $seconds)。 当前的问候消息如下。',
-    no:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     de:
       'WOW! Neue User erhalten nun eine individuelle Nachricht, die Ihnen das Captcha erklärt. Bitte antworte auf diese Nachricht mit dem Captcha Text, den du verwenden möchtest. (Du kannst die Platzhalter $title, $username, $equation, $fullname und $seconds verwenden). Die aktuelle Begrüßungsnachricht folgt.',
-    tw:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    fr:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    id:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    ko:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    am:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    czen:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
-    cz:
-      'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     sk:
       'Skvelé! Odteraz nováčikovia obdržia vlastnú správu vysvetľujúcu test captcha. Odpovedzte na túto správu textom testu captcha, ktorý chcete použiť (môžete použiť $title, $username, $equation, $fullname a $seconds). Nasleduje aktuálna uvítacia správa.',
     ar:
@@ -1843,27 +1504,13 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds). Mesajul curent de salut este următorul.',
   },
   captchaMessage_false: {
-    ruen:
-      'Great! Now newcomers will see the default captcha message. Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     en: 'Great! Now newcomers will see the default captcha message',
     ru:
       'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
-    it: 'Great! Now newcomers will see the default captcha message',
-    et: 'Great! Now newcomers will see the default captcha message',
     uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
-    br: 'Great! Now newcomers will see the default captcha message',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
-    es: 'Great! Now newcomers will see the default captcha message',
     zh: '很棒！现在新人将会看到默认的验证码消息',
-    no: 'Great! Now newcomers will see the default captcha message',
     de: 'Großartig! Jetzt erhalten neue User die standard Captcha Nachricht',
-    tw: 'Great! Now newcomers will see the default captcha message',
-    fr: 'Great! Now newcomers will see the default captcha message',
-    id: 'Great! Now newcomers will see the default captcha message',
-    ko: 'Great! Now newcomers will see the default captcha message',
-    am: 'Great! Now newcomers will see the default captcha message',
-    czen: 'Great! Now newcomers will see the default captcha message',
-    cz: 'Great! Now newcomers will see the default captcha message',
     sk:
       'Skvelé! Odteraz nováčikovia budú vidieť predvolenú správu testu captcha',
     ar: 'رائع, يمكن للأعضاء الجدد الآن رؤية رسالة الإختبار الإفتراضية',
@@ -1872,11 +1519,8 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
   },
   trust_success: {
-    ruen: 'Accepted! Принято!',
     en: 'Accepted!',
     ru: 'Принято!',
-    it: 'Accepted!',
-    et: 'Accepted!',
     uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
@@ -1889,7 +1533,6 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     id: 'Diterima!',
     ko: '수락되었습니다',
     am: 'ተቀብለናል',
-    czen: 'Accepted! Přijato!',
     cz: 'Přijato!',
     sk: 'Prijaté!',
     ar: 'قبلت!',
@@ -1897,26 +1540,13 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Acceptat!',
   },
   banUsers_true: {
-    ruen:
-      'Nice! Users will be banned if they do not pass captcha. Отлично! Пользователи будут баниться, если не пройдут капчу.',
     en: 'Nice! Users will be banned if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
-    it: 'Nice! Users will be banned if they do not pass captcha.',
-    et: 'Nice! Users will be banned if they do not pass captcha.',
-    uk: 'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
-    br: 'Nice! Users will be banned if they do not pass captcha.',
+    uk:
+      'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
-    es: 'Nice! Users will be banned if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
-    no: 'Nice! Users will be banned if they do not pass captcha.',
     de: 'Toll! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
-    tw: 'Nice! Users will be banned if they do not pass captcha.',
-    fr: 'Nice! Users will be banned if they do not pass captcha.',
-    id: 'Nice! Users will be banned if they do not pass captcha.',
-    ko: 'Nice! Users will be banned if they do not pass captcha.',
-    am: 'Nice! Users will be banned if they do not pass captcha.',
-    czen:
-      'Nice! Users will be banned if they do not pass captcha. Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
     sk: 'Fajn! Používatelia, ktorí neprejdú testom, budú zabanovaní.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
@@ -1924,27 +1554,13 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
   },
   banUsers_false: {
-    ruen:
-      'Nice! Users will be kicked if they do not pass captcha. Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     en: 'Nice! Users will be kicked if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
-    it: 'Nice! Users will be kicked if they do not pass captcha.',
-    et: 'Nice! Users will be kicked if they do not pass captcha.',
     uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
-    br: 'Nice! Users will be kicked if they do not pass captcha.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
-    es: 'Nice! Users will be kicked if they do not pass captcha.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
-    no: 'Nice! Users will be kicked if they do not pass captcha.',
     de:
       'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
-    tw: 'Nice! Users will be kicked if they do not pass captcha.',
-    fr: 'Nice! Users will be kicked if they do not pass captcha.',
-    id: 'Nice! Users will be kicked if they do not pass captcha.',
-    ko: 'Nice! Users will be kicked if they do not pass captcha.',
-    am: 'Nice! Users will be kicked if they do not pass captcha.',
-    czen:
-      'Nice! Users will be kicked if they do not pass captcha. Skvělé! Nováčci, kteří neprojdou testem budou vyhozeni.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
     sk: 'Fajn! Používatelia, ktorí neprejdú testom, budú vyhodení.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
@@ -1952,273 +1568,91 @@ Prosím, stiskni tlačítko ve stanoveném čase, jinak budeš vyhozen. Děkuji!
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
   },
   deleteEntryOnKick_true: {
-    ruen:
-      'Great! Shieldy will remove entry messages of the users who failed captcha. Великолепно! Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
     en:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ru:
       'Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
-    it:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    et:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     uk:
       'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
-    br:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldıracak.',
-    es:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     zh: '很棒！Shieldy将删除验证码失败用户的加入消息。',
-    no:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     de:
       'Top! Shieldy wird nun die Beitrittsnachrichten entfernen, wenn ein User den Captcha Test nicht besteht.',
-    tw:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    fr:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    id:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    ko:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    am:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    czen:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
-    cz:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     sk:
       'Super! Shieldy odstráni správy o vstupe nováčikov do četu, ak neprejdú testom captcha.',
-    ar:
-      'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ja:
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除します。',
     ro:
       'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
   },
   deleteEntryOnKick_false: {
-    ruen:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha. Великолепно! Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
     en:
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ru:
       'Великолепно! Щилди не будет удалять сообщения о входе пользователей, проваливших капчу.',
-    it:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    et:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     uk:
       'Чудово. Шилді не буде видаляти вхідні повідомлення від користувачів, які провалили капчу.',
-    br:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldırmayacak.',
-    es:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     zh: '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
-    no:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     de:
       'Hammer! Shieldy wird nun die Beitrittsnachrichten nicht entfernen, wenn ein User den Captcha Test nicht besteht.',
-    tw:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    fr:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    id:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    ko:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    am:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    czen:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
-    cz:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     sk:
       'Super! Shieldy neodstráni správy o vstupe nováčikov do četu, ak neprejdú testom captcha.',
-    ar:
-      'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ja:
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除しません。',
     ro:
       'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
   },
   cas_true: {
-    ruen:
-      'Great! Shieldy will now use Combot Anti-Spam. Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
-    it: 'Great! Shieldy will now use Combot Anti-Spam.',
-    et: 'Great! Shieldy will now use Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
-    br: 'Great! Shieldy will now use Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
-    es: 'Great! Shieldy will now use Combot Anti-Spam.',
-    zh: 'Great! Shieldy will now use Combot Anti-Spam.',
-    no: 'Great! Shieldy will now use Combot Anti-Spam.',
-    de: 'Great! Shieldy will now use Combot Anti-Spam.',
-    tw: 'Great! Shieldy will now use Combot Anti-Spam.',
-    fr: 'Great! Shieldy will now use Combot Anti-Spam.',
-    id: 'Great! Shieldy will now use Combot Anti-Spam.',
-    ko: 'Great! Shieldy will now use Combot Anti-Spam.',
-    am: 'Great! Shieldy will now use Combot Anti-Spam.',
-    czen: 'Great! Shieldy will now use Combot Anti-Spam.',
-    cz: 'Great! Shieldy will now use Combot Anti-Spam.',
     sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
-    ar: 'Great! Shieldy will now use Combot Anti-Spam.',
-    ja: 'Great! Shieldy will now use Combot Anti-Spam.',
-    ro: 'Great! Shieldy will now use Combot Anti-Spam.',
   },
   cas_false: {
-    ruen:
-      'Great! Shieldy will not use Combot Anti-Spam now. Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
-    it: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    et: 'Great! Shieldy will not use Combot Anti-Spam now.',
     uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
-    br: 'Great! Shieldy will not use Combot Anti-Spam now.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
-    es: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    zh: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    no: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    de: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    tw: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    fr: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    id: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    ko: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    am: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    czen: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    cz: 'Great! Shieldy will not use Combot Anti-Spam now.',
     sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
-    ar: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    ja: 'Great! Shieldy will not use Combot Anti-Spam now.',
-    ro: 'Great! Shieldy will not use Combot Anti-Spam now.',
   },
   underAttack_true: {
-    ruen:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack. Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.",
     en:
       "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
     ru:
       'Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.',
-    it:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    et:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
     uk:
-      "Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.",
-    br:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    tr:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    es:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    zh:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    no:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    de:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    tw:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    fr:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    id:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    ko:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    am:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    czen:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    cz:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    sk:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    ar:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    ja:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
-    ro:
-      "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
+      'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
   },
   underAttack_false: {
-    ruen:
-      'Great! Shieldy will not kick everybody who enters this chat. Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
-    it: 'Great! Shieldy will not kick everybody who enters this chat.',
-    et: 'Great! Shieldy will not kick everybody who enters this chat.',
-    uk: 'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
-    br: 'Great! Shieldy will not kick everybody who enters this chat.',
-    tr: 'Great! Shieldy will not kick everybody who enters this chat.',
-    es: 'Great! Shieldy will not kick everybody who enters this chat.',
-    zh: 'Great! Shieldy will not kick everybody who enters this chat.',
-    no: 'Great! Shieldy will not kick everybody who enters this chat.',
-    de: 'Great! Shieldy will not kick everybody who enters this chat.',
-    tw: 'Great! Shieldy will not kick everybody who enters this chat.',
-    fr: 'Great! Shieldy will not kick everybody who enters this chat.',
-    id: 'Great! Shieldy will not kick everybody who enters this chat.',
-    ko: 'Great! Shieldy will not kick everybody who enters this chat.',
-    am: 'Great! Shieldy will not kick everybody who enters this chat.',
-    czen: 'Great! Shieldy will not kick everybody who enters this chat.',
-    cz: 'Great! Shieldy will not kick everybody who enters this chat.',
-    sk: 'Great! Shieldy will not kick everybody who enters this chat.',
-    ar: 'Great! Shieldy will not kick everybody who enters this chat.',
-    ja: 'Great! Shieldy will not kick everybody who enters this chat.',
-    ro: 'Great! Shieldy will not kick everybody who enters this chat.',
+    uk:
+      'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
+  },
+  noAttack_true: {
+    en:
+      "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
+    ru:
+      'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
+  },
+  noAttack_false: {
+    en: 'Great! Shieldy is now on.',
+    ru: 'Отлично! Щилди включен.',
   },
   noChannelLinks_true: {
-    ruen: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    en: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    ru: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    it: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    et: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    uk: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    br: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    tr: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    es: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    zh: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    no: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    de: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    tw: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    fr: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    id: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    ko: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    am: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    czen: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    cz: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    sk: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    ar: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    ja: 'Great! Shieldy will now delete messages that link to telegram channels.',
-    ro: 'Great! Shieldy will now delete messages that link to telegram channels.',
+    en:
+      'Great! Shieldy will now delete messages that link to telegram channels.',
+    ru:
+      'Отлично! Щилди теперь будет удалять сообщения с ссылками на Телеграм-каналы.',
   },
   noChannelLinks_false: {
-    ruen: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    en: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    ru: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    it: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    et: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    uk: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    br: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    tr: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    es: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    zh: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    no: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    de: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    tw: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    fr: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    id: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    ko: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    am: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    czen: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    cz: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    sk: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    ar: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    ja: 'Great! Shieldy will not delete messages that link to telegram channels.',
-    ro: 'Great! Shieldy will not delete messages that link to telegram channels.',
-  }
+    en:
+      'Great! Shieldy will not delete messages that link to telegram channels.',
+    ru:
+      'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
+  },
 }

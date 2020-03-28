@@ -26,10 +26,6 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Português Brasil', 'br'),
             ],
             [
-              m.callbackButton('Türkçe', 'tr'),
-              m.callbackButton('Ruslish', 'ruen'),
-            ],
-            [
               m.callbackButton('Español', 'es'),
               m.callbackButton('Chinese', 'zh'),
             ],
@@ -50,8 +46,8 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Czech', 'cz'),
             ],
             [
-              m.callbackButton('Czechlish', 'czen'),
               m.callbackButton('Arabic', 'ar'),
+              m.callbackButton('Türkçe', 'tr'),
             ],
             [
               m.callbackButton('Romanian', 'ro'),
@@ -72,7 +68,6 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
       'uk',
       'br',
       'tr',
-      'ruen',
       'es',
       'zh',
       'no',
@@ -83,7 +78,6 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
       'ko',
       'am',
       'cz',
-      'czen',
       'ar',
       'ja',
       'ro',

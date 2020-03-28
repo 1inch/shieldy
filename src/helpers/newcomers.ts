@@ -162,6 +162,10 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
   await modifyGloballyRestricted(true, memberIds)
   // Start the newcomers logic
   try {
+    // Check if no attack mode
+    if (ctx.dbchat.noAttack) {
+      return
+    }
     // Get admin ids
     const adminIds = (await ctx.getChatAdministrators()).map(u => u.user.id)
     // If an admin adds the members, do nothing
