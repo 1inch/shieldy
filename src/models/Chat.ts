@@ -47,6 +47,8 @@ export class Candidate {
   captchaType: CaptchaType
   @prop()
   messageId?: number
+  @prop()
+  username?: string
 
   @prop()
   equation?: Equation

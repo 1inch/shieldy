@@ -6,12 +6,23 @@ import { report } from '../helpers/report'
 
 export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('trust', checkLock, async ctx => {
+    // Check if it is a handle message
+    const handle = ctx.message.text.substr(7).replace('@', '')
+    let handleId: number | undefined
+    if (handle) {
+      for (const c of ctx.dbchat.candidates) {
+        if (c.username === handle) {
+          handleId = c.id
+          break
+        }
+      }
+    }
     // Check if reply
-    if (!ctx.message || !ctx.message.reply_to_message) {
+    if (!ctx.message || (!ctx.message.reply_to_message && !handleId)) {
       return
     }
     // Get replied
-    const repliedId = ctx.message.reply_to_message.from.id
+    const repliedId = handleId || ctx.message.reply_to_message.from.id
     // Unrestrict in Telegram
     try {
       await (ctx.telegram as any).restrictChatMember(ctx.dbchat.id, repliedId, {
