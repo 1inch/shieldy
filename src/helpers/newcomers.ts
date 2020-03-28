@@ -472,7 +472,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
         $fullname: getName(ctx.from),
       }
 
-      // For every tag present in the dictionnary, and in the greeting message
+      // For every tag present in the dictionary, and in the greeting message
       for (let tag in tags) {
         if (originalText.includes(tag)) {
           const tag_value = tags[tag]
@@ -482,17 +482,19 @@ async function greetUser(ctx: ContextMessageUpdate) {
           message.text = message.text.replace(tag, tag_value)
 
           // Update the offset of links if it is after the replaced tag
-          message.entities.forEach(msgEntity => {
-            if (msgEntity.offset > tag_offset) {
-              msgEntity.offset =
-                msgEntity.offset - tag.length + tag_value.length
-            }
-          })
+          if (message.entities && message.entities.length) {
+            message.entities.forEach(msgEntity => {
+              if (msgEntity.offset > tag_offset) {
+                msgEntity.offset =
+                  msgEntity.offset - tag.length + tag_value.length
+              }
+            })
+          }
         }
       }
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (!originalText.includes('$username')) {
-        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+        message.text = `${getUsername(ctx.from)}\n\n${message.text}`
       }
 
       // Send the message
@@ -517,6 +519,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
       }
     }
   } catch (err) {
+    console.log(err)
     await report(err)
   }
 }
