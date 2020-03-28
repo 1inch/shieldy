@@ -27,6 +27,10 @@ import { getUsername, getName } from './getUsername'
 const kickedIds = {} as { [index: number]: number[] }
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
+  bot.command('noice', ctx => {
+    greetUser(ctx)
+  })
+
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
   bot.on('left_chat_member', async ctx => {
@@ -465,35 +469,42 @@ async function greetUser(ctx: ContextMessageUpdate) {
   try {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
       const message = ctx.dbchat.greetingMessage.message
-      const originalText = message.text
-      const tags = {
-        $title: (await ctx.getChat()).title,
-        $username: getUsername(ctx.from),
-        $fullname: getName(ctx.from),
-      }
+      let originalText = message.text
+      const needsUsername = !originalText.includes('$username')
 
-      // For every tag present in the dictionary, and in the greeting message
-      for (let tag in tags) {
-        if (originalText.includes(tag)) {
-          const tag_value = tags[tag]
-          const tag_offset = message.text.indexOf(tag)
+      if (
+        originalText.includes('$title') ||
+        originalText.includes('$username') ||
+        originalText.includes('$fullname')
+      ) {
+        const tags = {
+          $title: (await ctx.getChat()).title,
+          $username: getUsername(ctx.from),
+          $fullname: getName(ctx.from),
+        }
+        for (const tag in tags) {
+          while (originalText.includes(tag)) {
+            const tag_value = tags[tag]
+            const tag_offset = originalText.indexOf(tag)
 
-          // Replace the tag withe the value in the message
-          message.text = message.text.replace(tag, tag_value)
+            // Replace the tag withe the value in the message
+            originalText = originalText.replace(tag, tag_value)
 
-          // Update the offset of links if it is after the replaced tag
-          if (message.entities && message.entities.length) {
-            message.entities.forEach(msgEntity => {
-              if (msgEntity.offset > tag_offset) {
-                msgEntity.offset =
-                  msgEntity.offset - tag.length + tag_value.length
-              }
-            })
+            // Update the offset of links if it is after the replaced tag
+            if (message.entities && message.entities.length) {
+              message.entities.forEach(msgEntity => {
+                if (msgEntity.offset > tag_offset) {
+                  msgEntity.offset =
+                    msgEntity.offset - tag.length + tag_value.length
+                }
+              })
+            }
           }
         }
       }
+      message.text = originalText
       // Add the @username of the greeted user at the end of the message if no $username was provided
-      if (!originalText.includes('$username')) {
+      if (needsUsername) {
         message.text = `${message.text}\n\n${getUsername(ctx.from)}`
       }
 
@@ -519,7 +530,6 @@ async function greetUser(ctx: ContextMessageUpdate) {
       }
     }
   } catch (err) {
-    console.log(err)
     await report(err)
   }
 }
