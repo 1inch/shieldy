@@ -35,7 +35,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       ctx.dbchat.deleteEntryMessages ||
       ctx.dbchat.underAttack ||
       (ctx.dbchat.deleteEntryOnKick &&
-        kickedIds[ctx.dbchat.id].includes(ctx.from.id))
+        kickedIds[ctx.dbchat.id].includes(ctx.message.left_chat_member.id))
     ) {
       try {
         await ctx.deleteMessage()
