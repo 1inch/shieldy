@@ -141,10 +141,10 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
 /deleteEntryOnKick — чи видаляти повідомлення про вхід користувачів, що не вирішили капчу
 /cas — використовувати Combot Anti-Spam чи ні
 /underAttack — спеціальний режим коли всі новачки одразу вилучаються з чату
-/noAttack — disables Shieldy
-/noChannelLinks — automatically delete messages that link to other telegram channels
-/viewConfig — view the current Shieldy configuration
-/buttonText — change the captcha button text in the form of \`/buttonText I'm not a bot!\`
+/noAttack — відключити Shieldy
+/noChannelLinks — автоматично видаляти повідомлення з посиланнями на телеграм-канали
+/viewConfig — подивитися поточні настройки
+/buttonText — змінити текст кнопки капчи в форматі \`/buttonText Я не бот!\`
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
