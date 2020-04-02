@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Telegram anti-spam bot",
   "main": "dist/index.js",
-  "repository": "https://github.com/backmeupplz/captcha_bot",
+  "repository": "https://github.com/backmeupplz/shieldy",
   "author": "backmeupplz",
   "license": "MIT",
   "private": false,
