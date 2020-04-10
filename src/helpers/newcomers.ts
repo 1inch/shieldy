@@ -228,7 +228,8 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       // Check if the person added is a candidate and the chat is in restrict mode
       if (ctx.dbchat.restrict) {
         const candidatesIds = ctx.dbchat.candidates.map(c => c.id)
-        if (candidatesIds.includes(ctx.message.from.id)) {
+        const restrictedIds = ctx.dbchat.restrictedUsers.map(c => c.id)
+        if (candidatesIds.includes(ctx.message.from.id) || restrictedIds.includes(ctx.message.from.id)) {
           if (ctx.dbchat.deleteEntryOnKick) {
             try {
               await ctx.deleteMessage()
