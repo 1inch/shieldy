@@ -225,6 +225,21 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
         await kickChatMember(ctx.dbchat, member)
         continue
       }
+      // Check if the person added is a candidate and the chat is in restrict mode
+      if (ctx.dbchat.restrict) {
+        const candidatesIds = ctx.dbchat.candidates.map(c => c.id)
+        if (candidatesIds.includes(ctx.message.from.id)) {
+          if (ctx.dbchat.deleteEntryOnKick) {
+            try {
+              await ctx.deleteMessage()
+            } catch {
+              // Do nothing
+            }
+          }
+          await kickChatMember(ctx.dbchat, member)
+          continue
+        }
+      }
       // Generate captcha if required
       const { equation, image } = await generateEquationOrImage(ctx.dbchat)
       // Notify candidate and save the message
@@ -387,14 +402,14 @@ async function notifyCandidate(
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
       : Extra.webPreview(false).markup(m =>
-          m.inlineKeyboard([
-            m.callbackButton(
-              chat.buttonText || strings(chat, 'captcha_button'),
-              `${chat.id}~${candidate.id}`
-            ),
-          ])
-        )
-  ;(extra as any).parse_mode = 'HTML'
+        m.inlineKeyboard([
+          m.callbackButton(
+            chat.buttonText || strings(chat, 'captcha_button'),
+            `${chat.id}~${candidate.id}`
+          ),
+        ])
+      )
+    ; (extra as any).parse_mode = 'HTML'
   if (
     chat.customCaptchaMessage &&
     chat.captchaMessage &&
@@ -446,9 +461,9 @@ async function notifyCandidate(
     } else {
       return ctx.replyWithMarkdown(
         `${
-          chat.captchaType === CaptchaType.DIGITS
-            ? `(${equation.question}) `
-            : ''
+        chat.captchaType === CaptchaType.DIGITS
+          ? `(${equation.question}) `
+          : ''
         }<a href="tg://user?id=${candidate.id}">${getUsername(
           candidate
         )}</a>${warningMessage} (${chat.timeGiven} ${strings(
