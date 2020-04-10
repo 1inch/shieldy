@@ -25,7 +25,8 @@ deleteEntryOnKick: <code>${ctx.dbchat.deleteEntryOnKick}</code>
 cas: <code>${ctx.dbchat.cas}</code>
 underAttack: <code>${ctx.dbchat.underAttack}</code>
 noAttack: <code>${ctx.dbchat.noAttack}</code>
-buttonText: <code>${ctx.dbchat.buttonText || 'Not set'}</code>`,
+buttonText: <code>${ctx.dbchat.buttonText || 'Not set'}</code>
+allowInvitingBots: <code>${ctx.dbchat.allowInvitingBots}</code>`,
       Extra.inReplyTo(ctx.message.message_id).HTML(true)
     )
     if (ctx.dbchat.greetingMessage) {

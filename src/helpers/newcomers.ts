@@ -200,7 +200,7 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     }
     // Filter new members
     const membersToCheck = ctx.message.new_chat_members.filter(
-      m => !adminIds.includes(m.id) && !m.is_bot
+      m => !adminIds.includes(m.id) && (ctx.dbchat.allowInvitingBots || !m.is_bot)
     )
     // Placeholder to add all candidates in batch
     const candidatesToAdd = [] as Candidate[]
@@ -225,7 +225,7 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
         await kickChatMember(ctx.dbchat, member)
         continue
       }
-      // Check if the person added is a candidate and the chat is in restrict mode
+      // Check if the person who added is a candidate and the chat is in restrict mode
       if (ctx.dbchat.restrict) {
         const candidatesIds = ctx.dbchat.candidates.map(c => c.id)
         const restrictedIds = ctx.dbchat.restrictedUsers.map(c => c.id)

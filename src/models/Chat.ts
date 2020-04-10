@@ -111,6 +111,8 @@ export class Chat extends Typegoose {
   noAttack: boolean
   @prop()
   buttonText?: string
+  @prop({ required: true, default: false })
+  allowInvitingBots: boolean
 }
 
 // Get Chat model
