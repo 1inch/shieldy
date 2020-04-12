@@ -591,9 +591,11 @@ async function check() {
         }
         candidatesToDelete.push(candidate)
       }
-      console.log(
-        `Kicking ${candidatesToDelete.length} candidates at ${chat.id}`
-      )
+      if (candidatesToDelete.length) {
+        console.log(
+          `Kicking ${candidatesToDelete.length} candidates at ${chat.id}`
+        )
+      }
       try {
         await kickCandidates(chat, candidatesToDelete)
       } catch (err) {
