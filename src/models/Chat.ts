@@ -116,7 +116,7 @@ export class Chat extends Typegoose {
 }
 
 // Get Chat model
-const ChatModel = new Chat().getModelForClass(Chat, {
+export const ChatModel = new Chat().getModelForClass(Chat, {
   schemaOptions: { timestamps: true },
 })
 

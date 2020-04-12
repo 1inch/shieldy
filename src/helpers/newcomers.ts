@@ -568,7 +568,7 @@ async function check() {
     console.log(`Found ${chats.length} chats with candidates`)
     for (const chat of chats) {
       console.log(
-        `Checking ${chat.id} with ${chat.candidates.length} candidates`
+        `Checking ${chat.id} with ${chat.candidates.length} candidates and ${chat.restrictedUsers.length} restricted users`
       )
       // Check candidates
       const candidatesToDelete = []
@@ -581,11 +581,7 @@ async function check() {
         }
         candidatesToDelete.push(candidate)
       }
-      try {
-        await kickCandidates(chat, candidatesToDelete)
-      } catch (err) {
-        report(err, 'kickCandidatesAfterCheck')
-      }
+      kickCandidatesProxy(chat, candidatesToDelete)
       // Check restricted users
       const restrictedToDelete = []
       for (const candidate of chat.restrictedUsers) {
@@ -604,6 +600,17 @@ async function check() {
   } finally {
     console.log('Finished checking chats with candidates')
     checking = false
+  }
+}
+
+async function kickCandidatesProxy(
+  chat: InstanceType<Chat>,
+  candidates: any[]
+) {
+  try {
+    await kickCandidates(chat, candidates)
+  } catch (err) {
+    report(err, 'kickCandidatesAfterCheck')
   }
 }
 
