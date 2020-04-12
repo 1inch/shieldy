@@ -580,9 +580,6 @@ async function check() {
     const chats = await findChatsWithCandidates()
     console.log(`Found ${chats.length} chats with candidates`)
     for (const chat of chats) {
-      console.log(
-        `Checking ${chat.id} with ${chat.candidates.length} candidates and ${chat.restrictedUsers.length} restricted users`
-      )
       // Check candidates
       const candidatesToDelete = []
       for (const candidate of chat.candidates) {
@@ -594,6 +591,9 @@ async function check() {
         }
         candidatesToDelete.push(candidate)
       }
+      console.log(
+        `Kicking ${candidatesToDelete.length} candidates at ${chat.id}`
+      )
       try {
         await kickCandidates(chat, candidatesToDelete)
       } catch (err) {
