@@ -581,7 +581,11 @@ async function check() {
         }
         candidatesToDelete.push(candidate)
       }
-      kickCandidatesProxy(chat, candidatesToDelete)
+      try {
+        await kickCandidates(chat, candidatesToDelete)
+      } catch (err) {
+        report(err, 'kickCandidatesAfterCheck')
+      }
       // Check restricted users
       const restrictedToDelete = []
       for (const candidate of chat.restrictedUsers) {
