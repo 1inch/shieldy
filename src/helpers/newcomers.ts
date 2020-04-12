@@ -29,7 +29,7 @@ const kickedIds = {} as { [index: number]: number[] }
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
-  bot.on('left_chat_member', async ctx => {
+  bot.on('left_chat_member', async (ctx) => {
     // Delete left message if required
     if (
       ctx.dbchat.deleteEntryMessages ||
@@ -51,7 +51,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       !ctx.message ||
       !ctx.message.text ||
       !ctx.dbchat.candidates.length ||
-      !ctx.dbchat.candidates.map(c => c.id).includes(ctx.from.id)
+      !ctx.dbchat.candidates.map((c) => c.id).includes(ctx.from.id)
     ) {
       return next()
     }
@@ -70,7 +70,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     // Get candidate
     const candidate = ctx.dbchat.candidates
-      .filter(c => c.id === ctx.from.id)
+      .filter((c) => c.id === ctx.from.id)
       .pop()
     // Check if it is digits captcha
     if (candidate.captchaType === CaptchaType.DIGITS) {
@@ -130,7 +130,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     return next()
   })
   // Check button
-  bot.action(/\d+~\d+/, async ctx => {
+  bot.action(/\d+~\d+/, async (ctx) => {
     // Get user id and chat id
     const params = ctx.callbackQuery.data.split('~')
     const userId = parseInt(params[1])
@@ -144,11 +144,11 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       return
     }
     // Check if this user is within candidates
-    if (!ctx.dbchat.candidates.map(c => c.id).includes(userId)) {
+    if (!ctx.dbchat.candidates.map((c) => c.id).includes(userId)) {
       return
     }
     // Get the candidate
-    const candidate = ctx.dbchat.candidates.filter(c => c.id === userId).pop()
+    const candidate = ctx.dbchat.candidates.filter((c) => c.id === userId).pop()
     // Remove candidate from the chat
     await modifyCandidates(ctx.dbchat, false, [candidate])
     // Delete the captcha message
@@ -164,7 +164,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
 
 async function onNewChatMembers(ctx: ContextMessageUpdate) {
   // Get list of ids
-  const memberIds = ctx.message.new_chat_members.map(m => m.id)
+  const memberIds = ctx.message.new_chat_members.map((m) => m.id)
   // Add to globaly restricted list
   await modifyGloballyRestricted(true, memberIds)
   // Check if needs to delete message right away
@@ -182,15 +182,15 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       return
     }
     // Get admin ids
-    const adminIds = (await ctx.getChatAdministrators()).map(u => u.user.id)
+    const adminIds = (await ctx.getChatAdministrators()).map((u) => u.user.id)
     // If an admin adds the members, do nothing
     if (adminIds.includes(ctx.message.from.id)) {
       return
     }
     // Send help message if added this bot to the group
     const addedUsernames = ctx.message.new_chat_members
-      .map(member => member.username)
-      .filter(username => !!username)
+      .map((member) => member.username)
+      .filter((username) => !!username)
     if (addedUsernames.includes(bot.options.username)) {
       try {
         await sendHelp(ctx)
@@ -200,7 +200,11 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     }
     // Filter new members
     const membersToCheck = ctx.message.new_chat_members.filter(
-      m => !(adminIds.includes(m.id) || (!ctx.dbchat.allowInvitingBots && m.is_bot))
+      (m) =>
+        !(
+          adminIds.includes(m.id) ||
+          (!ctx.dbchat.allowInvitingBots && m.is_bot)
+        )
     )
     // Placeholder to add all candidates in batch
     const candidatesToAdd = [] as Candidate[]
@@ -227,9 +231,12 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       }
       // Check if the person who added is a candidate and the chat is in restrict mode
       if (ctx.dbchat.restrict) {
-        const candidatesIds = ctx.dbchat.candidates.map(c => c.id)
-        const restrictedIds = ctx.dbchat.restrictedUsers.map(c => c.id)
-        if (candidatesIds.includes(ctx.message.from.id) || restrictedIds.includes(ctx.message.from.id)) {
+        const candidatesIds = ctx.dbchat.candidates.map((c) => c.id)
+        const restrictedIds = ctx.dbchat.restrictedUsers.map((c) => c.id)
+        if (
+          candidatesIds.includes(ctx.message.from.id) ||
+          restrictedIds.includes(ctx.message.from.id)
+        ) {
           if (ctx.dbchat.deleteEntryOnKick) {
             try {
               await ctx.deleteMessage()
@@ -402,15 +409,15 @@ async function notifyCandidate(
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
       ? Extra.webPreview(false)
-      : Extra.webPreview(false).markup(m =>
-        m.inlineKeyboard([
-          m.callbackButton(
-            chat.buttonText || strings(chat, 'captcha_button'),
-            `${chat.id}~${candidate.id}`
-          ),
-        ])
-      )
-    ; (extra as any).parse_mode = 'HTML'
+      : Extra.webPreview(false).markup((m) =>
+          m.inlineKeyboard([
+            m.callbackButton(
+              chat.buttonText || strings(chat, 'captcha_button'),
+              `${chat.id}~${candidate.id}`
+            ),
+          ])
+        )
+  ;(extra as any).parse_mode = 'HTML'
   if (
     chat.customCaptchaMessage &&
     chat.captchaMessage &&
@@ -462,9 +469,9 @@ async function notifyCandidate(
     } else {
       return ctx.replyWithMarkdown(
         `${
-        chat.captchaType === CaptchaType.DIGITS
-          ? `(${equation.question}) `
-          : ''
+          chat.captchaType === CaptchaType.DIGITS
+            ? `(${equation.question}) `
+            : ''
         }<a href="tg://user?id=${candidate.id}">${getUsername(
           candidate
         )}</a>${warningMessage} (${chat.timeGiven} ${strings(
@@ -504,7 +511,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
 
             // Update the offset of links if it is after the replaced tag
             if (message.entities && message.entities.length) {
-              message.entities.forEach(msgEntity => {
+              message.entities.forEach((msgEntity) => {
                 if (msgEntity.offset > tag_offset) {
                   msgEntity.offset =
                     msgEntity.offset - tag.length + tag_value.length
@@ -558,7 +565,11 @@ async function check() {
   checking = true
   try {
     const chats = await findChatsWithCandidates()
+    console.log(`Found ${chats.length} chats with candidates`)
     for (const chat of chats) {
+      console.log(
+        `Checking ${chat.id} with ${chat.candidates.length} candidates`
+      )
       // Check candidates
       const candidatesToDelete = []
       for (const candidate of chat.candidates) {
@@ -591,6 +602,7 @@ async function check() {
   } catch (err) {
     report(err, 'checking candidates')
   } finally {
+    console.log('Finished checking chats with candidates')
     checking = false
   }
 }

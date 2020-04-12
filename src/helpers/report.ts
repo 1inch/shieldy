@@ -33,5 +33,6 @@ export function report(error: Error, reason?: string) {
   if (checkIfErrorDismissable(error)) {
     return
   }
+  console.error(error)
   errorsToReport.push(`${reason ? `${reason}\n` : ''}${error.message}`)
 }
