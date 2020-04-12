@@ -305,7 +305,7 @@ async function kickCandidates(
     // Try kicking the candidate
     try {
       addKickedUser(chat, candidate.id)
-      await bot.telegram.kickChatMember(
+      kickChatMemberProxy(
         chat.id,
         candidate.id,
         chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
@@ -315,14 +315,7 @@ async function kickCandidates(
     }
     // Try deleting their entry messages
     if (chat.deleteEntryOnKick) {
-      try {
-        await bot.telegram.deleteMessage(
-          candidate.entryChatId,
-          candidate.entryMessageId
-        )
-      } catch (err) {
-        // do nothing
-      }
+      deleteMessageProxy(candidate.entryChatId, candidate.entryMessageId)
     }
     // Try deleting the captcha message
     try {
@@ -335,6 +328,26 @@ async function kickCandidates(
   await modifyCandidates(chat, false, candidates)
   // Remove from restricted
   await modifyRestrictedUsers(chat, false, candidates)
+}
+
+async function kickChatMemberProxy(
+  id: number,
+  candidateId: number,
+  duration: number
+) {
+  try {
+    await bot.telegram.kickChatMember(id, candidateId, duration)
+  } catch (err) {
+    report(err)
+  }
+}
+
+async function deleteMessageProxy(id, messageId) {
+  try {
+    await bot.telegram.deleteMessage(id, messageId)
+  } catch (err) {
+    // do nothing
+  }
 }
 
 async function restrictChatMember(chat: InstanceType<Chat>, user: User) {
@@ -604,17 +617,6 @@ async function check() {
   } finally {
     console.log('Finished checking chats with candidates')
     checking = false
-  }
-}
-
-async function kickCandidatesProxy(
-  chat: InstanceType<Chat>,
-  candidates: any[]
-) {
-  try {
-    await kickCandidates(chat, candidates)
-  } catch (err) {
-    report(err, 'kickCandidatesAfterCheck')
   }
 }
 
