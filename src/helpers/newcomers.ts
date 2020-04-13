@@ -523,7 +523,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
             const tag_value = tags[tag]
             const tag_offset = originalText.indexOf(tag)
 
-            // Replace the tag withe the value in the message
+            // Replace the tag with the value in the message
             originalText = originalText.replace(tag, tag_value)
 
             // Update the offset of links if it is after the replaced tag
@@ -531,7 +531,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
               message.entities.forEach((msgEntity) => {
                 if (msgEntity.offset > tag_offset) {
                   msgEntity.offset =
-                    msgEntity.offset - tag.length + tag_value.length
+                    msgEntity.offset - tag.length + [...tag_value].length
                 }
               })
             }
