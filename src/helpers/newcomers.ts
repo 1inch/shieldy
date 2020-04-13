@@ -443,8 +443,8 @@ async function notifyCandidate(
       text.includes('$fullname')
     ) {
       const textToSend = text
-        .replace(/\$username/g, getUsername(candidate))
-        .replace(/\$fullname/g, getName(candidate))
+        .replace(/\$username/g, getUsername(candidate, true))
+        .replace(/\$fullname/g, getName(candidate, true))
         .replace(/\$title/g, (await ctx.getChat()).title)
         .replace(/\$equation/g, equation ? (equation.question as string) : '')
         .replace(/\$seconds/g, `${chat.timeGiven}`)
