@@ -201,10 +201,7 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     // Filter new members
     const membersToCheck = ctx.message.new_chat_members.filter(
       (m) =>
-        !(
-          adminIds.includes(m.id) ||
-          (!ctx.dbchat.allowInvitingBots && m.is_bot)
-        )
+        !adminIds.includes(m.id) || (!ctx.dbchat.allowInvitingBots && m.is_bot)
     )
     // Placeholder to add all candidates in batch
     const candidatesToAdd = [] as Candidate[]
