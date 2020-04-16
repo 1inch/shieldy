@@ -27,6 +27,7 @@ import { getUsername, getName } from './getUsername'
 const kickedIds = {} as { [index: number]: number[] }
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
+  bot.command('greetMe', greetUser)
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
   bot.on('left_chat_member', async (ctx) => {
@@ -531,7 +532,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
               message.entities.forEach((msgEntity) => {
                 if (msgEntity.offset > tag_offset) {
                   msgEntity.offset =
-                    msgEntity.offset - tag.length + [...tag_value].length
+                    msgEntity.offset - tag.length + tag_value.length
                 }
               })
             }

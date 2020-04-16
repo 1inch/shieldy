@@ -26,7 +26,7 @@
     "semaphore-async-await": "^1.5.1",
     "svg-captcha": "^1.4.0",
     "tall": "^3.0.0",
-    "telegraf": "^3.36.0",
+    "telegraf": "^3.37.0",
     "typegoose": "^5.9.0",
     "typescript": "^3.6.2"
   },
