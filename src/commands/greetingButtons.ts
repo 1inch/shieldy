@@ -13,7 +13,7 @@ export function setupGreetingButtons(bot: Telegraf<ContextMessageUpdate>) {
     chat = await chat.save()
     await ctx.replyWithMarkdown(
       `${strings(ctx.dbchat, 'greetingButtons')}`,
-      Extra.inReplyTo(ctx.message.message_id).webPreview(false)
+      Extra.inReplyTo(ctx.message.message_id).webPreview(false).HTML(true)
     )
     await ctx.replyWithMarkdown(
       ctx.dbchat.greetingButtons || strings(ctx.dbchat, 'greetingButtonsEmpty'),
