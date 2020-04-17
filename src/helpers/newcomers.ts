@@ -1,5 +1,5 @@
 // Dependencies
-import Telegraf, { ContextMessageUpdate, Extra, Markup } from 'telegraf'
+import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from './strings'
 import {
   Candidate,
@@ -470,7 +470,22 @@ async function notifyCandidate(
     } else {
       const message = chat.captchaMessage.message
       message.text = `${getUsername(candidate)}\n\n${message.text}`
-      return ctx.telegram.sendCopy(chat.id, message, extra as ExtraReplyMessage)
+      try {
+        const sentMessage = await ctx.telegram.sendCopy(
+          chat.id,
+          message,
+          extra as ExtraReplyMessage
+        )
+        return sentMessage
+      } catch (err) {
+        message.entities = []
+        const sentMessage = await ctx.telegram.sendCopy(
+          chat.id,
+          message,
+          extra as ExtraReplyMessage
+        )
+        return sentMessage
+      }
     }
   } else {
     if (image) {
@@ -544,23 +559,45 @@ async function greetUser(ctx: ContextMessageUpdate) {
         message.text = `${message.text}\n\n${getUsername(ctx.from)}`
       }
       // Send the message
-      let messageSent = await ctx.telegram.sendCopy(
-        ctx.dbchat.id,
-        message,
-        ctx.dbchat.greetingButtons
-          ? Extra.webPreview(false).markup((m) =>
-              m.inlineKeyboard(
-                ctx.dbchat.greetingButtons
-                  .split('\n')
-                  .map((s) => {
-                    const components = s.split(' - ')
-                    return m.urlButton(components[0], components[1])
-                  })
-                  .map((v) => [v])
+      let messageSent: Message
+      try {
+        messageSent = await ctx.telegram.sendCopy(
+          ctx.dbchat.id,
+          message,
+          ctx.dbchat.greetingButtons
+            ? Extra.webPreview(false).markup((m) =>
+                m.inlineKeyboard(
+                  ctx.dbchat.greetingButtons
+                    .split('\n')
+                    .map((s) => {
+                      const components = s.split(' - ')
+                      return m.urlButton(components[0], components[1])
+                    })
+                    .map((v) => [v])
+                )
               )
-            )
-          : Extra.webPreview(false)
-      )
+            : Extra.webPreview(false)
+        )
+      } catch (err) {
+        message.entities = []
+        messageSent = await ctx.telegram.sendCopy(
+          ctx.dbchat.id,
+          message,
+          ctx.dbchat.greetingButtons
+            ? Extra.webPreview(false).markup((m) =>
+                m.inlineKeyboard(
+                  ctx.dbchat.greetingButtons
+                    .split('\n')
+                    .map((s) => {
+                      const components = s.split(' - ')
+                      return m.urlButton(components[0], components[1])
+                    })
+                    .map((v) => [v])
+                )
+              )
+            : Extra.webPreview(false)
+        )
+      }
 
       // Delete greeting message if requested
       if (ctx.dbchat.deleteGreetingTime && messageSent) {
