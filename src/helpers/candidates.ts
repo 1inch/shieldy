@@ -1,5 +1,5 @@
 import { Lock } from 'semaphore-async-await'
-import { Chat, Candidate, ChatModel } from '../models'
+import { Chat, Candidate } from '../models'
 import { User } from 'telegraf/typings/telegram-types'
 import { InstanceType } from 'typegoose'
 
