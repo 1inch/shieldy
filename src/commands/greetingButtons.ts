@@ -16,8 +16,11 @@ export function setupGreetingButtons(bot: Telegraf<ContextMessageUpdate>) {
       Extra.inReplyTo(ctx.message.message_id).webPreview(false)
     )
     await ctx.replyWithMarkdown(
-      ctx.dbchat.greetingButtons || strings(ctx.dbchat, 'greetingButtonsEmpty'),
-      Extra.webPreview(false)
+      `<code>${
+        ctx.dbchat.greetingButtons ||
+        strings(ctx.dbchat, 'greetingButtonsEmpty')
+      }</code>`,
+      Extra.webPreview(false).HTML(true)
     )
   })
   // Setup checker
