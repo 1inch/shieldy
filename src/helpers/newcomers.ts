@@ -472,7 +472,7 @@ async function notifyCandidate(
         )
       }
     } else {
-      const message = captchaMessage.message
+      const message = cloneDeep(captchaMessage.message)
       message.text = `${getUsername(candidate)}\n\n${message.text}`
       try {
         const sentMessage = await ctx.telegram.sendCopy(
