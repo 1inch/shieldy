@@ -24,10 +24,12 @@ import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
 import { getUsername, getName } from './getUsername'
 import { cloneDeep } from 'lodash'
+import { checkSuperAdmin } from '../middlewares/checkSuperAdmin'
 
 const kickedIds = {} as { [index: number]: number[] }
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
+  bot.command('greetMe', checkSuperAdmin, greetUser)
   bot.on('new_chat_members', checkIfGroup, onNewChatMembers)
   // Check left messages
   bot.on('left_chat_member', async (ctx) => {
