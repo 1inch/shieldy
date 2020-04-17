@@ -1752,13 +1752,13 @@ P.S., if you want to help this bot, please, donate through the [GitHub Sponsors 
     ru: 'Отлично! Пользователи теперь не могут приглашать ботов.',
   },
   greetingButtons: {
-    en: `Reply to this message (and I mean *reply*, not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.
+    en: `Reply to this message (and I mean reply(!), not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.
     
 DuckDuckGo - https://duckduckgo.com
 Wikipedia - https://wikipedia.com
 
 Current buttons:`,
-    ru: `Ответьте на это сообщение (и я имею ввиду *ответьте*, а не просто отправьте отдельное сообщение) с не более чем 10 ссылками в формате ниже, чтобы установить кнопки приветствию. Ответьте любым другим сообщением, чтобы удалить все кнопки.
+    ru: `Ответьте на это сообщение (и я имею ввиду ответьте(!), а не просто отправьте отдельное сообщение) с не более чем 10 ссылками в формате ниже, чтобы установить кнопки приветствию. Ответьте любым другим сообщением, чтобы удалить все кнопки.
     
 DuckDuckGo - https://duckduckgo.com
 Wikipedia - https://wikipedia.com
