@@ -23,6 +23,7 @@ import { modifyCandidates } from './candidates'
 import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
 import { getUsername, getName } from './getUsername'
+import { cloneDeep } from 'lodash'
 
 const kickedIds = {} as { [index: number]: number[] }
 
@@ -422,6 +423,9 @@ async function notifyCandidate(
   image?: { png: Buffer; text: string }
 ) {
   const chat = ctx.dbchat
+  const captchaMessage = ctx.dbchat.captchaMessage
+    ? cloneDeep(ctx.dbchat.captchaMessage)
+    : undefined
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
@@ -437,11 +441,11 @@ async function notifyCandidate(
   ;(extra as any).parse_mode = 'HTML'
   if (
     chat.customCaptchaMessage &&
-    chat.captchaMessage &&
+    captchaMessage &&
     (chat.captchaType !== CaptchaType.DIGITS ||
-      chat.captchaMessage.message.text.includes('$equation'))
+      captchaMessage.message.text.includes('$equation'))
   ) {
-    const text = chat.captchaMessage.message.text
+    const text = captchaMessage.message.text
     if (
       text.includes('$username') ||
       text.includes('$title') ||
@@ -468,7 +472,7 @@ async function notifyCandidate(
         )
       }
     } else {
-      const message = chat.captchaMessage.message
+      const message = captchaMessage.message
       message.text = `${getUsername(candidate)}\n\n${message.text}`
       try {
         const sentMessage = await ctx.telegram.sendCopy(
@@ -519,7 +523,7 @@ async function notifyCandidate(
 async function greetUser(ctx: ContextMessageUpdate) {
   try {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
-      const message = ctx.dbchat.greetingMessage.message
+      const message = cloneDeep(ctx.dbchat.greetingMessage.message)
       let originalText = message.text
       const needsUsername = !originalText.includes('$username')
 
