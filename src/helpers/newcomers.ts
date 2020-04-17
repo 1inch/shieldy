@@ -1,5 +1,5 @@
 // Dependencies
-import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
+import Telegraf, { ContextMessageUpdate, Extra, Markup } from 'telegraf'
 import { strings } from './strings'
 import {
   Candidate,
@@ -543,12 +543,23 @@ async function greetUser(ctx: ContextMessageUpdate) {
       if (needsUsername) {
         message.text = `${message.text}\n\n${getUsername(ctx.from)}`
       }
-
       // Send the message
       let messageSent = await ctx.telegram.sendCopy(
         ctx.dbchat.id,
         message,
-        Extra.webPreview(false) as ExtraReplyMessage
+        ctx.dbchat.greetingButtons
+          ? Extra.webPreview(false).markup((m) =>
+              m.inlineKeyboard(
+                ctx.dbchat.greetingButtons
+                  .split('\n')
+                  .map((s) => {
+                    const components = s.split(' - ')
+                    return m.urlButton(components[0], components[1])
+                  })
+                  .map((v) => [v])
+              )
+            )
+          : Extra.webPreview(false)
       )
 
       // Delete greeting message if requested
