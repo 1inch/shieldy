@@ -4,7 +4,7 @@ import { strings } from '../helpers/strings'
 import { checkLock } from '../middlewares/checkLock'
 
 export function setupViewConfig(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('viewConfig', checkLock, async ctx => {
+  bot.command('viewConfig', checkLock, async (ctx) => {
     await ctx.replyWithMarkdown(
       `${strings(ctx.dbchat, 'viewConfig')}
 
@@ -26,7 +26,9 @@ cas: <code>${ctx.dbchat.cas}</code>
 underAttack: <code>${ctx.dbchat.underAttack}</code>
 noAttack: <code>${ctx.dbchat.noAttack}</code>
 buttonText: <code>${ctx.dbchat.buttonText || 'Not set'}</code>
-allowInvitingBots: <code>${ctx.dbchat.allowInvitingBots}</code>`,
+allowInvitingBots: <code>${ctx.dbchat.allowInvitingBots}</code>
+greetingButtons:
+<code>${ctx.dbchat.greetingButtons || 'Not set'}</code>`,
       Extra.inReplyTo(ctx.message.message_id).HTML(true)
     )
     if (ctx.dbchat.greetingMessage) {
