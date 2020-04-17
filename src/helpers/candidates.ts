@@ -23,7 +23,7 @@ export async function modifyCandidates(
       const ids = candidatesAndUsers.map((v) => v.id)
       chat.candidates = chat.candidates.filter((c) => !ids.includes(c.id))
     }
-    await ChatModel.updateOne({ id: chat.id }, chat)
+    await chat.save()
   } catch (err) {
     console.error('modifyCandidates', err)
   } finally {

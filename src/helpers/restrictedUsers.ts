@@ -24,7 +24,7 @@ export async function modifyRestrictedUsers(
         (c) => !ids.includes(c.id)
       )
     }
-    await ChatModel.updateOne({ id: chat.id }, chat)
+    await chat.save()
   } catch (err) {
     console.error('modifyRestrictedUsers', err)
   } finally {
