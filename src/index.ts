@@ -33,7 +33,7 @@ import { setupNoAttack } from './commands/noAttack'
 import { setupViewConfig } from './commands/viewConfig'
 import { setupButtonText } from './commands/buttonText'
 import { setupAllowInvitingBots } from './commands/allowInvitingBots'
-import { setupDelete } from './commands/delete'
+import { setupAdmin } from './commands/admin'
 import { setupGreetingButtons } from './commands/greetingButtons'
 
 // Make Telegraph async
@@ -72,7 +72,7 @@ setupNoAttack(bot)
 setupViewConfig(bot)
 setupButtonText(bot)
 setupAllowInvitingBots(bot)
-setupDelete(bot)
+setupAdmin(bot)
 setupGreetingButtons(bot)
 // Newcomers logic
 setupNewcomers(bot)
