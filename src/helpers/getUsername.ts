@@ -11,3 +11,7 @@ export function getName(user: User, link = false) {
     user.last_name ? ` ${user.last_name}` : ''
   }${linkEnd}`
 }
+
+export function getLink(user: User) {
+  return `tg://user?id=${user.id}`
+}

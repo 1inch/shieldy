@@ -22,7 +22,7 @@ import { sendHelp } from '../commands/help'
 import { modifyCandidates } from './candidates'
 import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
-import { getUsername, getName } from './getUsername'
+import { getUsername, getName, getLink } from './getUsername'
 import { cloneDeep } from 'lodash'
 import { checkSuperAdmin } from '../middlewares/checkSuperAdmin'
 
@@ -543,6 +543,18 @@ async function greetUser(ctx: ContextMessageUpdate) {
                 }
               })
             }
+            if (tag === '$username' || tag === '$fullname') {
+              if (!message.entities) {
+                message.entities = []
+              }
+              message.entities.push({
+                type: 'text_link',
+                offset: tag_offset,
+                length: tag_value.length,
+                url: getLink(ctx.from),
+              })
+            }
+            console.log(message.entities)
           }
         }
       }
