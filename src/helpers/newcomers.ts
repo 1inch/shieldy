@@ -521,8 +521,8 @@ async function greetUser(ctx: ContextMessageUpdate) {
       ) {
         const tags = {
           $title: (await ctx.getChat()).title,
-          $username: getUsername(ctx.from),
-          $fullname: getName(ctx.from),
+          $username: getUsername(ctx.from, true),
+          $fullname: getName(ctx.from, true),
         }
         for (const tag in tags) {
           while (originalText.includes(tag)) {
@@ -547,7 +547,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
       message.text = originalText
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (needsUsername) {
-        message.text = `${message.text}\n\n${getUsername(ctx.from)}`
+        message.text = `${message.text}\n\n${getUsername(ctx.from, true)}`
       }
       // Send the message
       let messageSent: Message
