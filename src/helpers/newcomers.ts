@@ -512,7 +512,9 @@ async function greetUser(ctx: ContextMessageUpdate) {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
       const message = cloneDeep(ctx.dbchat.greetingMessage.message)
       let originalText = message.text
-      const needsUsername = !originalText.includes('$username')
+      const needsUsername =
+        !originalText.includes('$username') &&
+        !originalText.includes('$fullname')
 
       if (
         originalText.includes('$title') ||
