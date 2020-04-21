@@ -240,25 +240,6 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       if (ctx.dbchat.candidates.map((c) => c.id).includes(member.id)) {
         continue
       }
-      // Check if the person who added is a candidate and the chat is in restrict mode
-      if (ctx.dbchat.restrict) {
-        const candidatesIds = ctx.dbchat.candidates.map((c) => c.id)
-        const restrictedIds = ctx.dbchat.restrictedUsers.map((c) => c.id)
-        if (
-          candidatesIds.includes(ctx.message.from.id) ||
-          restrictedIds.includes(ctx.message.from.id)
-        ) {
-          if (ctx.dbchat.deleteEntryOnKick) {
-            try {
-              await ctx.deleteMessage()
-            } catch {
-              // Do nothing
-            }
-          }
-          await kickChatMember(ctx.dbchat, member)
-          continue
-        }
-      }
       // Generate captcha if required
       const { equation, image } = await generateEquationOrImage(ctx.dbchat)
       // Notify candidate and save the message
