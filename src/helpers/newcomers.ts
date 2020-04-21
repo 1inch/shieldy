@@ -236,6 +236,10 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
         await kickChatMember(ctx.dbchat, member)
         continue
       }
+      // Check if already a candidate
+      if (ctx.dbchat.candidates.map((c) => c.id).includes(member.id)) {
+        continue
+      }
       // Check if the person who added is a candidate and the chat is in restrict mode
       if (ctx.dbchat.restrict) {
         const candidatesIds = ctx.dbchat.candidates.map((c) => c.id)
