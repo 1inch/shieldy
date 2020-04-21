@@ -523,8 +523,8 @@ async function greetUser(ctx: ContextMessageUpdate) {
       ) {
         const tags = {
           $title: (await ctx.getChat()).title,
-          $username: getUsername(ctx.from, true),
-          $fullname: getName(ctx.from, true),
+          $username: getUsername(ctx.from),
+          $fullname: getName(ctx.from),
         }
         for (const tag in tags) {
           while (originalText.includes(tag)) {
