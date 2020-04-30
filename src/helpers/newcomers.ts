@@ -561,7 +561,15 @@ async function greetUser(ctx: ContextMessageUpdate) {
       message.text = originalText
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (needsUsername) {
-        message.text = `${message.text}\n\n${getUsername(ctx.from, true)}`
+        const username = getUsername(ctx.from)
+        const initialLength = `${message.text}\n\n`.length
+        message.text = `${message.text}\n\n${username}`
+        message.entities.push({
+          type: 'text_link',
+          offset: initialLength,
+          length: username.length,
+          url: getLink(ctx.from),
+        })
       }
       // Send the message
       let messageSent: Message
