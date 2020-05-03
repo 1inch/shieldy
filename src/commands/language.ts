@@ -6,12 +6,12 @@ import { checkIfFromReplier } from '../middlewares/checkIfFromReplier'
 import { checkLock } from '../middlewares/checkLock'
 
 export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('language', checkLock, ctx => {
+  bot.command('language', checkLock, (ctx) => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'language'),
       Extra.webPreview(false)
         .inReplyTo(ctx.message.message_id)
-        .markup(m =>
+        .markup((m) =>
           m.inlineKeyboard([
             [
               m.callbackButton('English', 'en'),
@@ -53,7 +53,10 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
               m.callbackButton('Romanian', 'ro'),
               m.callbackButton('Japanese', 'ja'),
             ],
-            [m.callbackButton('Slovak', 'sk')],
+            [
+              m.callbackButton('Slovak', 'sk'),
+              m.callbackButton('Catalan', 'ca'),
+            ],
           ])
         )
     )
@@ -82,9 +85,10 @@ export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
       'ja',
       'ro',
       'sk',
+      'ca',
     ],
     checkIfFromReplier,
-    async ctx => {
+    async (ctx) => {
       let chat = ctx.dbchat
       chat.language = ctx.callbackQuery.data as Language
       chat = await chat.save()

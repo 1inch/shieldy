@@ -56,7 +56,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /ban — то же, что и trust, но наоборот
 /strict — используйте, если не хотите получать никакие сообщения от новичков кроме решения капчи, до прохождения капчи
 /customCaptchaMessage — установить свое сообщение с капчей
-/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`, 
+/deleteGreetingTime — установить время в секундах, когда Щилди должен удалить приветствие вида \`/deleteGreetingTime 100\`
 отключите эту фцнкцию, установив значение 0
 /banUsers — банить или кикать пользователей
 /deleteEntryOnKick — удалять ли сообщения о входе для пользователей, которые провалили капчу
@@ -227,7 +227,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /restrict — restringe a los recién llegados a enviar solo mensajes de texto en las primeras 24 horas
 /deleteEntryMessages — borra los mensajes sobre la entrada de usuarios
 /greeting — saluda a los mensajes que pasan el test
-/trust — reply with this command to a message sent by user that you don't want to check
+/trust — utiliza este comando para responder al mensaje de un usuari que no quieras comprobar
 /ban — same as trust, but the opposite
 /strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha
 /customCaptchaMessage — setup custom captcha message
@@ -317,10 +317,10 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen
 /ban — same as trust, but the opposite
 /strict — benutze dieses Kommando, wenn du keine Beitrittsnachricht für neue User bekommen möchtest, bis sie den Captcha Test bestanden haben
-/customCaptchaMessage — eigene Captcha Nachricht anlegen 
+/customCaptchaMessage — eigene Captcha Nachricht anlegen
 /deleteGreetingTime — hier kannst du einstellen, wann die Willkommens Nachricht von Shieldy gelöscht werden soll. \`/deleteGreetingTime 100\`, zurück setzen kannst du dies mit dem Wert "0"
 /banUsers — hier kannst du User bannen oder kicken
-/deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht 
+/deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht
 /cas — whether to use Combot Anti-Spam or not
 /underAttack — toggle the mode to automatically kick all newcomers
 /noAttack — disables Shieldy
@@ -369,9 +369,9 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /captcha — Modifier le type de captcha à utiliser
 /timeLimit — Modifier le temps lorsqu'un nouveau membre arrive
 /lock — Faire en sorte que seuls les admins puissent accèder aux commandes
-/restrict — Interdit pendant 24h aux nouveaux membres la possibilité d'envoyer un message 
+/restrict — Interdit pendant 24h aux nouveaux membres la possibilité d'envoyer un message
 /deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres
-/greeting — Accueillir les utilisateurs qui passent le test 
+/greeting — Accueillir les utilisateurs qui passent le test
 /trust — Utilisez cette commande à un message d'utilisateur que vous ne voulez pas vérifier
 /ban — same as trust, but the opposite
 /strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha
@@ -452,10 +452,10 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     am: `Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:
 
 /help — ይህንን መልክት ያሳያል
-/language — ቋንቋ ይቀይራል 
+/language — ቋንቋ ይቀይራል
 /captcha — የ captcha አይነቱን ይቀይራል
 /timelimit — አዲስ ተጠቃሚ ሲገባ ለስንት ጊዜ አንደማያወራ
-/Lock — ኮማንዶቹ በአድሚን ብቻ እንዲከፈት ያረጋል 
+/Lock — ኮማንዶቹ በአድሚን ብቻ እንዲከፈት ያረጋል
 /restrict — አዲስ ተጠቃሚ ሲገባ ለ24 ሰዐት ጸሁፍ ብቻ መጻፍ እንዲችል
 /deleteEntryMessages — ተጠቃሚ ሲገባ ሜሴጅ እንዳይኖር
 /greeting — ተጠቃሚው ካፕቻ ካለፈ የሚኖር ሜሴጅ
@@ -549,7 +549,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /greeting — يقوم بتحية المستخدمين الذين يجتازون الاختبار
 /trust — اختر هذا الخيار لإضافة اعضاء لا ترغب في ان يخوضوا الإختبار
 /ban — same as trust, but the opposite
-/strict — اختر هذا اذا كنت تريد تفعيل البوت لإجراء اختبار للأعضاء الجدد 
+/strict — اختر هذا اذا كنت تريد تفعيل البوت لإجراء اختبار للأعضاء الجدد
 /customCaptchaMessage — setup custom captcha message
 /deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like \`/deleteGreetingTime 100\`, reset by setting it to 0
 /banUsers — whether to ban or to kick users
@@ -563,7 +563,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /allowInvitingBots — whether users can invite other bots or not
 /greetingButtons — setup buttons for greeting message
 
-لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ! 
+لازال لديك اسئلة؟ تحقق من قناة الدعم — @borodutch\\_support. السورس كود مفتوح المصدر ويمكن العثور عليه [هنا](https://github.com/backmeupplz/shieldy). شكرأ!
 
 Also check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.`,
     ja: `Shieldy — は迷惑なスパマーに対してのTelegraの1番のソリューションになります。新しく参加した人に、一定の時間内に、特定のアクションを実行するように要求します。とてもシンプルです。 利用するにあたり、@shieldy \\ _ botをチャットの管理者に追加してください。以下のコマンドでbotのアクションを設定することもできます:
@@ -625,6 +625,35 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
 Also check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.`,
+  ca: `Shieldy — és la millor solució per a combatre els usuaris que publiquen missatges brossa als grups de Telegram. Els nouvinguts hauran de resoldre una sèrie de proves abans d'un temps determinat, i si no donen una respota correcta, els expulsarà. Tant senzill com això. Assegurat't que @shieldy\\_bot té permisos d'administrador al grup i llestos! Així i tot, també pots personalitzar aquest comportament amb les següents comandes:
+
+/help — mostra aquest missatge
+/language — canvia d'idioma
+/captcha — canvia el tipus de CAPTCHA utilitzat
+/timeLimit — canvia el temps de resposta otorgat als nouvinguts
+/lock — fa que les comandes només siguin accessibles per als administradors
+/restrict — restringeix als nouvinguts a només poder enviar missatges de text durant les primeres 24 hores
+/deleteEntryMessages — esborra els missatges d'avís sobre l'entrada de nouvinguts
+/greeting — saluda als usuaris que superen el test
+/trust — fes servir aquesta comanda per a respondre al missatge d'un usuari que no vulguis comprovar
+/ban — fa el mateix que trust, però bloquejant l'usuari
+/strict — fes-lo servir quan no vulguis rebre cap missatge de nouvinguts excepte les solucions del captcha fins que el resolguin
+/customCaptchaMessage — personalitza el missatge del captcha
+/deleteGreetingTime — configura si s'ha d'eborrar el missatge de benvinguda al cap d'uns seguns (ex: \`/deleteGreetingTime 100\`), es restableix configurant-lo a 0
+/banUsers — permet bloquejar i/o expulsar usuaris
+/deleteEntryOnKick — suprimeix els missatges d'entrada dels usuaris que han fallat la prova
+/cas — per si utilitzes Combot Anti-Spam o no
+/underAttack — commuta el mode per expulsar automàticament tots els nouvinguts
+/noAttack — desactiva en Shieldy
+/noChannelLinks — suprimeix automàticament els missatges que enllacen amb altres canals de telegrama
+/viewConfig — veure la configuració actual den Shieldy
+/buttonText — canvia el text del botó del CAPTCHA així: \`/buttonText I'm not a bot!\`
+/allowInvitingBots — per si els usuaris poden convidar altres robots o no
+/greetingButtons — configura els botons per al missatge de benvinguda
+
+Encara tens dubtes? Visita el nostre canal de suport: @borodutch\\_support. En Shieldy està fet en codi obert i el pots trobar [aquí](https://github.com/backmeupplz/shieldy). Moltes gràcies!
+
+P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un donatiu mitjançant el programa de patrocinadors GitHub que trobaràs [aquí](https://github.com/sponsors/backmeupplz).`,
   },
   language: {
     en: 'Please, select the language.',
@@ -648,6 +677,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'الرجاء إختيار اللغة.',
     ja: '言語を選択してください。',
     ro: 'Te rog, salectează limba.',
+    ca: 'Per favor, tria l\'idioma',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -671,6 +701,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'عظيم، أنا أتكلم العربية الآن.',
     ja: 'はい、私は日本語が喋れます。',
     ro: 'Perfect, acum vorbesc Română.',
+    ca: 'Fantàstic! ara parlo català.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -696,6 +727,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'فقط الشخص الذي بدأ القائمة يمكنه تحديد الخيارات.',
     ja: '最初にメニューを開いた人だけが、選択することができます。',
     ro: 'Doar persoana ce a inițiat meniul poate selecta',
+    ca: 'Només pot triar les opcions la persona que ha posat en marxa el menú.',
   },
   captcha: {
     en: `Please, select the test type for the newcomers:
@@ -744,8 +776,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 
 • Simple — el bot pedirá enviar lo que sea por el chat
 • Botón — el bot pedirá presionar un botón
-• Digitos — el bot pedirá resolver una ecuación simple
-• Image — bot will ask to recognize characters on an image`,
+• Dígitos — el bot pedirá resolver una ecuación simple
+• Imagen — el bot pedirá reconocer los caracteres de una imagen`,
     zh: `请为新人选择测试类型：
 
 •简单 — 机器人会要求向聊天发送任何内容
@@ -773,7 +805,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     fr: `Veuillez sélectionner le type de test pour les nouveaux membres
 
 • Simple — Le bot demande d'envoyer une réponse à la conversation
-• Bouton — Le bot demande d'appuyer sur un bouton 
+• Bouton — Le bot demande d'appuyer sur un bouton
 • Chiffres — Le bot pose une simple équation
 • Image — bot will ask to recognize characters on an image`,
     id: `Silakan pilih jenis ujian untuk anggota baru:
@@ -790,7 +822,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 • Image — bot will ask to recognize characters on an image`,
     am: `Please, select the test type for the newcomers:
 
-• ሲምፕል — ቦቱ ማንኛውንም ጸሁፍ እንዲልኩ ይጠይቃል። 
+• ሲምፕል — ቦቱ ማንኛውንም ጸሁፍ እንዲልኩ ይጠይቃል።
 • በተን — ቦቱ በተን አንዲነካ ይጠይቃል።
 • ዲጂት — በቱ መልሰ ይጠየቃል።
 • Image — bot will ask to recognize characters on an image`,
@@ -824,6 +856,12 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 • Buton — bot-ul va cere userului să apese un buton
 • Cifre — bot-ul va cere userului să rezolve o simplă operație aritmetică
 • Image — bot will ask to recognize characters on an image`,
+    ca: `Per favor, tria la prova que han de passar els nouvinguts:
+
+• Simple — el bot et demanarà que eviis qualsevol cosa a la conversa
+• Botó — el bot et demanarà que pitgis un botó
+• Dígits — el bot voldrà que resolguis una equació molt senzilla
+• Imatge — el bot et demanarà que reconeguies els caracters d'una imatge`,
   },
   simple: {
     en: 'Simple',
@@ -847,6 +885,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'بسيطه',
     ja: '簡単',
     ro: 'Simplu',
+    ca: 'Simple',
   },
   digits: {
     en: 'Digits',
@@ -870,6 +909,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'ارقام',
     ja: '数字',
     ro: 'Cifre',
+    ca: 'Dígits',
   },
   button: {
     en: 'Button',
@@ -890,9 +930,10 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     am: 'በተን',
     cz: 'Tlačítko',
     sk: 'Tlačidlo',
-    رمي: 'زر',
+    ar: 'زر',
     ja: 'ボタン',
     ro: 'Buton',
+    ca: 'Botó',
   },
   image: {
     en: 'Image',
@@ -900,7 +941,9 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     it: 'Immagine',
     uk: 'Зображення',
     tr: 'Resim',
+    es: 'Imagen',
     de: 'Bild',
+    ca: 'Imatge',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -924,6 +967,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'تم سوف استخدم هذا النوع من الاختبار .',
     ja: 'はい、このタイプのテストを使います。',
     ro: 'Perfect, o să utilizez acest tip de test.',
+    ca: 'Perfecte, faré servir aquesta prova.',
   },
   time_limit: {
     en:
@@ -963,6 +1007,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '新しく参加した人が退出させられるまでにテストを完了する時間を何秒間にするかを選択してください。',
     ro:
       'Te rog selectează câte secunde au la dispoziție userii noi să completeze testul, înainte sa fi dați afară.',
+    ca:
+      'Per favor, tria quants segons he de donar als nouvinguts per a resoldre la prova abans que els expulsi.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -986,6 +1032,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'عظيم، سأستخدم هذا الحد الزمني .',
     ja: 'はい、この時間制限を使います。',
     ro: 'Super, o să folosesc această limită de timp',
+    ca: 'Molt bé doncs, faré servir aquest límit de temps',
   },
   seconds: {
     en: 'sec',
@@ -1009,6 +1056,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'ثانية',
     ja: '秒',
     ro: 'sec',
+    ca: 'seg',
   },
   lock_true: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -1034,6 +1082,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
     ja: '素晴らしいです！これで管理者によるコマンドしか受け付けません。',
     ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
+    ca: 'D\'acord, a partir d\'ara només faré cas a les ordres dels administradors.',
   },
   lock_false: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -1058,6 +1107,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
     ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
+    ca: 'D\'acord, a partir d\'ara faré cas a les ordres de tothom.',
   },
   strict_true: {
     en:
@@ -1068,6 +1118,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
+    es:
+      "Perfecto! A partir de este momento, los recién llegados, solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que éste sea resuelto correctamente.",
     zh:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
@@ -1091,6 +1143,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、新しく参加した人は、キャプチャをパスするまで、キャプチャの回答しかできません。',
     ro:
       'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
+    ca:
+      'Entesos, a partir d\'ara els nouvinguts, només podràn enviar missatges per a respondre amb la solució de la prova establerta, fins que aquesta sigui resolta correctament.',
   },
   strict_false: {
     en:
@@ -1100,6 +1154,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
+    es:
+      '¡Genial! A partir de este momento, los recién llegados, podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
@@ -1120,6 +1176,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！、これで、新しく参加した人は、キャプチャをパスする前に、テキストを送信することができます。',
     ro:
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
+    ca:
+      'Entesos, a partir d\'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.',
   },
   simple_warning: {
     en:
@@ -1159,6 +1217,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
     ro:
       ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
+    ca:
+      ', per favor, envia un missatge qualsevol, dins aquest grup, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
   },
   digits_warning: {
     en:
@@ -1198,6 +1258,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '指定された時間内に算数の正解を送信してください。そうしないと、退出させられます。ありがとうございます！',
     ro:
       ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
+    ca:
+      ', per favor, envia dins aquest grup, la solució de l\'operaió aritmètica proposada, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
   },
   button_warning: {
     en:
@@ -1238,6 +1300,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '指定された時間内に、下に表示されたボタンを押してください。そうしないと、退出させられます。ありがとうございます！',
     ro:
       ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
+    ca:
+      ', per favor, pitja el botó d\'aquest missatge abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
   },
   image_warning: {
     en:
@@ -1250,6 +1314,10 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       ', будь ласка, надішліть зазначені символи у цей чат, поки не спливе вказаний час, або ви будете вилучені з чату. Дякуємо!',
     tr:
       ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
+    es:
+      ', por favor, envía en este grupo, los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    ca:
+      ', per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -1273,6 +1341,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'أنا لست بوت',
     ja: '私はbotではありません。',
     ro: 'Nu sunt un bot',
+    ca: 'No soc un robot',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -1283,7 +1352,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     uk: 'Тільки кандидат на те, щоб бути людиною, може натискати на цю кнопку.',
     br: 'Apenas o usuário citado pode apertar esse botão.',
     tr: 'Sadece bot olmayan bir aday bu düğmeye basabilir.',
-    es: 'Solo el candidato para no ser un roobot puede presionar este botón.',
+    es: 'Solo el candidato para no ser un robot puede presionar este botón.',
     zh: '只有不是机器人的候选人才能按此按钮。',
     no: 'Bare kandidaten som blir testet kan trykke denne knappen.',
     de: 'Nur der User der kein Bot ist, kann diesen Knopf drücken.',
@@ -1298,6 +1367,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
     ja: 'botではない候補の人だけがボタンを押すことができます。',
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
+    ca: 'Només allò que no és un robot, és el candidat ideal per a pitjar el botó.',
   },
   restrict_true: {
     en:
@@ -1311,7 +1381,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     tr:
       'Harika! Artık tüm yeni gelenler, bu sohbete yalnızca normal metin mesajları gönderebilecek.',
     es:
-      '¡Genial! Ahora todos los recién llegados solo podrán enviar mensajes ordinarios a este chat.',
+      '¡Genial! Ahora todos los recién llegados solo podrán enviar mensajes de texto en este chat.',
     zh: '很棒！现在所有新手都只能发送文本消息到这个群组。',
     no: 'Supert! Nå kan nykommere bare sende tekstmeldinger i chatten.',
     de:
@@ -1334,6 +1404,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、全ての新しく参加した人は、このチャットで普通のテキストメッセージを送ることができます。',
     ro:
       'Perfect! Acum toți nou veniții vor putea trimite orice fel de mesaje text către acest chat. ',
+    ca:
+      'Entesos, a partir d\'ara, tots els nouvinguts, només podran enviar missatges de text en aquest grup.',
   },
   restrict_false: {
     en:
@@ -1369,6 +1441,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、全ての新しく参加した人は、このチャットでどんな種類のコンテンツを送ることができます。',
     ro:
       'Perfect! Acum toți nou veniții vor putea trimite orice fel conținut către acest chat.',
+    ca:
+      'Entesos, a partir d\'ara, tots els nouvinguts podran enviar qualsevol tipus de missatge en aquest grup.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
@@ -1376,7 +1450,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     uk: 'Чудово! Тепер повідомлення про вхід користувачів буде видалено.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecek.',
-    es: '¡Genial! Ahora los mensajes de entrada serán borrados.',
+    es: '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, serán borrados.',
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
     de: 'Mega! Beitrittsnachrichten werden nun gelöscht.',
@@ -1390,6 +1464,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されます。',
     ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
+    ca: 'Molt bé, a partir d\'ara els missatges, que auncien l\'entrada de nous usuaris al grup, seran esborrats.',
   },
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
@@ -1397,7 +1472,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     uk: 'Чудово! Тепер повідомлення про вхід користувачів не буде видалено.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
-    es: '¡Genial! Ahora los mensajes de entrada no serán borrados.',
+    es: '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, no serán borrados.',
     zh: '很棒！现在，加入消息将不被删除。',
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
     de: 'Spitze! Beitrittsnachrichten werden nicht gelöscht.',
@@ -1411,6 +1486,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されません。',
     ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
+    ca: 'Molt bé, a partir d\'ara els missatges, que auncien l\'entrada de nous usuaris al grup, no seran esborrats.',
   },
   greetsUsers_true: {
     en:
@@ -1428,7 +1504,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen, bu iletiyi kullanmak istediğiniz tebrik metniyle yanıtlayın ($title ve $username kullanabilirsiniz).',
     es:
-      '¡Genial! Ahora los recién llegados que hayan pasado el test no serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username).',
+      '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title, $fullname y $username).',
     zh:
       '很棒！现在通过测试的新人不会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。',
     no:
@@ -1452,6 +1528,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title, $fullname and $usernameを使えます。)',
     ro:
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username).',
+    ca:
+      'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username).',
   },
   greetsUsers_true_message: {
     en:
@@ -1469,7 +1547,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı izlenir.',
     es:
-      '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title y $username). El mensaje actual de saludo es:',
+      '¡Genial! Ahora los recién llegados que hayan pasado el test serán saludados. Por favor, responde a este mensaje con el texto de saludo que quieres utilizar (puedes usar $title, $fullname y $username). El mensaje actual de saludo es:',
     zh:
       '很棒！现在通过测试的新人会受到欢迎消息。 请回复此消息，并附上您要使用的问候语（您可以使用$title和$username）。接下来是当前的问候消息。',
     no:
@@ -1495,6 +1573,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、テストをパスして新しく参加した人は挨拶をされます。あなたが希望する挨拶のメッセージを、こちらのメッセージに回答してください。($title, $fullname and $usernameを使えます。) 今の挨拶メッセージは以下です。',
     ro:
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username). Mesajul curent de salut este următorul.',
+    ca:
+      'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username). Actualment tens establert el següent missatge de benvinguda:',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -1522,6 +1602,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ja:
       '素晴らしいです！これで、このテストをパスして新しく参加された人は挨拶をされません。',
     ro: 'Super! Acum nou veniții ce au trecut testul vor fi salutați.',
+    ca: 'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova no rebran cap missatge de benvinguda.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -1543,6 +1624,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'قبلت!',
     ja: '承認されました！',
     ro: 'Acceptat!',
+    ca: 'Acceptat!',
   },
   captchaMessage_true: {
     en:
@@ -1553,6 +1635,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds).',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz).',
+    es:
+      '¡Genial! Ahora los recién llegados recibirán una explicación del CAPTCHA que tienen que superar. Por favor, responde a este mensaje con el texto que deseas utilizar para dicha explicación (puedes usar $title, $username, $equation, $fullname y $username).',
     zh:
       '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation, $fullname 和 $seconds)。',
     de:
@@ -1565,6 +1649,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation, $fullname and $secondsを使えます)。',
     ro:
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds).',
+    ca:
+      'D\'acord, a partir d\'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l\'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds).',
   },
   captchaMessage_true_message: {
     en:
@@ -1575,6 +1661,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds). Поточне пояснення наведено нижче.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz). Geçerli karşılama mesajı izlenir.',
+    es:
+      '¡Genial! Ahora los recién llegados recibirán una explicación del CAPTCHA que tienen que superar. Por favor, responde a este mensaje con el texto que deseas utilizar para dicha explicación (puedes usar $title, $username, $equation, $fullname y $username). El mensaje explicativo actual es:',
     zh:
       '很棒！ 现在新人将获得回答验证码的自定义消息。请用你要使用的验证码文本回复此消息 (你可以使用 $title, $username, $equation, $fullname 和 $seconds)。 当前的问候消息如下。',
     de:
@@ -1587,6 +1675,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！これで、新しく参加した人は、キャプチャに説明されたカスタムメッセージを受けます。あなたが希望するキャプチャテキストを、こちらのメッセージに回答してください。($title, $username, $equation, $fullname and $secondsを使えます)。 今の挨拶メッセージは以下です。',
     ro:
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds). Mesajul curent de salut este următorul.',
+    ca:
+      'D\'acord, a partir d\'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l\'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds). Actualment tens establert el següent missatge explicatiu:',
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
@@ -1594,6 +1684,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
     uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
+    es: '¡Genial! Ahora los recién llegados recibirán el mensaje predeteminado de la explicación del CAPTCHA que tienen que superar.',
     zh: '很棒！现在新人将会看到默认的验证码消息',
     de: 'Großartig! Jetzt erhalten neue User die standard Captcha Nachricht',
     sk:
@@ -1602,6 +1693,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ja:
       '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
     ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
+    ca: 'Molt bé, a partir d\'ara els nouvinguts rebran el missatge per defecte, que els explicarà la prova que han de superar.',
   },
   trust_success: {
     en: 'Accepted!',
@@ -1623,6 +1715,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'قبلت!',
     ja: '承認されました！',
     ro: 'Acceptat!',
+    ca: 'Acceptat!',
   },
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1630,6 +1723,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     uk:
       'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
+    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     de: 'Toll! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
@@ -1637,12 +1731,14 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
+    ca: 'D\'acord, a partir d\'ara els nouvinguts que no superin la prova quedaran bloquejats.',
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
+    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
     de:
       'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
@@ -1651,6 +1747,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
+    ca: 'D\'acord, a partir d\'ara els nouvinguts que no superin la prova seran explusats.',
   },
   deleteEntryOnKick_true: {
     en:
@@ -1661,6 +1758,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldıracak.',
+    es:
+      'Perfecto, Shieldy eliminará los mensajes de los recién llegados que no hayan superado el CAPTCHA.',
     zh: '很棒！Shieldy将删除验证码失败用户的加入消息。',
     de:
       'Top! Shieldy wird nun die Beitrittsnachrichten entfernen, wenn ein User den Captcha Test nicht besteht.',
@@ -1670,6 +1769,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除します。',
     ro:
       'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
+    ca:
+      'Entesos, a partir d\'ara en Shieldy esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.',
   },
   deleteEntryOnKick_false: {
     en:
@@ -1680,6 +1781,8 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Чудово. Шилді не буде видаляти вхідні повідомлення від користувачів, які провалили капчу.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldırmayacak.',
+    es:
+      'Perfecto, Shieldy no eliminará los mensajes de los recién llegados que no hayan superado el CAPTCHA.',
     zh: '很棒！Shieldy将不会删除验证码失败用户的加入消息。',
     de:
       'Hammer! Shieldy wird nun die Beitrittsnachrichten nicht entfernen, wenn ein User den Captcha Test nicht besteht.',
@@ -1689,20 +1792,26 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       '素晴らしいです！Shieldyは、キャプチャを失敗したユーザーの入室時のメッセージを削除しません。',
     ro:
       'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
+    ca:
+      'Entesos, a partir d\'ara en Shieldy no esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.',
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
+    es: '¡Entendido! Ahora Shieldy utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
+    ca: 'Molt bé, a partir d\'ara en Shieldy ferà servir Combot Anti-Spam per a combatre els missatges brossa.',
   },
   cas_false: {
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
+    es: '¡Entendido! Ahora Shieldy no utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
+    ca: 'Molt bé, a partir d\'ara en Shieldy no ferà servir Combot Anti-Spam per a combatre els missatges brossa.',
   },
   underAttack_true: {
     en:
@@ -1711,63 +1820,97 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
       'Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.',
     uk:
       'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
+    es:
+      "¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.",
+    ca:
+      "Molt bé, a partir d'ara en Shieldy expulsarà a tothom que vulgui entrar en aquest xat. Procura desactivar aquest mode quan l'atac s'hagi esveït; per això fes servir la comanda /underAttack.",
   },
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
     uk:
       'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
+    es: '¡Entendido! Ahora Shieldy ya no continuará expulsando a nadie que entre en este chat.',
+    ca: 'Molt bé, a partir d\'ara en Shieldy ja no continuarà expulsant a ningú que vulgui entrar en aquest xat',
   },
   noAttack_true: {
     en:
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
     ru:
       'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
+    es: "¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.",
+    ca: "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
     ru: 'Отлично! Щилди включен.',
+    es: '¡Entendido! Ahora Shieldy está activo.',
+    ca: 'Molt bé, a partir d\'ara en Shieldy està actiu i vigilant aquest xat.',
   },
   noChannelLinks_true: {
     en:
       'Great! Shieldy will now delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь будет удалять сообщения с ссылками на Телеграм-каналы.',
+    es: '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
+    ca: 'D\'acord, a partir d\'ara en Shieldy esborrarà tots el missatges que contenguin enllaços a altres canals de Telegram.',
   },
   noChannelLinks_false: {
     en:
       'Great! Shieldy will not delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
+    es: '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
+    ca: 'D\'acord, a partir d\'ara en Shieldy ja no esborrarà cap missatge que contengui enllaços a altres canals de Telegram.',
   },
   viewConfig: {
     en: 'Current config:',
     ru: 'Текущие настройки:',
+    es: 'Esta es la configuración actual:',
+    ca: 'Aquesta és la configuració actual:',
   },
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
     ru: 'Отлично! Пользователи теперь могут приглашать ботов.',
+    es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
+    ca: 'Fantàstic! A partir d\'ara els usuaris poden convidar robots a la conversa.',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
     ru: 'Отлично! Пользователи теперь не могут приглашать ботов.',
+    es: '¡Muy bién! Ahora los usuarios no podrán invitar a bots.',
+    ca: 'Fantàstic! A partir d\'ara els usuaris ja no poden convidar robots a la conversa.',
   },
   greetingButtons: {
     en: `Reply to this message (and I mean reply(!), not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.
-    
+
 DuckDuckGo - https://duckduckgo.com
 Wikipedia - https://wikipedia.com
 
 Current buttons:`,
     ru: `Ответьте на это сообщение (и я имею ввиду ответьте(!), а не просто отправьте отдельное сообщение) с не более чем 10 ссылками в формате ниже, чтобы установить кнопки приветствию. Ответьте любым другим сообщением, чтобы удалить все кнопки.
-    
+
 DuckDuckGo - https://duckduckgo.com
 Wikipedia - https://wikipedia.com
 
 Текущие кнопки:`,
+    es: `Responde a este mensaje (si, si, responde!, no escribas un mensaje a parte) con hasta 10 enlaces, con el formato que ves más abajo, para configurar los botones de bienvenida. Responde cualquier otra cosa para eliminar todos los botones.
+
+DuckDuckGo - https://duckduckgo.com
+Wikipedia - https://wikipedia.com
+
+Botones configurados actualmente:`,
+    ca: `Respon a aquest missatge (si, ha de ser una resposta, no em serveix de res que m'escriguis un missatge a part), amb un llistat de fins a 10 enllaços, de l'estil que veus més abaix, per a configurar els botons de benvinguda. Respon qualsevol altra cosa per a suprimir tots els botons de cop.
+
+DuckDuckGo - https://duckduckgo.com
+Wikipedia - https://wikipedia.com
+
+Aquests són els botons que tens configurats actualment:`,
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
     ru: 'Нет кнопок',
+    es: 'No hay botones',
+    ca: 'No hi ha botons',
   },
 }

@@ -24,6 +24,7 @@ export enum Language {
   JAPANESE = 'ja',
   ROMANIAN = 'ro',
   SLOVAK = 'sk',
+  CATALAN = 'ca',
 }
 
 export enum CaptchaType {
