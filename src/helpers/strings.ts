@@ -153,12 +153,12 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /noChannelLinks — автоматично видаляти повідомлення з посиланнями на телеграм-канали
 /viewConfig — подивитися поточні настройки
 /buttonText — змінити текст кнопки капчи в форматі \`/buttonText Я не бот!\`
-/allowInvitingBots — whether users can invite other bots or not
-/greetingButtons — setup buttons for greeting message
+/allowInvitingBots — чи можуть користувачі додавати ботів
+/greetingButtons — налаштування кнопок у повідомленні з привітанням
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
-Also check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.`,
+Запрошую переглянути інші мої проекти — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Це розумний додаток для впорядкування списку справ, який за допомогою когнітивної психології спокушує ваш мозок закінчувати проекти та показувати результати. Безкоштовно протягом 30 днів без жодних зобовʼязань, дайте йому шанс, якщо ви хочете підвищити свою продуктивність. Це допомогло мені — може допомогти і вам.`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
 /help — mostra essa mensagem
@@ -625,7 +625,7 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 Still got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!
 
 Also check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.`,
-  ca: `Shieldy — és la millor solució per a combatre els usuaris que publiquen missatges brossa als grups de Telegram. Els nouvinguts hauran de resoldre una sèrie de proves abans d'un temps determinat, i si no donen una respota correcta, els expulsarà. Tant senzill com això. Assegurat't que @shieldy\\_bot té permisos d'administrador al grup i llestos! Així i tot, també pots personalitzar aquest comportament amb les següents comandes:
+    ca: `Shieldy — és la millor solució per a combatre els usuaris que publiquen missatges brossa als grups de Telegram. Els nouvinguts hauran de resoldre una sèrie de proves abans d'un temps determinat, i si no donen una respota correcta, els expulsarà. Tant senzill com això. Assegurat't que @shieldy\\_bot té permisos d'administrador al grup i llestos! Així i tot, també pots personalitzar aquest comportament amb les següents comandes:
 
 /help — mostra aquest missatge
 /language — canvia d'idioma
@@ -677,7 +677,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'الرجاء إختيار اللغة.',
     ja: '言語を選択してください。',
     ro: 'Te rog, salectează limba.',
-    ca: 'Per favor, tria l\'idioma',
+    ca: "Per favor, tria l'idioma",
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -1082,7 +1082,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'رائع ! الآن سوف أتفاعل فقط مع الأوامر المرسلة من قبل المسؤولين.',
     ja: '素晴らしいです！これで管理者によるコマンドしか受け付けません。',
     ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
-    ca: 'D\'acord, a partir d\'ara només faré cas a les ordres dels administradors.',
+    ca:
+      "D'acord, a partir d'ara només faré cas a les ordres dels administradors.",
   },
   lock_false: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -1107,7 +1108,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'رائع ! الآن سوف أرد على الأوامر المرسلة من قبل أي شخص.',
     ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
-    ca: 'D\'acord, a partir d\'ara faré cas a les ordres de tothom.',
+    ca: "D'acord, a partir d'ara faré cas a les ordres de tothom.",
   },
   strict_true: {
     en:
@@ -1119,7 +1120,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
     es:
-      "Perfecto! A partir de este momento, los recién llegados, solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que éste sea resuelto correctamente.",
+      'Perfecto! A partir de este momento, los recién llegados, solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que éste sea resuelto correctamente.',
     zh:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
@@ -1144,7 +1145,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
     ca:
-      'Entesos, a partir d\'ara els nouvinguts, només podràn enviar missatges per a respondre amb la solució de la prova establerta, fins que aquesta sigui resolta correctament.',
+      "Entesos, a partir d'ara els nouvinguts, només podràn enviar missatges per a respondre amb la solució de la prova establerta, fins que aquesta sigui resolta correctament.",
   },
   strict_false: {
     en:
@@ -1177,7 +1178,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
     ca:
-      'Entesos, a partir d\'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.',
+      "Entesos, a partir d'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.",
   },
   simple_warning: {
     en:
@@ -1218,7 +1219,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
     ca:
-      ', per favor, envia un missatge qualsevol, dins aquest grup, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
+      ", per favor, envia un missatge qualsevol, dins aquest grup, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
   },
   digits_warning: {
     en:
@@ -1259,7 +1260,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
     ca:
-      ', per favor, envia dins aquest grup, la solució de l\'operaió aritmètica proposada, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
+      ", per favor, envia dins aquest grup, la solució de l'operaió aritmètica proposada, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
   },
   button_warning: {
     en:
@@ -1301,7 +1302,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
     ca:
-      ', per favor, pitja el botó d\'aquest missatge abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
+      ", per favor, pitja el botó d'aquest missatge abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
   },
   image_warning: {
     en:
@@ -1317,7 +1318,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     es:
       ', por favor, envía en este grupo, los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     ca:
-      ', per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s\'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.',
+      ", per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -1367,7 +1368,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'فقط المرشح لعدم كونه بوت يمكن الضغط على هذا الزر.',
     ja: 'botではない候補の人だけがボタンを押すことができます。',
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
-    ca: 'Només allò que no és un robot, és el candidat ideal per a pitjar el botó.',
+    ca:
+      'Només allò que no és un robot, és el candidat ideal per a pitjar el botó.',
   },
   restrict_true: {
     en:
@@ -1405,7 +1407,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Perfect! Acum toți nou veniții vor putea trimite orice fel de mesaje text către acest chat. ',
     ca:
-      'Entesos, a partir d\'ara, tots els nouvinguts, només podran enviar missatges de text en aquest grup.',
+      "Entesos, a partir d'ara, tots els nouvinguts, només podran enviar missatges de text en aquest grup.",
   },
   restrict_false: {
     en:
@@ -1442,7 +1444,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Perfect! Acum toți nou veniții vor putea trimite orice fel conținut către acest chat.',
     ca:
-      'Entesos, a partir d\'ara, tots els nouvinguts podran enviar qualsevol tipus de missatge en aquest grup.',
+      "Entesos, a partir d'ara, tots els nouvinguts podran enviar qualsevol tipus de missatge en aquest grup.",
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
@@ -1450,7 +1452,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     uk: 'Чудово! Тепер повідомлення про вхід користувачів буде видалено.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecek.',
-    es: '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, serán borrados.',
+    es:
+      '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, serán borrados.',
     zh: '很棒！现在，加入消息将被删除。',
     no: 'Supert! Meldinger sendt ved ankomst bli slettet.',
     de: 'Mega! Beitrittsnachrichten werden nun gelöscht.',
@@ -1464,7 +1467,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'رائع ! الآن سيتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されます。',
     ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
-    ca: 'Molt bé, a partir d\'ara els missatges, que auncien l\'entrada de nous usuaris al grup, seran esborrats.',
+    ca:
+      "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, seran esborrats.",
   },
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
@@ -1472,7 +1476,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     uk: 'Чудово! Тепер повідомлення про вхід користувачів не буде видалено.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
-    es: '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, no serán borrados.',
+    es:
+      '¡Genial! Ahora los mensajes que anuncian la entrada de nuevos usuarios, no serán borrados.',
     zh: '很棒！现在，加入消息将不被删除。',
     no: 'Supert! Meldinger sendt ved ankomst vil ikke bli slettet.',
     de: 'Spitze! Beitrittsnachrichten werden nicht gelöscht.',
@@ -1486,7 +1491,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'رائع ! الآن لن يتم حذف رسائل الدخول إلى المجموعة.',
     ja: '素晴らしいです！これで、全ての参加時のメッセージは削除されません。',
     ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
-    ca: 'Molt bé, a partir d\'ara els missatges, que auncien l\'entrada de nous usuaris al grup, no seran esborrats.',
+    ca:
+      "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, no seran esborrats.",
   },
   greetsUsers_true: {
     en:
@@ -1529,7 +1535,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username).',
     ca:
-      'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username).',
+      "D'acord, a partir d'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username).",
   },
   greetsUsers_true_message: {
     en:
@@ -1574,7 +1580,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username). Mesajul curent de salut este următorul.',
     ca:
-      'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username). Actualment tens establert el següent missatge de benvinguda:',
+      "D'acord, a partir d'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username). Actualment tens establert el següent missatge de benvinguda:",
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -1602,7 +1608,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ja:
       '素晴らしいです！これで、このテストをパスして新しく参加された人は挨拶をされません。',
     ro: 'Super! Acum nou veniții ce au trecut testul vor fi salutați.',
-    ca: 'D\'acord, a partir d\'ara els nouvinguts que hagin passat la prova no rebran cap missatge de benvinguda.',
+    ca:
+      "D'acord, a partir d'ara els nouvinguts que hagin passat la prova no rebran cap missatge de benvinguda.",
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -1650,7 +1657,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds).',
     ca:
-      'D\'acord, a partir d\'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l\'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds).',
+      "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds).",
   },
   captchaMessage_true_message: {
     en:
@@ -1676,7 +1683,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds). Mesajul curent de salut este următorul.',
     ca:
-      'D\'acord, a partir d\'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l\'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds). Actualment tens establert el següent missatge explicatiu:',
+      "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds). Actualment tens establert el següent missatge explicatiu:",
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
@@ -1684,7 +1691,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
       'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
     uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
-    es: '¡Genial! Ahora los recién llegados recibirán el mensaje predeteminado de la explicación del CAPTCHA que tienen que superar.',
+    es:
+      '¡Genial! Ahora los recién llegados recibirán el mensaje predeteminado de la explicación del CAPTCHA que tienen que superar.',
     zh: '很棒！现在新人将会看到默认的验证码消息',
     de: 'Großartig! Jetzt erhalten neue User die standard Captcha Nachricht',
     sk:
@@ -1693,7 +1701,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ja:
       '素晴らしいです！これで、新しく参加した人は、デフォルトのキャプチャメッセージを見れます。',
     ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
-    ca: 'Molt bé, a partir d\'ara els nouvinguts rebran el missatge per defecte, que els explicarà la prova que han de superar.',
+    ca:
+      "Molt bé, a partir d'ara els nouvinguts rebran el missatge per defecte, que els explicarà la prova que han de superar.",
   },
   trust_success: {
     en: 'Accepted!',
@@ -1723,7 +1732,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     uk:
       'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
-    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
+    es:
+      'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     de: 'Toll! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
@@ -1731,14 +1741,16 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
-    ca: 'D\'acord, a partir d\'ara els nouvinguts que no superin la prova quedaran bloquejats.',
+    ca:
+      "D'acord, a partir d'ara els nouvinguts que no superin la prova quedaran bloquejats.",
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
-    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
+    es:
+      'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
     de:
       'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
@@ -1747,7 +1759,8 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
-    ca: 'D\'acord, a partir d\'ara els nouvinguts que no superin la prova seran explusats.',
+    ca:
+      "D'acord, a partir d'ara els nouvinguts que no superin la prova seran explusats.",
   },
   deleteEntryOnKick_true: {
     en:
@@ -1770,7 +1783,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
-      'Entesos, a partir d\'ara en Shieldy esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.',
+      "Entesos, a partir d'ara en Shieldy esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
   },
   deleteEntryOnKick_false: {
     en:
@@ -1793,25 +1806,29 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ro:
       'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
-      'Entesos, a partir d\'ara en Shieldy no esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.',
+      "Entesos, a partir d'ara en Shieldy no esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
-    es: '¡Entendido! Ahora Shieldy utilizará Combot Anti-Spam para combatir el spam.',
+    es:
+      '¡Entendido! Ahora Shieldy utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
-    ca: 'Molt bé, a partir d\'ara en Shieldy ferà servir Combot Anti-Spam per a combatre els missatges brossa.',
+    ca:
+      "Molt bé, a partir d'ara en Shieldy ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
   },
   cas_false: {
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
-    es: '¡Entendido! Ahora Shieldy no utilizará Combot Anti-Spam para combatir el spam.',
+    es:
+      '¡Entendido! Ahora Shieldy no utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
-    ca: 'Molt bé, a partir d\'ara en Shieldy no ferà servir Combot Anti-Spam per a combatre els missatges brossa.',
+    ca:
+      "Molt bé, a partir d'ara en Shieldy no ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
   },
   underAttack_true: {
     en:
@@ -1821,7 +1838,7 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     uk:
       'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
     es:
-      "¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.",
+      '¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy expulsarà a tothom que vulgui entrar en aquest xat. Procura desactivar aquest mode quan l'atac s'hagi esveït; per això fes servir la comanda /underAttack.",
   },
@@ -1830,38 +1847,46 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
     uk:
       'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
-    es: '¡Entendido! Ahora Shieldy ya no continuará expulsando a nadie que entre en este chat.',
-    ca: 'Molt bé, a partir d\'ara en Shieldy ja no continuarà expulsant a ningú que vulgui entrar en aquest xat',
+    es:
+      '¡Entendido! Ahora Shieldy ya no continuará expulsando a nadie que entre en este chat.',
+    ca:
+      "Molt bé, a partir d'ara en Shieldy ja no continuarà expulsant a ningú que vulgui entrar en aquest xat",
   },
   noAttack_true: {
     en:
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
     ru:
       'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
-    es: "¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.",
-    ca: "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
+    es:
+      '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
+    ca:
+      "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
     ru: 'Отлично! Щилди включен.',
     es: '¡Entendido! Ahora Shieldy está activo.',
-    ca: 'Molt bé, a partir d\'ara en Shieldy està actiu i vigilant aquest xat.',
+    ca: "Molt bé, a partir d'ara en Shieldy està actiu i vigilant aquest xat.",
   },
   noChannelLinks_true: {
     en:
       'Great! Shieldy will now delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь будет удалять сообщения с ссылками на Телеграм-каналы.',
-    es: '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
-    ca: 'D\'acord, a partir d\'ara en Shieldy esborrarà tots el missatges que contenguin enllaços a altres canals de Telegram.',
+    es:
+      '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
+    ca:
+      "D'acord, a partir d'ara en Shieldy esborrarà tots el missatges que contenguin enllaços a altres canals de Telegram.",
   },
   noChannelLinks_false: {
     en:
       'Great! Shieldy will not delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
-    es: '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
-    ca: 'D\'acord, a partir d\'ara en Shieldy ja no esborrarà cap missatge que contengui enllaços a altres canals de Telegram.',
+    es:
+      '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
+    ca:
+      "D'acord, a partir d'ara en Shieldy ja no esborrarà cap missatge que contengui enllaços a altres canals de Telegram.",
   },
   viewConfig: {
     en: 'Current config:',
@@ -1873,13 +1898,15 @@ P.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un dona
     en: 'Nice! Users can invite bots now.',
     ru: 'Отлично! Пользователи теперь могут приглашать ботов.',
     es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
-    ca: 'Fantàstic! A partir d\'ara els usuaris poden convidar robots a la conversa.',
+    ca:
+      "Fantàstic! A partir d'ara els usuaris poden convidar robots a la conversa.",
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
     ru: 'Отлично! Пользователи теперь не могут приглашать ботов.',
     es: '¡Muy bién! Ahora los usuarios no podrán invitar a bots.',
-    ca: 'Fantàstic! A partir d\'ara els usuaris ja no poden convidar robots a la conversa.',
+    ca:
+      "Fantàstic! A partir d'ara els usuaris ja no poden convidar robots a la conversa.",
   },
   greetingButtons: {
     en: `Reply to this message (and I mean reply(!), not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.
