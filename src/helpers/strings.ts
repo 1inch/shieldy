@@ -153,12 +153,12 @@ Also check out another one of my projects — [Todorant](https://todorant.com) (
 /noChannelLinks — автоматично видаляти повідомлення з посиланнями на телеграм-канали
 /viewConfig — подивитися поточні настройки
 /buttonText — змінити текст кнопки капчи в форматі \`/buttonText Я не бот!\`
-/allowInvitingBots — whether users can invite other bots or not
-/greetingButtons — setup buttons for greeting message
+/allowInvitingBots — чи можуть користувачі додавати ботів
+/greetingButtons — налаштування кнопок у повідомленні з привітанням
 
 Залишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!
 
-Also check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.`,
+Запрошую переглянути інші мої проекти — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Це розумний додаток для впорядкування списку справ, який за допомогою когнітивної психології спокушує ваш мозок закінчувати проекти та показувати результати. Безкоштовно протягом 30 днів без жодних зобовʼязань, дайте йому шанс, якщо ви хочете підвищити свою продуктивність. Це допомогло мені — може допомогти і вам.`,
     br: `Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:
 
 /help — mostra essa mensagem
