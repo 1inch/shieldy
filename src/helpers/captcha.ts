@@ -7,6 +7,8 @@ export async function getImageCaptcha() {
     size: 6,
     ignoreChars: letters + letters.toUpperCase(),
     noise: 2,
+    width: 150,
+    height: 100,
   })
   return {
     png: await convert(catpcha.data, {
