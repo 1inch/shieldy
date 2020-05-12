@@ -577,6 +577,9 @@ async function greetUser(ctx: ContextMessageUpdate) {
         const username = getUsername(ctx.from)
         const initialLength = `${message.text}\n\n`.length
         message.text = `${message.text}\n\n${username}`
+        if (!message.entities) {
+          message.entities = []
+        }
         message.entities.push({
           type: 'text_link',
           offset: initialLength,
