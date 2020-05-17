@@ -12,7 +12,9 @@
     "develop": "concurrently -i -k -p \"[{name}]\" -n \"Node, TypeScript\" -c \"yellow.bold,cyan.bold\" \"yarn watch-js\" \"yarn watch-ts\"",
     "build-ts": "tsc --skipLibCheck",
     "watch-ts": "tsc -w --skipLibCheck",
-    "watch-js": "nodemon dist/app.js"
+    "watch-js": "nodemon dist/app.js",
+    "upload-translations": "node scripts/upload.js",
+    "download-translations": "node scripts/download.js && yarn prettier --single-quote --no-semi --write ./src/helpers/localizations.ts"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
+    "flat": "^5.0.0",
     "nodemon": "^1.19.1"
   }
 }
