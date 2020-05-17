@@ -8,7 +8,7 @@ import { checkLock } from '../middlewares/checkLock'
 export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('language', checkLock, (ctx) => {
     ctx.replyWithMarkdown(
-      strings(ctx.dbchat, 'language'),
+      strings(ctx.dbchat, 'language_shieldy'),
       Extra.webPreview(false)
         .inReplyTo(ctx.message.message_id)
         .markup((m) =>

@@ -8,7 +8,7 @@ export function setupHelp(bot: Telegraf<ContextMessageUpdate>) {
 }
 
 export function sendHelp(ctx: ContextMessageUpdate) {
-  return ctx.replyWithMarkdown(strings(ctx.dbchat, 'help'), {
+  return ctx.replyWithMarkdown(strings(ctx.dbchat, 'helpShieldy'), {
     disable_web_page_preview: true,
   })
 }
