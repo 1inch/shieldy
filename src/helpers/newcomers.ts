@@ -567,7 +567,6 @@ async function greetUser(ctx: ContextMessageUpdate) {
                 url: getLink(ctx.from),
               })
             }
-            console.log(message.entities)
           }
         }
       }
