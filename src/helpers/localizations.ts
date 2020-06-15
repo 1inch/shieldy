@@ -44,6 +44,8 @@ export const localizations = {
       "Shieldy — este cea mai bună soluție de a lupta cu spamerii enervanți de pe Telegram. Le cere nou veniților să execute un set de acțiuni într-o perioadă setată de timp, altfel le dă kick. Atât de simplu este. Asigură-te ca @shieldy\\_bot este admin pe grupul tau și asta e tot! Pentru setări avansate, folosește comenzile de mai jos:\n\n/help — arată acest mesaj\n/language — schimbă limba\n/captcha — schimbă tipul de captcha folosit\n/timeLimit — schimbă limita de timp acordată nou veniților\n/lock — face comenzile accesibile doar adminilor\n/restrict — restricționează nou veniții să trimită doar mesaje text în primele 24 de ore\n/deleteEntryMessages — șterge mesajele despre userii ce intră în grup\n/greeting — salută utilizatorii ce au trecut testul\n/trust — raspunde cu această comanda unui mesaj trimis de un user pe care doresti să nu îl verifice bot-ul\n/ban — same as trust, but the opposite\n/strict — utilizează atunci când dorești sa nu primești nici un mesaj din partea userilor noi, ci doar soluții captcha până când aceștia trec de captcha\n/customCaptchaMessage — setează mesaj captcha custom\n/deleteGreetingTime — setează când se ștearge salutul lui Shieldy în secunde, precum `/deleteGreetingTime 100`. resetează setând valoarea 0\n/banUsers — alege între a bana sau la le da kick userilor\n/deleteEntryOnKick — șterge mesajul de întâmpinare pentru userii ce nu au trecut de captcha\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n\nStill got questions? Check out the support channel — @borodutch\\_support. Shieldy code is open source and can be found [here](https://github.com/backmeupplz/shieldy). Thank you!\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.",
     ca:
       "Shieldy — és la millor solució per a combatre els usuaris que publiquen missatges brossa als grups de Telegram. Els nouvinguts hauran de resoldre una sèrie de proves abans d'un temps determinat, i si no donen una respota correcta, els expulsarà. Tant senzill com això. Assegurat't que @shieldy\\_bot té permisos d'administrador al grup i llestos! Així i tot, també pots personalitzar aquest comportament amb les següents comandes:\n\n/help — mostra aquest missatge\n/language — canvia d'idioma\n/captcha — canvia el tipus de CAPTCHA utilitzat\n/timeLimit — canvia el temps de resposta otorgat als nouvinguts\n/lock — fa que les comandes només siguin accessibles per als administradors\n/restrict — restringeix als nouvinguts a només poder enviar missatges de text durant les primeres 24 hores\n/deleteEntryMessages — esborra els missatges d'avís sobre l'entrada de nouvinguts\n/greeting — saluda als usuaris que superen el test\n/trust — fes servir aquesta comanda per a respondre al missatge d'un usuari que no vulguis comprovar\n/ban — fa el mateix que trust, però bloquejant l'usuari\n/strict — fes-lo servir quan no vulguis rebre cap missatge de nouvinguts excepte les solucions del captcha fins que el resolguin\n/customCaptchaMessage — personalitza el missatge del captcha\n/deleteGreetingTime — configura si s'ha d'eborrar el missatge de benvinguda al cap d'uns seguns (ex: `/deleteGreetingTime 100`), es restableix configurant-lo a 0\n/banUsers — permet bloquejar i/o expulsar usuaris\n/deleteEntryOnKick — suprimeix els missatges d'entrada dels usuaris que han fallat la prova\n/cas — per si utilitzes Combot Anti-Spam o no\n/underAttack — commuta el mode per expulsar automàticament tots els nouvinguts\n/noAttack — desactiva en Shieldy\n/noChannelLinks — suprimeix automàticament els missatges que enllacen amb altres canals de telegrama\n/viewConfig — veure la configuració actual den Shieldy\n/buttonText — canvia el text del botó del CAPTCHA així: `/buttonText I'm not a bot!`\n/allowInvitingBots — per si els usuaris poden convidar altres robots o no\n/greetingButtons — configura els botons per al missatge de benvinguda\n\nEncara tens dubtes? Visita el nostre canal de suport: @borodutch\\_support. En Shieldy està fet en codi obert i el pots trobar [aquí](https://github.com/backmeupplz/shieldy). Moltes gràcies!\n\nP.S.: si vols contribuir al desenvolupament d'aquest bot, per favor, fes un donatiu mitjançant el programa de patrocinadors GitHub que trobaràs [aquí](https://github.com/sponsors/backmeupplz).",
+    he:
+      "Shieldy — הפתרון הטוב ביותר בטלגרם למלחמה בספאם המעצבן. הוא מבקש ממצטרפים לבצע פעולה מוגדרת בתוך פרק זמן מוגדר, אחרת מרחיק אותם. זה קל כל כך. וודא ש-@shieldy\\_bot הוא מנהל בשיחוח שלך וזה הכל! באפשרותך להגדיר עוד יותר את ההתנהגות באמצעות הפקודות הבאות:\n\n/help - מציג את ההודעה הזאת\n/language - מחליף שפה\n/captcha - משנה את סוג המבחן בשימוש\n/timeLimit - משנה את כמות הזמן הניתנת למצטרפים\n/lock - הופך את הפקודות לנגישות רק למנהלים\n/restrict - מגביל מצטרפים להודעות טקסט ליום אחד\n/deleteEntryrMessages - מוחק הודעות אודות כניסת משתמשים\n/greeting - מברך את המשתמשים שעוברים את המבחן\n/trust - השב עם פקודה זו להודעה שנשלחה על ידי משתמש שאינך רוצה לבדוק\n/ban - כמו trust, אבל הפוך\n/strict - השתמש כאשר אינך מעוניין לקבל הודעות חדשות ממצטרפים עד שיפתרו את המבחן\n/customCaptchaMessage - הגדר הודעת מבחן מותאמת אישית\n/deleteGreetingTime - הגדר מתי למחוק את הברכה של Shieldy בשניות כמו `/deleteGreetingTime 100`, אפס על ידי הגדרה 0\n/banUsers - האם להרחיק או לנדות משתמשים\n/deleteEntryOnkick - האם למחוק הודעות כניסה למשתמשים שנכשלו במבחן\n/cas - האם להשתמש ב-Combot Anti-Spam או לא\n/underAttack - החלף את המצב כדי לבעוט אוטומטית כל מצרף\n/noAttack - מבטל את Shieldy\n/noChannelLinks - מוחק אוטומטית הודעות המקשרות לערוצי טלגרם אחרים\n/viewConfig - צפו בהגדרות הנוכחיות של Shieldy\n/buttonText -  שנה את הטקט בכפתור המבחן על ידי `/buttonText I'm not a bot!`\n/allowInvitingBots - האם משתמשים יכולים להזמין בוטים אחרים או לא\n/greetingButtons - הגדר לחצנים להודעת הברכה\n\nעדיין יש לך שאלות? בבדוק את ערוץ התמיכה - @borodutch\\_support. הקוד של Shieldy הוא פתוח ונמצא [כאן](https://github.com/backmeupplz/shieldy). תודה!\n\nבדוק גם עוד אחד מהפרויקטים שלי - [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). זו אפליקציית משימות חכמה המשתמשת בפסיכולוגיה קוגנטיבית כדי להערים על המוח שלך לסיים פרוייקטים ולהציג תוצאות. זה בחינם למשך 30 יום ללא התחייבויות, אז לכו תנסו אם אתם רוצים לשפר את היצרנות שלכם. זה עזר - זה יכול לעזור גם לך.",
   },
   language_shieldy: {
     en: 'Please, select the language.',
@@ -68,6 +70,7 @@ export const localizations = {
     ja: '言語を選択してください。',
     ro: 'Te rog, salectează limba.',
     ca: "Per favor, tria l'idioma",
+    he: 'אנא בחר שפה.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -92,6 +95,7 @@ export const localizations = {
     ja: 'はい、私は日本語が喋れます。',
     ro: 'Perfect, acum vorbesc Română.',
     ca: 'Fantàstic! ara parlo català.',
+    he: 'נהדר! אני דובר עברית כעת.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -118,6 +122,7 @@ export const localizations = {
     ja: '最初にメニューを開いた人だけが、選択することができます。',
     ro: 'Doar persoana ce a inițiat meniul poate selecta',
     ca: 'Només pot triar les opcions la persona que ha posat en marxa el menú.',
+    he: 'רק מי שפתח את התפריט יכול לבחור את האפשרויות.',
   },
   captcha: {
     en:
@@ -164,6 +169,8 @@ export const localizations = {
       'Selectează tipul de test pentru nou veniți:\n\n• Simplu — bot-ul va cere userului să trimită orice în chat\n• Buton — bot-ul va cere userului să apese un buton\n• Cifre — bot-ul va cere userului să rezolve o simplă operație aritmetică\n• Image — bot will ask to recognize characters on an image',
     ca:
       "Per favor, tria la prova que han de passar els nouvinguts:\n\n• Simple — el bot et demanarà que eviis qualsevol cosa a la conversa\n• Botó — el bot et demanarà que pitgis un botó\n• Dígits — el bot voldrà que resolguis una equació molt senzilla\n• Imatge — el bot et demanarà que reconeguies els caracters d'una imatge",
+    he:
+      'אנא בחר את סוג המבחן עבור מצטרפים:\n\n• פשוט - בוט יבקש לשלוח כל דבר שהוא בשיחוח\n• כפתור - בוט יבקש ללחוץ על כפתור\n• ספרות - בוט יבקש לפתור פעולת חשבון פשוטה\n• תמונה - בוט יבקש לזהות תווים בתמונה',
   },
   simple: {
     en: 'Simple',
@@ -188,6 +195,7 @@ export const localizations = {
     ja: '簡単',
     ro: 'Simplu',
     ca: 'Simple',
+    he: 'פשוט',
   },
   digits: {
     en: 'Digits',
@@ -212,6 +220,7 @@ export const localizations = {
     ja: '数字',
     ro: 'Cifre',
     ca: 'Dígits',
+    he: 'ספרות',
   },
   button: {
     en: 'Button',
@@ -236,6 +245,7 @@ export const localizations = {
     ja: 'ボタン',
     ro: 'Buton',
     ca: 'Botó',
+    he: 'כפתור',
   },
   image: {
     en: 'Image',
@@ -247,6 +257,7 @@ export const localizations = {
     es: 'Imagen',
     de: 'Bild',
     ca: 'Imatge',
+    he: 'תמונה',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -271,6 +282,7 @@ export const localizations = {
     ja: 'はい、このタイプのテストを使います。',
     ro: 'Perfect, o să utilizez acest tip de test.',
     ca: 'Perfecte, faré servir aquesta prova.',
+    he: 'נהדר! אני אשתמש בסוג הזה של מבחן.',
   },
   time_limit: {
     en:
@@ -313,6 +325,8 @@ export const localizations = {
       'Te rog selectează câte secunde au la dispoziție userii noi să completeze testul, înainte sa fi dați afară.',
     ca:
       'Per favor, tria quants segons he de donar als nouvinguts per a resoldre la prova abans que els expulsi.',
+    he:
+      'אנא בחר את מספר השניות שיהיו למצטרפים חדשים כדי לשלים את המבחן לפני שיעופו.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -337,6 +351,7 @@ export const localizations = {
     ja: 'はい、この時間制限を使います。',
     ro: 'Super, o să folosesc această limită de timp',
     ca: 'Molt bé doncs, faré servir aquest límit de temps',
+    he: 'יופי! אני אשתמש במגבלת הזמן הזו.',
   },
   seconds: {
     en: 'sec',
@@ -361,6 +376,7 @@ export const localizations = {
     ja: '秒',
     ro: 'sec',
     ca: 'seg',
+    he: 'שניה',
   },
   lock_true_shieldy: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -388,6 +404,7 @@ export const localizations = {
     ro: 'Super! Acum o să reacționez doar la comenzile date de către admini.',
     ca:
       "D'acord, a partir d'ara només faré cas a les ordres dels administradors.",
+    he: 'מעולה! מעכשיו אני אגיב רק לפקודות מהמנהלים.',
   },
   lock_false_shieldy: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -413,6 +430,7 @@ export const localizations = {
     ja: '素晴らしいです！これで、誰からのコマンドも受け付けます。',
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
     ca: "D'acord, a partir d'ara faré cas a les ordres de tothom.",
+    he: 'מעולה! מעכשיו אני אגיב לפקודות מכל אחד.',
   },
   strict_true: {
     en:
@@ -452,6 +470,7 @@ export const localizations = {
       'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
     ca:
       "Entesos, a partir d'ara els nouvinguts, només podràn enviar missatges per a respondre amb la solució de la prova establerta, fins que aquesta sigui resolta correctament.",
+    he: 'מעולה! מצטרפים לא ישלחו דבר עד שלא יפתרו את ההמבחן.',
   },
   strict_false: {
     en:
@@ -488,6 +507,7 @@ export const localizations = {
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
     ca:
       "Entesos, a partir d'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.",
+    he: 'מעולה! מצטרפים יוכלו לשלוח הודעות לפני שענו על המבחן.',
   },
   simple_warning: {
     en:
@@ -530,6 +550,7 @@ export const localizations = {
       ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
     ca:
       ", per favor, envia un missatge qualsevol, dins aquest grup, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
+    he: ', אנא שלח הודעה כלשהי לקבוצה בטווח הזמן הנתון, אחר תורחק. תודה!',
   },
   digits_warning: {
     en:
@@ -572,6 +593,8 @@ export const localizations = {
       ', te rog, trimite rezultatul operației aritmetice în timpul specificat, altfel o sa fii dat afară din grup în mod automat. Mulțumesc!',
     ca:
       ", per favor, envia dins aquest grup, la solució de l'operaió aritmètica proposada, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
+    he:
+      ', נא לפתור את פעולת החשבון הפשוטה במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
   },
   button_warning: {
     en:
@@ -615,6 +638,8 @@ export const localizations = {
       ', te rog, apasă butonul de mai jos în timpul spefificat, altfel o să fii dat afară din grup în mod automat. Mulțumesc!',
     ca:
       ", per favor, pitja el botó d'aquest missatge abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
+    he:
+      ', אנא ללחוץ על הכפתור במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
   },
   image_warning: {
     en:
@@ -635,6 +660,8 @@ export const localizations = {
       ", per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     de:
       ', bitte sende die angezeigten Zeichen innerhalb der angegebenen Zeit an diese Gruppe, sonst wirst du gesperrt. Vielen Dank!',
+    he:
+      ', אנא לשלוח את התווים המוצגים במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -659,6 +686,7 @@ export const localizations = {
     ja: '私はbotではありません。',
     ro: 'Nu sunt un bot',
     ca: 'No soc un robot',
+    he: 'אני לא בוט',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -686,6 +714,7 @@ export const localizations = {
     ro: 'Doar candidații ce nu sunt boți pot apăsa acest buton.',
     ca:
       'Només allò que no és un robot, és el candidat ideal per a pitjar el botó.',
+    he: 'רק מועמדים שאינם בוטים יכולים ללחוץ על הכפתור הזה.',
   },
   restrict_true: {
     en:
@@ -724,6 +753,7 @@ export const localizations = {
       'Perfect! Acum toți nou veniții vor putea trimite orice fel de mesaje text către acest chat. ',
     ca:
       "Entesos, a partir d'ara, tots els nouvinguts, només podran enviar missatges de text en aquest grup.",
+    he: 'מעולה! כעת כל המצטרפים יוכלו לשלוח רק הודעות טקסט בשיחוח הזה.',
   },
   restrict_false: {
     en:
@@ -761,6 +791,7 @@ export const localizations = {
       'Perfect! Acum toți nou veniții vor putea trimite orice fel conținut către acest chat.',
     ca:
       "Entesos, a partir d'ara, tots els nouvinguts podran enviar qualsevol tipus de missatge en aquest grup.",
+    he: 'מעולה! כעת כל המצטרפים יוכלו לשלוח הודעות עם כל תוכן שהוא בשיחוח הזה.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
@@ -785,6 +816,7 @@ export const localizations = {
     ro: 'Perfect! Acum mesajele de întampinare vor fi șterse.',
     ca:
       "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, seran esborrats.",
+    he: 'מעולה! כעת הודעות כניסה ימחקו.',
   },
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
@@ -809,6 +841,7 @@ export const localizations = {
     ro: 'Perfect! Acum mesajele de întampinare nu vor fi șterse.',
     ca:
       "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, no seran esborrats.",
+    he: 'מעולה! כעת הודעות כניסה לא ימחקו.',
   },
   greetsUsers_true: {
     en:
@@ -853,6 +886,8 @@ export const localizations = {
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username).',
     ca:
       "D'acord, a partir d'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username).",
+    he:
+      'מעולה! כעת מצטרפים שעברו את המבחן יבורכו. אנא, השב להודעה זו עם הודעת הברכה שברצונך להשתמש.',
   },
   greetsUsers_true_message: {
     en:
@@ -899,6 +934,8 @@ export const localizations = {
       'Super! Acum nou veniții ce au trecut testul vor fi salutați. Te rog să răspunzi la acest mesaj cu textul salutului pe care vrei sa îl utilizezi (poți folosi $title si $username). Mesajul curent de salut este următorul.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que hagin passat la prova rebran un missatge de benvinguda. Per favor, respon a aquest missatge amb el texte que vulguis fer servir per a una salutació personalitzada (pots fer servir $title, $fullname y $username). Actualment tens establert el següent missatge de benvinguda:",
+    he:
+      'מעולה! כעת מצטרפים שעברו את המבחן יבורכו. אנא, השב להודעה זו עם הודעת הברכה שברצונך להשתמש. להלן הודעת הברכה.',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -928,6 +965,7 @@ export const localizations = {
     ro: 'Super! Acum nou veniții ce au trecut testul vor fi salutați.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que hagin passat la prova no rebran cap missatge de benvinguda.",
+    he: 'מעולה! כעת מצטרפים שעברו את המבחן לא יבורכו.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -950,6 +988,7 @@ export const localizations = {
     ja: '承認されました！',
     ro: 'Acceptat!',
     ca: 'Acceptat!',
+    he: 'קיבלתי!',
   },
   captchaMessage_true: {
     en:
@@ -978,6 +1017,8 @@ export const localizations = {
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds).',
     ca:
       "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds).",
+    he:
+      'מעולה! מצטרפים יקבלו הודעה מותאמת אישית המסבירה על המבחן. אנא, השב להודעה זו עם ההודעה לשימוש (אפשר להשתמש בתבניות $title, $username, $equation, $fullname and $seconds).',
   },
   captchaMessage_true_message: {
     en:
@@ -1006,6 +1047,8 @@ export const localizations = {
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds). Mesajul curent de salut este următorul.',
     ca:
       "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds). Actualment tens establert el següent missatge explicatiu:",
+    he:
+      'מעולה! מצטרפים יקבלו הודעה מותאמת אישית המסבירה על המבחן. אנא, השב להודעה זו עם ההודעה לשימוש (אפשר להשתמש בתבניות $title, $username, $equation, $fullname and $seconds). להלן הודעה הברכה הנוכחית.',
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
@@ -1026,6 +1069,7 @@ export const localizations = {
     ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
     ca:
       "Molt bé, a partir d'ara els nouvinguts rebran el missatge per defecte, que els explicarà la prova que han de superar.",
+    he: 'מעולה! מעכשיו מצטרפים יראו את הודעת ברירת המחדל של המבחן.',
   },
   trust_success: {
     en: 'Accepted!',
@@ -1048,6 +1092,7 @@ export const localizations = {
     ja: '承認されました！',
     ro: 'Acceptat!',
     ca: 'Acceptat!',
+    he: 'קיבלתי!',
   },
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1067,6 +1112,7 @@ export const localizations = {
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que no superin la prova quedaran bloquejats.",
+    he: 'מעולה! משתמשים ינודו אם הם לא יעברו את המבחן.',
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1086,6 +1132,7 @@ export const localizations = {
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que no superin la prova seran explusats.",
+    he: 'מעולה! משתמשים יורחקו אם הם לא יעברו את המבחן.',
   },
   deleteEntryOnKick_true: {
     en:
@@ -1111,6 +1158,7 @@ export const localizations = {
       'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
       "Entesos, a partir d'ara en Shieldy esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
+    he: 'מעולה! Shieldy ימחק הודעות כניסה של משתמשים שנכשלו במבחן.',
   },
   deleteEntryOnKick_false: {
     en:
@@ -1136,6 +1184,7 @@ export const localizations = {
       'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
       "Entesos, a partir d'ara en Shieldy no esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
+    he: 'מעולה! Shieldy לא ימחק הודעות כניסה של מתמשים שנכשלנו במבחן.',
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -1148,6 +1197,7 @@ export const localizations = {
     sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
     ca:
       "Molt bé, a partir d'ara en Shieldy ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
+    he: 'מעולה! Shieldy מעכשיו ישתמש ב-Combot Anti-Spam.',
   },
   cas_false: {
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
@@ -1160,6 +1210,7 @@ export const localizations = {
     sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
     ca:
       "Molt bé, a partir d'ara en Shieldy no ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
+    he: 'מעולה! Shieldy מעכשיו לא ישתמש ב-Combot Anti-Spam.',
   },
   underAttack_true: {
     en:
@@ -1174,6 +1225,7 @@ export const localizations = {
       '¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy expulsarà a tothom que vulgui entrar en aquest xat. Procura desactivar aquest mode quan l'atac s'hagi esveït; per això fes servir la comanda /underAttack.",
+    he: 'מעולה! Shieldy מעכשיו ירחיק את כל מי שיכנס לשיחוח. לא לשכוח לבטל את המצב כשההתקפה נגמרת בעזרת /underAttack.',
   },
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
@@ -1185,6 +1237,7 @@ export const localizations = {
       '¡Entendido! Ahora Shieldy ya no continuará expulsando a nadie que entre en este chat.',
     ca:
       "Molt bé, a partir d'ara en Shieldy ja no continuarà expulsant a ningú que vulgui entrar en aquest xat",
+    he: 'מעולה! Shieldy לא ירחיק את כל מי שנכנס לשיחוח.',
   },
   noAttack_true: {
     en:
@@ -1197,6 +1250,7 @@ export const localizations = {
       '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
+    he: 'מעולה! Shieldy מכובה כעת. אל תשכחו לבטל את הפעולה בעזרת /noAttack.'
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
@@ -1204,6 +1258,7 @@ export const localizations = {
     br: 'Boa! Shieldy está ativado agora.',
     es: '¡Entendido! Ahora Shieldy está activo.',
     ca: "Molt bé, a partir d'ara en Shieldy està actiu i vigilant aquest xat.",
+    he: 'מעולה! Shieldy דלוק כעת.',
   },
   noChannelLinks_true: {
     en:
@@ -1216,6 +1271,7 @@ export const localizations = {
       '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
     ca:
       "D'acord, a partir d'ara en Shieldy esborrarà tots el missatges que contenguin enllaços a altres canals de Telegram.",
+    he: 'מעולה! מעכשיו Shieldy ימחק הודעות עם קישור לערוץ טלגרם.',
   },
   noChannelLinks_false: {
     en:
@@ -1228,6 +1284,7 @@ export const localizations = {
       '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
     ca:
       "D'acord, a partir d'ara en Shieldy ja no esborrarà cap missatge que contengui enllaços a altres canals de Telegram.",
+    he: 'מעולה! Shieldy לא ימחק הודעות עם קישור לערוצים בטלגרם.',
   },
   viewConfig: {
     en: 'Current config:',
@@ -1235,6 +1292,7 @@ export const localizations = {
     br: 'Configuração atual:',
     es: 'Esta es la configuración actual:',
     ca: 'Aquesta és la configuració actual:',
+    he: 'הגדרות נוכחיות:',
   },
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
@@ -1243,6 +1301,7 @@ export const localizations = {
     es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris poden convidar robots a la conversa.",
+    he: 'מעולה! משתמשים יכולים להזמין בוטים עכשיו.',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
@@ -1251,6 +1310,7 @@ export const localizations = {
     es: '¡Muy bién! Ahora los usuarios no podrán invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris ja no poden convidar robots a la conversa.",
+    he: 'מעולה! משתמשים לא יוכלו להזמין בוטים עכשיו.',
   },
   greetingButtons: {
     en:
@@ -1263,6 +1323,8 @@ export const localizations = {
       'Responde a este mensaje (si, si, responde!, no escribas un mensaje a parte) con hasta 10 enlaces, con el formato que ves más abajo, para configurar los botones de bienvenida. Responde cualquier otra cosa para eliminar todos los botones.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBotones configurados actualmente:',
     ca:
       "Respon a aquest missatge (si, ha de ser una resposta, no em serveix de res que m'escriguis un missatge a part), amb un llistat de fins a 10 enllaços, de l'estil que veus més abaix, per a configurar els botons de benvinguda. Respon qualsevol altra cosa per a suprimir tots els botons de cop.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nAquests són els botons que tens configurats actualment:",
+    he:
+      'השב להודעה הזאת (ואני מתכוון לתגובה(!), לא סתם לשלוח הודעה נפרדת) עם עד 10 קישורים בפורמט למטה כדי להגדיר כפתורי ברכה. השב כל דבר אחר כדי להסיר את כל הכפתורים.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nכפתורים נוכחיים:'
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
@@ -1270,5 +1332,6 @@ export const localizations = {
     br: 'Sem botões',
     es: 'No hay botones',
     ca: 'No hi ha botons',
+    he: 'אין כפתורים',
   },
 }
