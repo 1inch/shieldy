@@ -11,7 +11,7 @@ export const localizations = {
     uk:
       'Shieldy — це найкраще рішення в Телеграмі для боротьби з надокучливими спамерами. Він просить усіх новачків зробити певну дію протягом вказаного часу і банить їх у разі незгоди. Так, це настільки просто! Переконайтеся, що @shieldy\\_bot — адміністратор у Вашій групі і усе вже готово! Ви можете продовжити налаштування бота, використавши наступні команди:\n\n/help — показує це повідомлення\n/language — змінює мову\n/captcha — змінює тип капчі\n/timeLimit — змінює кількість часу, що дається новачкам\n/lock — робить команди доступними тільки адміністраторам\n/restrict — забороняє новачкам надсилати будь-що, крім текстових повідомлень в перші 24 години\n/deleteEntryMessages — видаляти повідомлення про вхід користувачів у чат\n/greeting — вітає користувачів, які пройшли тест\n/trust — надішліть у відповідь на повідомлення користувача, якого не треба перевіряти\n/ban — те саме що й trust, але навпаки\n/strict — використовуйте, якщо не хочете отримувати жодних повідомлень від новачків, поки вони не вирішать капчу\n/customCaptchaMessage — встановити власне повідомлення капчі\n/deleteGreetingTime — встановлює час, коли потрібно видаляти вітання від бота, наприклад `/deleteGreetingTime 100`, встановіть у 0 щоб скинути\n/banUsers — банити користувачів чи одразу вилучати\n/deleteEntryOnKick — чи видаляти повідомлення про вхід користувачів, що не вирішили капчу\n/cas — використовувати Combot Anti-Spam чи ні\n/underAttack — спеціальний режим коли всі новачки одразу вилучаються з чату\n/noAttack — відключити Shieldy\n/noChannelLinks — автоматично видаляти повідомлення з посиланнями на телеграм-канали\n/viewConfig — подивитися поточні настройки\n/buttonText — змінити текст кнопки капчи в форматі `/buttonText Я не бот!`\n/allowInvitingBots — чи можуть користувачі додавати ботів\n/greetingButtons — налаштування кнопок у повідомленні з привітанням\n\nЗалишились питання? Почитайте канал підтримки — @borodutch\\_support. Код Shieldy у відкритому доступі [ось тут](https://github.com/backmeupplz/shieldy). Дякуємо!\n\nЗапрошую переглянути інші мої проекти — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Це розумний додаток для впорядкування списку справ, який за допомогою когнітивної психології спокушує ваш мозок закінчувати проекти та показувати результати. Безкоштовно протягом 30 днів без жодних зобовʼязань, дайте йому шанс, якщо ви хочете підвищити свою продуктивність. Це допомогло мені — може допомогти і вам.',
     br:
-      "Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:\n\n/help — mostra essa mensagem\n/language — muda o idioma\n/captcha — muda o tipo de captcha usado\n/timeLimit — muda o tempo dado para o novato realizar a ação\n/lock — faz dos comandos acessíveis apenas pelos ADMs\n/restrict — restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas\n/deleteEntryMessages — deleta a mensagem de entrada do usuário\n/greeting — congratula o usuário que passou no teste\n/trust — responda com este comando a uma mensagem enviada pelo usuário que você não quer verificar\n/ban — mesmo que confiança, mas o oposto\n/strict — use quando você não deseja receber nenhuma mensagem de recém-chegado, mas captcha soluções até que eles passem captcha\n/customCaptchaMessage - configure a mensagem captcha personalizada\n/deleteGreetingTime - configure quando excluir a saudação do Shield em segundos como `/deleteGreetingTime 100', redefinir definindo-o como 0\n/banUsers - se deseja banir ou expulsar usuários\n/ deleteEntryOnKick - se deseja excluir mensagens de entrada para usuários que falharam no captcha\n/cas - se deve usar o Combot Anti-Spam ou não\n/underAttack - alterna o modo para ativar automaticamente todos os recém-chegados\n/noAttack - desativa o Shieldy\n/noChannelLinks - exclui automaticamente as mensagens vinculadas a outros canais de telegrama\n/viewConfig - exibe a configuração atual do Shieldy\n/buttonText - altera o texto do botão captcha na forma de `/buttonText Eu não sou um bot! `\n/allowInvitingBots - se os usuários podem convidar outros bots ou não\n/greetingButtons - botões de configuração para mensagens de saudação\n/Ainda tem perguntas? De uma olhada no canal de suporte - @borodutch\\_support. O código do Shieldy é OpenSource e pode ser encontrado aqui[https://github.com/backmeupplz/shieldy]. Obrigado.\n\Também confira outro projeto meu - [Todorant] (https://todorant.com) ([iOS] (https://apps.apple.com/us/app/todorant/id1482078243), [Android] (https://play.google.com/store/apps/details?id=com.todorant). É um aplicativo de lista de tarefas inteligente que usa a psicologia cognitiva para induzir seu cérebro a concluir projetos e mostrar resultados. É grátis por 30 dias, sem restrições, então tente se quiser melhorar sua produtividade. Isso me ajudou - ele também pode ajudá-lo.",
+      "Shieldy — é a melhor solução em combater spammers no telegram. Ele pede para um novato realizar uma ação em determinado tempo, caso contrário o usuário é kickado. Fácil assim. Tenha certeza que @shieldy\\_bot é um ADM no seu grupo e estará tudo bem! Você ainda pode mudar o comportamento do bot com os seguintes comandos:\n\n/help — mostra essa mensagem\n/language — muda a língua\n/captcha — muda o tipo de captcha usado\n/timeLimit — muda o tempo dado para o novato realizar a ação\n/lock — faz dos comandos acessíveis apenas pelos ADMs\n/restrict — restringe o novato para mandar somente mensagens de texto nas primeiras 24 horas\n/deleteEntryMessages — deleta a mensagem de entrada do usuário\n/greeting — congratula o usuário que passou no teste\n/trust — reply with this command to a message sent by user that you don't want to check\n/ban — same as trust, but the opposite\n/strict — use when you don't want to receive any newcomers' messages but captcha solutions until they pass captcha\n/customCaptchaMessage — setup custom captcha message\n/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like `/deleteGreetingTime 100`, reset by setting it to 0\n/banUsers — whether to ban or to kick users\n/deleteEntryOnKick — whether to delete entry messages for users who failed captcha\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n\nAinda tem perguntas? De uma olhada no canal de suporte — @borodutch\\_support. O codigo do Shieldy é OpenSource e pode ser encontrado [aqui](https://github.com/backmeupplz/shieldy). Obrigado.\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.",
     tr:
       "Shieldy — Cam sıkıcı SPAM göndericilere karşı savaşmak için Telegram'daki en iyi çözümdür. Yeni gelenlerden belirli bir süre içerisinde belirli bir eylemi gerçekleştirmesini ister, aksi takdirde onları kovar. Bu çok kolaydır. Bunun için, @shieldy\\_bot botunun sohbetinizde yönetici olduğundan emin olun. İşte hepsi bu kadar! Ayrıca aşağıdaki bu komutlarla davranışları daha da ayrıntılı bir şekilde ayarlayabilirsiniz:\n\n/help — Bu iletiyi görüntüler\n/language — Dili değiştirir\n/captcha — Kullanılan CAPTCHA biçimini değiştirir\n/timeLimit — Yeni gelenlere verilen zaman süresini değiştirir\n/lock — Komutları yalnızca yöneticiler tarafından erişilebilir hale getirir\n/restrict — Yeni gelenleri ilk 24 saat yalnızca metin mesajı göndermeleri için kısıtlar\n/deleteEntryMessages — Kullanıcı girişi ile ilgili mesajları siler\n/greeting — Testi geçen kullanıcıları selamlar\n/trust — Bu komutla kullanıcı tarafından gönderilen kontrol etmek istemediğiniz bir mesajı yanıtlayın\n/ban — same as trust, but the opposite\n/strict — Yeni gelenlerin mesajlarını almak istemediğiniz zaman kullanın. Ancak CAPTCHA, testi geçene kadar çözüm sunar.\n/customCaptchaMessage — Özel CAPTCHA mesajınızı ayarlayın\n/deleteGreetingTime — Shieldy'nin selamlamasını `/deleteGreetingTime 100` gibi kaç saniye içinde sileceğini ayarlayın, 0 yaparak sıfırlayabilirsin.\n/banUsers — Kullanıcıların yasaklanacağını mı yoksa kovulacağını mı ayarlayın\n/deleteEntryOnKick — CAPTCHA'dan başarısız olan kullanıcıların girdiği mesajların silinip silinmeyeceğini ayarlayın\n/cas — Combot Anti-Spam'ın kullanılıp kullanılmayacağını ayarlayın\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n\nHala sorularınız mı var? Destek kanalını kontrol edin: @borodutch\\_support. Shieldy'in kodu açık kaynaklıdır ve [buradan](https://github.com/backmeupplz/shieldy) erişilebilir. Teşekkür ederiz!\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.",
     es:
@@ -53,7 +53,7 @@ export const localizations = {
     it: 'Prego, seleziona la lingua.',
     et: 'Palun valige keel.',
     uk: 'Будь ласка, виберіть мову.',
-    br: 'Por favor, selecione uma idioma.',
+    br: 'Por favor, selecione uma língua.',
     tr: 'Lütfen dil seçimi yapın.',
     es: 'Por favor, selecciona el idioma.',
     zh: '请选择一种语言。',
@@ -439,7 +439,7 @@ export const localizations = {
       'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
     uk:
       'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
-    br: 
+    br:
       'Boa! Agora os novatos não enviarão nada além de soluções do captcha até que passem pelo captcha.',
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
@@ -855,7 +855,7 @@ export const localizations = {
     uk:
       'Чудово! Тепер щойно новачки розвʼяжуть капчу вони отримають вітання. У відповідь на це повідомлення надішліть текст вітання, яким бажаєте зустрічати майбутніх користувачів (можете використовувати $title, $fullname та $username).',
     br:
-      'Boa! Agora os novatos que passarem no teste serão recepcionados. Por favor, responda essa mensagem com a o texto de boas-vindas que você gostaria de usar.',
+      'Boa! Agora os novatos que passarem no teste não serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen, bu iletiyi kullanmak istediğiniz tebrik metniyle yanıtlayın ($title ve $username kullanabilirsiniz).',
     es:
@@ -901,7 +901,7 @@ export const localizations = {
     uk:
       'Чудово! Тепер щойно новачки розвʼяжуть капчу вони отримають вітання. У відповідь на це повідомлення надішліть текст вітання, яким бажаєте зустрічати майбутніх користувачів (можете використовувати $title, $fullname та $username). Поточне вітання наведено нижче.',
     br:
-      'Boa! Agora os novatos que passarem no teste serão recepcionados. Por favor, responda essa mensagem com o texto de boas-vindas que você gostaria de usar. O texto atual é:',
+      'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com o texto de congratulações que você gostaria de usar. O texto atual é:',
     tr:
       'Harika! Artık testi geçen yeni üyeler karşılanacak. Lütfen bu mesajı, kullanmak istediğiniz tebrik metni ile yanıtlayın ($title ve $username kullanabilirsiniz). Geçerli tebrik mesajı izlenir.',
     es:
@@ -943,7 +943,7 @@ export const localizations = {
       'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
     uk:
       'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
-    br: 'Boa! Agora os novatos que passarem no teste não serão recepcionados',
+    br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
     es:
       '¡Genial! Ahora los recién llegados que pasen el test no serán saludados.',
@@ -1141,7 +1141,7 @@ export const localizations = {
       'Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
     uk:
       'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
-    br: 
+    br:
       'Boa! Shieldy removerá mensagens de entrada dos usuários que erraram o captcha.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldıracak.',
@@ -1219,13 +1219,14 @@ export const localizations = {
       'Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.',
     uk:
       'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
-    br: 
+    br:
       'Boa! Shieldy vai kickar todos que entram neste bate-papo. Não se esqueça de desligar este modo quando o ataque acabar com /underAttack.',
     es:
       '¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy expulsarà a tothom que vulgui entrar en aquest xat. Procura desactivar aquest mode quan l'atac s'hagi esveït; per això fes servir la comanda /underAttack.",
-    he: 'מעולה! Shieldy מעכשיו ירחיק את כל מי שיכנס לשיחוח. לא לשכוח לבטל את המצב כשההתקפה נגמרת בעזרת /underAttack.',
+    he:
+      'מעולה! Shieldy מעכשיו ירחיק את כל מי שיכנס לשיחוח. לא לשכוח לבטל את המצב כשההתקפה נגמרת בעזרת /underAttack.',
   },
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
@@ -1244,13 +1245,13 @@ export const localizations = {
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
     ru:
       'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
-    br: 
+    br:
       'Boa! Shieldy está desativado agora. Não se esqueça de desativar esse modo com /noAttack.',
     es:
       '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
-    he: 'מעולה! Shieldy מכובה כעת. אל תשכחו לבטל את הפעולה בעזרת /noAttack.'
+    he: 'מעולה! Shieldy מכובה כעת. אל תשכחו לבטל את הפעולה בעזרת /noAttack.',
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
@@ -1278,7 +1279,7 @@ export const localizations = {
       'Great! Shieldy will not delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
-    br: 
+    br:
       'Boa! O Shieldy não excluirá as mensagens vinculadas aos canais do telegram.',
     es:
       '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
@@ -1324,7 +1325,7 @@ export const localizations = {
     ca:
       "Respon a aquest missatge (si, ha de ser una resposta, no em serveix de res que m'escriguis un missatge a part), amb un llistat de fins a 10 enllaços, de l'estil que veus més abaix, per a configurar els botons de benvinguda. Respon qualsevol altra cosa per a suprimir tots els botons de cop.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nAquests són els botons que tens configurats actualment:",
     he:
-      'השב להודעה הזאת (ואני מתכוון לתגובה(!), לא סתם לשלוח הודעה נפרדת) עם עד 10 קישורים בפורמט למטה כדי להגדיר כפתורי ברכה. השב כל דבר אחר כדי להסיר את כל הכפתורים.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nכפתורים נוכחיים:'
+      'השב להודעה הזאת (ואני מתכוון לתגובה(!), לא סתם לשלוח הודעה נפרדת) עם עד 10 קישורים בפורמט למטה כדי להגדיר כפתורי ברכה. השב כל דבר אחר כדי להסיר את כל הכפתורים.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nכפתורים נוכחיים:',
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
