@@ -1067,7 +1067,7 @@ export const localizations = {
     es:
       '¡Genial! Ahora los recién llegados recibirán el mensaje predeteminado de la explicación del CAPTCHA que tienen que superar.',
     zh: '很棒！现在新人将会看到默认的验证码消息',
-    no: 'Supert! Nå vil nykommere se den vanlige captcha-meldingen';
+    no: 'Supert! Nå vil nykommere se den vanlige captcha-meldingen',
     de: 'Großartig! Jetzt erhalten neue User die standard Captcha Nachricht',
     sk:
       'Skvelé! Odteraz nováčikovia budú vidieť predvolenú správu testu captcha',
