@@ -252,11 +252,11 @@ export const localizations = {
     ru: 'Картинкой',
     it: 'Immagine',
     uk: 'Зображення',
-    br: 'Imagem',
     tr: 'Resim',
     es: 'Imagen',
     de: 'Bild',
     ca: 'Imatge',
+    br: 'Imagem',
     he: 'תמונה',
   },
   captcha_selected: {
@@ -439,8 +439,6 @@ export const localizations = {
       'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
     uk:
       'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
-    br:
-      'Boa! Agora os novatos não enviarão nada além de soluções do captcha até que passem pelo captcha.',
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
     es:
@@ -470,6 +468,8 @@ export const localizations = {
       'Perfect! Acum nou veniții vor putea trimite doar soluții captcha până când trec de testul captcha.',
     ca:
       "Entesos, a partir d'ara els nouvinguts, només podràn enviar missatges per a respondre amb la solució de la prova establerta, fins que aquesta sigui resolta correctament.",
+    br:
+      'Boa! Agora os novatos não enviarão nada além de soluções do captcha até que passem pelo captcha.',
     he: 'מעולה! מצטרפים לא ישלחו דבר עד שלא יפתרו את ההמבחן.',
   },
   strict_false: {
@@ -478,8 +478,6 @@ export const localizations = {
     ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
     uk:
       'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
-    br:
-      'Boa! Agora os novatos poderão enviar texto antes de passar pelo captcha.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
     es:
@@ -507,6 +505,8 @@ export const localizations = {
       'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
     ca:
       "Entesos, a partir d'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.",
+    br:
+      'Boa! Agora os novatos poderão enviar texto antes de passar pelo captcha.',
     he: 'מעולה! מצטרפים יוכלו לשלוח הודעות לפני שענו על המבחן.',
   },
   simple_warning: {
@@ -650,8 +650,6 @@ export const localizations = {
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
       ', будь ласка, надішліть зазначені символи у цей чат, поки не спливе вказаний час, або ви будете вилучені з чату. Дякуємо!',
-    br:
-      ', por favor, envie os caracteres exibidos dentro do tempo especificado para este grupo, caso contrário, você será kickado. Obrigado!',
     tr:
       ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
@@ -660,6 +658,8 @@ export const localizations = {
       ", per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     de:
       ', bitte sende die angezeigten Zeichen innerhalb der angegebenen Zeit an diese Gruppe, sonst wirst du gesperrt. Vielen Dank!',
+    br:
+      ', por favor, envie os caracteres exibidos dentro do tempo especificado para este grupo, caso contrário, você será kickado. Obrigado!',
     he:
       ', אנא לשלוח את התווים המוצגים במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
   },
@@ -997,8 +997,6 @@ export const localizations = {
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds).',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds).',
-    br:
-      'Boa! Agora os novatos receberão uma mensagem personalizada explicando o captcha. Por favor, responda a esta mensagem com o texto do captcha que você gostaria de usar (você pode usar $title, $username, $equation, $fullname e $seconds).',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz).',
     es:
@@ -1017,6 +1015,8 @@ export const localizations = {
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds).',
     ca:
       "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds).",
+    br:
+      'Boa! Agora os novatos receberão uma mensagem personalizada explicando o captcha. Por favor, responda a esta mensagem com o texto do captcha que você gostaria de usar (você pode usar $title, $username, $equation, $fullname e $seconds).',
     he:
       'מעולה! מצטרפים יקבלו הודעה מותאמת אישית המסבירה על המבחן. אנא, השב להודעה זו עם ההודעה לשימוש (אפשר להשתמש בתבניות $title, $username, $equation, $fullname and $seconds).',
   },
@@ -1027,8 +1027,6 @@ export const localizations = {
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds). Текущее сообщение с приветствием ниже.',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds). Поточне пояснення наведено нижче.',
-    br:
-      'Boa! Agora os novatos receberão uma mensagem personalizada explicando o captcha. Por favor, responda a esta mensagem com o texto do captcha que você gostaria de usar (você pode usar $title, $username, $equation, $fullname e $seconds).',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini açıklayan özel mesaj alacaklar. Lütfen bu iletiyi kullanmak istediğiniz CAPTCHA metni ile yanıtlayın ($title, $username, $equation, $fullname ve $seconds kullanabilirsiniz). Geçerli karşılama mesajı izlenir.',
     es:
@@ -1047,6 +1045,8 @@ export const localizations = {
       'Super! Acum nou veniții vor primi un mesaj personalizat ce le explică captcha. Te rog răspunde la acest mesaj cu text-ul testului captcha pe care vrei sa îl folosești (poți utiliza $title, $username, $equation, $fullname și $seconds). Mesajul curent de salut este următorul.',
     ca:
       "D'acord, a partir d'ara els nouvinguts rebran un missatge que els explicarà la prova que han de superar. Per favor, respon a aquest missatge amb el texte personalitzat que vulguis fer servir per a l'explicació de la prova (pots fer servir $title, $username, $equation, $fullname i $seconds). Actualment tens establert el següent missatge explicatiu:",
+    br:
+      'Boa! Agora os novatos receberão uma mensagem personalizada explicando o captcha. Por favor, responda a esta mensagem com o texto do captcha que você gostaria de usar (você pode usar $title, $username, $equation, $fullname e $seconds).',
     he:
       'מעולה! מצטרפים יקבלו הודעה מותאמת אישית המסבירה על המבחן. אנא, השב להודעה זו עם ההודעה לשימוש (אפשר להשתמש בתבניות $title, $username, $equation, $fullname and $seconds). להלן הודעה הברכה הנוכחית.',
   },
@@ -1055,7 +1055,6 @@ export const localizations = {
     ru:
       'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
     uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
-    br: 'Boa! Agora os novatos verão a mensagem padrão do captcha',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
     es:
       '¡Genial! Ahora los recién llegados recibirán el mensaje predeteminado de la explicación del CAPTCHA que tienen que superar.',
@@ -1069,6 +1068,7 @@ export const localizations = {
     ro: 'Minunat! Acum nou veniții vor vedea mesajul captcha implicit',
     ca:
       "Molt bé, a partir d'ara els nouvinguts rebran el missatge per defecte, que els explicarà la prova que han de superar.",
+    br: 'Boa! Agora os novatos verão a mensagem padrão do captcha',
     he: 'מעולה! מעכשיו מצטרפים יראו את הודעת ברירת המחדל של המבחן.',
   },
   trust_success: {
@@ -1099,7 +1099,6 @@ export const localizations = {
     ru: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
     uk:
       'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
-    br: 'Boa! Os usuários serão banidos se não passarem pelo captcha.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
     es:
       'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
@@ -1112,13 +1111,13 @@ export const localizations = {
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que no superin la prova quedaran bloquejats.",
+    br: 'Boa! Os usuários serão banidos se não passarem pelo captcha.',
     he: 'מעולה! משתמשים ינודו אם הם לא יעברו את המבחן.',
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
     uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
-    br: 'Boa! Os usuários serão kickados se não passarem pelo captcha.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
     es:
       'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
@@ -1132,6 +1131,7 @@ export const localizations = {
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
     ca:
       "D'acord, a partir d'ara els nouvinguts que no superin la prova seran explusats.",
+    br: 'Boa! Os usuários serão kickados se não passarem pelo captcha.',
     he: 'מעולה! משתמשים יורחקו אם הם לא יעברו את המבחן.',
   },
   deleteEntryOnKick_true: {
@@ -1141,8 +1141,6 @@ export const localizations = {
       'Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
     uk:
       'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
-    br:
-      'Boa! Shieldy removerá mensagens de entrada dos usuários que erraram o captcha.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldıracak.',
     es:
@@ -1158,6 +1156,8 @@ export const localizations = {
       'Minunat! Shieldy va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
       "Entesos, a partir d'ara en Shieldy esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
+    br:
+      'Boa! Shieldy removerá mensagens de entrada dos usuários que erraram o captcha.',
     he: 'מעולה! Shieldy ימחק הודעות כניסה של משתמשים שנכשלו במבחן.',
   },
   deleteEntryOnKick_false: {
@@ -1167,8 +1167,6 @@ export const localizations = {
       'Великолепно! Щилди не будет удалять сообщения о входе пользователей, проваливших капчу.',
     uk:
       'Чудово. Шилді не буде видаляти вхідні повідомлення від користувачів, які провалили капчу.',
-    br:
-      'Boa! Shieldy não removerá mensagens de entrada dos usuários que erraram o captcha.',
     tr:
       'Harika! Shieldy, CAPTCHA testinden başarısız olan kullanıcıların giriş mesajlarını kaldırmayacak.',
     es:
@@ -1184,32 +1182,34 @@ export const localizations = {
       'Minunat! Shieldy nu va șterge fiecare mesaj al utilizatorilor ce nu au trecut testul captcha.',
     ca:
       "Entesos, a partir d'ara en Shieldy no esborrarà tots els missatges dels nouvinguts que no hagin superat la prova.",
+    br:
+      'Boa! Shieldy não removerá mensagens de entrada dos usuários que erraram o captcha.',
     he: 'מעולה! Shieldy לא ימחק הודעות כניסה של מתמשים שנכשלנו במבחן.',
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
-    br: 'Boa! Shieldy agora usará o Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
     es:
       '¡Entendido! Ahora Shieldy utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz bude používať Combot Anti-Spam.',
     ca:
       "Molt bé, a partir d'ara en Shieldy ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
+    br: 'Boa! Shieldy agora usará o Combot Anti-Spam.',
     he: 'מעולה! Shieldy מעכשיו ישתמש ב-Combot Anti-Spam.',
   },
   cas_false: {
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
     uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
-    br: 'Boa! Shieldy não usará o Combot Anti-Spam agora.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
     es:
       '¡Entendido! Ahora Shieldy no utilizará Combot Anti-Spam para combatir el spam.',
     sk: 'Skvelé! Shieldy odteraz nebude používať Combot Anti-Spam.',
     ca:
       "Molt bé, a partir d'ara en Shieldy no ferà servir Combot Anti-Spam per a combatre els missatges brossa.",
+    br: 'Boa! Shieldy não usará o Combot Anti-Spam agora.',
     he: 'מעולה! Shieldy מעכשיו לא ישתמש ב-Combot Anti-Spam.',
   },
   underAttack_true: {
@@ -1219,12 +1219,12 @@ export const localizations = {
       'Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.',
     uk:
       'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
-    br:
-      'Boa! Shieldy vai kickar todos que entram neste bate-papo. Não se esqueça de desligar este modo quando o ataque acabar com /underAttack.',
     es:
       '¡Entendido! Ahora Shieldy expulsará a todo aquel que entre en este chat. No olvides desactivar este modo cuando el ataque haya cesado, para ello utiliza el comando /underAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy expulsarà a tothom que vulgui entrar en aquest xat. Procura desactivar aquest mode quan l'atac s'hagi esveït; per això fes servir la comanda /underAttack.",
+    br:
+      'Boa! Shieldy vai kickar todos que entram neste bate-papo. Não se esqueça de desligar este modo quando o ataque acabar com /underAttack.',
     he:
       'מעולה! Shieldy מעכשיו ירחיק את כל מי שיכנס לשיחוח. לא לשכוח לבטל את המצב כשההתקפה נגמרת בעזרת /underAttack.',
   },
@@ -1233,11 +1233,11 @@ export const localizations = {
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
     uk:
       'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
-    br: 'Boa! Shieldy não vai kickar todos que entram neste bate-papo.',
     es:
       '¡Entendido! Ahora Shieldy ya no continuará expulsando a nadie que entre en este chat.',
     ca:
       "Molt bé, a partir d'ara en Shieldy ja no continuarà expulsant a ningú que vulgui entrar en aquest xat",
+    br: 'Boa! Shieldy não vai kickar todos que entram neste bate-papo.',
     he: 'מעולה! Shieldy לא ירחיק את כל מי שנכנס לשיחוח.',
   },
   noAttack_true: {
@@ -1245,20 +1245,20 @@ export const localizations = {
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
     ru:
       'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
-    br:
-      'Boa! Shieldy está desativado agora. Não se esqueça de desativar esse modo com /noAttack.',
     es:
       '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
     ca:
       "Molt bé, a partir d'ara en Shieldy està desactivat i ja no vigilarà aquest xat. Per desactivar aquest mode fes servir la comanda /noAttack.",
+    br:
+      'Boa! Shieldy está desativado agora. Não se esqueça de desativar esse modo com /noAttack.',
     he: 'מעולה! Shieldy מכובה כעת. אל תשכחו לבטל את הפעולה בעזרת /noAttack.',
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
     ru: 'Отлично! Щилди включен.',
-    br: 'Boa! Shieldy está ativado agora.',
     es: '¡Entendido! Ahora Shieldy está activo.',
     ca: "Molt bé, a partir d'ara en Shieldy està actiu i vigilant aquest xat.",
+    br: 'Boa! Shieldy está ativado agora.',
     he: 'מעולה! Shieldy דלוק כעת.',
   },
   noChannelLinks_true: {
@@ -1266,12 +1266,12 @@ export const localizations = {
       'Great! Shieldy will now delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь будет удалять сообщения с ссылками на Телеграм-каналы.',
-    br:
-      'Boa! Agora, o Shieldy excluirá as mensagens vinculadas aos canais do telegram.',
     es:
       '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
     ca:
       "D'acord, a partir d'ara en Shieldy esborrarà tots el missatges que contenguin enllaços a altres canals de Telegram.",
+    br:
+      'Boa! Agora, o Shieldy excluirá as mensagens vinculadas aos canais do telegram.',
     he: 'מעולה! מעכשיו Shieldy ימחק הודעות עם קישור לערוץ טלגרם.',
   },
   noChannelLinks_false: {
@@ -1279,38 +1279,38 @@ export const localizations = {
       'Great! Shieldy will not delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
-    br:
-      'Boa! O Shieldy não excluirá as mensagens vinculadas aos canais do telegram.',
     es:
       '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
     ca:
       "D'acord, a partir d'ara en Shieldy ja no esborrarà cap missatge que contengui enllaços a altres canals de Telegram.",
+    br:
+      'Boa! O Shieldy não excluirá as mensagens vinculadas aos canais do telegram.',
     he: 'מעולה! Shieldy לא ימחק הודעות עם קישור לערוצים בטלגרם.',
   },
   viewConfig: {
     en: 'Current config:',
     ru: 'Текущие настройки:',
-    br: 'Configuração atual:',
     es: 'Esta es la configuración actual:',
     ca: 'Aquesta és la configuració actual:',
+    br: 'Configuração atual:',
     he: 'הגדרות נוכחיות:',
   },
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
     ru: 'Отлично! Пользователи теперь могут приглашать ботов.',
-    br: 'Boa! Os usuários podem convidar bots agora.',
     es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris poden convidar robots a la conversa.",
+    br: 'Boa! Os usuários podem convidar bots agora.',
     he: 'מעולה! משתמשים יכולים להזמין בוטים עכשיו.',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
     ru: 'Отлично! Пользователи теперь не могут приглашать ботов.',
-    br: 'Boa! Os usuários não podem convidar bots agora.',
     es: '¡Muy bién! Ahora los usuarios no podrán invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris ja no poden convidar robots a la conversa.",
+    br: 'Boa! Os usuários não podem convidar bots agora.',
     he: 'מעולה! משתמשים לא יוכלו להזמין בוטים עכשיו.',
   },
   greetingButtons: {
@@ -1318,21 +1318,21 @@ export const localizations = {
       'Reply to this message (and I mean reply(!), not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nCurrent buttons:',
     ru:
       'Ответьте на это сообщение (и я имею ввиду ответьте(!), а не просто отправьте отдельное сообщение) с не более чем 10 ссылками в формате ниже, чтобы установить кнопки приветствию. Ответьте любым другим сообщением, чтобы удалить все кнопки.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nТекущие кнопки:',
-    br:
-      'Responda a esta mensagem (e eu quero dizer resposta(!), Não apenas envie uma mensagem separada) com até 10 links no formato abaixo para configurar os botões de saudação. Responda com qualquer outra coisa para remover todos os botões.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBotões atuais:',
     es:
       'Responde a este mensaje (si, si, responde!, no escribas un mensaje a parte) con hasta 10 enlaces, con el formato que ves más abajo, para configurar los botones de bienvenida. Responde cualquier otra cosa para eliminar todos los botones.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBotones configurados actualmente:',
     ca:
       "Respon a aquest missatge (si, ha de ser una resposta, no em serveix de res que m'escriguis un missatge a part), amb un llistat de fins a 10 enllaços, de l'estil que veus més abaix, per a configurar els botons de benvinguda. Respon qualsevol altra cosa per a suprimir tots els botons de cop.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nAquests són els botons que tens configurats actualment:",
+    br:
+      'Responda a esta mensagem (e eu quero dizer resposta(!), Não apenas envie uma mensagem separada) com até 10 links no formato abaixo para configurar os botões de saudação. Responda com qualquer outra coisa para remover todos os botões.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBotões atuais:',
     he:
       'השב להודעה הזאת (ואני מתכוון לתגובה(!), לא סתם לשלוח הודעה נפרדת) עם עד 10 קישורים בפורמט למטה כדי להגדיר כפתורי ברכה. השב כל דבר אחר כדי להסיר את כל הכפתורים.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nכפתורים נוכחיים:',
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
     ru: 'Нет кнопок',
-    br: 'Sem botões',
     es: 'No hay botones',
     ca: 'No hi ha botons',
+    br: 'Sem botões',
     he: 'אין כפתורים',
   },
 }
