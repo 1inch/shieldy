@@ -1326,7 +1326,7 @@ export const localizations = {
     en: 'Nice! Users can invite bots now.',
     ru: 'Отлично! Пользователи теперь могут приглашать ботов.',
     es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
-    no: 'Supert! Brukere kan nå invitere botter.'
+    no: 'Supert! Brukere kan nå invitere botter.',
     ca:
       "Fantàstic! A partir d'ara els usuaris poden convidar robots a la conversa.",
     br: 'Boa! Os usuários podem convidar bots agora.',
