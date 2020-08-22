@@ -11,7 +11,7 @@ async function bulkReport() {
   if (!adminChatId) {
     return
   }
-  if (tempErrorsToReport.length > 15) {
+  if (tempErrorsToReport.length > 0) {
     const reportText = tempErrorsToReport.reduce(
       (prev, cur) => `${prev}${cur}\n`,
       ''
