@@ -31,6 +31,7 @@ const buttonPresses = {} as { [index: string]: boolean }
 
 const todorantAddition =
   'Powered by <a href="https://todorant.com">Todorant</a> (<a href="https://t.me/borodutch_support/110">?</a>)'
+const todorantExceptions = [-1001007166727]
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('greetMe', checkSuperAdmin, greetUser)
@@ -464,21 +465,25 @@ async function notifyCandidate(
         .replace(/\$seconds/g, `${chat.timeGiven}`)
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
-          caption: `${textToSend}\n${todorantAddition}`,
+          caption: todorantExceptions.includes(ctx.chat.id)
+            ? textToSend
+            : `${textToSend}\n${todorantAddition}`,
           parse_mode: 'HTML',
         })
       } else {
         return ctx.telegram.sendMessage(
           chat.id,
-          `${textToSend}\n${todorantAddition}`,
+          todorantExceptions.includes(ctx.chat.id)
+            ? textToSend
+            : `${textToSend}\n${todorantAddition}`,
           extra as ExtraReplyMessage
         )
       }
     } else {
       const message = cloneDeep(captchaMessage.message)
-      message.text = `${getUsername(candidate)}\n\n${
-        message.text
-      }\n${todorantAddition}`
+      message.text = todorantExceptions.includes(ctx.chat.id)
+        ? `${getUsername(candidate)}\n\n${message.text}`
+        : `${getUsername(candidate)}\n\n${message.text}\n${todorantAddition}`
       try {
         const sentMessage = await ctx.telegram.sendCopy(
           chat.id,
@@ -499,26 +504,44 @@ async function notifyCandidate(
   } else {
     if (image) {
       return ctx.replyWithPhoto({ source: image.png } as any, {
-        caption: `<a href="tg://user?id=${candidate.id}">${getUsername(
-          candidate
-        )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-          chat,
-          'seconds'
-        )})\n${todorantAddition}`,
+        caption: todorantExceptions.includes(ctx.chat.id)
+          ? `<a href="tg://user?id=${candidate.id}">${getUsername(
+              candidate
+            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+              chat,
+              'seconds'
+            )})`
+          : `<a href="tg://user?id=${candidate.id}">${getUsername(
+              candidate
+            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+              chat,
+              'seconds'
+            )})\n${todorantAddition}`,
         parse_mode: 'HTML',
       })
     } else {
       return ctx.replyWithMarkdown(
-        `${
-          chat.captchaType === CaptchaType.DIGITS
-            ? `(${equation.question}) `
-            : ''
-        }<a href="tg://user?id=${candidate.id}">${getUsername(
-          candidate
-        )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-          chat,
-          'seconds'
-        )})\n${todorantAddition}`,
+        todorantExceptions.includes(ctx.chat.id)
+          ? `${
+              chat.captchaType === CaptchaType.DIGITS
+                ? `(${equation.question}) `
+                : ''
+            }<a href="tg://user?id=${candidate.id}">${getUsername(
+              candidate
+            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+              chat,
+              'seconds'
+            )})`
+          : `${
+              chat.captchaType === CaptchaType.DIGITS
+                ? `(${equation.question}) `
+                : ''
+            }<a href="tg://user?id=${candidate.id}">${getUsername(
+              candidate
+            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
+              chat,
+              'seconds'
+            )})\n${todorantAddition}`,
         extra
       )
     }
