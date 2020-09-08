@@ -22,6 +22,7 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     console.log(3)
     // Check permissions
     const admin = admins.find((v) => v.user.id === ctx.from.id)
+    console.log(admin)
     if (!admin.can_restrict_members) {
       return
     }
