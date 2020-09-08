@@ -5,7 +5,8 @@ import { checkLock } from '../middlewares/checkLock'
 import { report } from '../helpers/report'
 
 export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('ban', checkLock, async ctx => {
+  bot.command('ban', checkLock, async (ctx) => {
+    console.log(JSON.stringify(ctx.message, undefined, 2))
     // Check if reply
     if (!ctx.message || !ctx.message.reply_to_message) {
       return
@@ -14,11 +15,11 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     const repliedId = ctx.message.reply_to_message.from.id
     // Check if sent by admin
     const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
-    if (!admins.map(a => a.user.id).includes(ctx.from.id)) {
+    if (!admins.map((a) => a.user.id).includes(ctx.from.id)) {
       return
     }
     // Check permissions
-    const admin = admins.find(v => v.user.id === ctx.from.id)
+    const admin = admins.find((v) => v.user.id === ctx.from.id)
     if (!admin.can_restrict_members) {
       return
     }
@@ -26,11 +27,11 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     await ctx.telegram.kickChatMember(ctx.dbchat.id, repliedId)
     // Unrestrict in shieldy
     ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
-      c => c.id !== repliedId
+      (c) => c.id !== repliedId
     )
     // Remove from candidates
     const candidate = ctx.dbchat.candidates
-      .filter(c => c.id === repliedId)
+      .filter((c) => c.id === repliedId)
       .pop()
     if (candidate) {
       // Delete message
@@ -41,7 +42,7 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Remove from candidates
       ctx.dbchat.candidates = ctx.dbchat.candidates.filter(
-        c => c.id !== repliedId
+        (c) => c.id !== repliedId
       )
     }
     // Save chat
