@@ -559,7 +559,7 @@ export const localizations = {
     ru:
       ', пожалуйста, отправьте решение указанной арифметической задачи в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
     it:
-      ", prego, invia la soluzione dell'equazione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
+      ", prego, invia la soluzione dell'operazione aritmetica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
