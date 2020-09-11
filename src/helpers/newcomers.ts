@@ -30,7 +30,7 @@ const kickedIds = {} as { [index: number]: number[] }
 const buttonPresses = {} as { [index: string]: boolean }
 
 const todorantAddition =
-  'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a> (<a href="https://t.me/borodutch_support/110">?</a>)'
+  'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>'
 const todorantExceptions = [-1001007166727]
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
