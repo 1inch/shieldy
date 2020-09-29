@@ -118,6 +118,8 @@ export class Chat extends Typegoose {
   greetingButtons?: string
   @prop({ required: true, default: false })
   skipOldUsers: boolean
+  @prop({ required: true, default: false })
+  skipVerifiedUsers: boolean
 }
 
 // Get Chat model

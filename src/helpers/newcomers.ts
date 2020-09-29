@@ -1,4 +1,3 @@
-// Dependencies
 import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from './strings'
 import {
@@ -8,6 +7,8 @@ import {
   Equation,
   removeMessages,
   Chat,
+  isVerifiedUser,
+  addVerifiedUser,
 } from '../models'
 import { bot } from './bot'
 import { User, Message } from 'telegram-typings'
@@ -135,6 +136,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     // Greet user
     await greetUser(ctx)
+    await addVerifiedUser(ctx.from.id)
     return next()
   })
   // Check button
@@ -176,6 +178,7 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Greet the user
       await greetUser(ctx)
+      await addVerifiedUser(ctx.from.id)
     } finally {
       buttonPresses[ctx.callbackQuery.data] = undefined
     }
@@ -237,6 +240,16 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       // Check if an old user
       if (ctx.dbchat.skipOldUsers) {
         if (member.id > 0 && member.id < 1000000000) {
+          await greetUser(ctx, member)
+          if (ctx.dbchat.restrict) {
+            await modifyRestrictedUsers(ctx.dbchat, true, [member])
+          }
+          continue
+        }
+      }
+      // Check if a verified user
+      if (ctx.dbchat.skipVerifiedUsers) {
+        if (await isVerifiedUser(member.id)) {
           await greetUser(ctx, member)
           if (ctx.dbchat.restrict) {
             await modifyRestrictedUsers(ctx.dbchat, true, [member])

@@ -1,7 +1,5 @@
-// Config dotenv
 import * as dotenv from 'dotenv'
 dotenv.config({ path: `${__dirname}/../.env` })
-// Dependencies
 import { attachUser } from './middlewares/attachUser'
 import { bot } from './helpers/bot'
 import { setupHelp } from './commands/help'
@@ -36,6 +34,7 @@ import { setupAllowInvitingBots } from './commands/allowInvitingBots'
 import { setupAdmin } from './commands/admin'
 import { setupGreetingButtons } from './commands/greetingButtons'
 import { setupSkipOldUsers } from './commands/skipOldUsers'
+import { setupSkipVerifiedUsers } from './commands/skipVerifiedUsers'
 
 // Make Telegraph async
 bot.use(noWait)
@@ -76,6 +75,7 @@ setupAllowInvitingBots(bot)
 setupAdmin(bot)
 setupGreetingButtons(bot)
 setupSkipOldUsers(bot)
+setupSkipVerifiedUsers(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
