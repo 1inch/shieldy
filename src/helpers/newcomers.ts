@@ -136,7 +136,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     // Greet user
     await greetUser(ctx)
-    await addVerifiedUser(ctx.from.id)
+    if (
+      candidate.captchaType === CaptchaType.DIGITS ||
+      candidate.captchaType === CaptchaType.IMAGE
+    ) {
+      await addVerifiedUser(ctx.from.id)
+    }
     return next()
   })
   // Check button
@@ -178,7 +183,6 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Greet the user
       await greetUser(ctx)
-      await addVerifiedUser(ctx.from.id)
     } finally {
       buttonPresses[ctx.callbackQuery.data] = undefined
     }
