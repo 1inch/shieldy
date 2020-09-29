@@ -1,4 +1,3 @@
-// Dependencies
 import { prop, Typegoose, arrayProp } from 'typegoose'
 import { Message } from 'telegram-typings'
 
@@ -117,6 +116,8 @@ export class Chat extends Typegoose {
   allowInvitingBots: boolean
   @prop()
   greetingButtons?: string
+  @prop({ required: true, default: false })
+  skipOldUsers: boolean
 }
 
 // Get Chat model

@@ -23,7 +23,7 @@ import { modifyCandidates } from './candidates'
 import { InstanceType } from 'typegoose'
 import { modifyRestrictedUsers } from './restrictedUsers'
 import { getUsername, getName, getLink } from './getUsername'
-import { cloneDeep } from 'lodash'
+import { cloneDeep, isFunction } from 'lodash'
 import { checkSuperAdmin } from '../middlewares/checkSuperAdmin'
 
 const kickedIds = {} as { [index: number]: number[] }
@@ -234,7 +234,17 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
     const candidatesToAdd = [] as Candidate[]
     // Loop through the members
     for (const member of membersToCheck) {
-      // Delete all messages that they've sent yet
+      // Check if an old user
+      if (ctx.dbchat.skipOldUsers) {
+        if (member.id > 0 && member.id < 1000000000) {
+          await greetUser(ctx, member)
+          if (ctx.dbchat.restrict) {
+            await modifyRestrictedUsers(ctx.dbchat, true, [member])
+          }
+          continue
+        }
+      }
+      // Delete all messages that they've sent so far
       removeMessages(ctx.chat.id, member.id) // don't await here
       // Check if under attack
       if (ctx.dbchat.underAttack) {
@@ -548,7 +558,14 @@ async function notifyCandidate(
   }
 }
 
-async function greetUser(ctx: ContextMessageUpdate) {
+async function greetUser(
+  ctx: ContextMessageUpdate,
+  unsafeUser?: User | Function
+) {
+  let user: User | undefined
+  if (unsafeUser && !isFunction(unsafeUser)) {
+    user = unsafeUser as User
+  }
   try {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
       const message = cloneDeep(ctx.dbchat.greetingMessage.message)
@@ -564,8 +581,8 @@ async function greetUser(ctx: ContextMessageUpdate) {
       ) {
         const tags = {
           $title: (await ctx.getChat()).title,
-          $username: getUsername(ctx.from),
-          $fullname: getName(ctx.from),
+          $username: getUsername(user || ctx.from),
+          $fullname: getName(user || ctx.from),
         }
         for (const tag in tags) {
           while (originalText.includes(tag)) {
@@ -592,7 +609,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
                 type: 'text_link',
                 offset: tag_offset,
                 length: tag_value.length,
-                url: getLink(ctx.from),
+                url: getLink(user || ctx.from),
               })
             }
           }
@@ -601,7 +618,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
       message.text = originalText
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (needsUsername) {
-        const username = getUsername(ctx.from)
+        const username = getUsername(user || ctx.from)
         const initialLength = `${message.text}\n\n`.length
         message.text = `${message.text}\n\n${username}`
         if (!message.entities) {
@@ -611,7 +628,7 @@ async function greetUser(ctx: ContextMessageUpdate) {
           type: 'text_link',
           offset: initialLength,
           length: username.length,
-          url: getLink(ctx.from),
+          url: getLink(user || ctx.from),
         })
       }
       // Send the message
