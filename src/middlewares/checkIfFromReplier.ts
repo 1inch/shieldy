@@ -8,7 +8,7 @@ export function checkIfFromReplier(ctx: ContextMessageUpdate, next: () => any) {
     ctx.callbackQuery.message.reply_to_message
   ) {
     const message = ctx.callbackQuery.message
-    console.log(message)
+    console.log(ctx.callbackQuery)
     // Anonymous admin
     if (
       ctx.callbackQuery.from &&
