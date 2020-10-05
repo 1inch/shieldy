@@ -13,8 +13,16 @@ export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
     next()
     return
   }
+  if (
+    ctx.from &&
+    ctx.from.username &&
+    ctx.from.username === 'GroupAnonymousBot'
+  ) {
+    next()
+    return
+  }
   const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
-  if (admins.map(m => m.user.id).indexOf(ctx.from.id) > -1) {
+  if (admins.map((m) => m.user.id).indexOf(ctx.from.id) > -1) {
     next()
   } else {
     try {
