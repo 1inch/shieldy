@@ -2,6 +2,15 @@ import { ContextMessageUpdate } from 'telegraf'
 import { strings } from '../helpers/strings'
 
 export function checkIfFromReplier(ctx: ContextMessageUpdate, next: () => any) {
+  // Anonymous admin
+  if (
+    ctx.from &&
+    ctx.from.username &&
+    ctx.from.username === 'GroupAnonymousBot'
+  ) {
+    next()
+    return
+  }
   if (
     ctx.callbackQuery &&
     ctx.callbackQuery.message &&
