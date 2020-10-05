@@ -11,9 +11,6 @@ export function checkIfFromReplier(ctx: ContextMessageUpdate, next: () => any) {
     console.log(ctx.callbackQuery)
     // Anonymous admin
     if (
-      ctx.callbackQuery.from &&
-      ctx.callbackQuery.from.username &&
-      ctx.callbackQuery.from.username === 'GroupAnonymousBot' &&
       message.reply_to_message &&
       message.reply_to_message.from &&
       message.reply_to_message.from.username &&
