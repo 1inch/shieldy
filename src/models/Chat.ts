@@ -59,6 +59,8 @@ export class Candidate {
   @prop()
   entryMessageId?: number
   @prop()
+  leaveMessageId?: number
+  @prop()
   entryChatId?: number
 }
 

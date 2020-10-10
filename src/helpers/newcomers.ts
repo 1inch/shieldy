@@ -52,6 +52,13 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
         await report(err)
       }
     }
+    if (ctx.dbchat.deleteEntryOnKick) {
+      for (const candidate of ctx.dbchat.candidates) {
+        if (candidate.id === ctx.message.left_chat_member.id) {
+          candidate.leaveMessageId = ctx.message.message_id
+        }
+      }
+    }
   })
   // Check newcomers
   bot.use(async (ctx, next) => {
@@ -352,6 +359,7 @@ async function kickCandidates(
     // Try deleting their entry messages
     if (chat.deleteEntryOnKick) {
       deleteMessageProxy(candidate.entryChatId, candidate.entryMessageId)
+      deleteMessageProxy(candidate.entryChatId, candidate.leaveMessageId)
     }
     // Try deleting the captcha message
     try {
