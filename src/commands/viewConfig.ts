@@ -27,6 +27,8 @@ underAttack: <code>${ctx.dbchat.underAttack}</code>
 noAttack: <code>${ctx.dbchat.noAttack}</code>
 buttonText: <code>${ctx.dbchat.buttonText || 'Not set'}</code>
 allowInvitingBots: <code>${ctx.dbchat.allowInvitingBots}</code>
+skipOldUsers: <code>${ctx.dbchat.skipOldUsers}</code>
+skipVerifiedUsers: <code>${ctx.dbchat.skipVerifiedUsers}</code>
 greetingButtons:
 <code>${ctx.dbchat.greetingButtons || 'Not set'}</code>`,
       Extra.inReplyTo(ctx.message.message_id).HTML(true)
