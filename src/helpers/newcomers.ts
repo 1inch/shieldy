@@ -149,6 +149,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
     }
     // Greet user
     await greetUser(ctx)
+    console.log(
+      'greeted a user',
+      ctx.dbchat.captchaType,
+      ctx.dbchat.customCaptchaMessage,
+      ctx.dbchat.greetsUsers
+    )
     if (
       candidate.captchaType === CaptchaType.DIGITS ||
       candidate.captchaType === CaptchaType.IMAGE
@@ -196,6 +202,12 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Greet the user
       await greetUser(ctx)
+      console.log(
+        'greeted a user',
+        ctx.dbchat.captchaType,
+        ctx.dbchat.customCaptchaMessage,
+        ctx.dbchat.greetsUsers
+      )
     } finally {
       buttonPresses[ctx.callbackQuery.data] = undefined
     }
@@ -258,6 +270,12 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       if (ctx.dbchat.skipOldUsers) {
         if (member.id > 0 && member.id < 1000000000) {
           await greetUser(ctx, member)
+          console.log(
+            'greeted a user',
+            ctx.dbchat.captchaType,
+            ctx.dbchat.customCaptchaMessage,
+            ctx.dbchat.greetsUsers
+          )
           if (ctx.dbchat.restrict) {
             await modifyRestrictedUsers(ctx.dbchat, true, [member])
           }
@@ -268,6 +286,12 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       if (ctx.dbchat.skipVerifiedUsers) {
         if (await isVerifiedUser(member.id)) {
           await greetUser(ctx, member)
+          console.log(
+            'greeted a user',
+            ctx.dbchat.captchaType,
+            ctx.dbchat.customCaptchaMessage,
+            ctx.dbchat.greetsUsers
+          )
           if (ctx.dbchat.restrict) {
             await modifyRestrictedUsers(ctx.dbchat, true, [member])
           }
@@ -303,6 +327,12 @@ async function onNewChatMembers(ctx: ContextMessageUpdate) {
       let message
       try {
         message = await notifyCandidate(ctx, member, equation, image)
+        console.log(
+          'notified a user',
+          ctx.dbchat.captchaType,
+          ctx.dbchat.customCaptchaMessage,
+          ctx.dbchat.greetsUsers
+        )
       } catch (err) {
         await report(err)
       }
