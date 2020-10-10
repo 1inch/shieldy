@@ -35,6 +35,7 @@ import { setupAdmin } from './commands/admin'
 import { setupGreetingButtons } from './commands/greetingButtons'
 import { setupSkipOldUsers } from './commands/skipOldUsers'
 import { setupSkipVerifiedUsers } from './commands/skipVerifiedUsers'
+import { setupSetConfig } from './commands/setConfig'
 
 // Make Telegraph async
 bot.use(noWait)
@@ -76,6 +77,7 @@ setupAdmin(bot)
 setupGreetingButtons(bot)
 setupSkipOldUsers(bot)
 setupSkipVerifiedUsers(bot)
+setupSetConfig(bot)
 // Newcomers logic
 setupNewcomers(bot)
 

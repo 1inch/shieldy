@@ -1,12 +1,16 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '../helpers/strings'
 import { checkLock } from '../middlewares/checkLock'
 
 export function setupViewConfig(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('viewConfig', checkLock, async (ctx) => {
-    await ctx.replyWithMarkdown(
-      `${strings(ctx.dbchat, 'viewConfig')}
+    await sendCurrentConfig(ctx)
+  })
+}
+
+export async function sendCurrentConfig(ctx: ContextMessageUpdate) {
+  await ctx.replyWithMarkdown(
+    `${strings(ctx.dbchat, 'viewConfig')}
 
 id: <code>${ctx.dbchat.id}</code>
 language: <code>${ctx.dbchat.language}</code>
@@ -31,21 +35,20 @@ skipOldUsers: <code>${ctx.dbchat.skipOldUsers}</code>
 skipVerifiedUsers: <code>${ctx.dbchat.skipVerifiedUsers}</code>
 greetingButtons:
 <code>${ctx.dbchat.greetingButtons || 'Not set'}</code>`,
-      Extra.inReplyTo(ctx.message.message_id).HTML(true)
+    Extra.inReplyTo(ctx.message.message_id).HTML(true)
+  )
+  if (ctx.dbchat.greetingMessage) {
+    await ctx.telegram.sendCopy(
+      ctx.dbchat.id,
+      ctx.dbchat.greetingMessage.message,
+      Extra.inReplyTo(ctx.message.message_id)
     )
-    if (ctx.dbchat.greetingMessage) {
-      await ctx.telegram.sendCopy(
-        ctx.dbchat.id,
-        ctx.dbchat.greetingMessage.message,
-        Extra.inReplyTo(ctx.message.message_id)
-      )
-    }
-    if (ctx.dbchat.captchaMessage) {
-      await ctx.telegram.sendCopy(
-        ctx.dbchat.id,
-        ctx.dbchat.captchaMessage.message,
-        Extra.inReplyTo(ctx.message.message_id)
-      )
-    }
-  })
+  }
+  if (ctx.dbchat.captchaMessage) {
+    await ctx.telegram.sendCopy(
+      ctx.dbchat.id,
+      ctx.dbchat.captchaMessage.message,
+      Extra.inReplyTo(ctx.message.message_id)
+    )
+  }
 }
