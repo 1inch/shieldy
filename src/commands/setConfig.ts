@@ -3,14 +3,25 @@ import { Language, CaptchaType } from '../models/Chat'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { checkLock } from '../middlewares/checkLock'
 import { sendCurrentConfig } from './viewConfig'
+import { strings } from '../helpers/strings'
 
 export function setupSetConfig(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('setConfig', checkLock, async (ctx) => {
     try {
       const configText = ctx.message.text
-        .replace(`/setConfig@${bot.options.username} `, '')
-        .replace('/setConfig ', '')
+        .replace(`/setConfig@${bot.options.username}`, '')
+        .replace('/setConfig', '')
         .trim()
+      console.log(configText)
+      if (!configText) {
+        ctx.reply(
+          strings(ctx.dbchat, 'setConfigHelp'),
+          Extra.inReplyTo(ctx.message.message_id).HTML(
+            true
+          ) as ExtraReplyMessage
+        )
+        return
+      }
       const configMap = configText
         .split('\n')
         .map((c) => {
