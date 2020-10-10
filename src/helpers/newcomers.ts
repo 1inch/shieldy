@@ -1,4 +1,4 @@
-import Telegraf, { ContextMessageUpdate, Extra } from 'telegraf'
+import Telegraf, { ContextMessageUpdate, Extra, Markup } from 'telegraf'
 import { strings } from './strings'
 import {
   Candidate,
@@ -26,6 +26,7 @@ import { modifyRestrictedUsers } from './restrictedUsers'
 import { getUsername, getName, getLink } from './getUsername'
 import { cloneDeep, isFunction } from 'lodash'
 import { checkSuperAdmin } from '../middlewares/checkSuperAdmin'
+import { constructMessageWithEntities } from './constructMessageWithEntities'
 
 const kickedIds = {} as { [index: number]: number[] }
 const buttonPresses = {} as { [index: string]: boolean }
@@ -60,7 +61,9 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
           needsSaving = true
         }
       }
-      await ctx.dbchat.save()
+      if (needsSaving) {
+        await ctx.dbchat.save()
+      }
     }
   })
   // Check newcomers
@@ -495,33 +498,45 @@ async function notifyCandidate(
       text.includes('$seconds') ||
       text.includes('$fullname')
     ) {
-      const textToSend = text
-        .replace(/\$username/g, getUsername(candidate, true))
-        .replace(/\$fullname/g, getName(candidate, true))
-        .replace(/\$title/g, (await ctx.getChat()).title)
-        .replace(/\$equation/g, equation ? (equation.question as string) : '')
-        .replace(/\$seconds/g, `${chat.timeGiven}`)
+      const messageToSend = constructMessageWithEntities(
+        captchaMessage.message,
+        {
+          $username: getUsername(candidate, true),
+          $fullname: getName(candidate, true),
+          $title: (await ctx.getChat()).title,
+          $equation: equation ? (equation.question as string) : '',
+          $seconds: `${chat.timeGiven}`,
+        },
+        getLink(candidate)
+      )
+      if (!todorantExceptions.includes(ctx.chat.id)) {
+        messageToSend.text = `${messageToSend.text}\n${todorantAddition}`
+      }
+      const formattedText = (Markup as any).formatHTML(
+        messageToSend.text,
+        messageToSend.entities
+      )
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
-          caption: todorantExceptions.includes(ctx.chat.id)
-            ? textToSend
-            : `${textToSend}\n${todorantAddition}`,
+          caption: formattedText,
           parse_mode: 'HTML',
         })
       } else {
         return ctx.telegram.sendMessage(
           chat.id,
-          todorantExceptions.includes(ctx.chat.id)
-            ? textToSend
-            : `${textToSend}\n${todorantAddition}`,
+          formattedText,
           extra as ExtraReplyMessage
         )
       }
     } else {
       const message = cloneDeep(captchaMessage.message)
+      const formattedText = (Markup as any).formatHTML(
+        message.text,
+        message.entities
+      )
       message.text = todorantExceptions.includes(ctx.chat.id)
-        ? `${getUsername(candidate)}\n\n${message.text}`
-        : `${getUsername(candidate)}\n\n${message.text}\n${todorantAddition}`
+        ? `${getUsername(candidate)}\n\n${formattedText}`
+        : `${getUsername(candidate)}\n\n${formattedText}\n${todorantAddition}`
       try {
         const sentMessage = await ctx.telegram.sendCopy(
           chat.id,
@@ -596,54 +611,19 @@ async function greetUser(
   }
   try {
     if (ctx.dbchat.greetsUsers && ctx.dbchat.greetingMessage) {
-      const message = cloneDeep(ctx.dbchat.greetingMessage.message)
-      let originalText = message.text
-      const needsUsername =
-        !originalText.includes('$username') &&
-        !originalText.includes('$fullname')
-
-      if (
-        originalText.includes('$title') ||
-        originalText.includes('$username') ||
-        originalText.includes('$fullname')
-      ) {
-        const tags = {
+      const message = constructMessageWithEntities(
+        ctx.dbchat.greetingMessage.message,
+        {
           $title: (await ctx.getChat()).title,
           $username: getUsername(user || ctx.from),
           $fullname: getName(user || ctx.from),
-        }
-        for (const tag in tags) {
-          while (originalText.includes(tag)) {
-            const tag_value = tags[tag]
-            const tag_offset = originalText.indexOf(tag)
-
-            // Replace the tag with the value in the message
-            originalText = originalText.replace(tag, tag_value)
-
-            // Update the offset of links if it is after the replaced tag
-            if (message.entities && message.entities.length) {
-              message.entities.forEach((msgEntity) => {
-                if (msgEntity.offset > tag_offset) {
-                  msgEntity.offset =
-                    msgEntity.offset - tag.length + tag_value.length
-                }
-              })
-            }
-            if (tag === '$username' || tag === '$fullname') {
-              if (!message.entities) {
-                message.entities = []
-              }
-              message.entities.push({
-                type: 'text_link',
-                offset: tag_offset,
-                length: tag_value.length,
-                url: getLink(user || ctx.from),
-              })
-            }
-          }
-        }
-      }
-      message.text = originalText
+        },
+        getLink(user || ctx.from)
+      )
+      let originalText = ctx.dbchat.greetingMessage.message.text
+      const needsUsername =
+        !originalText.includes('$username') &&
+        !originalText.includes('$fullname')
       // Add the @username of the greeted user at the end of the message if no $username was provided
       if (needsUsername) {
         const username = getUsername(user || ctx.from)
