@@ -53,11 +53,14 @@ export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
       }
     }
     if (ctx.dbchat.deleteEntryOnKick) {
+      let needsSaving = false
       for (const candidate of ctx.dbchat.candidates) {
         if (candidate.id === ctx.message.left_chat_member.id) {
           candidate.leaveMessageId = ctx.message.message_id
+          needsSaving = true
         }
       }
+      await ctx.dbchat.save()
     }
   })
   // Check newcomers
