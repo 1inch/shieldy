@@ -532,21 +532,21 @@ async function notifyCandidate(
       const messageToSend = constructMessageWithEntities(
         captchaMessage.message,
         {
-          $username: getUsername(candidate, true),
-          $fullname: getName(candidate, true),
+          $username: getUsername(candidate),
+          $fullname: getName(candidate),
           $title: (await ctx.getChat()).title,
           $equation: equation ? (equation.question as string) : '',
           $seconds: `${chat.timeGiven}`,
         },
         getLink(candidate)
       )
-      if (!todorantExceptions.includes(ctx.chat.id)) {
-        messageToSend.text = `${messageToSend.text}\n${todorantAddition}`
-      }
-      const formattedText = (Markup as any).formatHTML(
+      let formattedText = (Markup as any).formatHTML(
         messageToSend.text,
         messageToSend.entities
       )
+      if (!todorantExceptions.includes(ctx.chat.id)) {
+        formattedText = `${formattedText}\n${todorantAddition}`
+      }
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
           caption: formattedText,
