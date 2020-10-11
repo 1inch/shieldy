@@ -504,16 +504,17 @@ async function notifyCandidate(
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   const extra =
     chat.captchaType !== CaptchaType.BUTTON
-      ? Extra.webPreview(false)
-      : Extra.webPreview(false).markup((m) =>
-          m.inlineKeyboard([
-            m.callbackButton(
-              chat.buttonText || strings(chat, 'captcha_button'),
-              `${chat.id}~${candidate.id}`
-            ),
-          ])
-        )
-  ;(extra as any).parse_mode = 'HTML'
+      ? Extra.HTML(true).webPreview(false)
+      : Extra.HTML(true)
+          .webPreview(false)
+          .markup((m) =>
+            m.inlineKeyboard([
+              m.callbackButton(
+                chat.buttonText || strings(chat, 'captcha_button'),
+                `${chat.id}~${candidate.id}`
+              ),
+            ])
+          )
   if (
     chat.customCaptchaMessage &&
     captchaMessage &&
