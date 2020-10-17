@@ -1,5 +1,3 @@
-// Dependencies
-import { bot } from '../helpers/bot'
 import { findChat } from '../models'
 import { ContextMessageUpdate } from 'telegraf'
 import { report } from '../helpers/report'

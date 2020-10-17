@@ -36,7 +36,10 @@ import { setupGreetingButtons } from './commands/greetingButtons'
 import { setupSkipOldUsers } from './commands/skipOldUsers'
 import { setupSkipVerifiedUsers } from './commands/skipVerifiedUsers'
 import { setupSetConfig } from './commands/setConfig'
+import { logTimeReceived } from './middlewares/logTimeReceived'
 
+// Track time
+bot.use(logTimeReceived)
 // Make Telegraph async
 bot.use(noWait)
 // Check time
