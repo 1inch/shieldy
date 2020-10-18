@@ -8,7 +8,6 @@ export async function modifyCandidates(
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {
-  console.log(chat._id, add, candidatesAndUsers)
   try {
     if (add) {
       await ChatModel.update(
