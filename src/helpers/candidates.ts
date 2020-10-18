@@ -13,7 +13,7 @@ export async function modifyCandidates(
     if (add) {
       await ChatModel.update(
         { _id: chat._id },
-        { $push: { candidates: { candidatesAndUsers } } }
+        { $push: { candidates: candidatesAndUsers } }
       )
     } else {
       const candidatesIds = candidatesAndUsers.map((c) => c.id)

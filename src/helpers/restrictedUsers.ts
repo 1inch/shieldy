@@ -12,7 +12,7 @@ export async function modifyRestrictedUsers(
     if (add) {
       await ChatModel.update(
         { _id: chat._id },
-        { $push: { restrictedUsers: { candidatesAndUsers } } }
+        { $push: { restrictedUsers: candidatesAndUsers } }
       )
     } else {
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
