@@ -8,6 +8,7 @@ export async function modifyCandidates(
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {
+  console.log(chat._id, add, candidatesAndUsers)
   try {
     if (add) {
       await ChatModel.update(
@@ -18,7 +19,8 @@ export async function modifyCandidates(
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
       await ChatModel.update(
         { _id: chat._id },
-        { $pullAll: { candidates: { id: { $in: candidatesIds } } } }
+        { $pull: { candidates: { id: { $in: candidatesIds } } } },
+        { multi: true }
       )
     }
   } catch (err) {
