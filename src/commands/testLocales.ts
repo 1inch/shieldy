@@ -1,10 +1,9 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
-import { Chat } from '../models'
+import { Chat } from '@models/Chat'
 
 export function setupTestLocales(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('testLocales', async ctx => {
+  bot.command('testLocales', async (ctx) => {
     if (ctx.from.id !== 76104711) {
       return
     }

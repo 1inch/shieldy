@@ -1,10 +1,10 @@
-import { bot } from '../bot'
+import { bot } from '@helpers/bot'
 import { InstanceType } from 'typegoose'
-import { Chat, Candidate } from '../../models/Chat'
-import { report } from '../report'
-import { addKickedUser } from './addKickedUser'
-import { modifyCandidates } from '../candidates'
-import { modifyRestrictedUsers } from '../restrictedUsers'
+import { Chat, Candidate } from '@models/Chat'
+import { report } from '@helpers/report'
+import { addKickedUser } from '@helpers/newcomers/addKickedUser'
+import { modifyCandidates } from '@helpers/candidates'
+import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
 export async function kickCandidates(
   chat: InstanceType<Chat>,

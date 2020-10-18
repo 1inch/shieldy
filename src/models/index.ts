@@ -5,7 +5,3 @@ mongoose.connect(process.env.MONGO, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-
-export * from './Chat'
-export * from './CappedMessage'
-export * from './VerifiedUser'

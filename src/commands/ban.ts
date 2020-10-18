@@ -1,8 +1,7 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
-import { report } from '../helpers/report'
+import { strings } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { report } from '@helpers/report'
 
 export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('ban', checkLock, async (ctx) => {

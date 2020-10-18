@@ -1,9 +1,9 @@
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
-import { Language, CaptchaType } from '../models/Chat'
+import { Language, CaptchaType } from '@models/Chat'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { checkLock } from '../middlewares/checkLock'
-import { sendCurrentConfig } from './viewConfig'
-import { strings } from '../helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { sendCurrentConfig } from '@commands/viewConfig'
+import { strings } from '@helpers/strings'
 
 export function setupSetConfig(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('setConfig', checkLock, async (ctx) => {

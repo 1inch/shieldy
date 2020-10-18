@@ -1,13 +1,12 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings, localizations } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
-import { report } from '../helpers/report'
+import { strings, localizations } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { report } from '@helpers/report'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupCaptchaMessage(bot: Telegraf<ContextMessageUpdate>) {
   // Setup command
-  bot.command('customCaptchaMessage', checkLock, async ctx => {
+  bot.command('customCaptchaMessage', checkLock, async (ctx) => {
     let chat = ctx.dbchat
     chat.customCaptchaMessage = !chat.customCaptchaMessage
     chat = await chat.save()
@@ -52,10 +51,10 @@ export function setupCaptchaMessage(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Check if reply to the correct message
       const captchaMessages = Object.keys(localizations.captchaMessage_true)
-        .map(k => localizations.captchaMessage_true[k])
+        .map((k) => localizations.captchaMessage_true[k])
         .concat(
           Object.keys(localizations.captchaMessage_true_message).map(
-            k => localizations.captchaMessage_true_message[k]
+            (k) => localizations.captchaMessage_true_message[k]
           )
         )
       if (

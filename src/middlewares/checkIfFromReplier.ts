@@ -1,5 +1,5 @@
 import { ContextMessageUpdate } from 'telegraf'
-import { strings } from '../helpers/strings'
+import { strings } from '@helpers/strings'
 
 export function checkIfFromReplier(ctx: ContextMessageUpdate, next: () => any) {
   if (

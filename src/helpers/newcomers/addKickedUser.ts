@@ -1,5 +1,5 @@
-import { kickedIds } from './kikedIds'
-import { Chat } from '../../models/Chat'
+import { kickedIds } from '@helpers/newcomers/kikedIds'
+import { Chat } from '@models/Chat'
 
 export function addKickedUser(chat: Chat, urerId: number) {
   if (!chat.deleteEntryOnKick) {

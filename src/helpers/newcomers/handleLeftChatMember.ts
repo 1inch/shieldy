@@ -1,6 +1,6 @@
-import { kickedIds } from './kikedIds'
+import { kickedIds } from '@helpers/newcomers/kikedIds'
 import { ContextMessageUpdate } from 'telegraf'
-import { report } from '../report'
+import { report } from '@helpers/report'
 
 export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
   // Delete left message if required

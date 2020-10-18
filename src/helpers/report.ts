@@ -1,6 +1,5 @@
-// Dependencies
-import { checkIfErrorDismissable } from './error'
-import { bot } from './bot'
+import { checkIfErrorDismissable } from '@helpers/error'
+import { bot } from '@helpers/bot'
 
 let errorsToReport = []
 

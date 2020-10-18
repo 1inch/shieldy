@@ -24,6 +24,7 @@
     "axios": "^0.20.0",
     "convert-svg-to-png": "^0.5.0",
     "dotenv": "^8.2.0",
+    "module-alias": "^2.2.2",
     "mongoose": "^5.10.9",
     "semaphore-async-await": "^1.5.1",
     "svg-captcha": "^1.4.0",
@@ -37,5 +38,11 @@
     "flat": "^5.0.2",
     "nodemon": "^2.0.5",
     "prettier": "^2.1.2"
+  },
+  "_moduleAliases": {
+    "@commands": "dist/commands",
+    "@helpers": "dist/helpers",
+    "@middlewares": "dist/middlewares",
+    "@models": "dist/models"
   }
 }

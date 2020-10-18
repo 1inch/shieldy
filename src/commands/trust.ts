@@ -1,11 +1,10 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
-import { report } from '../helpers/report'
+import { strings } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { report } from '@helpers/report'
 
 export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('trust', checkLock, async ctx => {
+  bot.command('trust', checkLock, async (ctx) => {
     // Check if it is a handle message
     const handle = ctx.message.text.substr(7).replace('@', '')
     let handleId: number | undefined
@@ -36,11 +35,11 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
     }
     // Unrestrict in shieldy
     ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
-      c => c.id !== repliedId
+      (c) => c.id !== repliedId
     )
     // Remove from candidates
     const candidate = ctx.dbchat.candidates
-      .filter(c => c.id === repliedId)
+      .filter((c) => c.id === repliedId)
       .pop()
     if (candidate) {
       // Delete message
@@ -51,7 +50,7 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
       }
       // Remove from candidates
       ctx.dbchat.candidates = ctx.dbchat.candidates.filter(
-        c => c.id !== repliedId
+        (c) => c.id !== repliedId
       )
     }
     // Save chat

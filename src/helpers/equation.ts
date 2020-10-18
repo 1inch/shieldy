@@ -1,4 +1,4 @@
-import { Equation } from '../models'
+import { Equation } from '@models/Chat'
 
 export function generateEquation() {
   const a = getRandomInt(10)

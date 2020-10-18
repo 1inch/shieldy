@@ -1,6 +1,6 @@
 import { ContextMessageUpdate } from 'telegraf'
-import { report } from '../helpers/report'
-import { tall } from 'tall'
+import { report } from '@helpers/report'
+import tall from 'tall'
 import { MessageEntity } from 'telegraf/typings/telegram-types'
 
 export async function checkNoChannelLinks(

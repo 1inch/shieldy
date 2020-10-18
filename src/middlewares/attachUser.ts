@@ -1,6 +1,6 @@
-import { findChat } from '../models'
+import { findChat } from '@models/Chat'
 import { ContextMessageUpdate } from 'telegraf'
-import { report } from '../helpers/report'
+import { report } from '@helpers/report'
 
 export async function attachUser(ctx: ContextMessageUpdate, next) {
   try {

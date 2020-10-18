@@ -1,11 +1,11 @@
-import { bot } from '../bot'
+import { bot } from '@helpers/bot'
 import { InstanceType } from 'typegoose'
 import { User } from 'telegraf/typings/telegram-types'
-import { Chat } from '../../models/Chat'
-import { addKickedUser } from './addKickedUser'
-import { report } from '../report'
-import { modifyCandidates } from '../candidates'
-import { modifyRestrictedUsers } from '../restrictedUsers'
+import { Chat } from '@models/Chat'
+import { addKickedUser } from '@helpers/newcomers/addKickedUser'
+import { report } from '@helpers/report'
+import { modifyCandidates } from '@helpers/candidates'
+import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
 export async function kickChatMember(chat: InstanceType<Chat>, user: User) {
   // Try kicking the member

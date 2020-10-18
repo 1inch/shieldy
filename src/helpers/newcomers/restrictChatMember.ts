@@ -1,8 +1,8 @@
-import { bot } from '../bot'
+import { bot } from '@helpers/bot'
 import { InstanceType } from 'typegoose'
 import { User } from 'telegraf/typings/telegram-types'
-import { Chat } from '../../models/Chat'
-import { report } from '../report'
+import { Chat } from '@models/Chat'
+import { report } from '@helpers/report'
 
 export async function restrictChatMember(chat: InstanceType<Chat>, user: User) {
   try {

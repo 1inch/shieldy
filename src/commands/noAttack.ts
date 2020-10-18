@@ -1,10 +1,9 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
+import { strings } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
 
 export function setupNoAttack(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('noAttack', checkLock, async ctx => {
+  bot.command('noAttack', checkLock, async (ctx) => {
     ctx.dbchat.noAttack = !ctx.dbchat.noAttack
     ctx.dbchat = await ctx.dbchat.save()
     ctx.replyWithMarkdown(

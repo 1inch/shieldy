@@ -1,5 +1,4 @@
-// Dependencies
-import { CappedMessageModel } from '../models'
+import { CappedMessageModel } from '@models/CappedMessage'
 
 export async function messageSaver(ctx, next) {
   if (

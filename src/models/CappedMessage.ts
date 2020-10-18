@@ -1,7 +1,6 @@
-// Dependencies
 import { prop, Typegoose } from 'typegoose'
 import { Message } from 'telegram-typings'
-import { bot } from '../helpers/bot'
+import { bot } from '@helpers/bot'
 
 export class CappedMessage extends Typegoose {
   @prop({ required: true, index: true })
@@ -24,7 +23,7 @@ export const CappedMessageModel = new CappedMessage().getModelForClass(
 
 export async function removeMessages(chatId: number, fromId: number) {
   const messages = await CappedMessageModel.find({ chatId, fromId })
-  messages.forEach(async message => {
+  messages.forEach(async (message) => {
     try {
       await bot.telegram.deleteMessage(chatId, message.message_id)
     } catch (err) {

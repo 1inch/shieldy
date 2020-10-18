@@ -2,9 +2,9 @@ import { Message } from 'telegram-typings'
 import { isFunction } from 'lodash'
 import { User } from 'telegraf/typings/telegram-types'
 import { ContextMessageUpdate, Extra } from 'telegraf'
-import { constructMessageWithEntities } from './constructMessageWithEntities'
-import { getLink, getName, getUsername } from '../getUsername'
-import { report } from '../report'
+import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
+import { getLink, getName, getUsername } from '@helpers/getUsername'
+import { report } from '@helpers/report'
 
 export async function greetUser(
   ctx: ContextMessageUpdate,

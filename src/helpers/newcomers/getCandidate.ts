@@ -1,5 +1,4 @@
-import { Candidate } from './../../models/Chat'
-import { Equation } from '../../models/Chat'
+import { Candidate, Equation } from '@models/Chat'
 import { User, Message } from 'telegram-typings'
 import { ContextMessageUpdate } from 'telegraf'
 

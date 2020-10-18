@@ -1,6 +1,5 @@
-// Dependencies
-import { Chat } from '../models'
-import { localizations } from './localizations'
+import { Chat } from '@models/Chat'
+import { localizations } from '@helpers/localizations'
 
 export function strings(chat: Chat, key: string) {
   return (
@@ -12,4 +11,4 @@ export function strings(chat: Chat, key: string) {
   )
 }
 
-export * from './localizations'
+export * from '@helpers/localizations'

@@ -1,6 +1,6 @@
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
+import { strings } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
 
 export function setupSkipVerifiedUsers(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('skipVerifiedUsers', checkLock, async (ctx) => {

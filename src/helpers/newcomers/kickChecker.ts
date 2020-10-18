@@ -1,7 +1,7 @@
-import { findChatsWithCandidates } from '../../models'
-import { report } from '../report'
-import { modifyRestrictedUsers } from '../restrictedUsers'
-import { kickCandidates } from './kickCandidates'
+import { findChatsWithCandidates } from '@models/Chat'
+import { report } from '@helpers/report'
+import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
+import { kickCandidates } from '@helpers/newcomers/kickCandidates'
 
 // Check if needs to ban
 setInterval(async () => {

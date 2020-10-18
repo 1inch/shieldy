@@ -1,11 +1,10 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { checkLock } from '../middlewares/checkLock'
-import { strings } from '../helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { strings } from '@helpers/strings'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupDeleteGreetingTime(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command('deleteGreetingTime', checkLock, async ctx => {
+  bot.command('deleteGreetingTime', checkLock, async (ctx) => {
     // Check if limit is set
     const limitNumber =
       +ctx.message.text.substr(19).trim() ||

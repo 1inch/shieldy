@@ -1,8 +1,7 @@
-// Dependencies
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
-import { strings, localizations } from '../helpers/strings'
-import { checkLock } from '../middlewares/checkLock'
-import { report } from '../helpers/report'
+import { strings, localizations } from '@helpers/strings'
+import { checkLock } from '@middlewares/checkLock'
+import { report } from '@helpers/report'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupGreetingButtons(bot: Telegraf<ContextMessageUpdate>) {

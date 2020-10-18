@@ -1,4 +1,4 @@
-import { Chat } from '../models'
+import { Chat } from '@models/Chat'
 import * as tt from '../../node_modules/telegraf/typings/telegram-types.d'
 import { InstanceType } from 'typegoose'
 

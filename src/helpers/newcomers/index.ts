@@ -1,13 +1,14 @@
 import Telegraf, { ContextMessageUpdate } from 'telegraf'
-import { strings } from '../strings'
-import { CaptchaType, addVerifiedUser } from '../../models'
-import { report } from '../report'
-import { checkIfGroup } from '../../middlewares/checkIfGroup'
-import { modifyCandidates } from '../candidates'
-import { checkSuperAdmin } from '../../middlewares/checkSuperAdmin'
-import { greetUser } from './greetUser'
-import { handleLeftChatMember } from './handleLeftChatMember'
-import { handleNewChatMembers } from './handleNewChatMembers'
+import { strings } from '@helpers/strings'
+import { addVerifiedUser } from '@models/VerifiedUser'
+import { CaptchaType } from '@models/Chat'
+import { report } from '@helpers/report'
+import { checkIfGroup } from '@middlewares/checkIfGroup'
+import { modifyCandidates } from '@helpers/candidates'
+import { checkSuperAdmin } from '@middlewares/checkSuperAdmin'
+import { greetUser } from '@helpers/newcomers/greetUser'
+import { handleLeftChatMember } from '@helpers/newcomers/handleLeftChatMember'
+import { handleNewChatMembers } from '@helpers/newcomers/handleNewChatMembers'
 
 const buttonPresses = {} as { [index: string]: boolean }
 
