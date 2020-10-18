@@ -27,7 +27,6 @@
     "dotenv": "^8.2.0",
     "module-alias": "^2.2.2",
     "mongoose": "^5.10.9",
-    "semaphore-async-await": "^1.5.1",
     "svg-captcha": "^1.4.0",
     "tall": "^3.1.0",
     "telegraf": "^3.37.0",

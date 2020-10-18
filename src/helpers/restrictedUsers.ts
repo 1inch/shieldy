@@ -1,34 +1,27 @@
-import { Lock } from 'semaphore-async-await'
-import { Chat, Candidate } from '@models/Chat'
+import { report } from '@helpers/report'
+import { Chat, Candidate, ChatModel } from '@models/Chat'
 import { User } from 'telegraf/typings/telegram-types'
 import { DocumentType } from '@typegoose/typegoose'
 
-// TODO: switch to transactions
 export async function modifyRestrictedUsers(
   chat: DocumentType<Chat>,
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {
-  const lock = new Lock()
-  await lock.acquire()
   try {
     if (add) {
-      const candidatesIds = chat.restrictedUsers.map((c) => c.id)
-      for (const candidate of candidatesAndUsers) {
-        if (!candidatesIds.includes(candidate.id)) {
-          chat.restrictedUsers.push(candidate as Candidate)
-        }
-      }
+      await ChatModel.update(
+        { _id: chat._id },
+        { $push: { restrictedUsers: { candidatesAndUsers } } }
+      )
     } else {
-      const ids = candidatesAndUsers.map((v) => v.id)
-      chat.restrictedUsers = chat.restrictedUsers.filter(
-        (c) => !ids.includes(c.id)
+      const candidatesIds = candidatesAndUsers.map((c) => c.id)
+      await ChatModel.update(
+        { _id: chat._id },
+        { $pullAll: { restrictedUsers: { id: candidatesIds } } }
       )
     }
-    await chat.save()
   } catch (err) {
-    console.error('modifyRestrictedUsers', err)
-  } finally {
-    lock.release()
+    report(err)
   }
 }

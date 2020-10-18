@@ -1,3 +1,4 @@
+import { ChatModel } from '@models/Chat'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 import { kickedIds } from '@helpers/newcomers/kikedIds'
 import { ContextMessageUpdate } from 'telegraf'
@@ -13,17 +14,10 @@ export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
     deleteMessageSafe(ctx)
     return
   }
-  // TODO: switch to transactions
   if (ctx.dbchat.deleteEntryOnKick) {
-    let needsSaving = false
-    for (const candidate of ctx.dbchat.candidates) {
-      if (candidate.id === ctx.message.left_chat_member.id) {
-        candidate.leaveMessageId = ctx.message.message_id
-        needsSaving = true
-      }
-    }
-    if (needsSaving) {
-      ctx.dbchat.save()
-    }
+    ChatModel.update(
+      { _id: ctx.dbchat._id, 'candidates.id': ctx.message.left_chat_member.id },
+      { $set: { 'candidates.$.leaveMessageId': ctx.message.message_id } }
+    )
   }
 }
