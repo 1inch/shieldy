@@ -39,6 +39,7 @@ import { setupSkipVerifiedUsers } from '@commands/skipVerifiedUsers'
 import { setupSetConfig } from '@commands/setConfig'
 import { logTimeReceived } from '@middlewares/logTimeReceived'
 import { report } from '@helpers/report'
+import { attachAdministrators } from '@middlewares/attachAdministrators'
 
 // Track time
 bot.use(logTimeReceived)
@@ -46,6 +47,8 @@ bot.use(logTimeReceived)
 bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
+// Add admins to context
+bot.use(attachAdministrators)
 // Check if restricted
 bot.use(checkRestrict)
 // Check if channel links are present

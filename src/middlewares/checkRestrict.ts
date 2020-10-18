@@ -26,8 +26,9 @@ export async function checkRestrict(
     return
   }
   // Check if this user is restricted
-  const restricted =
-    ctx.dbchat.restrictedUsers.map((u) => u.id).indexOf(ctx.from.id) > -1
+  const restricted = ctx.dbchat.restrictedUsers
+    .map((u) => u.id)
+    .includes(ctx.from.id)
   // If a restricted user tries to send restricted type, just delete it
   if (
     restricted &&

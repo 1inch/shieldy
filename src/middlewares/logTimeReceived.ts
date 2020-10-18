@@ -7,7 +7,7 @@ export function logTimeReceived(ctx: ContextMessageUpdate, next: Function) {
 
   if (ctx.update.message && ctx.update.message.date) {
     appendFile(
-      `${__dirname}/../updates.log`,
+      `${__dirname}/../../updates.log`,
       `\n${Math.floor(Date.now() / 1000)} — ${ctx.update.update_id} — ${
         Math.floor(Date.now() / 1000) - ctx.update.message.date
       }s`,
