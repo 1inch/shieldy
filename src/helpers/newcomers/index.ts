@@ -6,6 +6,7 @@ import { handleLeftChatMember } from '@helpers/newcomers/handleLeftChatMember'
 import { handleNewChatMembers } from '@helpers/newcomers/handleNewChatMembers'
 import { handleButtonPress } from '@helpers/newcomers/checkButton'
 import { checkPassingCaptchaWithText } from './checkPassingCaptchaWithText'
+import '@helpers/newcomers/kickChecker'
 
 export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
   // Admin command to check greetings
