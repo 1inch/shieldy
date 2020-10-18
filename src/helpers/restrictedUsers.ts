@@ -18,7 +18,7 @@ export async function modifyRestrictedUsers(
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
       await ChatModel.update(
         { _id: chat._id },
-        { $pullAll: { restrictedUsers: { id: candidatesIds } } }
+        { $pullAll: { restrictedUsers: { id: { $in: candidatesIds } } } }
       )
     }
   } catch (err) {
