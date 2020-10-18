@@ -1,10 +1,12 @@
 import { Chat } from '@models/Chat'
 import * as tt from '../../node_modules/telegraf/typings/telegram-types.d'
 import { DocumentType } from '@typegoose/typegoose'
+import { ChatMember } from '../../node_modules/telegraf/typings/telegram-types.d'
 
 declare module 'telegraf' {
   export class ContextMessageUpdate {
     public dbchat: DocumentType<Chat>
+    public administrators: ChatMember[]
     replyWithMarkdown(
       markdown: string,
       extra?: tt.ExtraEditMessage | Extra

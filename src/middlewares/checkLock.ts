@@ -1,34 +1,27 @@
+import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { ContextMessageUpdate } from 'telegraf'
 
 export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
+  // If loccked, private messages or channel, then continue
   if (
     !ctx.dbchat.adminLocked ||
     ctx.chat.type === 'private' ||
     ctx.chat.type === 'channel'
   ) {
-    next()
-    return
+    return next()
   }
+  // If super admin, then continue
   if (ctx.from.id === parseInt(process.env.ADMIN)) {
-    next()
-    return
+    return next()
   }
-  if (
-    ctx.from &&
-    ctx.from.username &&
-    ctx.from.username === 'GroupAnonymousBot'
-  ) {
-    next()
-    return
+  // If from the group anonymous bot, then continue
+  if (ctx.from?.username === 'GroupAnonymousBot') {
+    return next()
   }
-  const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
-  if (admins.map((m) => m.user.id).indexOf(ctx.from.id) > -1) {
-    next()
-  } else {
-    try {
-      await ctx.telegram.deleteMessage(ctx.chat.id, ctx.message.message_id)
-    } catch (err) {
-      // Do nothing
-    }
+  // If from admin, then continue
+  if (ctx.administrators.map((m) => m.user.id).indexOf(ctx.from.id) > -1) {
+    return next()
   }
+  // Otherwise, remove the message
+  await deleteMessageSafeWithBot(ctx.chat.id, ctx.message.message_id)
 }

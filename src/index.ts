@@ -28,7 +28,6 @@ import { setupDeleteEntryOnKick } from '@commands/deleteEntryOnKick'
 import { setupCAS } from '@commands/cas'
 import { setupBan } from '@commands/ban'
 import { setupUnderAttack } from '@commands/underAttack'
-import { noWait } from '@middlewares/noWait'
 import { setupNoAttack } from '@commands/noAttack'
 import { setupViewConfig } from '@commands/viewConfig'
 import { setupButtonText } from '@commands/buttonText'
@@ -39,12 +38,11 @@ import { setupSkipOldUsers } from '@commands/skipOldUsers'
 import { setupSkipVerifiedUsers } from '@commands/skipVerifiedUsers'
 import { setupSetConfig } from '@commands/setConfig'
 import { logTimeReceived } from '@middlewares/logTimeReceived'
+import { report } from '@helpers/report'
 
 // Track time
 bot.use(logTimeReceived)
-// Make Telegraph async
-bot.use(noWait)
-// Check time
+// Ignore all messages that are too old
 bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
@@ -87,7 +85,7 @@ setupSetConfig(bot)
 setupNewcomers(bot)
 
 // Catch
-bot.catch(console.log)
+bot.catch(report)
 
 // Start bot
 bot.startPolling()

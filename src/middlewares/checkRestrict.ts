@@ -1,28 +1,36 @@
 import { ContextMessageUpdate } from 'telegraf'
-import { globalyRestricted } from '@helpers/globallyRestricted'
-import { report } from '@helpers/report'
+import { isGloballyRestricted } from '@helpers/globallyRestricted'
+import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
 export async function checkRestrict(
   ctx: ContextMessageUpdate,
   next: () => any
 ) {
+  // Get the message
   const message = ctx.editedMessage || ctx.message
+  // Continue if there is no message
   if (!message) {
     return next()
   }
+  // Continue if the restrict is off
   if (!ctx.dbchat.restrict) {
     return next()
   }
+  // Don't restrict super admin
   if (ctx.from.id === parseInt(process.env.ADMIN)) {
     return next()
   }
-  const restrictedUsers = ctx.dbchat.restrictedUsers
+  // Just delete the message if globally restricted
+  if (isGloballyRestricted(ctx.from.id)) {
+    deleteMessageSafe(ctx)
+    return
+  }
+  // Check if this user is restricted
   const restricted =
-    restrictedUsers.map((u) => u.id).indexOf(ctx.from.id) > -1 ||
-    globalyRestricted.indexOf(ctx.from.id) > -1
+    ctx.dbchat.restrictedUsers.map((u) => u.id).indexOf(ctx.from.id) > -1
+  // If a restricted user tries to send restricted type, just delete it
   if (
     restricted &&
-    message &&
     ((message.entities && message.entities.length) ||
       (message.caption_entities && message.caption_entities.length) ||
       message.forward_from ||
@@ -35,12 +43,9 @@ export async function checkRestrict(
       message.video ||
       message.game)
   ) {
-    try {
-      await ctx.deleteMessage()
-    } catch (err) {
-      await report(err)
-    }
-  } else {
-    return next()
+    deleteMessageSafe(ctx)
+    return
   }
+  // Or just continue
+  return next()
 }

@@ -15,19 +15,16 @@ import { getCandidate } from '@helpers/newcomers/getCandidate'
 import { restrictChatMember } from '@helpers/newcomers/restrictChatMember'
 import { modifyCandidates } from '@helpers/candidates'
 import { removeMessages } from '@models/CappedMessage'
+import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
 export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
   // Get list of ids
   const memberIds = ctx.message.new_chat_members.map((m) => m.id)
   // Add to globaly restricted list
-  await modifyGloballyRestricted(true, memberIds)
+  await modifyGloballyRestricted(memberIds, true)
   // Check if needs to delete message right away
   if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
-    try {
-      await ctx.deleteMessage()
-    } catch {
-      // Do nothing
-    }
+    deleteMessageSafe(ctx)
   }
   // Start the newcomers logic
   try {

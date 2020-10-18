@@ -2,6 +2,7 @@ import { ContextMessageUpdate } from 'telegraf'
 import { appendFile } from 'fs'
 
 export function logTimeReceived(ctx: ContextMessageUpdate, next: Function) {
+  // Let's also make the handling async here
   next()
 
   if (ctx.update.message && ctx.update.message.date) {

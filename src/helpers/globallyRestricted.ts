@@ -1,19 +1,11 @@
-import { Lock } from 'semaphore-async-await'
+const globalyRestrictedMap = {} as { [index: number]: boolean }
 
-export let globalyRestricted = []
-
-export async function modifyGloballyRestricted(add: boolean, ids: number[]) {
-  const lock = new Lock()
-  await lock.acquire()
-  try {
-    if (add) {
-      globalyRestricted = globalyRestricted.concat(ids)
-    } else {
-      globalyRestricted = globalyRestricted.filter(id => !ids.includes(id))
-    }
-  } catch (err) {
-    console.error('modifyGloballyRestricted', err)
-  } finally {
-    lock.release()
+export function modifyGloballyRestricted(ids: number[], restrict: boolean) {
+  for (const id of ids) {
+    globalyRestrictedMap[id] = restrict
   }
+}
+
+export function isGloballyRestricted(id: number) {
+  return !!globalyRestrictedMap[id]
 }
