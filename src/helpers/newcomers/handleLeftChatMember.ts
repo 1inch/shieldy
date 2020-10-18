@@ -1,6 +1,6 @@
+import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 import { kickedIds } from '@helpers/newcomers/kikedIds'
 import { ContextMessageUpdate } from 'telegraf'
-import { report } from '@helpers/report'
 
 export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
   // Delete left message if required
@@ -10,12 +10,10 @@ export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
     (ctx.dbchat.deleteEntryOnKick &&
       kickedIds[ctx.dbchat.id].includes(ctx.message.left_chat_member.id))
   ) {
-    try {
-      await ctx.deleteMessage()
-    } catch (err) {
-      await report(err)
-    }
+    deleteMessageSafe(ctx)
+    return
   }
+  // TODO: switch to transactions
   if (ctx.dbchat.deleteEntryOnKick) {
     let needsSaving = false
     for (const candidate of ctx.dbchat.candidates) {
@@ -25,7 +23,7 @@ export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
       }
     }
     if (needsSaving) {
-      await ctx.dbchat.save()
+      ctx.dbchat.save()
     }
   }
 }

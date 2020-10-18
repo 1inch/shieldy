@@ -1,6 +1,6 @@
+import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { prop, getModelForClass } from '@typegoose/typegoose'
 import { Message } from 'telegram-typings'
-import { bot } from '@helpers/bot'
 
 export class CappedMessage {
   @prop({ required: true, index: true })
@@ -21,10 +21,6 @@ export const CappedMessageModel = getModelForClass(CappedMessage, {
 export async function removeMessages(chatId: number, fromId: number) {
   const messages = await CappedMessageModel.find({ chatId, fromId })
   messages.forEach(async (message) => {
-    try {
-      await bot.telegram.deleteMessage(chatId, message.message_id)
-    } catch (err) {
-      // Do nothing
-    }
+    await deleteMessageSafeWithBot(chatId, message.message_id)
   })
 }

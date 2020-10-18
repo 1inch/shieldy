@@ -1,3 +1,4 @@
+import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Message } from 'telegram-typings'
 import { isFunction } from 'lodash'
 import { User } from 'telegraf/typings/telegram-types'
@@ -89,14 +90,7 @@ export async function greetUser(
   // Delete greeting message if requested
   if (ctx.dbchat.deleteGreetingTime && messageSent) {
     setTimeout(async () => {
-      try {
-        await ctx.telegram.deleteMessage(
-          messageSent.chat.id,
-          messageSent.message_id
-        )
-      } catch (err) {
-        // Do nothing
-      }
+      deleteMessageSafeWithBot(messageSent.chat.id, messageSent.message_id)
     }, ctx.dbchat.deleteGreetingTime * 1000)
   }
 }

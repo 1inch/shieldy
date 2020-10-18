@@ -1,11 +1,12 @@
+import { report } from '@helpers/report'
 import { bot } from '@helpers/bot'
 import { ContextMessageUpdate } from 'telegraf'
 
 export async function deleteMessageSafe(ctx: ContextMessageUpdate) {
   try {
     await ctx.deleteMessage()
-  } catch {
-    // Do nothing
+  } catch (err) {
+    report(err)
   }
 }
 
@@ -15,7 +16,7 @@ export async function deleteMessageSafeWithBot(
 ) {
   try {
     await bot.telegram.deleteMessage(chatId, messageId)
-  } catch {
-    // Do nothing
+  } catch (err) {
+    report(err)
   }
 }

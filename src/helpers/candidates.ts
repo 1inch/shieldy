@@ -3,6 +3,7 @@ import { Chat, Candidate } from '@models/Chat'
 import { User } from 'telegraf/typings/telegram-types'
 import { DocumentType } from '@typegoose/typegoose'
 
+// TODO: switch to transactions
 export async function modifyCandidates(
   chat: DocumentType<Chat>,
   add: boolean,

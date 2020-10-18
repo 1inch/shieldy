@@ -1,3 +1,4 @@
+import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { bot } from '@helpers/bot'
 import { DocumentType } from '@typegoose/typegoose'
 import { Chat, Candidate } from '@models/Chat'
@@ -25,15 +26,11 @@ export async function kickCandidates(
     }
     // Try deleting their entry messages
     if (chat.deleteEntryOnKick) {
-      deleteMessageProxy(candidate.entryChatId, candidate.entryMessageId)
-      deleteMessageProxy(candidate.entryChatId, candidate.leaveMessageId)
+      deleteMessageSafeWithBot(candidate.entryChatId, candidate.entryMessageId)
+      deleteMessageSafeWithBot(candidate.entryChatId, candidate.leaveMessageId)
     }
     // Try deleting the captcha message
-    try {
-      await bot.telegram.deleteMessage(chat.id, candidate.messageId)
-    } catch (err) {
-      await report(err, 'deleteMessage')
-    }
+    deleteMessageSafeWithBot(chat.id, candidate.messageId)
   }
   // Remove from candidates
   await modifyCandidates(chat, false, candidates)
@@ -50,13 +47,5 @@ async function kickChatMemberProxy(
     await bot.telegram.kickChatMember(id, candidateId, duration)
   } catch (err) {
     report(err)
-  }
-}
-
-async function deleteMessageProxy(id, messageId) {
-  try {
-    await bot.telegram.deleteMessage(id, messageId)
-  } catch (err) {
-    // do nothing
   }
 }

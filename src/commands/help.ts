@@ -11,3 +11,13 @@ export function sendHelp(ctx: ContextMessageUpdate) {
     disable_web_page_preview: true,
   })
 }
+
+export function sendHelpSafe(ctx: ContextMessageUpdate) {
+  try {
+    return ctx.replyWithMarkdown(strings(ctx.dbchat, 'helpShieldy'), {
+      disable_web_page_preview: true,
+    })
+  } catch {
+    // Do nothing
+  }
+}

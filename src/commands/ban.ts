@@ -1,7 +1,7 @@
+import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
-import { report } from '@helpers/report'
 
 export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('ban', checkLock, async (ctx) => {
@@ -33,11 +33,7 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
       .pop()
     if (candidate) {
       // Delete message
-      try {
-        await ctx.telegram.deleteMessage(ctx.dbchat.id, candidate.messageId)
-      } catch (err) {
-        await report(err)
-      }
+      await deleteMessageSafeWithBot(ctx.dbchat.id, candidate.messageId)
       // Remove from candidates
       ctx.dbchat.candidates = ctx.dbchat.candidates.filter(
         (c) => c.id !== repliedId
