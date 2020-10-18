@@ -1,4 +1,4 @@
-import { prop, Typegoose, arrayProp } from 'typegoose'
+import { prop, getModelForClass } from '@typegoose/typegoose'
 import { Message } from 'telegram-typings'
 
 export enum Language {
@@ -69,7 +69,7 @@ export class MessageWrapper {
   message: Message
 }
 
-export class Chat extends Typegoose {
+export class Chat {
   @prop({ required: true, index: true, unique: true })
   id: number
   @prop({ required: true, enum: Language, default: Language.ENGLISH })
@@ -86,9 +86,9 @@ export class Chat extends Typegoose {
   noChannelLinks: boolean
   @prop({ required: true, default: false })
   deleteEntryMessages: boolean
-  @arrayProp({ items: Candidate, default: [] })
+  @prop({ type: Candidate, default: [] })
   candidates: Candidate[]
-  @arrayProp({ items: Candidate, default: [] })
+  @prop({ type: Candidate, default: [] })
   restrictedUsers: Candidate[]
   @prop({ required: true, default: false })
   greetsUsers: boolean
@@ -125,7 +125,7 @@ export class Chat extends Typegoose {
 }
 
 // Get Chat model
-export const ChatModel = new Chat().getModelForClass(Chat, {
+export const ChatModel = getModelForClass(Chat, {
   schemaOptions: { timestamps: true },
 })
 

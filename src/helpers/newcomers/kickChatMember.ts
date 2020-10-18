@@ -1,5 +1,5 @@
 import { bot } from '@helpers/bot'
-import { InstanceType } from 'typegoose'
+import { DocumentType } from '@typegoose/typegoose'
 import { User } from 'telegraf/typings/telegram-types'
 import { Chat } from '@models/Chat'
 import { addKickedUser } from '@helpers/newcomers/addKickedUser'
@@ -7,7 +7,7 @@ import { report } from '@helpers/report'
 import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
-export async function kickChatMember(chat: InstanceType<Chat>, user: User) {
+export async function kickChatMember(chat: DocumentType<Chat>, user: User) {
   // Try kicking the member
   try {
     addKickedUser(chat, user.id)

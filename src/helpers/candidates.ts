@@ -1,10 +1,10 @@
 import { Lock } from 'semaphore-async-await'
 import { Chat, Candidate } from '@models/Chat'
 import { User } from 'telegraf/typings/telegram-types'
-import { InstanceType } from 'typegoose'
+import { DocumentType } from '@typegoose/typegoose'
 
 export async function modifyCandidates(
-  chat: InstanceType<Chat>,
+  chat: DocumentType<Chat>,
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {

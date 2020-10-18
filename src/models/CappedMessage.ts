@@ -1,8 +1,8 @@
-import { prop, Typegoose } from 'typegoose'
+import { prop, getModelForClass } from '@typegoose/typegoose'
 import { Message } from 'telegram-typings'
 import { bot } from '@helpers/bot'
 
-export class CappedMessage extends Typegoose {
+export class CappedMessage {
   @prop({ required: true, index: true })
   message_id: number
   @prop({ required: true, index: true })
@@ -14,12 +14,9 @@ export class CappedMessage extends Typegoose {
   message: Message
 }
 
-export const CappedMessageModel = new CappedMessage().getModelForClass(
-  CappedMessage,
-  {
-    schemaOptions: { timestamps: true, capped: 1000 * 1024 },
-  }
-)
+export const CappedMessageModel = getModelForClass(CappedMessage, {
+  schemaOptions: { timestamps: true, capped: 1000 * 1024 },
+})
 
 export async function removeMessages(chatId: number, fromId: number) {
   const messages = await CappedMessageModel.find({ chatId, fromId })

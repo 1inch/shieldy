@@ -1,5 +1,5 @@
 import { bot } from '@helpers/bot'
-import { InstanceType } from 'typegoose'
+import { DocumentType } from '@typegoose/typegoose'
 import { Chat, Candidate } from '@models/Chat'
 import { report } from '@helpers/report'
 import { addKickedUser } from '@helpers/newcomers/addKickedUser'
@@ -7,7 +7,7 @@ import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
 export async function kickCandidates(
-  chat: InstanceType<Chat>,
+  chat: DocumentType<Chat>,
   candidates: Candidate[]
 ) {
   // Loop through candidates

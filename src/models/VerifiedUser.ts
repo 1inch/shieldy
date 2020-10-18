@@ -1,16 +1,13 @@
-import { prop, Typegoose } from 'typegoose'
+import { prop, getModelForClass } from '@typegoose/typegoose'
 
-export class VerifiedUser extends Typegoose {
+export class VerifiedUser {
   @prop({ required: true, index: true, unique: true })
   id: number
 }
 
-export const VerifiedUserModel = new VerifiedUser().getModelForClass(
-  VerifiedUser,
-  {
-    schemaOptions: { timestamps: true },
-  }
-)
+export const VerifiedUserModel = getModelForClass(VerifiedUser, {
+  schemaOptions: { timestamps: true },
+})
 
 export async function addVerifiedUser(id: number) {
   let user = await VerifiedUserModel.findOne({ id })

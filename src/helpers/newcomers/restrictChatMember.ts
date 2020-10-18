@@ -1,10 +1,10 @@
 import { bot } from '@helpers/bot'
-import { InstanceType } from 'typegoose'
+import { DocumentType } from '@typegoose/typegoose'
 import { User } from 'telegraf/typings/telegram-types'
 import { Chat } from '@models/Chat'
 import { report } from '@helpers/report'
 
-export async function restrictChatMember(chat: InstanceType<Chat>, user: User) {
+export async function restrictChatMember(chat: DocumentType<Chat>, user: User) {
   try {
     const gotUser = (await bot.telegram.getChatMember(chat.id, user.id)) as any
     if (
