@@ -35,8 +35,8 @@ export enum CaptchaType {
 }
 
 export class Equation {
-  question: String
-  answer: String
+  question: string
+  answer: string
 }
 
 export class Candidate {
@@ -52,7 +52,9 @@ export class Candidate {
   username?: string
 
   @prop()
-  equation?: Equation
+  equationQuestion?: string
+  @prop()
+  equationAnswer?: string
   @prop()
   imageText?: string
 

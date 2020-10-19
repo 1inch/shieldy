@@ -39,7 +39,7 @@ export async function checkPassingCaptchaWithText(ctx, next) {
   if (candidate.captchaType === CaptchaType.DIGITS) {
     // Check the format
     const hasCorrectAnswer = ctx.message.text.includes(
-      candidate.equation.answer as string
+      candidate.equationAnswer as string
     )
     const hasNoMoreThanTwoDigits =
       (ctx.message.text.match(/\d/g) || []).length <= 2
