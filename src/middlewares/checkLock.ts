@@ -1,13 +1,10 @@
+import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { ContextMessageUpdate } from 'telegraf'
 
 export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
   // If loccked, private messages or channel, then continue
-  if (
-    !ctx.dbchat.adminLocked ||
-    ctx.chat.type === 'private' ||
-    ctx.chat.type === 'channel'
-  ) {
+  if (!ctx.dbchat.adminLocked || !isGroup(ctx)) {
     return next()
   }
   // If super admin, then continue

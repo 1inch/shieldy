@@ -1,3 +1,4 @@
+import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
@@ -9,10 +10,14 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     if (!ctx.message || !ctx.message.reply_to_message) {
       return
     }
+    // Check if not a group
+    if (!isGroup(ctx)) {
+      return
+    }
     // Get replied
     const repliedId = ctx.message.reply_to_message.from.id
     // Check if sent by admin
-    const admins = await ctx.telegram.getChatAdministrators(ctx.chat.id)
+    const admins = ctx.administrators
     if (!admins.map((a) => a.user.id).includes(ctx.from.id)) {
       return
     }

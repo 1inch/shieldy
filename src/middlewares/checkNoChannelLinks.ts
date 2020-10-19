@@ -1,3 +1,4 @@
+import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 import { ContextMessageUpdate } from 'telegraf'
 import tall from 'tall'
@@ -19,7 +20,7 @@ export async function checkNoChannelLinks(
     return next()
   }
   // If sent from private chat or channel, just continue
-  if (ctx.chat.type === 'private' || ctx.chat.type === 'channel') {
+  if (!isGroup(ctx)) {
     return next()
   }
   // If there are no url entities, just continue
