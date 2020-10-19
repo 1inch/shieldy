@@ -32,10 +32,8 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
     if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
       deleteMessageSafe(ctx)
     }
-    // Get admin ids
-    const adminIds = ctx.administrators.map((u) => u.user.id)
     // If an admin adds the members, do nothing
-    if (adminIds.includes(ctx.message.from.id)) {
+    if (ctx.administratorIds.includes(ctx.message.from.id)) {
       return
     }
     // Send help message if added this bot to the group
@@ -47,7 +45,7 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
     }
     // Filter new members
     const membersToCheck = ctx.message.new_chat_members.filter(
-      (m) => !adminIds.includes(m.id) && !m.is_bot
+      (m) => !ctx.administratorIds.includes(m.id) && !m.is_bot
     )
     // Kick bots if required
     if (!ctx.dbchat.allowInvitingBots) {

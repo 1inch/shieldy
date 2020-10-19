@@ -1,5 +1,5 @@
 import { prop, getModelForClass } from '@typegoose/typegoose'
-import { Message } from 'telegram-typings'
+import { Message, ChatMember } from 'telegram-typings'
 
 export enum Language {
   ENGLISH = 'en',
@@ -69,6 +69,13 @@ export class MessageWrapper {
   message: Message
 }
 
+export class AdministratorsCache {
+  @prop()
+  updatedAtTimestamp: number
+  @prop({ type: Number, required: true, default: [] })
+  administratorIds: number[]
+}
+
 export class Chat {
   @prop({ required: true, index: true, unique: true })
   id: number
@@ -122,6 +129,8 @@ export class Chat {
   skipOldUsers: boolean
   @prop({ required: true, default: false })
   skipVerifiedUsers: boolean
+  @prop()
+  administratorsCache?: AdministratorsCache
 }
 
 // Get Chat model

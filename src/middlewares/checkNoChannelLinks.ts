@@ -40,7 +40,7 @@ export async function checkNoChannelLinks(
   const adminIds = [
     777000,
     parseInt(process.env.ADMIN),
-    ...ctx.administrators.map((a) => a.user.id),
+    ...ctx.administratorIds,
   ]
   if (adminIds.includes(ctx.from.id)) {
     return next()

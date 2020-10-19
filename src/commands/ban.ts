@@ -17,7 +17,7 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     // Get replied
     const repliedId = ctx.message.reply_to_message.from.id
     // Check if sent by admin
-    const admins = ctx.administrators
+    const admins = await ctx.getChatAdministrators()
     if (!admins.map((a) => a.user.id).includes(ctx.from.id)) {
       return
     }
