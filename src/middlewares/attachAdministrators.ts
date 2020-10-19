@@ -38,9 +38,11 @@ export async function attachAdministrators(ctx: ContextMessageUpdate, next) {
       }
     )
   } catch (err) {
-    // If getting admins failed, just continue with the middlewares without admins
+    // If getting admins failed, just continue with the middlewares with old admins if available
     report(err)
-    ctx.administratorIds = []
+    ctx.administratorIds = administratorsCache
+      ? administratorsCache.administratorIds
+      : []
   } finally {
     // Exit the middleware
     return next()
