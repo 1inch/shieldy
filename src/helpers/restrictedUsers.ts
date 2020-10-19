@@ -10,13 +10,13 @@ export async function modifyRestrictedUsers(
 ) {
   try {
     if (add) {
-      await ChatModel.update(
+      await ChatModel.updateOne(
         { _id: chat._id },
         { $push: { restrictedUsers: candidatesAndUsers } }
       )
     } else {
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
-      await ChatModel.update(
+      await ChatModel.updateOne(
         { _id: chat._id },
         { $pull: { restrictedUsers: { id: { $in: candidatesIds } } } },
         { multi: true }

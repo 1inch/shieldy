@@ -10,13 +10,13 @@ export async function modifyCandidates(
 ) {
   try {
     if (add) {
-      await ChatModel.update(
+      await ChatModel.updateOne(
         { _id: chat._id },
         { $push: { candidates: candidatesAndUsers } }
       )
     } else {
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
-      await ChatModel.update(
+      await ChatModel.updateOne(
         { _id: chat._id },
         { $pull: { candidates: { id: { $in: candidatesIds } } } },
         { multi: true }

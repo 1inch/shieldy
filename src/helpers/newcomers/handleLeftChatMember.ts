@@ -15,7 +15,7 @@ export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
     return
   }
   if (ctx.dbchat.deleteEntryOnKick) {
-    ChatModel.update(
+    ChatModel.updateOne(
       { _id: ctx.dbchat._id, 'candidates.id': ctx.message.left_chat_member.id },
       { $set: { 'candidates.$.leaveMessageId': ctx.message.message_id } }
     )
