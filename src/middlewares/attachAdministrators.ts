@@ -3,7 +3,7 @@ import { ChatModel } from '@models/Chat'
 import { isGroup } from '@helpers/isGroup'
 import { ContextMessageUpdate } from 'telegraf'
 
-const administratorsCacheTime = 5
+const administratorsCacheTime = 30
 
 export async function attachAdministrators(ctx: ContextMessageUpdate, next) {
   // If not a group, no need to check for admins
