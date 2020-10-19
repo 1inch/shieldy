@@ -8,12 +8,18 @@ import { modifyCandidates } from '@helpers/candidates'
 import { CaptchaType } from '@models/Chat'
 
 export async function checkPassingCaptchaWithText(ctx, next) {
-  // Check if it the message is from a candidates with text
+  // Check if it is a message is from a candidates
   if (
-    !ctx.message?.text ||
     !ctx.dbchat.candidates.length ||
     !ctx.dbchat.candidates.map((c) => c.id).includes(ctx.from.id)
   ) {
+    return next()
+  }
+  // Check if it is not a text message in a strict mode
+  if (!ctx.message?.text) {
+    if (ctx.dbchat.strict) {
+      deleteMessageSafe(ctx)
+    }
     return next()
   }
   // Check if it is a button captcha (shouldn't get to this function then)
