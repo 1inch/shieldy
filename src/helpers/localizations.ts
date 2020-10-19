@@ -1446,8 +1446,8 @@ export const localizations = {
       'Отлично! Пользователям Телеграма, которые прошли капчу в любом чате когда-либо, больше не надо будет проходить капчу!',
   },
   skipVerifiedUsers_false: {
-    en: "Nice! Telegram account age won't affect captcha anymore!",
-    ru: 'Отлично! Возраст Телеграм-аккаунта больше не влияет на капчу!',
+    en: "Nice! Passing captcha before won't affect future captchas anymore!",
+    ru: 'Отлично! Прохождение капчи больше не влияет на будущие капчи!',
   },
   setConfigHelp: {
     en:
