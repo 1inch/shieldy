@@ -33,7 +33,7 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
       deleteMessageSafe(ctx)
     }
     // If an admin adds the members, do nothing
-    if (ctx.administratorIds.includes(ctx.message.from.id)) {
+    if (ctx.isAdministrator) {
       return
     }
     // Send help message if added this bot to the group
@@ -43,10 +43,6 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
     if (addedUsernames.includes(bot.options.username)) {
       await sendHelpSafe(ctx)
     }
-    // Filter new members
-    const membersToCheck = ctx.message.new_chat_members.filter(
-      (m) => !ctx.administratorIds.includes(m.id) && !m.is_bot
-    )
     // Kick bots if required
     if (!ctx.dbchat.allowInvitingBots) {
       ctx.message.new_chat_members

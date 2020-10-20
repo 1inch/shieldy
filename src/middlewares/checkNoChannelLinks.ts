@@ -37,12 +37,8 @@ export async function checkNoChannelLinks(
     return next()
   }
   // If sent from admins, just ignore
-  const adminIds = [
-    777000,
-    parseInt(process.env.ADMIN),
-    ...ctx.administratorIds,
-  ]
-  if (adminIds.includes(ctx.from.id)) {
+  const adminIds = [777000, parseInt(process.env.ADMIN)]
+  if (adminIds.includes(ctx.from.id) || ctx.isAdministrator) {
     return next()
   }
   // Create a placeholder if the message needs deletion

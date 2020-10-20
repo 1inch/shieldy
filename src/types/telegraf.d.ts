@@ -6,7 +6,8 @@ import { ChatMember } from '../../node_modules/telegraf/typings/telegram-types.d
 declare module 'telegraf' {
   export class ContextMessageUpdate {
     public dbchat: DocumentType<Chat>
-    public administratorIds: number[]
+    public chatMember?: ChatMember
+    public isAdministrator: boolean
     replyWithMarkdown(
       markdown: string,
       extra?: tt.ExtraEditMessage | Extra

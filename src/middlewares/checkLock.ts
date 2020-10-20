@@ -16,7 +16,7 @@ export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
     return next()
   }
   // If from admin, then continue
-  if (ctx.administratorIds.indexOf(ctx.from.id) > -1) {
+  if (ctx.isAdministrator) {
     return next()
   }
   // Otherwise, remove the message
