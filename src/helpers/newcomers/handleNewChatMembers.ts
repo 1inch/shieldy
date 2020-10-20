@@ -105,7 +105,6 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
       try {
         message = await notifyCandidate(ctx, member, equation, image)
       } catch (err) {
-        console.log('notify error', ctx.chat.id, err)
         report(err)
       }
       // Create a candidate
