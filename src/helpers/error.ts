@@ -6,7 +6,6 @@ export function checkIfErrorDismissable(error: Error) {
     'not in the chat',
     'need to be inviter of a user',
     'matching document found for id',
-    'Too Many Requests: retry after',
     'bot is not a member',
     'user is an administrator of the chat',
     'USER_NOT_PARTICIPANT',
