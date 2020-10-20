@@ -9,7 +9,9 @@ export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
     ctx.dbchat.deleteEntryMessages ||
     ctx.dbchat.underAttack ||
     (ctx.dbchat.deleteEntryOnKick &&
-      kickedIds[ctx.dbchat.id].includes(ctx.message.left_chat_member.id))
+      (kickedIds[ctx.dbchat.id] || []).includes(
+        ctx.message.left_chat_member.id
+      ))
   ) {
     deleteMessageSafe(ctx)
     return

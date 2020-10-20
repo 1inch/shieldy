@@ -63,12 +63,6 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
       if (ctx.dbchat.skipOldUsers) {
         if (member.id > 0 && member.id < 1000000000) {
           greetUser(ctx, member)
-          console.log(
-            'greeted a user as old user',
-            ctx.dbchat.captchaType,
-            ctx.dbchat.customCaptchaMessage,
-            ctx.dbchat.greetsUsers
-          )
           if (ctx.dbchat.restrict) {
             modifyRestrictedUsers(ctx.dbchat, true, [member])
           }
@@ -79,12 +73,6 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
       if (ctx.dbchat.skipVerifiedUsers) {
         if (await isVerifiedUser(member.id)) {
           greetUser(ctx, member)
-          console.log(
-            'greeted a user as verified user',
-            ctx.dbchat.captchaType,
-            ctx.dbchat.customCaptchaMessage,
-            ctx.dbchat.greetsUsers
-          )
           if (ctx.dbchat.restrict) {
             modifyRestrictedUsers(ctx.dbchat, true, [member])
           }
@@ -116,13 +104,8 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
       let message
       try {
         message = await notifyCandidate(ctx, member, equation, image)
-        console.log(
-          'notified a user',
-          ctx.dbchat.captchaType,
-          ctx.dbchat.customCaptchaMessage,
-          ctx.dbchat.greetsUsers
-        )
       } catch (err) {
+        console.log(err)
         report(err)
       }
       // Create a candidate
