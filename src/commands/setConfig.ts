@@ -147,6 +147,7 @@ export function setupSetConfig(bot: Telegraf<ContextMessageUpdate>) {
             break
         }
       }
+      await ctx.dbchat.save()
       await ctx.reply(
         '👍',
         Extra.inReplyTo(ctx.message.message_id).HTML(true) as ExtraReplyMessage
