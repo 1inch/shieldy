@@ -43,6 +43,8 @@ export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
     if (addedUsernames.includes(bot.options.username)) {
       await sendHelpSafe(ctx)
     }
+    // Filter new members
+    const membersToCheck = ctx.message.new_chat_members.filter((m) => !m.is_bot)
     // Kick bots if required
     if (!ctx.dbchat.allowInvitingBots) {
       ctx.message.new_chat_members
