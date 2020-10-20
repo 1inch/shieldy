@@ -71,13 +71,6 @@ export class MessageWrapper {
   message: Message
 }
 
-export class AdministratorsCache {
-  @prop()
-  updatedAtTimestamp: number
-  @prop({ type: Number, required: true, default: [] })
-  administratorIds: number[]
-}
-
 export class Chat {
   @prop({ required: true, index: true, unique: true })
   id: number
@@ -131,8 +124,6 @@ export class Chat {
   skipOldUsers: boolean
   @prop({ required: true, default: false })
   skipVerifiedUsers: boolean
-  @prop()
-  administratorsCache?: AdministratorsCache
 }
 
 // Get Chat model
