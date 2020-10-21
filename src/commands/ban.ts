@@ -1,3 +1,6 @@
+import { modifyCandidates } from '@helpers/candidates'
+import { Candidate } from '@models/Chat'
+import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
@@ -29,9 +32,7 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
     // Ban in Telegram
     await ctx.telegram.kickChatMember(ctx.dbchat.id, repliedId)
     // Unrestrict in shieldy
-    ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
-      (c) => c.id !== repliedId
-    )
+    modifyRestrictedUsers(ctx.dbchat, false, [{ id: repliedId } as Candidate])
     // Remove from candidates
     const candidate = ctx.dbchat.candidates
       .filter((c) => c.id === repliedId)
@@ -40,12 +41,8 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
       // Delete message
       await deleteMessageSafeWithBot(ctx.dbchat.id, candidate.messageId)
       // Remove from candidates
-      ctx.dbchat.candidates = ctx.dbchat.candidates.filter(
-        (c) => c.id !== repliedId
-      )
+      modifyCandidates(ctx.dbchat, false, [{ id: repliedId } as Candidate])
     }
-    // Save chat
-    await ctx.dbchat.save()
     // Reply with success
     await ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'trust_success'),

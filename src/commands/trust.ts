@@ -1,8 +1,11 @@
+import { modifyCandidates } from '@helpers/candidates'
+import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 import { report } from '@helpers/report'
+import { Candidate } from '@models/Chat'
 
 export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
   bot.command('trust', checkLock, async (ctx) => {
@@ -35,9 +38,7 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
       report(err)
     }
     // Unrestrict in shieldy
-    ctx.dbchat.restrictedUsers = ctx.dbchat.restrictedUsers.filter(
-      (c) => c.id !== repliedId
-    )
+    modifyRestrictedUsers(ctx.dbchat, false, [{ id: repliedId } as Candidate])
     // Remove from candidates
     const candidate = ctx.dbchat.candidates
       .filter((c) => c.id === repliedId)
@@ -46,12 +47,8 @@ export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
       // Delete message
       await deleteMessageSafeWithBot(ctx.dbchat.id, candidate.messageId)
       // Remove from candidates
-      ctx.dbchat.candidates = ctx.dbchat.candidates.filter(
-        (c) => c.id !== repliedId
-      )
+      modifyCandidates(ctx.dbchat, false, [{ id: repliedId } as Candidate])
     }
-    // Save chat
-    await ctx.dbchat.save()
     // Reply with success
     await ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'trust_success'),
