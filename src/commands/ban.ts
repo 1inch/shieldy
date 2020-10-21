@@ -44,9 +44,6 @@ export function setupBan(bot: Telegraf<ContextMessageUpdate>) {
       modifyCandidates(ctx.dbchat, false, [{ id: repliedId } as Candidate])
     }
     // Reply with success
-    await ctx.replyWithMarkdown(
-      strings(ctx.dbchat, 'trust_success'),
-      Extra.inReplyTo(ctx.message.message_id)
-    )
+    await ctx.replyWithMarkdown(strings(ctx.dbchat, 'trust_success'))
   })
 }
