@@ -54,7 +54,6 @@ export async function attachChatMember(ctx: ContextMessageUpdate, next) {
     ctx.isAdministrator = ['creator', 'administrator'].includes(
       ctx.chatMember.status
     )
-    console.log(ctx.isAdministrator)
   } catch (err) {
     // If anything above fails, just assume it's not an admin
     ctx.isAdministrator = false
