@@ -16,7 +16,6 @@ export async function attachChatMember(ctx: ContextMessageUpdate, next) {
     let chatMemberWrapper = ctx.dbchat.members.find(
       (mw) => mw.member.user.id === ctx.from.id
     )
-    console.log(JSON.stringify(chatMemberWrapper))
     // Update the chat member if it doesn't exist or if the record is too old
     if (
       !chatMemberWrapper ||
