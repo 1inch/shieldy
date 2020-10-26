@@ -1,4 +1,4 @@
-import { ChatModel } from './../models/Chat'
+import { ChatModel } from '@models/Chat'
 import { report } from '@helpers/report'
 import { isGroup } from '@helpers/isGroup'
 import { ContextMessageUpdate } from 'telegraf'
