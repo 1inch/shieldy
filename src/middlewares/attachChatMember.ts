@@ -21,7 +21,6 @@ export async function attachChatMember(ctx: ContextMessageUpdate, next) {
       !chatMemberWrapper ||
       chatMemberWrapper.timestamp < Date.now() - chatMemberCacheSeconds * 1000
     ) {
-      console.log('Updating chat member')
       const chatMemberFromTelegram = await ctx.getChatMember(ctx.from.id)
       chatMemberWrapper = {
         id: chatMemberFromTelegram.user.id,
@@ -46,8 +45,6 @@ export async function attachChatMember(ctx: ContextMessageUpdate, next) {
           )
         }
       )
-    } else {
-      console.log('Using existing chat member')
     }
     // Save chat member and admin status to the context
     ctx.chatMember = chatMemberWrapper.member
