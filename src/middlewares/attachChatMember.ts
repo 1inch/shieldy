@@ -3,7 +3,7 @@ import { report } from '@helpers/report'
 import { isGroup } from '@helpers/isGroup'
 import { ContextMessageUpdate } from 'telegraf'
 
-const chatMemberCacheSeconds = 60
+const chatMemberCacheSeconds = 300
 
 export async function attachChatMember(ctx: ContextMessageUpdate, next) {
   // If not a group, no need to get the member
