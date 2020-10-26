@@ -71,6 +71,15 @@ export class MessageWrapper {
   message: Message
 }
 
+export class MemberWrapper {
+  @prop({ required: true })
+  id: number
+  @prop({ required: true })
+  timestamp: number
+  @prop({ required: true })
+  member: ChatMember
+}
+
 export class Chat {
   @prop({ required: true, index: true, unique: true })
   id: number
@@ -124,6 +133,8 @@ export class Chat {
   skipOldUsers: boolean
   @prop({ required: true, default: false })
   skipVerifiedUsers: boolean
+  @prop({ type: MemberWrapper, required: true, default: [] })
+  members: MemberWrapper[]
 }
 
 // Get Chat model
