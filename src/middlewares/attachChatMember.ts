@@ -38,7 +38,6 @@ export async function attachChatMember(ctx: ContextMessageUpdate, next) {
           },
         },
         async (err, result) => {
-          console.log(result)
           if (!!err || result.n > 0) {
             return
           }
