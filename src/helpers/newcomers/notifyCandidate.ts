@@ -7,9 +7,11 @@ import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getLink, getName, getUsername } from '@helpers/getUsername'
 
-const todorantAddition =
-  'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>'
-const todorantExceptions = [-1001007166727]
+// const promoAddition =
+//   'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>'
+const promoAddition =
+  'Powered by <a href="https://t.me/golden_borodutch">Golden Borodutch</a>'
+const promoExceptions = [-1001007166727]
 
 export async function notifyCandidate(
   ctx: ContextMessageUpdate,
@@ -64,8 +66,8 @@ export async function notifyCandidate(
         messageToSend.text,
         messageToSend.entities
       )
-      if (!todorantExceptions.includes(ctx.chat.id)) {
-        formattedText = `${formattedText}\n${todorantAddition}`
+      if (!promoExceptions.includes(ctx.chat.id)) {
+        formattedText = `${formattedText}\n${promoAddition}`
       }
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
@@ -85,9 +87,9 @@ export async function notifyCandidate(
         message.text,
         message.entities
       )
-      message.text = todorantExceptions.includes(ctx.chat.id)
+      message.text = promoExceptions.includes(ctx.chat.id)
         ? `${getUsername(candidate)}\n\n${formattedText}`
-        : `${getUsername(candidate)}\n\n${formattedText}\n${todorantAddition}`
+        : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
       try {
         const sentMessage = await ctx.telegram.sendCopy(
           chat.id,
@@ -108,7 +110,7 @@ export async function notifyCandidate(
   } else {
     if (image) {
       return ctx.replyWithPhoto({ source: image.png } as any, {
-        caption: todorantExceptions.includes(ctx.chat.id)
+        caption: promoExceptions.includes(ctx.chat.id)
           ? `<a href="tg://user?id=${candidate.id}">${getUsername(
               candidate
             )}</a>${warningMessage} (${chat.timeGiven} ${strings(
@@ -120,12 +122,12 @@ export async function notifyCandidate(
             )}</a>${warningMessage} (${chat.timeGiven} ${strings(
               chat,
               'seconds'
-            )})\n${todorantAddition}`,
+            )})\n${promoAddition}`,
         parse_mode: 'HTML',
       })
     } else {
       return ctx.replyWithMarkdown(
-        todorantExceptions.includes(ctx.chat.id)
+        promoExceptions.includes(ctx.chat.id)
           ? `${
               chat.captchaType === CaptchaType.DIGITS
                 ? `(${equation.question}) `
@@ -145,7 +147,7 @@ export async function notifyCandidate(
             )}</a>${warningMessage} (${chat.timeGiven} ${strings(
               chat,
               'seconds'
-            )})\n${todorantAddition}`,
+            )})\n${promoAddition}`,
         extra
       )
     }
