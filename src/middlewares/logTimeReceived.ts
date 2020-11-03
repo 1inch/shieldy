@@ -2,6 +2,7 @@ import { Context } from 'telegraf'
 import { appendFile } from 'fs'
 
 export function logTimeReceived(ctx: Context, next: Function) {
+  console.log(ctx.update)
   // Let's also make the handling async here
   next()
 
