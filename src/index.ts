@@ -91,7 +91,9 @@ setupNewcomers(bot)
 bot.catch(report)
 
 // Start bot
-bot.startPolling()
-
-// Log
-console.info('Bot is up and running')
+bot
+  .launch()
+  .then(() => {
+    console.info('Bot is up and running')
+  })
+  .catch(report)
