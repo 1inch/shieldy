@@ -3,11 +3,11 @@ import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { greetUser } from '@helpers/newcomers/greetUser'
 import { modifyCandidates } from '@helpers/candidates'
 import { strings } from '@helpers/strings'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
 const buttonPresses = {} as { [index: string]: boolean }
 
-export async function handleButtonPress(ctx: ContextMessageUpdate) {
+export async function handleButtonPress(ctx: Context) {
   // Ignore muptiple taps
   if (buttonPresses[ctx.callbackQuery.data]) {
     return

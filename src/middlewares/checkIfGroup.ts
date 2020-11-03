@@ -1,7 +1,7 @@
 import { isGroup } from '@helpers/isGroup'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
-export async function checkIfGroup(ctx: ContextMessageUpdate, next: Function) {
+export async function checkIfGroup(ctx: Context, next: Function) {
   if (!isGroup(ctx)) {
     return
   }

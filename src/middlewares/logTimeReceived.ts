@@ -1,8 +1,7 @@
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 import { appendFile } from 'fs'
 
-export function logTimeReceived(ctx: ContextMessageUpdate, next: Function) {
-  console.log(ctx.update)
+export function logTimeReceived(ctx: Context, next: Function) {
   // Let's also make the handling async here
   next()
 

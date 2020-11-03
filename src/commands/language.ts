@@ -1,10 +1,10 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { Language } from '@models/Chat'
 import { checkIfFromReplier } from '@middlewares/checkIfFromReplier'
 import { checkLock } from '@middlewares/checkLock'
 
-export function setupLanguage(bot: Telegraf<ContextMessageUpdate>) {
+export function setupLanguage(bot: Telegraf<Context>) {
   bot.command('language', checkLock, (ctx) => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'language_shieldy'),

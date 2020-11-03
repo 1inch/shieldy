@@ -1,9 +1,9 @@
 import { Candidate, Equation } from '@models/Chat'
 import { User, Message } from 'telegram-typings'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
 export function getCandidate(
-  ctx: ContextMessageUpdate,
+  ctx: Context,
   user: User,
   notificationMessage?: Message,
   equation?: Equation,

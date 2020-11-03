@@ -1,8 +1,8 @@
 import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
-export async function checkLock(ctx: ContextMessageUpdate, next: () => any) {
+export async function checkLock(ctx: Context, next: () => any) {
   // If loccked, private messages or channel, then continue
   if (!ctx.dbchat.adminLocked || !isGroup(ctx)) {
     return next()

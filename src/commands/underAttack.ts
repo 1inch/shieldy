@@ -1,8 +1,8 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
-export function setupUnderAttack(bot: Telegraf<ContextMessageUpdate>) {
+export function setupUnderAttack(bot: Telegraf<Context>) {
   bot.command('underAttack', checkLock, async (ctx) => {
     ctx.dbchat.underAttack = !ctx.dbchat.underAttack
     ctx.dbchat = await ctx.dbchat.save()

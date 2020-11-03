@@ -1,8 +1,8 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { Chat } from '@models/Chat'
 
-export function setupTestLocales(bot: Telegraf<ContextMessageUpdate>) {
+export function setupTestLocales(bot: Telegraf<Context>) {
   bot.command('testLocales', async (ctx) => {
     if (ctx.from.id !== 76104711) {
       return

@@ -1,11 +1,8 @@
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 import { isGloballyRestricted } from '@helpers/globallyRestricted'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
-export async function checkRestrict(
-  ctx: ContextMessageUpdate,
-  next: () => any
-) {
+export async function checkRestrict(ctx: Context, next: () => any) {
   // Get the message
   const message = ctx.editedMessage || ctx.message
   // Continue if there is no message

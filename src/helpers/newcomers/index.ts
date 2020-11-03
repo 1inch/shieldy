@@ -1,4 +1,4 @@
-import Telegraf, { ContextMessageUpdate } from 'telegraf'
+import Telegraf, { Context } from 'telegraf'
 import { checkIfGroup } from '@middlewares/checkIfGroup'
 import { checkSuperAdmin } from '@middlewares/checkSuperAdmin'
 import { greetUser } from '@helpers/newcomers/greetUser'
@@ -8,7 +8,7 @@ import { handleButtonPress } from '@helpers/newcomers/checkButton'
 import { checkPassingCaptchaWithText } from './checkPassingCaptchaWithText'
 import '@helpers/newcomers/kickChecker'
 
-export function setupNewcomers(bot: Telegraf<ContextMessageUpdate>) {
+export function setupNewcomers(bot: Telegraf<Context>) {
   // Admin command to check greetings
   bot.command('greetMe', checkSuperAdmin, greetUser)
   // Main handler to check new chat members

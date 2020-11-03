@@ -1,9 +1,9 @@
 import { ChatModel } from '@models/Chat'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 import { kickedIds } from '@helpers/newcomers/kikedIds'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
-export async function handleLeftChatMember(ctx: ContextMessageUpdate) {
+export async function handleLeftChatMember(ctx: Context) {
   // Delete left message if required
   if (
     ctx.dbchat.deleteEntryMessages ||

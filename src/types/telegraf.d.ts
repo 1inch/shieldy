@@ -4,7 +4,7 @@ import { DocumentType } from '@typegoose/typegoose'
 import { ChatMember } from '../../node_modules/telegraf/typings/telegram-types.d'
 
 declare module 'telegraf' {
-  export class ContextMessageUpdate {
+  export class Context {
     public dbchat: DocumentType<Chat>
     public chatMember?: ChatMember
     public isAdministrator: boolean
@@ -13,7 +13,7 @@ declare module 'telegraf' {
       extra?: tt.ExtraEditMessage | Extra
     ): Promise<tt.Message>
   }
-  export interface Composer<TContext extends ContextMessageUpdate> {
+  export interface Composer<TContext extends Context> {
     action(
       action: string | string[] | RegExp,
       middleware: Middleware<TContext>,

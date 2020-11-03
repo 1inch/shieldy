@@ -1,14 +1,11 @@
 import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 import tall from 'tall'
 
 const disallowedUrlParts = ['http://t.me/', 'https://t.me/']
 
-export async function checkNoChannelLinks(
-  ctx: ContextMessageUpdate,
-  next: Function
-) {
+export async function checkNoChannelLinks(ctx: Context, next: Function) {
   // Get the message
   const message = ctx.editedMessage || ctx.message
   // If there is no message, just continue

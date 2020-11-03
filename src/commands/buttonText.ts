@@ -1,8 +1,8 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
-export function setupButtonText(bot: Telegraf<ContextMessageUpdate>) {
+export function setupButtonText(bot: Telegraf<Context>) {
   bot.command('buttonText', checkLock, async (ctx) => {
     const text = ctx.message.text.substr(12)
     if (!text) {

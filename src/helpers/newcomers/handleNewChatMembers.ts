@@ -1,6 +1,6 @@
 import { Candidate } from '@models/Chat'
 import { bot } from '@helpers/bot'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 import { modifyGloballyRestricted } from '@helpers/globallyRestricted'
 import { sendHelpSafe } from '@commands/help'
 import { report } from '@helpers/report'
@@ -17,7 +17,7 @@ import { modifyCandidates } from '@helpers/candidates'
 import { removeMessages } from '@models/CappedMessage'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
-export async function handleNewChatMembers(ctx: ContextMessageUpdate) {
+export async function handleNewChatMembers(ctx: Context) {
   // Check if no attack mode
   if (ctx.dbchat.noAttack) {
     return

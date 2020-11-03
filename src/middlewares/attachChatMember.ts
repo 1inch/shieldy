@@ -1,11 +1,11 @@
 import { ChatModel } from '@models/Chat'
 import { report } from '@helpers/report'
 import { isGroup } from '@helpers/isGroup'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
 const chatMemberCacheSeconds = 300
 
-export async function attachChatMember(ctx: ContextMessageUpdate, next) {
+export async function attachChatMember(ctx: Context, next) {
   // If not a group, no need to get the member
   if (!isGroup(ctx)) {
     ctx.isAdministrator = true

@@ -1,8 +1,8 @@
 import { report } from '@helpers/report'
 import { bot } from '@helpers/bot'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
-export async function deleteMessageSafe(ctx: ContextMessageUpdate) {
+export async function deleteMessageSafe(ctx: Context) {
   try {
     await ctx.deleteMessage()
   } catch (err) {

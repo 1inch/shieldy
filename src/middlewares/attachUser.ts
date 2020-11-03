@@ -1,7 +1,7 @@
 import { findChat } from '@models/Chat'
-import { ContextMessageUpdate } from 'telegraf'
+import { Context } from 'telegraf'
 
-export async function attachUser(ctx: ContextMessageUpdate, next) {
+export async function attachUser(ctx: Context, next) {
   // Just drop the update if there is no chat
   if (!ctx.chat) {
     return

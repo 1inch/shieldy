@@ -1,9 +1,9 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { checkLock } from '@middlewares/checkLock'
 import { strings } from '@helpers/strings'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
-export function setupDeleteGreetingTime(bot: Telegraf<ContextMessageUpdate>) {
+export function setupDeleteGreetingTime(bot: Telegraf<Context>) {
   bot.command('deleteGreetingTime', checkLock, async (ctx) => {
     // Check if limit is set
     const limitNumber =

@@ -1,14 +1,14 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
-export function setupViewConfig(bot: Telegraf<ContextMessageUpdate>) {
+export function setupViewConfig(bot: Telegraf<Context>) {
   bot.command('viewConfig', checkLock, async (ctx) => {
     await sendCurrentConfig(ctx)
   })
 }
 
-export async function sendCurrentConfig(ctx: ContextMessageUpdate) {
+export async function sendCurrentConfig(ctx: Context) {
   await ctx.replyWithMarkdown(
     `${strings(ctx.dbchat, 'viewConfig')}
 

@@ -1,13 +1,13 @@
 import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 import { report } from '@helpers/report'
 import { Candidate } from '@models/Chat'
 
-export function setupTrust(bot: Telegraf<ContextMessageUpdate>) {
+export function setupTrust(bot: Telegraf<Context>) {
   bot.command('trust', checkLock, async (ctx) => {
     // Check if it is a handle message
     const handle = ctx.message.text.substr(7).replace('@', '')

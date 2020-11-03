@@ -1649,10 +1649,10 @@ tall@^3.1.0:
     babel-loader "^8.1.0"
     core-js "^3.6.5"
 
-telegraf@^3.37.0:
-  version "3.37.0"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.37.0.tgz#f88ae3d4bddac6f479137d4c867489acf3f57b66"
-  integrity sha512-V3448qwfOolBqkIc87yxjW4zMvR2P6AIF24pPTlX9WhZPwA1TF/x3nQhnWPRLtGh2SJuvDcr83iTkXPXT7Opnw==
+telegraf@^3.38.0:
+  version "3.38.0"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.38.0.tgz#745b447547a8e6cdb626055e4d616058aaae0759"
+  integrity sha512-va4VlrKWp64JrowFoZX/NPzzA6q38kvaIukVXOWFO1V+jR1G8+hCfgJy4TX8Z3rwLJzwaBEet1QhikHDRZWl3A==
   dependencies:
     debug "^4.0.1"
     minimist "^1.2.0"

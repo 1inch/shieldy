@@ -2,7 +2,7 @@ import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { cloneDeep } from 'lodash'
 import { Equation, CaptchaType } from '@models/Chat'
 import { User } from 'telegram-typings'
-import { ContextMessageUpdate, Extra, Markup } from 'telegraf'
+import { Context, Extra, Markup } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getLink, getName, getUsername } from '@helpers/getUsername'
@@ -17,7 +17,7 @@ const promoAdditions = {
 const promoExceptions = [-1001007166727]
 
 export async function notifyCandidate(
-  ctx: ContextMessageUpdate,
+  ctx: Context,
   candidate: User,
   equation?: Equation,
   image?: { png: Buffer; text: string }

@@ -1,4 +1,4 @@
-import { Telegraf, ContextMessageUpdate, Extra } from 'telegraf'
+import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkIfFromReplier } from '@middlewares/checkIfFromReplier'
 import { checkLock } from '@middlewares/checkLock'
@@ -8,7 +8,7 @@ const options = [
   ['60', '120', '240'],
 ]
 
-export function setupTimeLimit(bot: Telegraf<ContextMessageUpdate>) {
+export function setupTimeLimit(bot: Telegraf<Context>) {
   bot.command('timeLimit', checkLock, async (ctx) => {
     // Check if limit is set
     const limitNumber =
