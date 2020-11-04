@@ -135,6 +135,9 @@ export class Chat {
   skipVerifiedUsers: boolean
   @prop({ type: MemberWrapper, required: true, default: [] })
   members: MemberWrapper[]
+
+  // mongo
+  _id?: string
 }
 
 // Get Chat model

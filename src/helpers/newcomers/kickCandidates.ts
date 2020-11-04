@@ -1,16 +1,12 @@
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { bot } from '@helpers/bot'
-import { DocumentType } from '@typegoose/typegoose'
 import { Chat, Candidate } from '@models/Chat'
 import { report } from '@helpers/report'
 import { addKickedUser } from '@helpers/newcomers/addKickedUser'
 import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
-export async function kickCandidates(
-  chat: DocumentType<Chat>,
-  candidates: Candidate[]
-) {
+export async function kickCandidates(chat: Chat, candidates: Candidate[]) {
   // Loop through candidates
   for (const candidate of candidates) {
     // Try kicking the candidate

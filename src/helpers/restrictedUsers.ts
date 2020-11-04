@@ -1,10 +1,9 @@
 import { report } from '@helpers/report'
 import { Chat, Candidate, ChatModel } from '@models/Chat'
 import { User } from 'telegraf/typings/telegram-types'
-import { DocumentType } from '@typegoose/typegoose'
 
 export async function modifyRestrictedUsers(
-  chat: DocumentType<Chat>,
+  chat: Chat,
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {
