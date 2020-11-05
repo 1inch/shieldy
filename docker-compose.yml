@@ -5,24 +5,39 @@ services:
     build: .
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_SHIELDY_DB: shieldyDB
       MONGO_SHIELDY_USERNAME: shieldyDBuser
-      MONGO_SHIELDY_PASSWORD: shieldyDBpassword
-      TOKEN: 111111111:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-      MONGO: mongodb://shieldyDBuser:shieldyDBpassword@mongo:27017/shieldyDB
-      ADMIN: 111111111
+      MONGO_SHIELDY_PASSWORD_FILE: /run/secrets/mongo_shieldy_password
+      MONGO_INITDB_DATABASE: shieldyDB
+      TOKEN_FILE: /run/secrets/shieldy_token
+      ADMIN: 658158536
+    secrets:
+      - shieldy_token
+      - mongo_shieldy_password
     depends_on:
-      - mongo
+      - wait-dependencies
   mongo:
     image: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo_admin_password
+      MONGO_SHIELDY_USERNAME: shieldyDBuser
+      MONGO_SHIELDY_PASSWORD_FILE: /run/secrets/mongo_shieldy_password
+      MONGO_INITDB_DATABASE: shieldyDB
+    secrets:
+      - mongo_admin_password
+      - mongo_shieldy_password
     volumes:
       - dbdata:/data/db
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
+  wait-dependencies:
+    image: willwill/wait-for-it:latest
+    depends_on:
+      - mongo
+    entrypoint: /bin/sh
+    command: >
+      -c "./wait-for-it.sh mongo:27017 --strict --timeout=1"
   # If database debugging is needed
   # mongo-express:
   #   image: mongo-express
@@ -34,5 +49,12 @@ services:
   #     ME_CONFIG_MONGODB_ADMINPASSWORD: example
   #   depends_on:
   #     - mongo
+secrets:
+  mongo_admin_password:
+    file: .secrets/mongo_admin_password.txt
+  mongo_shieldy_password:
+    file: .secrets/mongo_shieldy_password.txt
+  shieldy_token:
+    file: .secrets/shieldy_token.txt
 volumes:
   dbdata:
