@@ -9,10 +9,8 @@ import { getLink, getName, getUsername } from '@helpers/getUsername'
 import { isRuChat } from '@helpers/isRuChat'
 
 const promoAdditions = {
-  goldenBorodutch:
-    'Powered by <a href="https://t.me/golden_borodutch">Golden Borodutch</a>',
-  todorant:
-    'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>',
+  ru: 'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>',
+  en: 'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>',
 }
 const promoExceptions = [-1001007166727]
 
@@ -70,8 +68,7 @@ export async function notifyCandidate(
         messageToSend.entities
       )
       if (!promoExceptions.includes(ctx.chat.id)) {
-        const promoAddition =
-          promoAdditions[isRuChat(chat) ? 'goldenBorodutch' : 'todorant']
+        const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']
         formattedText = `${formattedText}\n${promoAddition}`
       }
       if (image) {
@@ -92,8 +89,7 @@ export async function notifyCandidate(
         message.text,
         message.entities
       )
-      const promoAddition =
-        promoAdditions[isRuChat(chat) ? 'goldenBorodutch' : 'todorant']
+      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']
       message.text = promoExceptions.includes(ctx.chat.id)
         ? `${getUsername(candidate)}\n\n${formattedText}`
         : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
@@ -116,8 +112,7 @@ export async function notifyCandidate(
     }
   } else {
     if (image) {
-      const promoAddition =
-        promoAdditions[isRuChat(chat) ? 'goldenBorodutch' : 'todorant']
+      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']
       return ctx.replyWithPhoto({ source: image.png } as any, {
         caption: promoExceptions.includes(ctx.chat.id)
           ? `<a href="tg://user?id=${candidate.id}">${getUsername(
@@ -135,8 +130,7 @@ export async function notifyCandidate(
         parse_mode: 'HTML',
       })
     } else {
-      const promoAddition =
-        promoAdditions[isRuChat(chat) ? 'goldenBorodutch' : 'todorant']
+      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']
       return ctx.replyWithMarkdown(
         promoExceptions.includes(ctx.chat.id)
           ? `${
