@@ -115,9 +115,13 @@ export async function handleNewChatMembers(ctx: Context) {
       candidatesToAdd.push(candidate)
     }
     // Add candidates to the list
-    modifyCandidates(ctx.dbchat, true, candidatesToAdd)
+    await modifyCandidates(ctx.dbchat, true, candidatesToAdd)
     // Restrict candidates if required
-    modifyRestrictedUsers(ctx.dbchat, true, candidatesToAdd)
+    await modifyRestrictedUsers(ctx.dbchat, true, candidatesToAdd)
+    // Delete all messages that they've sent so far
+    for (const member of candidatesToAdd) {
+      removeMessages(ctx.chat.id, member.id) // don't await here
+    }
   } catch (err) {
     console.error('onNewChatMembers', err)
   } finally {
