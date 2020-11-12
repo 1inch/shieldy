@@ -1,5 +1,5 @@
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
-import { prop, getModelForClass } from '@typegoose/typegoose'
+import { getModelForClass, prop } from '@typegoose/typegoose'
 
 export class CappedMessage {
   @prop({ required: true, index: true })
@@ -8,6 +8,8 @@ export class CappedMessage {
   from_id: number
   @prop({ required: true, index: true })
   chat_id: number
+  @prop({ default: Date.now, expires: '2m' })
+  createdAtForExpiry: Date
 }
 
 export const CappedMessageModel = getModelForClass(CappedMessage, {

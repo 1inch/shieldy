@@ -19,6 +19,7 @@ export function checkIfErrorDismissable(error: Error) {
     'message identifier is not specified',
     'demote chat creator',
     'USER_BANNED_IN_CHANNEL',
+    'Too Many Requests',
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
