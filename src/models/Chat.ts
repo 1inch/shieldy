@@ -170,6 +170,7 @@ export function findChatsWithCandidates() {
       id: 1,
       deleteEntryOnKick: 1,
       banUsers: 1,
+      timeGiven: 1,
     }
   )
 }
