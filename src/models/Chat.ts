@@ -160,9 +160,6 @@ export async function findChat(id: number) {
 
 export function findChatsWithCandidates() {
   return ChatModel.find({
-    $or: [
-      { 'candidates.0': { $exists: true } },
-      { 'restrictedUsers.0': { $exists: true } },
-    ],
+    $or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }],
   })
 }
