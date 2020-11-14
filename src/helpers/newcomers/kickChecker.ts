@@ -21,7 +21,12 @@ interface WorkerMessage {
 
 if (isMainThread) {
   // Create a worker and listen to users to kick
-  const worker = new Worker(__filename)
+  const worker = new Worker(__filename, {
+    resourceLimits: {
+      maxOldGenerationSizeMb: 4500,
+      maxYoungGenerationSizeMb: 4000,
+    },
+  })
   worker.on('error', console.error)
   worker.on('exit', (code) =>
     console.log(`Kicker checker process stopped with exit code ${code}`)
