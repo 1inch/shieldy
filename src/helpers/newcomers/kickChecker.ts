@@ -57,6 +57,7 @@ if (isMainThread) {
   async function check() {
     checking = true
     try {
+      console.log('Getting chats with candidates')
       const chats = await findChatsWithCandidates()
       console.log(`Found ${chats.length} chats with candidates`)
       for (const chat of chats) {
