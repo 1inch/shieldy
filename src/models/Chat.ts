@@ -159,7 +159,17 @@ export async function findChat(id: number) {
 }
 
 export function findChatsWithCandidates() {
-  return ChatModel.find({
-    $or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }],
-  })
+  return ChatModel.find(
+    {
+      $or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }],
+    },
+    {
+      candidates: 1,
+      restrictedUsers: 1,
+      _id: 1,
+      id: 1,
+      deleteEntryOnKick: 1,
+      banUsers: 1,
+    }
+  )
 }

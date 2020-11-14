@@ -10,6 +10,7 @@ import { report } from '@helpers/report'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { kickCandidates } from '@helpers/newcomers/kickCandidates'
 import { Chat } from '@models/Chat'
+import { pick } from 'lodash'
 
 let checking = false
 
@@ -58,9 +59,10 @@ if (isMainThread) {
     checking = true
     try {
       console.log('Getting chats with candidates')
-      return
       const chats = await findChatsWithCandidates()
+      console.log(chats[0])
       console.log(`Found ${chats.length} chats with candidates`)
+      return
       for (const chat of chats) {
         // Check candidates
         const candidatesToDelete = []
@@ -80,7 +82,11 @@ if (isMainThread) {
           parentPort.postMessage({
             type: 'candidates',
             items: JSON.parse(JSON.stringify(candidatesToDelete)),
-            chat: JSON.parse(JSON.stringify(chat)),
+            chat: JSON.parse(
+              JSON.stringify(
+                pick(chat, ['_id', 'id', 'deleteEntryOnKick', 'banUsers'])
+              )
+            ),
           })
         }
         // Check restricted users
@@ -97,7 +103,7 @@ if (isMainThread) {
           parentPort.postMessage({
             type: 'restricted',
             items: JSON.parse(JSON.stringify(restrictedToDelete)),
-            chat: JSON.parse(JSON.stringify(chat)),
+            chat: JSON.parse(JSON.stringify(pick(chat, ['_id', 'id']))),
           })
         }
       }
