@@ -58,9 +58,9 @@ if (isMainThread) {
     checking = true
     try {
       console.log('Getting chats with candidates')
+      return
       const chats = await findChatsWithCandidates()
       console.log(`Found ${chats.length} chats with candidates`)
-      return
       for (const chat of chats) {
         // Check candidates
         const candidatesToDelete = []

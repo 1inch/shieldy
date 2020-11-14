@@ -97,9 +97,9 @@ export class Chat {
   noChannelLinks: boolean
   @prop({ required: true, default: false })
   deleteEntryMessages: boolean
-  @prop({ type: Candidate, default: [] })
+  @prop({ type: Candidate, default: [], index: true })
   candidates: Candidate[]
-  @prop({ type: Candidate, default: [] })
+  @prop({ type: Candidate, default: [], index: true })
   restrictedUsers: Candidate[]
   @prop({ required: true, default: false })
   greetsUsers: boolean
