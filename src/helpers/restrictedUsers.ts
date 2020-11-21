@@ -9,6 +9,11 @@ export async function modifyRestrictedUsers(
 ) {
   try {
     if (add) {
+      console.log(
+        `Addind restricted users to`,
+        chat._id,
+        JSON.stringify(candidatesAndUsers)
+      )
       await ChatModel.updateOne(
         { _id: chat._id },
         { $push: { restrictedUsers: candidatesAndUsers } }
