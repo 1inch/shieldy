@@ -17,6 +17,9 @@ export async function messageSaver(ctx: Context, next) {
 }
 
 async function saveMessage(ctx: Context) {
+  if (ctx.update.message?.new_chat_members) {
+    return
+  }
   await new CappedMessageModel({
     message_id: ctx.update.message.message_id,
     from_id: ctx.update.message.from.id,
