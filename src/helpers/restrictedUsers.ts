@@ -12,7 +12,11 @@ export async function modifyRestrictedUsers(
       console.log(
         `Addind restricted users to`,
         chat._id,
-        JSON.stringify(candidatesAndUsers.map((c) => (c as any).captchaType))
+        JSON.stringify(
+          candidatesAndUsers.map(
+            (c) => (c as any).captchaType || 'no captcha type'
+          )
+        )
       )
       await ChatModel.updateOne(
         { _id: chat._id },
