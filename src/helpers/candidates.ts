@@ -12,7 +12,7 @@ export async function modifyCandidates(
       console.log(
         `Addind candidates to`,
         chat._id,
-        JSON.stringify(candidatesAndUsers)
+        JSON.stringify(candidatesAndUsers.map((c) => (c as any).captchaType))
       )
       await ChatModel.updateOne(
         { _id: chat._id },
