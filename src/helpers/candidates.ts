@@ -7,6 +7,9 @@ export async function modifyCandidates(
   add: boolean,
   candidatesAndUsers: Array<Candidate | User>
 ) {
+  if (!candidatesAndUsers.length) {
+    return
+  }
   try {
     if (add) {
       console.log(
