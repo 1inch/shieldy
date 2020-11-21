@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings, localizations } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
@@ -9,7 +10,7 @@ export function setupGreetingButtons(bot: Telegraf<Context>) {
   bot.command('greetingButtons', checkLock, async (ctx) => {
     let chat = ctx.dbchat
     chat.greetsUsers = !chat.greetsUsers
-    chat = await chat.save()
+    await saveChatProperty(chat, 'greetsUsers')
     await ctx.replyWithMarkdown(
       `${strings(ctx.dbchat, 'greetingButtons')}`,
       Extra.inReplyTo(ctx.message.message_id).webPreview(false)
@@ -60,7 +61,7 @@ export function setupGreetingButtons(bot: Telegraf<Context>) {
         if (parts.length !== 2) {
           // Default
           ctx.dbchat.greetingButtons = undefined
-          await ctx.dbchat.save()
+          await saveChatProperty(ctx.dbchat, 'greetingButtons')
           return
         } else {
           result.push(component)
@@ -68,7 +69,7 @@ export function setupGreetingButtons(bot: Telegraf<Context>) {
       }
       // Save text
       ctx.dbchat.greetingButtons = result.join('\n')
-      await ctx.dbchat.save()
+      await saveChatProperty(ctx.dbchat, 'greetingButtons')
       ctx.reply(
         strings(ctx.dbchat, 'greetsUsers_message_accepted'),
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage

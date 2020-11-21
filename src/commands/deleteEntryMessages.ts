@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
@@ -6,7 +7,7 @@ export function setupDeleteEntryMessages(bot: Telegraf<Context>) {
   bot.command('deleteEntryMessages', checkLock, async (ctx) => {
     let chat = ctx.dbchat
     chat.deleteEntryMessages = !chat.deleteEntryMessages
-    chat = await chat.save()
+    await saveChatProperty(chat, 'deleteEntryMessages')
     ctx.replyWithMarkdown(
       strings(
         ctx.dbchat,

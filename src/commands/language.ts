@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { Language } from '@models/Chat'
@@ -92,7 +93,7 @@ export function setupLanguage(bot: Telegraf<Context>) {
     async (ctx) => {
       let chat = ctx.dbchat
       chat.language = ctx.callbackQuery.data as Language
-      chat = await chat.save()
+      await saveChatProperty(chat, 'language')
       const message = ctx.callbackQuery.message
 
       ctx.telegram.editMessageText(

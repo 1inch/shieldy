@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { checkLock } from '@middlewares/checkLock'
 import { strings } from '@helpers/strings'
@@ -11,14 +12,14 @@ export function setupDeleteGreetingTime(bot: Telegraf<Context>) {
       +ctx.message.text.substr(20 + (bot as any).options.username.length).trim()
     if (!isNaN(limitNumber) && limitNumber > 0 && limitNumber < 100000) {
       ctx.dbchat.deleteGreetingTime = limitNumber
-      await ctx.dbchat.save()
+      await saveChatProperty(ctx.dbchat, 'deleteGreetingTime')
       ctx.reply(
         strings(ctx.dbchat, 'greetsUsers_message_accepted'),
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
       )
     } else {
       ctx.dbchat.deleteGreetingTime = undefined
-      await ctx.dbchat.save()
+      await saveChatProperty(ctx.dbchat, 'deleteGreetingTime')
       ctx.reply(
         `${strings(ctx.dbchat, 'greetsUsers_message_accepted')} 0`,
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage

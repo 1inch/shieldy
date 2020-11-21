@@ -12,15 +12,6 @@ export async function modifyCandidates(
   }
   try {
     if (add) {
-      console.log(
-        `Addind candidates to`,
-        chat._id,
-        JSON.stringify(
-          candidatesAndUsers.map(
-            (c) => (c as any).captchaType || 'no captcha type'
-          )
-        )
-      )
       await ChatModel.updateOne(
         { _id: chat._id },
         { $push: { candidates: candidatesAndUsers } }

@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkIfFromReplier } from '@middlewares/checkIfFromReplier'
@@ -25,7 +26,7 @@ export function setupCaptcha(bot: Telegraf<Context>) {
     async (ctx) => {
       let chat = ctx.dbchat
       chat.captchaType = ctx.callbackQuery.data as CaptchaType
-      chat = await chat.save()
+      await saveChatProperty(chat, 'captchaType')
       const message = ctx.callbackQuery.message
 
       ctx.telegram.editMessageText(

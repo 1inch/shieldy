@@ -12,15 +12,6 @@ export async function modifyRestrictedUsers(
   }
   try {
     if (add) {
-      console.log(
-        `Addind restricted users to`,
-        chat._id,
-        JSON.stringify(
-          candidatesAndUsers.map(
-            (c) => (c as any).captchaType || 'no captcha type'
-          )
-        )
-      )
       await ChatModel.updateOne(
         { _id: chat._id },
         { $push: { restrictedUsers: candidatesAndUsers } }

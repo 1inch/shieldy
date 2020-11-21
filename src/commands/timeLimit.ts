@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkIfFromReplier } from '@middlewares/checkIfFromReplier'
@@ -17,7 +18,7 @@ export function setupTimeLimit(bot: Telegraf<Context>) {
     if (!isNaN(limitNumber) && limitNumber > 0 && limitNumber < 100000) {
       let chat = ctx.dbchat
       chat.timeGiven = limitNumber
-      chat = await chat.save()
+      await saveChatProperty(chat, 'timeGiven')
       return ctx.replyWithMarkdown(
         `${strings(chat, 'time_limit_selected')} (${chat.timeGiven} ${strings(
           chat,
@@ -46,7 +47,7 @@ export function setupTimeLimit(bot: Telegraf<Context>) {
     async (ctx) => {
       let chat = ctx.dbchat
       chat.timeGiven = Number(ctx.callbackQuery.data)
-      chat = await chat.save()
+      await saveChatProperty(chat, 'timeGiven')
       const message = ctx.callbackQuery.message
 
       ctx.telegram.editMessageText(

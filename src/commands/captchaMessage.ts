@@ -1,3 +1,4 @@
+import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings, localizations } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
@@ -9,7 +10,7 @@ export function setupCaptchaMessage(bot: Telegraf<Context>) {
   bot.command('customCaptchaMessage', checkLock, async (ctx) => {
     let chat = ctx.dbchat
     chat.customCaptchaMessage = !chat.customCaptchaMessage
-    chat = await chat.save()
+    await saveChatProperty(chat, 'customCaptchaMessage')
     await ctx.replyWithMarkdown(
       strings(
         ctx.dbchat,
@@ -67,7 +68,7 @@ export function setupCaptchaMessage(bot: Telegraf<Context>) {
       ctx.dbchat.captchaMessage = {
         message: ctx.message,
       }
-      await ctx.dbchat.save()
+      await saveChatProperty(ctx.dbchat, 'captchaMessage')
       ctx.reply(
         strings(ctx.dbchat, 'greetsUsers_message_accepted'),
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
