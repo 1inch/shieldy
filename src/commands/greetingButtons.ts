@@ -8,9 +8,6 @@ import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 export function setupGreetingButtons(bot: Telegraf<Context>) {
   // Setup command
   bot.command('greetingButtons', checkLock, async (ctx) => {
-    let chat = ctx.dbchat
-    chat.greetsUsers = !chat.greetsUsers
-    await saveChatProperty(chat, 'greetsUsers')
     await ctx.replyWithMarkdown(
       `${strings(ctx.dbchat, 'greetingButtons')}`,
       Extra.inReplyTo(ctx.message.message_id).webPreview(false)
