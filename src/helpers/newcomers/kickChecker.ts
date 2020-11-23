@@ -56,7 +56,7 @@ if (isMainThread) {
     if (!checking) {
       check()
     }
-  }, 15 * 1000)
+  }, 30 * 1000)
 
   async function check() {
     checking = true
