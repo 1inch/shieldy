@@ -12,8 +12,6 @@ import { kickCandidates } from '@helpers/newcomers/kickCandidates'
 import { Chat } from '@models/Chat'
 import { pick } from 'lodash'
 
-let checking = false
-
 interface WorkerMessage {
   type: 'candidates' | 'restricted'
   items: any[]
@@ -48,8 +46,13 @@ if (isMainThread) {
     }
   })
 } else {
+  let checking = false
   // Check candidates and tell parent to kick them
   setInterval(async () => {
+    console.log(
+      'Trying to check candidates, current checking status is',
+      checking
+    )
     if (!checking) {
       check()
     }
