@@ -20,7 +20,11 @@ export async function handleButtonPress(ctx: Context) {
     const userId = parseInt(params[1])
     // Check if button is pressed by the candidate
     if (userId !== ctx.from.id) {
-      ctx.answerCbQuery(strings(ctx.dbchat, 'only_candidate_can_reply'))
+      try {
+        await ctx.answerCbQuery(strings(ctx.dbchat, 'only_candidate_can_reply'))
+      } catch {
+        // Do nothing
+      }
       return
     }
     // Check if this user is within candidates

@@ -1,7 +1,7 @@
 import { Context } from 'telegraf'
 import { strings } from '@helpers/strings'
 
-export function checkIfFromReplier(ctx: Context, next: () => any) {
+export async function checkIfFromReplier(ctx: Context, next: () => any) {
   if (
     ctx.callbackQuery &&
     ctx.callbackQuery.message &&
@@ -19,7 +19,11 @@ export function checkIfFromReplier(ctx: Context, next: () => any) {
       return
     }
     if (ctx.callbackQuery.from.id !== message.reply_to_message.from.id) {
-      ctx.answerCbQuery(strings(ctx.dbchat, 'only_author_can_reply'))
+      try {
+        await ctx.answerCbQuery(strings(ctx.dbchat, 'only_author_can_reply'))
+      } catch {
+        // Do nothing
+      }
       return
     }
   }
