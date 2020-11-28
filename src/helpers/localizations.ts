@@ -687,8 +687,7 @@ export const localizations = {
       ', אנא לשלוח את התווים המוצגים במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
     no:
       ', vennligst send tegnene som vises på bildet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    yue:
-      '，唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
+    yue: '，唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -1308,13 +1307,11 @@ export const localizations = {
     br: 'Boa! Shieldy não vai kickar todos que entram neste bate-papo.',
     he: 'מעולה! Shieldy לא ירחיק את כל מי שנכנס לשיחוח.',
     no: 'Supert! Shieldy vil ikke sparke alle som blir med i chatten.',
-    yue: '好。Shieldy 而家唔會再踢走所有嘗試入羣嘅人。',
+    yue: '好。Shieldy 而家唔會再踢除所有嘗試入 group 嘅人。',
   },
   noAttack_true: {
     en:
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
-    ru:
-      'Отлично! Теперь Щилди отключен. Не забудьте включить его назад командой /noAttack.',
     es:
       '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
     ca:
@@ -1326,6 +1323,8 @@ export const localizations = {
       'Supert! Nå er Shieldy deaktivert. Ikke glem å slå av denne modusen med /noAttack.',
     yue:
       'Shieldy 經已畀停用。要重新使用 Shieldy，請用 /noAttack 停用當前模式。',
+    ru:
+      'Отлично! Щилди отключён. Не забудьте снова включить его командой /noAttack.',
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
