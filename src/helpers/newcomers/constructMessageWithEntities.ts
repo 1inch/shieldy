@@ -13,6 +13,13 @@ export function constructMessageWithEntities(
       const tag_value = tags[tag]
       const tag_offset = originalText.indexOf(tag)
 
+      const tag_length = (
+        tag.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []
+      ).length
+      const tag_value_length = (
+        tag_value.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []
+      ).length
+
       // Replace the tag with the value in the message
       originalText = originalText.replace(tag, tag_value)
 
@@ -20,7 +27,7 @@ export function constructMessageWithEntities(
       if (message.entities && message.entities.length) {
         message.entities.forEach((msgEntity) => {
           if (msgEntity.offset > tag_offset) {
-            msgEntity.offset = msgEntity.offset - tag.length + tag_value.length
+            msgEntity.offset = msgEntity.offset - tag_length + tag_value_length
           }
         })
       }
@@ -31,7 +38,7 @@ export function constructMessageWithEntities(
         message.entities.push({
           type: 'text_link',
           offset: tag_offset,
-          length: tag_value.length,
+          length: tag_value_length,
           url: userLink,
         })
       }
