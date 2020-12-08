@@ -9,8 +9,10 @@ import { getLink, getName, getUsername } from '@helpers/getUsername'
 import { isRuChat } from '@helpers/isRuChat'
 
 const promoAdditions = {
-  ru: 'При поддержке <a href="https://todorant.com/?ref=shieldy">Тудуранта</a>',
-  en: 'Powered by <a href="https://todorant.com/?ref=shieldy">Todorant</a>',
+  ru:
+    'При поддержке <a href="https://todorant.com/?utm_source=shieldy">Тудуранта</a>',
+  en:
+    'Powered by <a href="https://todorant.com/?utm_source=shieldy">Todorant</a>',
 }
 const promoExceptions = [-1001007166727]
 
