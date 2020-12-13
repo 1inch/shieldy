@@ -14,7 +14,10 @@ export async function kickCandidates(chat: Chat, candidates: Candidate[]) {
   // Loop through candidates
   for (const candidate of candidates) {
     // Check if they are already being kicked
-    if (chatMembersBeingKicked[chat.id][candidate.id]) {
+    if (
+      chatMembersBeingKicked[chat.id] &&
+      chatMembersBeingKicked[chat.id][candidate.id]
+    ) {
       console.log(
         `${candidate.id} in ${chat.id} is already being kicked, skipping`
       )
@@ -51,11 +54,16 @@ async function kickChatMemberProxy(
   duration: number
 ) {
   try {
+    if (!chatMembersBeingKicked[id]) {
+      chatMembersBeingKicked[id] = {}
+    }
     chatMembersBeingKicked[id][candidateId] = true
     await bot.telegram.kickChatMember(id, candidateId, duration)
   } catch (err) {
     report(err)
   } finally {
-    delete chatMembersBeingKicked[id][candidateId]
+    if (chatMembersBeingKicked[id] && chatMembersBeingKicked[id][candidateId]) {
+      delete chatMembersBeingKicked[id][candidateId]
+    }
   }
 }
