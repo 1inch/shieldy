@@ -6,9 +6,20 @@ import { addKickedUser } from '@helpers/newcomers/addKickedUser'
 import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 
+const chatMembersBeingKicked = {} as {
+  [index: number]: { [index: number]: boolean }
+}
+
 export async function kickCandidates(chat: Chat, candidates: Candidate[]) {
   // Loop through candidates
   for (const candidate of candidates) {
+    // Check if they are already being kicked
+    if (chatMembersBeingKicked[chat.id][candidate.id]) {
+      console.log(
+        `${candidate.id} in ${chat.id} is already being kicked, skipping`
+      )
+      continue
+    }
     // Try kicking the candidate
     try {
       addKickedUser(chat, candidate.id)
@@ -40,8 +51,11 @@ async function kickChatMemberProxy(
   duration: number
 ) {
   try {
+    chatMembersBeingKicked[id][candidateId] = true
     await bot.telegram.kickChatMember(id, candidateId, duration)
   } catch (err) {
     report(err)
+  } finally {
+    delete chatMembersBeingKicked[id][candidateId]
   }
 }
