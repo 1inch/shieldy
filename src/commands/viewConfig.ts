@@ -11,14 +11,12 @@ export function setupViewConfig(bot: Telegraf<Context>) {
         let chatId: number | undefined
         if (!isNaN(+secondPart)) {
           chatId = +secondPart
-        } else {
-          const telegramChat = await ctx.telegram.getChat(
-            secondPart.substr(secondPart.startsWith('@') ? 1 : 0)
-          )
+        } else if (secondPart.startsWith('@')) {
+          const telegramChat = await ctx.telegram.getChat(secondPart)
           chatId = telegramChat.id
         }
         if (chatId) {
-          const chat = await findChat(+secondPart)
+          const chat = await findChat(chatId)
           return sendCurrentConfig(ctx, chat)
         }
       } catch (err) {
