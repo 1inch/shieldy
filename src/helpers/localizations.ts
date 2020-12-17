@@ -1505,6 +1505,7 @@ export const localizations = {
     no: 'Ingen knapper',
     yue: '冇掣',
     hu: 'Nincsenek gombok',
+    fi: 'Ei painikkeita',
   },
   skipOldUsers_true: {
     en: "Nice! Old Telegram users won't get asked to pass captcha anymore!",
@@ -1540,5 +1541,9 @@ export const localizations = {
       'Пожалуйста, пришлите команду /setConfig в следующем формате:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nВы можете использовать информацию из /viewConfig.',
     hu:
       'Kérlek, küld a /setConfig parancsot a következő formában:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nHasználhatod a /viewConfig alapján adott választ a konfigurációban.',
+  },
+  noChatFound: {
+    en: 'Chat not found',
+    ru: 'Чат не найден',
   },
 }

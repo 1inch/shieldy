@@ -1,53 +1,72 @@
+import { findChat, Chat } from '@models/Chat'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
 export function setupViewConfig(bot: Telegraf<Context>) {
   bot.command('viewConfig', checkLock, async (ctx) => {
-    await sendCurrentConfig(ctx)
+    const secondPart = ctx.message.text.split(' ')[1]
+    if (secondPart) {
+      try {
+        let chatId: number | undefined
+        if (!isNaN(+secondPart)) {
+          chatId = +secondPart
+        } else if (secondPart.startsWith('@')) {
+          const telegramChat = await ctx.telegram.getChat(secondPart)
+          chatId = telegramChat.id
+        }
+        if (chatId) {
+          const chat = await findChat(+secondPart)
+          return sendCurrentConfig(ctx, chat)
+        }
+      } catch (err) {
+        return ctx.reply(strings(ctx.dbchat, 'noChatFound'))
+      }
+    }
+    await sendCurrentConfig(ctx, ctx.dbchat)
   })
 }
 
-export async function sendCurrentConfig(ctx: Context) {
+export async function sendCurrentConfig(ctx: Context, chat: Chat) {
   await ctx.replyWithMarkdown(
     `${strings(ctx.dbchat, 'viewConfig')}
 
-id: <code>${ctx.dbchat.id}</code>
-language: <code>${ctx.dbchat.language}</code>
-captchaType: <code>${ctx.dbchat.captchaType}</code>
-timeGiven: <code>${ctx.dbchat.timeGiven}</code>
-adminLocked: <code>${ctx.dbchat.adminLocked}</code>
-restrict: <code>${ctx.dbchat.restrict}</code>
-noChannelLinks: <code>${ctx.dbchat.noChannelLinks}</code>
-deleteEntryMessages: <code>${ctx.dbchat.deleteEntryMessages}</code>
-greetsUsers: <code>${ctx.dbchat.greetsUsers}</code>
-customCaptchaMessage: <code>${ctx.dbchat.customCaptchaMessage}</code>
-strict: <code>${ctx.dbchat.strict}</code>
-deleteGreetingTime: <code>${ctx.dbchat.deleteGreetingTime || 0}</code>
-banUsers: <code>${ctx.dbchat.banUsers}</code>
-deleteEntryOnKick: <code>${ctx.dbchat.deleteEntryOnKick}</code>
-cas: <code>${ctx.dbchat.cas}</code>
-underAttack: <code>${ctx.dbchat.underAttack}</code>
-noAttack: <code>${ctx.dbchat.noAttack}</code>
-buttonText: <code>${ctx.dbchat.buttonText || 'Not set'}</code>
-allowInvitingBots: <code>${ctx.dbchat.allowInvitingBots}</code>
-skipOldUsers: <code>${ctx.dbchat.skipOldUsers}</code>
-skipVerifiedUsers: <code>${ctx.dbchat.skipVerifiedUsers}</code>
+id: <code>${chat.id}</code>
+language: <code>${chat.language}</code>
+captchaType: <code>${chat.captchaType}</code>
+timeGiven: <code>${chat.timeGiven}</code>
+adminLocked: <code>${chat.adminLocked}</code>
+restrict: <code>${chat.restrict}</code>
+noChannelLinks: <code>${chat.noChannelLinks}</code>
+deleteEntryMessages: <code>${chat.deleteEntryMessages}</code>
+greetsUsers: <code>${chat.greetsUsers}</code>
+customCaptchaMessage: <code>${chat.customCaptchaMessage}</code>
+strict: <code>${chat.strict}</code>
+deleteGreetingTime: <code>${chat.deleteGreetingTime || 0}</code>
+banUsers: <code>${chat.banUsers}</code>
+deleteEntryOnKick: <code>${chat.deleteEntryOnKick}</code>
+cas: <code>${chat.cas}</code>
+underAttack: <code>${chat.underAttack}</code>
+noAttack: <code>${chat.noAttack}</code>
+buttonText: <code>${chat.buttonText || 'Not set'}</code>
+allowInvitingBots: <code>${chat.allowInvitingBots}</code>
+skipOldUsers: <code>${chat.skipOldUsers}</code>
+skipVerifiedUsers: <code>${chat.skipVerifiedUsers}</code>
 greetingButtons:
-<code>${ctx.dbchat.greetingButtons || 'Not set'}</code>`,
+<code>${chat.greetingButtons || 'Not set'}</code>`,
     Extra.inReplyTo(ctx.message.message_id).HTML(true)
   )
-  if (ctx.dbchat.greetingMessage) {
+  if (chat.greetingMessage) {
     await ctx.telegram.sendCopy(
-      ctx.dbchat.id,
-      ctx.dbchat.greetingMessage.message,
+      chat.id,
+      chat.greetingMessage.message,
       Extra.inReplyTo(ctx.message.message_id)
     )
   }
-  if (ctx.dbchat.captchaMessage) {
+  if (chat.captchaMessage) {
     await ctx.telegram.sendCopy(
-      ctx.dbchat.id,
-      ctx.dbchat.captchaMessage.message,
+      chat.id,
+      chat.captchaMessage.message,
       Extra.inReplyTo(ctx.message.message_id)
     )
   }
