@@ -58,14 +58,14 @@ greetingButtons:
   )
   if (chat.greetingMessage) {
     await ctx.telegram.sendCopy(
-      chat.id,
+      ctx.dbchat.id,
       chat.greetingMessage.message,
       Extra.inReplyTo(ctx.message.message_id)
     )
   }
   if (chat.captchaMessage) {
     await ctx.telegram.sendCopy(
-      chat.id,
+      ctx.dbchat.id,
       chat.captchaMessage.message,
       Extra.inReplyTo(ctx.message.message_id)
     )
