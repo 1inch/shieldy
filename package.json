@@ -14,8 +14,8 @@
     "watch-ts": "tsc -w --skipLibCheck",
     "watch-js-bot": "nodemon dist/index.js",
     "watch-js-kicker": "nodemon dist/kickChecker.js",
-    "start-bot": "node --max-old-space-size=3000 dist/index.js -- bot",
-    "start-kicker": "node --max-old-space-size=5000 dist/kickChecker.js -- kicker",
+    "start-bot": "node --max-old-space-size=3000 dist/index.js",
+    "start-kicker": "node --max-old-space-size=5000 dist/kickChecker.js",
     "upload-translations": "node scripts/upload.js",
     "download-translations": "node scripts/download.js && yarn prettier --single-quote --no-semi --write ./src/helpers/localizations.ts"
   },
