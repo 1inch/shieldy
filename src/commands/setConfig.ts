@@ -152,7 +152,7 @@ export function setupSetConfig(bot: Telegraf<Context>) {
         '👍',
         Extra.inReplyTo(ctx.message.message_id).HTML(true) as ExtraReplyMessage
       )
-      await sendCurrentConfig(ctx)
+      await sendCurrentConfig(ctx, ctx.dbchat)
     } catch (err) {
       await ctx.reply(
         '👎',

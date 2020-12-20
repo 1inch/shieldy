@@ -1,17 +1,9 @@
-import { kickedIds } from '@helpers/newcomers/kikedIds'
 import { Chat } from '@models/Chat'
+import { CappedKickedUserModel } from '@models/CappedKickedUser'
 
-export function addKickedUser(chat: Chat, urerId: number) {
+export function addKickedUser(chat: Chat, userId: number) {
   if (!chat.deleteEntryOnKick) {
     return
   }
-  try {
-    if (kickedIds[chat.id]) {
-      kickedIds[chat.id].push(urerId)
-    } else {
-      kickedIds[chat.id] = [urerId]
-    }
-  } catch (err) {
-    // Do nothing
-  }
+  return new CappedKickedUserModel({ chatId: chat.id, userId }).save()
 }

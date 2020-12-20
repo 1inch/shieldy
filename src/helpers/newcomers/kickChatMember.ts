@@ -10,7 +10,7 @@ import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 export async function kickChatMember(chat: DocumentType<Chat>, user: User) {
   // Try kicking the member
   try {
-    addKickedUser(chat, user.id)
+    await addKickedUser(chat, user.id)
     await bot.telegram.kickChatMember(
       chat.id,
       user.id,

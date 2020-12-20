@@ -25,7 +25,7 @@ export async function kickCandidates(chat: Chat, candidates: Candidate[]) {
     }
     // Try kicking the candidate
     try {
-      addKickedUser(chat, candidate.id)
+      await addKickedUser(chat, candidate.id)
       kickChatMemberProxy(
         chat.id,
         candidate.id,

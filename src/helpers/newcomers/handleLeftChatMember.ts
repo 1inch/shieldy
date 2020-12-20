@@ -1,17 +1,19 @@
+import { CappedKickedUserModel } from '@models/CappedKickedUser'
 import { ChatModel } from '@models/Chat'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
-import { kickedIds } from '@helpers/newcomers/kikedIds'
 import { Context } from 'telegraf'
 
 export async function handleLeftChatMember(ctx: Context) {
+  // Check if this user got kicked
+  const userWasKicked = !!(await CappedKickedUserModel.findOne({
+    chatId: ctx.dbchat.id,
+    userId: ctx.message.left_chat_member.id,
+  }))
   // Delete left message if required
   if (
     ctx.dbchat.deleteEntryMessages ||
     ctx.dbchat.underAttack ||
-    (ctx.dbchat.deleteEntryOnKick &&
-      (kickedIds[ctx.dbchat.id] || []).includes(
-        ctx.message.left_chat_member.id
-      ))
+    (ctx.dbchat.deleteEntryOnKick && userWasKicked)
   ) {
     deleteMessageSafe(ctx)
     return
