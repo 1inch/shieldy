@@ -3,7 +3,8 @@ import axios from 'axios'
 let over10000 = true
 
 export function isOver10000() {
-  return over10000
+  return false
+  // return over10000
 }
 
 setInterval(async () => {
