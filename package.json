@@ -8,14 +8,16 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "distribute": "(yarn build-ts || true) && concurrently -k -p \"[{name}]\" -n \"Bot, Kicker\" -c \"yellow.bold,cyan.bold\" \"yarn start-bot\" \"yarn start-kicker\"",
-    "develop": "concurrently -i -k -p \"[{name}]\" -n \"Bot, Kicker, TypeScript\" -c \"yellow.bold,blue.bold,cyan.bold\" \"yarn watch-js-bot\" \"yarn watch-js-kicker\" \"yarn watch-ts\"",
+    "distribute": "(yarn build-ts || true) && concurrently -k -p \"[{name}]\" -n \"Bot,Kicker,Deleter\" -c \"yellow.bold,cyan.bold,blue.bold\" \"yarn start-bot\" \"yarn start-kicker\" \"yarn start-deleter\"",
+    "develop": "concurrently -i -k -p \"[{name}]\" -n \"Bot,Kicker,Deleter,TypeScript\" -c \"yellow.bold,blue.bold,green.bold,cyan.bold\" \"yarn watch-js-bot\" \"yarn watch-js-kicker\" \"yarn watch-js-deleter\" \"yarn watch-ts\"",
     "build-ts": "tsc --skipLibCheck",
     "watch-ts": "tsc -w --skipLibCheck",
     "watch-js-bot": "nodemon dist/index.js",
     "watch-js-kicker": "nodemon dist/kickChecker.js",
+    "watch-js-deleter": "nodemon dist/messageDeleter.js",
     "start-bot": "node --max-old-space-size=4000 dist/index.js",
     "start-kicker": "node --max-old-space-size=4000 dist/kickChecker.js",
+    "start-deleter": "node dist/messageDeleter.js",
     "upload-translations": "node scripts/upload.js",
     "download-translations": "node scripts/download.js && yarn prettier --single-quote --no-semi --write ./src/helpers/localizations.ts"
   },

@@ -1,10 +1,10 @@
-import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { Message } from 'telegram-typings'
 import { isFunction } from 'lodash'
 import { User } from 'telegraf/typings/telegram-types'
 import { Context, Extra } from 'telegraf'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getLink, getName, getUsername } from '@helpers/getUsername'
+import { MessageToDeleteModel } from '@models/MessageToDelete'
 
 export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   // Get the user (it can be function if used as middleware in telegraf)
@@ -86,8 +86,14 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
 
   // Delete greeting message if requested
   if (ctx.dbchat.deleteGreetingTime && messageSent) {
-    setTimeout(async () => {
-      deleteMessageSafeWithBot(messageSent.chat.id, messageSent.message_id)
-    }, ctx.dbchat.deleteGreetingTime * 1000)
+    const deleteTime = new Date()
+    deleteTime.setSeconds(
+      deleteTime.getSeconds() + ctx.dbchat.deleteGreetingTime
+    )
+    new MessageToDeleteModel({
+      chat_id: messageSent.chat.id,
+      message_id: messageSent.message_id,
+      deleteAt: deleteTime,
+    }).save()
   }
 }
