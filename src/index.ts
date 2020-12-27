@@ -37,12 +37,9 @@ import { setupGreetingButtons } from '@commands/greetingButtons'
 import { setupSkipOldUsers } from '@commands/skipOldUsers'
 import { setupSkipVerifiedUsers } from '@commands/skipVerifiedUsers'
 import { setupSetConfig } from '@commands/setConfig'
-import { logTimeReceived } from '@middlewares/logTimeReceived'
 import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 
-// Track time
-bot.use(logTimeReceived)
 // Ignore all messages that are too old
 bot.use(checkTime)
 // Add chat to context
