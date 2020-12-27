@@ -40,6 +40,10 @@ import { setupSetConfig } from '@commands/setConfig'
 import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 
+// Make the bot async
+bot.use((_, next) => {
+  next()
+})
 // Ignore all messages that are too old
 bot.use(checkTime)
 // Add chat to context
