@@ -17,7 +17,19 @@ const promoAdditions = {
   en: () =>
     'Powered by <a href="https://todorant.com/?utm_source=shieldy">Todorant</a>',
 }
-const promoExceptions = [-1001007166727]
+const promoExceptions = [
+  -1001007166727,
+
+  -1001295782139,
+  -1001233073874,
+  -1001060565714,
+  -1001070350591,
+  -1001098630768,
+  -1001145658234,
+  -1001271442507,
+  -1001286547060,
+  -1001093535082,
+]
 
 export async function notifyCandidate(
   ctx: Context,
