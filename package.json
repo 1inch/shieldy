@@ -15,7 +15,7 @@
     "watch-js-bot": "nodemon dist/index.js",
     "watch-js-kicker": "nodemon dist/kickChecker.js",
     "watch-js-deleter": "nodemon dist/messageDeleter.js",
-    "start-bot": "node --max-old-space-size=12000 dist/index.js --inspect",
+    "start-bot": "node --max-old-space-size=12000 dist/index.js",
     "start-kicker": "node --max-old-space-size=4000 dist/kickChecker.js",
     "start-deleter": "node dist/messageDeleter.js",
     "upload-translations": "node scripts/upload.js",
