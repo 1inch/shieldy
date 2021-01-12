@@ -40,19 +40,9 @@ import { setupSetConfig } from '@commands/setConfig'
 import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 
-let times = []
-setInterval(() => {
-  const tempTimes = times
-  times = []
-  const avg = tempTimes.reduce((a, b) => a + b, 0) / tempTimes.length
-  if (!isNaN(avg)) {
-    console.log(avg.toFixed(2))
-  }
-}, 1000)
-
 bot.use((ctx, next) => {
   if (ctx.update.message?.date) {
-    times.push(Date.now() / 1000 - ctx.update.message?.date)
+    console.log(Date.now() / 1000 - ctx.update.message?.date)
   }
   return next()
 })
