@@ -41,8 +41,8 @@ import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 
 bot.use((ctx, next) => {
-  if (ctx.update.message?.date) {
-    console.log(Date.now() / 1000 - ctx.update.message?.date)
+  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
+    console.log('Got help', Date.now() / 1000 - ctx.update.message?.date)
   }
   return next()
 })
