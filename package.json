@@ -12,7 +12,7 @@
     "develop": "concurrently -i -k -p \"[{name}]\" -n \"Bot,Kicker,Deleter,TypeScript\" -c \"yellow.bold,blue.bold,green.bold,cyan.bold\" \"yarn watch-js-bot\" \"yarn watch-js-kicker\" \"yarn watch-js-deleter\" \"yarn watch-ts\"",
     "build-ts": "tsc --skipLibCheck",
     "watch-ts": "tsc -w --skipLibCheck",
-    "watch-js-bot": "nodemon dist/index.js",
+    "watch-js-bot": "nodemon --inspect dist/index.js",
     "watch-js-kicker": "nodemon dist/kickChecker.js",
     "watch-js-deleter": "nodemon dist/messageDeleter.js",
     "start-bot": "node --max-old-space-size=12000 dist/index.js",

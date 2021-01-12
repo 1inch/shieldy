@@ -1,5 +1,5 @@
 import { Context } from 'telegraf'
-import { CappedMessageModel } from '@models/CappedMessage'
+import { Worker } from 'worker_threads'
 
 export async function messageSaver(ctx: Context, next) {
   try {
@@ -27,14 +27,12 @@ export async function messageSaver(ctx: Context, next) {
   return next()
 }
 
+const messageSaverWorker = new Worker(__dirname + '/messageSaverWorker.js')
+
 async function saveMessage(ctx: Context) {
   if (ctx.update.message?.new_chat_members) {
     return
   }
   const message = ctx.update.edited_message || ctx.update.message
-  await new CappedMessageModel({
-    message_id: message.message_id,
-    from_id: message.from.id,
-    chat_id: message.chat.id,
-  }).save()
+  messageSaverWorker.postMessage(message)
 }
