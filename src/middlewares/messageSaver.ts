@@ -2,6 +2,12 @@ import { Context } from 'telegraf'
 import { Worker } from 'worker_threads'
 
 export async function messageSaver(ctx: Context, next) {
+  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
+    console.log(
+      'Got to messageSaver on help',
+      Date.now() / 1000 - ctx.update.message?.date
+    )
+  }
   try {
     const message = ctx.update.edited_message || ctx.update.message
     if (message && message.message_id && message.from?.id && message.chat.id) {

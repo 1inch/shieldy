@@ -3,6 +3,12 @@ import { isGroup } from '@helpers/isGroup'
 import { Context } from 'telegraf'
 
 export async function attachChatMember(ctx: Context, next) {
+  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
+    console.log(
+      'Got to attachChatMember on help',
+      Date.now() / 1000 - ctx.update.message?.date
+    )
+  }
   // If not a group, no need to get the member
   if (!isGroup(ctx)) {
     ctx.isAdministrator = true

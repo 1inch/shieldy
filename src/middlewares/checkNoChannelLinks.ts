@@ -6,6 +6,12 @@ import tall from 'tall'
 const disallowedUrlParts = ['http://t.me/', 'https://t.me/']
 
 export async function checkNoChannelLinks(ctx: Context, next: Function) {
+  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
+    console.log(
+      'Got to checkNoChannelLinks on help',
+      Date.now() / 1000 - ctx.update.message?.date
+    )
+  }
   // Get the message
   const message = ctx.editedMessage || ctx.message
   // If there is no message, just continue

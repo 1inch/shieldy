@@ -3,6 +3,12 @@ import { isGloballyRestricted } from '@helpers/globallyRestricted'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
 export async function checkRestrict(ctx: Context, next: () => any) {
+  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
+    console.log(
+      'Got to checkRestrict on help',
+      Date.now() / 1000 - ctx.update.message?.date
+    )
+  }
   // Get the message
   const message = ctx.editedMessage || ctx.message
   // Continue if there is no message
