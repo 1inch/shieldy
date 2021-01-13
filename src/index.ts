@@ -6,7 +6,7 @@ import { report } from '@helpers/report'
 import { bot } from '@helpers/bot'
 import { isMaster, fork } from 'cluster'
 import { cpus } from 'os'
-import handler from './updateHandler'
+// import handler from './updateHandler'
 
 // Generate cluster workers
 const workers = []
@@ -19,7 +19,7 @@ if (isMaster) {
 } else {
   console.info(`Worker ${process.pid} started`)
   process.on('message', (update) => {
-    handler.handleUpdate(update)
+    // handler.handleUpdate(update)
   })
 }
 
