@@ -14,7 +14,7 @@ export function setupTimeLimit(bot: Telegraf<Context>) {
     // Check if limit is set
     const limitNumber =
       +ctx.message.text.substr(11).trim() ||
-      +ctx.message.text.substr(12 + (bot as any).options.username.length).trim()
+      +ctx.message.text.substr(12 + (bot as any).botInfo.username.length).trim()
     if (!isNaN(limitNumber) && limitNumber > 0 && limitNumber < 100000) {
       let chat = ctx.dbchat
       chat.timeGiven = limitNumber

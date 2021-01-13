@@ -40,7 +40,7 @@ export async function handleNewChatMembers(ctx: Context) {
     const addedUsernames = ctx.message.new_chat_members
       .map((member) => member.username)
       .filter((username) => !!username)
-    if (addedUsernames.includes(bot.options.username)) {
+    if (addedUsernames.includes((bot as any).botInfo.username)) {
       await sendHelpSafe(ctx)
     }
     // Filter new members
@@ -48,7 +48,7 @@ export async function handleNewChatMembers(ctx: Context) {
     // Kick bots if required
     if (!ctx.dbchat.allowInvitingBots) {
       ctx.message.new_chat_members
-        .filter((m) => m.is_bot && m.username !== bot.options.username)
+        .filter((m) => m.is_bot && m.username !== (bot as any).botInfo.username)
         .forEach((m) => {
           kickChatMember(ctx.dbchat, m)
         })

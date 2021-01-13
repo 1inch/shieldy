@@ -36,7 +36,7 @@ export function setupGreetingButtons(bot: Telegraf<Context>) {
         !ctx.message.reply_to_message.from ||
         !ctx.message.reply_to_message.from.username ||
         ctx.message.reply_to_message.from.username !==
-          (bot as any).options.username
+          (bot as any).botInfo.username
       ) {
         return
       }

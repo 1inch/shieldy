@@ -9,7 +9,7 @@ export function setupSetConfig(bot: Telegraf<Context>) {
   bot.command('setConfig', checkLock, async (ctx) => {
     try {
       const configText = ctx.message.text
-        .replace(`/setConfig@${bot.options.username}`, '')
+        .replace(`/setConfig@${(bot as any).botInfo.username}`, '')
         .replace('/setConfig', '')
         .trim()
       console.log(configText)
