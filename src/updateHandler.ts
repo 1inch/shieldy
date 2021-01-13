@@ -100,6 +100,7 @@ if (!isMaster) {
     .getMe()
     .then((botInfo) => {
       ;(bot as any).botInfo = botInfo
+      ;(bot as any).options.username = botInfo.username
       console.info(`Update handler on ${process.pid} started`)
     })
     .catch(report)
