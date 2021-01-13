@@ -105,4 +105,4 @@ if (!isMaster) {
     .catch(report)
 }
 
-export default bot
+module.exports = bot
