@@ -22,10 +22,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@typegoose/typegoose@^7.4.1":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@typegoose/typegoose/-/typegoose-7.4.1.tgz#a125d6bcf146b2353e62ed080b38a38d8ea4eb0d"
-  integrity sha512-T9yosI/AIgtr6cHFZ+jUv5gwlwYv2ciQJXlGV+G2khHUDqkOjDuN9aJVn/kBH5RJVmY2gTkxIgjDzgR0+kGs4Q==
+"@typegoose/typegoose@^7.4.7":
+  version "7.4.7"
+  resolved "https://registry.yarnpkg.com/@typegoose/typegoose/-/typegoose-7.4.7.tgz#3c8078a5bb3267804302dfbd832b56037f5ce81c"
+  integrity sha512-w8JUb6VNVr140Kv6MwlXk9rUoQAn4gBcDgRGlhCzk/fiImUFRrmwVYHIxVamox7q7e7LQsmIeQCXpE2WyQhj4A==
   dependencies:
     lodash "^4.17.20"
     loglevel "^1.7.0"
