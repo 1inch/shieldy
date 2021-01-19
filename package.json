@@ -15,8 +15,8 @@
     "watch-js-bot": "nodemon --inspect dist/index.js",
     "watch-js-kicker": "nodemon dist/kickChecker.js",
     "watch-js-deleter": "nodemon dist/messageDeleter.js",
-    "start-bot": "node --max-old-space-size=12000 dist/index.js",
-    "start-kicker": "node --max-old-space-size=4000 dist/kickChecker.js",
+    "start-bot": "node --max-old-space-size=5000 dist/index.js",
+    "start-kicker": "node --max-old-space-size=3000 dist/kickChecker.js",
     "start-deleter": "node dist/messageDeleter.js",
     "upload-translations": "node scripts/upload.js",
     "download-translations": "node scripts/download.js && yarn prettier --single-quote --no-semi --write ./src/helpers/localizations.ts"
