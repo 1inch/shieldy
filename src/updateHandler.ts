@@ -58,7 +58,7 @@ bot.use(checkRestrict)
 // Check if channel links are present
 bot.use(checkNoChannelLinks)
 // Setup message saver
-bot.use(messageSaver)
+// bot.use(messageSaver)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)
