@@ -1,3 +1,4 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { Language, CaptchaType } from '@models/Chat'
 import { Telegraf, Context, Extra } from 'telegraf'
@@ -6,7 +7,7 @@ import { sendCurrentConfig } from '@commands/viewConfig'
 import { strings } from '@helpers/strings'
 
 export function setupSetConfig(bot: Telegraf<Context>) {
-  bot.command('setConfig', checkLock, async (ctx) => {
+  bot.command('setConfig', checkLock, clarifyIfPrivateMessages, async (ctx) => {
     try {
       const configText = ctx.message.text
         .replace(`/setConfig@${(bot as any).botInfo.username}`, '')

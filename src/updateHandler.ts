@@ -23,7 +23,6 @@ import { setupCaptchaMessage } from '@commands/captchaMessage'
 import { setupTestLocales } from '@commands/testLocales'
 import { setupDeleteGreetingTime } from '@commands/deleteGreetingTime'
 import { setupBanUsers } from '@commands/banUsers'
-import { messageSaver } from '@middlewares/messageSaver'
 import { setupDeleteEntryOnKick } from '@commands/deleteEntryOnKick'
 import { setupCAS } from '@commands/cas'
 import { setupBan } from '@commands/ban'
@@ -57,8 +56,6 @@ bot.use(attachChatMember)
 bot.use(checkRestrict)
 // Check if channel links are present
 bot.use(checkNoChannelLinks)
-// Setup message saver
-// bot.use(messageSaver)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)

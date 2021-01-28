@@ -1,13 +1,15 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings, localizations } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 import { report } from '@helpers/report'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
+import { clarifyReply } from '@helpers/clarifyReply'
 
 export function setupGreeting(bot: Telegraf<Context>) {
   // Setup command
-  bot.command('greeting', checkLock, async (ctx) => {
+  bot.command('greeting', checkLock, clarifyIfPrivateMessages, async (ctx) => {
     let chat = ctx.dbchat
     chat.greetsUsers = !chat.greetsUsers
     await saveChatProperty(chat, 'greetsUsers')
@@ -23,8 +25,9 @@ export function setupGreeting(bot: Telegraf<Context>) {
       Extra.inReplyTo(ctx.message.message_id)
     )
     if (chat.greetingMessage && chat.greetsUsers) {
-      ctx.telegram.sendCopy(chat.id, chat.greetingMessage.message)
+      await ctx.telegram.sendCopy(chat.id, chat.greetingMessage.message)
     }
+    await clarifyReply(ctx)
   })
   // Setup checker
   bot.use(async (ctx, next) => {

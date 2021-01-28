@@ -1,30 +1,36 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { findChat, Chat } from '@models/Chat'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
 export function setupViewConfig(bot: Telegraf<Context>) {
-  bot.command('viewConfig', checkLock, async (ctx) => {
-    const secondPart = ctx.message.text.split(' ')[1]
-    if (secondPart) {
-      try {
-        let chatId: number | undefined
-        if (!isNaN(+secondPart)) {
-          chatId = +secondPart
-        } else if (secondPart.startsWith('@')) {
-          const telegramChat = await ctx.telegram.getChat(secondPart)
-          chatId = telegramChat.id
+  bot.command(
+    'viewConfig',
+    checkLock,
+    clarifyIfPrivateMessages,
+    async (ctx) => {
+      const secondPart = ctx.message.text.split(' ')[1]
+      if (secondPart) {
+        try {
+          let chatId: number | undefined
+          if (!isNaN(+secondPart)) {
+            chatId = +secondPart
+          } else if (secondPart.startsWith('@')) {
+            const telegramChat = await ctx.telegram.getChat(secondPart)
+            chatId = telegramChat.id
+          }
+          if (chatId) {
+            const chat = await findChat(chatId)
+            return sendCurrentConfig(ctx, chat)
+          }
+        } catch (err) {
+          return ctx.reply(strings(ctx.dbchat, 'noChatFound'))
         }
-        if (chatId) {
-          const chat = await findChat(chatId)
-          return sendCurrentConfig(ctx, chat)
-        }
-      } catch (err) {
-        return ctx.reply(strings(ctx.dbchat, 'noChatFound'))
       }
+      await sendCurrentConfig(ctx, ctx.dbchat)
     }
-    await sendCurrentConfig(ctx, ctx.dbchat)
-  })
+  )
 }
 
 export async function sendCurrentConfig(ctx: Context, chat: Chat) {

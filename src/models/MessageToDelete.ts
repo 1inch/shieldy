@@ -18,3 +18,15 @@ export function findMessagesToDelete() {
     deleteAt: { $lte: new Date() },
   })
 }
+
+export function addMessageToDelete(
+  chatId: number,
+  messageId: number,
+  deleteAt = new Date()
+) {
+  return new MessageToDeleteModel({
+    chat_id: chatId,
+    message_id: messageId,
+    deleteAt: deleteAt,
+  }).save()
+}

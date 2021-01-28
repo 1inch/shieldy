@@ -1,3 +1,4 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
@@ -6,7 +7,7 @@ import { CaptchaType } from '@models/Chat'
 import { checkLock } from '@middlewares/checkLock'
 
 export function setupCaptcha(bot: Telegraf<Context>) {
-  bot.command('captcha', checkLock, (ctx) => {
+  bot.command('captcha', checkLock, clarifyIfPrivateMessages, (ctx) => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'captcha'),
       Extra.inReplyTo(ctx.message.message_id).markup((m) =>

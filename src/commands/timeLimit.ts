@@ -1,3 +1,4 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
@@ -10,7 +11,7 @@ const options = [
 ]
 
 export function setupTimeLimit(bot: Telegraf<Context>) {
-  bot.command('timeLimit', checkLock, async (ctx) => {
+  bot.command('timeLimit', checkLock, clarifyIfPrivateMessages, async (ctx) => {
     // Check if limit is set
     const limitNumber =
       +ctx.message.text.substr(11).trim() ||

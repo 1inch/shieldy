@@ -1,3 +1,4 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
@@ -6,7 +7,7 @@ import { checkIfFromReplier } from '@middlewares/checkIfFromReplier'
 import { checkLock } from '@middlewares/checkLock'
 
 export function setupLanguage(bot: Telegraf<Context>) {
-  bot.command('language', checkLock, (ctx) => {
+  bot.command('language', checkLock, clarifyIfPrivateMessages, (ctx) => {
     ctx.replyWithMarkdown(
       strings(ctx.dbchat, 'language_shieldy'),
       Extra.webPreview(false)

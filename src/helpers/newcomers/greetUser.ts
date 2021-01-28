@@ -4,7 +4,7 @@ import { User } from 'telegraf/typings/telegram-types'
 import { Context, Extra } from 'telegraf'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getLink, getName, getUsername } from '@helpers/getUsername'
-import { MessageToDeleteModel } from '@models/MessageToDelete'
+import { addMessageToDelete } from '@models/MessageToDelete'
 
 export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   // Get the user (it can be function if used as middleware in telegraf)
@@ -90,10 +90,6 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
     deleteTime.setSeconds(
       deleteTime.getSeconds() + ctx.dbchat.deleteGreetingTime
     )
-    new MessageToDeleteModel({
-      chat_id: messageSent.chat.id,
-      message_id: messageSent.message_id,
-      deleteAt: deleteTime,
-    }).save()
+    addMessageToDelete(messageSent.chat.id, messageSent.message_id, deleteTime)
   }
 }

@@ -1,3 +1,5 @@
+import { clarifyReply } from '@helpers/clarifyReply'
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings, localizations } from '@helpers/strings'
@@ -7,19 +9,25 @@ import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupGreetingButtons(bot: Telegraf<Context>) {
   // Setup command
-  bot.command('greetingButtons', checkLock, async (ctx) => {
-    await ctx.replyWithMarkdown(
-      `${strings(ctx.dbchat, 'greetingButtons')}`,
-      Extra.inReplyTo(ctx.message.message_id).webPreview(false)
-    )
-    await ctx.replyWithMarkdown(
-      `<code>${
-        ctx.dbchat.greetingButtons ||
-        strings(ctx.dbchat, 'greetingButtonsEmpty')
-      }</code>`,
-      Extra.webPreview(false).HTML(true)
-    )
-  })
+  bot.command(
+    'greetingButtons',
+    checkLock,
+    clarifyIfPrivateMessages,
+    async (ctx) => {
+      await ctx.replyWithMarkdown(
+        `${strings(ctx.dbchat, 'greetingButtons')}`,
+        Extra.inReplyTo(ctx.message.message_id).webPreview(false)
+      )
+      await ctx.replyWithMarkdown(
+        `<code>${
+          ctx.dbchat.greetingButtons ||
+          strings(ctx.dbchat, 'greetingButtonsEmpty')
+        }</code>`,
+        Extra.webPreview(false).HTML(true)
+      )
+      await clarifyReply(ctx)
+    }
+  )
   // Setup checker
   bot.use(async (ctx, next) => {
     try {

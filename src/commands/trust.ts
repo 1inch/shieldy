@@ -1,3 +1,4 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { modifyCandidates } from '@helpers/candidates'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
@@ -8,7 +9,7 @@ import { report } from '@helpers/report'
 import { Candidate } from '@models/Chat'
 
 export function setupTrust(bot: Telegraf<Context>) {
-  bot.command('trust', checkLock, async (ctx) => {
+  bot.command('trust', checkLock, clarifyIfPrivateMessages, async (ctx) => {
     // Check if it is a handle message
     const handle = ctx.message.text.substr(7).replace('@', '')
     let handleId: number | undefined

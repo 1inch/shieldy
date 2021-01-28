@@ -1,14 +1,15 @@
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { modifyCandidates } from '@helpers/candidates'
 import { Candidate } from '@models/Chat'
 import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { isGroup } from '@helpers/isGroup'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
-import { Telegraf, Context, Extra } from 'telegraf'
+import { Telegraf, Context } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
 
 export function setupBan(bot: Telegraf<Context>) {
-  bot.command('ban', checkLock, async (ctx) => {
+  bot.command('ban', checkLock, clarifyIfPrivateMessages, async (ctx) => {
     // Check if reply
     if (!ctx.message || !ctx.message.reply_to_message) {
       return

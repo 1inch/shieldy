@@ -745,6 +745,7 @@ export const localizations = {
     he: 'אני לא בוט',
     yue: '我唔係機械人',
     hu: 'Nem vagyok Robot!',
+    kz: 'Менің пендемге қарау',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -1545,5 +1546,19 @@ export const localizations = {
   noChatFound: {
     en: 'Chat not found',
     ru: 'Чат не найден',
+  },
+  thisIsNotAReply: {
+    en: 'Just to clarify: this is not a reply',
+    ru: 'Уточняю: это не ответ на сообщение',
+  },
+  thisIsAReply: {
+    en: 'This is a reply',
+    ru: 'А вот это ответ',
+  },
+  commandsInPrivateWarning: {
+    en:
+      'You are changing the settings in private messages. This will not affect any group chats. If you want to set up a group chat, send configuration commands directly to the group chat. You can delete the configuration messages afterwards.',
+    ru:
+      'Вы меняете настройки в личных сообщениях с ботом. Эти настройки не повлияют ни на какие групповые чаты. Если вы хотите настроить групповой чат, отправляйте команды настроек прямо в групповой чат. Вы можете удалить сообщения настроек после настройки.',
   },
 }

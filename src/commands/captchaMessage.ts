@@ -1,3 +1,5 @@
+import { clarifyReply } from '@helpers/clarifyReply'
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { saveChatProperty } from '@helpers/saveChatProperty'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings, localizations } from '@helpers/strings'
@@ -7,25 +9,31 @@ import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 
 export function setupCaptchaMessage(bot: Telegraf<Context>) {
   // Setup command
-  bot.command('customCaptchaMessage', checkLock, async (ctx) => {
-    let chat = ctx.dbchat
-    chat.customCaptchaMessage = !chat.customCaptchaMessage
-    await saveChatProperty(chat, 'customCaptchaMessage')
-    await ctx.replyWithMarkdown(
-      strings(
-        ctx.dbchat,
-        chat.customCaptchaMessage
-          ? chat.captchaMessage
-            ? 'captchaMessage_true_message'
-            : 'captchaMessage_true'
-          : 'captchaMessage_false'
-      ),
-      Extra.inReplyTo(ctx.message.message_id)
-    )
-    if (chat.customCaptchaMessage && chat.captchaMessage) {
-      ctx.telegram.sendCopy(chat.id, chat.captchaMessage.message)
+  bot.command(
+    'customCaptchaMessage',
+    checkLock,
+    clarifyIfPrivateMessages,
+    async (ctx) => {
+      let chat = ctx.dbchat
+      chat.customCaptchaMessage = !chat.customCaptchaMessage
+      await saveChatProperty(chat, 'customCaptchaMessage')
+      await ctx.replyWithMarkdown(
+        strings(
+          ctx.dbchat,
+          chat.customCaptchaMessage
+            ? chat.captchaMessage
+              ? 'captchaMessage_true_message'
+              : 'captchaMessage_true'
+            : 'captchaMessage_false'
+        ),
+        Extra.inReplyTo(ctx.message.message_id)
+      )
+      if (chat.customCaptchaMessage && chat.captchaMessage) {
+        await ctx.telegram.sendCopy(chat.id, chat.captchaMessage.message)
+      }
+      await clarifyReply(ctx)
     }
-  })
+  )
   // Setup checker
   bot.use(async (ctx, next) => {
     try {

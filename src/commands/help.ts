@@ -1,9 +1,10 @@
 import { Telegraf, Context } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
+import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 
 export function setupHelp(bot: Telegraf<Context>) {
-  bot.command(['help', 'start'], checkLock, sendHelp)
+  bot.command(['help', 'start'], checkLock, clarifyIfPrivateMessages, sendHelp)
 }
 
 export function sendHelp(ctx: Context) {
