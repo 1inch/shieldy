@@ -77,6 +77,7 @@ export const localizations = {
     he: 'אנא בחר שפה.',
     yue: '揀埋一種語言。',
     hu: 'Kérlek, válassz egy nyelvet!',
+    fi: 'Ole hyvä ja valitse kieli.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -104,6 +105,7 @@ export const localizations = {
     he: 'נהדר! אני דובר עברית כעת.',
     yue: '正，我而家開始講粵語。',
     hu: 'Nagyszerű, mostantól magyarul beszélek.',
+    fi: 'Selvä! Valitsit kieleksi suomen.',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -239,6 +241,7 @@ export const localizations = {
     he: 'ספרות',
     yue: '算術',
     hu: 'Számok',
+    fi: 'Numerot',
   },
   button: {
     en: 'Button',
@@ -266,6 +269,7 @@ export const localizations = {
     he: 'כפתור',
     yue: '撳掣',
     hu: 'Gomb',
+    fi: 'Painike',
   },
   image: {
     en: 'Image',
@@ -281,6 +285,7 @@ export const localizations = {
     no: 'Bilde',
     yue: '認圖',
     hu: 'Kép',
+    fi: 'Kuva',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -308,6 +313,7 @@ export const localizations = {
     he: 'נהדר! אני אשתמש בסוג הזה של מבחן.',
     yue: '好，我由而家開始用呢種新嘅驗證方法。',
     hu: 'Nagyszerű, ezt a típust fogom használni a teszteléshez.',
+    fi: 'Selvä! Käytän valitsemaasi testiä jatkossa.',
   },
   time_limit: {
     en:
@@ -355,6 +361,8 @@ export const localizations = {
     yue: '規定新來者嘅驗證時限。',
     hu:
       'Kérlek, add meg, hány másodperc álljon rendelkezésre az újoncnak a feladat megoldására, mielőtt kirúgnánk!',
+    fi:
+      'Ole hyvä ja valitse montako sekuntia uudella tulokkaalla on aikaa vastata testiin (ennen kuin hänet poistetaan ryhmästä).',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -382,6 +390,7 @@ export const localizations = {
     he: 'יופי! אני אשתמש במגבלת הזמן הזו.',
     yue: '好，我之後會按照呢個時限。',
     hu: 'Nagyszerű, ezt az idő intervallumot fogom használni.',
+    fi: 'Ok, antamasi sekuntimäärä on asetettu aikarajaksi.',
   },
   seconds: {
     en: 'sec',
@@ -409,6 +418,7 @@ export const localizations = {
     he: 'שניה',
     yue: '秒',
     hu: 'mp',
+    fi: 's',
   },
   lock_true_shieldy: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -595,7 +605,9 @@ export const localizations = {
     he: ', אנא שלח הודעה כלשהי לקבוצה בטווח הזמן הנתון, אחר תורחק. תודה!',
     yue: '唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
     hu:
-      ', kérlek, írj be valamilyen üzenetet, mielőtt a megadott idő lejárna, különben ki kell, hogy rúgjalak.Köszönöm!',
+      ', kérlek, írj be valamilyen üzenetet, mielőtt a megadott idő lejárna, különben ki kell, hogy rúgjalak. Köszönöm!',
+    fi:
+      ', ole hyvä ja lähetä ryhmään viestiä annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
   },
   digits_warning: {
     en:
@@ -643,6 +655,8 @@ export const localizations = {
       ", prego, invia la soluzione dell'espressione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     hu:
       ', kérlek, old meg az alábbi egyszerű matematikai feladványt és írd be ide, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
+    fi:
+      ', ole hyvä ja lähetä oheisen laskutoimituksen ratkaisu annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
   },
   button_warning: {
     en:
@@ -691,6 +705,8 @@ export const localizations = {
     yue: '唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
     hu:
       ', kérlek,nyomd meg az alábbi gombot, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
+    fi:
+      ', ole hyvä ja klikkaa painiketta alla ennen annetun ajan loppumista, jotta et tule poistetuksi ryhmästä. Kiitos!',
   },
   image_warning: {
     en:
@@ -718,6 +734,8 @@ export const localizations = {
     yue: '，唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
     hu:
       ', kérlek, írd be ide az alábbi karaktereket, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
+    fi:
+      ', ole hyvä ja lähetä kuvan merkit annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -745,6 +763,7 @@ export const localizations = {
     he: 'אני לא בוט',
     yue: '我唔係機械人',
     hu: 'Nem vagyok Robot!',
+    fi: 'Olen ihminen, en botti.',
     kz: 'Менің пендемге қарау',
   },
   only_candidate_can_reply: {
@@ -1047,6 +1066,7 @@ export const localizations = {
     he: 'מעולה! כעת מצטרפים שעברו את המבחן לא יבורכו.',
     yue: '好。由而家開始，新來者唔會收到打招呼嘅訊息。',
     hu: 'Nagyszerű! Az újoncokat, akik átmentek a teszten, nem üdvözöljük.',
+    fi: 'Selvä! Nyt testin läpäisseitä tulokkaita ei tervehditä.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -1072,6 +1092,7 @@ export const localizations = {
     he: 'קיבלתי!',
     yue: '收到！',
     hu: 'Elfogadva!',
+    fi: 'Hyväksytty!',
   },
   captchaMessage_true: {
     en:
@@ -1194,6 +1215,7 @@ export const localizations = {
     he: 'קיבלתי!',
     yue: '收到！',
     hu: 'Elfogadva!',
+    fi: 'Hyväksytty!',
   },
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1463,6 +1485,7 @@ export const localizations = {
     no: 'Supert! Brukere kan nå invitere botter.',
     yue: '好。由而家開始，羣組成員可以將任何機械人加入羣組。',
     hu: 'Szép! Mostantól a felhasználók meghívhatnak botokat is.',
+    fi: 'Selvä! Käyttäjät voivat nyt kutsua botteja.',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
@@ -1475,6 +1498,7 @@ export const localizations = {
     no: 'Supert! Brukere kan nå ikke invitere botter.',
     yue: '好。由而家開始，羣組成員禁止將任何機械人加入羣組。',
     hu: 'Szép! Mostantól a felhasználók nem hívhatnak meg botokat.',
+    fi: 'Selvä! Käyttäjät eivät voi nyt kutsua botteja.',
   },
   greetingButtons: {
     en:
