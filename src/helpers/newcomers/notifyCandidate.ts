@@ -37,6 +37,8 @@ const promoExceptions = [
   -1001078017687,
   -1001224633906,
   -1001267580592,
+
+  -1001217329168,
 ]
 
 export async function notifyCandidate(
