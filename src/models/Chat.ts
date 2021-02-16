@@ -133,6 +133,8 @@ export class Chat {
   skipOldUsers: boolean
   @prop({ required: true, default: false })
   skipVerifiedUsers: boolean
+  @prop({ required: true, default: false })
+  banForFastRepliesToPosts: boolean
   @prop({ type: MemberWrapper, required: true, default: [] })
   members: MemberWrapper[]
 

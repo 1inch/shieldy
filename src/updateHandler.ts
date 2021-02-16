@@ -39,6 +39,7 @@ import { setupSetConfig } from '@commands/setConfig'
 import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 import { isMaster } from 'cluster'
+import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPosts'
 
 bot.use((ctx, next) => {
   if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
@@ -85,6 +86,7 @@ setupGreetingButtons(bot)
 setupSkipOldUsers(bot)
 setupSkipVerifiedUsers(bot)
 setupSetConfig(bot)
+setupBanForFastRepliesToPosts(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
