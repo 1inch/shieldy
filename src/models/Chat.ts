@@ -50,6 +50,8 @@ export class Candidate {
   messageId?: number
   @prop()
   username?: string
+  @prop()
+  restrictTime?: number
 
   @prop()
   equationQuestion?: string
@@ -137,6 +139,8 @@ export class Chat {
   banForFastRepliesToPosts: boolean
   @prop({ type: MemberWrapper, required: true, default: [] })
   members: MemberWrapper[]
+  @prop({ required: true, default: 24 })
+  restrictTime: number
 
   // mongo
   _id?: string

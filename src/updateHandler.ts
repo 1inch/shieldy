@@ -40,6 +40,7 @@ import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
 import { isMaster } from 'cluster'
 import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPosts'
+import { setupRestrictTime } from '@commands/restrictTime'
 
 bot.use((ctx, next) => {
   if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
@@ -87,6 +88,7 @@ setupSkipOldUsers(bot)
 setupSkipVerifiedUsers(bot)
 setupSetConfig(bot)
 setupBanForFastRepliesToPosts(bot)
+setupRestrictTime(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
