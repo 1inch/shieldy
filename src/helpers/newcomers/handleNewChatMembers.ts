@@ -84,8 +84,16 @@ export async function handleNewChatMembers(ctx: Context) {
         kickChatMember(ctx.dbchat, member)
         continue
       }
+      // Check if id is over 1 000 000 000
+      if (ctx.dbchat.banNewTelegramUsers && member.id > 1000000000) {
+        kickChatMember(ctx.dbchat, member)
+        if (ctx.dbchat.deleteEntryOnKick) {
+          deleteMessageSafe(ctx)
+        }
+        continue
+      }
       // Check if CAS banned
-      if (!(await checkCAS(member.id))) {
+      if (ctx.dbchat.cas && !(await checkCAS(member.id))) {
         kickChatMember(ctx.dbchat, member)
         if (ctx.dbchat.deleteEntryOnKick) {
           deleteMessageSafe(ctx)

@@ -141,6 +141,8 @@ export class Chat {
   members: MemberWrapper[]
   @prop({ required: true, default: 24 })
   restrictTime: number
+  @prop({ required: true, default: false })
+  banNewTelegramUsers: boolean
 
   // mongo
   _id?: string

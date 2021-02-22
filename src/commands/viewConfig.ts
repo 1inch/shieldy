@@ -59,6 +59,7 @@ allowInvitingBots: <code>${chat.allowInvitingBots}</code>
 skipOldUsers: <code>${chat.skipOldUsers}</code>
 skipVerifiedUsers: <code>${chat.skipVerifiedUsers}</code>
 restrictTime: <code>${chat.restrictTime || 24}</code>
+banNewTelegramUsers: <code>${chat.banNewTelegramUsers}</code>
 greetingButtons:
 <code>${chat.greetingButtons || 'Not set'}</code>`,
     Extra.inReplyTo(ctx.message.message_id).HTML(true)

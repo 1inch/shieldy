@@ -41,6 +41,7 @@ import { attachChatMember } from '@middlewares/attachChatMember'
 import { isMaster } from 'cluster'
 import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPosts'
 import { setupRestrictTime } from '@commands/restrictTime'
+import { setupBanNewTelegramUsers } from '@commands/banNewTelegramUsers'
 
 bot.use((ctx, next) => {
   if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
@@ -89,6 +90,7 @@ setupSkipVerifiedUsers(bot)
 setupSetConfig(bot)
 setupBanForFastRepliesToPosts(bot)
 setupRestrictTime(bot)
+setupBanNewTelegramUsers(bot)
 // Newcomers logic
 setupNewcomers(bot)
 
