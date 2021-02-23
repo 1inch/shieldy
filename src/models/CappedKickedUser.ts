@@ -5,10 +5,8 @@ export class CappedKickedUser {
   chatId: number
   @prop({ required: true, index: true })
   userId: number
-  @prop({ default: Date.now, expires: '2m' })
-  createdAtForExpiry: Date
 }
 
 export const CappedKickedUserModel = getModelForClass(CappedKickedUser, {
-  schemaOptions: { timestamps: true, capped: 1000 * 1024 },
+  schemaOptions: { timestamps: true },
 })

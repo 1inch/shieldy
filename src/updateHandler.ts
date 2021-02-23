@@ -42,6 +42,7 @@ import { isMaster } from 'cluster'
 import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPosts'
 import { setupRestrictTime } from '@commands/restrictTime'
 import { setupBanNewTelegramUsers } from '@commands/banNewTelegramUsers'
+import { messageSaver } from '@middlewares/messageSaver'
 
 bot.use((ctx, next) => {
   if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
@@ -59,6 +60,8 @@ bot.use(attachChatMember)
 bot.use(checkRestrict)
 // Check if channel links are present
 bot.use(checkNoChannelLinks)
+// Save messages that need saving
+bot.use(messageSaver)
 // Commands
 setupHelp(bot)
 setupLanguage(bot)

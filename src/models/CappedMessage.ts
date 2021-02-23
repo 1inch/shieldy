@@ -8,12 +8,13 @@ export class CappedMessage {
   from_id: number
   @prop({ required: true, index: true })
   chat_id: number
-  @prop({ default: Date.now, expires: '2m' })
-  createdAtForExpiry: Date
+
+  // mongodb timestamp
+  createdAt: Date
 }
 
 export const CappedMessageModel = getModelForClass(CappedMessage, {
-  schemaOptions: { timestamps: true, capped: 1000 * 1024 },
+  schemaOptions: { timestamps: true },
 })
 
 export async function removeMessages(chatId: number, fromId: number) {

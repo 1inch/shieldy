@@ -78,7 +78,7 @@ export function setupBanForFastRepliesToPosts(bot: Telegraf<Context>) {
       if (!post) {
         return next()
       }
-      if (now - post.createdAtForExpiry.getTime() < 5 * 1000) {
+      if (now - post.createdAt.getTime() < 5 * 1000) {
         await kickChatMember(ctx.dbchat, ctx.from)
         if (ctx.dbchat.deleteEntryOnKick) {
           await deleteMessageSafe(ctx)
