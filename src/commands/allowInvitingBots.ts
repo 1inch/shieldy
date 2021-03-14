@@ -1,3 +1,4 @@
+import { kickChatMember } from '@helpers/newcomers/kickChatMember'
 import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
@@ -24,4 +25,19 @@ export function setupAllowInvitingBots(bot: Telegraf<Context>) {
       )
     }
   )
+}
+
+export function setupCheckAllowInvitingBots(bot: Telegraf<Context>) {
+  bot.on('new_chat_members', (ctx, next) => {
+    // Kick bots if required
+    if (!ctx.dbchat.allowInvitingBots) {
+      return ctx.message.new_chat_members
+        .filter((m) => m.is_bot && m.username !== (bot as any).botInfo.username)
+        .forEach((m) => {
+          kickChatMember(ctx.dbchat, m)
+        })
+    } else {
+      return next()
+    }
+  })
 }

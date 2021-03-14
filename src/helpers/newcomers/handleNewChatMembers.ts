@@ -45,14 +45,6 @@ export async function handleNewChatMembers(ctx: Context) {
     }
     // Filter new members
     const membersToCheck = ctx.message.new_chat_members.filter((m) => !m.is_bot)
-    // Kick bots if required
-    if (!ctx.dbchat.allowInvitingBots) {
-      ctx.message.new_chat_members
-        .filter((m) => m.is_bot && m.username !== (bot as any).botInfo.username)
-        .forEach((m) => {
-          kickChatMember(ctx.dbchat, m)
-        })
-    }
     // Placeholder to add all candidates in batch
     const candidatesToAdd = [] as Candidate[]
     // Loop through the members

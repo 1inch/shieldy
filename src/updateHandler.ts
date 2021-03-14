@@ -30,7 +30,10 @@ import { setupUnderAttack } from '@commands/underAttack'
 import { setupNoAttack } from '@commands/noAttack'
 import { setupViewConfig } from '@commands/viewConfig'
 import { setupButtonText } from '@commands/buttonText'
-import { setupAllowInvitingBots } from '@commands/allowInvitingBots'
+import {
+  setupAllowInvitingBots,
+  setupCheckAllowInvitingBots,
+} from '@commands/allowInvitingBots'
 import { setupAdmin } from '@commands/admin'
 import { setupGreetingButtons } from '@commands/greetingButtons'
 import { setupSkipOldUsers } from '@commands/skipOldUsers'
@@ -44,16 +47,12 @@ import { setupRestrictTime } from '@commands/restrictTime'
 import { setupBanNewTelegramUsers } from '@commands/banNewTelegramUsers'
 import { messageSaver } from '@middlewares/messageSaver'
 
-bot.use((ctx, next) => {
-  if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
-    console.log('Got help', Date.now() / 1000 - ctx.update.message?.date)
-  }
-  return next()
-})
 // Ignore all messages that are too old
 bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
+// Remove bots right when they get added
+setupCheckAllowInvitingBots(bot)
 // Add chat member to context
 bot.use(attachChatMember)
 // Check if restricted
