@@ -34,7 +34,7 @@ export function checkAllowInvitingBots(ctx: Context, next: Function) {
     !ctx.dbchat.allowInvitingBots
   ) {
     ctx.message.new_chat_members
-      .filter((m) => m.is_bot && m.username !== ctx.botInfo.username)
+      .filter((m) => m.is_bot && m.username !== ctx.botInfo?.username)
       .forEach((m) => {
         kickChatMember(ctx.dbchat, m)
       })
