@@ -27,17 +27,17 @@ export function setupAllowInvitingBots(bot: Telegraf<Context>) {
   )
 }
 
-export function setupCheckAllowInvitingBots(bot: Telegraf<Context>) {
-  bot.on('new_chat_members', (ctx, next) => {
-    // Kick bots if required
-    if (!ctx.dbchat.allowInvitingBots) {
-      return ctx.message.new_chat_members
-        .filter((m) => m.is_bot && m.username !== (bot as any).botInfo.username)
-        .forEach((m) => {
-          kickChatMember(ctx.dbchat, m)
-        })
-    } else {
-      return next()
-    }
-  })
+export function checkAllowInvitingBots(ctx: Context, next: Function) {
+  // Kick bots if required
+  if (
+    !!ctx.message?.new_chat_members?.length &&
+    !ctx.dbchat.allowInvitingBots
+  ) {
+    ctx.message.new_chat_members
+      .filter((m) => m.is_bot && m.username !== ctx.botInfo.username)
+      .forEach((m) => {
+        kickChatMember(ctx.dbchat, m)
+      })
+  }
+  return next()
 }

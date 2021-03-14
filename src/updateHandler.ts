@@ -32,7 +32,7 @@ import { setupViewConfig } from '@commands/viewConfig'
 import { setupButtonText } from '@commands/buttonText'
 import {
   setupAllowInvitingBots,
-  setupCheckAllowInvitingBots,
+  checkAllowInvitingBots,
 } from '@commands/allowInvitingBots'
 import { setupAdmin } from '@commands/admin'
 import { setupGreetingButtons } from '@commands/greetingButtons'
@@ -52,7 +52,7 @@ bot.use(checkTime)
 // Add chat to context
 bot.use(attachUser)
 // Remove bots right when they get added
-setupCheckAllowInvitingBots(bot)
+bot.use(checkAllowInvitingBots)
 // Add chat member to context
 bot.use(attachChatMember)
 // Check if restricted
