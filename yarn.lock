@@ -1776,22 +1776,21 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-telegraf@^3.38.0:
+"telegraf@git+https://github.com/LetItCode/telegraf.git":
   version "3.38.0"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.38.0.tgz#745b447547a8e6cdb626055e4d616058aaae0759"
-  integrity sha512-va4VlrKWp64JrowFoZX/NPzzA6q38kvaIukVXOWFO1V+jR1G8+hCfgJy4TX8Z3rwLJzwaBEet1QhikHDRZWl3A==
+  resolved "git+https://github.com/LetItCode/telegraf.git#52688e021f55e2521e28a27a22c31d096a550f84"
   dependencies:
     debug "^4.0.1"
     minimist "^1.2.0"
     module-alias "^2.2.2"
     node-fetch "^2.2.0"
     sandwich-stream "^2.0.1"
-    telegram-typings "^3.6.0"
+    typegram "^3.1.5"
 
-telegram-typings@^3.6.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/telegram-typings/-/telegram-typings-3.6.1.tgz#1288d547f8694b61f1c01c2993e295f3114d9e25"
-  integrity sha512-njVv1EAhIZnmQVLocZEADYUyqA1WIXuVcDYlsp+mXua/XB0pxx+PKtMSPeZ/EE4wPWTw9h/hA9ASTT6yQelkiw==
+telegram-typings@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/telegram-typings/-/telegram-typings-5.0.0.tgz#a5ab8aeb4115b60a6ff02ad66b02b33181fc07cf"
+  integrity sha512-3xmQ9D87wEdMYUgzTekEP4hEPJz9lIW0tnumrbkH1Tfwt5e7ZMy5ZiUpGnjnQOpZTItrdeEeavRGLRvXepO35w==
 
 term-size@^2.1.0:
   version "2.2.0"
@@ -1855,6 +1854,11 @@ typedarray-to-buffer@^3.1.5:
   integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
   dependencies:
     is-typedarray "^1.0.0"
+
+typegram@^3.1.5:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.2.2.tgz#e6da8b5f17d34271e132c6e4fe1b3c28c7981462"
+  integrity sha512-PC7MclSZcLnCEnflubX61/YEwZph98EHbCsrL9tFhU5bZYz3uXm3Mc6iseKjiS3VyKOCCyoT3A4ZDtPkoYyucg==
 
 typescript@^4.0.3:
   version "4.0.3"

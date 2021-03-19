@@ -13,12 +13,8 @@ export function constructMessageWithEntities(
       const tag_value = tags[tag]
       const tag_offset = originalText.indexOf(tag)
 
-      const tag_length = (
-        tag.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []
-      ).length
-      const tag_value_length = (
-        tag_value.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []
-      ).length
+      const tag_length = lengthOfUnicodeString(tag)
+      const tag_value_length = lengthOfUnicodeString(tag_value)
 
       // Replace the tag with the value in the message
       originalText = originalText.replace(tag, tag_value)
@@ -46,4 +42,8 @@ export function constructMessageWithEntities(
   }
   message.text = originalText
   return message
+}
+
+function lengthOfUnicodeString(s: string) {
+  return (s.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []).length
 }
