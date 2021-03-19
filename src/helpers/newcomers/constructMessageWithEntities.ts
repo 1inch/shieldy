@@ -50,7 +50,7 @@ export function constructMessageWithEntities(
       }
     }
   }
-  if (!addPromoText) {
+  if (addPromoText) {
     const language = isRuChat ? 'ru' : 'en'
     message.entities.push({
       type: 'text_link',
