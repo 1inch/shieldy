@@ -25,6 +25,7 @@ export function setupGreeting(bot: Telegraf<Context>) {
       Extra.inReplyTo(ctx.message.message_id)
     )
     if (chat.greetingMessage && chat.greetsUsers) {
+      chat.greetingMessage.message.chat = undefined
       await ctx.telegram.sendCopy(chat.id, chat.greetingMessage.message)
     }
     await clarifyReply(ctx)

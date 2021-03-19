@@ -46,6 +46,7 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   // Send the message
   let messageSent: Message
   try {
+    message.chat = undefined
     messageSent = await ctx.telegram.sendCopy(
       ctx.dbchat.id,
       message,
@@ -65,6 +66,7 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
     )
   } catch (err) {
     message.entities = []
+    message.chat = undefined
     messageSent = await ctx.telegram.sendCopy(
       ctx.dbchat.id,
       message,
