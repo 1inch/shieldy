@@ -7,39 +7,7 @@ import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getLink, getName, getUsername } from '@helpers/getUsername'
 import { isRuChat } from '@helpers/isRuChat'
-import { isOver10000 } from '@helpers/goldenBorodutchSubCount'
-
-const promoAdditions = {
-  ru: () =>
-    isOver10000()
-      ? 'При поддержке <a href="https://todorant.com/?utm_source=shieldy">Тудуранта</a>'
-      : 'При поддержке <a href="https://t.me/golden_borodutch">Золота Бородача</a>',
-  en: () =>
-    'Powered by <a href="https://todorant.com/?utm_source=shieldy">Todorant</a>',
-}
-const promoExceptions = [
-  -1001007166727,
-
-  -1001295782139,
-  -1001233073874,
-  -1001060565714,
-  -1001070350591,
-  -1001098630768,
-  -1001145658234,
-  -1001271442507,
-  -1001286547060,
-  -1001093535082,
-
-  -1001214141592,
-
-  -1001372515447,
-
-  -1001078017687,
-  -1001224633906,
-  -1001267580592,
-
-  -1001217329168,
-]
+import { promoExceptions, promoAdditions } from '@helpers/promo'
 
 export async function notifyCandidate(
   ctx: Context,
@@ -88,27 +56,20 @@ export async function notifyCandidate(
           $equation: equation ? (equation.question as string) : '',
           $seconds: `${chat.timeGiven}`,
         },
-        getLink(candidate)
+        getLink(candidate),
+        !promoExceptions.includes(ctx.chat.id),
+        isRuChat(chat)
       )
-      let formattedText = (Markup as any).formatHTML(
-        messageToSend.text,
-        messageToSend.entities
-      )
-      if (!promoExceptions.includes(ctx.chat.id)) {
-        const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
-        formattedText = `${formattedText}\n${promoAddition}`
-      }
       if (image) {
         return ctx.replyWithPhoto({ source: image.png } as any, {
-          caption: formattedText,
-          parse_mode: 'HTML',
+          caption: messageToSend.text,
+          entities: messageToSend.entities,
         })
       } else {
-        return ctx.telegram.sendMessage(
-          chat.id,
-          formattedText,
-          extra as ExtraReplyMessage
-        )
+        return ctx.telegram.sendMessage(chat.id, messageToSend.text, {
+          ...(extra as ExtraReplyMessage),
+          entities: messageToSend.entities,
+        })
       }
     } else {
       const message = cloneDeep(captchaMessage.message)

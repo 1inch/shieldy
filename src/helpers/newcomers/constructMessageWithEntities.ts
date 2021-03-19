@@ -1,10 +1,17 @@
+import {
+  promoAdditionsWithoutHtml,
+  promoLinkLengths,
+  promoUrl,
+} from '@helpers/promo'
 import { cloneDeep } from 'lodash'
 import { Message } from 'telegram-typings'
 
 export function constructMessageWithEntities(
   originalMessage: Message,
   tags: { [index: string]: string },
-  userLink: string
+  userLink: string,
+  addPromoText = false,
+  isRuChat?: boolean
 ) {
   const message = cloneDeep(originalMessage)
   let originalText = message.text
@@ -42,6 +49,17 @@ export function constructMessageWithEntities(
         })
       }
     }
+  }
+  if (!addPromoText) {
+    const language = isRuChat ? 'ru' : 'en'
+    message.entities.push({
+      type: 'text_link',
+      offset: `${originalText}\n`.length + promoLinkLengths[language]().offset,
+      length: promoLinkLengths[language]().length,
+      url: promoUrl[language](),
+    })
+    const promoAddition = promoAdditionsWithoutHtml[isRuChat ? 'ru' : 'en']()
+    originalText = `${originalText}\n${promoAddition}`
   }
   message.text = originalText
   return message
