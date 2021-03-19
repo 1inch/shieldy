@@ -9,8 +9,11 @@ export function constructMessageWithEntities(
   const message = cloneDeep(originalMessage)
   let originalText = message.text
   for (const tag in tags) {
+    const tag_value = tags[tag]
+    if (!tag_value) {
+      continue
+    }
     while (originalText.includes(tag)) {
-      const tag_value = tags[tag]
       const tag_offset = originalText.indexOf(tag)
 
       const tag_length = lengthOfUnicodeString(tag)

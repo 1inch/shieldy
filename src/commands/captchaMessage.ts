@@ -30,7 +30,11 @@ export function setupCaptchaMessage(bot: Telegraf<Context>) {
       )
       if (chat.customCaptchaMessage && chat.captchaMessage) {
         chat.captchaMessage.message.chat = undefined
-        await ctx.telegram.sendCopy(chat.id, chat.captchaMessage.message)
+        await ctx.telegram.sendMessage(
+          chat.id,
+          chat.captchaMessage.message.text,
+          { entities: chat.captchaMessage.message.entities }
+        )
       }
       await clarifyReply(ctx)
     }

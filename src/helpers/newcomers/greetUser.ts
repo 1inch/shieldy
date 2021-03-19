@@ -47,10 +47,8 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   let messageSent: Message
   try {
     message.chat = undefined
-    messageSent = await ctx.telegram.sendCopy(
-      ctx.dbchat.id,
-      message,
-      ctx.dbchat.greetingButtons
+    messageSent = await ctx.telegram.sendMessage(ctx.dbchat.id, message.text, {
+      ...(ctx.dbchat.greetingButtons
         ? Extra.webPreview(false).markup((m) =>
             m.inlineKeyboard(
               ctx.dbchat.greetingButtons
@@ -62,15 +60,14 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
                 .map((v) => [v])
             )
           )
-        : Extra.webPreview(false)
-    )
+        : Extra.webPreview(false)),
+      entities: message.entities,
+    })
   } catch (err) {
     message.entities = []
     message.chat = undefined
-    messageSent = await ctx.telegram.sendCopy(
-      ctx.dbchat.id,
-      message,
-      ctx.dbchat.greetingButtons
+    messageSent = await ctx.telegram.sendMessage(ctx.dbchat.id, message.text, {
+      ...(ctx.dbchat.greetingButtons
         ? Extra.webPreview(false).markup((m) =>
             m.inlineKeyboard(
               ctx.dbchat.greetingButtons
@@ -82,8 +79,9 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
                 .map((v) => [v])
             )
           )
-        : Extra.webPreview(false)
-    )
+        : Extra.webPreview(false)),
+      entities: message.entities,
+    })
   }
 
   // Delete greeting message if requested

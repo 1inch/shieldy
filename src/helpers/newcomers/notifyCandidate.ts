@@ -122,19 +122,19 @@ export async function notifyCandidate(
         : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
       try {
         message.chat = undefined
-        const sentMessage = await ctx.telegram.sendCopy(
+        const sentMessage = await ctx.telegram.sendMessage(
           chat.id,
-          message,
-          extra as ExtraReplyMessage
+          message.text,
+          { ...(extra as ExtraReplyMessage), entities: message.entities }
         )
         return sentMessage
       } catch (err) {
         message.entities = []
         message.chat = undefined
-        const sentMessage = await ctx.telegram.sendCopy(
+        const sentMessage = await ctx.telegram.sendMessage(
           chat.id,
-          message,
-          extra as ExtraReplyMessage
+          message.text,
+          { ...(extra as ExtraReplyMessage), entities: message.entities }
         )
         return sentMessage
       }
