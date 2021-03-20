@@ -5,7 +5,7 @@ import { User } from 'telegram-typings'
 import { Context, Extra, Markup } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
-import { getLink, getName, getUsername } from '@helpers/getUsername'
+import { getName, getUsername } from '@helpers/getUsername'
 import { isRuChat } from '@helpers/isRuChat'
 import { promoExceptions, promoAdditions } from '@helpers/promo'
 
@@ -47,6 +47,7 @@ export async function notifyCandidate(
     ) {
       const messageToSend = constructMessageWithEntities(
         captchaMessage.message,
+        candidate,
         {
           $username: getUsername(candidate),
           $fullname: getName(candidate),
@@ -54,7 +55,6 @@ export async function notifyCandidate(
           $equation: equation ? (equation.question as string) : '',
           $seconds: `${chat.timeGiven}`,
         },
-        getLink(candidate),
         !promoExceptions.includes(ctx.chat.id),
         isRuChat(chat)
       )

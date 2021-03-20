@@ -3,7 +3,7 @@ import { isFunction } from 'lodash'
 import { User } from 'telegraf/typings/telegram-types'
 import { Context, Extra } from 'telegraf'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
-import { getLink, getName, getUsername } from '@helpers/getUsername'
+import { getName, getUsername } from '@helpers/getUsername'
 import { addMessageToDelete } from '@models/MessageToDelete'
 
 export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
@@ -17,12 +17,12 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   // Get marked up message
   const message = constructMessageWithEntities(
     ctx.dbchat.greetingMessage.message,
+    user,
     {
       $title: (await ctx.getChat()).title,
       $username: getUsername(user),
       $fullname: getName(user),
-    },
-    getLink(user)
+    }
   )
   // Add the @username of the greeted user at the end of the message if no $username was provided
   const originalMessageText = ctx.dbchat.greetingMessage.message.text
@@ -37,10 +37,10 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
       message.entities = []
     }
     message.entities.push({
-      type: 'text_link',
+      type: 'text_mention',
       offset: initialLength,
       length: username.length,
-      url: getLink(user),
+      user,
     })
   }
   // Send the message

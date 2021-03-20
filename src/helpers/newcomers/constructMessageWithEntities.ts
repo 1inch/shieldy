@@ -4,12 +4,12 @@ import {
   promoUrl,
 } from '@helpers/promo'
 import { cloneDeep } from 'lodash'
-import { Message } from 'telegram-typings'
+import { Message, User } from 'telegram-typings'
 
 export function constructMessageWithEntities(
   originalMessage: Message,
+  user: User,
   tags: { [index: string]: string },
-  userLink: string,
   addPromoText = false,
   isRuChat?: boolean
 ) {
@@ -42,10 +42,10 @@ export function constructMessageWithEntities(
           message.entities = []
         }
         message.entities.push({
-          type: 'text_link',
+          type: 'text_mention',
           offset: tag_offset,
           length: tag_value_length,
-          url: userLink,
+          user,
         })
       }
     }
