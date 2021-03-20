@@ -70,7 +70,6 @@ export async function notifyCandidate(
         })
       } else {
         messageToSend.chat = undefined
-        console.log('noice', messageToSend, messageToSend.text)
         return ctx.telegram.sendCopy(chat.id, messageToSend, {
           ...(extra as ExtraReplyMessage),
           entities: messageToSend.entities,
