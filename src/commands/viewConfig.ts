@@ -66,24 +66,16 @@ greetingButtons:
   )
   if (chat.greetingMessage) {
     chat.greetingMessage.message.chat = undefined
-    await ctx.telegram.sendMessage(
-      ctx.dbchat.id,
-      chat.greetingMessage.message.text,
-      {
-        ...Extra.inReplyTo(ctx.message.message_id),
-        entities: chat.greetingMessage.message.entities,
-      }
-    )
+    await ctx.telegram.sendCopy(ctx.dbchat.id, chat.greetingMessage.message, {
+      ...Extra.inReplyTo(ctx.message.message_id),
+      entities: chat.greetingMessage.message.entities,
+    })
   }
   if (chat.captchaMessage) {
     chat.captchaMessage.message.chat = undefined
-    await ctx.telegram.sendMessage(
-      ctx.dbchat.id,
-      chat.captchaMessage.message.text,
-      {
-        ...Extra.inReplyTo(ctx.message.message_id),
-        entities: { entities: chat.captchaMessage.message.entities },
-      }
-    )
+    await ctx.telegram.sendCopy(ctx.dbchat.id, chat.captchaMessage.message, {
+      ...Extra.inReplyTo(ctx.message.message_id),
+      entities: chat.captchaMessage.message.entities,
+    })
   }
 }

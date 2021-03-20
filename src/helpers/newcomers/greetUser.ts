@@ -47,7 +47,7 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   let messageSent: Message
   try {
     message.chat = undefined
-    messageSent = await ctx.telegram.sendMessage(ctx.dbchat.id, message.text, {
+    messageSent = await ctx.telegram.sendCopy(ctx.dbchat.id, message, {
       ...(ctx.dbchat.greetingButtons
         ? Extra.webPreview(false).markup((m) =>
             m.inlineKeyboard(
@@ -66,7 +66,7 @@ export async function greetUser(ctx: Context, unsafeUser?: User | Function) {
   } catch (err) {
     message.entities = []
     message.chat = undefined
-    messageSent = await ctx.telegram.sendMessage(ctx.dbchat.id, message.text, {
+    messageSent = await ctx.telegram.sendCopy(ctx.dbchat.id, message, {
       ...(ctx.dbchat.greetingButtons
         ? Extra.webPreview(false).markup((m) =>
             m.inlineKeyboard(

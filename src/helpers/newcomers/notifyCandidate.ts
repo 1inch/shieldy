@@ -20,19 +20,17 @@ export async function notifyCandidate(
     ? cloneDeep(ctx.dbchat.captchaMessage)
     : undefined
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
-  const extra =
+  let extra =
     chat.captchaType !== CaptchaType.BUTTON
-      ? Extra.HTML(true).webPreview(false)
-      : Extra.HTML(true)
-          .webPreview(false)
-          .markup((m) =>
-            m.inlineKeyboard([
-              m.callbackButton(
-                chat.buttonText || strings(chat, 'captcha_button'),
-                `${chat.id}~${candidate.id}`
-              ),
-            ])
-          )
+      ? Extra.webPreview(false)
+      : Extra.webPreview(false).markup((m) =>
+          m.inlineKeyboard([
+            m.callbackButton(
+              chat.buttonText || strings(chat, 'captcha_button'),
+              `${chat.id}~${candidate.id}`
+            ),
+          ])
+        )
   if (
     chat.customCaptchaMessage &&
     captchaMessage &&
@@ -61,17 +59,25 @@ export async function notifyCandidate(
         isRuChat(chat)
       )
       if (image) {
+        extra = extra.HTML(true)
+        let formattedText = (Markup as any).formatHTML(
+          messageToSend.text,
+          messageToSend.entities
+        )
         return ctx.replyWithPhoto({ source: image.png } as any, {
-          caption: messageToSend.text,
-          entities: messageToSend.entities,
+          caption: formattedText,
+          ...(extra as ExtraReplyMessage),
         })
       } else {
-        return ctx.telegram.sendMessage(chat.id, messageToSend.text, {
+        messageToSend.chat = undefined
+        console.log('noice', messageToSend, messageToSend.text)
+        return ctx.telegram.sendCopy(chat.id, messageToSend, {
           ...(extra as ExtraReplyMessage),
           entities: messageToSend.entities,
         })
       }
     } else {
+      extra = extra.HTML(true)
       const message = cloneDeep(captchaMessage.message)
       const formattedText = (Markup as any).formatHTML(
         message.text,
@@ -83,24 +89,23 @@ export async function notifyCandidate(
         : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
       try {
         message.chat = undefined
-        const sentMessage = await ctx.telegram.sendMessage(
-          chat.id,
-          message.text,
-          { ...(extra as ExtraReplyMessage), entities: message.entities }
-        )
+        const sentMessage = await ctx.telegram.sendCopy(chat.id, message, {
+          ...(extra as ExtraReplyMessage),
+          entities: message.entities,
+        })
         return sentMessage
       } catch (err) {
         message.entities = []
         message.chat = undefined
-        const sentMessage = await ctx.telegram.sendMessage(
-          chat.id,
-          message.text,
-          { ...(extra as ExtraReplyMessage), entities: message.entities }
-        )
+        const sentMessage = await ctx.telegram.sendCopy(chat.id, message, {
+          ...(extra as ExtraReplyMessage),
+          entities: message.entities,
+        })
         return sentMessage
       }
     }
   } else {
+    extra = extra.HTML(true)
     if (image) {
       const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
       return ctx.replyWithPhoto({ source: image.png } as any, {

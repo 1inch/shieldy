@@ -23,8 +23,8 @@ export function constructMessageWithEntities(
     while (originalText.includes(tag)) {
       const tag_offset = originalText.indexOf(tag)
 
-      const tag_length = lengthOfUnicodeString(tag)
-      const tag_value_length = lengthOfUnicodeString(tag_value)
+      const tag_length = tag.length
+      const tag_value_length = tag_value.length
 
       // Replace the tag with the value in the message
       originalText = originalText.replace(tag, tag_value)
@@ -52,19 +52,18 @@ export function constructMessageWithEntities(
   }
   if (addPromoText) {
     const language = isRuChat ? 'ru' : 'en'
+    if (!message.entities) {
+      message.entities = []
+    }
     message.entities.push({
       type: 'text_link',
       offset: `${originalText}\n`.length + promoLinkLengths[language]().offset,
       length: promoLinkLengths[language]().length,
       url: promoUrl[language](),
     })
-    const promoAddition = promoAdditionsWithoutHtml[isRuChat ? 'ru' : 'en']()
+    const promoAddition = promoAdditionsWithoutHtml[language]()
     originalText = `${originalText}\n${promoAddition}`
   }
   message.text = originalText
   return message
-}
-
-function lengthOfUnicodeString(s: string) {
-  return (s.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^]/g) || []).length
 }
