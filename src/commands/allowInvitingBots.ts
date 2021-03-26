@@ -1,3 +1,4 @@
+import { bot } from '@helpers/bot'
 import { kickChatMember } from '@helpers/newcomers/kickChatMember'
 import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 import { Telegraf, Context, Extra } from 'telegraf'
@@ -34,7 +35,7 @@ export function checkAllowInvitingBots(ctx: Context, next: Function) {
     !ctx.dbchat.allowInvitingBots
   ) {
     ctx.message.new_chat_members
-      .filter((m) => m.is_bot && m.username !== ctx.botInfo?.username)
+      .filter((m) => m.is_bot && m.username !== (bot as any).botInfo.username)
       .forEach((m) => {
         kickChatMember(ctx.dbchat, m)
       })
