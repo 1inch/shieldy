@@ -28,12 +28,17 @@ export function constructMessageWithEntities(
 
       // Replace the tag with the value in the message
       originalText = originalText.replace(tag, tag_value)
-
       // Update the offset of links if it is after the replaced tag
       if (message.entities && message.entities.length) {
         message.entities.forEach((msgEntity) => {
-          if (msgEntity.offset > tag_offset) {
+          // Entities after
+          if (msgEntity.offset > tag_offset + tag_length) {
             msgEntity.offset = msgEntity.offset - tag_length + tag_value_length
+          } else if (
+            msgEntity.offset <= tag_offset &&
+            msgEntity.offset + msgEntity.length >= tag_offset + tag_length
+          ) {
+            msgEntity.length += tag_value_length - tag_length
           }
         })
       }
