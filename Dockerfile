@@ -25,9 +25,7 @@ COPY ./scripts ./scripts
 COPY ./src ./src
 COPY ./entrypoint.sh .
 
-ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 RUN rm -rf /usr/local/lib/node_modules/npm/ /usr/local/bin/npm
 
