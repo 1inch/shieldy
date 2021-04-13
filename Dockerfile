@@ -3,13 +3,6 @@ FROM node:12-alpine
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY ./package.json .
-COPY ./src ./src
-COPY ./scripts ./scripts
-COPY ./tsconfig.json .
-COPY ./yarn.lock .
-COPY ./entrypoint.sh .
-
 RUN apk add --no-cache \
       chromium \
       nss \
@@ -21,12 +14,18 @@ RUN apk add --no-cache \
       nodejs \
       yarn
 
-ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+COPY ./package.json .
+COPY ./yarn.lock .
 
 # Install shieldy dependencies
 RUN yarn install
+
+COPY ./tsconfig.json .
+COPY ./scripts ./scripts
+COPY ./src ./src
+COPY ./entrypoint.sh .
+
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
 RUN rm -rf /usr/local/lib/node_modules/npm/ /usr/local/bin/npm
 
