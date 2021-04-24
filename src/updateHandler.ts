@@ -41,6 +41,7 @@ import { setupSkipVerifiedUsers } from '@commands/skipVerifiedUsers'
 import { setupSetConfig } from '@commands/setConfig'
 import { report } from '@helpers/report'
 import { attachChatMember } from '@middlewares/attachChatMember'
+import { checkBlockList } from '@middlewares/checkBlockList'
 import { isMaster } from 'cluster'
 import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPosts'
 import { setupRestrictTime } from '@commands/restrictTime'
@@ -49,6 +50,8 @@ import { messageSaver } from '@middlewares/messageSaver'
 
 // Ignore all messages that are too old
 bot.use(checkTime)
+// Check block list
+bot.use(checkBlockList)
 // Add chat to context
 bot.use(attachUser)
 // Remove bots right when they get added
