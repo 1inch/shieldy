@@ -114,7 +114,6 @@ export const localizations = {
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
     ru: 'Только человек, вызвавший меню, может выбирать опции.',
-    it: 'Solamente chi ha invocato il comando può selezionarlo.',
     et: 'Ainult see, kes avas menüüd, saab valida valikud.',
     uk: 'Тільки людина, яка викликала меню, може вибирати опції.',
     br: 'Apenas a pessoa que iniciou o menu pode selecionar as opções.',
@@ -139,6 +138,7 @@ export const localizations = {
     he: 'רק מי שפתח את התפריט יכול לבחור את האפשרויות.',
     yue: '最初啓動選單嗰個人先有得揀。',
     hu: 'Csak az a személy választhat, aki megnyitotta a menüt.',
+    it: 'Solo chi ha invocato il comando può selezionarlo.',
     bg:
       'Само човекът който е направил менюто може да избира различните избори.',
   },
@@ -147,8 +147,6 @@ export const localizations = {
       'Please, select the test type for the newcomers:\n\n• Simple — bot will ask to send anything to the chat\n• Button — bot will ask to press a button\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image',
     ru:
       'Пожалуйста, выберите тип проверки новичков в чате:\n\n• Простая — бот попросит прислать что угодно в чат\n• Кнопкой — бот попросит нажать на кнопку\n• Цифровая — бот попросит решить простую арифметическую задачу\n• Картинкой — бот попросит распознать символы на картинке',
-    it:
-      'Prego, seleziona uno dei seguenti test per i nuovi arrivati:\n\n• Semplice — Il bot chiederà di inviare qualcunque messaggio in chat\n• Bottone — Il bot chiederà di premere un pulsante\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image',
     et:
       'Palun valige uustulnukute kontrolli tüüp:\n\n• Lihtne — bot küsib vestlusele midagi saata\n• Nuppuga — bot küsib nuppu klõpsata.\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image',
     uk:
@@ -193,6 +191,8 @@ export const localizations = {
       '揀選如何驗證新來者：\n\n• 簡易： — 要求向羣組發嘢\n• 撳掣 — 要求撳一粒掣\n• 算術 — 要求做一條計數題\n• 認圖 — 要求認出一幅圖片入面嘅所有文字',
     hu:
       'Kérlek, válaszd ki az újoncok tesztjének a típusát:\n\n• Egyszerű — a bot annyit kér, hogy gépeljen be valamit a chat-be\n• Gomb — egy gomb megnyomására kéri\n• Számok — a bot egy egyszerű matematikai művelet elvégzésére kéri\n• Kép — a bot arra kéri, hogy ismerjen fel egy karaktert a képen',
+    it:
+      "Prego, seleziona uno dei seguenti test per i nuovi utenti:\\n\\n• Semplice — Il bot chiederà di inviare un qualunque messaggio in chat\\n• Bottone — Il bot chiederà di premere un pulsante\\n• Numeri — il bot ti chiederà di risolvere una semplice operazione aritmetica\\n• Immagine — il bot ti chiederà di riconoscere un personaggio in un'immagine",
     bg:
       'Моля, изберете типа на теста за новодошлите: \n\n• Simple - ботът ще поиска да изпрати каквото и да е в чата \n• Button - ботът ще поиска да натисне бутон \n• Digits - ботът ще поиска да реши проста аритметична операция \n• Image - ботът ще поиска да разпознае символи на изображение ',
   },
@@ -222,12 +222,12 @@ export const localizations = {
     he: 'פשוט',
     yue: '簡易',
     hu: 'Egyszerű',
+    fi: 'Yksinkertainen',
     bg: 'Просто',
   },
   digits: {
     en: 'Digits',
     ru: 'Цифровая',
-    it: 'Digita',
     et: 'Digitaalne',
     uk: 'Цифрова',
     br: 'Digitos',
@@ -251,6 +251,7 @@ export const localizations = {
     yue: '算術',
     hu: 'Számok',
     fi: 'Numerot',
+    it: 'Numeri',
     bg: 'Цифри',
   },
   button: {
@@ -767,6 +768,8 @@ export const localizations = {
       ', ole hyvä ja lähetä kuvan merkit annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     fr:
       ', veuillez inscrire les caractères affichés dans le délai indiqué, sinon vous serez expulsé. Merci!',
+    it:
+      ', prego, riconosci il personaggio qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     bg:
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
   },
@@ -1506,12 +1509,12 @@ export const localizations = {
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
-    ru: 'Отлично! Щилди включен.',
     es: '¡Entendido! Ahora Shieldy está activo.',
     ca: "Molt bé, a partir d'ara en Shieldy està actiu i vigilant aquest xat.",
     br: 'Boa! Shieldy está ativado agora.',
     he: 'מעולה! Shieldy דלוק כעת.',
     no: 'Supert! Shieldy er nå aktivert.',
+    ru: 'Отлично! Щилди включён.',
     yue: ' 正！Shieldy 已經開咗。',
     hu: 'Nagyszerű! a Shieldly újra engedélyezve van.',
     fr: 'Super! Shieldy est maintenant activé!',
