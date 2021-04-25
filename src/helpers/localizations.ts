@@ -477,7 +477,7 @@ export const localizations = {
     uk: 'Чудово! Тепер я буду приймати команди від усіх.',
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
     tr: 'Harika! Şimdi herkes tarafından gönderilen komutlara tepki vereceğim.',
-    es: '¡Genial! Ahora reaccionaré a los comandos enviador por todo el mundo.',
+    es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
     de:
@@ -508,7 +508,7 @@ export const localizations = {
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
     es:
-      'Perfecto! A partir de este momento, los recién llegados, solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que éste sea resuelto correctamente.',
+      'Perfecto! A partir de este momento, los recién llegados solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que este sea resuelto correctamente.',
     zh:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
@@ -552,7 +552,7 @@ export const localizations = {
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
     es:
-      '¡Genial! A partir de este momento, los recién llegados, podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
+      '¡Genial! A partir de este momento, los recién llegados podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
@@ -702,7 +702,7 @@ export const localizations = {
     tr:
       ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
-      ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+      ', por favor, presione el botón de abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
     no:
       'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
@@ -750,7 +750,7 @@ export const localizations = {
     tr:
       ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
-      ', por favor, envía en este grupo, los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+      ', por favor, envía a este grupo los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     ca:
       ", per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     de:
