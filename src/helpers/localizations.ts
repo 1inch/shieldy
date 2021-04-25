@@ -555,34 +555,34 @@ export const localizations = {
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
-      ', Wahnsinn! Neue User können nun Nachrichten senden, bevor sie den Captcha Test bestanden haben.',
-    tw: ', 很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
+      'Wahnsinn! Neue User können nun Nachrichten senden, bevor sie den Captcha Test bestanden haben.',
+    tw: '很棒！現在，新進成員可以在通過驗證之前發送文字消息。',
     fr:
-      ", Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.",
+      "Parfait, maintenant les nouveaux membres pourront discuter avant d'envoyer une réponse au captcha.",
     id:
-      ', Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
+      'Baiklah, sekarang anggota baru boleh mengirim pesan walaupun belum menanggapi ujian.',
     ko:
-      ', 좋아요! 이제 새로 온 사람들은 캡챠를 통과하기 전에 메시지를 보낼 수 있을 거예요.',
-    am: ', አዲሰ ገቢ ካፕቻን ሳያልፍ ሜሴጅ መላክ ይችላል ።',
-    cz: ', Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
+      '좋아요! 이제 새로 온 사람들은 캡챠를 통과하기 전에 메시지를 보낼 수 있을 거예요.',
+    am: 'አዲሰ ገቢ ካፕቻን ሳያልፍ ሜሴጅ መላክ ይችላል ።',
+    cz: 'Skvělé! Nyní mohou nováčci posílat zprávy, než projdou testem.',
     sk:
-      ', Výborne! Odteraz nováčikovia budú môcť posielať textové správy predtým, ako prejdú testom captcha.',
+      'Výborne! Odteraz nováčikovia budú môcť posielať textové správy predtým, ako prejdú testom captcha.',
     ar:
       'رائع ! الآن الأعضاء الجدد سوف يكونون قادرين على إرسال النص بدون الحاجة لإختبار .',
     ja:
       '素晴らしいです！、これで、新しく参加した人は、キャプチャをパスする前に、テキストを送信することができます。',
     ro:
-      ', Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
+      'Super! Acum nou veniții vor putea trimite text înainte de a trece de testul captcha.',
     ca:
-      ", Entesos, a partir d'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.",
+      "Entesos, a partir d'ara els nouvinguts, podràn enviar missatges fins i tot abans de resoldre correctament la prova establerta.",
     br:
-      ', Boa! Agora os novatos poderão enviar texto antes de passar pelo captcha.',
-    he: ', מעולה! מצטרפים יוכלו לשלוח הודעות לפני שענו על המבחן.',
-    yue: ', 由而家開始，新來者喺 24 小時內只畀發文字內容。',
+      'Boa! Agora os novatos poderão enviar texto antes de passar pelo captcha.',
+    he: 'מעולה! מצטרפים יוכלו לשלוח הודעות לפני שענו על המבחן.',
+    yue: '由而家開始，新來者喺 24 小時內只畀發文字內容。',
     hu:
-      ', Nagyszerű! Mostantól az újonc beküldhet más üzenetet is, mielőtt a captcha-t megoldaná.',
+      'Nagyszerű! Mostantól az újonc beküldhet más üzenetet is, mielőtt a captcha-t megoldaná.',
     bg:
-      ', Чудесно! Сега новодошлите ще могат да пишат съобщения, преди да преминат captcha.',
+      'Чудесно! Сега новодошлите ще могат да пишат съобщения, преди да преминат captcha.',
   },
   simple_warning: {
     en:
@@ -630,7 +630,7 @@ export const localizations = {
     fi:
       ', ole hyvä ja lähetä ryhmään viestiä annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     fr:
-      ", veuillez répondre dans le délai, sinon vous serez directement prélevé à la source. Merci d'avance ! ",
+      ", veuillez répondre dans le délai, sinon vous serez directement prélevé à la source. Merci d'avance !",
     bg:
       ', Mоля, представете се в групата, в рамките на определеното време, в противен случай ще бъдете изритани. Благодаря ви!',
   },
@@ -702,12 +702,12 @@ export const localizations = {
       ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
     es:
       ', por favor, presione el botón abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
-    zh: ', 请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
+    zh: '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
     no:
       'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
     de:
       ', bitte drücke den Knopf unten innerhalb des spezifizierten Zeitlimits, andernfalls wirst du gekickt. Danke!',
-    tw: ', 請在指定的時間內按下面的按鈕，否則您將被踢。謝謝！',
+    tw: '，請在指定的時間內按下面的按鈕，否則您將被踢。謝謝！',
     fr:
       ", Veuillez appuyer sur le bouton ci-dessous dans le délai spécifié, sinon vous ne serez pas le bienvenue ici. Merci d'avance!",
     id:
@@ -729,7 +729,7 @@ export const localizations = {
       ", per favor, pitja el botó d'aquest missatge abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     he:
       ', אנא ללחוץ על הכפתור במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
-    yue: ', 唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
+    yue: '，唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
     hu:
       ', kérlek,nyomd meg az alábbi gombot, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
@@ -760,7 +760,7 @@ export const localizations = {
       ', אנא לשלוח את התווים המוצגים במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
     no:
       ', vennligst send tegnene som vises på bildet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    yue: ', 唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
+    yue: '，唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
     hu:
       ', kérlek, írd be ide az alábbi karaktereket, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
@@ -1746,10 +1746,10 @@ export const localizations = {
   },
   banNewTelegramUsers_false: {
     en:
-      'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000',
+      'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     ru:
-      'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000',
+      'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
     bg:
-      'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000',
+      'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
   },
 }
