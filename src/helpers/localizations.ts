@@ -617,20 +617,20 @@ export const localizations = {
       ', prosím, pošlite do tejto skupiny v stanovenom čase akúkoľvek správu, inak budete vyhodený/á. Ďakujem!',
     ar:
       ', من فضلك، إرسال أي رسالة إلى هذه المجموعة في غضون المدة الزمنية المحدد، وإلا سيتم طردك. شكرا!',
-    ja:
-      ', 指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
     ro:
       ', te rog, trimite orice mesaj către acest grup în timpul specificat, altfel o să fii dat afară în mod automat. Mulțumesc!',
     ca:
       ", per favor, envia un missatge qualsevol, dins aquest grup, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     he: ', אנא שלח הודעה כלשהי לקבוצה בטווח הזמן הנתון, אחר תורחק. תודה!',
-    yue: ', 唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
     hu:
       ', kérlek, írj be valamilyen üzenetet, mielőtt a megadott idő lejárna, különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
       ', ole hyvä ja lähetä ryhmään viestiä annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     fr:
       ", veuillez répondre dans le délai, sinon vous serez directement prélevé à la source. Merci d'avance !",
+    ja:
+      ', 指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
+    yue: ', 唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
     bg:
       ', Mоля, представете се в групата, в рамките на определеното време, в противен случай ще бъдете изритани. Благодаря ви!',
   },
@@ -729,11 +729,11 @@ export const localizations = {
       ", per favor, pitja el botó d'aquest missatge abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     he:
       ', אנא ללחוץ על הכפתור במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
-    yue: '，唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
     hu:
       ', kérlek,nyomd meg az alábbi gombot, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
       ', ole hyvä ja klikkaa painiketta alla ennen annetun ajan loppumista, jotta et tule poistetuksi ryhmästä. Kiitos!',
+    yue: '，唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
     bg:
       ', Mоля, натиснете бутона по-долу в рамките на определеното време, в противен случай ще бъдете изхвърлени. Благодаря ви!',
   },
@@ -1745,10 +1745,10 @@ export const localizations = {
       'Чудесно! Shieldy, ще забрани (или ще "изрита") всички новодошли с идентификатор на Telegram над 1 000 000 000. ',
   },
   banNewTelegramUsers_false: {
-    en:
-      'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     ru:
       'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
+    en:
+      'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     bg:
       'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
   },
