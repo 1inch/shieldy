@@ -62,7 +62,10 @@ export function setupLanguage(bot: Telegraf<Context>) {
               m.callbackButton('Cantonese', 'yue'),
               m.callbackButton('Hungarian', 'hu'),
             ],
-            [m.callbackButton('Finnish', 'fi')],
+            [
+              m.callbackButton('Finnish', 'fi'),
+              m.callbackButton('Bulgarian', 'bg'),
+            ],
           ])
         )
     )
@@ -95,6 +98,7 @@ export function setupLanguage(bot: Telegraf<Context>) {
       'yue',
       'hu',
       'fi',
+      'bg',
     ],
     checkIfFromReplier,
     async (ctx) => {
