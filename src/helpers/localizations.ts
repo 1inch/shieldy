@@ -477,7 +477,6 @@ export const localizations = {
     uk: 'Чудово! Тепер я буду приймати команди від усіх.',
     br: 'Boa! Agora obedecerei a qualquer pessoa.',
     tr: 'Harika! Şimdi herkes tarafından gönderilen komutlara tepki vereceğim.',
-    es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
     zh: '很棒！现在我对所有人发出的命令做出反应。',
     no: 'Supert! Nå vil jeg svare på kommandoer gitt av hvem som helst.',
     de:
@@ -497,6 +496,7 @@ export const localizations = {
     yue: '我而家開始會回應所有人嘅命令。',
     hu: 'Nagyszerű! Mostantól bárki parancsara reagálok!',
     bg: 'Чудесно! Вече, ще приемам команди от всички юзери в групата.',
+    es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
   },
   strict_true: {
     en:
@@ -507,8 +507,6 @@ export const localizations = {
       'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
     tr:
       "Harika! Artık yeni gelenler, CAPTCHA'yı geçinceye kadar CAPTCHA çözümlerinden başka bir şey gönderemeyecekler.",
-    es:
-      'Perfecto! A partir de este momento, los recién llegados solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que este sea resuelto correctamente.',
     zh:
       '很棒！现在新手在通过验证码之前不会发送除验证码解决方案之外的任何内容。',
     no: 'Supert! Nå kan ikke nykommere sende noe før de har bestått testen.',
@@ -542,6 +540,8 @@ export const localizations = {
       'Nagyszerű! Mostantól az újonc nem küldhet más üzenetet be addíg, amíg a captcha-t meg nem oldja.',
     bg:
       'Чудесно! Сега новодошлите няма да могат, да изпращат нищо друго освен  решения с captcha, докато не преминат теста.',
+    es:
+      'Perfecto! A partir de este momento, los recién llegados solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que este sea resuelto correctamente.',
   },
   strict_false: {
     en:
@@ -551,8 +551,6 @@ export const localizations = {
       'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
     tr:
       'Harika! Artık yeni gelenler, CAPTCHA testini geçmeden önce metin gönderebilecekler.',
-    es:
-      '¡Genial! A partir de este momento, los recién llegados podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
     zh: '很棒！现在，新手可以在通过验证码之前发送文本消息。',
     no: 'Supert! Nå kan nykommere sende meldinger før de har bestått testen.',
     de:
@@ -584,6 +582,8 @@ export const localizations = {
       'Nagyszerű! Mostantól az újonc beküldhet más üzenetet is, mielőtt a captcha-t megoldaná.',
     bg:
       'Чудесно! Сега новодошлите ще могат да пишат съобщения, преди да преминат captcha.',
+    es:
+      '¡Genial! A partir de este momento, los recién llegados podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
   },
   simple_warning: {
     en:
@@ -701,8 +701,6 @@ export const localizations = {
       ', Por favor, aperte o botão abaixo no tempo limite especificado, caso contrário irei kicka-lo, Obrigado!',
     tr:
       ', Lütfen, belirtilen süre içinde aşağıdaki düğmeye basın, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
-    es:
-      ', por favor, presione el botón de abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     zh: '，请在指定的时间内按下面的按钮，否则你将被踢。谢谢！',
     no:
       'vennligst trykk knappen nedenfor innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
@@ -737,6 +735,8 @@ export const localizations = {
     yue: '，唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
     bg:
       ', Mоля, натиснете бутона по-долу в рамките на определеното време, в противен случай ще бъдете изхвърлени. Благодаря ви!',
+    es:
+      ', por favor, presione el botón de abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
   },
   image_warning: {
     en:
@@ -749,8 +749,6 @@ export const localizations = {
       ', будь ласка, надішліть зазначені символи у цей чат, поки не спливе вказаний час, або ви будете вилучені з чату. Дякуємо!',
     tr:
       ', Lütfen, bu gruba belirtilen süre içerisinde gösterilen karakterleri gönderin, aksi takdirde kovulacaksınız. Teşekkür ederiz!',
-    es:
-      ', por favor, envía a este grupo los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
     ca:
       ", per favor, envia dins aquest grup, els caràcters de la imatge, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     de:
@@ -772,6 +770,8 @@ export const localizations = {
       ', prego, riconosci il personaggio qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     bg:
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
+    es:
+      ', por favor, envía a este grupo los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
   },
   captcha_button: {
     en: 'I am not a bot',
