@@ -67,14 +67,14 @@ greetingButtons:
   if (chat.greetingMessage) {
     chat.greetingMessage.message.chat = undefined
     await ctx.telegram.sendCopy(ctx.dbchat.id, chat.greetingMessage.message, {
-      ...Extra.inReplyTo(ctx.message.message_id),
+      ...Extra.webPreview(false).inReplyTo(ctx.message.message_id),
       entities: chat.greetingMessage.message.entities,
     })
   }
   if (chat.captchaMessage) {
     chat.captchaMessage.message.chat = undefined
     await ctx.telegram.sendCopy(ctx.dbchat.id, chat.captchaMessage.message, {
-      ...Extra.inReplyTo(ctx.message.message_id),
+      ...Extra.webPreview(false).inReplyTo(ctx.message.message_id),
       entities: chat.captchaMessage.message.entities,
     })
   }
