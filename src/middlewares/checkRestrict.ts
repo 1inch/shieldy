@@ -1,6 +1,7 @@
 import { Context } from 'telegraf'
 import { isGloballyRestricted } from '@helpers/globallyRestricted'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
+import { MessageEntity } from 'typegram'
 
 export async function checkRestrict(ctx: Context, next: () => any) {
   if (ctx.update.message?.date && ctx.update.message?.text === '/help') {
@@ -35,8 +36,12 @@ export async function checkRestrict(ctx: Context, next: () => any) {
   // If a restricted user tries to send restricted type, just delete it
   if (
     restricted &&
-    ((message.entities && message.entities.length) ||
-      (message.caption_entities && message.caption_entities.length) ||
+    ((message.entities &&
+      message.entities.length &&
+      entitiesContainMedia(message.entities)) ||
+      (message.caption_entities &&
+        message.caption_entities.length &&
+        entitiesContainMedia(message.caption_entities)) ||
       message.forward_from ||
       message.forward_date ||
       message.forward_from_chat ||
@@ -52,4 +57,21 @@ export async function checkRestrict(ctx: Context, next: () => any) {
   }
   // Or just continue
   return next()
+}
+
+const allowedEntities = [
+  'hashtag',
+  'cashtag',
+  'bold',
+  'italic',
+  'underline',
+  'strikethrough',
+]
+function entitiesContainMedia(entities: MessageEntity[]) {
+  for (const entity of entities) {
+    if (!allowedEntities.includes(entity.type)) {
+      return true
+    }
+  }
+  return false
 }
