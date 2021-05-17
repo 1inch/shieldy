@@ -43,7 +43,7 @@ type: <code>${ctx.chat.type}</code>
 shieldyRole: <code>${
       ctx.chat.type === 'private'
         ? 'N/A'
-        : (await ctx.getChatMember((bot as any).botInfo.username)).status
+        : (await ctx.getChatMember((await ctx.telegram.getMe()).id).status
     }</code>
 language: <code>${chat.language}</code>
 captchaType: <code>${chat.captchaType}</code>
