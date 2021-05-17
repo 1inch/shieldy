@@ -3,6 +3,7 @@ import { findChat, Chat } from '@models/Chat'
 import { Telegraf, Context, Extra } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { checkLock } from '@middlewares/checkLock'
+import { bot } from '@helpers/bot'
 
 export function setupViewConfig(bot: Telegraf<Context>) {
   bot.command(
@@ -42,7 +43,7 @@ type: <code>${ctx.chat.type}</code>
 shieldyRole: <code>${
       ctx.chat.type === 'private'
         ? 'N/A'
-        : (await ctx.getChatMember(ctx.botInfo.id)).status
+        : (await ctx.getChatMember((bot as any).botInfo.username)).status
     }</code>
 language: <code>${chat.language}</code>
 captchaType: <code>${chat.captchaType}</code>
