@@ -38,6 +38,12 @@ export async function sendCurrentConfig(ctx: Context, chat: Chat) {
     `${strings(ctx.dbchat, 'viewConfig')}
 
 id: <code>${chat.id}</code>
+type: <code>${ctx.chat.type}</code>
+shieldyRole: <code>${
+      ctx.chat.type === 'private'
+        ? 'N/A'
+        : (await ctx.getChatMember(ctx.botInfo.id)).status
+    }</code>
 language: <code>${chat.language}</code>
 captchaType: <code>${chat.captchaType}</code>
 timeGiven: <code>${chat.timeGiven}</code>
