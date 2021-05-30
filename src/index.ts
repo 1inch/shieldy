@@ -27,9 +27,27 @@ if (isMaster) {
 if (isMaster) {
   bot.use((ctx) => {
     handleCtx(ctx)
+    // Debug
+    const anyUpdate = ctx.update as any
+    if (anyUpdate.chat_member) {
+      console.log(anyUpdate.chat_member)
+    }
   })
   bot
-    .launch()
+    .launch({
+      polling: {
+        allowedUpdates: [
+          'callback_query',
+          'chosen_inline_result',
+          'edited_message',
+          'inline_query',
+          'message',
+          'poll',
+          'poll_answer',
+          'chat_member',
+        ] as any,
+      },
+    })
     .then(() => {
       console.info('Bot on the main thread is up and running')
     })
