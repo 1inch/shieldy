@@ -49,7 +49,6 @@ import { setupBanNewTelegramUsers } from '@commands/banNewTelegramUsers'
 import { messageSaver } from '@middlewares/messageSaver'
 
 bot.use((ctx, next) => {
-  console.log(ctx.update.update_id)
   const anyUpdate = ctx.update as any
   if (anyUpdate.chat_member) {
     console.log(anyUpdate.chat_member)
