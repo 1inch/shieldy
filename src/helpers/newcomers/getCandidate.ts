@@ -1,17 +1,16 @@
 import { Candidate, Equation } from '@models/Chat'
 import { User, Message } from 'telegram-typings'
 import { Context } from 'telegraf'
+import { Captcha } from './generateCaptcha'
 
 export function getCandidate(
   ctx: Context,
   user: User,
+  captcha: Captcha,
   notificationMessage?: Message,
-  equation?: Equation,
-  image?: {
-    png: any
-    text: string
-  }
 ): Candidate {
+  const { equation, image } = captcha
+
   return {
     id: user.id,
     timestamp: new Date().getTime(),
