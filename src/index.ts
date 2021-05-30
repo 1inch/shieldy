@@ -27,11 +27,6 @@ if (isMaster) {
 if (isMaster) {
   bot.use((ctx) => {
     handleCtx(ctx)
-    // Debug
-    const anyUpdate = ctx.update as any
-    if (anyUpdate.chat_member) {
-      console.log(anyUpdate.chat_member)
-    }
   })
   bot
     .launch({
