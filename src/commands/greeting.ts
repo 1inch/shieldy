@@ -6,6 +6,7 @@ import { checkLock } from '@middlewares/checkLock'
 import { report } from '@helpers/report'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { clarifyReply } from '@helpers/clarifyReply'
+import { isReplyToShieldy } from '@helpers/isReplyToShieldy'
 
 export function setupGreeting(bot: Telegraf<Context>) {
   // Setup command
@@ -39,21 +40,11 @@ export function setupGreeting(bot: Telegraf<Context>) {
       if (!ctx.dbchat.greetsUsers) {
         return
       }
-      // Check if reply
-      if (!ctx.message || !ctx.message.reply_to_message) {
-        return
-      }
       // Check if text
       if (!ctx.message.text) {
-        return
+        return false;
       }
-      // Check if reply to shieldy
-      if (
-        !ctx.message.reply_to_message.from ||
-        !ctx.message.reply_to_message.from.username ||
-        ctx.message.reply_to_message.from.username !==
-          (bot as any).botInfo.username
-      ) {
+      if (!isReplyToShieldy({ ctx, bot })) {
         return
       }
       // Check if reply to the correct message
