@@ -7,6 +7,7 @@ import { bot } from '@helpers/bot'
 import { setupHelp } from '@commands/help'
 import { setupLanguage } from '@commands/language'
 import { setupCaptcha } from '@commands/captcha'
+import { setupCustomCaptcha } from '@commands/customCaptcha'
 import { checkMemberChange, setupNewcomers } from '@helpers/newcomers'
 import { setupTimeLimit } from '@commands/timeLimit'
 import { setupLock } from '@commands/lock'
@@ -70,6 +71,7 @@ bot.use(messageSaver)
 setupHelp(bot)
 setupLanguage(bot)
 setupCaptcha(bot)
+setupCustomCaptcha(bot)
 setupTimeLimit(bot)
 setupLock(bot)
 setupRestrict(bot)
