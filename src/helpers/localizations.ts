@@ -144,9 +144,9 @@ export const localizations = {
   },
   captcha: {
     en:
-      'Please, select the test type for the newcomers:\n\n• Simple — bot will ask to send anything to the chat\n• Button — bot will ask to press a button\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image',
+      'Please, select the test type for the newcomers:\n\n• Simple — bot will ask to send anything to the chat\n• Button — bot will ask to press a button\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image\n• Custom — bot will ask chat-specific questions specified by /addCustomCaptcha',
     ru:
-      'Пожалуйста, выберите тип проверки новичков в чате:\n\n• Простая — бот попросит прислать что угодно в чат\n• Кнопкой — бот попросит нажать на кнопку\n• Цифровая — бот попросит решить простую арифметическую задачу\n• Картинкой — бот попросит распознать символы на картинке',
+      'Пожалуйста, выберите тип проверки новичков в чате:\n\n• Простая — бот попросит прислать что угодно в чат\n• Кнопкой — бот попросит нажать на кнопку\n• Цифровая — бот попросит решить простую арифметическую задачу\n• Картинкой — бот попросит распознать символы на картинке\n• Пользовательская — бот задаст случайный вопрос из установленных через /addCustomCaptcha',
     et:
       'Palun valige uustulnukute kontrolli tüüp:\n\n• Lihtne — bot küsib vestlusele midagi saata\n• Nuppuga — bot küsib nuppu klõpsata.\n• Digits — bot will ask to solve a simple arithmetic operation\n• Image — bot will ask to recognize characters on an image',
     uk:
@@ -299,6 +299,10 @@ export const localizations = {
     hu: 'Kép',
     fi: 'Kuva',
     bg: 'Картинка',
+  },
+  custom: {
+    en: 'Custom',
+    ru: 'Пользовательская',
   },
   custom_question_colon: {
     en: 'Question:',

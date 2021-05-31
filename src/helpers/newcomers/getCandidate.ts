@@ -9,7 +9,8 @@ export function getCandidate(
   captcha: Captcha,
   notificationMessage?: Message,
 ): Candidate {
-  const { equation, image } = captcha
+  const { equation, image, customCaptcha } = captcha
+  const { question: customQuestion, answer: customAnswer } = customCaptcha || {}
 
   return {
     id: user.id,
@@ -18,6 +19,8 @@ export function getCandidate(
     messageId: notificationMessage ? notificationMessage.message_id : undefined,
     equationQuestion: equation ? (equation.question as string) : undefined,
     equationAnswer: equation ? (equation.answer as string) : undefined,
+    customQuestion,
+    customAnswer,
     entryChatId: ctx.chat.id,
     entryMessageId: ctx.message ? ctx.message.message_id : undefined,
     imageText: image ? image.text : undefined,

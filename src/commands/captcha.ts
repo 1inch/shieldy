@@ -16,13 +16,14 @@ export function setupCaptcha(bot: Telegraf<Context>) {
           m.callbackButton(strings(ctx.dbchat, 'digits'), 'digits'),
           m.callbackButton(strings(ctx.dbchat, 'button'), 'button'),
           m.callbackButton(strings(ctx.dbchat, 'image'), 'image'),
+          m.callbackButton(strings(ctx.dbchat, 'custom'), 'custom'),
         ])
       )
     )
   })
 
   bot.action(
-    ['simple', 'digits', 'button', 'image'],
+    ['simple', 'digits', 'button', 'image', 'custom'],
     checkIfFromReplier,
     async (ctx) => {
       let chat = ctx.dbchat

@@ -114,6 +114,16 @@ export async function notifyCandidate(
 
     let message = warningMessage
 
+    if (captcha.captchaType === CaptchaType.CUSTOM) {
+      const { customCaptcha } = captcha;
+      if (customCaptcha) {
+        message = ', ' + customCaptcha.question
+      } else {
+        // Degradate to simple captcha if no custom variants
+        message = ', ' + strings(chat, 'simple_warning')
+      }
+    }
+
     const text = `<a href="tg://user?id=${candidate.id}">${getUsername(
         candidate
       )}</a>${message} (${chat.timeGiven} ${strings(
