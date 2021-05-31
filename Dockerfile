@@ -18,7 +18,8 @@ COPY ./package.json .
 COPY ./yarn.lock .
 
 # Install shieldy dependencies
-RUN yarn install
+RUN yarn install \
+ && yarn cache clean
 
 COPY ./tsconfig.json .
 COPY ./scripts ./scripts
