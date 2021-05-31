@@ -11,7 +11,13 @@ import { cpus } from 'os'
 const workers = []
 if (isMaster) {
   console.info(`Master ${process.pid} is running`)
-  for (let i = 0; i < cpus().length; i += 1) {
+
+  let workersCount = parseInt(process.env.WORKERS_COUNT, 10);
+  if (!isFinite(workersCount)) {
+    workersCount = cpus().length;
+  }
+
+  for (let i = 0; i < workersCount; i += 1) {
     const worker = fork()
     workers.push(worker)
   }
