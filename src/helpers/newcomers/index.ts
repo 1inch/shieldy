@@ -17,13 +17,6 @@ export function setupNewcomers(bot: Telegraf<Context>) {
     const { equation, image } = await generateEquationOrImage(ctx.dbchat)
     return notifyCandidate(ctx, ctx.from, equation, image)
   })
-  bot.use((ctx, next) => {
-    const anyUpdate = ctx.update as any
-    if (anyUpdate.chat_member) {
-      console.log(anyUpdate.chat_member)
-    }
-    return next()
-  })
   // Main handler to check new chat members
   bot.on('new_chat_members', checkIfGroup, handleNewChatMembers)
   // Keep track of leave messages and delete them if necessary
@@ -32,4 +25,12 @@ export function setupNewcomers(bot: Telegraf<Context>) {
   bot.use(checkPassingCaptchaWithText)
   // Check newcomers passing captcha with button
   bot.action(/\d+~\d+/, handleButtonPress)
+}
+
+export function checkMemberChange(ctx: Context, next: Function) {
+  const anyUpdate = ctx.update as any
+  if (anyUpdate.chat_member) {
+    console.log(anyUpdate.chat_member)
+  }
+  return next()
 }

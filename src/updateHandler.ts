@@ -7,7 +7,7 @@ import { bot } from '@helpers/bot'
 import { setupHelp } from '@commands/help'
 import { setupLanguage } from '@commands/language'
 import { setupCaptcha } from '@commands/captcha'
-import { setupNewcomers } from '@helpers/newcomers'
+import { checkMemberChange, setupNewcomers } from '@helpers/newcomers'
 import { setupTimeLimit } from '@commands/timeLimit'
 import { setupLock } from '@commands/lock'
 import { checkTime } from '@middlewares/checkTime'
@@ -52,6 +52,8 @@ import { messageSaver } from '@middlewares/messageSaver'
 bot.use(checkTime)
 // Check block list
 bot.use(checkBlockList)
+// Check if chat_member update
+bot.use(checkMemberChange)
 // Add chat to context
 bot.use(attachUser)
 // Remove bots right when they get added
