@@ -20,7 +20,7 @@ export function getCandidate(
     equationQuestion: equation ? (equation.question as string) : undefined,
     equationAnswer: equation ? (equation.answer as string) : undefined,
     entryChatId: ctx.chat.id,
-    entryMessageId: ctx.message.message_id,
+    entryMessageId: ctx.message ? ctx.message.message_id : undefined,
     imageText: image ? image.text : undefined,
     username: user.username,
   }

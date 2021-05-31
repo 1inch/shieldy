@@ -1771,9 +1771,9 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-"telegraf@git+https://github.com/backmeupplz/telegraf.git#e243e677c370735010f07ad96f2db4d19699cd87":
+"telegraf@git+https://github.com/backmeupplz/telegraf.git#ccef1dc6c811359d4d36667b57237bfba74841b1":
   version "3.38.0"
-  resolved "git+https://github.com/backmeupplz/telegraf.git#e243e677c370735010f07ad96f2db4d19699cd87"
+  resolved "git+https://github.com/backmeupplz/telegraf.git#ccef1dc6c811359d4d36667b57237bfba74841b1"
   dependencies:
     debug "^4.0.1"
     minimist "^1.2.0"

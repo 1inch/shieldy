@@ -1,3 +1,5 @@
+import { ChatMember } from 'telegram-typings'
+import { EntryMessageModel, removeEntryMessages } from '@models/EntryMessage'
 import { Candidate } from '@models/Chat'
 import { bot } from '@helpers/bot'
 import { Context } from 'telegraf'
@@ -17,34 +19,29 @@ import { modifyCandidates } from '@helpers/candidates'
 import { removeMessages } from '@models/CappedMessage'
 import { deleteMessageSafe } from '@helpers/deleteMessageSafe'
 
-export async function handleNewChatMembers(ctx: Context) {
+export async function handleNewChatMember(ctx: Context) {
   // Check if no attack mode
   if (ctx.dbchat.noAttack) {
     return
   }
+  // Get new member
+  const newChatMember = (ctx.update as any).chat_member
+    .new_chat_member as ChatMember
   // Get list of ids
-  const memberIds = ctx.message.new_chat_members.map((m) => m.id)
+  const memberId = newChatMember.user.id
   // Add to globaly restricted list
-  await modifyGloballyRestricted(memberIds, true)
+  await modifyGloballyRestricted([memberId], true)
   // Start the newcomers logic
   try {
-    // Check if needs to delete message right away
-    if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
-      deleteMessageSafe(ctx)
-    }
     // If an admin adds the members, do nothing
-    if (ctx.isAdministrator) {
+    const adder = await ctx.getChatMember(
+      (ctx.update as any).chat_member.from.id
+    )
+    if (['creator', 'administrator'].includes(adder.status)) {
       return
     }
-    // Send help message if added this bot to the group
-    const addedUsernames = ctx.message.new_chat_members
-      .map((member) => member.username)
-      .filter((username) => !!username)
-    if (addedUsernames.includes((bot as any).botInfo.username)) {
-      await sendHelpSafe(ctx)
-    }
     // Filter new members
-    const membersToCheck = ctx.message.new_chat_members.filter((m) => !m.is_bot)
+    const membersToCheck = [newChatMember.user]
     // Placeholder to add all candidates in batch
     const candidatesToAdd = [] as Candidate[]
     // Loop through the members
@@ -80,7 +77,7 @@ export async function handleNewChatMembers(ctx: Context) {
       if (ctx.dbchat.banNewTelegramUsers && member.id > 1000000000) {
         kickChatMember(ctx.dbchat, member)
         if (ctx.dbchat.deleteEntryOnKick) {
-          deleteMessageSafe(ctx)
+          removeEntryMessages(ctx.chat.id, memberId)
         }
         continue
       }
@@ -88,7 +85,7 @@ export async function handleNewChatMembers(ctx: Context) {
       if (ctx.dbchat.cas && !(await checkCAS(member.id))) {
         kickChatMember(ctx.dbchat, member)
         if (ctx.dbchat.deleteEntryOnKick) {
-          deleteMessageSafe(ctx)
+          removeEntryMessages(ctx.chat.id, memberId)
         }
         continue
       }
@@ -126,6 +123,36 @@ export async function handleNewChatMembers(ctx: Context) {
     console.error('onNewChatMembers', err)
   } finally {
     // Remove from globaly restricted list
-    modifyGloballyRestricted(memberIds, false)
+    modifyGloballyRestricted([memberId], false)
+  }
+}
+
+export async function handleNewChatMemberMessage(ctx: Context) {
+  // Send help message if added this bot to the group
+  const addedUsernames = ctx.message.new_chat_members
+    .map((member) => member.username)
+    .filter((username) => !!username)
+  if (addedUsernames.includes((bot as any).botInfo.username)) {
+    await sendHelpSafe(ctx)
+    return
+  }
+  // Check if no attack mode
+  if (ctx.dbchat.noAttack) {
+    return
+  }
+  // Check if needs to delete message right away
+  if (ctx.dbchat.deleteEntryMessages || ctx.dbchat.underAttack) {
+    deleteMessageSafe(ctx)
+    return
+  }
+  // Save for later if needs deleting
+  if (ctx.dbchat.deleteEntryOnKick) {
+    for (const newMember of ctx.message.new_chat_members) {
+      await new EntryMessageModel({
+        message_id: ctx.message.message_id,
+        chat_id: ctx.chat.id,
+        from_id: newMember.id,
+      }).save()
+    }
   }
 }

@@ -52,10 +52,10 @@ import { messageSaver } from '@middlewares/messageSaver'
 bot.use(checkTime)
 // Check block list
 bot.use(checkBlockList)
-// Check if chat_member update
-bot.use(checkMemberChange)
 // Add chat to context
 bot.use(attachUser)
+// Check if chat_member update
+bot.use(checkMemberChange)
 // Remove bots right when they get added
 bot.use(checkAllowInvitingBots)
 // Add chat member to context

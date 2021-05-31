@@ -1,3 +1,4 @@
+import { removeEntryMessages } from '@models/EntryMessage'
 import { deleteMessageSafeWithBot } from '@helpers/deleteMessageSafe'
 import { bot } from '@helpers/bot'
 import { Chat, Candidate } from '@models/Chat'
@@ -36,7 +37,7 @@ export async function kickCandidates(chat: Chat, candidates: Candidate[]) {
     }
     // Try deleting their entry messages
     if (chat.deleteEntryOnKick) {
-      deleteMessageSafeWithBot(candidate.entryChatId, candidate.entryMessageId)
+      removeEntryMessages(candidate.entryChatId, candidate.id)
       deleteMessageSafeWithBot(candidate.entryChatId, candidate.leaveMessageId)
     }
     // Try deleting the captcha message
