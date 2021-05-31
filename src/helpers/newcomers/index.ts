@@ -30,7 +30,7 @@ export function setupNewcomers(bot: Telegraf<Context>) {
 export function checkMemberChange(ctx: Context, next: Function) {
   const anyUpdate = ctx.update as any
   if (anyUpdate.chat_member) {
-    console.log(anyUpdate.chat_member)
+    console.log(anyUpdate)
   }
   return next()
 }
