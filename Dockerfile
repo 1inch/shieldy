@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 RUN apk add --no-cache \
       chromium \
+      git \
       nss \
       freetype \
       freetype-dev \
