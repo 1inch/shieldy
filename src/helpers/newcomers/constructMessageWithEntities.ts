@@ -11,7 +11,7 @@ export function constructMessageWithEntities(
   user: User,
   tags: { [index: string]: string },
   addPromoText = false,
-  isRuChat?: boolean
+  language: string = 'en'
 ) {
   const message = cloneDeep(originalMessage)
   let originalText = message.text
@@ -56,17 +56,17 @@ export function constructMessageWithEntities(
     }
   }
   if (addPromoText) {
-    const language = isRuChat ? 'ru' : 'en'
     if (!message.entities) {
       message.entities = []
     }
+    const rand = Math.random();
     message.entities.push({
       type: 'text_link',
-      offset: `${originalText}\n`.length + promoLinkLengths[language]().offset,
-      length: promoLinkLengths[language]().length,
-      url: promoUrl[language](),
+      offset: `${originalText}\n`.length + promoLinkLengths[language](rand).offset,
+      length: promoLinkLengths[language](rand).length,
+      url: promoUrl[language](rand),
     })
-    const promoAddition = promoAdditionsWithoutHtml[language]()
+    const promoAddition = promoAdditionsWithoutHtml[language](rand)
     originalText = `${originalText}\n${promoAddition}`
   }
   message.text = originalText

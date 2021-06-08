@@ -1,34 +1,63 @@
-import { isOver10000 } from '@helpers/goldenBorodutchSubCount'
+import { DocumentType } from '@typegoose/typegoose'
+import { Chat, Language } from '@models/Chat'
+
+export function languageForPromo(chat: DocumentType<Chat>) {
+  if (chat.language === Language.RUSSIAN) {
+    return 'ru'
+  }
+  return 'en' // All other languagess are not supported yet
+}
+
+const ruPromoAdditionsArray = [
+  {
+      prefix: 'При поддержке ',
+      text: '1inch.io',
+      postfix: '',
+      link: 'https://app.1inch.io/?utm_source=shieldy1ru'
+  },
+];
+
+const enPromoAdditionsArray = [
+  {
+    prefix: 'Powered by ',
+    text: '1inch.io',
+    postfix: '',
+    link: 'https://app.1inch.io/?utm_source=shieldy1en'
+  },
+];
+
+function promoFromStruct (promo) {
+  return promo.prefix + '<a href="' + promo.link + '">' + promo.text + '</a>' + promo.postfix;
+}
+
+function promoFromStructWithoutHtml (promo) {
+  return promo.prefix + promo.text + promo.postfix;
+}
 
 export const promoAdditions = {
-  ru: () =>
-    isOver10000()
-      ? 'При поддержке <a href="https://todorant.com/?utm_source=shieldy">Тудуранта</a>'
-      : 'При поддержке <a href="https://t.me/golden_borodutch">Золота Бородача</a>',
-  en: () =>
-    'Powered by <a href="https://todorant.com/?utm_source=shieldy">Todorant</a>',
+  ru: (rand) => promoFromStruct(ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)]),
+  en: (rand) => promoFromStruct(enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)]),
 }
 
 export const promoAdditionsWithoutHtml = {
-  ru: () =>
-    isOver10000() ? 'При поддержке Тудуранта' : 'При поддержке Золота Бородача',
-  en: () => 'Powered by Todorant',
+  ru: (rand) => promoFromStructWithoutHtml(ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)]),
+  en: (rand) => promoFromStructWithoutHtml(enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)]),
 }
 
 export const promoLinkLengths = {
-  ru: () =>
-    isOver10000()
-      ? { offset: 'При поддержке '.length, length: 'Тудуранта'.length }
-      : { offset: 'При поддержке '.length, length: 'Золота Бородача'.length },
-  en: () => ({ offset: 'Powered by '.length, length: 'Todorant'.length }),
+  ru: (rand) => ({
+    offset: ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].prefix.length,
+    length: ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].text.length,
+  }),
+  en: (rand) => ({
+    offset: enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].prefix.length,
+    length: enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].text.length,
+  }),
 }
 
 export const promoUrl = {
-  ru: () =>
-    isOver10000()
-      ? 'https://todorant.com/?utm_source=shieldy'
-      : 'https://t.me/golden_borodutch',
-  en: () => 'https://todorant.com/?utm_source=shieldy',
+  ru: (rand) => ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].link,
+  en: (rand) => enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].link,
 }
 
 export const promoExceptions = [
