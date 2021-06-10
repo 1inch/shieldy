@@ -11,7 +11,7 @@ export function languageForPromo(chat: DocumentType<Chat>) {
 const ruPromoAdditionsArray = [
   {
       prefix: 'При поддержке ',
-      text: '1inch.io',
+      text: '1inch Network',
       postfix: '',
       link: 'https://app.1inch.io/?utm_source=shieldy1ru'
   },
@@ -20,7 +20,7 @@ const ruPromoAdditionsArray = [
 const enPromoAdditionsArray = [
   {
     prefix: 'Powered by ',
-    text: '1inch.io',
+    text: '1inch Network',
     postfix: '',
     link: 'https://app.1inch.io/?utm_source=shieldy1en'
   },
