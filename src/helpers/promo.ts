@@ -10,28 +10,71 @@ export function languageForPromo(chat: DocumentType<Chat>) {
 
 const ruPromoAdditionsArray = [
   {
-      prefix: 'При поддержке ',
+    prelinks: 'При поддержке',
+    links: [
+      {
+      prefix: ' ',
       text: '1inch Network',
-      postfix: '',
-      link: 'https://app.1inch.io/?utm_source=shieldy1ru'
+      postfix: ' ',
+      link: 'http://1inch.io/?utm_source=shieldy_ru&utm_medium=cpc&utm_campaign=powered'
+      },
+      {
+      prefix: '(',
+      text: 'iOS',
+      postfix: ')',
+      link: 'https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_ru&mt=8'
+      }
+    ],
+    postlinks: '',
   },
 ];
 
 const enPromoAdditionsArray = [
   {
-    prefix: 'Powered by ',
-    text: '1inch Network',
-    postfix: '',
-    link: 'https://app.1inch.io/?utm_source=shieldy1en'
+    prelinks: 'Powered by',
+    links: [
+      {
+      prefix: ' ',
+      text: '1inch Network',
+      postfix: ' ',
+      link: 'http://1inch.io/?utm_source=shieldy_en&utm_medium=cpc&utm_campaign=powered'
+      },
+      {
+      prefix: '(',
+      text: 'iOS',
+      postfix: ')',
+      link: 'https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_en&mt=8'
+      }
+    ],
+    postlinks: '',
   },
 ];
 
 function promoFromStruct (promo) {
-  return promo.prefix + '<a href="' + promo.link + '">' + promo.text + '</a>' + promo.postfix;
+  return promo.links.reduce(
+      (s, item) => s + item.prefix + '<a href="' + item.link + '">' + item.text + '</a>' + item.postfix,
+      promo.prelinks,
+    ) + promo.postlinks;
 }
 
 function promoFromStructWithoutHtml (promo) {
-  return promo.prefix + promo.text + promo.postfix;
+  const text = promo.links.reduce(
+    (s, item) => s + item.prefix + item.text + item.postfix,
+    promo.prelinks,
+  ) + promo.postlinks;
+  
+  let s = promo.prelinks.length;
+  return {
+    text,
+    links: promo.links.map(item => {
+      s += item.prefix.length + item.text.length + item.postfix.length;
+      return {
+        offset: s.length - (item.text.length + item.postfix.length),
+        length: item.text.length,
+        link: item.link,
+      };
+    }),
+  }
 }
 
 export const promoAdditions = {
@@ -42,22 +85,6 @@ export const promoAdditions = {
 export const promoAdditionsWithoutHtml = {
   ru: (rand) => promoFromStructWithoutHtml(ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)]),
   en: (rand) => promoFromStructWithoutHtml(enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)]),
-}
-
-export const promoLinkLengths = {
-  ru: (rand) => ({
-    offset: ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].prefix.length,
-    length: ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].text.length,
-  }),
-  en: (rand) => ({
-    offset: enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].prefix.length,
-    length: enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].text.length,
-  }),
-}
-
-export const promoUrl = {
-  ru: (rand) => ruPromoAdditionsArray[Math.trunc(rand * ruPromoAdditionsArray.length)].link,
-  en: (rand) => enPromoAdditionsArray[Math.trunc(rand * enPromoAdditionsArray.length)].link,
 }
 
 export const promoExceptions = [
