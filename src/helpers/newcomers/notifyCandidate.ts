@@ -6,8 +6,7 @@ import { Context, Extra, Markup } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getName, getUsername } from '@helpers/getUsername'
-import { isRuChat } from '@helpers/isRuChat'
-import { promoExceptions, promoAdditions } from '@helpers/promo'
+import { languageForPromo, promoExceptions, promoAdditions } from '@helpers/promo'
 
 export async function notifyCandidate(
   ctx: Context,
@@ -56,7 +55,7 @@ export async function notifyCandidate(
           $seconds: `${chat.timeGiven}`,
         },
         !promoExceptions.includes(ctx.chat.id),
-        isRuChat(chat)
+        languageForPromo(chat)
       )
       if (image) {
         extra = extra.HTML(true)
@@ -82,7 +81,7 @@ export async function notifyCandidate(
         message.text,
         message.entities
       )
-      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
+      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       message.text = promoExceptions.includes(ctx.chat.id)
         ? `${getUsername(candidate)}\n\n${formattedText}`
         : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
@@ -106,7 +105,7 @@ export async function notifyCandidate(
   } else {
     extra = extra.HTML(true)
     if (image) {
-      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
+      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       return ctx.replyWithPhoto({ source: image.png } as any, {
         caption: promoExceptions.includes(ctx.chat.id)
           ? `<a href="tg://user?id=${candidate.id}">${getUsername(
@@ -124,7 +123,7 @@ export async function notifyCandidate(
         parse_mode: 'HTML',
       })
     } else {
-      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
+      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       return ctx.replyWithMarkdown(
         promoExceptions.includes(ctx.chat.id)
           ? `${
