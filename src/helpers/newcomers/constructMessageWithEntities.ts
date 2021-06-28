@@ -9,7 +9,7 @@ export function constructMessageWithEntities(
   user: User,
   tags: { [index: string]: string },
   addPromoText = false,
-  language: string = 'en'
+  language = 'en'
 ) {
   const message = cloneDeep(originalMessage)
   let originalText = message.text
