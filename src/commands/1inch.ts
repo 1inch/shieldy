@@ -4,7 +4,7 @@ import { checkLock } from '@middlewares/checkLock'
 import { clarifyIfPrivateMessages } from '@helpers/clarifyIfPrivateMessages'
 
 export function setup1inchInfo(bot: Telegraf<Context>) {
-  bot.command(['1inch'], checkLock, clarifyIfPrivateMessages, sendInfo)
+  bot.command(['1inch'], checkLock, sendInfo)
 }
 
 export function sendInfo(ctx: Context) {
