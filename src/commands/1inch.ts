@@ -17,7 +17,7 @@ export function sendInfo(ctx: Context) {
 
   const aboutOneInch = strings(ctx.dbchat, 'oneInchInfo');
   const link =
-      '[1inch Network](http://1inch.io/?utm_source=shieldy_en&utm_medium=cpc&utm_campaign=powered) ([IOS](https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_ru&mt=8))';
+      '[1inch Network](http://1inch.io/?utm_source=shieldy_en&utm_medium=cpc&utm_campaign=powered) ([iOS](https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_ru&mt=8))';
 
   return ctx.replyWithMarkdown(`${aboutOneInch}\n\n${link}`, {
     disable_web_page_preview: false,
