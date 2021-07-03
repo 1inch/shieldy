@@ -6,8 +6,7 @@ import { Context, Extra, Markup } from 'telegraf'
 import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getName, getUsername } from '@helpers/getUsername'
-import { isRuChat } from '@helpers/isRuChat'
-import { promoExceptions, promoAdditions } from '@helpers/promo'
+import { languageForPromo, promoExceptions, promoAdditions } from '@helpers/promo'
 import { Captcha } from './generateCaptcha'
 
 export async function notifyCandidate(
@@ -57,7 +56,7 @@ export async function notifyCandidate(
           $seconds: `${chat.timeGiven}`,
         },
         !promoExceptions.includes(ctx.chat.id),
-        isRuChat(chat)
+        languageForPromo(chat)
       )
       if (image) {
         extra = extra.HTML(true)
@@ -83,7 +82,7 @@ export async function notifyCandidate(
         message.text,
         message.entities
       )
-      const promoAddition = promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
+      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       message.text = promoExceptions.includes(ctx.chat.id)
         ? `${getUsername(candidate)}\n\n${formattedText}`
         : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
@@ -110,7 +109,7 @@ export async function notifyCandidate(
     const hasPromo = !promoExceptions.includes(ctx.chat.id)
     const promoAddition =
       hasPromo &&
-      promoAdditions[isRuChat(chat) ? 'ru' : 'en']()
+      promoAdditions[languageForPromo(chat)](Math.random())
 
     let message = warningMessage
 
