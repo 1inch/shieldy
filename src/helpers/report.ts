@@ -6,8 +6,8 @@ let errorsToReport = []
 async function bulkReport() {
   const tempErrorsToReport = errorsToReport
   errorsToReport = []
-  const adminChatId = process.env.ADMIN
-  if (!adminChatId) {
+  const reportChatId = process.env.REPORT_CHAT_ID
+  if (!reportChatId) {
     return
   }
   if (tempErrorsToReport.length > 20) {
@@ -18,7 +18,7 @@ async function bulkReport() {
     const chunks = reportText.match(/[\s\S]{1,4000}/g)
     for (const chunk of chunks) {
       try {
-        await bot.telegram.sendMessage(adminChatId, chunk)
+        await bot.telegram.sendMessage(reportChatId, chunk)
       } catch (err) {
         console.error(err)
       }
