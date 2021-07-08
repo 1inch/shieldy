@@ -58,7 +58,7 @@ export function constructMessageWithEntities(
       message.entities = []
     }
     const promoAddition = promoAdditionsWithoutHtml[language](Math.random())
-    message.entities.push(promoAddition.links.map(item => ({
+    message.entities.push(...promoAddition.links.map(item => ({
       type: 'text_link',
       offset: `${originalText}\n`.length + item.offset,
       length: item.length,

@@ -62,14 +62,14 @@ function promoFromStructWithoutHtml (promo) {
     (s, item) => s + item.prefix + item.text + item.postfix,
     promo.prelinks,
   ) + promo.postlinks;
-  
+
   let s = promo.prelinks.length;
   return {
     text,
     links: promo.links.map(item => {
-      s += item.prefix.length + item.text.length + item.postfix.length;
+      s += (item.prefix.length + item.text.length + item.postfix.length);
       return {
-        offset: s.length - (item.text.length + item.postfix.length),
+        offset: s - (item.text.length + item.postfix.length),
         length: item.text.length,
         link: item.link,
       };
