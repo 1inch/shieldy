@@ -10,7 +10,7 @@ async function bulkReport() {
   if (!reportChatId) {
     return
   }
-  if (tempErrorsToReport.length > 20) {
+  if (tempErrorsToReport.length > 0) {
     const reportText = tempErrorsToReport.reduce(
       (prev, cur) => `${prev}${cur}\n`,
       ''
