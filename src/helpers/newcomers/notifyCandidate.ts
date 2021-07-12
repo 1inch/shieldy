@@ -7,17 +7,18 @@ import { strings } from '@helpers/strings'
 import { constructMessageWithEntities } from '@helpers/newcomers/constructMessageWithEntities'
 import { getName, getUsername } from '@helpers/getUsername'
 import { languageForPromo, promoExceptions, promoAdditions } from '@helpers/promo'
+import { Captcha } from './generateCaptcha'
 
 export async function notifyCandidate(
   ctx: Context,
   candidate: User,
-  equation?: Equation,
-  image?: { png: Buffer; text: string }
-) {
+  captcha: Captcha,
+) {  
   const chat = ctx.dbchat
   const captchaMessage = ctx.dbchat.captchaMessage
     ? cloneDeep(ctx.dbchat.captchaMessage)
     : undefined
+  const { equation, image } = captcha
   const warningMessage = strings(chat, `${chat.captchaType}_warning`)
   let extra =
     chat.captchaType !== CaptchaType.BUTTON
@@ -104,48 +105,41 @@ export async function notifyCandidate(
     }
   } else {
     extra = extra.HTML(true)
+
+    const hasPromo = !promoExceptions.includes(ctx.chat.id)
+    const promoAddition =
+      hasPromo &&
+      promoAdditions[languageForPromo(chat)](Math.random())
+
+    let message = warningMessage
+
+    if (captcha.captchaType === CaptchaType.CUSTOM) {
+      const { customCaptcha } = captcha;
+      if (customCaptcha) {
+        message = ', ' + customCaptcha.question
+      } else {
+        // Degradate to simple captcha if no custom variants
+        message = ', ' + strings(chat, 'simple_warning')
+      }
+    }
+
+    const text = `<a href="tg://user?id=${candidate.id}">${getUsername(
+        candidate
+      )}</a>${message} (${chat.timeGiven} ${strings(
+        chat,
+        'seconds'
+      )})${hasPromo ? '\n' + promoAddition : ''}`
+
     if (image) {
-      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       return ctx.replyWithPhoto({ source: image.png } as any, {
-        caption: promoExceptions.includes(ctx.chat.id)
-          ? `<a href="tg://user?id=${candidate.id}">${getUsername(
-              candidate
-            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-              chat,
-              'seconds'
-            )})`
-          : `<a href="tg://user?id=${candidate.id}">${getUsername(
-              candidate
-            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-              chat,
-              'seconds'
-            )})\n${promoAddition}`,
+        caption: text,
         parse_mode: 'HTML',
       })
     } else {
-      const promoAddition = promoAdditions[languageForPromo(chat)](Math.random())
       return ctx.replyWithMarkdown(
-        promoExceptions.includes(ctx.chat.id)
-          ? `${
-              chat.captchaType === CaptchaType.DIGITS
-                ? `(${equation.question}) `
-                : ''
-            }<a href="tg://user?id=${candidate.id}">${getUsername(
-              candidate
-            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-              chat,
-              'seconds'
-            )})`
-          : `${
-              chat.captchaType === CaptchaType.DIGITS
-                ? `(${equation.question}) `
-                : ''
-            }<a href="tg://user?id=${candidate.id}">${getUsername(
-              candidate
-            )}</a>${warningMessage} (${chat.timeGiven} ${strings(
-              chat,
-              'seconds'
-            )})\n${promoAddition}`,
+        (chat.captchaType === CaptchaType.DIGITS
+          ? `(${equation.question}) `
+          : '') + text,
         extra
       )
     }

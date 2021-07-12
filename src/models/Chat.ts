@@ -33,6 +33,7 @@ export enum CaptchaType {
   DIGITS = 'digits',
   BUTTON = 'button',
   IMAGE = 'image',
+  CUSTOM = 'custom',
 }
 
 export class Equation {
@@ -60,6 +61,10 @@ export class Candidate {
   equationAnswer?: string
   @prop()
   imageText?: string
+  @prop()
+  customQuestion?: string
+  @prop()
+  customAnswer?: string
 
   @prop()
   entryMessageId?: number
@@ -81,6 +86,28 @@ export class MemberWrapper {
   timestamp: number
   @prop({ required: true })
   member: ChatMember
+}
+
+export class CustomCaptchaVariant {
+  @prop({ required: true })
+  question: string
+  @prop({ required: true })
+  answer: string
+}
+
+export enum ReplySettingType {
+  ADD_CUSTOM_CAPTCHA = 'addCustomCaptcha',
+  ADD_CUSTOM_CAPTCHA_ANSWER = 'addCustomCaptchaAnswer',
+}
+
+// Stores message id which should be replied to set some setting
+export class ReplySetting {
+  @prop({ required: true, enum: ReplySettingType })
+  type: ReplySettingType
+  @prop({ required: true })
+  messageId: number
+  @prop()
+  customCaptchaQuestion?: string
 }
 
 export class Chat {
@@ -112,6 +139,8 @@ export class Chat {
   customCaptchaMessage: boolean
   @prop()
   captchaMessage?: MessageWrapper
+  @prop({ type: CustomCaptchaVariant, default: [] })
+  customCaptchaVariants: CustomCaptchaVariant[]
   @prop({ required: true, default: true })
   strict: boolean
   @prop()
@@ -144,6 +173,8 @@ export class Chat {
   restrictTime: number
   @prop({ required: true, default: false })
   banNewTelegramUsers: boolean
+  @prop()
+  lastReplySetting?: ReplySetting
 
   // mongo
   _id?: string

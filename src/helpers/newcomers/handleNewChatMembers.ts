@@ -11,7 +11,7 @@ import { modifyRestrictedUsers } from '@helpers/restrictedUsers'
 import { isVerifiedUser } from '@models/VerifiedUser'
 import { checkCAS } from '@helpers/cas'
 import { kickChatMember } from '@helpers/newcomers/kickChatMember'
-import { generateEquationOrImage } from '@helpers/newcomers/generateEquationOrImage'
+import { generateCaptcha } from '@helpers/newcomers/generateCaptcha'
 import { notifyCandidate } from '@helpers/newcomers/notifyCandidate'
 import { getCandidate } from '@helpers/newcomers/getCandidate'
 import { restrictChatMember } from '@helpers/newcomers/restrictChatMember'
@@ -94,16 +94,16 @@ export async function handleNewChatMember(ctx: Context) {
         continue
       }
       // Generate captcha if required
-      const { equation, image } = await generateEquationOrImage(ctx.dbchat)
+      const captcha = await generateCaptcha(ctx.dbchat)
       // Notify candidate and save the message
       let message
       try {
-        message = await notifyCandidate(ctx, member, equation, image)
+        message = await notifyCandidate(ctx, member, captcha)
       } catch (err) {
         report(err)
       }
       // Create a candidate
-      const candidate = getCandidate(ctx, member, message, equation, image)
+      const candidate = getCandidate(ctx, member, captcha, message)
       // Restrict candidate if required
       if (ctx.dbchat.restrict) {
         restrictChatMember(ctx.dbchat, member)

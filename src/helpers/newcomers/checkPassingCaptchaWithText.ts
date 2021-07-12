@@ -5,7 +5,7 @@ import {
 import { addVerifiedUser } from '@models/VerifiedUser'
 import { greetUser } from '@helpers/newcomers/greetUser'
 import { modifyCandidates } from '@helpers/candidates'
-import { CaptchaType } from '@models/Chat'
+import { Candidate, CaptchaType } from '@models/Chat'
 
 export async function checkPassingCaptchaWithText(ctx, next) {
   // Check if it is a message is from a candidates
@@ -31,39 +31,43 @@ export async function checkPassingCaptchaWithText(ctx, next) {
     // Exit the function
     return next()
   }
+
+  let hasCorrectAnswer = true
+  let needToDeleteMessage = ctx.dbchat.strict
+
   // Get candidate
-  const candidate = ctx.dbchat.candidates
+  const candidate: Candidate = ctx.dbchat.candidates
     .filter((c) => c.id === ctx.from.id)
     .pop()
   // Check if it is digits captcha
   if (candidate.captchaType === CaptchaType.DIGITS) {
     // Check the format
-    const hasCorrectAnswer = ctx.message.text.includes(
-      candidate.equationAnswer as string
-    )
     const hasNoMoreThanTwoDigits =
       (ctx.message.text.match(/\d/g) || []).length <= 2
-    if (!hasCorrectAnswer || !hasNoMoreThanTwoDigits) {
-      if (ctx.dbchat.strict) {
-        deleteMessageSafe(ctx)
-      }
-      return next()
-    }
-    // Delete message to decrease the amount of messages left
-    deleteMessageSafe(ctx)
+    hasCorrectAnswer = hasNoMoreThanTwoDigits && ctx.message.text.includes(
+      candidate.equationAnswer as string
+    )
+    needToDeleteMessage = true
   }
   // Check if it is image captcha
   if (candidate.captchaType === CaptchaType.IMAGE) {
-    const hasCorrectAnswer = ctx.message.text.includes(candidate.imageText)
-    if (!hasCorrectAnswer) {
-      if (ctx.dbchat.strict) {
-        deleteMessageSafe(ctx)
-      }
-      return next()
-    }
+    hasCorrectAnswer = ctx.message.text.includes(candidate.imageText)
+    needToDeleteMessage = true
+  }
+  if (candidate.captchaType === CaptchaType.CUSTOM && candidate.customAnswer) {
+    const userAnswer = ctx.message.text.trim().toLowerCase()
+    hasCorrectAnswer = userAnswer === candidate.customAnswer
+    needToDeleteMessage = true
+  }
+
+  if (needToDeleteMessage) {
     // Delete message to decrease the amount of messages left
     deleteMessageSafe(ctx)
   }
+  if (!hasCorrectAnswer) {
+    return next()
+  }
+
   // Passed the captcha, delete from candidates
   await modifyCandidates(ctx.dbchat, false, [candidate])
   // Delete the captcha message

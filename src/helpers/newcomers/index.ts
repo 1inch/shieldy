@@ -2,7 +2,7 @@ import { checkIfGroup } from '@middlewares/checkIfGroup'
 import { isGroup } from '@helpers/isGroup'
 import { ChatMember } from 'telegram-typings'
 import { notifyCandidate } from '@helpers/newcomers/notifyCandidate'
-import { generateEquationOrImage } from '@helpers/newcomers/generateEquationOrImage'
+import { generateCaptcha } from '@helpers/newcomers/generateCaptcha'
 import Telegraf, { Context } from 'telegraf'
 import { checkSuperAdmin } from '@middlewares/checkSuperAdmin'
 import { greetUser } from '@helpers/newcomers/greetUser'
@@ -19,8 +19,8 @@ export function setupNewcomers(bot: Telegraf<Context>) {
   bot.command('greetMe', checkSuperAdmin, greetUser)
   // Admin command to check captcha
   bot.command('captchaMe', checkSuperAdmin, async (ctx) => {
-    const { equation, image } = await generateEquationOrImage(ctx.dbchat)
-    return notifyCandidate(ctx, ctx.from, equation, image)
+    const captcha = await generateCaptcha(ctx.dbchat)
+    return notifyCandidate(ctx, ctx.from, captcha)
   })
   // Keep track of new member messages to delete them
   bot.on('new_chat_members', checkIfGroup, handleNewChatMemberMessage)
