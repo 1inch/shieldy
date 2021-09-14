@@ -6,7 +6,7 @@ export async function deleteMessageSafe(ctx: Context) {
   try {
     await ctx.deleteMessage()
   } catch (err) {
-    report(err)
+    report(err, deleteMessageSafe.name)
   }
 }
 
@@ -17,6 +17,6 @@ export async function deleteMessageSafeWithBot(
   try {
     await bot.telegram.deleteMessage(chatId, messageId)
   } catch (err) {
-    report(err)
+    report(err, deleteMessageSafeWithBot.name)
   }
 }

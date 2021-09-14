@@ -80,7 +80,7 @@ export function setupGreeting(bot: Telegraf<Context>) {
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
       )
     } catch (err) {
-      report(err)
+      report(err, setupGreeting.name)
     } finally {
       next()
     }
