@@ -167,19 +167,33 @@ export async function findChat(id: number) {
   return chat
 }
 
-export function findChatsWithCandidates() {
-  return ChatModel.find(
-    {
-      $or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }],
-    },
-    {
-      candidates: 1,
-      restrictedUsers: 1,
-      _id: 1,
-      id: 1,
-      deleteEntryOnKick: 1,
-      banUsers: 1,
-      timeGiven: 1,
+export async function findChatsWithCandidates(limit: number) {
+  const chats: Chat[] = []
+  let lastId = '000000000000000000000000'
+  while (true) {
+    const chatList = await ChatModel.find(
+        {
+          $and: [
+            {_id: {$gt: lastId}},
+            {$or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }]}
+          ]
+        },
+        {
+          candidates: 1,
+          restrictedUsers: 1,
+          _id: 1,
+          id: 1,
+          deleteEntryOnKick: 1,
+          banUsers: 1,
+          timeGiven: 1,
+        }
+    ).limit(limit)
+    chats.push(...chatList)
+
+    if (chatList.length < limit) {
+      return chats
     }
-  )
+
+    lastId = chatList[chatList.length - 1]._id
+  }
 }

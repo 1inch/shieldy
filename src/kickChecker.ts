@@ -24,7 +24,7 @@ async function check() {
   checking = true
   try {
     console.log('Getting chats with candidates')
-    const chats = await findChatsWithCandidates()
+    const chats = await findChatsWithCandidates(Number(process.env.CHAT_LIMIT) || 200)
     console.log(`Found ${chats.length} chats with candidates`)
     for (const chat of chats) {
       // Check candidates
