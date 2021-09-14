@@ -1,7 +1,7 @@
 import { checkIfErrorDismissable } from '@helpers/error'
 import { bot } from '@helpers/bot'
 import * as mongoose from 'mongoose'
-import {Schema} from "mongoose";
+import {Mongoose, Schema} from "mongoose";
 
 let errorsToReport = []
 
@@ -41,9 +41,9 @@ export function report(error: Error, reason?: string) {
 mongoose.plugin(log)
 
 function log(schema: Schema) {
-  let handleError = (error: Error) => {
-    if (error) {
-      errorsToReport.push(`global db error\n${error.message}`)
+  let handleError = (x, error) => {
+    if (error?.errmsg || error?.message) {
+      errorsToReport.push(`global db error\n${error.errmsg || error.message}`)
     }
   };
   schema.post('validate', handleError);
