@@ -41,10 +41,12 @@ export function report(error: Error, reason?: string) {
 mongoose.plugin(log)
 
 function log(schema: Schema) {
-  let handleError = (x, error) => {
+  let handleError = (error, doc, next) => {
     if (error?.errmsg || error?.message) {
       errorsToReport.push(`global db error\n${error.errmsg || error.message}`)
+      return next(error);
     }
+    next();
   };
   schema.post('validate', handleError);
   schema.post('save', handleError);
