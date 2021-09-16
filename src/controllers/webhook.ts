@@ -23,6 +23,14 @@ export default class WebhookController {
         ctx.headers['stripe-signature'],
         process.env.STRIPE_SIGNING_SECRET
       )
+      try {
+        await bot.telegram.sendMessage(
+          process.env.REPORT_CHAT_ID,
+          `Webhook decrypted: ${JSON.stringify(event)}`
+        )
+      } catch (err) {
+        console.error(err)
+      }
       // Handle event
       if (event.type === 'customer.subscription.deleted') {
         const anyData = event.data.object as any
