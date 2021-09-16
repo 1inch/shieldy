@@ -56,6 +56,14 @@ export default class WebhookController {
             `Webhook Error: No chat found with id ${chatId}`
           )
         }
+        try {
+          await bot.telegram.sendMessage(
+            process.env.REPORT_CHAT_ID,
+            `Chat updating: ${JSON.stringify(chat)}`
+          )
+        } catch (err) {
+          console.error(err)
+        }
         if (anyData.mode === 'subscription') {
           chat.subscriptionId = anyData.subscription
           chat.subscriptionStatus = SubscriptionStatus.active
