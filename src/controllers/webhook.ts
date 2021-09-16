@@ -2,12 +2,21 @@ import { ChatModel, SubscriptionStatus } from '@models/Chat'
 import { Context } from 'koa'
 import { Controller, Ctx, Post } from 'amala'
 import { stripe } from '@helpers/stripe'
+import { bot } from '@helpers/bot'
 
 @Controller('/webhook')
 export default class WebhookController {
   @Post('/')
   async webhook(@Ctx() ctx: Context) {
     try {
+      try {
+        await bot.telegram.sendMessage(
+          process.env.REPORT_CHAT_ID,
+          'Webhook called'
+        )
+      } catch (err) {
+        console.error(err)
+      }
       // Construct event
       const event = stripe.webhooks.constructEvent(
         String(ctx.request.rawBody),
