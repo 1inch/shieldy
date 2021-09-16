@@ -1759,7 +1759,38 @@ export const localizations = {
     en:
       'The 1inch Network unites decentralized protocols whose synergy enables the most lucrative, fastest and protected operations in the DeFi space.',
     ru:
-        '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
-
-  }
+      '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
+  },
+  subscription: {
+    en: '/subscription — Manage subscription',
+    ru: '/subscription — Управление подпиской',
+  },
+  noSubscription: {
+    en:
+      'This is the premium version of Shieldy. If you want to use a free version — check out @shieldy_bot. In order to use this version of the bot, you will have to purchase a subscription below. The premium version is hosted on dedicated servers that are used by only the premium users.',
+    ru:
+      'Это премиум версия Shieldy. Если вы хотите использовать бесплатную версию — попробуйте @shieldy_bot. Для использования этой версии бота вам нужно приобрести подписку ниже. Премиум версия хостится на отдельных серверах, которые используются только премиум пользователями.',
+  },
+  subscriptionInfo: {
+    en:
+      'Thank you a lot for the support! You can manage your subscription with the button below.',
+    ru:
+      'Спасибо вам огромное за поддержку! Вы можете управлять вашей подпиской с помощью кнопки ниже.',
+  },
+  monthly: {
+    en: 'month',
+    ru: 'месяц',
+  },
+  yearly: {
+    en: 'year',
+    ru: 'год',
+  },
+  lifetime: {
+    en: 'once and forever',
+    ru: 'один раз навсегда',
+  },
+  manageSubscription: {
+    en: 'Manage subscription',
+    ru: 'Управление подпиской',
+  },
 }

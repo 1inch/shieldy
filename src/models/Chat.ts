@@ -1,6 +1,12 @@
 import { prop, getModelForClass } from '@typegoose/typegoose'
 import { Message, ChatMember } from 'telegram-typings'
 
+export enum SubscriptionStatus {
+  inactive = 'inactive',
+  active = 'active',
+  lifetime = 'lifetime',
+}
+
 export enum Language {
   ENGLISH = 'en',
   RUSSIAN = 'ru',
@@ -144,6 +150,10 @@ export class Chat {
   restrictTime: number
   @prop({ required: true, default: false })
   banNewTelegramUsers: boolean
+  @prop({ enum: SubscriptionStatus, default: SubscriptionStatus.inactive })
+  subscriptionStatus: SubscriptionStatus
+  @prop()
+  subscriptionId?: string
 
   // mongo
   _id?: string
@@ -172,21 +182,26 @@ export async function findChatsWithCandidates(limit: number) {
   let lastId = '000000000000000000000000'
   while (true) {
     const chatList = await ChatModel.find(
-        {
-          $and: [
-            {_id: {$gt: lastId}},
-            {$or: [{ candidates: { $gt: [] } }, { restrictedUsers: { $gt: [] } }]}
-          ]
-        },
-        {
-          candidates: 1,
-          restrictedUsers: 1,
-          _id: 1,
-          id: 1,
-          deleteEntryOnKick: 1,
-          banUsers: 1,
-          timeGiven: 1,
-        }
+      {
+        $and: [
+          { _id: { $gt: lastId } },
+          {
+            $or: [
+              { candidates: { $gt: [] } },
+              { restrictedUsers: { $gt: [] } },
+            ],
+          },
+        ],
+      },
+      {
+        candidates: 1,
+        restrictedUsers: 1,
+        _id: 1,
+        id: 1,
+        deleteEntryOnKick: 1,
+        banUsers: 1,
+        timeGiven: 1,
+      }
     ).limit(limit)
     chats.push(...chatList)
 

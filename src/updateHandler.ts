@@ -47,7 +47,9 @@ import { setupBanForFastRepliesToPosts } from '@commands/banForFastRepliesToPost
 import { setupRestrictTime } from '@commands/restrictTime'
 import { setupBanNewTelegramUsers } from '@commands/banNewTelegramUsers'
 import { messageSaver } from '@middlewares/messageSaver'
-import { setup1inchInfo } from "@commands/1inch";
+import { setup1inchInfo } from '@commands/1inch'
+import { checkSubscription } from '@middlewares/checkSubscription'
+import { setupSubscription } from '@commands/subscription'
 
 // Ignore all messages that are too old
 bot.use(checkTime)
@@ -55,6 +57,10 @@ bot.use(checkTime)
 bot.use(checkBlockList)
 // Add chat to context
 bot.use(attachUser)
+// Check premium
+if (process.env.PREMIUM === 'true') {
+  bot.use(checkSubscription)
+}
 // Check if chat_member update
 bot.use(checkMemberChange)
 // Remove bots right when they get added
@@ -99,6 +105,9 @@ setupSetConfig(bot)
 setupBanForFastRepliesToPosts(bot)
 setupRestrictTime(bot)
 setupBanNewTelegramUsers(bot)
+if (process.env.PREMIUM === 'true') {
+  setupSubscription(bot)
+}
 // Newcomers logic
 setupNewcomers(bot)
 setup1inchInfo(bot)
