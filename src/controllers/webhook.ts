@@ -59,6 +59,14 @@ export default class WebhookController {
       // Respond
       return { received: true }
     } catch (err) {
+      try {
+        await bot.telegram.sendMessage(
+          process.env.REPORT_CHAT_ID,
+          `Webhook Error: ${err.message}`
+        )
+      } catch (err) {
+        console.error(err)
+      }
       return ctx.throw(400, `Webhook Error: ${err.message}`)
     }
   }
