@@ -41,6 +41,7 @@ export default class WebhookController {
             process.env.REPORT_CHAT_ID,
             `Webhook Error: No chat found for subscription id ${subscriptionId}`
           )
+          return
         }
         if (chat.subscriptionStatus !== SubscriptionStatus.lifetime) {
           chat.subscriptionStatus = SubscriptionStatus.inactive
