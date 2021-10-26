@@ -37,8 +37,8 @@ export default class WebhookController {
         const subscriptionId = anyData.id
         const chat = await ChatModel.findOne({ subscriptionId })
         if (!chat) {
-          return ctx.throw(
-            400,
+          await bot.telegram.sendMessage(
+            process.env.REPORT_CHAT_ID,
             `Webhook Error: No chat found for subscription id ${subscriptionId}`
           )
         }
