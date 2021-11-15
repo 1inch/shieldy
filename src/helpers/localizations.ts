@@ -82,6 +82,7 @@ export const localizations = {
     hu: 'Kérlek, válassz egy nyelvet!',
     fi: 'Ole hyvä ja valitse kieli.',
     bg: 'Моля, изберете език.',
+    uz: 'Iltimos tilni tanlang.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -111,6 +112,7 @@ export const localizations = {
     hu: 'Nagyszerű, mostantól magyarul beszélek.',
     fi: 'Selvä! Valitsit kieleksi suomen.',
     bg: 'Чудесно, сега говоря Български',
+    uz: 'Ajoyib, endi men O\'zbekcha gapiraman',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
