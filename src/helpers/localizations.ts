@@ -1012,6 +1012,7 @@ export const localizations = {
     yue: '由而家開始，所有新來者嘅入羣提醒將會保留。',
     hu: 'Nagyszerű! Mostantól a belépési üzeneteket nem töröljük.',
     bg: 'Чудесно! Сега съобщенията за влизане няма да бъдат изтривани.',
+    uz: 'Ajoyib! Endi foydalanuvchilar kirishi haqidagi xabarlar o\'chiriladi.',
   },
   greetsUsers_true: {
     en:
@@ -1064,6 +1065,10 @@ export const localizations = {
       "Parfait, maintenant les nouveaux membres ayant réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).",
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, ще бъдат поздравени. Моля, отговорете на това съобщение с поздравителния текст, който искате да използвате (можете да използвате $title, $fullname и $username).',
+    uz: 
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom beriladi. Iltimos, ushbu xabarga javob sifatida salomlashish matnini yuboring ($title, $fullname va $username parametrlaridan foydalanishingiz mumkin).',
+
+
   },
   greetsUsers_true_message: {
     en:
@@ -1118,6 +1123,8 @@ export const localizations = {
       'Nagyszerű! Az újoncokat, akik átmentek a teszten, az üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott üzenettel (használhatod az alábbiakat $title, $fullname and $username).',
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, ще бъдат поздравени. Моля, отговорете на това съобщение с поздравителния текст, който искате да използвате (можете да използвате $title, $fullname и $username). Следва текущото поздравително съобщение.',
+    uz:
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom beriladi. Iltimos, ushbu xabarga javob sifatida salomlashish matnini yuboring ($title, $fullname va $username parametrlaridan foydalanishingiz mumkin). Joriy salomlashish xabari quyida keladi.',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -1153,6 +1160,8 @@ export const localizations = {
     fi: 'Selvä! Nyt testin läpäisseitä tulokkaita ei tervehditä.',
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, няма да бъдат поздравявани. ',
+    uz: 
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom berilmaydi.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -1180,6 +1189,7 @@ export const localizations = {
     hu: 'Elfogadva!',
     fi: 'Hyväksytty!',
     bg: 'Прието!',
+    uz: 'Qabul qilindi!',
   },
   captchaMessage_true: {
     en:
@@ -1220,6 +1230,8 @@ export const localizations = {
       "Super! Désormais, les nouveaux arrivants recevront un message personnalisé expliquant qu'il faut répondre au captcha. Veuillez répondre à ce message avec le texte du captcha que vous souhaitez utiliser (vous pouvez utiliser $title, $username, $equation, $fullname et $seconds).",
     bg:
       'Страхотен! Сега новодошлите ще получат персонализирано съобщение, обясняващо captcha. Моля, отговорете на това съобщение с текста на captcha, който искате да използвате (можете да използвате $title, $username, $equation, $fullname и $seconds).',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-ni tushuntiruvchi maxsus xabarni olishadi. Iltimos, ushbu xabarga siz foydalanmoqchi bo\'lgan captcha matni bilan javob bering ($title, $username, $equation, $fullname va $seconds dan foydalanishingiz mumkin).',
   },
   captchaMessage_true_message: {
     en:
@@ -1260,6 +1272,8 @@ export const localizations = {
       "Super! Désormais, les nouveaux arrivants recevront un message personnalisé expliquant qu'il faut répondre au captcha. Veuillez répondre à ce message avec le texte du captcha que vous souhaitez utiliser (vous pouvez utiliser $title, $username, $equation, $fullname et $seconds). Le message d'accueil est le suivant.",
     bg:
       'Чудесно! Сега новодошлите ще получат персонализирано съобщение, обясняващо captcha. Моля, отговорете на това съобщение с текста на captcha, който искате да използвате (можете да използвате $title, $username, $equation, $fullname и $seconds). Следва текущото поздравително съобщение.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-ni tushuntiruvchi maxsus xabarni olishadi. Iltimos, ushbu xabarga siz foydalanmoqchi bo\'lgan captcha matni bilan javob bering ($title, $username, $equation, $fullname va $seconds dan foydalanishingiz mumkin). Joriy salomlashish xabari quyida keladi.',
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
@@ -1289,6 +1303,8 @@ export const localizations = {
       'Super! Les nouveaux membres verront maintenant le message captcha par défaut',
     bg:
       'Чудесно! Сега новодошлите ще видят съобщението за captcha по-подразбиране',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar standart captcha xabarini ko\'radilar.'
   },
   trust_success: {
     en: 'Accepted!',
@@ -1316,6 +1332,7 @@ export const localizations = {
     hu: 'Elfogadva!',
     fi: 'Hyväksytty!',
     bg: 'Прието!',
+    uz: 'Qabul qilindi!',
   },
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1341,6 +1358,7 @@ export const localizations = {
     hu: 'Csodás! A usert bannolni fogjuk, ha nem megy át a captcha-n.',
     fr: "Parfait! Les utilisateurs seront bannis s'ils ne passent pas captcha.",
     bg: 'Супер! Потребителите ще бъдат блокирани, ако не преминат captcha.',
+    uz: 'Yaxshi! Agar foydalanuvchilar captcha-dan o\'tmasalar, bloklanishadi.',
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1368,6 +1386,7 @@ export const localizations = {
       "Parfait! Les utilisateurs seront expulsés s'ils ne réussissent pas le captcha.",
     bg:
       'Супер! Потребителите ще бъдат "изритани" от групата, ако не преминат captcha.',
+    uz: 'Yaxshi! Agar foydalanuvchilar captcha-dan o\'tmasalar, guruhdan haydalishadi.',
   },
   deleteEntryOnKick_true: {
     en:
@@ -1403,6 +1422,8 @@ export const localizations = {
       "Super! Shieldy va supprimer les messages d'accueil des utilisateurs qui ont échoué au captcha.",
     bg:
       'Чудесно! Shieldy ще премахне съобщенията за влизане на потребителите, които НЕ са отговорили на captcha. ',
+    uz: 
+      'Ajoyib! Endi Shieldy captcha-tekshiruvidan o\'ta olmagan foydalanuvchilar guruhga kirganligi haqidagi xabarlarni o\'chirib tashlaydi.',
   },
   deleteEntryOnKick_false: {
     en:
@@ -1438,6 +1459,8 @@ export const localizations = {
       "C'est noté! Shieldy ne va plus supprimer les messages d'accueil des utilisateurs qui ont échoué au captcha.",
     bg:
       'Чудесно! Shieldy няма да премахва съобщения за влизане на потребители, които НЕ са успели с captcha. ',
+    uz: 
+      'Ajoyib! Endi Shieldy captcha-tekshiruvidan o\'ta olmagan foydalanuvchilar guruhga kirganligi haqidagi xabarlarni o\'chirib tashlamaydi.',
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -1475,6 +1498,7 @@ export const localizations = {
       'Nagyszerű! A Shieldy ezentúl nemhasználja a Combot Anti-Spam megoldást.',
     fr: "Ok! Shieldy n'utilisera pas Combot Anti-Spam.",
     bg: 'Страхотно! Shieldy няма да използва Combot Anti-Spam сега. ',
+    uz: 'Ajoyib! Shieldy endi Combot Anti-Spamdan foydalanadi.',
   },
   underAttack_true: {
     en:
@@ -1501,6 +1525,8 @@ export const localizations = {
       "Ok! Shieldy va maintenant expulser tous ceux qui entreront dans ce groupe. N'oubliez pas de désactiver ce mode lorsque l'attaque est terminée via la commande /underAttack.",
     bg:
       'Чудесно! Shieldy ще изхвърля всички, които влязат в тази група. Не забравяйте да изключите този режим, когато атаката приключи с /underAttack.',
+    uz: 
+      "Ajoyib! Shieldy endi bu chatga kirgan barchani haydab yuboradi. /underAttack buyrug'i bilan hujum tugagach, ushbu rejimni o'chirishni unutmang.",
   },
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
@@ -1519,6 +1545,8 @@ export const localizations = {
       'Nagyszerű! A Shieldy mostantól nem vágja ki az új csatlakozókat a csatornáról.',
     fr: "Ok! Shieldy n'expulsera plus tous ceux qui entrent dans ce groupe.",
     bg: 'Чудесно! Shieldy няма да изхвърля никой, влизащите в тази група. ',
+    uz: 
+      "Ajoyib! Shieldy endi bu chatga kirgan barchani haydab yubormaydi.",
   },
   noAttack_true: {
     en:
@@ -1542,6 +1570,8 @@ export const localizations = {
       "Super! Shieldy est maintenant désactivé. N'oubliez pas de désactiver ce mode via la commande /noAttack.",
     bg:
       'Страхотно! Shieldy в момента е деактивиран! Не забравяйте да изключите този режим с /noAttack.',
+    uz:
+      "Ajoyib! Shieldy endi o'chirib qo'yildi. Ushbu rejimni /noAttack bilan o'chirishni unutmang.",
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
@@ -1555,6 +1585,7 @@ export const localizations = {
     hu: 'Nagyszerű! a Shieldly újra engedélyezve van.',
     fr: 'Super! Shieldy est maintenant activé!',
     bg: 'Чудесно! Shieldy вече е включен.',
+    uz: 'Ajoyib! Shield hozir yoqilgan',
   },
   noChannelLinks_true: {
     en:
@@ -1578,6 +1609,8 @@ export const localizations = {
       'Super! Shieldy va maintenant supprimer les messages qui renvoient vers des autres groupes telegram. ',
     bg:
       'Чудесно! Shieldy  ще изтрие съобщения, които водят към Telegram групи и канали. ',
+    uz:
+      "Ajoyib! Shieldy endi telegram kanallarga havola qilingan xabarlarni o‘chirib tashlaydi.",
   },
   noChannelLinks_false: {
     en:
@@ -1600,6 +1633,8 @@ export const localizations = {
       "C'est noté! Shieldy ne supprimera plus les messages qui partagerons des liens vers des groupes telegram.",
     bg:
       'Чудесно! Shieldy няма да изтрива съобщения, които водят към Telegram групи и канали. ',
+    uz:
+      "Ajoyib! Shieldy endi telegram kanallarga havola qilingan xabarlarni o‘chirib tashlamaydi.",
   },
   viewConfig: {
     en: 'Current config:',
@@ -1613,6 +1648,7 @@ export const localizations = {
     hu: 'Jelenlegi konfiguráció:',
     fr: 'Configuration actuelle: ',
     bg: 'Текуща конфигурация:',
+    uz: 'Joriy sozlamalar',
   },
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
@@ -1628,6 +1664,7 @@ export const localizations = {
     fi: 'Selvä! Käyttäjät voivat nyt kutsua botteja.',
     fr: 'Parfait! les utilisateurs peuvent maintenant inviter des bots.',
     bg: 'Чудесно! Потребителите могат да вкарват ботове в групата.',
+    uz: 'Yaxshi! Foydalanuvchilar endi botlarni taklif qilishlari mumkin',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
@@ -1643,6 +1680,7 @@ export const localizations = {
     fi: 'Selvä! Käyttäjät eivät voi nyt kutsua botteja.',
     fr: 'Parfait! Les utilisateurs ne pourront plus inviter des bots.',
     bg: 'Чудесно! Потребителите НЯМА да могат, да вкарват ботове в групата.',
+    uz: 'Yaxshi! Foydalanuvchilar endi botlarni taklif qilishlari mumkin emas',
   },
   greetingButtons: {
     en:
@@ -1667,6 +1705,8 @@ export const localizations = {
       "Répondez à ce message (et je veux dire répondez (!), pas seulement envoyez un message séparé) avec jusqu'à 10 liens au format ci-dessous pour configurer les boutons d'accueil. Répondez avec n'importe quoi pour supprimer tous les boutons. \n\nDuckDuckGo — https://duckduckgo.com\nWikipedia — https://wikipedia.com\n\nCurrent buttons:",
     bg:
       'Отговорете на това съобщение (и имам предвид да се отговори (reply), а не с отделно съобщение) с до 10 линка в посочения по долу формат за да сетъпнете бутоните. \n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nТекущи бутони:',
+    uz:
+      "Salomlash tugmalarini sozlash uchun quyidagi formatda 10 tagacha havolalar bilan ushbu xabarga javob bering (va men javob berishni nazarda tutmoqdaman (!), shunchaki alohida xabar yuborishni emas!). Barcha tugmalarni olib tashlash uchun boshqa xoxlagan biror narsa bilan javob bering.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nJoriy tugmalar:'",
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
@@ -1681,6 +1721,7 @@ export const localizations = {
     fi: 'Ei painikkeita',
     fr: 'Pas de boutons',
     bg: 'Без бутони',
+    uz: 'Tugmalar yo\'q', 
   },
   skipOldUsers_true: {
     en: "Nice! Old Telegram users won't get asked to pass captcha anymore!",
@@ -1690,6 +1731,7 @@ export const localizations = {
       'Nagyszerű! A régi Telegram felhasználókat nem kéri a rendszer authentikálásra ezentúl!',
     fr:
       'Super! Les anciens utilisateurs de Telegram ne seront plus invités à passer le captcha !',
+    uz: 'Yaxshi! Endi eski Telegram foydalanuvchilari captcha-tekshiruvidan o\'tishi talab qilinmaydi!',
   },
   skipOldUsers_false: {
     en: "Nice! Telegram account age won't affect captcha anymore!",
@@ -1700,6 +1742,7 @@ export const localizations = {
       "Super! L'ancienneté du compte de telegram n'affectera plus le captcha !",
     bg:
       'Чудесно! Съществуващите потребители на Telegram групата, няма да бъдат молени да преминат captcha!',
+    uz: "Yaxshi! Telegram akkauntining yoshi endi captchaga ta'sir qilmaydi!",
   },
   skipVerifiedUsers_true: {
     en:
@@ -1710,6 +1753,8 @@ export const localizations = {
       'Szép! Azok a Telegram felhasználók, akik bármelyik chat-ben átmentek a captcha-n, nem kapnak kezdő captcha-t nálunk!',
     fr:
       "Super! Les utilisateurs de telegram ayant déjà passé un captcha dans d'autres groupes, n'auront plus à passer le captcha!",
+    uz: 
+      "Yaxshi! Har qanday boshqa chatda captcha-tekshiruvidan o'tgan Telegram foydalanuvchilari endi captcha-dan o'tishi talab qilinmaydi!",
   },
   skipVerifiedUsers_false: {
     en: "Nice! Passing captcha before won't affect future captchas anymore!",
@@ -1718,6 +1763,7 @@ export const localizations = {
       'Szép! Azok a Telegram felhasználók is kapnak captcha-t, akik bármelyik chat-ben átmentek a captcha-n!',
     bg:
       'Чудесно! Потребителите на Telegram групата, които някога са преминали captcha във всеки чат, вече няма да бъдат помолени да преминат captcha!',
+    uz: "Yaxshi! Oldin o'tilgan captcha-lar kelajakdagi captchalarga endi ta'sir qilmaydi!",
   },
   setConfigHelp: {
     en:
@@ -1730,6 +1776,8 @@ export const localizations = {
       'Veuillez envoyer la commande /setConfig dans le format suivant:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nVous pouvez utiliser les informations via la commande /viewConfig.',
     bg:
       'Моля, изпратете командата /setConfig в следния формат: \n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n ...</code>\n\nYou и ще можеш, да използвате информацията от /viewConfig.',
+    uz:
+     "",
   },
   noChatFound: {
     en: 'Chat not found',
