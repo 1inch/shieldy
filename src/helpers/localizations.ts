@@ -144,6 +144,8 @@ export const localizations = {
     it: 'Solo chi ha invocato il comando può selezionarlo.',
     bg:
       'Само човекът който е направил менюто може да избира различните избори.',
+    uz:
+      'Faqat menyuni chaqirgan odam variantlarni tanlashi mumkin.',
   },
   captcha: {
     en:
@@ -198,6 +200,8 @@ export const localizations = {
       "Prego, seleziona uno dei seguenti test per i nuovi utenti:\\n\\n• Semplice — Il bot chiederà di inviare un qualunque messaggio in chat\\n• Bottone — Il bot chiederà di premere un pulsante\\n• Numeri — il bot ti chiederà di risolvere una semplice operazione aritmetica\\n• Immagine — il bot ti chiederà di riconoscere un personaggio in un'immagine",
     bg:
       'Моля, изберете типа на теста за новодошлите: \n\n• Simple - ботът ще поиска да изпрати каквото и да е в чата \n• Button - ботът ще поиска да натисне бутон \n• Digits - ботът ще поиска да реши проста аритметична операция \n• Image - ботът ще поиска да разпознае символи на изображение ',
+    uz:
+      'Iltimos, yangi kelganlar uchun test turini tanlang:\n\n• Oddiy — bot chatga biror narsa yuborishni soʻraydi\n• Tugma — bot tugmani bosishni soʻraydi\n• Raqamlar — bot oddiy arifmetik amalni bajarishni soʻraydi. \n• Rasm — bot rasmdagi belgilarni tanib olishni so‘raydi',
   },
   simple: {
     en: 'Simple',
@@ -227,6 +231,7 @@ export const localizations = {
     hu: 'Egyszerű',
     fi: 'Yksinkertainen',
     bg: 'Просто',
+    uz: 'Oddiy',
   },
   digits: {
     en: 'Digits',
@@ -256,6 +261,7 @@ export const localizations = {
     fi: 'Numerot',
     it: 'Numeri',
     bg: 'Цифри',
+    uz: 'Raqamlar',
   },
   button: {
     en: 'Button',
@@ -285,6 +291,7 @@ export const localizations = {
     hu: 'Gomb',
     fi: 'Painike',
     bg: 'Бутон',
+    uz: 'Tugma',
   },
   image: {
     en: 'Image',
@@ -302,6 +309,7 @@ export const localizations = {
     hu: 'Kép',
     fi: 'Kuva',
     bg: 'Картинка',
+    uz: 'Rasm',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -331,6 +339,7 @@ export const localizations = {
     hu: 'Nagyszerű, ezt a típust fogom használni a teszteléshez.',
     fi: 'Selvä! Käytän valitsemaasi testiä jatkossa.',
     bg: 'Чудесно, сега ще използвам този тип тест.',
+    uz: 'Ajoyib, endi men shu turdagi testdan foydalanaman.',
   },
   time_limit: {
     en:
@@ -382,6 +391,8 @@ export const localizations = {
       'Ole hyvä ja valitse montako sekuntia uudella tulokkaalla on aikaa vastata testiin (ennen kuin hänet poistetaan ryhmästä).',
     bg:
       'Моля, изберете колко секунди ще получат новодошлите, за да завършат теста преди да ги "изритам".',
+    uz: 
+      'Iltimos, yangi kelganlar testni necha soniyada bajarishi kerakligini tanlang, guruhdan haydalishidan oldin.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -411,6 +422,7 @@ export const localizations = {
     hu: 'Nagyszerű, ezt az idő intervallumot fogom használni.',
     fi: 'Ok, antamasi sekuntimäärä on asetettu aikarajaksi.',
     bg: 'Чудесно, вече ще използвам този времеви лимит.',
+    uz: 'Ajoyib, men shu vaqt chegarasidan foydalanaman endi.',
   },
   seconds: {
     en: 'sec',
@@ -440,6 +452,7 @@ export const localizations = {
     hu: 'mp',
     fi: 's',
     bg: 'сек',
+    uz: 'soniya',
   },
   lock_true_shieldy: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -471,6 +484,7 @@ export const localizations = {
     yue: '我而家開始淨係會回應管理員嘅命令。',
     hu: 'Nagyszerű! Mostantól csak az adminok parancsara reagálok!',
     bg: 'Чудесно! Вече ще приемам команди само от администраторите.',
+    uz: 'Ajoyib! Endi men faqat adminlar tomonidan yuborilgan buyruqlarga javob beraman.',
   },
   lock_false_shieldy: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -500,6 +514,7 @@ export const localizations = {
     hu: 'Nagyszerű! Mostantól bárki parancsara reagálok!',
     bg: 'Чудесно! Вече, ще приемам команди от всички юзери в групата.',
     es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
+    uz: 'Ajoyib! Endi men har kim tomonidan yuborilgan buyruqlarga javob beraman.',
   },
   strict_true: {
     en:
@@ -545,6 +560,8 @@ export const localizations = {
       'Чудесно! Сега новодошлите няма да могат, да изпращат нищо друго освен  решения с captcha, докато не преминат теста.',
     es:
       'Perfecto! A partir de este momento, los recién llegados solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que este sea resuelto correctamente.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-dan o\'tmaguncha, captcha yechimlaridan boshqa hech narsa yuborolmaydilar.',
   },
   strict_false: {
     en:
@@ -587,6 +604,8 @@ export const localizations = {
       'Чудесно! Сега новодошлите ще могат да пишат съобщения, преди да преминат captcha.',
     es:
       '¡Genial! A partir de este momento, los recién llegados podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-dan o\'tishdan oldin matn xabarlar yuborishlari mumkin bo\'ladi.',
   },
   simple_warning: {
     en:
@@ -637,6 +656,8 @@ export const localizations = {
     yue: ', 唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
     bg:
       ', Mоля, представете се в групата, в рамките на определеното време, в противен случай ще бъдете изритани. Благодаря ви!',
+    uz: 
+      ', iltimos, ushbu guruhga belgilangan vaqt ichida istalgan xabarni yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   digits_warning: {
     en:
@@ -688,6 +709,8 @@ export const localizations = {
       ', ole hyvä ja lähetä oheisen laskutoimituksen ratkaisu annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     bg:
       ', Моля, изпратете решението на аритетичната задачка, която виждате тук в рамките на времето посочено от мен , в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
+    uz:
+      ', iltimos, ushbu guruhga ko\'rsatilgan vaqt ichida berilgan arifmetik amalning yechimini yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   button_warning: {
     en:
@@ -740,6 +763,8 @@ export const localizations = {
       ', Mоля, натиснете бутона по-долу в рамките на определеното време, в противен случай ще бъдете изхвърлени. Благодаря ви!',
     es:
       ', por favor, presione el botón de abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    uz:
+      ', iltimos, belgilangan vaqt ichida quyidagi tugmani bosing, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   image_warning: {
     en:
@@ -775,6 +800,8 @@ export const localizations = {
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
     es:
       ', por favor, envía a este grupo los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    uz:
+      ', iltimos, ushbu guruhga belgilangan vaqt ichida ko\'rsatilgan belgilarni yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -805,6 +832,7 @@ export const localizations = {
     fi: 'Olen ihminen, en botti.',
     kz: 'Менің пендемге қарау',
     bg: 'Аз не съм бот',
+    uz: 'Men robot emasman',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -836,6 +864,7 @@ export const localizations = {
     yue: '機械人賬戶唔畀撳掣。',
     hu: 'Csak a robot ellenőrzési kihívás jelöltje kattinthat a gombra.',
     bg: 'Само кандидатът, който не е бот, може да натисне този бутон.',
+    uz: 'Bu tugmani faqat bot emasligini tasdiqlashi kerak bo\'lgan odam bosishi mumkin.',
   },
   restrict_true: {
     en:
@@ -880,6 +909,8 @@ export const localizations = {
       'Nagyszerű! Mostantól minden újonc csak szöveges üzenetet küldhet erre a csatornára.',
     bg:
       'Чудесно! Сега всички новодошли, ще могат само да изпращат обичайни текстови съобщения в тази група. ',
+    uz: 
+      'Ajoyib! Endi barcha yangi kelganlar ushbu chatga faqat oddiy matnli xabarlarni yuborishlari mumkin bo\'ladi.',
   },
   restrict_false: {
     en:
@@ -923,6 +954,8 @@ export const localizations = {
       'Nagyszerű! Mostantól minden újonc bármilyen üzenetet küldhet erre a csatornára.',
     bg:
       'Чудесно! Сега всички новодошли, ще могат да изпращат всякакъв вид съдържание в тази група.',
+    uz:
+      'Ajoyib! Endi barcha yangi kelganlar ushbu chatga istalgan turdagi xabarlarni yuborishlari mumkin bo\'ladi.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
