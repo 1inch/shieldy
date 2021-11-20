@@ -1777,25 +1777,28 @@ export const localizations = {
     bg:
       'Моля, изпратете командата /setConfig в следния формат: \n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n ...</code>\n\nYou и ще можеш, да използвате информацията от /viewConfig.',
     uz:
-     "",
+     "Iltimos, /setConfig buyrug'ini quyidagi formatda yuboring:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\n/viewConfig buyrug'idan qaytgan ma'lumotlardan foydalanishingiz mumkin.",
   },
   noChatFound: {
     en: 'Chat not found',
     ru: 'Чат не найден',
     fr: "Le groupe n'existe pas",
     bg: 'Групата не е открита',
+    uz: "Chat topilmadi",
   },
   thisIsNotAReply: {
     en: 'Just to clarify: this is not a reply',
     ru: 'Уточняю: это не ответ на сообщение',
     fr: "Désolé mais ce n'est pas une réponse correcte",
     bg: 'Само да поясня: това не е отговор',
+    uz: "Aniqlik kiritish uchun: bu xabarga javob emas",
   },
   thisIsAReply: {
     en: 'This is a reply',
     ru: 'А вот это ответ',
     fr: "C'est une réponse",
     bg: 'Това е отговор',
+    uz: "Mana bu esa javob",
   },
   commandsInPrivateWarning: {
     en:
@@ -1806,6 +1809,8 @@ export const localizations = {
       "Vous avez modifié les paramètres des messages privés. Cela n'aura aucune incidence sur les discussions des autres groupes. Si vous souhaitez mettre en place une discussion de groupe, envoyez les commandes de configuration directement à la discussion du groupe. Vous pourrez ensuite supprimer les messages de configuration.",
     bg:
       'Променихте настройките за личните съобщения. Това няма да засегне груповите чатове. Ако искате да настроите групов чат, изпратете команди за конфигуриране директно до груповия чат. Можете да изтриете конфигурационните съобщения след това.',
+    uz: 
+      "Siz shaxsiy xabarlardagi sozlamalarni o'zgartiryapsiz. Bu hech qanday guruh chatiga ta'sir qilmaydi. Agar siz guruh chatini o'rnatmoqchi bo'lsangiz, konfiguratsiya buyruqlarini to'g'ridan-to'g'ri guruh chatiga yuboring. Keyin konfiguratsiya xabarlarini o'chirishingiz mumkin.",
   },
   banForFastRepliesToPosts_true: {
     en:
@@ -1814,6 +1819,8 @@ export const localizations = {
       'Отлично! Щилди будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
     bg:
       'Яко! Shieldy, ще забрани (или ще "изрита") всеки потребител, които отговорят на публикациите в канала ви 5 секунди след създаването на публикацията.',
+    uz:
+      "Yaxshi! Shieldy kanalda post yaratilganidan 5 soniyadan keyin ularga javob yozgan barcha foydalanuvchilarni bloklaydi (yoki guruhdan haydaydi).",
   },
   banForFastRepliesToPosts_false: {
     en:
@@ -1822,6 +1829,8 @@ export const localizations = {
       'Отлично! Щилди не будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
     bg:
       'Яко! Shieldy няма да забранява (или да "изрита") никой потребител, които отговарят на публикациите на канала ви 5 секунди след създаването на публикацията.',
+    uz:
+      "Yaxshi! Shieldy kanalda post yaratilganidan 5 soniyadan keyin ularga javob yozgan barcha foydalanuvchilarni bloklamaydi (yoki guruhdan haydamaydi).",
   },
   banNewTelegramUsers_true: {
     en:
@@ -1830,6 +1839,8 @@ export const localizations = {
       'Отлично! Щилди будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
     bg:
       'Чудесно! Shieldy, ще забрани (или ще "изрита") всички новодошли с идентификатор на Telegram над 1 000 000 000. ',
+    uz:
+      "Yaxshi! Shieldy Telegram ID raqami 1 000 000 000 dan katta bo'lgan barcha yangi kelganlarni bloklaydi (yoki guruhdan haydaydi).",
   },
   banNewTelegramUsers_false: {
     ru:
@@ -1838,43 +1849,56 @@ export const localizations = {
       'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     bg:
       'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
+    uz:
+      "Yaxshi! Shieldy Telegram ID raqami 1 000 000 000 dan katta bo'lgan barcha yangi kelganlarni bloklamaydi (yoki guruhdan haydamaydi).",
   },
   oneInchInfo: {
     en:
       'The 1inch Network unites decentralized protocols whose synergy enables the most lucrative, fastest and protected operations in the DeFi space.',
     ru:
       '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
+    uz:
+      "1inch Network markazlashtirilmagan protokollarni birlashtiradi, ularning sinergiyasi DeFi maydonida eng daromadli, eng tezkor va himoyalangan operatsiyalarni amalga oshirish imkonini beradi.",
   },
   subscription: {
     en: '/subscription — Manage subscription',
     ru: '/subscription — Управление подпиской',
+    uz: "/subscription — Obunani boshqarish",
   },
   noSubscription: {
     en:
       'This is the premium version of Shieldy. If you want to use a free version — check out @shieldy_bot. In order to use this version of the bot, you will have to purchase a subscription below. The premium version is hosted on dedicated servers that are used by only the premium users.',
     ru:
       'Это премиум версия Shieldy. Если вы хотите использовать бесплатную версию — попробуйте @shieldy_bot. Для использования этой версии бота вам нужно приобрести подписку ниже. Премиум версия хостится на отдельных серверах, которые используются только премиум пользователями.',
+    uz:
+      "Bu Shieldy-ning premium versiyasi. Bepul versiyadan foydalanmoqchi bo'lsangiz, @shieldy_bot ni ishlating. Botning ushbu versiyasidan foydalanish uchun siz quyida obuna sotib olishingiz kerak bo'ladi. Premium versiya faqat premium foydalanuvchilar tomonidan ishlatiladigan maxsus serverlarda joylashtirilgan.",
   },
   subscriptionInfo: {
     en:
       'Thank you a lot for the support! You can manage your subscription with the button below.',
     ru:
       'Спасибо вам огромное за поддержку! Вы можете управлять вашей подпиской с помощью кнопки ниже.',
+    uz:
+      "Qo'llab-quvvatlaganingiz uchun katta rahmat! Quyidagi tugma orqali obunangizni boshqarishingiz mumkin.",
   },
   monthly: {
     en: 'month',
     ru: 'месяц',
+    uz: 'oy',
   },
   yearly: {
     en: 'year',
     ru: 'год',
+    uz: 'yil',
   },
   lifetime: {
     en: 'once and forever',
     ru: 'один раз навсегда',
+    uz: 'bir umrlik',
   },
   manageSubscription: {
     en: 'Manage subscription',
     ru: 'Управление подпиской',
+    uz: 'Obunani boshqarish',
   },
 }
