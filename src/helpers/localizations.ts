@@ -503,6 +503,8 @@ export const localizations = {
       "Great! Now newcomers won't send anything but captcha solutions until they pass captcha.",
     ru:
       'Отлично! Теперь новички не смогут присылать ничего кроме решения капчи, до прохождения капчи.',
+    it:
+      'Perfetto! Da ora i nuovi membri entrati non potranno mandare niente eccetto la soluzione del captcha finchè non lo risolvono.',
     uk:
       'Чудово! Тепер новачки не матимуть змоги надсилати у чат нічого окрім вирішення капчі, поки її не розввʼяжуть.',
     tr:
@@ -547,6 +549,7 @@ export const localizations = {
     en:
       'Great! Now newcomers will be able to send text before they pass captcha.',
     ru: 'Отлично! Теперь новички смогут отправлять текст до прохождения капчи.',
+    it: 'Perfetto! Da ora i nuovi membri potranno inviare messaggi prima di completare il captcha.',
     uk:
       'Чудово! Тепер новачки матимуть змогу надсилати текст, поки не розвʼяжуть капчу.',
     tr:
@@ -743,6 +746,8 @@ export const localizations = {
       ', please, send the characters displayed within the time amount specified to this group, otherwise you will be kicked. Thank you!',
     ru:
       ', пожалуйста, отправьте цифры с картинки в этот чат в течение указанного времени, иначе вы будете кикнуты. Спасибо!',
+    it: 
+      ', prego, invia il carattere mostrato entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     et:
       ', palun saatke matemaatilise võrrandi lahendus sellele vestlusele määratud aja jooksul, muidu me kickime teid. Aitäh!',
     uk:
@@ -766,8 +771,6 @@ export const localizations = {
       ', ole hyvä ja lähetä kuvan merkit annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     fr:
       ', veuillez inscrire les caractères affichés dans le délai indiqué, sinon vous serez expulsé. Merci!',
-    it:
-      ', prego, riconosci il personaggio qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     bg:
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
     es:
@@ -839,6 +842,8 @@ export const localizations = {
       'Great! Now all newcomers will only be able to send usual text messages to this chat.',
     ru:
       'Отлично! Теперь все новички смогут отправлять только текстовые сообщения первые сутки в чате.',
+    it:
+      'Perfetto! Da ora i nuovi membri potranno inviare solamente messaggi testuali in questa chat.',
     uk:
       'Чудово! Тепер усі новачки протягом першої доби зможуть надсилати в чат тільки текстові повідомлення.',
     br:
@@ -883,6 +888,8 @@ export const localizations = {
       'Great! Now all newcomers will be able to send any type of content to this chat.',
     ru:
       'Отлично! Теперь все новички смогут отправлять любые сообщения в этот чат.',
+    it:
+      'Perfetto! Da ora tutti i nuovi membri potranno inviare qualunque tipo di contenuto in questa chat.',
     uk:
       'Чудово! Тепер усі новачки зможуть надсилати будь-які повідомлення в чат.',
     br:
@@ -924,6 +931,7 @@ export const localizations = {
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей будут удаляться.',
+    it: 'Perfetto! Da ora i messaggi d\'entrata verranno eliminati.',
     uk: 'Чудово! Тепер повідомлення про вхід користувачів буде видалено.',
     br: 'Boa, Agora a mensagem de entrada será apagada.',
     tr: 'Harika! Artık giriş mesajları silinecek.',
@@ -952,6 +960,7 @@ export const localizations = {
   deleteEntryMessages_false: {
     en: 'Great! Now entry messages will not be deleted.',
     ru: 'Отлично! Теперь сообщения о входе пользователей не будут удаляться.',
+    it: 'Perfetto! Da ora i messaggi di entrata non verranno più eliminati.',
     uk: 'Чудово! Тепер повідомлення про вхід користувачів не буде видалено.',
     br: 'Boa, Agora a mensagem de entrada não será apagada.',
     tr: 'Harika! Artık giriş mesajları silinmeyecek.',
@@ -983,7 +992,7 @@ export const localizations = {
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title, $fullname и $username).',
     it:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
+      'Perfetto! Da ora i nuovi membri che passano il test verranno salutati. Prego, rispondi a questo messaggio con il testo di benvenuto che vuoi compaia (puoi usare $title, $fullname e $username).',
     et:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use.',
     uk:
@@ -1035,7 +1044,7 @@ export const localizations = {
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, будут получать сообщения с приветствиями. Пожалуйста, ответьте на это сообщение текстом, которым вы хотите встречать новых пользователей (можете использовать $title, $fullname и $username). Текущее сообщение с приветствием ниже.',
     it:
-      'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
+      'Perfetto! Da ora i nuovi membri che passano il test verranno salutati. Prego, rispondi a questo messaggio con il testo di benvenuto che vuoi compaia (puoi usare $title, $fullname e $username).',
     et:
       'Great! Now newcomers who passed the test will be greeted. Please, reply to this message with the greeting text you would like to use. The current greeting message follows.',
     uk:
@@ -1087,8 +1096,8 @@ export const localizations = {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
     ru:
       'Отлично! Теперь пользователи, прошедшие проверку, не будут получать сообщения с приветствиями.',
-    uk:
-      'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
+    it: 'Perfetto! Da ora i nuovi membri che passano il test non riceverranno il messaggio di benvenuto.',
+    uk: 'Чудово! Тепер новачки не будуть отримувати вітання після того, як розвʼяжуть капчу.',
     br: 'Boa! Agora os novatos que passarem no teste não serão congratulados',
     tr: 'Harika! Artık testi geçen yeni üyeler karşılanmayacak.',
     es:
@@ -1121,6 +1130,7 @@ export const localizations = {
   greetsUsers_message_accepted: {
     en: 'Accepted!',
     ru: 'Принято!',
+    it: 'Accettato!',
     uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
@@ -1150,6 +1160,8 @@ export const localizations = {
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds).',
     ru:
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds).',
+    it: 
+      'Perfetto, Da ora i nuovi membri riceveranno un messaggio personalizzato che spiegherà il captcha. Prego, rispondi a questo messaggio con il messaggio da inviare al nuovo membro (puoi usare $title, $username, $equation, $fullname e $seconds).',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds).',
     tr:
@@ -1190,6 +1202,8 @@ export const localizations = {
       'Great! Now newcomers will get custom message explaining the captcha. Please, reply to this message with the captcha text you would like to use (you can use $title, $username, $equation, $fullname and $seconds). The current greeting message follows.',
     ru:
       'Отлично! Теперь пользователи будут получать кастомное сообщение капчи. Пожалуйста, ответьте на это сообщение текстом, который будет объяснять капчу вошедшим (можете использовать $title, $username, $equation, $fullname и $seconds). Текущее сообщение с приветствием ниже.',
+    it: 
+      'Perfetto, Da ora i nuovi membri riceveranno un messaggio personalizzato che spiegherà il captcha. Prego, rispondi a questo messaggio con il messaggio da inviare al nuovo membro (puoi usare $title, $username, $equation, $fullname e $seconds).',
     uk:
       'Чудово! Тепер новачки будуть отримувати інше повідомлення із поясненням капчі. Надішліть новий текст для капчі у відповідь на це повідомлення (можна використовувати $title, $username, $equation, $fullname та $seconds). Поточне пояснення наведено нижче.',
     tr:
@@ -1227,8 +1241,8 @@ export const localizations = {
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
-    ru:
-      'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
+    ru: 'Отлично! Теперь пользователи будут получать стандартное сообщение с капчей.',
+    it: 'Perfetto! Da ora i nuovi mmebri vedranno il messaggio base del Captcha.',
     uk: 'Чудово! Тепер новачки будуть бачити типове повдомлення капчі',
     tr: 'Harika! Artık yeni gelenler varsayılan CAPTCHA mesajını görecek',
     es:
@@ -1257,6 +1271,7 @@ export const localizations = {
   trust_success: {
     en: 'Accepted!',
     ru: 'Принято!',
+    it: 'Accettato!',
     uk: 'Прийнято!',
     br: 'Aceito!',
     tr: 'Kabul edildi!',
@@ -1284,11 +1299,10 @@ export const localizations = {
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут баниться, если не пройдут капчу.',
-    uk:
-      'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
+    it: 'Perfetto! Gli utenti verranno bannati se non passano il captcha.',
+    uk: 'Добре! Тепер користувачі будуть забанені, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse yasaklanırlar',
-    es:
-      'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
+    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA quedarán bloqueados.',
     zh: '很好！如果用户未通过验证码，将被禁止。',
     de: 'Toll! User werden gebannt, wenn sie den Captcha Test nicht schaffen.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou zabanováni.',
@@ -1296,8 +1310,7 @@ export const localizations = {
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم حظرهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーがバンされます。',
     ro: 'Nice! Utilizatorii vor fi banați dacă nu trec testul captcha.',
-    ca:
-      "D'acord, a partir d'ara els nouvinguts que no superin la prova quedaran bloquejats.",
+    ca: "D'acord, a partir d'ara els nouvinguts que no superin la prova quedaran bloquejats.",
     br: 'Boa! Os usuários serão banidos se não passarem pelo captcha.',
     he: 'מעולה! משתמשים ינודו אם הם לא יעברו את המבחן.',
     no: 'Supert! Brukere vil bli utestengt om de ikke består testen.',
@@ -1309,35 +1322,33 @@ export const localizations = {
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
     ru: 'Отлично! Пользователи будут кикнуты, если не пройдут капчу.',
+    it: 'Perfetto! Gli utenti verranno kickati se non passano il captcha.',
     uk: 'Добре! Тепер користувачей буде вилучено, якщо вони не пройдуть капчу.',
     tr: 'Güzel! Kullanıcılar, CAPTCHA testini geçemezlerse kovulurlar',
-    es:
-      'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
+    es: 'Muy bién, a partir de ahora los usuarios que no superen el CAPTCHA serán expulsados.',
     zh: '很好！如果用户未通过验证码，将被踢出。',
-    de:
-      'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
+    de: 'Spitze! User werden gekickt, wenn sie den Captcha Test nicht schaffen.',
     cz: 'Skvěle! Nováčci, kteří neprojdou testem budou vyhozeni.',
     sk: 'Fajn! Používatelia, ktorí neprejdú testom, budú vyhodení.',
     ar: 'تم, الأعضاء الذين لم يجتازوا الإختبار سيتم طردهم.',
     ja: 'いいですね！キャプチャをパスしなかったユーザーは退出させられます。',
     ro: 'Nice! Utilizatorii vor primi kick dacă nu trec testul captcha.',
-    ca:
-      "D'acord, a partir d'ara els nouvinguts que no superin la prova seran explusats.",
+    ca: "D'acord, a partir d'ara els nouvinguts que no superin la prova seran explusats.",
     br: 'Boa! Os usuários serão kickados se não passarem pelo captcha.',
     he: 'מעולה! משתמשים יורחקו אם הם לא יעברו את המבחן.',
     no: 'Supert! Brukere vil bli sparket om de ikke består testen.',
     yue: '好。由而家開始，未通過驗證嘅新來者會被自動踢除。',
     hu: 'Csodás! A usert kivágjuk, ha nem megy át a captcha-n.',
-    fr:
-      "Parfait! Les utilisateurs seront expulsés s'ils ne réussissent pas le captcha.",
-    bg:
-      'Супер! Потребителите ще бъдат "изритани" от групата, ако не преминат captcha.',
+    fr: "Parfait! Les utilisateurs seront expulsés s'ils ne réussissent pas le captcha.",
+    bg: 'Супер! Потребителите ще бъдат "изритани" от групата, ако не преминат captcha.',
   },
   deleteEntryOnKick_true: {
     en:
       'Great! Shieldy will remove entry messages of the users who failed captcha.',
     ru:
       'Щилди будет удалять сообщения о входе пользователей, проваливших капчу.',
+    it:
+      "Perfetto! Shieldy rimuoverà tutti i messaggi d'ingresso degli utenti che hanno falliranno il captcha.",
     uk:
       'Чудово! Шилді тепер видалятиме усі вхідні повідомлення від користувачів, які провалили капчу.',
     tr:
@@ -1373,6 +1384,8 @@ export const localizations = {
       'Great! Shieldy will not remove entry messages of the users who failed captcha.',
     ru:
       'Великолепно! Щилди не будет удалять сообщения о входе пользователей, проваливших капчу.',
+    it:
+      "Perfetto! Shieldy non rimuoverà più i messaggi d'ingresso degli utenti che hanno fallito il captcha.",
     uk:
       'Чудово. Шилді не буде видаляти вхідні повідомлення від користувачів, які провалили капчу.',
     tr:
@@ -1406,6 +1419,7 @@ export const localizations = {
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
     ru: 'Великолепно! Щилди теперь будет использовать Combot Anti-Spam.',
+    it: 'Perfetto! Shieldy da ora userà la Combo Anti-Spam.',
     uk: 'Чудово! Шилді тепер використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanacak.',
     es:
@@ -1424,6 +1438,7 @@ export const localizations = {
   cas_false: {
     en: 'Great! Shieldy will not use Combot Anti-Spam now.',
     ru: 'Великолепно! Щилди теперь не будет использовать Combot Anti-Spam.',
+    it: 'Perfetto! Shieldy non userà più la Combo Anti-Spam.',
     uk: 'Чудово! Шилді тепер не використовує Combot Anti-Spam.',
     tr: 'Harika! Shieldy, artık Combot Anti-Spam kullanmayacak.',
     es:
@@ -1445,6 +1460,8 @@ export const localizations = {
       "Great! Shieldy will now kick everybody who enters this chat. Don't forget to turn this mode off when attack is over with /underAttack.",
     ru:
       'Отлично! Щилди теперь будет кикать всех, кто заходит в этот чат. Не забудьте отключить этот режим после окончания атаки при помощи команды /underAttack.',
+    it:
+      "Perfetto! Da ora Shieldy kickerà tutti quelli che entreranno in questa chat. Non dimenticarti di disattivare questa modalità quando l'attacco sarà finito con /userAttack.",
     uk:
       'Чудово! Шилді тепер видалятиме усіх, хто спробує увійти до чату. Коли атака скінчиться, не забудьте вимкнути цей режим командою /underAttack.',
     es:
@@ -1469,6 +1486,7 @@ export const localizations = {
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
     ru: 'Отлично! Щилди теперь не будет кикать всех, кто заходит в этот чат.',
+    it: 'Perfetto! Shieldy non kickerà più i nuovi membri che entreranno in questa chat.',
     uk:
       'Чудово! Шилді тепер не буде видаляти усіх, хто спробує увійти до чату.',
     es:
@@ -1487,6 +1505,10 @@ export const localizations = {
   noAttack_true: {
     en:
       "Great! Shieldy is disabled now. Don't forget to turn this mode off with /noAttack.",
+    ru:
+      'Отлично! Щилди отключён. Не забудьте снова включить его командой /noAttack.',
+    it:
+      'Perfetto! Shieldy è disabilitato. Non dimenticarti di disattivare questa modalità con /noAttack.',
     es:
       '¡Entendido! Ahora Shieldy está desactivado. No olvides desactivar este modo usando /noAttack.',
     ca:
@@ -1498,8 +1520,6 @@ export const localizations = {
       'Supert! Nå er Shieldy deaktivert. Ikke glem å slå av denne modusen med /noAttack.',
     yue:
       'Shieldy 經已畀停用。要重新使用 Shieldy，請用 /noAttack 停用當前模式。',
-    ru:
-      'Отлично! Щилди отключён. Не забудьте снова включить его командой /noAttack.',
     hu:
       'Nagyszerű! A Shieldy letiltva. ne felejtsd el kikapcsolni ezt a módot a /noAttack paranccsal.',
     fr:
@@ -1509,12 +1529,13 @@ export const localizations = {
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
+    ru: 'Отлично! Щилди включён.',
+    it: 'Perfetto! Shieldy è di nuovo attivo.',
     es: '¡Entendido! Ahora Shieldy está activo.',
     ca: "Molt bé, a partir d'ara en Shieldy està actiu i vigilant aquest xat.",
     br: 'Boa! Shieldy está ativado agora.',
     he: 'מעולה! Shieldy דלוק כעת.',
     no: 'Supert! Shieldy er nå aktivert.',
-    ru: 'Отлично! Щилди включён.',
     yue: ' 正！Shieldy 已經開咗。',
     hu: 'Nagyszerű! a Shieldly újra engedélyezve van.',
     fr: 'Super! Shieldy est maintenant activé!',
@@ -1525,6 +1546,7 @@ export const localizations = {
       'Great! Shieldy will now delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь будет удалять сообщения с ссылками на Телеграм-каналы.',
+    it: 'Perfetto! Shieldy eliminerà i messaggi collegati a dei canali telegram.',
     es:
       '¡Genial! Ahora Shieldy eliminará todos los mensajes que contengan enlaces a otros canales de Telegram.',
     ca:
@@ -1548,6 +1570,7 @@ export const localizations = {
       'Great! Shieldy will not delete messages that link to telegram channels.',
     ru:
       'Отлично! Щилди теперь не будет удалять сообщения с ссылками на Телеграм-каналы.',
+    it: 'Perfetto! Shieldy non eliminerà più i messaggi collegati a dei canali telegram.',
     es:
       '¡Genial! Ahora Shieldy no eliminará ningún mensaje que contenga enlaces a otros canales de Telegram.',
     ca:
@@ -1568,6 +1591,7 @@ export const localizations = {
   viewConfig: {
     en: 'Current config:',
     ru: 'Текущие настройки:',
+    it: 'Configurazione attuale:',
     es: 'Esta es la configuración actual:',
     ca: 'Aquesta és la configuració actual:',
     br: 'Configuração atual:',
@@ -1581,6 +1605,7 @@ export const localizations = {
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
     ru: 'Отлично! Пользователи теперь могут приглашать ботов.',
+    it: 'Perfetto! Gli utenti potranno invitare i bot da ora.',
     es: '¡Muy bién! Ahora los usuarios pueden invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris poden convidar robots a la conversa.",
@@ -1596,6 +1621,7 @@ export const localizations = {
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
     ru: 'Отлично! Пользователи теперь не могут приглашать ботов.',
+    it: 'Perfetto! Gli utenti non potranno più invitare i bot.',
     es: '¡Muy bién! Ahora los usuarios no podrán invitar a bots.',
     ca:
       "Fantàstic! A partir d'ara els usuaris ja no poden convidar robots a la conversa.",
@@ -1613,6 +1639,8 @@ export const localizations = {
       'Reply to this message (and I mean reply(!), not just send a separate message) with up to 10 links in format below to setup greeting buttons. Reply with anything else to remove all buttons.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nCurrent buttons:',
     ru:
       'Ответьте на это сообщение (и я имею ввиду ответьте(!), а не просто отправьте отдельное сообщение) с не более чем 10 ссылками в формате ниже, чтобы установить кнопки приветствию. Ответьте любым другим сообщением, чтобы удалить все кнопки.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nТекущие кнопки:',
+    it:
+      'Rispondi a questo messaggio (si intende rispondendo e non inviando un messaggio separato) con 10 link nel formato qua sotto per impostare i bottoni di benvenuto. Rispondi con qualunque altra cosa per rimuovere tutti i bottoni.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBottoni Attuali:',
     es:
       'Responde a este mensaje (si, si, responde!, no escribas un mensaje a parte) con hasta 10 enlaces, con el formato que ves más abajo, para configurar los botones de bienvenida. Responde cualquier otra cosa para eliminar todos los botones.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nBotones configurados actualmente:',
     ca:
@@ -1635,6 +1663,7 @@ export const localizations = {
   greetingButtonsEmpty: {
     en: 'No buttons',
     ru: 'Нет кнопок',
+    it: 'Nessun Bottone',
     es: 'No hay botones',
     ca: 'No hi ha botons',
     br: 'Sem botões',
@@ -1650,6 +1679,7 @@ export const localizations = {
     en: "Nice! Old Telegram users won't get asked to pass captcha anymore!",
     ru:
       'Отлично! Старым пользователям Телеграма больше не надо будет проходить капчу!',
+    it: 'Perfetto! I vecchi utenti Telegram non dovranno più fare il patcha!',
     hu:
       'Nagyszerű! A régi Telegram felhasználókat nem kéri a rendszer authentikálásra ezentúl!',
     fr:
@@ -1658,6 +1688,7 @@ export const localizations = {
   skipOldUsers_false: {
     en: "Nice! Telegram account age won't affect captcha anymore!",
     ru: 'Отлично! Возраст Телеграм-аккаунта больше не влияет на капчу!',
+    it: "Perfetto! L'età dell'account di Telegram non influenzerà più il captcha!",
     hu:
       'Nagyszerű! A Telegram fuiók kora nem befolyásolja ezentúl a captcha-t!',
     fr:
@@ -1670,6 +1701,8 @@ export const localizations = {
       "Nice! Telegram users who have ever passed a captcha in any chat won't get asked to pass captcha anymore!",
     ru:
       'Отлично! Пользователям Телеграма, которые прошли капчу в любом чате когда-либо, больше не надо будет проходить капчу!',
+    it:
+      'Perfetto! Gli utenti Telegram che hanno passato il captcha nelle altre chat non gli verrà richiesto più il captcha!',
     hu:
       'Szép! Azok a Telegram felhasználók, akik bármelyik chat-ben átmentek a captcha-n, nem kapnak kezdő captcha-t nálunk!',
     fr:
@@ -1678,6 +1711,7 @@ export const localizations = {
   skipVerifiedUsers_false: {
     en: "Nice! Passing captcha before won't affect future captchas anymore!",
     ru: 'Отлично! Прохождение капчи больше не влияет на будущие капчи!',
+    it: "Perfetto! Passare un captcha non influenzerà più i captcha futuri!",
     hu:
       'Szép! Azok a Telegram felhasználók is kapnak captcha-t, akik bármelyik chat-ben átmentek a captcha-n!',
     bg:
@@ -1688,6 +1722,8 @@ export const localizations = {
       'Please, send /setConfig command in the following format:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nYou can use the info from /viewConfig.',
     ru:
       'Пожалуйста, пришлите команду /setConfig в следующем формате:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nВы можете использовать информацию из /viewConfig.',
+    it:
+      'Prego, invia il comando /setConfig nel seguente formato:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nPuoi usare le info attraverso /viewConfig.',
     hu:
       'Kérlek, küld a /setConfig parancsot a következő formában:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nHasználhatod a /viewConfig alapján adott választ a konfigurációban.',
     fr:
@@ -1698,18 +1734,21 @@ export const localizations = {
   noChatFound: {
     en: 'Chat not found',
     ru: 'Чат не найден',
+    it: 'Chat non trovata',
     fr: "Le groupe n'existe pas",
     bg: 'Групата не е открита',
   },
   thisIsNotAReply: {
     en: 'Just to clarify: this is not a reply',
     ru: 'Уточняю: это не ответ на сообщение',
+    it: 'Per chiarificare: Questo non è una risposta',
     fr: "Désolé mais ce n'est pas une réponse correcte",
     bg: 'Само да поясня: това не е отговор',
   },
   thisIsAReply: {
     en: 'This is a reply',
     ru: 'А вот это ответ',
+    it: 'Questa è una risposta',
     fr: "C'est une réponse",
     bg: 'Това е отговор',
   },
@@ -1718,6 +1757,8 @@ export const localizations = {
       'You are changing the settings in private messages. This will not affect any group chats. If you want to set up a group chat, send configuration commands directly to the group chat. You can delete the configuration messages afterwards.',
     ru:
       'Вы меняете настройки в личных сообщениях с ботом. Эти настройки не повлияют ни на какие групповые чаты. Если вы хотите настроить групповой чат, отправляйте команды настроек прямо в групповой чат. Вы можете удалить сообщения настроек после настройки.',
+    it:
+      'Stai cambiando le impostazioni nei messaggi privati. Questo non influenzerà nessun gruppo. Se vuoi impostare la chat di un gruppo, invia il comando di configurazione direttamente nel gruppo. Puoi eliminare il messaggio di configurazione dopo.', 
     fr:
       "Vous avez modifié les paramètres des messages privés. Cela n'aura aucune incidence sur les discussions des autres groupes. Si vous souhaitez mettre en place une discussion de groupe, envoyez les commandes de configuration directement à la discussion du groupe. Vous pourrez ensuite supprimer les messages de configuration.",
     bg:
@@ -1728,6 +1769,8 @@ export const localizations = {
       "Nice! Shieldy will ban (or kick) all users who reply to your channel's posts 5 seconds after the post is created.",
     ru:
       'Отлично! Щилди будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
+    it:
+      'Perfetto! Shieldy bannerà (o kickerà) tutti gli utenti che risponderanno nei post del tuo canale dopo nemmeno 5 secondi dall\'invio del post.',
     bg:
       'Яко! Shieldy, ще забрани (или ще "изрита") всеки потребител, които отговорят на публикациите в канала ви 5 секунди след създаването на публикацията.',
   },
@@ -1736,6 +1779,8 @@ export const localizations = {
       "Nice! Shieldy will not ban (or kick) all users who reply to your channel's posts 5 seconds after the post is created.",
     ru:
       'Отлично! Щилди не будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
+    it:
+      'Perfetto! Shieldy non bannerà (o kickerà) più gli utenti che risponderanno nei post del tuo canale dopo nemmeno 5 secondi dall\'invio del post.',
     bg:
       'Яко! Shieldy няма да забранява (или да "изрита") никой потребител, които отговарят на публикациите на канала ви 5 секунди след създаването на публикацията.',
   },
@@ -1744,14 +1789,18 @@ export const localizations = {
       'Nice! Shieldy will ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     ru:
       'Отлично! Щилди будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
+    it:
+      'Perfetto! Shieldy bannerà (o kickerà) tutti i nuovi membri con l\'ID di telegram maggiore di 1 000 000 000.',
     bg:
       'Чудесно! Shieldy, ще забрани (или ще "изрита") всички новодошли с идентификатор на Telegram над 1 000 000 000. ',
   },
   banNewTelegramUsers_false: {
-    ru:
-      'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
     en:
       'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
+    ru:
+      'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
+    it:
+      'Perfetto! Shieldy non bannerà (o kickerà) più i nuovi membri con l\'ID Telegram maggiore di 1 000 000 000.',
     bg:
       'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
   },
@@ -1760,37 +1809,48 @@ export const localizations = {
       'The 1inch Network unites decentralized protocols whose synergy enables the most lucrative, fastest and protected operations in the DeFi space.',
     ru:
       '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
+    it:
+      'Il 1inch Network unisce protocolli decentralizzati la quale sinergia permette il maggior guadagno, velocità e protezione protette nello spazio DeFi.'
   },
   subscription: {
     en: '/subscription — Manage subscription',
     ru: '/subscription — Управление подпиской',
+    it: "/subscription — Gestosci l'iscrizione",
   },
   noSubscription: {
     en:
       'This is the premium version of Shieldy. If you want to use a free version — check out @shieldy_bot. In order to use this version of the bot, you will have to purchase a subscription below. The premium version is hosted on dedicated servers that are used by only the premium users.',
     ru:
       'Это премиум версия Shieldy. Если вы хотите использовать бесплатную версию — попробуйте @shieldy_bot. Для использования этой версии бота вам нужно приобрести подписку ниже. Премиум версия хостится на отдельных серверах, которые используются только премиум пользователями.',
+    it:
+      "Questo è una versione premium di Shieldy. Se vuoi usare una versione gratuita — vedi @shieldy_bot. Per usare questa versione del bot, devi aver comprato un'iscrizione qua sotto. La versione premium è hostata su un server dedicato usato solamente dagli utenti premium.",
   },
   subscriptionInfo: {
     en:
       'Thank you a lot for the support! You can manage your subscription with the button below.',
     ru:
       'Спасибо вам огромное за поддержку! Вы можете управлять вашей подпиской с помощью кнопки ниже.',
+    it:
+      'Grazie mille per il tuo supporto! Puoi gestire la tua iscrizione con il bottone qua sotto.',
   },
   monthly: {
     en: 'month',
     ru: 'месяц',
+    it: 'mese',
   },
   yearly: {
     en: 'year',
     ru: 'год',
+    it: 'anno',
   },
   lifetime: {
     en: 'once and forever',
     ru: 'один раз навсегда',
+    it: 'una volta per sempre',
   },
   manageSubscription: {
     en: 'Manage subscription',
     ru: 'Управление подпиской',
+    it: "Gestisci l'iscrizione"
   },
 }
