@@ -16,13 +16,7 @@ const ruPromoAdditionsArray = [
       prefix: ' ',
       text: '1inch Network',
       postfix: ' ',
-      link: 'http://1inch.io/?utm_source=shieldy_ru&utm_medium=cpc&utm_campaign=powered'
-      },
-      {
-      prefix: '(',
-      text: 'iOS',
-      postfix: ')',
-      link: 'https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_ru&mt=8'
+      link: 'https://jn3rg.app.link/c10FJKdtnpb'
       }
     ],
     postlinks: '',
@@ -37,13 +31,7 @@ const enPromoAdditionsArray = [
       prefix: ' ',
       text: '1inch Network',
       postfix: ' ',
-      link: 'http://1inch.io/?utm_source=shieldy_en&utm_medium=cpc&utm_campaign=powered'
-      },
-      {
-      prefix: '(',
-      text: 'iOS',
-      postfix: ')',
-      link: 'https://apps.apple.com/app/apple-store/id1546049391?pt=122481420&ct=shieldy_en&mt=8'
+      link: 'https://jn3rg.app.link/c10FJKdtnpb'
       }
     ],
     postlinks: '',
