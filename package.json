@@ -40,7 +40,7 @@
     "lodash": "^4.17.20",
     "module-alias": "^2.2.2",
     "mongoose": "^5.10.9",
-    "sharp": "^0.28.3",
+    "sharp": "^0.30.5",
     "stripe": "^8.175.0",
     "svg-captcha": "^1.4.0",
     "tall": "^3.1.0",
