@@ -14,8 +14,7 @@ export async function kickChatMember(chat: DocumentType<Chat>, user: User) {
     if (chat.banUsers) {
       await bot.telegram.kickChatMember(chat.id, user.id)
     } else {
-      // unban will kick user from the chat, but will not ban
-      await bot.telegram.unbanChatMember(chat.id, user.id)
+      await bot.telegram.unbanChatMember(chat.id, user.id) // kick without ban
     }
   } catch (err) {
     report(err, kickChatMember.name)
