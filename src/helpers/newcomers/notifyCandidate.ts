@@ -58,10 +58,8 @@ export async function notifyCandidate(
           $equation: equation ? (equation.question as string) : '',
           $seconds: `${chat.timeGiven}`,
         },
-        (process.env.PREMIUM !== 'true' &&
-          !promoExceptions.includes(ctx.chat.id)) ||
-          (process.env.PREMIUM === 'true' &&
-            ctx.dbchat.subscriptionStatus !== SubscriptionStatus.active),
+        process.env.PREMIUM !== 'true' &&
+          !promoExceptions.includes(ctx.chat.id),
         languageForPromo(chat)
       )
       if (image) {
@@ -92,9 +90,8 @@ export async function notifyCandidate(
         Math.random()
       )
       message.text =
-        promoExceptions.includes(ctx.chat.id) ||
-        (process.env.PREMIUM === 'true' &&
-          ctx.dbchat.subscriptionStatus === SubscriptionStatus.active)
+        (promoExceptions.includes(ctx.chat.id) ||
+        process.env.PREMIUM === 'true')
           ? `${getUsername(candidate)}\n\n${formattedText}`
           : `${getUsername(candidate)}\n\n${formattedText}\n${promoAddition}`
       try {
@@ -122,9 +119,8 @@ export async function notifyCandidate(
       )
       return ctx.replyWithPhoto({ source: image.png } as any, {
         caption:
-          promoExceptions.includes(ctx.chat.id) ||
-          (process.env.PREMIUM === 'true' &&
-            ctx.dbchat.subscriptionStatus === SubscriptionStatus.active)
+          (promoExceptions.includes(ctx.chat.id) ||
+          process.env.PREMIUM === 'true')
             ? `<a href="tg://user?id=${candidate.id}">${getUsername(
                 candidate
               )}</a>${warningMessage} (${chat.timeGiven} ${strings(
@@ -144,9 +140,8 @@ export async function notifyCandidate(
         Math.random()
       )
       return ctx.replyWithMarkdown(
-        promoExceptions.includes(ctx.chat.id) ||
-          (process.env.PREMIUM === 'true' &&
-            ctx.dbchat.subscriptionStatus === SubscriptionStatus.active)
+        (promoExceptions.includes(ctx.chat.id) ||
+          process.env.PREMIUM === 'true')
           ? `${
               chat.captchaType === CaptchaType.DIGITS
                 ? `(${equation.question}) `
