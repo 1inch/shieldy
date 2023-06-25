@@ -32,6 +32,6 @@ export async function modifyRestrictedUsers(
       )
     }
   } catch (err) {
-    report(err)
+    report(err, modifyRestrictedUsers.name)
   }
 }

@@ -26,7 +26,7 @@ export async function removeEntryMessages(chatId: number, fromId: number) {
     try {
       await message.remove()
     } catch (err) {
-      report(err)
+      report(err, 'removeEntryMessages')
     }
   })
 }

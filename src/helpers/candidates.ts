@@ -25,6 +25,6 @@ export async function modifyCandidates(
       )
     }
   } catch (err) {
-    report(err)
+    report(err, modifyCandidates.name)
   }
 }

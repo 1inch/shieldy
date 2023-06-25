@@ -6,6 +6,7 @@ import { report } from '@helpers/report'
 import { bot } from '@helpers/bot'
 import { isMaster, fork } from 'cluster'
 import { cpus } from 'os'
+import { startServer } from './server'
 
 // Generate cluster workers
 const workers = []
@@ -14,6 +15,9 @@ if (isMaster) {
   for (let i = 0; i < cpus().length; i += 1) {
     const worker = fork()
     workers.push(worker)
+  }
+  if (process.env.PREMIUM === 'true') {
+    startServer()
   }
 } else {
   const handler = require('./updateHandler')

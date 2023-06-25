@@ -27,6 +27,6 @@ export async function restrictChatMember(chat: DocumentType<Chat>, user: User) {
       })
     }
   } catch (err) {
-    report(err)
+    report(err, restrictChatMember.name)
   }
 }

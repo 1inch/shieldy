@@ -22,7 +22,7 @@ export async function attachChatMember(ctx: Context, next) {
   } catch (err) {
     // If anything above fails, just assume it's not an admin
     ctx.isAdministrator = false
-    report(err)
+    report(err, ctx.getChatMember.name)
   } finally {
     return next()
   }

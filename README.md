@@ -26,6 +26,14 @@ And you should be good to go! Feel free to fork and submit pull requests. Thanks
 
 - `TOKEN` — Telegram bot token
 - `MONGO`— URL of the mongo database
+- `ADMIN` — Telegram user ID of the bot administrator
+- `REPORT_CHAT_ID` — Telegram chat ID of the channel where the bot should report errors
+- `PREMIUM` — Whether the bot should be premium or not
+- `STRIPE_SECRET_KEY` — Stripe secret key
+- `STRIPE_SIGNING_SECRET` — Stripe signing secret
+- `MONTHLY_PRICE` — Monthly Stripe price id of the premium
+- `YEARLY_PRICE` — Yearly Stripe price id of the premium
+- `LIFETIME_PRICE` — Lifetime Stripe price id of the premium
 
 Also, please, consider looking at `.env.sample`.
 

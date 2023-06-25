@@ -85,7 +85,7 @@ export function setupCaptchaMessage(bot: Telegraf<Context>) {
         Extra.inReplyTo(ctx.message.message_id) as ExtraReplyMessage
       )
     } catch (err) {
-      report(err)
+      report(err, setupCaptchaMessage.name)
     } finally {
       next()
     }
