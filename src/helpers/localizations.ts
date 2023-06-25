@@ -21,7 +21,7 @@ export const localizations = {
     de:
       "Shieldy — is the best solution in Telegram to fight annoying spammers. It asks newcomers to execute a set action within a set period, otherwise it kicks them. It's this easy. Make sure @shieldy\\_bot is an admin at your chat and it's all done! You can also further setup the behaviour with the following commands:\n\n/help — zeigt diese Nachricht an\n/language — ändert die Sprache\n/captcha — ändert die Art des Captchas, welches genutzt wird\n/timeLimit — ändert das Zeitlimit für neue User\n/lock — lässt nur Admin Kommandos zu\n/restrict — schränkt neue User ein, in den ersten 24 Stunden nur Text Nachrichten zu senden (keine Links, Bilder etc.)\n/deleteEntryMessages — löscht die Beitrittsnachricht über neue User im Kanal z.B. \"User xxx ist beigetreten\"\n/greeting — begrüßt die User, welche den Test bestehen\n/trust — antworte mit diesem Kommando auf eine vorherige Nachricht, um diesen User nicht mehr zu überprüfen\n/ban — same as trust, but the opposite\n/strict — benutze dieses Kommando, wenn du keine Beitrittsnachricht für neue User bekommen möchtest, bis sie den Captcha Test bestanden haben\n/customCaptchaMessage — eigene Captcha Nachricht anlegen\n/deleteGreetingTime — hier kannst du einstellen, wann die Willkommens Nachricht von Shieldy gelöscht werden soll. `/deleteGreetingTime 100`, zurück setzen kannst du dies mit dem Wert \"0\"\n/banUsers — hier kannst du User bannen oder kicken\n/deleteEntryOnKick — hier kannst du die Beitrittsnachricht löschen, wenn ein User den Captcha Test nicht besteht\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\nNoch Fragen? Schau in unseren Support Kanal — @borodutch\\_support. Der Shieldy code ist open source und kann hier gefunden werden: https://github.com/backmeupplz/shieldy. Vielen Dank!\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.\n\nDonations are also welcome:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     tw:
-      "Shieldy — 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：\n\n/help — 顯示此內容\n/language — 切換語言\n/captcha — 更改使用的驗證類型\n/timeLimit — 更改給新進成員驗證的時間\n/lock — 使指令只能由管理員使用\n/restrict — 限制新進成員在前 24 小時內僅能發送純文字消息\n/deleteEntryMessages — 刪除有關新進成員加入的系統消息\n/greeting — 給通過驗證的用戶發歡迎詞\n/trust — 使用此指令回復任何您信任不想驗證的成員\n/ban — same as trust, but the opposite\n/strict — 限制新進成員在通過驗證前不能發任何消息\n/customCaptchaMessage — setup custom captcha message\n/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like `/deleteGreetingTime 100`, reset by setting it to 0\n/banUsers — whether to ban or to kick users\n/deleteEntryOnKick — whether to delete entry messages for users who failed captcha\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\n還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.\n\nDonations are also welcome:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
+      "Shieldy — 是 Telegram 中打擊惱人的垃圾信息發送者的最佳解決方案，它要求新進成員在一段時間內執行一個任務，否則就會踢它們，就這麼簡單。確保 @shieldy\\_bot 是群組的管理員，就可以了！您還可以使用以下指令進一步設定：\n\n/help — 顯示此內容\n/language — 切換語言\n/captcha — 更改使用的驗證類型\n/timeLimit — 更改給新進成員驗證的時間\n/lock — 使指令只能由管理員使用\n/restrict — 限制新進成員在前 24 小時內僅能發送純文字消息\n/deleteEntryMessages — 刪除有關新進成員加入的系統消息\n/greeting — 給通過驗證的用户發歡迎詞\n/trust — 使用此指令回復任何您信任不想驗證的成員\n/ban — same as trust, but the opposite\n/strict — 限制新進成員在通過驗證前不能發任何消息\n/customCaptchaMessage — setup custom captcha message\n/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like `/deleteGreetingTime 100`, reset by setting it to 0\n/banUsers — whether to ban or to kick users\n/deleteEntryOnKick — whether to delete entry messages for users who failed captcha\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\n還有問題嗎？查看支援管道 — @borodutch\\_support。 Shieldy 代碼是開源的，可以在[這裡](https://github.com/backmeupplz/shieldy)找到。謝謝！\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.\n\nDonations are also welcome:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     id:
       "Shieldy adalah solusi terbaik untuk melawan spammer di Telegram. Yaitu dengan menguji anggota baru dengan melakukan sesuatu dalam batas waktu tertentu, jika gagal maka anggota baru akan ditolak bergabung. Pastikan @shieldy\\_bot menjadi admin di grup anda. Tersedia pengaturan tambahan dengan perintah berikut:\n\n/help — menampilkan pesan bantuan ini\n/language — mengganti pilihan bahasa\n/captcha — mengubah jenis ujian yg dipakai\n/timeLimit — mengubah batasan waktu ujian\n/lock — batasi perintah hanya bisa dijalankan oleh admin saja\n/restrict — batasi anggota baru hanya boleh mengirim pesan teks dalam 24 jam pertama\n/deleteEntryMessages — hapus pesan sambutan pada anggota baru\n/greeting — pesan sambutan pada anggota baru yg lolos ujian\n/trust — balas dengan pesan ini ke anggota untuk meloloskannya tanpa ujian\n/ban — same as trust, but the opposite\n/strict — larang anggota baru mengirim pesan apa pun jika belum lolos ujian\n/customCaptchaMessage — setup custom captcha message\n/deleteGreetingTime — setup when to delete Shieldy's greeting in seconds like `/deleteGreetingTime 100`, reset by setting it to 0\n/banUsers — whether to ban or to kick users\n/deleteEntryOnKick — whether to delete entry messages for users who failed captcha\n/cas — whether to use Combot Anti-Spam or not\n/underAttack — toggle the mode to automatically kick all newcomers\n/noAttack — disables Shieldy\n/noChannelLinks — automatically delete messages that link to other telegram channels\n/viewConfig — view the current Shieldy configuration\n/buttonText — change the captcha button text in the form of `/buttonText I'm not a bot!`\n/allowInvitingBots — whether users can invite other bots or not\n/greetingButtons — setup buttons for greeting message\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\nMasih ada pertanyaan? Gabung saja dengan kanal @borodutch\\_support. Shieldy berkode terbuka dan tersedia di [sini](https://github.com/backmeupplz/shieldy). Terima kasih!\n\nAlso check out another one of my projects — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). It is a smart todo list app that uses cognitive psychology to trick your brain into finishing projects and showing results. It's free for 30 days with no strings attached, so go give it a shot if you want to improve your productivity. It helped me — it can help you as well.\n\nDonations are also welcome:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     ko:
@@ -45,7 +45,7 @@ export const localizations = {
     no:
       "Shieldy — er den beste løsningen på Telegram for å holde tilbake irriterende falske kontoer. Den spørr nykommere om å utføre et sett med handlinger innenfor er viss tidsperiode, hvis ikke blir brukeren kastet ut. Så enkelt er det. Gjør @shieldy\\_bot til admin i chatten din og alt er klart! Du kan videre endre oppførselen med de følgende kommandoene:\n\n/help — viser denne meldingen\n/language — bytter språk\n/captcha — endrer hvilken type captcha som blir brukt\n/timeLimit — endrer hvor mye tid som blir gitt til nykommere\n/lock — gjør kommandoer tilgjengelig bare for administratorer\n/restrict — begrenser nykommere til å bare kunne sende tekstmeldinger de første 24 timene\n/deleteEntryMessages — sletter meldinger om brukerens adkomst\n/greeting — sender en velkomst når en bruker består testen\n/trust — svar med denne kommandoen til en melding sendt av en bruker du ikke vil skal sjekkes\n/ban — samme som 'trust', men det motsatte\n/strict — bruk hvis du bare vil motta captcha nykommernes meldinger untatt captcha løsninger før de har bestått testen\n/customCaptchaMessage — sett opp egen captcha melding\n/deleteGreetingTime — angi i sekunder når Shieldys hilsner skal slettes, f.eks `/deleteGreetingTime 100`, tilbakestill ved å sette til 0\n/banUsers — om brukerne skal utestenges eller sparkes\n/deleteEntryOnKick — om inngangsmeldingene til brukere som feilet testen skal slettes\n/cas — om Combot Anti-Spam skal brukes eller ikke\n/underAttack — slå av eller på modusen der alle nykommere blir automatisk sparket\n/noAttack — deaktiverer Shieldy\n/noChannelLinks — sletter automatisk meldinger som lenker til andre Telegram-kanaler\n/viewConfig — vis nåværende Shieldy-konfigurasjon\n/buttonText — endre teksten på captcha-knappen slik som dette; `/buttonText I'm not a bot!`\n/allowInvitingBots — om brukere kan invitere andre botter eller ikke\n/greetingButtons — sett opp knapper for hilse-meldinger\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\nHar du fortsatt spørsmål? Sjekk ut vår støtte-kanal — @borodutch\\_support. Shieldys kode er åpen og finnes [her](https://github.com/backmeupplz/shieldy). Takk!\n\nSjekk også ut en av de andre prosjektene mine — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Det er en smart huskeliste som bruker kognitiv psykologi til å lure hjernen din til å utføre prosjekter og vise resultater. Den er gratis i 30 dager, så prøv den ut hvis du vil styrke produktiviteten din. Den hjalp meg — kanskje den kan hjelpe deg også.\n\nDonations are also welcome:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     yue:
-      "Shieldy — 係 Telegram 嘅最佳垃圾訊息應對方案。佢要求新來者限時完成一個任務，否則會畀踢出，就係咁簡單。確保將 @shieldy\\_bot 設成你個群組嘅管理員，噉就得喇！你都可以用呢啲命令嚟進一步設定佢嘅行為：\n\n/help — 顯示多次呢篇介紹\n/language — 轉用其它語言\n/captcha — 轉用其它驗證碼類型\n/timeLimit — 設定新來者嘅回答時限\n/lock — 限定管理員先可以使用命令\n/restrict — 限制新來者喺 24 小時內凈畀發文字\n/deleteEntryMessages — 自動刪除入羣訊息\n/greeting — 同通過驗證嘅新來者打招呼\n/trust — 如果你信任一個新來者，可以用呢條命令回覆佢\n/ban — 同 /trust 相反\n/strict — 限制新來者喺通過驗證之前唔可以發任何嘢\n/customCaptchaMessage — 修改驗證提醒\n/deleteGreetingTime — 設定幾多秒之後自動刪除\b打招呼訊息，譬如 `/deleteGreetingTime 100`, 設爲 `0` 可以停用呢項功能\n/banUsers — 封禁或者刪人\n/deleteEntryOnKick — 自動刪除驗證失敗用戶嘅入羣訊息\n/cas — 啓用或關閉 Combot 提供嘅防滋擾功能\n/underAttack — 轉用緊急模式，自動踢除所有新來者\n/noAttack — 停用 Shieldy 所有功能\n/noChannelLinks — 自動刪除連結到其它 Telegram 頻道嘅訊息\n/viewConfig — 檢查目前設定下 Shieldy 會做啲乜\n/buttonText — 修改「驗證掣」嘅提示文字，譬如 `/buttonText 我唔係機械人！`\n/allowInvitingBots — 允許或禁止成員將任何機械人加入群組\n/greetingButtons — 爲打招呼嘅訊息加入連結至外部嘅掣\n/skipOldUsers — don't show captcha to Telegram accounts with ID less than 1000000000\n/skipVerifiedUsers — don't show captcha to users who have ever passed captcha in any chat\n/setConfig — setup Shieldy configuration in one message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\n仲有其它嘢唔明？歡迎去支援中心 — @borodutch\\_support 睇下。Shieldy 係開放原始碼嘅項目，公開嘅程式碼可以[喺呢度睇](https://github.com/backmeupplz/shieldy)。多謝捧場！\n\n可以再睇埋我另一個項目 — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243)、[Android](https://play.google.com/store/apps/details?id=com.todorant))。佢係一款好叻嘅「待辦事項清單 (todo list)」app，利用認知心理學嘅手段，誘使你個大腦諗住要完成一個項目，同埋要攞得出成果。30日內免費試用，冇任何額外條款，快啲嚟試下提高你嘅工作效率啦！佢曾經幫咗我，而家亦可以幫到你。\n\n歡迎你資助我：\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
+      "Shieldy — 係應付 Telegram 垃圾訊息帳户嘅最佳方案。佢要求所有新成員限時完成一個任務，否則會畀人踢走，就係咁簡單。只要確保 @shieldy\\_bot 係群組管理員就搞掂㗎喇！你亦可以用下面嘅指令嚟做進一步嘅設定：\n\n/help — 顯示多次呢篇介紹\n/language — 轉用其它語言\n/captcha — 轉用其它驗證類型\n/timeLimit — 設定新成員驗證嘅回答時限\n/lock — 限定管理員先可以發指令\n/restrict — 限制新成員喺一開始嘅指定時間內淨係畀發文字，預設係 24 小時（可以用 `/restrictTime` 改）\n/deleteEntryMessages — 自動刪除入羣系統訊息\n/greeting — 同通過驗證嘅新成員打招呼\n/trust — 用呢條指令回覆新成員，佢就唔使驗證\n/ban — 用呢條指令回覆新成員，佢就會畀人封禁或踢走\n/strict — 限制新成員喺通過驗證之前唔可以發言\n/customCaptchaMessage — 設定驗證問題\n/deleteGreetingTime — 設定幾多秒之後自動刪除打招呼訊息，譬如 `/deleteGreetingTime 100`，設為 `0` 可以停用呢項功能\n/banUsers — 設定要封禁定係踢人\n/deleteEntryOnKick — 自動刪除驗證失敗用户嘅入羣系統訊息\n/cas — 啓用或停用 Combot 提供嘅防滋擾功能\n/underAttack — 轉用緊急模式，自動踢走所有新成員\n/noAttack — 停用 Shieldy 所有功能\n/noChannelLinks — 自動刪除連結去其他 Telegram 頻道嘅訊息\n/viewConfig — 列出 Shieldy 目前嘅設定\n/buttonText — 設定驗證掣嘅提示文字，譬如 `/buttonText 我唔係機械人！`\n/allowInvitingBots — 允許或禁止成員將任何機械人加入群組\n/greetingButtons — 喺打招呼訊息下面加入連結至外部嘅掣\n/skipOldUsers — 唔驗證 Telegram ID 少過 10 個位嘅古老帳户\n/skipVerifiedUsers — 如果新成員喺其他羣驗證過，就唔使再驗證\n/setConfig — 一次過改 Shieldy 嘅設定\n/banForFastRepliesToPosts — 如果用户喺 5 秒鐘內回覆頻道嘅新帖文，就封禁或踢走佢哋\n/restrictTime — 設定新成員一開始淨係畀發文字嘅時間（小時），譬如 `/restrictTime 24`，設為 `0` 可以重設設定（參見 /restrict 指令）\n/banNewTelegramUsers — 直接封禁或踢走 Telegram ID 有至少 10 個位嘅新穎帳户\n\n仲有其它嘢唔明？歡迎去支援中心 — @borodutch\\_support 睇下。Shieldy 係開放原始碼嘅項目，公開嘅程式碼可以[喺呢度睇](https://github.com/backmeupplz/shieldy)。多謝捧場！\n\n可以睇埋我另一個項目 — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243)、[Android](https://play.google.com/store/apps/details?id=com.todorant))。佢係一款好叻嘅待辦事項清單 app，利用認知心理學嘅手段，誘使你個大腦諗住要完成一個項目，同埋要攞得出成果。30 日內免費試用，冇任何額外條款，快啲嚟試下提高你嘅工作效率啦！佢曾經幫過我，而家係時候輪到佢嚟幫你喇。\n\n歡迎你嚟資助我：\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     hu:
       "Shieldy — a legjobb megoldás a bosszantó spammerek ellen a Telegramban. Arra kéri az újoncokat, hogy hajtsanak végre egy utasítást a megadott időn belül, egyébként kirúgja őket. Ilyen egyszerű.Gondoskodj róla, hogy a @shieldy\\_bot is adminisztrátori jogokkal rendelkezik a csatornádon és kész! A viselkedését tovább finomíthatod az alábbi parancsokkal:\n\n/help — ennek az üzenetnek a mutatása\n/language — nyelvek közötti váltás\n/captcha — a captcha típusának váltása\n/timeLimit — a feladatra adott idő megváltozatása\n/lock — a parancsok csak az adminoknak elérhető\n/restrict — az újoncok nem küldhetnek a hagyományos szöveges üzeneten kívül mást az első 24 órában\n/deleteEntryMessages — a belépési üzenetek törlése\n/greeting — a teszten átmenők üdvözlése\n/trust — felhasználó által küldött üzenetre ezzel válaszolva nem kell átmennie a teszten\n/ban — ugyanaz, mint a trust, csak éppen bannoljuk\n/strict — ha nem akarsz addig az újonctól üzenetet látni, amíg meg nem oldja a captcha-t\n/customCaptchaMessage — captcha üzenet beállítása\n/deleteGreetingTime — mennyi idő múlva törölje a Shieldy's az üdvözlő üzenetet (műsodpercben) pl: `/deleteGreetingTime 100`, 0 állítva reset\n/banUsers — bannolja vagy csak kirúgja a felhasználókat\n/deleteEntryOnKick — törölje-e a belépési üzenetet, ha az újonc elbukik a teszten\n/cas — hasznűljuk-e a Combot Anti-Spam megoldást\n/underAttack — ki be kapcsolhatjuk az újoncok automatikus kirugását\n/noAttack — a Shieldy kikapcsolása\n/noChannelLinks — automatikusan törölje a más telegram csatornára mutató hivatkozásokat\n/viewConfig — a jelenlegi Shieldy konfiguráció megtekintése\n/buttonText — a captcha gomb feliratának megváltoztatása. az alapértelmezett: `/buttonText Nem vagyok robot!`\n/allowInvitingBots — a felhasználó meghívhat-e botot vagy sem\n/greetingButtons — saz üdvözlő üzenet gombjainak beállítása\n/skipOldUsers — nem mutatja a captcha-t azoknak a Telegram felhasználóknak, akiknek az ID-ja alacsonyabb, mint 1000000000\n/skipVerifiedUsers — nem mutatja a captcha-t azoknak a felhasználóknak, akik bármelyik chat-ben a Telegramon belül átmentek a Shieldy tesztjén\n/setConfig — A Shieldy konfigurálása egy üzenettel\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\nMég van kérdésed? Kukkants rá a támogató csatornára — @borodutch\\_support. A Shieldy kódja nyílt forráskódú és megtalálható [itt](https://github.com/backmeupplz/shieldy). Köszönöm!\n\nKukkants rá egy másik projektemre is — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Ez egy okos todo lista alkalmazás, amely kognitív pszihológiára alapozva veri át az agyadat, hogy befejezd a projektjeidet és eredményt tudj felmutatni. Ingyenes 30 napig minden következmény nélkül, szóval adj neki egy esélyt, ha szeretnéd növelni a hatékonyságodat. Segített nekem - neked is segíthet.\n\nAdományokat szívesen veszünk:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     fr:
@@ -77,7 +77,7 @@ export const localizations = {
     ro: 'Te rog, salectează limba.',
     ca: "Per favor, tria l'idioma",
     he: 'אנא בחר שפה.',
-    yue: '揀埋一種語言。',
+    yue: '請揀一種語言。',
     hu: 'Kérlek, válassz egy nyelvet!',
     fi: 'Ole hyvä ja valitse kieli.',
     bg: 'Моля, изберете език.',
@@ -106,7 +106,7 @@ export const localizations = {
     ro: 'Perfect, acum vorbesc Română.',
     ca: 'Fantàstic! ara parlo català.',
     he: 'נהדר! אני דובר עברית כעת.',
-    yue: '正，我而家開始講粵語。',
+    yue: '好。由而家開始，我會同你講粵語。',
     hu: 'Nagyszerű, mostantól magyarul beszélek.',
     fi: 'Selvä! Valitsit kieleksi suomen.',
     bg: 'Чудесно, сега говоря Български',
@@ -136,7 +136,7 @@ export const localizations = {
     ro: 'Doar persoana ce a inițiat meniul poate selecta',
     ca: 'Només pot triar les opcions la persona que ha posat en marxa el menú.',
     he: 'רק מי שפתח את התפריט יכול לבחור את האפשרויות.',
-    yue: '最初啓動選單嗰個人先有得揀。',
+    yue: '一開始發指令嗰個人先揀得。',
     hu: 'Csak az a személy választhat, aki megnyitotta a menüt.',
     it: 'Solo chi ha invocato il comando può selezionarlo.',
     bg:
@@ -188,7 +188,7 @@ export const localizations = {
     no:
       'Vennligst velg testtypen for nykommere:\n\n• Enkel — botten vil spørre brukeren om å sende melding med hva som helst i chatten\n• Knapp — botten vil spørre brukeren om å trykke på en knapp\n• Tall — botten vil spørre brukeren om å løse et enkelt matteproblem\n• Bilde — botten vil spørre brukeren om å gjenkjenne bokstaver, tall og symboler på et bilde',
     yue:
-      '揀選如何驗證新來者：\n\n• 簡易： — 要求向羣組發嘢\n• 撳掣 — 要求撳一粒掣\n• 算術 — 要求做一條計數題\n• 認圖 — 要求認出一幅圖片入面嘅所有文字',
+      '揀選點驗證新成員：\n\n• 簡易 — 要求向羣組發言\n• 撳掣 — 要求撳一粒掣\n• 計數 — 要求做一條簡單嘅加數題\n• 認圖 — 要求認出一幅圖入面嘅文字',
     hu:
       'Kérlek, válaszd ki az újoncok tesztjének a típusát:\n\n• Egyszerű — a bot annyit kér, hogy gépeljen be valamit a chat-be\n• Gomb — egy gomb megnyomására kéri\n• Számok — a bot egy egyszerű matematikai művelet elvégzésére kéri\n• Kép — a bot arra kéri, hogy ismerjen fel egy karaktert a képen',
     it:
@@ -248,7 +248,7 @@ export const localizations = {
     ro: 'Cifre',
     ca: 'Dígits',
     he: 'ספרות',
-    yue: '算術',
+    yue: '計數',
     hu: 'Számok',
     fi: 'Numerot',
     it: 'Numeri',
@@ -324,7 +324,7 @@ export const localizations = {
     ro: 'Perfect, o să utilizez acest tip de test.',
     ca: 'Perfecte, faré servir aquesta prova.',
     he: 'נהדר! אני אשתמש בסוג הזה של מבחן.',
-    yue: '好，我由而家開始用呢種新嘅驗證方法。',
+    yue: '好。由而家開始，我會用呢種驗證方法。',
     hu: 'Nagyszerű, ezt a típust fogom használni a teszteléshez.',
     fi: 'Selvä! Käytän valitsemaasi testiä jatkossa.',
     bg: 'Чудесно, сега ще използвам този тип тест.',
@@ -372,7 +372,8 @@ export const localizations = {
       'אנא בחר את מספר השניות שיהיו למצטרפים חדשים כדי לשלים את המבחן לפני שיעופו.',
     no:
       'Vennligst velg hvor mange sekunder nykommere skal få på å fullføre testen før brukeren blir sparket.',
-    yue: '規定新來者嘅驗證時限。',
+    yue:
+      '請設定新成員驗證嘅回答時限。',
     hu:
       'Kérlek, add meg, hány másodperc álljon rendelkezésre az újoncnak a feladat megoldására, mielőtt kirúgnánk!',
     fi:
@@ -404,7 +405,7 @@ export const localizations = {
     ro: 'Super, o să folosesc această limită de timp',
     ca: 'Molt bé doncs, faré servir aquest límit de temps',
     he: 'יופי! אני אשתמש במגבלת הזמן הזו.',
-    yue: '好，我之後會按照呢個時限。',
+    yue: '好。由而家開始，我會跟呢個時限。',
     hu: 'Nagyszerű, ezt az idő intervallumot fogom használni.',
     fi: 'Ok, antamasi sekuntimäärä on asetettu aikarajaksi.',
     bg: 'Чудесно, вече ще използвам този времеви лимит.',
@@ -465,7 +466,7 @@ export const localizations = {
     ca:
       "D'acord, a partir d'ara només faré cas a les ordres dels administradors.",
     he: 'מעולה! מעכשיו אני אגיב רק לפקודות מהמנהלים.',
-    yue: '我而家開始淨係會回應管理員嘅命令。',
+    yue: '好。由而家開始，我淨係會回應管理員發嘅指令。',
     hu: 'Nagyszerű! Mostantól csak az adminok parancsara reagálok!',
     bg: 'Чудесно! Вече ще приемам команди само от администраторите.',
   },
@@ -493,7 +494,7 @@ export const localizations = {
     ro: 'Super! Acum o să reacționez la comenzile trimise de căre oricine. ',
     ca: "D'acord, a partir d'ara faré cas a les ordres de tothom.",
     he: 'מעולה! מעכשיו אני אגיב לפקודות מכל אחד.',
-    yue: '我而家開始會回應所有人嘅命令。',
+    yue: '好。由而家開始，我會回應所有人發嘅指令。',
     hu: 'Nagyszerű! Mostantól bárki parancsara reagálok!',
     bg: 'Чудесно! Вече, ще приемам команди от всички юзери в групата.',
     es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
@@ -535,7 +536,7 @@ export const localizations = {
     br:
       'Boa! Agora os novatos não enviarão nada além de soluções do captcha até que passem pelo captcha.',
     he: 'מעולה! מצטרפים לא ישלחו דבר עד שלא יפתרו את ההמבחן.',
-    yue: '由而家開始，新來者喺通過驗證之前唔可以發任何嘢。',
+    yue: '好。由而家開始，新成員喺通過驗證之前唔可以發言。',
     hu:
       'Nagyszerű! Mostantól az újonc nem küldhet más üzenetet be addíg, amíg a captcha-t meg nem oldja.',
     bg:
@@ -577,7 +578,7 @@ export const localizations = {
     br:
       'Boa! Agora os novatos poderão enviar texto antes de passar pelo captcha.',
     he: 'מעולה! מצטרפים יוכלו לשלוח הודעות לפני שענו על המבחן.',
-    yue: '由而家開始，新來者喺 24 小時內只畀發文字內容。',
+    yue: '好。由而家開始，新成員喺通過驗證之前可以發言。',
     hu:
       'Nagyszerű! Mostantól az újonc beküldhet más üzenetet is, mielőtt a captcha-t megoldaná.',
     bg:
@@ -631,7 +632,7 @@ export const localizations = {
       ", veuillez répondre dans le délai, sinon vous serez directement prélevé à la source. Merci d'avance !",
     ja:
       ', 指定された時間内に何かメッセージを送ってください。そうしないと、退出させられます。ありがとうございます！',
-    yue: ', 唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
+    yue: '，唔該喺規定時間內向羣組內發任意內容，否則你會畀人踢走。',
     bg:
       ', Mоля, представете се в групата, в рамките на определеното време, в противен случай ще бъдете изритани. Благодаря ви!',
   },
@@ -676,7 +677,7 @@ export const localizations = {
       ", per favor, envia dins aquest grup, la solució de l'operaió aritmètica proposada, abans de que s'acabi el temps establert. Si no ho fas, seràs expulsat/-ada de forma automàtica. Gràcies.",
     he:
       ', נא לפתור את פעולת החשבון הפשוטה במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
-    yue: '唔該喺規定時間內寫出計數題嘅答案，否則你會畀踢走。',
+    yue: '，唔該喺規定時間內發計數題嘅答案，否則你會畀人踢走。',
     it:
       ", prego, invia la soluzione dell'espressione matematica in questo gruppo entro il tempo specificato, altrimenti verrai kickato. Grazie!",
     hu:
@@ -732,7 +733,7 @@ export const localizations = {
       ', kérlek,nyomd meg az alábbi gombot, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
       ', ole hyvä ja klikkaa painiketta alla ennen annetun ajan loppumista, jotta et tule poistetuksi ryhmästä. Kiitos!',
-    yue: '，唔該喺規定時限內撳下面嘅掣，否則你會畀踢走。',
+    yue: '，唔該喺規定時間內撳下面個掣，否則你會畀人踢走。',
     bg:
       ', Mоля, натиснете бутона по-долу в рамките на определеното време, в противен случай ще бъдете изхвърлени. Благодаря ви!',
     es:
@@ -759,7 +760,7 @@ export const localizations = {
       ', אנא לשלוח את התווים המוצגים במסגרת הזמן המוגדרת בקבוצה, אחרת תורחק. תודה רבה!',
     no:
       ', vennligst send tegnene som vises på bildet innen den spesifiserte tidsperioden, hvis ikke blir du sparket. Takk!',
-    yue: '，唔該喺規定時限內認出圖片入邊嘅所有文字並發到羣組，否則你會畀踢走。',
+    yue: '，唔該喺規定時間內認出幅圖入面嘅所有文字並發到呢個羣組，否則你會畀人踢走。',
     hu:
       ', kérlek, írd be ide az alábbi karaktereket, mielőtt lejárna a megadott idő, mert különben ki kell, hogy rúgjalak. Köszönöm!',
     fi:
@@ -830,7 +831,7 @@ export const localizations = {
     ca:
       'Només allò que no és un robot, és el candidat ideal per a pitjar el botó.',
     he: 'רק מועמדים שאינם בוטים יכולים ללחוץ על הכפתור הזה.',
-    yue: '機械人賬戶唔畀撳掣。',
+    yue: '做緊驗證嗰個人先撳得呢個掣。',
     hu: 'Csak a robot ellenőrzési kihívás jelöltje kattinthat a gombra.',
     bg: 'Само кандидатът, който не е бот, може да натисне този бутон.',
   },
@@ -872,7 +873,7 @@ export const localizations = {
     ca:
       "Entesos, a partir d'ara, tots els nouvinguts, només podran enviar missatges de text en aquest grup.",
     he: 'מעולה! כעת כל המצטרפים יוכלו לשלוח רק הודעות טקסט בשיחוח הזה.',
-    yue: '由而家開始，新來者只可以喺羣入面發文字內容',
+    yue: '好。由而家開始，新成員淨係可以喺羣入面發文字內容。',
     hu:
       'Nagyszerű! Mostantól minden újonc csak szöveges üzenetet küldhet erre a csatornára.',
     bg:
@@ -915,7 +916,7 @@ export const localizations = {
     ca:
       "Entesos, a partir d'ara, tots els nouvinguts podran enviar qualsevol tipus de missatge en aquest grup.",
     he: 'מעולה! כעת כל המצטרפים יוכלו לשלוח הודעות עם כל תוכן שהוא בשיחוח הזה.',
-    yue: '正！由而家開始，新來者可以喺羣度發任何類型嘅內容。',
+    yue: '好。由而家開始，新成員可以喺羣度發任何類型嘅內容。',
     hu:
       'Nagyszerű! Mostantól minden újonc bármilyen üzenetet küldhet erre a csatornára.',
     bg:
@@ -945,7 +946,7 @@ export const localizations = {
     ca:
       "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, seran esborrats.",
     he: 'מעולה! כעת הודעות כניסה ימחקו.',
-    yue: '由而家開始，所有新來者嘅入羣提醒都會被刪除。',
+    yue: '好。由而家開始，我會幫你刪走所有新成員嘅入羣系統訊息。',
     hu: 'Nagyszerű! Mostantól a belépési üzeneteket töröljük.',
     bg: 'Страхотно! Сега съобщенията за влизане ще бъдат изтрити.',
   },
@@ -973,7 +974,7 @@ export const localizations = {
     ca:
       "Molt bé, a partir d'ara els missatges, que auncien l'entrada de nous usuaris al grup, no seran esborrats.",
     he: 'מעולה! כעת הודעות כניסה לא ימחקו.',
-    yue: '由而家開始，所有新來者嘅入羣提醒將會保留。',
+    yue: '好。由而家開始，我會保留所有新成員嘅入羣系統訊息。',
     hu: 'Nagyszerű! Mostantól a belépési üzeneteket nem töröljük.',
     bg: 'Чудесно! Сега съобщенията за влизане няма да бъдат изтривани.',
   },
@@ -1021,7 +1022,7 @@ export const localizations = {
     br:
       'Boa! Agora os novatos que passarem no teste serão congratulados. Por favor, responda essa mensagem com a o texto de congratulações que você gostaria de usar.',
     yue:
-      '好。由而家開始，機械人會同通過驗證嘅新來者打招呼。回覆呢條訊息，話我知你想我點同人打招呼（可以包含 $title, $fullname, $username）。',
+      '好。由而家開始，我會同通過驗證嘅新成員打招呼。回覆呢條訊息，話我知你想我點同人打招呼（可以包含 $title, $fullname, $username）。',
     hu:
       'Nagyszerű! Az újoncokat, akik átmentek a teszten, az üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott üzenettel (használhatod az alábbiakat $title, $fullname and $username).',
     fr:
@@ -1077,7 +1078,7 @@ export const localizations = {
     no:
       'Supert! Nykommere som har bestått testen vil få en velkomst. Vennligst svar på denne meldingen med teksten du vil bruke som velkomst (du kan bruke $title og $username). Den nåværende meldingen følger.',
     yue:
-      '好。由而家開始，機械人會同通過測試嘅新來者打招呼。回覆呢條訊息，話我知你想我點同人打招呼（可以包含 $title, $fullname, $username）。目前設定嘅打招呼訊息如下：',
+      '好。由而家開始，我會同通過驗證嘅新成員打招呼。回覆呢條訊息，話我知你想我點同人打招呼（可以包含 $title, $fullname, $username）。目前設定嘅打招呼訊息如下：',
     hu:
       'Nagyszerű! Az újoncokat, akik átmentek a teszten, az üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott üzenettel (használhatod az alábbiakat $title, $fullname and $username).',
     bg:
@@ -1112,7 +1113,7 @@ export const localizations = {
     ca:
       "D'acord, a partir d'ara els nouvinguts que hagin passat la prova no rebran cap missatge de benvinguda.",
     he: 'מעולה! כעת מצטרפים שעברו את המבחן לא יבורכו.',
-    yue: '好。由而家開始，新來者唔會收到打招呼嘅訊息。',
+    yue: '好。由而家開始，通過驗證嘅新成員唔會收到打招呼訊息。',
     hu: 'Nagyszerű! Az újoncokat, akik átmentek a teszten, nem üdvözöljük.',
     fi: 'Selvä! Nyt testin läpäisseitä tulokkaita ei tervehditä.',
     bg:
@@ -1177,7 +1178,7 @@ export const localizations = {
     no:
       'Supert! Nå vil nykommere få en egendefinert beskjed som forklarer testen. Svar på denne meldingen med captcha-teksten du vil bruke (du kan bruke $title, $username, $equation, $fullname og $seconds).',
     yue:
-      '好。由而家開始，新來者會收到你新寫嘅驗證提醒。回覆呢條訊息，話我知你想我點提醒新來者去做驗證測試（可以包含 $title, $username, $equation, $fullname, $seconds）。',
+      '好。回覆呢條訊息，話我知由而家開始，你想新成員見到嘅驗證問題（可以包含 $title, $username, $equation, $fullname, $seconds）。',
     hu:
       'Nagyszerű! Az újoncokat, akik belépnek a csatornára, üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott captcha üzenettel (használhatod az alábbiakat $title, $username, $equation, $fullname és $seconds).',
     fr:
@@ -1217,7 +1218,7 @@ export const localizations = {
     no:
       'Supert! Nå vil nykommere få en egendefinert beskjed som forklarer testen. Svar på denne meldingen med captcha-teksten du vil bruke (du kan bruke $title, $username, $equation, $fullname og $seconds). Den nåværende meldingen følger.',
     yue:
-      '好。由而家開始，新來者會收到你新寫嘅驗證提醒。回覆呢條訊息，話我知你想我點提醒新來者去做驗證測試（可以包含 $title, $username, $equation, $fullname, $seconds）。目前設定嘅驗證提醒如下：',
+      '好。回覆呢條訊息，話我知由而家開始，你想新成員見到嘅驗證問題（可以包含 $title, $username, $equation, $fullname, $seconds）。目前設定嘅驗證問題如下：',
     hu:
       'Nagyszerű! Az újoncokat, akik belépnek a csatornára, üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott captcha üzenettel (használhatod az alábbiakat $title, $username, $equation, $fullname és $seconds).',
     fr:
@@ -1246,7 +1247,7 @@ export const localizations = {
     br: 'Boa! Agora os novatos verão a mensagem padrão do captcha',
     he: 'מעולה! מעכשיו מצטרפים יראו את הודעת ברירת המחדל של המבחן.',
     no: 'Supert! Nå vil nykommere se den vanlige captcha-meldingen',
-    yue: '好。由而家開始，新來者會收到預設嘅驗證提醒',
+    yue: '好。由而家開始，新成員會見到預設嘅驗證問題。',
     hu:
       'Nagyszerű! Az újoncokat, akik belépnek a csatornára, az alap captcha üzenetet fogják látni.',
     fr:
@@ -1301,7 +1302,7 @@ export const localizations = {
     br: 'Boa! Os usuários serão banidos se não passarem pelo captcha.',
     he: 'מעולה! משתמשים ינודו אם הם לא יעברו את המבחן.',
     no: 'Supert! Brukere vil bli utestengt om de ikke består testen.',
-    yue: '好。由而家開始，未通過驗證嘅新來者會畀踢走。',
+    yue: '好。由而家開始，驗證失敗嘅新成員會畀我封禁而唔係踢走。',
     hu: 'Csodás! A usert bannolni fogjuk, ha nem megy át a captcha-n.',
     fr: "Parfait! Les utilisateurs seront bannis s'ils ne passent pas captcha.",
     bg: 'Супер! Потребителите ще бъдат блокирани, ако не преминат captcha.',
@@ -1326,7 +1327,7 @@ export const localizations = {
     br: 'Boa! Os usuários serão kickados se não passarem pelo captcha.',
     he: 'מעולה! משתמשים יורחקו אם הם לא יעברו את המבחן.',
     no: 'Supert! Brukere vil bli sparket om de ikke består testen.',
-    yue: '好。由而家開始，未通過驗證嘅新來者會被自動踢除。',
+    yue: '好。由而家開始，驗證失敗嘅新成員會畀我踢走而唔係封禁。',
     hu: 'Csodás! A usert kivágjuk, ha nem megy át a captcha-n.',
     fr:
       "Parfait! Les utilisateurs seront expulsés s'ils ne réussissent pas le captcha.",
@@ -1360,7 +1361,7 @@ export const localizations = {
     he: 'מעולה! Shieldy ימחק הודעות כניסה של משתמשים שנכשלו במבחן.',
     no:
       'Supert! Shieldy vil fjerne inngangsmeldingene til brukere som ikke består captcha-testen.',
-    yue: '好。由而家開始，Shieldy 會自動刪除驗證失敗用戶嘅入羣訊息。',
+    yue: '好。由而家開始，我會幫你刪走驗證失敗用户嘅入羣系統訊息。',
     hu:
       'Nagyszerű! A Shieldy eltávolítja a belépési üzenetet, ha a felhasználó elbukik a teszten.',
     fr:
@@ -1395,7 +1396,7 @@ export const localizations = {
     he: 'מעולה! Shieldy לא ימחק הודעות כניסה של מתמשים שנכשלנו במבחן.',
     no:
       'Supert! Shieldy vil ikke fjerne inngangsmeldingene til brukere som ikke består captcha-testen.',
-    yue: '好。由而家開始，Shieldy 唔會自動刪除驗證失敗用戶嘅入羣訊息。',
+    yue: '好。由而家開始，我會保留驗證失敗用户嘅入羣系統訊息。',
     hu:
       'Nagyszerű! A Shieldy nem távolítja el a belépési üzenetet, ha a felhasználó elbukik a teszten.',
     fr:
@@ -1416,7 +1417,7 @@ export const localizations = {
     br: 'Boa! Shieldy agora usará o Combot Anti-Spam.',
     he: 'מעולה! Shieldy מעכשיו ישתמש ב-Combot Anti-Spam.',
     no: 'Supert! Shieldy vil nå bruke Combot Anti-Spam.',
-    yue: '好。由而家開始，Shieldy 會使用 Combot 提供嘅防滋擾功能。',
+    yue: '好。由而家開始，我會用 Combot 提供嘅防滋擾功能。',
     hu: 'Nagyszerű! A Shieldy ezentúl használja a Combot Anti-Spam megoldást.',
     fr: 'Super! Shieldy va maintenant utiliser Combot Anti-Spam.',
     bg: 'Страхотно! Shieldy вече ще използва Combot Anti-Spam. ',
@@ -1434,7 +1435,7 @@ export const localizations = {
     br: 'Boa! Shieldy não usará o Combot Anti-Spam agora.',
     he: 'מעולה! Shieldy מעכשיו לא ישתמש ב-Combot Anti-Spam.',
     no: 'Supert! Shieldy vil nå ikke bruke Combot Anti-Spam.',
-    yue: '好。由而家開始，Shieldy 會停用 Combot 提供嘅防滋擾功能。',
+    yue: '好。由而家開始，我唔會再用 Combot 提供嘅防滋擾功能。',
     hu:
       'Nagyszerű! A Shieldy ezentúl nemhasználja a Combot Anti-Spam megoldást.',
     fr: "Ok! Shieldy n'utilisera pas Combot Anti-Spam.",
@@ -1458,7 +1459,7 @@ export const localizations = {
     no:
       'Supert! Shieldy vil nå sparke alle som blir med i chatten. Ikke glem å slå av denne modusen når angrepet er over med /underAttack.',
     yue:
-      '由而家開始，Shieldy 會踢除所有嘗試入羣嘅人。等滋擾攻擊結束後，記得用 /underAttack 停用當前模式。',
+      '好。由而家開始，我會踢走所有嘗試入羣嘅人。等滋擾攻擊結束之後，記得用 /underAttack 停用呢個模式。',
     hu:
       'Nagyszerű! A Shieldy mostantól minden új csatlakozót kivág a csatornáról. Ne felejtsd el kikapcsolni ezt a beállítást, amikor a támadás véget ár a /underAttack paranccsal.',
     fr:
@@ -1478,7 +1479,7 @@ export const localizations = {
     br: 'Boa! Shieldy não vai kickar todos que entram neste bate-papo.',
     he: 'מעולה! Shieldy לא ירחיק את כל מי שנכנס לשיחוח.',
     no: 'Supert! Shieldy vil ikke sparke alle som blir med i chatten.',
-    yue: '好。Shieldy 而家唔會再踢除所有嘗試入 group 嘅人。',
+    yue: '好。Shieldy 而家唔會再踢走所有嘗試入羣嘅人。',
     hu:
       'Nagyszerű! A Shieldy mostantól nem vágja ki az új csatlakozókat a csatornáról.',
     fr: "Ok! Shieldy n'expulsera plus tous ceux qui entrent dans ce groupe.",
@@ -1497,7 +1498,7 @@ export const localizations = {
     no:
       'Supert! Nå er Shieldy deaktivert. Ikke glem å slå av denne modusen med /noAttack.',
     yue:
-      'Shieldy 經已畀停用。要重新使用 Shieldy，請用 /noAttack 停用當前模式。',
+      '好。Shieldy 而家閂咗喇。記得下次用 /noAttack 開返 Shieldy。',
     ru:
       'Отлично! Щилди отключён. Не забудьте снова включить его командой /noAttack.',
     hu:
@@ -1515,7 +1516,7 @@ export const localizations = {
     he: 'מעולה! Shieldy דלוק כעת.',
     no: 'Supert! Shieldy er nå aktivert.',
     ru: 'Отлично! Щилди включён.',
-    yue: ' 正！Shieldy 已經開咗。',
+    yue: '好。Shieldy 已經開返喇。',
     hu: 'Nagyszerű! a Shieldly újra engedélyezve van.',
     fr: 'Super! Shieldy est maintenant activé!',
     bg: 'Чудесно! Shieldy вече е включен.',
@@ -1535,7 +1536,7 @@ export const localizations = {
     no:
       'Supert! Shieldy vil nå slette meldinger som lenker til andre Telegram-kanaler.',
     yue:
-      '好。由而家開始，Shieldy 會自動刪除所有連結到其它 Telegram 頻道嘅訊息。',
+      '好。由而家開始，我會幫你刪除所有連結去其他 Telegram 頻道嘅訊息。',
     hu:
       'Nagyszerű! A Shieldy mostantól törli az összes olyan linket, ami másik telegram csatornára hivatkozik.',
     fr:
@@ -1557,7 +1558,7 @@ export const localizations = {
     he: 'מעולה! Shieldy לא ימחק הודעות עם קישור לערוצים בטלגרם.',
     no:
       'Supert! Shieldy vil ikke slette meldinger som lenker til andre Telegram-kanaler.',
-    yue: '好。Shieldy 而家唔會自動刪除所有連結到其它 Telegram 頻道嘅訊息。',
+    yue: '好。由而家開始，我會保留所有連結去其他 Telegram 頻道嘅訊息。',
     hu:
       'Nagyszerű! A Shieldy mostantól nem törli az olyan linket, ami másik telegram csatornára hivatkozik.',
     fr:
@@ -1573,7 +1574,7 @@ export const localizations = {
     br: 'Configuração atual:',
     he: 'הגדרות נוכחיות:',
     no: 'Gjeldende konfigurasjon:',
-    yue: '目前嘅設定：',
+    yue: '目前嘅設定如下：',
     hu: 'Jelenlegi konfiguráció:',
     fr: 'Configuration actuelle: ',
     bg: 'Текуща конфигурация:',
@@ -1602,7 +1603,7 @@ export const localizations = {
     br: 'Boa! Os usuários não podem convidar bots agora.',
     he: 'מעולה! משתמשים לא יוכלו להזמין בוטים עכשיו.',
     no: 'Supert! Brukere kan nå ikke invitere botter.',
-    yue: '好。由而家開始，羣組成員禁止將任何機械人加入羣組。',
+    yue: '好。由而家開始，羣組成員唔可以再將任何機械人加入羣組。',
     hu: 'Szép! Mostantól a felhasználók nem hívhatnak meg botokat.',
     fi: 'Selvä! Käyttäjät eivät voi nyt kutsua botteja.',
     fr: 'Parfait! Les utilisateurs ne pourront plus inviter des bots.',
@@ -1624,7 +1625,7 @@ export const localizations = {
     no:
       'Svar på denne meldingen (og jeg mener svar(!), ikke bare send en separat melding) med opp til 10 lenker i formatet under for å sette opp knapper under hilsenen. Svar med hva som helst annet for å fjerne alle knappene.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nNåværende knapper:',
     yue:
-      'reply 呢條訊息（用回覆！唔好發一條獨立嘅訊息），用下邊呢種格式，爲打招呼嘅訊息加入最多 10 個連結至外部嘅掣。回覆其它格式嘅內容將移除全部嘅掣。\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\n目前設定咗嘅掣：',
+      '回覆呢條訊息（用回覆！唔好發一條獨立嘅訊息），用下邊呢種格式，喺打招呼訊息下面加入最多 10 個連結去外部嘅掣。要刪除全部嘅掣，請回覆任何其他內容。\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\n目前設定咗嘅掣如下：',
     hu:
       'Válaszolj erre az üzenetre (és úgy értem válaszolj(!), ne csak egy külön üzenetet küld) max 10 linkkel a lenti formátum alapján az üdvözlő gomb beállításához. Bármilyen más válasszal eltávolítod az összes gombot.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nCurrent buttons:',
     fr:
@@ -1650,6 +1651,8 @@ export const localizations = {
     en: "Nice! Old Telegram users won't get asked to pass captcha anymore!",
     ru:
       'Отлично! Старым пользователям Телеграма больше не надо будет проходить капчу!',
+    yue:
+      '好。由而家開始，擁有古老帳户嘅人唔使再做驗證喇。',
     hu:
       'Nagyszerű! A régi Telegram felhasználókat nem kéri a rendszer authentikálásra ezentúl!',
     fr:
@@ -1658,6 +1661,8 @@ export const localizations = {
   skipOldUsers_false: {
     en: "Nice! Telegram account age won't affect captcha anymore!",
     ru: 'Отлично! Возраст Телеграм-аккаунта больше не влияет на капчу!',
+    yue:
+      '好。由而家開始，我會對擁有新舊帳户一視同仁。',
     hu:
       'Nagyszerű! A Telegram fuiók kora nem befolyásolja ezentúl a captcha-t!',
     fr:
@@ -1670,6 +1675,8 @@ export const localizations = {
       "Nice! Telegram users who have ever passed a captcha in any chat won't get asked to pass captcha anymore!",
     ru:
       'Отлично! Пользователям Телеграма, которые прошли капчу в любом чате когда-либо, больше не надо будет проходить капчу!',
+    yue:
+      '好。由而家開始，新成員喺其他羣驗證過嘅話，就唔使再驗證喇。',
     hu:
       'Szép! Azok a Telegram felhasználók, akik bármelyik chat-ben átmentek a captcha-n, nem kapnak kezdő captcha-t nálunk!',
     fr:
@@ -1678,6 +1685,8 @@ export const localizations = {
   skipVerifiedUsers_false: {
     en: "Nice! Passing captcha before won't affect future captchas anymore!",
     ru: 'Отлично! Прохождение капчи больше не влияет на будущие капчи!',
+    yue:
+      '好。由而家開始，我唔會再理新成員之前有冇喺其他羣驗證過。',
     hu:
       'Szép! Azok a Telegram felhasználók is kapnak captcha-t, akik bármelyik chat-ben átmentek a captcha-n!',
     bg:
@@ -1688,6 +1697,8 @@ export const localizations = {
       'Please, send /setConfig command in the following format:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nYou can use the info from /viewConfig.',
     ru:
       'Пожалуйста, пришлите команду /setConfig в следующем формате:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nВы можете использовать информацию из /viewConfig.',
+    yue:
+      '請用下面嘅格式嚟發 /setConfig 指令：\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\n（格式同 /viewConfig 嘅輸出相同）',
     hu:
       'Kérlek, küld a /setConfig parancsot a következő formában:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nHasználhatod a /viewConfig alapján adott választ a konfigurációban.',
     fr:
@@ -1698,18 +1709,21 @@ export const localizations = {
   noChatFound: {
     en: 'Chat not found',
     ru: 'Чат не найден',
+    yue: '揾唔到羣組',
     fr: "Le groupe n'existe pas",
     bg: 'Групата не е открита',
   },
   thisIsNotAReply: {
     en: 'Just to clarify: this is not a reply',
     ru: 'Уточняю: это не ответ на сообщение',
+    yue: '（我咪話咗要用回覆㗎囉）',
     fr: "Désolé mais ce n'est pas une réponse correcte",
     bg: 'Само да поясня: това не е отговор',
   },
   thisIsAReply: {
     en: 'This is a reply',
     ru: 'А вот это ответ',
+    yue: '呢個先係回覆',
     fr: "C'est une réponse",
     bg: 'Това е отговор',
   },
@@ -1718,6 +1732,8 @@ export const localizations = {
       'You are changing the settings in private messages. This will not affect any group chats. If you want to set up a group chat, send configuration commands directly to the group chat. You can delete the configuration messages afterwards.',
     ru:
       'Вы меняете настройки в личных сообщениях с ботом. Эти настройки не повлияют ни на какие групповые чаты. Если вы хотите настроить групповой чат, отправляйте команды настроек прямо в групповой чат. Вы можете удалить сообщения настроек после настройки.',
+    yue:
+      '記得 PM 我改嘅設定唔會影響任何羣組。要改羣組設定，請喺羣組入面發指令直接改，改完可以刪走啲設定訊息㗎。',
     fr:
       "Vous avez modifié les paramètres des messages privés. Cela n'aura aucune incidence sur les discussions des autres groupes. Si vous souhaitez mettre en place une discussion de groupe, envoyez les commandes de configuration directement à la discussion du groupe. Vous pourrez ensuite supprimer les messages de configuration.",
     bg:
@@ -1728,6 +1744,8 @@ export const localizations = {
       "Nice! Shieldy will ban (or kick) all users who reply to your channel's posts 5 seconds after the post is created.",
     ru:
       'Отлично! Щилди будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
+    yue:
+      '好。由而家開始，我會封禁或踢走喺 5 秒鐘內回覆頻道新帖文嘅用户。',
     bg:
       'Яко! Shieldy, ще забрани (или ще "изрита") всеки потребител, които отговорят на публикациите в канала ви 5 секунди след създаването на публикацията.',
   },
@@ -1736,6 +1754,8 @@ export const localizations = {
       "Nice! Shieldy will not ban (or kick) all users who reply to your channel's posts 5 seconds after the post is created.",
     ru:
       'Отлично! Щилди не будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
+    yue:
+      '好。由而家開始，我唔會再封禁或踢走喺 5 秒鐘內回覆頻道新帖文嘅用户。',
     bg:
       'Яко! Shieldy няма да забранява (или да "изрита") никой потребител, които отговарят на публикациите на канала ви 5 секунди след създаването на публикацията.',
   },
@@ -1744,6 +1764,8 @@ export const localizations = {
       'Nice! Shieldy will ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     ru:
       'Отлично! Щилди будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
+    yue:
+      '好。由而家開始，我會封禁或踢走 Telegram ID 有至少 10 個位嘅新穎帳户。',
     bg:
       'Чудесно! Shieldy, ще забрани (или ще "изрита") всички новодошли с идентификатор на Telegram над 1 000 000 000. ',
   },
@@ -1752,6 +1774,8 @@ export const localizations = {
       'Отлично! Щилди не будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
     en:
       'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
+    yue:
+      '好。由而家開始，我唔會再封禁或踢走 Telegram ID 有至少 10 個位嘅新穎帳户。',
     bg:
       'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
   },
