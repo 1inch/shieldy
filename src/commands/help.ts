@@ -31,7 +31,7 @@ export function sendHelpSafe(ctx: Context) {
 
 function getHelpText(ctx: Context) {
   let text = strings(ctx.dbchat, 'helpShieldy')
-  if (process.env.PREMIUM === 'true') {
+  if (process.env.PREMIUM === 'true' && ctx.chat.type !== 'private') {
     text += '\n\n' + strings(ctx.dbchat, 'subscription')
   }
   return text
