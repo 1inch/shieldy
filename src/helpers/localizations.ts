@@ -52,6 +52,7 @@ export const localizations = {
       "Shieldy — est la meilleure solution sur Telegram pour combattre les spammeurs. Il demande aux nouveaux membres d'exécuter une action définie dans un certain délais, sinon on lui donne un coup de pied au c... . C'est aussi simple. Assurez-vous que le bot @shieldy\\_bot est bien admin de votre groupe et c'est terminé! Vous pouvez également configurer les différentes options via les commandes suivantes :\n\n/help — Afficher le message\n/language — Changer de langues\n/captcha — Modifier le type de captcha à utiliser\n/timeLimit — Modifier le temps quand un nouveau membre arrive\n/lock — Faire en sorte que seuls les admins puissent accéder aux commandes\n/restrict — Interdit pendant 24h aux nouveaux membres la possibilité d'envoyer un message\n/deleteEntryMessages — Supprime les messages concernant l'arrivée des nouveaux membres\n/greeting — Accueillir les utilisateurs qui passent le test\n/trust — Utilisez cette commande pour un utilisateur que vous ne voulez pas vérifier\n/ban — la même chose mais cette fois en le bannissant\n/strict — Utilisez cette fonction si vous ne souhaitez plus recevoir les messages de nouveaux membres, jusqu'à ce qu'ils passent le test du captcha\n/customCaptchaMessage — Configurer le message du captcha\n/deleteGreetingTime — Configurer le temps en seconde, concernant le message d'accueil automatique de Shieldy`/deleteGreetingTime 100`, Utilisez la valeur 0 si vous souhaitez réinitialiser la configuration\n/banUsers — Savoir si bannir ou expulser les utilisateurs\n/deleteEntryOnKick — Savoir s'il faut supprimer les messages d'accueil pour les utilisateurs qui ont échoué au captcha\n/cas — Savoir s'il faut utiliser Combot Anti-Spam ou pas\n/underAttack — Basculer vers le mode d'expulsion automatique de tous les nouveaux arrivants\n/noAttack — Désactive Shieldy\n/noChannelLinks — Supprimer automatiquement les messages qui renvoient vers d'autres groupes telegram.\n/viewConfig — Voir la configuration actuelle de Shieldy\n/buttonText — Modifier le texte du bouton captcha button `/buttonText Je ne suis pas un robot`\n/allowInvitingBots — Les membres peuvent ou non inviter d'autres robots\n/greetingButtons — Configurer les boutons des messages de bienvenue\n/skipOldUsers — Ne pas afficher le captcha des utilisateurs de telegram dont l'ID est inférieure à 100000000\n/skipVerifiedUsers — n'affichez pas pas captcha aux utilisateurs qui ont déjà passé captcha dans d'autres groupes\n/setConfig — Configuration Shieldy via un seul message\n/banForFastRepliesToPosts — turn on or off banning users who reply to new channel posts within 5 seconds after posts are created\n/restrictTime — setup how much time will Shieldy /restrict a newcomer in hours like `/restrictTime 24`, reset by setting it to 0\n/banNewTelegramUsers — instantly ban (or kick) newcomers with Telegram ID over 1 000 000 000\n\nVous avez des questions ? Consultez le support sur notre canal — @borodutch\\_support. Le code de Shieldy code est en open source et est disponible à l'adresse suivante [ici](https://github.com/backmeupplz/shieldy). Merci!\n\nVous pouvez consulter mes autres projets — [Todorant](https://todorant.com) ([iOS](https://apps.apple.com/us/app/todorant/id1482078243), [Android](https://play.google.com/store/apps/details?id=com.todorant)). Il s'agit d'une application de liste de choses à faire intelligente qui utilise la psychologie cognitive pour inciter votre cerveau à terminer des projets et à montrer des résultats. Elle est gratuite pendant 30 jours sans conditions, alors essayez-la si vous voulez améliorer votre productivité. Ça m'a aidé — ça peut vous aider aussi.\n\nLes dons sont les bienvenus:\nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5",
     bg:
       'Shieldy - е най-доброто решение в Telegram за борба с досадните спамери. Той призовава новодошлите да изпълнят зададено действие в рамките на определен период, в противен случай ги премахва. Това е толкова лесно. Уверете се, че @shieldy\\_bot е администратор във вашия чат и всичко е готово! Можете също така допълнително да настроите поведението със следните команди: \n\n/help - показва това съобщение \n/language - превключва езика \n/captcha - променя типа на използвания captcha \n/timeLimit - променя количеството на времето, дадено на новодошлите \n/lock - прави командите достъпни само от администратори \n/restrict - ограничава новодошлите да изпращат само текстови съобщения през първите 24 часа \n/deleteEntryMessages - изтриване на съобщения за влизане на потребител \n/greeting - поздравява потребителите които преминат теста \n/trust - отговорете с тази команда на съобщение, изпратено от потребител, което не искате да проверявате \n/ban - същото като доверие, но обратното \n/strict - използвайте, когато не го правите искат да получават съобщения на новодошлите, но captcha решения, докато преминат captcha \n/customCaptchaMessage - настройка на персонализирани captcha mes sage \n/deleteGreetingTime - настройка кога да изтриете поздрава на Shieldy за секунди като `/deleteGreetingTime 100`, нулирайте, като го зададете на 0 \n/banUsers - дали да забраните или да ритате потребителите \n/deleteEntryOnKick - дали да изтриете съобщения за влизане за потребители, които не са успели captcha \n/cas - дали да използват Combot Anti-Spam или не \n/underAttack - превключване на режима за автоматично изхвърляне на всички новодошли \n/noAttack - деактивира Shieldy \n/noChannelLinks - автоматично изтрива съобщения, които се свързват с други канали на телеграма \n/viewConfig - преглед на текущата конфигурация на Shieldy \n/buttonText - промяна на текста на бутона за капча под формата на `/buttonText Не съм бот!` \n/allowInvitingBots - дали потребителите могат да поканят други ботове или не \n/greetingButtons - бутони за настройка на поздравително съобщение \n/skipOldUsers - не показвайте captcha на акаунти в Telegram с идентификатор по-малък от 1000000000 \n/skipVerifiedUsers - не показвайте captcha на потребители, които някога са преминали captcha в чат \n/setConfig - настройка на Shieldy конфигурация в едно съобщение \n/banForFastRepliesToPosts - включете или изключете забраната на потребителите, които отговарят на нови публикации в канала в рамките на 5 секунди след създаването на публикации \n/restrictTime - настройка колко време Shieldy / ограничава новодошлия в часове като `/restrictTime 24`, нулирайте, като го зададете на 0 \n/banNewTelegramUsers - незабавно забранете (или ритайте) новодошлите с Telegram ID над 1000000000 \n\n Все още имате въпроси? Вижте канала за поддръжка - @borodutch\\_support. Shieldy е с отворен код и може да бъде намерен [тук] (https://github.com/backmeupplz/shieldy). Благодаря! \n\n Също така вижте още един от моите проекти - [Todorant] (https://todorant.com) ([iOS] (https://apps.apple.com/us/app/todorant/id1482078243) , [Android] (https://play.google.com/store/apps/details?id=com.todorant)). Това е интелигентно приложение за списък на задачи, което използва когнитивна психология, за да подмами мозъка ви да завърши проекти и да покаже резултати. Безплатно е за 30 дни, без прикачени реклами, така че опитайте, ако искате да подобрите производителността си. Помогна ми - може да помогне и на вас. \n\n Даренията също са добре дошли: \nBTC — 1NrNCznrzGVCBpGx5g5xoWSaHtwrdLzx1q\nETH — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5\nUSDT — 0x67268029989BcAd5BE09416EcC7aE08Be5bbDcD5',
+    uz: "@shieldy\\_bot guruhingizda administrator ekanligiga ishonch hosil qiling va hammasi tayyor! Quyidagi buyruqlar yordamida botni sozlashni davom ettirishingiz mumkin:\n\n/help — ushbu xabarni k\'orsatadi\n/language — tilni o\'zgartiradi\n/captcha — captcha-tekshiruv turini o\'zgartiradi\n/timeLimit — yangi foydalanuvchilarga berilgan vaqt miqdorini o\'zgartiradi\n/lock — buyruqlarni faqat administratorlar uchun ishlaydigan qiladi\n/restrict — dastlabki 24 soat ichida yangi foydalanuvchilarga matnli xabarlardan boshqa narsalarni yuborishni taqiqlaydi\n/deleteEntryMessages — chatga kirgan foydalanuvchilar haqidagi xabarlarni o\'chirish\n/greeting — tekshiruvdan o\'tgan foydalanuvchilarni xabar bilan kutib olish\n/trust — tekshirilishi shart bo\'lmagan foydalanuvchi xabariga ushbu buyruq bilan javob bering\n/ban — `trust` bilan bir xil, lekin teskarisi\n/strict — agar yangi foydalanuvchilar captcha-tekshiruvidan o\'tmaguncha hech qanday xabar yozmasligini xohlasangiz ushnu buyruqdan foydalaning\n/customCaptchaMessage — captcha-tekshiruvi uchun o\'z xabaringizni o\'rnating\n/deleteGreetingTime — Shieldy salomlashish xabarini avtomatik o\'chirishi kerak bo\'lgan vaqtni soniyalarda belgilang, masalan `/deleteGreetingTime 100` (yani 100 soniyadan keyin salomlashish xabari o\'chirilishi uchun)\nqiymatni 0 ga o\'zgartiring ushbu amalni bekor qilish uchun\n/banUsers — foydalanuvchilarni bloklash yoki guruhdan haydash\n/deleteEntryOnKick — captcha-tekshiruvini o\'ta olmagan foydalanuvchilar guruhga kirganligi haqida xabarni o\'chirish kerakmi\n/cas — Combot Anti-Spam-dan foydalanish yoki yo\'q\n/underAttack — barcha yangilar foydalanuvchilarni avtomatik guruhdan haydashni yoqish yoki o\'chirish\n/noAttack — Shieldy-ni o\'chirib qo\'yish\n/noChannelLinks — Telegram kanallariga havolalari bo\'lgan xabarlarni avtomatik ravishda o\'chirish\n/viewConfig — Shieldy-ning joriy sozlamalarini ko\'rish\n/buttonText — captcha tugmasidagi matnni o\'zgartirish, masalan `/buttonText Robot emasman!`\n/allowInvitingBots — foydalanuvchilar boshqa botlarni chatga taklif qilishlari mumkinmi\n/greetingButtons — salomlashish xabari uchun tugmalarni sozlash\n/skipOldUsers — ID raqami 1 000 000 000 dan kichik bo\'lgan Telegram akkauntlaridan captcha so\'ramaslik\n/skipVerifiedUsers — boshqa chatlarda captcha-dan muvaffaqiyatli o\'tgan odamlardan captcha so'ramaslik\n/setConfig — Shieldy-ni bitta xabar bilan sozlash\n/banForFastRepliesToPosts — postlar yaratgandan so\'ng 5 soniya ichida kanaldagi xabarlarga javob beradigan foydalanuvchilarni ban qilish yoki yo\'q\n/restrictTime — yangi foydalanuvchilar uchun `/restTime 24` formati bilan media jo\'natishni necha soat cheklashni sozlang, 0 ni o\'rnatish orqali vaqtni standart holatga qaytarishingiz mumkin.\n/banNewTelegramUsers — Telegram ID raqami 1 000 000 000 dan katta bo\'lgan yangi kelganlarni darhol ban qilish (yoki haydash)\n\nShieldy – Telegramda spam bilan kurashish uchun innovatsion yechim. Bot har bir yangi foydalanuvchiga ma\'lum bir vaqt ichida bir nechta amallarni bajarishni taklif qiladi va aks holda ularga kirishni rad etadi. Shieldy loyihasi Nikita Kolmogorov tomonidan yaratilgan va keyinchalik 1inch Network protokollarini ishlab chiqaruvchi 1inch Labs tomonidan sotib olingan. Hozirda botni qo\'llab-quvvatlash: @borodutch\\ _ support 1inch Labs tomonidan boshqariladi.\n\n1inch Network bir nechta markazlashtirilmagan protokollarni birlashtiradi, ularning sinergiyasi DeFi sohasida eng foydali, eng tezkor va xavfsiz tranzaktsiyalarni ta\'minlaydi.",
   },
   language_shieldy: {
     en: 'Please, select the language.',
@@ -81,6 +82,7 @@ export const localizations = {
     hu: 'Kérlek, válassz egy nyelvet!',
     fi: 'Ole hyvä ja valitse kieli.',
     bg: 'Моля, изберете език.',
+    uz: 'Iltimos tilni tanlang.',
   },
   language_selected: {
     en: 'Great, I speak English now.',
@@ -110,6 +112,7 @@ export const localizations = {
     hu: 'Nagyszerű, mostantól magyarul beszélek.',
     fi: 'Selvä! Valitsit kieleksi suomen.',
     bg: 'Чудесно, сега говоря Български',
+    uz: 'Ajoyib, endi men O\'zbekcha gapiraman',
   },
   only_author_can_reply: {
     en: 'Only the person who initiated the menu can select the choices.',
@@ -141,6 +144,8 @@ export const localizations = {
     it: 'Solo chi ha invocato il comando può selezionarlo.',
     bg:
       'Само човекът който е направил менюто може да избира различните избори.',
+    uz:
+      'Faqat menyuni chaqirgan odam variantlarni tanlashi mumkin.',
   },
   captcha: {
     en:
@@ -195,6 +200,8 @@ export const localizations = {
       "Prego, seleziona uno dei seguenti test per i nuovi utenti:\\n\\n• Semplice — Il bot chiederà di inviare un qualunque messaggio in chat\\n• Bottone — Il bot chiederà di premere un pulsante\\n• Numeri — il bot ti chiederà di risolvere una semplice operazione aritmetica\\n• Immagine — il bot ti chiederà di riconoscere un personaggio in un'immagine",
     bg:
       'Моля, изберете типа на теста за новодошлите: \n\n• Simple - ботът ще поиска да изпрати каквото и да е в чата \n• Button - ботът ще поиска да натисне бутон \n• Digits - ботът ще поиска да реши проста аритметична операция \n• Image - ботът ще поиска да разпознае символи на изображение ',
+    uz:
+      'Iltimos, yangi kelganlar uchun test turini tanlang:\n\n• Oddiy — bot chatga biror narsa yuborishni soʻraydi\n• Tugma — bot tugmani bosishni soʻraydi\n• Raqamlar — bot oddiy arifmetik amalni bajarishni soʻraydi. \n• Rasm — bot rasmdagi belgilarni tanib olishni so‘raydi',
   },
   simple: {
     en: 'Simple',
@@ -224,6 +231,7 @@ export const localizations = {
     hu: 'Egyszerű',
     fi: 'Yksinkertainen',
     bg: 'Просто',
+    uz: 'Oddiy',
   },
   digits: {
     en: 'Digits',
@@ -253,6 +261,7 @@ export const localizations = {
     fi: 'Numerot',
     it: 'Numeri',
     bg: 'Цифри',
+    uz: 'Raqamlar',
   },
   button: {
     en: 'Button',
@@ -282,6 +291,7 @@ export const localizations = {
     hu: 'Gomb',
     fi: 'Painike',
     bg: 'Бутон',
+    uz: 'Tugma',
   },
   image: {
     en: 'Image',
@@ -299,6 +309,7 @@ export const localizations = {
     hu: 'Kép',
     fi: 'Kuva',
     bg: 'Картинка',
+    uz: 'Rasm',
   },
   captcha_selected: {
     en: 'Great, I will use this type of test then.',
@@ -328,6 +339,7 @@ export const localizations = {
     hu: 'Nagyszerű, ezt a típust fogom használni a teszteléshez.',
     fi: 'Selvä! Käytän valitsemaasi testiä jatkossa.',
     bg: 'Чудесно, сега ще използвам този тип тест.',
+    uz: 'Ajoyib, endi men shu turdagi testdan foydalanaman.',
   },
   time_limit: {
     en:
@@ -379,6 +391,8 @@ export const localizations = {
       'Ole hyvä ja valitse montako sekuntia uudella tulokkaalla on aikaa vastata testiin (ennen kuin hänet poistetaan ryhmästä).',
     bg:
       'Моля, изберете колко секунди ще получат новодошлите, за да завършат теста преди да ги "изритам".',
+    uz: 
+      'Iltimos, yangi kelganlar testni necha soniyada bajarishi kerakligini tanlang, guruhdan haydalishidan oldin.',
   },
   time_limit_selected: {
     en: 'Great, I will use this time limit then.',
@@ -408,6 +422,7 @@ export const localizations = {
     hu: 'Nagyszerű, ezt az idő intervallumot fogom használni.',
     fi: 'Ok, antamasi sekuntimäärä on asetettu aikarajaksi.',
     bg: 'Чудесно, вече ще използвам този времеви лимит.',
+    uz: 'Ajoyib, men shu vaqt chegarasidan foydalanaman endi.',
   },
   seconds: {
     en: 'sec',
@@ -437,6 +452,7 @@ export const localizations = {
     hu: 'mp',
     fi: 's',
     bg: 'сек',
+    uz: 'soniya',
   },
   lock_true_shieldy: {
     en: 'Great! Now I will only react to commands sent by admins.',
@@ -468,6 +484,7 @@ export const localizations = {
     yue: '我而家開始淨係會回應管理員嘅命令。',
     hu: 'Nagyszerű! Mostantól csak az adminok parancsara reagálok!',
     bg: 'Чудесно! Вече ще приемам команди само от администраторите.',
+    uz: 'Ajoyib! Endi men faqat adminlar tomonidan yuborilgan buyruqlarga javob beraman.',
   },
   lock_false_shieldy: {
     en: 'Great! Now I will react to commands sent by anybody.',
@@ -497,6 +514,7 @@ export const localizations = {
     hu: 'Nagyszerű! Mostantól bárki parancsara reagálok!',
     bg: 'Чудесно! Вече, ще приемам команди от всички юзери в групата.',
     es: '¡Genial! Ahora reaccionaré a los comandos enviados por todo el mundo.',
+    uz: 'Ajoyib! Endi men har kim tomonidan yuborilgan buyruqlarga javob beraman.',
   },
   strict_true: {
     en:
@@ -542,6 +560,8 @@ export const localizations = {
       'Чудесно! Сега новодошлите няма да могат, да изпращат нищо друго освен  решения с captcha, докато не преминат теста.',
     es:
       'Perfecto! A partir de este momento, los recién llegados solamente podrán enviar los mensajes para responder la solucion del CAPTCHA, hasta que este sea resuelto correctamente.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-dan o\'tmaguncha, captcha yechimlaridan boshqa hech narsa yuborolmaydilar.',
   },
   strict_false: {
     en:
@@ -584,6 +604,8 @@ export const localizations = {
       'Чудесно! Сега новодошлите ще могат да пишат съобщения, преди да преминат captcha.',
     es:
       '¡Genial! A partir de este momento, los recién llegados podrán enviar mensajes antes de que hayan resuelto el CAPTCHA correctamente.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-dan o\'tishdan oldin matn xabarlar yuborishlari mumkin bo\'ladi.',
   },
   simple_warning: {
     en:
@@ -634,6 +656,8 @@ export const localizations = {
     yue: ', 唔該喺規定時間內向羣組內發任意內容，否則你會畀踢走。',
     bg:
       ', Mоля, представете се в групата, в рамките на определеното време, в противен случай ще бъдете изритани. Благодаря ви!',
+    uz: 
+      ', iltimos, ushbu guruhga belgilangan vaqt ichida istalgan xabarni yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   digits_warning: {
     en:
@@ -685,6 +709,8 @@ export const localizations = {
       ', ole hyvä ja lähetä oheisen laskutoimituksen ratkaisu annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     bg:
       ', Моля, изпратете решението на аритетичната задачка, която виждате тук в рамките на времето посочено от мен , в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
+    uz:
+      ', iltimos, ushbu guruhga ko\'rsatilgan vaqt ichida berilgan arifmetik amalning yechimini yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   button_warning: {
     en:
@@ -737,6 +763,8 @@ export const localizations = {
       ', Mоля, натиснете бутона по-долу в рамките на определеното време, в противен случай ще бъдете изхвърлени. Благодаря ви!',
     es:
       ', por favor, presione el botón de abajo dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    uz:
+      ', iltimos, belgilangan vaqt ichida quyidagi tugmani bosing, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   image_warning: {
     en:
@@ -772,6 +800,8 @@ export const localizations = {
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
     es:
       ', por favor, envía a este grupo los caracteres de la imagen dentro del tiempo especificado, si no, serás expulsado. ¡Gracias!',
+    uz:
+      ', iltimos, ushbu guruhga belgilangan vaqt ichida ko\'rsatilgan belgilarni yuboring, aks holda siz guruhdan haydab yuborilasiz. Rahmat!',
   },
   captcha_button: {
     en: 'I am not a bot',
@@ -802,6 +832,7 @@ export const localizations = {
     fi: 'Olen ihminen, en botti.',
     kz: 'Менің пендемге қарау',
     bg: 'Аз не съм бот',
+    uz: 'Men robot emasman',
   },
   only_candidate_can_reply: {
     en: 'Only the candidate for not being a bot can press this button.',
@@ -833,6 +864,7 @@ export const localizations = {
     yue: '機械人賬戶唔畀撳掣。',
     hu: 'Csak a robot ellenőrzési kihívás jelöltje kattinthat a gombra.',
     bg: 'Само кандидатът, който не е бот, може да натисне този бутон.',
+    uz: 'Bu tugmani faqat bot emasligini tasdiqlashi kerak bo\'lgan odam bosishi mumkin.',
   },
   restrict_true: {
     en:
@@ -877,6 +909,8 @@ export const localizations = {
       'Nagyszerű! Mostantól minden újonc csak szöveges üzenetet küldhet erre a csatornára.',
     bg:
       'Чудесно! Сега всички новодошли, ще могат само да изпращат обичайни текстови съобщения в тази група. ',
+    uz: 
+      'Ajoyib! Endi barcha yangi kelganlar ushbu chatga faqat oddiy matnli xabarlarni yuborishlari mumkin bo\'ladi.',
   },
   restrict_false: {
     en:
@@ -920,6 +954,8 @@ export const localizations = {
       'Nagyszerű! Mostantól minden újonc bármilyen üzenetet küldhet erre a csatornára.',
     bg:
       'Чудесно! Сега всички новодошли, ще могат да изпращат всякакъв вид съдържание в тази група.',
+    uz:
+      'Ajoyib! Endi barcha yangi kelganlar ushbu chatga istalgan turdagi xabarlarni yuborishlari mumkin bo\'ladi.',
   },
   deleteEntryMessages_true: {
     en: 'Great! Now entry messages will be deleted.',
@@ -976,6 +1012,7 @@ export const localizations = {
     yue: '由而家開始，所有新來者嘅入羣提醒將會保留。',
     hu: 'Nagyszerű! Mostantól a belépési üzeneteket nem töröljük.',
     bg: 'Чудесно! Сега съобщенията за влизане няма да бъдат изтривани.',
+    uz: 'Ajoyib! Endi foydalanuvchilar kirishi haqidagi xabarlar o\'chiriladi.',
   },
   greetsUsers_true: {
     en:
@@ -1028,6 +1065,10 @@ export const localizations = {
       "Parfait, maintenant les nouveaux membres ayant réussi le test seront salués. Veuillez configurer le message d'accueil personnalisé que vous souhaitez en répondant à ce message (Vous pouvez utiliser les fonctions suivantes $title et $username).",
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, ще бъдат поздравени. Моля, отговорете на това съобщение с поздравителния текст, който искате да използвате (можете да използвате $title, $fullname и $username).',
+    uz: 
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom beriladi. Iltimos, ushbu xabarga javob sifatida salomlashish matnini yuboring ($title, $fullname va $username parametrlaridan foydalanishingiz mumkin).',
+
+
   },
   greetsUsers_true_message: {
     en:
@@ -1082,6 +1123,8 @@ export const localizations = {
       'Nagyszerű! Az újoncokat, akik átmentek a teszten, az üdvözölni fogjuk. Kérlek válaszolj erre az üzenetre az általad választott üzenettel (használhatod az alábbiakat $title, $fullname and $username).',
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, ще бъдат поздравени. Моля, отговорете на това съобщение с поздравителния текст, който искате да използвате (можете да използвате $title, $fullname и $username). Следва текущото поздравително съобщение.',
+    uz:
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom beriladi. Iltimos, ushbu xabarga javob sifatida salomlashish matnini yuboring ($title, $fullname va $username parametrlaridan foydalanishingiz mumkin). Joriy salomlashish xabari quyida keladi.',
   },
   greetsUsers_false: {
     en: 'Great! Now newcomers who passed the test will not be greeted.',
@@ -1117,6 +1160,8 @@ export const localizations = {
     fi: 'Selvä! Nyt testin läpäisseitä tulokkaita ei tervehditä.',
     bg:
       'Чудесно! Сега новодошлите, които са преминали теста, няма да бъдат поздравявани. ',
+    uz: 
+      'Ajoyib! Endi testdan o\'tgan yangi kelganlarga salom berilmaydi.',
   },
   greetsUsers_message_accepted: {
     en: 'Accepted!',
@@ -1144,6 +1189,7 @@ export const localizations = {
     hu: 'Elfogadva!',
     fi: 'Hyväksytty!',
     bg: 'Прието!',
+    uz: 'Qabul qilindi!',
   },
   captchaMessage_true: {
     en:
@@ -1184,6 +1230,8 @@ export const localizations = {
       "Super! Désormais, les nouveaux arrivants recevront un message personnalisé expliquant qu'il faut répondre au captcha. Veuillez répondre à ce message avec le texte du captcha que vous souhaitez utiliser (vous pouvez utiliser $title, $username, $equation, $fullname et $seconds).",
     bg:
       'Страхотен! Сега новодошлите ще получат персонализирано съобщение, обясняващо captcha. Моля, отговорете на това съобщение с текста на captcha, който искате да използвате (можете да използвате $title, $username, $equation, $fullname и $seconds).',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-ni tushuntiruvchi maxsus xabarni olishadi. Iltimos, ushbu xabarga siz foydalanmoqchi bo\'lgan captcha matni bilan javob bering ($title, $username, $equation, $fullname va $seconds dan foydalanishingiz mumkin).',
   },
   captchaMessage_true_message: {
     en:
@@ -1224,6 +1272,8 @@ export const localizations = {
       "Super! Désormais, les nouveaux arrivants recevront un message personnalisé expliquant qu'il faut répondre au captcha. Veuillez répondre à ce message avec le texte du captcha que vous souhaitez utiliser (vous pouvez utiliser $title, $username, $equation, $fullname et $seconds). Le message d'accueil est le suivant.",
     bg:
       'Чудесно! Сега новодошлите ще получат персонализирано съобщение, обясняващо captcha. Моля, отговорете на това съобщение с текста на captcha, който искате да използвате (можете да използвате $title, $username, $equation, $fullname и $seconds). Следва текущото поздравително съобщение.',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar captcha-ni tushuntiruvchi maxsus xabarni olishadi. Iltimos, ushbu xabarga siz foydalanmoqchi bo\'lgan captcha matni bilan javob bering ($title, $username, $equation, $fullname va $seconds dan foydalanishingiz mumkin). Joriy salomlashish xabari quyida keladi.',
   },
   captchaMessage_false: {
     en: 'Great! Now newcomers will see the default captcha message',
@@ -1253,6 +1303,8 @@ export const localizations = {
       'Super! Les nouveaux membres verront maintenant le message captcha par défaut',
     bg:
       'Чудесно! Сега новодошлите ще видят съобщението за captcha по-подразбиране',
+    uz: 
+      'Ajoyib! Endi yangi kelganlar standart captcha xabarini ko\'radilar.'
   },
   trust_success: {
     en: 'Accepted!',
@@ -1280,6 +1332,7 @@ export const localizations = {
     hu: 'Elfogadva!',
     fi: 'Hyväksytty!',
     bg: 'Прието!',
+    uz: 'Qabul qilindi!',
   },
   banUsers_true: {
     en: 'Nice! Users will be banned if they do not pass captcha.',
@@ -1305,6 +1358,7 @@ export const localizations = {
     hu: 'Csodás! A usert bannolni fogjuk, ha nem megy át a captcha-n.',
     fr: "Parfait! Les utilisateurs seront bannis s'ils ne passent pas captcha.",
     bg: 'Супер! Потребителите ще бъдат блокирани, ако не преминат captcha.',
+    uz: 'Yaxshi! Agar foydalanuvchilar captcha-dan o\'tmasalar, bloklanishadi.',
   },
   banUsers_false: {
     en: 'Nice! Users will be kicked if they do not pass captcha.',
@@ -1332,6 +1386,7 @@ export const localizations = {
       "Parfait! Les utilisateurs seront expulsés s'ils ne réussissent pas le captcha.",
     bg:
       'Супер! Потребителите ще бъдат "изритани" от групата, ако не преминат captcha.',
+    uz: 'Yaxshi! Agar foydalanuvchilar captcha-dan o\'tmasalar, guruhdan haydalishadi.',
   },
   deleteEntryOnKick_true: {
     en:
@@ -1367,6 +1422,8 @@ export const localizations = {
       "Super! Shieldy va supprimer les messages d'accueil des utilisateurs qui ont échoué au captcha.",
     bg:
       'Чудесно! Shieldy ще премахне съобщенията за влизане на потребителите, които НЕ са отговорили на captcha. ',
+    uz: 
+      'Ajoyib! Endi Shieldy captcha-tekshiruvidan o\'ta olmagan foydalanuvchilar guruhga kirganligi haqidagi xabarlarni o\'chirib tashlaydi.',
   },
   deleteEntryOnKick_false: {
     en:
@@ -1402,6 +1459,8 @@ export const localizations = {
       "C'est noté! Shieldy ne va plus supprimer les messages d'accueil des utilisateurs qui ont échoué au captcha.",
     bg:
       'Чудесно! Shieldy няма да премахва съобщения за влизане на потребители, които НЕ са успели с captcha. ',
+    uz: 
+      'Ajoyib! Endi Shieldy captcha-tekshiruvidan o\'ta olmagan foydalanuvchilar guruhga kirganligi haqidagi xabarlarni o\'chirib tashlamaydi.',
   },
   cas_true: {
     en: 'Great! Shieldy will now use Combot Anti-Spam.',
@@ -1439,6 +1498,7 @@ export const localizations = {
       'Nagyszerű! A Shieldy ezentúl nemhasználja a Combot Anti-Spam megoldást.',
     fr: "Ok! Shieldy n'utilisera pas Combot Anti-Spam.",
     bg: 'Страхотно! Shieldy няма да използва Combot Anti-Spam сега. ',
+    uz: 'Ajoyib! Shieldy endi Combot Anti-Spamdan foydalanadi.',
   },
   underAttack_true: {
     en:
@@ -1465,6 +1525,8 @@ export const localizations = {
       "Ok! Shieldy va maintenant expulser tous ceux qui entreront dans ce groupe. N'oubliez pas de désactiver ce mode lorsque l'attaque est terminée via la commande /underAttack.",
     bg:
       'Чудесно! Shieldy ще изхвърля всички, които влязат в тази група. Не забравяйте да изключите този режим, когато атаката приключи с /underAttack.',
+    uz: 
+      "Ajoyib! Shieldy endi bu chatga kirgan barchani haydab yuboradi. /underAttack buyrug'i bilan hujum tugagach, ushbu rejimni o'chirishni unutmang.",
   },
   underAttack_false: {
     en: 'Great! Shieldy will not kick everybody who enters this chat.',
@@ -1483,6 +1545,8 @@ export const localizations = {
       'Nagyszerű! A Shieldy mostantól nem vágja ki az új csatlakozókat a csatornáról.',
     fr: "Ok! Shieldy n'expulsera plus tous ceux qui entrent dans ce groupe.",
     bg: 'Чудесно! Shieldy няма да изхвърля никой, влизащите в тази група. ',
+    uz: 
+      "Ajoyib! Shieldy endi bu chatga kirgan barchani haydab yubormaydi.",
   },
   noAttack_true: {
     en:
@@ -1506,6 +1570,8 @@ export const localizations = {
       "Super! Shieldy est maintenant désactivé. N'oubliez pas de désactiver ce mode via la commande /noAttack.",
     bg:
       'Страхотно! Shieldy в момента е деактивиран! Не забравяйте да изключите този режим с /noAttack.',
+    uz:
+      "Ajoyib! Shieldy endi o'chirib qo'yildi. Ushbu rejimni /noAttack bilan o'chirishni unutmang.",
   },
   noAttack_false: {
     en: 'Great! Shieldy is now on.',
@@ -1519,6 +1585,7 @@ export const localizations = {
     hu: 'Nagyszerű! a Shieldly újra engedélyezve van.',
     fr: 'Super! Shieldy est maintenant activé!',
     bg: 'Чудесно! Shieldy вече е включен.',
+    uz: 'Ajoyib! Shield hozir yoqilgan',
   },
   noChannelLinks_true: {
     en:
@@ -1542,6 +1609,8 @@ export const localizations = {
       'Super! Shieldy va maintenant supprimer les messages qui renvoient vers des autres groupes telegram. ',
     bg:
       'Чудесно! Shieldy  ще изтрие съобщения, които водят към Telegram групи и канали. ',
+    uz:
+      "Ajoyib! Shieldy endi telegram kanallarga havola qilingan xabarlarni o‘chirib tashlaydi.",
   },
   noChannelLinks_false: {
     en:
@@ -1564,6 +1633,8 @@ export const localizations = {
       "C'est noté! Shieldy ne supprimera plus les messages qui partagerons des liens vers des groupes telegram.",
     bg:
       'Чудесно! Shieldy няма да изтрива съобщения, които водят към Telegram групи и канали. ',
+    uz:
+      "Ajoyib! Shieldy endi telegram kanallarga havola qilingan xabarlarni o‘chirib tashlamaydi.",
   },
   viewConfig: {
     en: 'Current config:',
@@ -1577,6 +1648,7 @@ export const localizations = {
     hu: 'Jelenlegi konfiguráció:',
     fr: 'Configuration actuelle: ',
     bg: 'Текуща конфигурация:',
+    uz: 'Joriy sozlamalar',
   },
   allowInvitingBots_true: {
     en: 'Nice! Users can invite bots now.',
@@ -1592,6 +1664,7 @@ export const localizations = {
     fi: 'Selvä! Käyttäjät voivat nyt kutsua botteja.',
     fr: 'Parfait! les utilisateurs peuvent maintenant inviter des bots.',
     bg: 'Чудесно! Потребителите могат да вкарват ботове в групата.',
+    uz: 'Yaxshi! Foydalanuvchilar endi botlarni taklif qilishlari mumkin',
   },
   allowInvitingBots_false: {
     en: 'Nice! Users cannot invite bots now.',
@@ -1607,6 +1680,7 @@ export const localizations = {
     fi: 'Selvä! Käyttäjät eivät voi nyt kutsua botteja.',
     fr: 'Parfait! Les utilisateurs ne pourront plus inviter des bots.',
     bg: 'Чудесно! Потребителите НЯМА да могат, да вкарват ботове в групата.',
+    uz: 'Yaxshi! Foydalanuvchilar endi botlarni taklif qilishlari mumkin emas',
   },
   greetingButtons: {
     en:
@@ -1631,6 +1705,8 @@ export const localizations = {
       "Répondez à ce message (et je veux dire répondez (!), pas seulement envoyez un message séparé) avec jusqu'à 10 liens au format ci-dessous pour configurer les boutons d'accueil. Répondez avec n'importe quoi pour supprimer tous les boutons. \n\nDuckDuckGo — https://duckduckgo.com\nWikipedia — https://wikipedia.com\n\nCurrent buttons:",
     bg:
       'Отговорете на това съобщение (и имам предвид да се отговори (reply), а не с отделно съобщение) с до 10 линка в посочения по долу формат за да сетъпнете бутоните. \n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nТекущи бутони:',
+    uz:
+      "Salomlash tugmalarini sozlash uchun quyidagi formatda 10 tagacha havolalar bilan ushbu xabarga javob bering (va men javob berishni nazarda tutmoqdaman (!), shunchaki alohida xabar yuborishni emas!). Barcha tugmalarni olib tashlash uchun boshqa xoxlagan biror narsa bilan javob bering.\n\nDuckDuckGo - https://duckduckgo.com\nWikipedia - https://wikipedia.com\n\nJoriy tugmalar:'",
   },
   greetingButtonsEmpty: {
     en: 'No buttons',
@@ -1645,6 +1721,7 @@ export const localizations = {
     fi: 'Ei painikkeita',
     fr: 'Pas de boutons',
     bg: 'Без бутони',
+    uz: 'Tugmalar yo\'q', 
   },
   skipOldUsers_true: {
     en: "Nice! Old Telegram users won't get asked to pass captcha anymore!",
@@ -1654,6 +1731,7 @@ export const localizations = {
       'Nagyszerű! A régi Telegram felhasználókat nem kéri a rendszer authentikálásra ezentúl!',
     fr:
       'Super! Les anciens utilisateurs de Telegram ne seront plus invités à passer le captcha !',
+    uz: 'Yaxshi! Endi eski Telegram foydalanuvchilari captcha-tekshiruvidan o\'tishi talab qilinmaydi!',
   },
   skipOldUsers_false: {
     en: "Nice! Telegram account age won't affect captcha anymore!",
@@ -1664,6 +1742,7 @@ export const localizations = {
       "Super! L'ancienneté du compte de telegram n'affectera plus le captcha !",
     bg:
       'Чудесно! Съществуващите потребители на Telegram групата, няма да бъдат молени да преминат captcha!',
+    uz: "Yaxshi! Telegram akkauntining yoshi endi captchaga ta'sir qilmaydi!",
   },
   skipVerifiedUsers_true: {
     en:
@@ -1674,6 +1753,8 @@ export const localizations = {
       'Szép! Azok a Telegram felhasználók, akik bármelyik chat-ben átmentek a captcha-n, nem kapnak kezdő captcha-t nálunk!',
     fr:
       "Super! Les utilisateurs de telegram ayant déjà passé un captcha dans d'autres groupes, n'auront plus à passer le captcha!",
+    uz: 
+      "Yaxshi! Har qanday boshqa chatda captcha-tekshiruvidan o'tgan Telegram foydalanuvchilari endi captcha-dan o'tishi talab qilinmaydi!",
   },
   skipVerifiedUsers_false: {
     en: "Nice! Passing captcha before won't affect future captchas anymore!",
@@ -1682,6 +1763,7 @@ export const localizations = {
       'Szép! Azok a Telegram felhasználók is kapnak captcha-t, akik bármelyik chat-ben átmentek a captcha-n!',
     bg:
       'Чудесно! Потребителите на Telegram групата, които някога са преминали captcha във всеки чат, вече няма да бъдат помолени да преминат captcha!',
+    uz: "Yaxshi! Oldin o'tilgan captcha-lar kelajakdagi captchalarga endi ta'sir qilmaydi!",
   },
   setConfigHelp: {
     en:
@@ -1694,24 +1776,29 @@ export const localizations = {
       'Veuillez envoyer la commande /setConfig dans le format suivant:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\nVous pouvez utiliser les informations via la commande /viewConfig.',
     bg:
       'Моля, изпратете командата /setConfig в следния формат: \n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n ...</code>\n\nYou и ще можеш, да използвате информацията от /viewConfig.',
+    uz:
+     "Iltimos, /setConfig buyrug'ini quyidagi formatda yuboring:\n\n<code>/setConfig\nlanguage: en\ncaptchaType: image\ntimeGiven: 60\n...</code>\n\n/viewConfig buyrug'idan qaytgan ma'lumotlardan foydalanishingiz mumkin.",
   },
   noChatFound: {
     en: 'Chat not found',
     ru: 'Чат не найден',
     fr: "Le groupe n'existe pas",
     bg: 'Групата не е открита',
+    uz: "Chat topilmadi",
   },
   thisIsNotAReply: {
     en: 'Just to clarify: this is not a reply',
     ru: 'Уточняю: это не ответ на сообщение',
     fr: "Désolé mais ce n'est pas une réponse correcte",
     bg: 'Само да поясня: това не е отговор',
+    uz: "Aniqlik kiritish uchun: bu xabarga javob emas",
   },
   thisIsAReply: {
     en: 'This is a reply',
     ru: 'А вот это ответ',
     fr: "C'est une réponse",
     bg: 'Това е отговор',
+    uz: "Mana bu esa javob",
   },
   commandsInPrivateWarning: {
     en:
@@ -1722,6 +1809,8 @@ export const localizations = {
       "Vous avez modifié les paramètres des messages privés. Cela n'aura aucune incidence sur les discussions des autres groupes. Si vous souhaitez mettre en place une discussion de groupe, envoyez les commandes de configuration directement à la discussion du groupe. Vous pourrez ensuite supprimer les messages de configuration.",
     bg:
       'Променихте настройките за личните съобщения. Това няма да засегне груповите чатове. Ако искате да настроите групов чат, изпратете команди за конфигуриране директно до груповия чат. Можете да изтриете конфигурационните съобщения след това.',
+    uz: 
+      "Siz shaxsiy xabarlardagi sozlamalarni o'zgartiryapsiz. Bu hech qanday guruh chatiga ta'sir qilmaydi. Agar siz guruh chatini o'rnatmoqchi bo'lsangiz, konfiguratsiya buyruqlarini to'g'ridan-to'g'ri guruh chatiga yuboring. Keyin konfiguratsiya xabarlarini o'chirishingiz mumkin.",
   },
   banForFastRepliesToPosts_true: {
     en:
@@ -1730,6 +1819,8 @@ export const localizations = {
       'Отлично! Щилди будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
     bg:
       'Яко! Shieldy, ще забрани (или ще "изрита") всеки потребител, които отговорят на публикациите в канала ви 5 секунди след създаването на публикацията.',
+    uz:
+      "Yaxshi! Shieldy kanalda post yaratilganidan 5 soniyadan keyin ularga javob yozgan barcha foydalanuvchilarni bloklaydi (yoki guruhdan haydaydi).",
   },
   banForFastRepliesToPosts_false: {
     en:
@@ -1738,6 +1829,8 @@ export const localizations = {
       'Отлично! Щилди не будет банить (или кикать) пользователей, которые отвечают на посты вашего канала в течение 5 секунд после создания постов.',
     bg:
       'Яко! Shieldy няма да забранява (или да "изрита") никой потребител, които отговарят на публикациите на канала ви 5 секунди след създаването на публикацията.',
+    uz:
+      "Yaxshi! Shieldy kanalda post yaratilganidan 5 soniyadan keyin ularga javob yozgan barcha foydalanuvchilarni bloklamaydi (yoki guruhdan haydamaydi).",
   },
   banNewTelegramUsers_true: {
     en:
@@ -1746,6 +1839,8 @@ export const localizations = {
       'Отлично! Щилди будет банить (или кикать) пользователей, у которых Телеграм ID больше 1 000 000 000.',
     bg:
       'Чудесно! Shieldy, ще забрани (или ще "изрита") всички новодошли с идентификатор на Telegram над 1 000 000 000. ',
+    uz:
+      "Yaxshi! Shieldy Telegram ID raqami 1 000 000 000 dan katta bo'lgan barcha yangi kelganlarni bloklaydi (yoki guruhdan haydaydi).",
   },
   banNewTelegramUsers_false: {
     ru:
@@ -1754,43 +1849,56 @@ export const localizations = {
       'Nice! Shieldy will no ban (or kick) all newcomers with Telegram ID greater than 1 000 000 000.',
     bg:
       'Чудесно! Shieldy няма да забранява (или да "изрита") никой новодошъл с Telegram ID над 1 000 000 000.',
+    uz:
+      "Yaxshi! Shieldy Telegram ID raqami 1 000 000 000 dan katta bo'lgan barcha yangi kelganlarni bloklamaydi (yoki guruhdan haydamaydi).",
   },
   oneInchInfo: {
     en:
       'The 1inch Network unites decentralized protocols whose synergy enables the most lucrative, fastest and protected operations in the DeFi space.',
     ru:
       '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
+    uz:
+      "1inch Network markazlashtirilmagan protokollarni birlashtiradi, ularning sinergiyasi DeFi maydonida eng daromadli, eng tezkor va himoyalangan operatsiyalarni amalga oshirish imkonini beradi.",
   },
   subscription: {
     en: '/subscription — Manage subscription',
     ru: '/subscription — Управление подпиской',
+    uz: "/subscription — Obunani boshqarish",
   },
   noSubscription: {
     en:
       'This is the premium version of Shieldy. If you want to use a free version — check out @shieldy_bot. In order to use this version of the bot, you will have to purchase a subscription below. The premium version is hosted on dedicated servers that are used by only the premium users.',
     ru:
       'Это премиум версия Shieldy. Если вы хотите использовать бесплатную версию — попробуйте @shieldy_bot. Для использования этой версии бота вам нужно приобрести подписку ниже. Премиум версия хостится на отдельных серверах, которые используются только премиум пользователями.',
+    uz:
+      "Bu Shieldy-ning premium versiyasi. Bepul versiyadan foydalanmoqchi bo'lsangiz, @shieldy_bot ni ishlating. Botning ushbu versiyasidan foydalanish uchun siz quyida obuna sotib olishingiz kerak bo'ladi. Premium versiya faqat premium foydalanuvchilar tomonidan ishlatiladigan maxsus serverlarda joylashtirilgan.",
   },
   subscriptionInfo: {
     en:
       'Thank you a lot for the support! You can manage your subscription with the button below.',
     ru:
       'Спасибо вам огромное за поддержку! Вы можете управлять вашей подпиской с помощью кнопки ниже.',
+    uz:
+      "Qo'llab-quvvatlaganingiz uchun katta rahmat! Quyidagi tugma orqali obunangizni boshqarishingiz mumkin.",
   },
   monthly: {
     en: 'month',
     ru: 'месяц',
+    uz: 'oy',
   },
   yearly: {
     en: 'year',
     ru: 'год',
+    uz: 'yil',
   },
   lifetime: {
     en: 'once and forever',
     ru: 'один раз навсегда',
+    uz: 'bir umrlik',
   },
   manageSubscription: {
     en: 'Manage subscription',
     ru: 'Управление подпиской',
+    uz: 'Obunani boshqarish',
   },
 }
