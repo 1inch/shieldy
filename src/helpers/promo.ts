@@ -16,7 +16,7 @@ const ruPromoAdditionsArray = [
       prefix: ' ',
       text: '1inch',
       postfix: ' ',
-      link: 'https://jn3rg.app.link/c10FJKdtnpb'
+      link: 'https://link.1inch.com/XsWg/shieldy'
       }
     ],
     postlinks: '',
@@ -31,7 +31,7 @@ const enPromoAdditionsArray = [
       prefix: ' ',
       text: '1inch',
       postfix: ' ',
-      link: 'https://jn3rg.app.link/c10FJKdtnpb'
+      link: 'https://link.1inch.com/XsWg/shieldy'
       }
     ],
     postlinks: '',
