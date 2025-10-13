@@ -1757,9 +1757,9 @@ export const localizations = {
   },
   oneInchInfo: {
     en:
-      'The 1inch Network unites decentralized protocols whose synergy enables the most lucrative, fastest and protected operations in the DeFi space.',
+      '1inch is the DeFi ecosystem building financial freedom for everyone.',
     ru:
-      '1inch Network объединяет несколько децентрализованных протоколов, синергия которых обеспечивает самые выгодные, быстрые и безопасные транзакции в индустрии DeFi.',
+      '1inch - это DeFi-экосистема, создающая финансовую свободу для каждого.',
   },
   subscription: {
     en: '/subscription — Manage subscription',
