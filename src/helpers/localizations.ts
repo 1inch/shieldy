@@ -766,6 +766,8 @@ export const localizations = {
       ', ole hyvä ja lähetä kuvan merkit annetun ajan kuluessa, jotta et tule poistetuksi ryhmästä. Kiitos!',
     fr:
       ', veuillez inscrire les caractères affichés dans le délai indiqué, sinon vous serez expulsé. Merci!',
+    zh:
+      ', 请在规定时间内发送图片上的验证码, 否则你将被踢出, 谢谢你!',
     it:
       ', prego, riconosci il personaggio qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     bg:
