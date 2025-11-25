@@ -2,7 +2,7 @@ import {
   promoAdditionsWithoutHtml,
 } from '@helpers/promo'
 import { cloneDeep } from 'lodash'
-import { Message, User } from 'telegraf/typings/telegram-types'
+import { Message, User } from 'telegram-typings'
 
 export function constructMessageWithEntities(
   originalMessage: Message,

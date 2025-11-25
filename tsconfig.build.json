@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmitOnError": false,
-    "skipLibCheck": true,
-    "isolatedModules": false,
-    "suppressImplicitAnyIndexErrors": true
-  }
-}

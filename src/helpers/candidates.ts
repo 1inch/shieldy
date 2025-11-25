@@ -20,8 +20,7 @@ export async function modifyCandidates(
       const candidatesIds = candidatesAndUsers.map((c) => c.id)
       await ChatModel.updateOne(
         { _id: chat._id },
-        { $pull: { candidates: { id: { $in: candidatesIds } } } },
-        { multi: true }
+        { $pull: { candidates: { id: { $in: candidatesIds } } } }
       )
     }
   } catch (err) {

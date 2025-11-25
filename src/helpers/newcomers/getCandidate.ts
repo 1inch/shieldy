@@ -1,5 +1,5 @@
 import { Candidate, Equation } from '@models/Chat'
-import { User, Message } from 'telegraf/typings/telegram-types'
+import { User, Message } from 'telegram-typings'
 import { Context } from 'telegraf'
 
 export function getCandidate(
