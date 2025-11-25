@@ -9,14 +9,15 @@ const buttonPresses = {} as { [index: string]: boolean }
 
 export async function handleButtonPress(ctx: Context) {
   // Ignore muptiple taps
-  if (buttonPresses[ctx.callbackQuery.data]) {
+  const callbackData = ctx.callbackQuery.data as string
+  if (!callbackData || buttonPresses[callbackData]) {
     return
   }
-  buttonPresses[ctx.callbackQuery.data] = true
+  buttonPresses[callbackData] = true
   // Handle the button tap
   try {
     // Get user id and chat id
-    const params = ctx.callbackQuery.data.split('~')
+    const params = callbackData.split('~')
     const userId = parseInt(params[1])
     // Check if button is pressed by the candidate
     if (userId !== ctx.from.id) {
@@ -48,6 +49,6 @@ export async function handleButtonPress(ctx: Context) {
   } catch (err) {
     report(err, handleButtonPress.name)
   } finally {
-    buttonPresses[ctx.callbackQuery.data] = undefined
+    buttonPresses[callbackData] = undefined
   }
 }

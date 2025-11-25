@@ -1,5 +1,5 @@
 import { prop, getModelForClass } from '@typegoose/typegoose'
-import { Message, ChatMember } from 'telegram-typings'
+import { Message, ChatMember } from 'telegraf/typings/telegram-types'
 
 export enum SubscriptionStatus {
   inactive = 'inactive',

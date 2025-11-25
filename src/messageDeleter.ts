@@ -28,7 +28,7 @@ async function check() {
                 message.chat_id,
                 message.message_id
               )
-              await message.remove()
+              await message.deleteOne()
             } catch {
               // Do nothing
             } finally {

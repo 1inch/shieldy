@@ -50,10 +50,10 @@ function log(schema: Schema) {
   };
   schema.post('validate', handleError);
   schema.post('save', handleError);
-  schema.post('update', handleError);
+  schema.post('updateOne', handleError);
   schema.post('insertMany', handleError);
   schema.post('find', handleError);
   schema.post('findOne', handleError);
   schema.post('findOneAndUpdate', handleError);
-  schema.post('findOneAndRemove', handleError);
+  schema.post('findOneAndDelete', handleError);
 }
