@@ -24,7 +24,7 @@ export async function removeEntryMessages(chatId: number, fromId: number) {
   messages.forEach(async (message) => {
     await deleteMessageSafeWithBot(chatId, message.message_id)
     try {
-      await message.remove()
+      await message.deleteOne()
     } catch (err) {
       report(err, 'removeEntryMessages')
     }
