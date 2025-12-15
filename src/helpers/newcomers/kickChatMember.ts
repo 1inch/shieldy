@@ -11,11 +11,11 @@ export async function kickChatMember(chat: DocumentType<Chat>, user: User) {
   // Try kicking the member
   try {
     await addKickedUser(chat, user.id)
-    await bot.telegram.kickChatMember(
-      chat.id,
-      user.id,
-      chat.banUsers ? 0 : parseInt(`${new Date().getTime() / 1000 + 45}`)
-    )
+    if (chat.banUsers) {
+      await bot.telegram.kickChatMember(chat.id, user.id)
+    } else {
+      await bot.telegram.unbanChatMember(chat.id, user.id) // kick without ban
+    }
   } catch (err) {
     report(err, kickChatMember.name)
   }
