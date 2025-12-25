@@ -20,6 +20,8 @@ export function checkIfErrorDismissable(error: Error) {
     'demote chat creator',
     'USER_BANNED_IN_CHANNEL',
     'Too Many Requests',
+    'need administrator rights',
+    'CHAT_RESTRICTED'
   ]
   for (const message of dismissableMessages) {
     if (error.message.indexOf(message) > -1) {
