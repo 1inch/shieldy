@@ -2,6 +2,8 @@
 
 # [@shieldy_bot](https://t.me/shieldy_bot) Telegram bot code
 
+[![@shieldy_bot MAU](https://tgbotmau.quoi.dev/api/bot/shieldy_bot/mau/badge?style=flat "@shieldy_bot MAU")](https://tgbotmau.quoi.dev/?bot=shieldy_bot)
+
 This is the code for the anti-spam Telegram bot I've built. Enjoy and feel free to reuse!
 
 # Installation
