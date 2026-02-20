@@ -192,7 +192,7 @@ export const localizations = {
     hu:
       'Kérlek, válaszd ki az újoncok tesztjének a típusát:\n\n• Egyszerű — a bot annyit kér, hogy gépeljen be valamit a chat-be\n• Gomb — egy gomb megnyomására kéri\n• Számok — a bot egy egyszerű matematikai művelet elvégzésére kéri\n• Kép — a bot arra kéri, hogy ismerjen fel egy karaktert a képen',
     it:
-      "Prego, seleziona uno dei seguenti test per i nuovi utenti:\\n\\n• Semplice — Il bot chiederà di inviare un qualunque messaggio in chat\\n• Bottone — Il bot chiederà di premere un pulsante\\n• Numeri — il bot ti chiederà di risolvere una semplice operazione aritmetica\\n• Immagine — il bot ti chiederà di riconoscere un personaggio in un'immagine",
+      "Prego, seleziona uno dei seguenti test per i nuovi utenti:\\n\\n• Semplice — Il bot chiederà di inviare un qualunque messaggio in chat\\n• Bottone — Il bot chiederà di premere un pulsante\\n• Numeri — il bot ti chiederà di risolvere una semplice operazione aritmetica\\n• Immagine — il bot ti chiederà di riconoscere i caratteri in un'immagine",
     bg:
       'Моля, изберете типа на теста за новодошлите: \n\n• Simple - ботът ще поиска да изпрати каквото и да е в чата \n• Button - ботът ще поиска да натисне бутон \n• Digits - ботът ще поиска да реши проста аритметична операция \n• Image - ботът ще поиска да разпознае символи на изображение ',
   },
@@ -767,7 +767,7 @@ export const localizations = {
     fr:
       ', veuillez inscrire les caractères affichés dans le délai indiqué, sinon vous serez expulsé. Merci!',
     it:
-      ', prego, riconosci il personaggio qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
+      ', prego, riconosci i caratteri qui sotto entro il tempo prestabilito, altrimenti verrai kickato. Grazie!',
     bg:
       ', Моля, въведете показаните символи в рамките на определеното време посочено от мен, в противен случай ще бъдете изхвърлени от групата. Благодаря ви!',
     es:
