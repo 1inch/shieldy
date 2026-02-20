@@ -1,6 +1,7 @@
 import 'module-alias/register'
 import * as dotenv from 'dotenv'
 dotenv.config({ path: `${__dirname}/../.env` })
+import '@models'
 import { Context } from 'telegraf'
 import { report } from '@helpers/report'
 import { bot } from '@helpers/bot'
